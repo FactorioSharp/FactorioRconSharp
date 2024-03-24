@@ -4,6 +4,6 @@ profile = "default"
 project = ["./FactorioRconSharp/FactorioRconSharp.csproj"]
 
 [github]
-user = "FactorioRconSharp"
+user = "FactorioSharp"
 repo = "FactorioRconSharp"
 version_prefix = "v"
