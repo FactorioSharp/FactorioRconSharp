@@ -6,7 +6,7 @@ using FactorioRconSharp.v1_1_104.Model;
 
 namespace FactorioRconSharp.Core.Visitor;
 
-class FactorioRconTranslator : ExpressionVisitor
+public class FactorioRconTranslator : ExpressionVisitor
 {
     StringBuilder _acc = null!;
 
@@ -28,6 +28,23 @@ class FactorioRconTranslator : ExpressionVisitor
         return _acc.ToString();
     }
 
+    protected override Expression VisitConstant(ConstantExpression node)
+    {
+        switch (node.Value)
+        {
+            case string str:
+                _acc.Append('"');
+                _acc.Append(str);
+                _acc.Append('"');
+                break;
+            default:
+                _acc.Append(node.Value);
+                break;
+        }
+
+        return node;
+    }
+
     protected override Expression VisitUnary(UnaryExpression node)
     {
         _acc.Append('(');
@@ -40,6 +57,9 @@ class FactorioRconTranslator : ExpressionVisitor
             case ExpressionType.Negate:
             case ExpressionType.NegateChecked:
                 _acc.Append("- ");
+                break;
+            case ExpressionType.Convert:
+            case ExpressionType.ConvertChecked:
                 break;
             default:
                 throw new NotSupportedException($"The unary operator {node.NodeType} is not supported");
@@ -124,44 +144,25 @@ class FactorioRconTranslator : ExpressionVisitor
 
     protected override Expression VisitMember(MemberExpression node)
     {
-        List<MemberExpression> memberChain = new();
-        Expression current = node;
-        while (current is MemberExpression expr)
+        FactorioRconAttributeAttribute? attribute = node.Member.GetCustomAttribute<FactorioRconAttributeAttribute>();
+        if (attribute == null)
         {
-            memberChain.Add(expr);
-            current = expr.Expression;
+            throw new InvalidOperationException($"The member {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconAttribute] attribute");
         }
-        memberChain.Reverse();
 
-        for (int index = 0; index < memberChain.Count; index++)
+        if (node.Expression is not ParameterExpression)
         {
-            MemberExpression member = memberChain[index];
-            FactorioRconAttributeAttribute? attribute = member.Member.GetCustomAttribute<FactorioRconAttributeAttribute>();
-            if (attribute == null)
-            {
-                throw new InvalidOperationException(
-                    $"The member {member} cannot be used in an RCON expression because it is not marked with the [FactorioRconAttribute] attribute"
-                );
-            }
-
-            if (index > 0)
-            {
-                _acc.Append('.');
-            }
-
-            _acc.Append(attribute.Name);
+            Visit(node.Expression);
+            _acc.Append('.');
         }
+
+        _acc.Append(attribute.Name);
 
         return node;
     }
 
     protected override Expression VisitMethodCall(MethodCallExpression node)
     {
-        if (node.Arguments.Any())
-        {
-            throw new NotSupportedException("Method calls with parameters not supported yet");
-        }
-
         FactorioRconMethodAttribute? attribute = node.Method.GetCustomAttribute<FactorioRconMethodAttribute>();
         if (attribute == null)
         {
@@ -175,6 +176,17 @@ class FactorioRconTranslator : ExpressionVisitor
         _acc.Append(attribute.Name);
 
         _acc.Append('(');
+
+        for (int index = 0; index < node.Arguments.Count; index++)
+        {
+            if (index > 0)
+            {
+                _acc.Append(", ");
+            }
+
+            Visit(node.Arguments[index]);
+        }
+
         _acc.Append(')');
 
         return node;

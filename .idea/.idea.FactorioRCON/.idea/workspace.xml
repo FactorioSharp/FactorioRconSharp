@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="use visitor pattern to allow nested expressions">
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="add parameterless methods">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" afterDir="false" />
@@ -81,7 +81,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.FactorioRCON.TestApplication.executor": "Debug",
+    ".NET Project.FactorioRCON.TestApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
@@ -131,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="18408000" />
+      <workItem from="1711272813339" duration="21002000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -213,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711293906990</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add parameterless methods">
+      <option name="closed" value="true" />
+      <created>1711294256599</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711294256599</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,25 +262,7 @@
     <MESSAGE value="add simple properties of LuaGameScript global instance" />
     <MESSAGE value="add parameterless methods of LuaGameScript with simple return types" />
     <MESSAGE value="use visitor pattern to allow nested expressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="use visitor pattern to allow nested expressions" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs</url>
-          <line>25</line>
-          <properties documentPath="D:\source\repos\FactorioRCON\FactorioRconSharp\Core\Visitor\FactorioRconTranslator.cs" initialLine="25" containingFunctionPresentation="Method 'BuildExpression'">
-            <startOffsets>
-              <option value="614" />
-            </startOffsets>
-            <endOffsets>
-              <option value="631" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add parameterless methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="add parameterless methods" />
   </component>
 </project>
