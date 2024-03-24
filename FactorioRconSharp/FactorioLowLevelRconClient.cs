@@ -34,7 +34,7 @@ public class FactorioLowLevelRconClient : IDisposable
         return await _rconClient.ExecuteCommandAsync($"/c rcon.print({command})");
     }
 
-    public void Close()
+    public void Disconnect()
     {
         AssertConnected();
         _rconClient.Disconnect();
@@ -44,7 +44,7 @@ public class FactorioLowLevelRconClient : IDisposable
     {
         if (_connected)
         {
-            Close();
+            Disconnect();
         }
 
         GC.SuppressFinalize(this);
