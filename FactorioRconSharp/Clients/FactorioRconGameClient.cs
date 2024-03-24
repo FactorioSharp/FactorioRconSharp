@@ -1,4 +1,5 @@
-﻿using FactorioRconSharp.Clients.Variables;
+﻿using FactorioRconSharp.Clients.Methods;
+using FactorioRconSharp.Clients.Variables;
 
 namespace FactorioRconSharp.Clients;
 
@@ -30,6 +31,21 @@ public class FactorioRconGameClient
         MaxInserterReachDistance = new FactorioRconDoubleVariable(_lowLevelClient, "game.max_inserter_reach_distance");
         MaxPipeToGroundDistance = new FactorioRconUintVariable(_lowLevelClient, "game.max_pipe_to_ground_distance");
         MaxUndergroundBeltDistance = new FactorioRconUintVariable(_lowLevelClient, "game.max_underground_belt_distance");
+
+        IsDemo = new FactorioRconBoolFunc(_lowLevelClient, "game.is_demo");
+        ReloadScript = new FactorioRconAction(_lowLevelClient, "game.reload_script");
+        ReloadMods = new FactorioRconAction(_lowLevelClient, "game.reload_script");
+        SaveAtlas = new FactorioRconAction(_lowLevelClient, "game.save_atlas");
+        CheckConsistency = new FactorioRconAction(_lowLevelClient, "game.check_consistency");
+        SetWaitForScreenshotsToFinish = new FactorioRconAction(_lowLevelClient, "game.set_wait_for_screenshots_to_finish");
+        ForceCrc = new FactorioRconAction(_lowLevelClient, "game.force_crc");
+        DisableReplay = new FactorioRconAction(_lowLevelClient, "game.disable_replay");
+        DisableTutorialTriggers = new FactorioRconAction(_lowLevelClient, "game.disable_tutorial_triggers");
+        CheckPrototypeTranslations = new FactorioRconAction(_lowLevelClient, "game.check_prototype_translations");
+        CountPipeGroups = new FactorioRconAction(_lowLevelClient, "game.count_pipe_groups");
+        IsMultiplayer = new FactorioRconBoolFunc(_lowLevelClient, "game.is_multiplayer");
+        GetMapExchangeString = new FactorioRconStringFunc(_lowLevelClient, "game.get_map_exchange_string");
+        ResetTimePlayed = new FactorioRconAction(_lowLevelClient, "game.reset_time_played");
     }
 
     public IFactorioRconReadonlyVariable<bool> ConsoleCommandUsed { get; }
@@ -52,4 +68,19 @@ public class FactorioRconGameClient
     public IFactorioRconReadonlyVariable<double> MaxInserterReachDistance { get; }
     public IFactorioRconReadonlyVariable<uint> MaxPipeToGroundDistance { get; }
     public IFactorioRconReadonlyVariable<uint> MaxUndergroundBeltDistance { get; }
+
+    public IFactorioRconFunc<bool> IsDemo { get; }
+    public IFactorioRconAction ReloadScript { get; }
+    public IFactorioRconAction ReloadMods { get; }
+    public IFactorioRconAction SaveAtlas { get; }
+    public IFactorioRconAction CheckConsistency { get; }
+    public IFactorioRconAction SetWaitForScreenshotsToFinish { get; }
+    public IFactorioRconAction ForceCrc { get; }
+    public IFactorioRconAction DisableReplay { get; }
+    public IFactorioRconAction DisableTutorialTriggers { get; }
+    public IFactorioRconAction CheckPrototypeTranslations { get; }
+    public IFactorioRconAction CountPipeGroups { get; }
+    public IFactorioRconFunc<bool> IsMultiplayer { get; }
+    public IFactorioRconFunc<string> GetMapExchangeString { get; }
+    public IFactorioRconAction ResetTimePlayed { get; }
 }

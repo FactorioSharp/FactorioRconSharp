@@ -7,21 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="rename Close method to Disconnect">
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconBoolVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconDoubleVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconFloatVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconStringVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconUintVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/IFactorioRconReadonlyVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/IFactorioRconVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconClient.cs" afterDir="false" />
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="add simple properties of LuaGameScript global instance">
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconBoolFunc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconFunc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodParameters.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconFunc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioLowLevelRconClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/FactorioLowLevelRconClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="8394000" />
+      <workItem from="1711272813339" duration="10389000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -187,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711277668784</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add simple properties of LuaGameScript global instance">
+      <option name="closed" value="true" />
+      <created>1711283307242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711283307242</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +229,7 @@
     <MESSAGE value="fix user name" />
     <MESSAGE value="bump version" />
     <MESSAGE value="rename Close method to Disconnect" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename Close method to Disconnect" />
+    <MESSAGE value="add simple properties of LuaGameScript global instance" />
+    <option name="LAST_COMMIT_MESSAGE" value="add simple properties of LuaGameScript global instance" />
   </component>
 </project>

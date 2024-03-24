@@ -25,3 +25,7 @@ Console.WriteLine($"\tgame.max_gate_activation_distance = {await client.Game.Max
 Console.WriteLine($"\tgame.max_inserter_reach_distance = {await client.Game.MaxInserterReachDistance.GetAsync()}");
 Console.WriteLine($"\tgame.max_pipe_to_ground_distance = {await client.Game.MaxPipeToGroundDistance.GetAsync()}");
 Console.WriteLine($"\tgame.max_underground_belt_distance = {await client.Game.MaxUndergroundBeltDistance.GetAsync()}");
+
+Console.WriteLine($"\tgame.is_demo = {await client.Game.IsDemo.ExecuteAsync()}");
+Console.WriteLine($"\tgame.is_multiplayer = {await client.Game.IsMultiplayer.ExecuteAsync()}");
+Console.WriteLine($"\tgame.get_map_exchange_string = {await client.Game.GetMapExchangeString.ExecuteAsync()}");
