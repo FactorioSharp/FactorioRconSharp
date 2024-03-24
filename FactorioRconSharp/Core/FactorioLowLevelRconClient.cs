@@ -1,6 +1,6 @@
 ﻿using RconSharp;
 
-namespace FactorioRconSharp;
+namespace FactorioRconSharp.Core;
 
 public class FactorioLowLevelRconClient : IDisposable
 {

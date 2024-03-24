@@ -7,17 +7,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="add simple properties of LuaGameScript global instance">
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconBoolFunc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconFunc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconFunc.cs" afterDir="false" />
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="add parameterless methods of LuaGameScript with simple return types">
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/FactorioRconAttributeAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/FactorioRconMethodAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/IFactorioRconModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/FactorioRconClientBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Parsing/FactorioRconParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/FactorioRconClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/IFactorioRconModel_v1_1_104.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGlobals.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconAction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconBoolFunc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconFunc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodParameters.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconAction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconFunc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconBoolVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconDoubleVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconFloatVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconStringVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconUintVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/IFactorioRconReadonlyVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/IFactorioRconVariable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioLowLevelRconClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/FactorioLowLevelRconClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconClient.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +79,16 @@
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/556582d964cc21b82a88d7154e915076f6f9008e/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/MemberBinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/ExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/LambdaExpression.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/MemberExpression.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/42/c8539dfb/SwitchCase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/94/9e49aa94/ElementInit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/a7/24c877cd/ExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/b8/a3efa33d/MemberMemberBinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/c9/12c86353/LabelTarget.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/fd/68572dac/CatchBlock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1806c8e3e414a8ba2b6257e790ea1974e00/d3/91371e36/RconClient.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -68,7 +99,9 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2e84KUYgy5W2XUFQP3gdB9JWPK7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -125,7 +158,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="10389000" />
+      <workItem from="1711272813339" duration="18068000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -191,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711283307242</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add parameterless methods of LuaGameScript with simple return types">
+      <option name="closed" value="true" />
+      <created>1711285353171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711285353171</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +271,7 @@
     <MESSAGE value="bump version" />
     <MESSAGE value="rename Close method to Disconnect" />
     <MESSAGE value="add simple properties of LuaGameScript global instance" />
-    <option name="LAST_COMMIT_MESSAGE" value="add simple properties of LuaGameScript global instance" />
+    <MESSAGE value="add parameterless methods of LuaGameScript with simple return types" />
+    <option name="LAST_COMMIT_MESSAGE" value="add parameterless methods of LuaGameScript with simple return types" />
   </component>
 </project>
