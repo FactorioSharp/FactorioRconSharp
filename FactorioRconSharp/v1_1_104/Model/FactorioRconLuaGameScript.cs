@@ -25,6 +25,12 @@ public class FactorioRconLuaGameScript
     [FactorioRconMethod("get_active_entities_count")]
     public uint GetActiveEntitiesCount(string surface) => throw UseClientReadAsyncMethod();
 
+    [FactorioRconMethod("regenerate_entity")]
+    public void RegenerateEntity(string surface) => throw UseClientExecuteAsyncMethod();
+
+    [FactorioRconMethod("regenerate_entity")]
+    public void RegenerateEntity(string[] surface) => throw UseClientExecuteAsyncMethod();
+
     static NotSupportedException UseClientReadAsyncMethod() => new($"Use this method through the {nameof(FactorioRconClient)}.{nameof(FactorioRconClient.ReadAsync)} method");
     static NotSupportedException UseClientExecuteAsyncMethod() => new($"Use this method through the {nameof(FactorioRconClient)}.{nameof(FactorioRconClient.ExecuteAsync)} method");
 }

@@ -30,18 +30,7 @@ public class FactorioRconTranslator : ExpressionVisitor
 
     protected override Expression VisitConstant(ConstantExpression node)
     {
-        switch (node.Value)
-        {
-            case string str:
-                _acc.Append('"');
-                _acc.Append(str);
-                _acc.Append('"');
-                break;
-            default:
-                _acc.Append(node.Value);
-                break;
-        }
-
+        AppendValue(node.Value);
         return node;
     }
 
@@ -194,8 +183,34 @@ public class FactorioRconTranslator : ExpressionVisitor
 
     protected override Expression VisitNewArray(NewArrayExpression node)
     {
-        _acc.Append("ARRAY");
+        _acc.Append('{');
+
+        for (int index = 0; index < node.Expressions.Count; index++)
+        {
+            if (index > 0)
+            {
+                _acc.Append(", ");
+            }
+
+            Visit(node.Expressions[index]);
+        }
+
+        _acc.Append('}');
 
         return node;
+    }
+
+    void AppendValue(object value)
+    {
+        if (value is string str)
+        {
+            _acc.Append('"');
+            _acc.Append(str);
+            _acc.Append('"');
+        }
+        else
+        {
+            _acc.Append(value);
+        }
     }
 }
