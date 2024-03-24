@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorioRCON", "FactorioRCON\FactorioRCON.csproj", "{F109EFCC-FD8D-4220-A012-23EFB8FC8C7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorioRconSharp", "FactorioRconSharp\FactorioRconSharp.csproj", "{F109EFCC-FD8D-4220-A012-23EFB8FC8C7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorioRCON.TestApplication", "FactorioRCON.TestApplication\FactorioRCON.TestApplication.csproj", "{2C1AAA1C-06E1-4D36-BBFD-143DDFBE68FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorioRconSharp.TestApplication", "FactorioRconSharp.TestApplication\FactorioRconSharp.TestApplication.csproj", "{2C1AAA1C-06E1-4D36-BBFD-143DDFBE68FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
