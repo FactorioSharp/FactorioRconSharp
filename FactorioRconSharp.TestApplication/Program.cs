@@ -5,5 +5,8 @@ bool connected = await client.ConnectAsync("password");
 
 Console.WriteLine("Connected: " + connected);
 
+Console.WriteLine("Game:");
+Console.WriteLine($"\tgame.is_demo = {await client.ReadAsync(g => g.Game.IsDemo())}");
+
 Console.WriteLine("Map Settings:");
 Console.WriteLine($"\tgame.map_settings._max_failed_behavior_count = {await client.ReadAsync(g => g.Game.MapSettings.MaxFailedBehaviorCount)}");

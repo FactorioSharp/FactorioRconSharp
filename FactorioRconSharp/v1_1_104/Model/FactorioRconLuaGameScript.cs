@@ -6,4 +6,7 @@ public class FactorioRconLuaGameScript
 {
     [FactorioRconAttribute("map_settings")]
     public FactorioRconMapSettings MapSettings { get; } = new();
+
+    [FactorioRconMethod("is_demo")]
+    public bool IsDemo() => throw new NotImplementedException();
 }

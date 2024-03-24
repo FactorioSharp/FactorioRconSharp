@@ -155,6 +155,30 @@ class FactorioRconTranslator : ExpressionVisitor
         return node;
     }
 
+    protected override Expression VisitMethodCall(MethodCallExpression node)
+    {
+        if (node.Arguments.Any())
+        {
+            throw new NotSupportedException("Method calls with parameters not supported yet");
+        }
+
+        FactorioRconMethodAttribute? attribute = node.Method.GetCustomAttribute<FactorioRconMethodAttribute>();
+        if (attribute == null)
+        {
+            throw new InvalidOperationException($"The method {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconMethod] attribute");
+        }
+
+        Visit(node.Object);
+
+        _acc.Append('.');
+
+        _acc.Append(attribute.Name);
+
+        _acc.Append('(');
+        _acc.Append(')');
+
+        return node;
+    }
 
     protected override Expression VisitNewArray(NewArrayExpression node)
     {

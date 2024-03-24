@@ -7,38 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="add parameterless methods of LuaGameScript with simple return types">
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/FactorioRconAttributeAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/FactorioRconMethodAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/IFactorioRconModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/FactorioRconClientBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Parsing/FactorioRconParser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/FactorioRconClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/IFactorioRconModel_v1_1_104.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGlobals.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapSettings.cs" afterDir="false" />
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="use visitor pattern to allow nested expressions">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.TestApplication/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/FactorioRconGameClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconBoolFunc.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/FactorioRconFunc.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodParameters.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioMethodResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Methods/IFactorioRconFunc.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconBoolVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconDoubleVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconFloatVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconStringVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconUintVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/FactorioRconVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/IFactorioRconReadonlyVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Clients/Variables/IFactorioRconVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioLowLevelRconClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/FactorioLowLevelRconClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +81,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.FactorioRCON.TestApplication.executor": "Run",
+    ".NET Project.FactorioRCON.TestApplication.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
@@ -158,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="18068000" />
+      <workItem from="1711272813339" duration="18408000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -232,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711285353171</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="use visitor pattern to allow nested expressions">
+      <option name="closed" value="true" />
+      <created>1711293906990</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711293906990</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +253,26 @@
     <MESSAGE value="rename Close method to Disconnect" />
     <MESSAGE value="add simple properties of LuaGameScript global instance" />
     <MESSAGE value="add parameterless methods of LuaGameScript with simple return types" />
-    <option name="LAST_COMMIT_MESSAGE" value="add parameterless methods of LuaGameScript with simple return types" />
+    <MESSAGE value="use visitor pattern to allow nested expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="use visitor pattern to allow nested expressions" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs</url>
+          <line>25</line>
+          <properties documentPath="D:\source\repos\FactorioRCON\FactorioRconSharp\Core\Visitor\FactorioRconTranslator.cs" initialLine="25" containingFunctionPresentation="Method 'BuildExpression'">
+            <startOffsets>
+              <option value="614" />
+            </startOffsets>
+            <endOffsets>
+              <option value="631" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
