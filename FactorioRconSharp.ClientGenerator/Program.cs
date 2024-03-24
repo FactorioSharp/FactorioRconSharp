@@ -2,6 +2,7 @@
 
 using System.Text.Json;
 using FactorioRconSharp.ClientGenerator.Converters;
+using FactorioRconSharp.ClientGenerator.Generators;
 using FactorioRconSharp.ClientGenerator.Specification;
 
 string path = "Resource/runtime-api-v1_1_104.json";
@@ -27,5 +28,9 @@ if (parsedSpecification == null)
 Console.WriteLine($"Parsed specification: {parsedSpecification.Application} v{parsedSpecification.ApplicationVersion}");
 Console.WriteLine($"\tApi v{parsedSpecification.ApiVersion} ({parsedSpecification.Stage})");
 Console.WriteLine($"\tClasses ({parsedSpecification.Classes.Length}): {string.Join(", ", parsedSpecification.Classes.Select(c => c.Name))}");
+Console.WriteLine();
+
+FactorioModelGenerator generator = new(parsedSpecification);
+await generator.Generate("out");
 
 return 0;

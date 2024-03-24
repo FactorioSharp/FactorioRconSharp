@@ -29,8 +29,4 @@
       <PackageReference Include="RconSharp" Version="2.0.1" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Model\" />
-    </ItemGroup>
-
 </Project>

@@ -7,4 +7,5 @@ public class FactorioRuntimeApiSpecification
     public required int ApiVersion { get; set; }
     public required string Stage { get; set; }
     public FactorioRuntimeClassSpecification[] Classes { get; set; } = Array.Empty<FactorioRuntimeClassSpecification>();
+    public FactorioRuntimeConceptSpecification[] Concepts { get; set; } = Array.Empty<FactorioRuntimeConceptSpecification>();
 }

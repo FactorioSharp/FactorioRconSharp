@@ -2,7 +2,7 @@
 
 namespace FactorioRconSharp.v1_1_104.Model;
 
-public class FactorioRconLuaGameScript
+public class FactorioRconLuaGameScript : FactorioRconModelBase
 {
     [FactorioRconAttribute("map_settings")]
     public FactorioRconMapSettings MapSettings { get; } = new();
@@ -30,7 +30,4 @@ public class FactorioRconLuaGameScript
 
     [FactorioRconMethod("regenerate_entity")]
     public void RegenerateEntity(string[] surface) => throw UseClientExecuteAsyncMethod();
-
-    static NotSupportedException UseClientReadAsyncMethod() => new($"Use this method through the {nameof(FactorioRconClient)}.{nameof(FactorioRconClient.ReadAsync)} method");
-    static NotSupportedException UseClientExecuteAsyncMethod() => new($"Use this method through the {nameof(FactorioRconClient)}.{nameof(FactorioRconClient.ExecuteAsync)} method");
 }
