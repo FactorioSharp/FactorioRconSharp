@@ -7,10 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="handle method parameters">
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="handle arrays properly">
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Converters/FactorioRuntimeTypeSpecificationConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/FactorioRconSharpClientGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Resource/runtime-api-v1_1_104.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeApiSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeAttributeSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeClassSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeComplexTypeSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeMethodReturnValueSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeMethodSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeOperatorSpecification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeParameterSpecification.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +90,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.Client Generator.executor": "Run",
     ".NET Project.FactorioRCON.TestApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -102,11 +113,29 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="FactorioRCON.TestApplication" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+  <component name="RunManager" selected=".NET Project.Client Generator">
+    <configuration name="Client Generator" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/bin/Debug/net8.0/FactorioRconSharp.ClientGenerator.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/FactorioRconSharp.ClientGenerator.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Test Application" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/FactorioRconSharp.TestApplication/bin/Debug/net8.0/FactorioRconSharp.TestApplication.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FactorioRconSharp.TestApplication/bin/Debug/net8.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -116,11 +145,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net8.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.Test Application" />
+      <item itemvalue=".NET Project.Client Generator" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -130,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="21509000" />
+      <workItem from="1711272813339" duration="29589000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -228,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711296867709</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="handle arrays properly">
+      <option name="closed" value="true" />
+      <created>1711297374860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711297374860</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +312,14 @@
     <MESSAGE value="use visitor pattern to allow nested expressions" />
     <MESSAGE value="add parameterless methods" />
     <MESSAGE value="handle method parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle method parameters" />
+    <MESSAGE value="handle arrays properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="handle arrays properly" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="%reader._nextPosition" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
