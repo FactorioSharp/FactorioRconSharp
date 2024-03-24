@@ -5,7 +5,7 @@ namespace FactorioRconSharp;
 public class FactorioLowLevelRconClient : IDisposable
 {
     readonly RconClient _rconClient;
-    bool _connected;
+    public bool Connected { get; private set; }
 
     public FactorioLowLevelRconClient(string ipAddress, int port)
     {
@@ -23,16 +23,17 @@ public class FactorioLowLevelRconClient : IDisposable
             throw new InvalidOperationException("Authentication failed");
         }
 
-        _connected = true;
+        Connected = true;
         return true;
     }
 
     public async Task<string> ExecuteAsync(string command)
     {
         AssertConnected();
-
-        return await _rconClient.ExecuteCommandAsync($"/c rcon.print({command})");
+        return await _rconClient.ExecuteCommandAsync($"/c {command}");
     }
+
+    public async Task<string> ReadAsync(string expression) => await ExecuteAsync($"rcon.print({expression})");
 
     public void Disconnect()
     {
@@ -42,7 +43,7 @@ public class FactorioLowLevelRconClient : IDisposable
 
     public void Dispose()
     {
-        if (_connected)
+        if (Connected)
         {
             Disconnect();
         }
@@ -52,7 +53,7 @@ public class FactorioLowLevelRconClient : IDisposable
 
     void AssertNotConnected()
     {
-        if (_connected)
+        if (Connected)
         {
             throw new InvalidOperationException("Client is already connected");
         }
@@ -60,7 +61,7 @@ public class FactorioLowLevelRconClient : IDisposable
 
     void AssertConnected()
     {
-        if (!_connected)
+        if (!Connected)
         {
             throw new InvalidOperationException("Client is not connected");
         }
