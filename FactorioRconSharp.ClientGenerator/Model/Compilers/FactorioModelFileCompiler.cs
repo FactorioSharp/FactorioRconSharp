@@ -29,7 +29,8 @@ public class FactorioModelFileCompiler
             [
                 "FactorioRconSharp.Model.Builtins",
                 "FactorioRconSharp.Model.Concepts",
-                "FactorioRconSharp.Model.Definitions"
+                "FactorioRconSharp.Model.Definitions",
+                "OneOf"
             ],
             Classes =
             [
@@ -54,7 +55,8 @@ public class FactorioModelFileCompiler
             [
                 "FactorioRconSharp.Model.Builtins",
                 "FactorioRconSharp.Model.Classes",
-                "FactorioRconSharp.Model.Definitions"
+                "FactorioRconSharp.Model.Definitions",
+                "OneOf"
             ],
             Classes =
             [
@@ -194,7 +196,7 @@ public class FactorioModelFileCompiler
     FactorioModelClassMethodParameter CompileParameter(FactorioRuntimeParameterSpecification parameter) =>
         new()
         {
-            Name = parameter.Name.ToCamelCase(),
+            Name = EscapeSharpKeyword(parameter.Name.ToCamelCase()),
             LuaName = parameter.Name,
             Type = BuildTypeName(parameter.Type),
             Optional = parameter.Optional
@@ -237,26 +239,42 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeSimpleTypeSpecification simpleType:
                 switch (simpleType.Name)
                 {
+                    case "nil":
+                        return "LuaNil";
+
                     case "string":
-                    case "int":
-                    case "uint":
                     case "float":
                     case "double":
                         return simpleType.Name;
+
                     case "boolean":
                         return "bool";
+
                     case "int8":
                         return "sbyte";
-                    case "uint8":
-                        return "byte";
                     case "int16":
                         return "short";
+                    case "int":
+                        return "int";
+                    case "int64":
+                        return "long";
+
+                    case "uint8":
+                        return "byte";
                     case "uint16":
                         return "ushort";
+                    case "uint":
+                        return "uint";
+                    case "uint64":
+                        return "ulong";
+
+                    case "table":
+                        return "LuaTable";
+
                     default:
                         if (simpleType.Name.StartsWith("defines."))
                         {
-                            return $"FactorioRcon{simpleType.Name[8..].ToPascalCase()}";
+                            return $"{simpleType.Name[8..].ToPascalCase()}";
                         }
 
                         return simpleType.Name.ToPascalCase();
@@ -266,7 +284,7 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeArrayTypeSpecification arrayType:
                 return $"{BuildTypeName(arrayType.Value)}[]";
             case FactorioRuntimeFunctionTypeSpecification functionType:
-                return $"Action<{string.Join(", ", functionType.Parameters.Select(BuildTypeName))}>";
+                return functionType.Parameters.Length > 0 ? $"Action<{string.Join(", ", functionType.Parameters.Select(BuildTypeName))}>" : "Action";
             case FactorioRuntimeLiteralTypeSpecification literalType:
                 return "Literal";
             case FactorioRuntimeTableTypeSpecification tableType:
@@ -274,7 +292,7 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeTupleTypeSpecification tupleType:
                 return $"({string.Join(", ", tupleType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))})";
             case FactorioRuntimeUnionTypeSpecification unionType:
-                return $"LuaUnion<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>";
+                return $"OneOf<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>";
             case FactorioRuntimeKeyValueTypeSpecification keyValueType:
                 return keyValueType.Name switch
                 {
@@ -296,6 +314,17 @@ public class FactorioModelFileCompiler
                 return BuildTypeName(returnValues[0].Type, returnValues[0].Optional);
             default:
                 return $"({string.Join(", ", returnValues.Select(p => BuildTypeName(p.Type, p.Optional)))})";
+        }
+    }
+
+    string EscapeSharpKeyword(string symbol)
+    {
+        switch (symbol)
+        {
+            case "event":
+                return $"@{symbol}";
+            default:
+                return symbol;
         }
     }
 }
