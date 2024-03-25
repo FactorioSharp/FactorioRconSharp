@@ -1,12 +1,11 @@
 ﻿using System.Linq.Expressions;
-using FactorioRconSharp.Core.Abstractions;
 using FactorioRconSharp.Core.Parsing;
 using FactorioRconSharp.Core.Visitor;
-using FactorioRconSharp.v1_1_104.Model;
+using FactorioRconSharp.Model;
 
 namespace FactorioRconSharp.Core;
 
-public abstract class FactorioRconClientBase<TBaseModel> : IDisposable where TBaseModel: IFactorioRconModel
+public abstract class FactorioRconClientBase : IDisposable
 {
     readonly FactorioLowLevelRconClient _lowLevelClient;
 

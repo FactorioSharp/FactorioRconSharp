@@ -12,13 +12,7 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
       <Compile Remove="Resource\LuaCustomTable.cs" />
-      <None Include="Resource\LuaCustomTable.cs">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
       <Compile Remove="Resource\FactorioRconModelBase.cs" />
-      <None Include="Resource\FactorioRconModelBase.cs">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
     </ItemGroup>
 
     <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
+using FactorioRconSharp;
 using FactorioRconSharp.Core.Visitor;
-using FactorioRconSharp.v1_1_104;
-using FactorioRconSharp.v1_1_104.Model;
+using FactorioRconSharp.Model;
 
 using FactorioRconClient client = new("127.0.0.1", 27015);
 bool connected = await client.ConnectAsync("password");
@@ -12,7 +12,6 @@ Console.WriteLine("Game:");
 
 await Log(g => g.Game.IsDemo());
 await Log(g => g.Game.IsMultiplayer());
-await Log(g => g.Game.MapSettings.MaxFailedBehaviorCount);
 await Log(g => g.Game.GetMapExchangeString());
 await Log(g => g.Game.GetActiveEntitiesCount());
 await Log(g => g.Game.GetActiveEntitiesCount(1));

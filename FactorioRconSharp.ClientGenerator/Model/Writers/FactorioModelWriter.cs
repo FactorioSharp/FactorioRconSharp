@@ -1,14 +1,28 @@
-﻿using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using CaseExtensions;
 
 namespace FactorioRconSharp.ClientGenerator.Model.Writers;
 
 public static partial class FactorioModelWriter
 {
+    const string UseExecuteAsyncException = "FactorioModelUtils.UseClientExecuteAsyncMethod";
+    const string UseReadAsyncException = "FactorioModelUtils.UseClientReadAsyncMethod";
+    const string ClassAttribute = "FactorioRconClass";
+    const string ConceptAttribute = "FactorioRconConcept";
+    const string DefinitionAttribute = "FactorioRconDefinition";
+    const string? DefinitionValueAttribute = "FactorioRconDefinitionValue";
+    const string AttributeAttribute = "FactorioRconAttribute";
+    const string MethodAttribute = "FactorioRconMethod";
+
     public static async Task WriteFile(TextWriter writer, FactorioModelFile file)
     {
+        await writer.WriteLineAsync("#pragma warning disable CS8618");
+        await writer.WriteLineAsync("// ReSharper disable UnassignedGetOnlyAutoProperty");
+
+        await writer.WriteLineAsync();
+
         await writer.WriteLineAsync("using FactorioRconSharp.Core.Abstractions;");
+        await writer.WriteLineAsync("using FactorioRconSharp.Model.Utils;");
 
         foreach (string usingStmt in file.Usings)
         {
@@ -45,24 +59,15 @@ public static partial class FactorioModelWriter
 
         if (cls.IsFactorioClass)
         {
-            await WriteLineAsync(writer, $"[FactorioRconClass(\"{cls.LuaName}\")]", indentLevel);
+            await WriteLineAsync(writer, $"[{ClassAttribute}(\"{cls.LuaName}\")]", indentLevel);
         }
 
         if (cls.IsFactorioConcept)
         {
-            await WriteLineAsync(writer, $"[FactorioRconConcept(\"{cls.LuaName}\")]", indentLevel);
+            await WriteLineAsync(writer, $"[{ConceptAttribute}(\"{cls.LuaName}\")]", indentLevel);
         }
 
-        string? inheritance = ComputeInheritance(cls);
-
-        if (inheritance == null)
-        {
-            await WriteLineAsync(writer, $"public class {cls.Name}", indentLevel);
-        }
-        else
-        {
-            await WriteLineAsync(writer, $"public class {cls.Name}: {inheritance}", indentLevel);
-        }
+        await WriteLineAsync(writer, $"public {(cls.IsStatic ? "static " : "")}class {cls.Name}", indentLevel);
 
         await WriteLineAsync(writer, "{", indentLevel);
 
@@ -94,7 +99,7 @@ public static partial class FactorioModelWriter
             await WriteDocumentation(writer, enm.Documentation, indentLevel);
         }
 
-        await WriteLineAsync(writer, $"[FactorioRconDefinition(\"{enm.LuaName}\")]", indentLevel);
+        await WriteLineAsync(writer, $"[{DefinitionAttribute}(\"{enm.LuaName}\")]", indentLevel);
         await WriteLineAsync(writer, $"public enum {enm.Name}", indentLevel);
         await WriteLineAsync(writer, "{", indentLevel);
 
@@ -105,7 +110,7 @@ public static partial class FactorioModelWriter
                 await WriteDocumentation(writer, value.Documentation, indentLevel + 1);
             }
 
-            await WriteLineAsync(writer, $"[FactorioRconDefinitionValue(\"{value.LuaName}\")]", indentLevel + 1);
+            await WriteLineAsync(writer, $"[{DefinitionValueAttribute}(\"{value.LuaName}\")]", indentLevel + 1);
             await WriteLineAsync(writer, $"{value.Name},", indentLevel + 1);
             await writer.WriteLineAsync();
         }
@@ -129,7 +134,7 @@ public static partial class FactorioModelWriter
         string getter = property.Read ? "get;" : "private get;";
         string setter = property.Write ? "set;" : "private set;";
 
-        await WriteLineAsync(writer, $"[FactorioRconAttribute(\"{property.LuaName}\")]", indentLevel);
+        await WriteLineAsync(writer, $"[{AttributeAttribute}(\"{property.LuaName}\")]", indentLevel);
         await WriteLineAsync(writer, $"public {property.Type} {property.Name} {{ {getter} {setter} }}", indentLevel);
     }
 
@@ -169,10 +174,14 @@ public static partial class FactorioModelWriter
         }
 
         IEnumerable<string> parameters = method.Parameters.Select(ComputeParameter);
-        string exception = method.ReturnType == null ? "UseClientExecuteAsyncMethod()" : "UseClientReadAsyncMethod()";
+        string exception = method.ReturnType == null ? $"{UseExecuteAsyncException}()" : $"{UseReadAsyncException}()";
 
-        await WriteLineAsync(writer, $"[FactorioRconMethod(\"{method.LuaName}\")]", indentLevel);
-        await WriteLineAsync(writer, $"public {method.ReturnType ?? "void"} {method.Name}({string.Join(", ", parameters)}) => throw {exception};", indentLevel);
+        await WriteLineAsync(writer, $"[{MethodAttribute}(\"{method.LuaName}\")]", indentLevel);
+        await WriteLineAsync(
+            writer,
+            $"public {(method.IsStatic ? "static " : "")}{method.ReturnType ?? "void"} {method.Name}({string.Join(", ", parameters)}) => throw {exception};",
+            indentLevel
+        );
     }
 
     static async Task WriteIndexer(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
@@ -188,7 +197,7 @@ public static partial class FactorioModelWriter
 
         await WriteLineAsync(
             writer,
-            $"public {returnType} this[{op.KeyType} key] {{ {getter} => throw UseClientReadAsyncMethod(); {setter} => throw UseClientExecuteAsyncMethod(); }}",
+            $"public {returnType} this[{op.KeyType} key] {{ {getter} => throw {UseReadAsyncException}(); {setter} => throw {UseExecuteAsyncException}(); }}",
             indentLevel
         );
     }
@@ -215,28 +224,6 @@ public static partial class FactorioModelWriter
             await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Examples)}", indentLevel);
             await WriteDocumentationLineAsync(writer, "</examples>", indentLevel);
         }
-    }
-
-    static string? ComputeInheritance(FactorioModelClass cls)
-    {
-        if (cls.BaseClassName == null && cls.Interfaces.Length == 0)
-        {
-            return null;
-        }
-
-        StringBuilder inheritanceBuilder = new();
-
-        if (cls.BaseClassName != null)
-        {
-            inheritanceBuilder.Append(cls.BaseClassName);
-        }
-
-        foreach (string clsInterface in cls.Interfaces)
-        {
-            inheritanceBuilder.Append($", {clsInterface}");
-        }
-
-        return inheritanceBuilder.ToString();
     }
 
     static string ComputeParameter(FactorioModelClassMethodParameter parameter)

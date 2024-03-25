@@ -27,6 +27,7 @@ public class FactorioModelFileCompiler
             Namespace = "FactorioRconSharp.Model.Classes",
             Usings =
             [
+                "FactorioRconSharp.Model.Builtins",
                 "FactorioRconSharp.Model.Concepts",
                 "FactorioRconSharp.Model.Definitions"
             ],
@@ -51,6 +52,7 @@ public class FactorioModelFileCompiler
             Namespace = "FactorioRconSharp.Model.Concepts",
             Usings =
             [
+                "FactorioRconSharp.Model.Builtins",
                 "FactorioRconSharp.Model.Classes",
                 "FactorioRconSharp.Model.Definitions"
             ],
@@ -90,7 +92,6 @@ public class FactorioModelFileCompiler
                 Summary = cls.Description, Examples = BuildExamples(cls.Examples)
             },
             IsFactorioClass = true,
-            BaseClassName = "FactorioRconModelBase",
             Properties = cls.Attributes.OrderBy(a => a.Order)
                 .Select(CompileProperty)
                 .Concat(cls.Operators.Where(o => o.Name == FactorioRuntimeOperatorName.Length).Select(CompileProperty))
@@ -108,8 +109,7 @@ public class FactorioModelFileCompiler
             {
                 Summary = concept.Description
             },
-            IsFactorioConcept = true,
-            BaseClassName = "FactorioRconModelBase"
+            IsFactorioConcept = true
         };
 
     FactorioModelEnum CompileEnum(FactorioRuntimeDefinitionSpecification definition) =>
@@ -270,11 +270,11 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeLiteralTypeSpecification literalType:
                 return "Literal";
             case FactorioRuntimeTableTypeSpecification tableType:
-                return $"FactorioRconTable<{string.Join(", ", tableType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))}>";
+                return $"LuaTable<{string.Join(", ", tableType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))}>";
             case FactorioRuntimeTupleTypeSpecification tupleType:
                 return $"({string.Join(", ", tupleType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))})";
             case FactorioRuntimeUnionTypeSpecification unionType:
-                return $"FactorioRconUnion<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>";
+                return $"LuaUnion<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>";
             case FactorioRuntimeKeyValueTypeSpecification keyValueType:
                 return keyValueType.Name switch
                 {

@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Text;
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.v1_1_104.Model;
+using FactorioRconSharp.Model;
 
 namespace FactorioRconSharp.Core.Visitor;
 
