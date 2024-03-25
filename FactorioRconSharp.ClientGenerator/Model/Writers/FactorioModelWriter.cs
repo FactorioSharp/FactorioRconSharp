@@ -180,7 +180,7 @@ public static partial class FactorioModelWriter
             }
         }
 
-        IEnumerable<string> parameters = method.Parameters.Select(ComputeParameter);
+        IEnumerable<string> parameters = method.Parameters.OrderBy(p => p.Optional ? 1 : 0).Select(ComputeParameter);
         string exception = method.ReturnType == null ? $"{UseExecuteAsyncException}()" : $"{UseReadAsyncException}()";
 
         await WriteLineAsync(writer, $"[{MethodAttribute}(\"{method.LuaName}\")]", indentLevel);
@@ -235,14 +235,17 @@ public static partial class FactorioModelWriter
 
     static string ComputeParameter(FactorioModelClassMethodParameter parameter)
     {
-        string type = parameter.Optional ? $"{parameter.Type}?" : parameter.Type;
-
-        if (parameter.DefaultValue == null)
+        if (parameter.DefaultValue != null)
         {
-            return $"{type} {parameter.Name}";
+            return $"{parameter.Type} {parameter.Name} = {parameter.DefaultValue}";
         }
 
-        return $"{type} {parameter.Name} = {parameter.DefaultValue}";
+        if (parameter.Optional)
+        {
+            return $"{parameter.Type}? {parameter.Name} = null";
+        }
+
+        return $"{parameter.Type} {parameter.Name}";
     }
 
     static string ReplaceDocumentationLinks(string documentation)

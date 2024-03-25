@@ -13,7 +13,7 @@ Console.WriteLine("Game:");
 await Log(g => g.Game.IsDemo());
 await Log(g => g.Game.IsMultiplayer());
 await Log(g => g.Game.GetMapExchangeString());
-await Log(g => g.Game.GetActiveEntitiesCount());
+await Log(g => g.Game.GetActiveEntitiesCount(null));
 await Log(g => g.Game.GetActiveEntitiesCount(1));
 await Log(g => g.Game.GetActiveEntitiesCount("nauvis"));
 
