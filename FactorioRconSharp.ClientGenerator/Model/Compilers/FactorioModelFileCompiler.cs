@@ -199,6 +199,18 @@ public class FactorioModelFileCompiler
             Write = op.Write
         };
 
+    FactorioModelClassProperty CompileProperty(FactorioRuntimeParameterSpecification parameter) =>
+        new()
+        {
+            Name = parameter.Name.ToPascalCase(),
+            LuaName = parameter.Name,
+            Documentation = new FactorioModelDocumentation { Summary = parameter.Description },
+            Type = BuildTypeName(parameter.Type),
+            Optional = parameter.Optional,
+            Read = true,
+            Write = true
+        };
+
     FactorioModelClassOperator CompileOperator(FactorioRuntimeOperatorSpecification op) =>
         new()
         {
@@ -276,7 +288,8 @@ public class FactorioModelFileCompiler
         string name = $"Table{tableType.GetHashCode()}";
         return new FactorioModelClass
         {
-            Name = name
+            Name = name,
+            Properties = tableType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
         };
     }
 

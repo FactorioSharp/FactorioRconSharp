@@ -265,7 +265,7 @@ public class LuaRendering
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_type")]
-  public OneOf<Literal29190913, Literal9029417, Literal55400036, Literal22550079, Literal3789628, Literal12473332, Literal60613391, Literal64921669, Literal21177779> GetType(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public OneOf<Literal40535505, Literal34678979, Literal66166301, Literal39774547, Literal12611187, Literal30180123, Literal2808346, Literal14333193, Literal13009416> GetType(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Reorder this object so that it is drawn in front of the already existing objects.
@@ -975,7 +975,7 @@ public class LuaRendering
 /// <summary>
 /// Literal value: text
 /// </summary>
-public class Literal29190913
+public class Literal40535505
 {
   /// <summary>
   /// Literal value: text
@@ -988,7 +988,7 @@ public class Literal29190913
 /// <summary>
 /// Literal value: line
 /// </summary>
-public class Literal9029417
+public class Literal34678979
 {
   /// <summary>
   /// Literal value: line
@@ -1001,7 +1001,7 @@ public class Literal9029417
 /// <summary>
 /// Literal value: circle
 /// </summary>
-public class Literal55400036
+public class Literal66166301
 {
   /// <summary>
   /// Literal value: circle
@@ -1014,7 +1014,7 @@ public class Literal55400036
 /// <summary>
 /// Literal value: rectangle
 /// </summary>
-public class Literal22550079
+public class Literal39774547
 {
   /// <summary>
   /// Literal value: rectangle
@@ -1027,7 +1027,7 @@ public class Literal22550079
 /// <summary>
 /// Literal value: arc
 /// </summary>
-public class Literal3789628
+public class Literal12611187
 {
   /// <summary>
   /// Literal value: arc
@@ -1040,7 +1040,7 @@ public class Literal3789628
 /// <summary>
 /// Literal value: polygon
 /// </summary>
-public class Literal12473332
+public class Literal30180123
 {
   /// <summary>
   /// Literal value: polygon
@@ -1053,7 +1053,7 @@ public class Literal12473332
 /// <summary>
 /// Literal value: sprite
 /// </summary>
-public class Literal60613391
+public class Literal2808346
 {
   /// <summary>
   /// Literal value: sprite
@@ -1066,7 +1066,7 @@ public class Literal60613391
 /// <summary>
 /// Literal value: light
 /// </summary>
-public class Literal64921669
+public class Literal14333193
 {
   /// <summary>
   /// Literal value: light
@@ -1079,7 +1079,7 @@ public class Literal64921669
 /// <summary>
 /// Literal value: animation
 /// </summary>
-public class Literal21177779
+public class Literal13009416
 {
   /// <summary>
   /// Literal value: animation

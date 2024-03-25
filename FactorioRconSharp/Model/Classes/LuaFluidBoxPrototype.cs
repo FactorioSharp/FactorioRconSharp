@@ -38,7 +38,7 @@ public class LuaFluidBoxPrototype
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public OneOf<Literal20304321, Literal23737571, Literal28726945, Literal66394946> ProductionType { get; private set; }
+  public OneOf<Literal1401080, Literal29422698, Literal13896890, Literal23399238> ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -105,7 +105,7 @@ public class LuaFluidBoxPrototype
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal20304321
+public class Literal1401080
 {
   /// <summary>
   /// Literal value: input
@@ -118,7 +118,7 @@ public class Literal20304321
 /// <summary>
 /// Literal value: input-output
 /// </summary>
-public class Literal23737571
+public class Literal29422698
 {
   /// <summary>
   /// Literal value: input-output
@@ -131,7 +131,7 @@ public class Literal23737571
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal28726945
+public class Literal13896890
 {
   /// <summary>
   /// Literal value: output
@@ -144,7 +144,7 @@ public class Literal28726945
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal66394946
+public class Literal23399238
 {
   /// <summary>
   /// Literal value: none

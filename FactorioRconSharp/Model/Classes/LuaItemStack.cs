@@ -128,7 +128,7 @@ public class LuaItemStack
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public OneOf<Literal34622967, Literal55993668, Literal35016340, Literal64254500> PrioritizeInsertionMode { get; set; }
+  public OneOf<Literal22550079, Literal3789628, Literal12473332, Literal60613391> PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
@@ -581,7 +581,7 @@ public class LuaItemStack
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public UpgradeFilter GetMapper(uint index, OneOf<Literal7167227, Literal16294043> type) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public UpgradeFilter GetMapper(uint index, OneOf<Literal64921669, Literal21177779> type) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,7 +590,7 @@ public class LuaItemStack
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public void SetMapper(uint index, OneOf<Literal6630602, Literal5024928> type, OneOf<UpgradeFilter, LuaNil> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public void SetMapper(uint index, OneOf<Literal42080192, Literal11268815> type, OneOf<UpgradeFilter, LuaNil> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.
@@ -647,7 +647,7 @@ public class LuaItemStack
 /// <summary>
 /// Literal value: default
 /// </summary>
-public class Literal34622967
+public class Literal22550079
 {
   /// <summary>
   /// Literal value: default
@@ -660,7 +660,7 @@ public class Literal34622967
 /// <summary>
 /// Literal value: never
 /// </summary>
-public class Literal55993668
+public class Literal3789628
 {
   /// <summary>
   /// Literal value: never
@@ -673,7 +673,7 @@ public class Literal55993668
 /// <summary>
 /// Literal value: always
 /// </summary>
-public class Literal35016340
+public class Literal12473332
 {
   /// <summary>
   /// Literal value: always
@@ -686,7 +686,7 @@ public class Literal35016340
 /// <summary>
 /// Literal value: when-manually-filtered
 /// </summary>
-public class Literal64254500
+public class Literal60613391
 {
   /// <summary>
   /// Literal value: when-manually-filtered
@@ -699,7 +699,7 @@ public class Literal64254500
 /// <summary>
 /// Literal value: from
 /// </summary>
-public class Literal7167227
+public class Literal64921669
 {
   /// <summary>
   /// Literal value: from
@@ -712,7 +712,7 @@ public class Literal7167227
 /// <summary>
 /// Literal value: to
 /// </summary>
-public class Literal16294043
+public class Literal21177779
 {
   /// <summary>
   /// Literal value: to
@@ -725,7 +725,7 @@ public class Literal16294043
 /// <summary>
 /// Literal value: from
 /// </summary>
-public class Literal6630602
+public class Literal42080192
 {
   /// <summary>
   /// Literal value: from
@@ -738,7 +738,7 @@ public class Literal6630602
 /// <summary>
 /// Literal value: to
 /// </summary>
-public class Literal5024928
+public class Literal11268815
 {
   /// <summary>
   /// Literal value: to

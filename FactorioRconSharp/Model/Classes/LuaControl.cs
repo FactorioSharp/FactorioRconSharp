@@ -82,7 +82,7 @@ public class LuaControl
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table49924125 WalkingState { get; set; }
+  public Table45330878 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public class LuaControl
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table5773521 MiningState { get; set; }
+  public Table36963566 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table63094882 ShootingState { get; set; }
+  public Table3038911 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public class LuaControl
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table54135081 RepairState { get; set; }
+  public Table25474675 RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -513,19 +513,67 @@ public class LuaControl
 
 }
 
-public class Table5773521
+public class Table36963566
 {
+  /// <summary>
+  /// Whether the player is mining at all.
+  /// </summary>
+  [FactorioRconAttribute("mining")]
+  public bool Mining { get; set; }
+
+  /// <summary>
+  /// What location the player is mining. Only relevant if `mining` is `true`.
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
 }
 
-public class Table54135081
+public class Table25474675
 {
+  /// <summary>
+  /// The current state
+  /// </summary>
+  [FactorioRconAttribute("repairing")]
+  public bool Repairing { get; set; }
+
+  /// <summary>
+  /// The position being repaired
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
 }
 
-public class Table63094882
+public class Table3038911
 {
+  /// <summary>
+  /// The current state
+  /// </summary>
+  [FactorioRconAttribute("state")]
+  public ShootingEnum State { get; set; }
+
+  /// <summary>
+  /// The position being shot at
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
 }
 
-public class Table49924125
+public class Table45330878
 {
+  /// <summary>
+  /// If `false`, the player is currently not walking; otherwise it's going somewhere
+  /// </summary>
+  [FactorioRconAttribute("walking")]
+  public bool Walking { get; set; }
+
+  /// <summary>
+  /// Direction where the player is walking
+  /// </summary>
+  [FactorioRconAttribute("direction")]
+  public DirectionEnum Direction { get; set; }
+
 }
 

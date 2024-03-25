@@ -690,7 +690,7 @@ public class LuaGuiElement
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public void ScrollToElement(LuaGuiElement element, OneOf<Literal52116595, Literal20706689>? scrollMode = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public void ScrollToElement(LuaGuiElement element, OneOf<Literal5826912, Literal55256301>? scrollMode = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
 
   /// <summary>
   /// Selects all the text in this textbox.
@@ -737,7 +737,7 @@ public class LuaGuiElement
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public void ScrollToItem(int index, OneOf<Literal32187286, Literal4844372>? scrollMode = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public void ScrollToItem(int index, OneOf<Literal19531649, Literal7511460>? scrollMode = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.
@@ -765,7 +765,7 @@ public class LuaGuiElement
 /// <summary>
 /// Literal value: in-view
 /// </summary>
-public class Literal52116595
+public class Literal5826912
 {
   /// <summary>
   /// Literal value: in-view
@@ -778,7 +778,7 @@ public class Literal52116595
 /// <summary>
 /// Literal value: top-third
 /// </summary>
-public class Literal20706689
+public class Literal55256301
 {
   /// <summary>
   /// Literal value: top-third
@@ -791,7 +791,7 @@ public class Literal20706689
 /// <summary>
 /// Literal value: in-view
 /// </summary>
-public class Literal32187286
+public class Literal19531649
 {
   /// <summary>
   /// Literal value: in-view
@@ -804,7 +804,7 @@ public class Literal32187286
 /// <summary>
 /// Literal value: top-third
 /// </summary>
-public class Literal4844372
+public class Literal7511460
 {
   /// <summary>
   /// Literal value: top-third

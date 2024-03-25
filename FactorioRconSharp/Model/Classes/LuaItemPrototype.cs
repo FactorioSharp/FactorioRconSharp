@@ -214,13 +214,13 @@ public class LuaItemPrototype
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public OneOf<Literal39948218, Literal1689058, Literal62495167> FilterMode { get; private set; }
+  public OneOf<Literal23522948, Literal24219861, Literal38855053> FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public OneOf<Literal30619839, Literal59192235, Literal42629054, Literal33771145> InsertionPriorityMode { get; private set; }
+  public OneOf<Literal10649759, Literal22318356, Literal66032303, Literal44501086> InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -546,7 +546,7 @@ public class LuaItemPrototype
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public AmmoType? GetAmmoType(OneOf<Literal41572837, Literal61799993, Literal4898379, Literal47022312>? ammoSourceType = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public AmmoType? GetAmmoType(OneOf<Literal62107587, Literal29190913, Literal9029417, Literal55400036>? ammoSourceType = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// All methods and properties that this object supports.
@@ -559,7 +559,7 @@ public class LuaItemPrototype
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal39948218
+public class Literal23522948
 {
   /// <summary>
   /// Literal value: none
@@ -572,7 +572,7 @@ public class Literal39948218
 /// <summary>
 /// Literal value: whitelist
 /// </summary>
-public class Literal1689058
+public class Literal24219861
 {
   /// <summary>
   /// Literal value: whitelist
@@ -585,7 +585,7 @@ public class Literal1689058
 /// <summary>
 /// Literal value: blacklist
 /// </summary>
-public class Literal62495167
+public class Literal38855053
 {
   /// <summary>
   /// Literal value: blacklist
@@ -598,7 +598,7 @@ public class Literal62495167
 /// <summary>
 /// Literal value: default
 /// </summary>
-public class Literal30619839
+public class Literal10649759
 {
   /// <summary>
   /// Literal value: default
@@ -611,7 +611,7 @@ public class Literal30619839
 /// <summary>
 /// Literal value: never
 /// </summary>
-public class Literal59192235
+public class Literal22318356
 {
   /// <summary>
   /// Literal value: never
@@ -624,7 +624,7 @@ public class Literal59192235
 /// <summary>
 /// Literal value: always
 /// </summary>
-public class Literal42629054
+public class Literal66032303
 {
   /// <summary>
   /// Literal value: always
@@ -637,7 +637,7 @@ public class Literal42629054
 /// <summary>
 /// Literal value: when-manually-filtered
 /// </summary>
-public class Literal33771145
+public class Literal44501086
 {
   /// <summary>
   /// Literal value: when-manually-filtered
@@ -650,7 +650,7 @@ public class Literal33771145
 /// <summary>
 /// Literal value: default
 /// </summary>
-public class Literal41572837
+public class Literal62107587
 {
   /// <summary>
   /// Literal value: default
@@ -663,7 +663,7 @@ public class Literal41572837
 /// <summary>
 /// Literal value: player
 /// </summary>
-public class Literal61799993
+public class Literal29190913
 {
   /// <summary>
   /// Literal value: player
@@ -676,7 +676,7 @@ public class Literal61799993
 /// <summary>
 /// Literal value: turret
 /// </summary>
-public class Literal4898379
+public class Literal9029417
 {
   /// <summary>
   /// Literal value: turret
@@ -689,7 +689,7 @@ public class Literal4898379
 /// <summary>
 /// Literal value: vehicle
 /// </summary>
-public class Literal47022312
+public class Literal55400036
 {
   /// <summary>
   /// Literal value: vehicle

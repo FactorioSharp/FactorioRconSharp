@@ -44,7 +44,7 @@ public class LuaEquipmentPrototype
   /// Shape of this equipment prototype.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table10553853 Shape { get; private set; }
+  public Table38414640 Shape { get; private set; }
 
   /// <summary>
   /// The result item when taking this equipment out of an equipment grid, if any.
@@ -74,7 +74,7 @@ public class LuaEquipmentPrototype
   /// The logistic parameters for this roboport equipment.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table26067845 LogisticParameters { get; private set; }
+  public Table5024928 LogisticParameters { get; private set; }
 
   [FactorioRconAttribute("energy_consumption")]
   public double EnergyConsumption { get; private set; }
@@ -144,11 +144,68 @@ public class LuaEquipmentPrototype
 
 }
 
-public class Table26067845
+public class Table5024928
 {
+  [FactorioRconAttribute("spawn_and_station_height")]
+  public float SpawnAndStationHeight { get; set; }
+
+  [FactorioRconAttribute("spawn_and_station_shadow_height_offset")]
+  public float SpawnAndStationShadowHeightOffset { get; set; }
+
+  [FactorioRconAttribute("charge_approach_distance")]
+  public float ChargeApproachDistance { get; set; }
+
+  [FactorioRconAttribute("logistic_radius")]
+  public float LogisticRadius { get; set; }
+
+  [FactorioRconAttribute("construction_radius")]
+  public float ConstructionRadius { get; set; }
+
+  [FactorioRconAttribute("charging_station_count")]
+  public uint ChargingStationCount { get; set; }
+
+  [FactorioRconAttribute("charging_distance")]
+  public float ChargingDistance { get; set; }
+
+  [FactorioRconAttribute("charging_station_shift")]
+  public Vector ChargingStationShift { get; set; }
+
+  [FactorioRconAttribute("charging_energy")]
+  public double ChargingEnergy { get; set; }
+
+  [FactorioRconAttribute("charging_threshold_distance")]
+  public float ChargingThresholdDistance { get; set; }
+
+  [FactorioRconAttribute("robot_vertical_acceleration")]
+  public float RobotVerticalAcceleration { get; set; }
+
+  [FactorioRconAttribute("stationing_offset")]
+  public Vector StationingOffset { get; set; }
+
+  [FactorioRconAttribute("robot_limit")]
+  public uint RobotLimit { get; set; }
+
+  [FactorioRconAttribute("logistics_connection_distance")]
+  public float LogisticsConnectionDistance { get; set; }
+
+  [FactorioRconAttribute("robots_shrink_when_entering_and_exiting")]
+  public bool RobotsShrinkWhenEnteringAndExiting { get; set; }
+
 }
 
-public class Table10553853
+public class Table38414640
 {
+  [FactorioRconAttribute("width")]
+  public uint Width { get; set; }
+
+  [FactorioRconAttribute("height")]
+  public uint Height { get; set; }
+
+  /// <summary>
+  /// Only set when the shape is "manual"
+  /// </summary>
+  [FactorioRconAttribute("points")]
+  public EquipmentPoint[] Points { get; set; }
+
 }
 

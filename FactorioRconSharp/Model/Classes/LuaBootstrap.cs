@@ -26,7 +26,7 @@ public class LuaBootstrap
   /// Information about the currently running scenario/campaign/tutorial.
   /// </summary>
   [FactorioRconAttribute("level")]
-  public Table48209832 Level { get; private set; }
+  public Table42715336 Level { get; private set; }
 
   /// <summary>
   /// A dictionary listing the names of all currently active mods and mapping them to their version.
@@ -233,7 +233,37 @@ public class LuaBootstrap
 
 }
 
-public class Table48209832
+public class Table42715336
 {
+  /// <summary>
+  /// Is this level a simulation? (The main menu and 'Tips and tricks' use simulations)
+  /// </summary>
+  [FactorioRconAttribute("is_simulation")]
+  public bool IsSimulation { get; set; }
+
+  /// <summary>
+  /// Is this level a tutorial?
+  /// </summary>
+  [FactorioRconAttribute("is_tutorial")]
+  public bool IsTutorial { get; set; }
+
+  /// <summary>
+  /// The campaign name if any.
+  /// </summary>
+  [FactorioRconAttribute("campaign_name")]
+  public string CampaignName { get; set; }
+
+  /// <summary>
+  /// The level name.
+  /// </summary>
+  [FactorioRconAttribute("level_name")]
+  public string LevelName { get; set; }
+
+  /// <summary>
+  /// The mod name if any.
+  /// </summary>
+  [FactorioRconAttribute("mod_name")]
+  public string ModName { get; set; }
+
 }
 

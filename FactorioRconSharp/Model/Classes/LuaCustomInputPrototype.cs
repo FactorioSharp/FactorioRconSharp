@@ -68,7 +68,7 @@ public class LuaCustomInputPrototype
   /// The consuming type.
   /// </summary>
   [FactorioRconAttribute("consuming")]
-  public OneOf<Literal36963566, Literal25474675> Consuming { get; private set; }
+  public OneOf<Literal66629781, Literal49382823> Consuming { get; private set; }
 
   /// <summary>
   /// The action that happens when this custom input is triggered.
@@ -129,7 +129,7 @@ public class LuaCustomInputPrototype
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal36963566
+public class Literal66629781
 {
   /// <summary>
   /// Literal value: none
@@ -142,7 +142,7 @@ public class Literal36963566
 /// <summary>
 /// Literal value: game-only
 /// </summary>
-public class Literal25474675
+public class Literal49382823
 {
   /// <summary>
   /// Literal value: game-only

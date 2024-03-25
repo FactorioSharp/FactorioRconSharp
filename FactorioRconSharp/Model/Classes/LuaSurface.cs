@@ -470,7 +470,7 @@ public class LuaSurface
   /// <param name="removeCollidingDecoratives">Lua name: remove_colliding_decoratives</param>
   /// <param name="raiseEvent">Lua name: raise_event</param>
   [FactorioRconMethod("set_tiles")]
-  public void SetTiles(Tile[] tiles, bool? correctTiles = null, OneOf<bool, Literal3707448>? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public void SetTiles(Tile[] tiles, bool? correctTiles = null, OneOf<bool, Literal41728762>? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
 
   /// <summary>
   /// Spawn pollution at the given position.
@@ -964,7 +964,7 @@ public class LuaSurface
 /// <summary>
 /// Literal value: abort_on_collision
 /// </summary>
-public class Literal3707448
+public class Literal41728762
 {
   /// <summary>
   /// Literal value: abort_on_collision

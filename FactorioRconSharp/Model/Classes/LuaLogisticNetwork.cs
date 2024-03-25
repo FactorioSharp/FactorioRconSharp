@@ -160,7 +160,7 @@ public class LuaLogisticNetwork
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public int GetItemCount(string? item = null, OneOf<Literal38414640, Literal1401080>? member = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public int GetItemCount(string? item = null, OneOf<Literal35318532, Literal3491672>? member = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public class LuaLogisticNetwork
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public uint RemoveItem(ItemStackIdentification item, OneOf<Literal51408035, Literal5826912, Literal55256301, Literal19531649>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public uint RemoveItem(ItemStackIdentification item, OneOf<Literal44203036, Literal55848526, Literal31968364, Literal247016>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public class LuaLogisticNetwork
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public uint Insert(ItemStackIdentification item, OneOf<Literal29422698, Literal13896890, Literal23399238, Literal21621962>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public uint Insert(ItemStackIdentification item, OneOf<Literal6216253, Literal63432468, Literal57013419, Literal56431129>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public class LuaLogisticNetwork
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, OneOf<Literal10649759, Literal22318356, Literal66032303, Literal44501086>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, OneOf<Literal58490299, Literal20336737, Literal24418296, Literal43022188>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public class LuaLogisticNetwork
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, OneOf<Literal7511460, Literal23522948, Literal24219861, Literal38855053>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, OneOf<Literal5187339, Literal41825261, Literal5915254, Literal57111475>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.
@@ -243,7 +243,7 @@ public class LuaLogisticNetwork
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal38414640
+public class Literal35318532
 {
   /// <summary>
   /// Literal value: storage
@@ -256,7 +256,7 @@ public class Literal38414640
 /// <summary>
 /// Literal value: providers
 /// </summary>
-public class Literal1401080
+public class Literal3491672
 {
   /// <summary>
   /// Literal value: providers
@@ -269,7 +269,7 @@ public class Literal1401080
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal29422698
+public class Literal6216253
 {
   /// <summary>
   /// Literal value: storage
@@ -282,7 +282,7 @@ public class Literal29422698
 /// <summary>
 /// Literal value: storage-empty
 /// </summary>
-public class Literal13896890
+public class Literal63432468
 {
   /// <summary>
   /// Literal value: storage-empty
@@ -295,7 +295,7 @@ public class Literal13896890
 /// <summary>
 /// Literal value: storage-empty-slot
 /// </summary>
-public class Literal23399238
+public class Literal57013419
 {
   /// <summary>
   /// Literal value: storage-empty-slot
@@ -308,7 +308,7 @@ public class Literal23399238
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public class Literal21621962
+public class Literal56431129
 {
   /// <summary>
   /// Literal value: requester
@@ -321,7 +321,7 @@ public class Literal21621962
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public class Literal51408035
+public class Literal44203036
 {
   /// <summary>
   /// Literal value: active-provider
@@ -334,7 +334,7 @@ public class Literal51408035
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public class Literal5826912
+public class Literal55848526
 {
   /// <summary>
   /// Literal value: passive-provider
@@ -347,7 +347,7 @@ public class Literal5826912
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public class Literal55256301
+public class Literal31968364
 {
   /// <summary>
   /// Literal value: buffer
@@ -360,7 +360,7 @@ public class Literal55256301
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal19531649
+public class Literal247016
 {
   /// <summary>
   /// Literal value: storage
@@ -373,7 +373,7 @@ public class Literal19531649
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal7511460
+public class Literal5187339
 {
   /// <summary>
   /// Literal value: storage
@@ -386,7 +386,7 @@ public class Literal7511460
 /// <summary>
 /// Literal value: storage-empty
 /// </summary>
-public class Literal23522948
+public class Literal41825261
 {
   /// <summary>
   /// Literal value: storage-empty
@@ -399,7 +399,7 @@ public class Literal23522948
 /// <summary>
 /// Literal value: storage-empty-slot
 /// </summary>
-public class Literal24219861
+public class Literal5915254
 {
   /// <summary>
   /// Literal value: storage-empty-slot
@@ -412,7 +412,7 @@ public class Literal24219861
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public class Literal38855053
+public class Literal57111475
 {
   /// <summary>
   /// Literal value: requester
@@ -425,7 +425,7 @@ public class Literal38855053
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public class Literal10649759
+public class Literal58490299
 {
   /// <summary>
   /// Literal value: active-provider
@@ -438,7 +438,7 @@ public class Literal10649759
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public class Literal22318356
+public class Literal20336737
 {
   /// <summary>
   /// Literal value: passive-provider
@@ -451,7 +451,7 @@ public class Literal22318356
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public class Literal66032303
+public class Literal24418296
 {
   /// <summary>
   /// Literal value: buffer
@@ -464,7 +464,7 @@ public class Literal66032303
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal44501086
+public class Literal43022188
 {
   /// <summary>
   /// Literal value: storage

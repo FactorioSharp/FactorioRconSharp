@@ -74,7 +74,7 @@ public class LuaEntityPrototype
   /// Whether this entity is minable and what can be obtained by mining it.
   /// </summary>
   [FactorioRconAttribute("mineable_properties")]
-  public Table57733168 MineableProperties { get; private set; }
+  public Table7167227 MineableProperties { get; private set; }
 
   /// <summary>
   /// Items that when placed will produce this entity, if any. Construction bots will choose the first item in the list to build this entity.
@@ -263,7 +263,7 @@ public class LuaEntityPrototype
   /// The spawning cooldown for this enemy spawner prototype.
   /// </summary>
   [FactorioRconAttribute("spawn_cooldown")]
-  public Table4436986 SpawnCooldown { get; private set; }
+  public Table16294043 SpawnCooldown { get; private set; }
 
   /// <summary>
   /// The mining radius of this mining drill prototype.
@@ -281,7 +281,7 @@ public class LuaEntityPrototype
   /// The logistic mode of this logistic container.
   /// </summary>
   [FactorioRconAttribute("logistic_mode")]
-  public OneOf<Literal50492551, Literal53710617, Literal54181145, Literal64062224, Literal3129430, Literal65718035> LogisticMode { get; private set; }
+  public OneOf<Literal20706689, Literal32187286, Literal4844372, Literal34622967, Literal55993668, Literal35016340> LogisticMode { get; private set; }
 
   /// <summary>
   /// The max underground distance for underground belts and underground pipes.
@@ -323,7 +323,7 @@ public class LuaEntityPrototype
   /// The smoke trigger run when this entity is built, if any.
   /// </summary>
   [FactorioRconAttribute("created_smoke")]
-  public Table34361009 CreatedSmoke { get; private set; }
+  public Table52116595 CreatedSmoke { get; private set; }
 
   /// <summary>
   /// The trigger to run when this entity is created, if any.
@@ -635,7 +635,7 @@ public class LuaEntityPrototype
   /// The boiler operation mode of this boiler prototype.
   /// </summary>
   [FactorioRconAttribute("boiler_mode")]
-  public OneOf<Literal41773672, Literal4831898> BoilerMode { get; private set; }
+  public OneOf<Literal28726945, Literal66394946> BoilerMode { get; private set; }
 
   /// <summary>
   /// The fluid this offshore pump produces.
@@ -1254,7 +1254,7 @@ public class LuaEntityPrototype
   /// The logistic parameters for this roboport.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table37901460 LogisticParameters { get; private set; }
+  public Table64254500 LogisticParameters { get; private set; }
 
   /// <summary>
   /// The height of this spider vehicle prototype.
@@ -1448,7 +1448,7 @@ public class LuaEntityPrototype
 /// <summary>
 /// Literal value: heat-water-inside
 /// </summary>
-public class Literal41773672
+public class Literal28726945
 {
   /// <summary>
   /// Literal value: heat-water-inside
@@ -1461,7 +1461,7 @@ public class Literal41773672
 /// <summary>
 /// Literal value: output-to-separate-pipe
 /// </summary>
-public class Literal4831898
+public class Literal66394946
 {
   /// <summary>
   /// Literal value: output-to-separate-pipe
@@ -1471,14 +1471,56 @@ public class Literal4831898
 
 }
 
-public class Table34361009
+public class Table52116595
 {
+  [FactorioRconAttribute("smoke_name")]
+  public string SmokeName { get; set; }
+
+  [FactorioRconAttribute("offsets")]
+  public Vector[] Offsets { get; set; }
+
+  [FactorioRconAttribute("offset_deviation")]
+  public BoundingBox OffsetDeviation { get; set; }
+
+  [FactorioRconAttribute("initial_height")]
+  public float InitialHeight { get; set; }
+
+  [FactorioRconAttribute("max_radius")]
+  public float MaxRadius { get; set; }
+
+  [FactorioRconAttribute("speed")]
+  public Vector Speed { get; set; }
+
+  [FactorioRconAttribute("speed_multiplier")]
+  public float SpeedMultiplier { get; set; }
+
+  [FactorioRconAttribute("speed_multiplier_deviation")]
+  public float SpeedMultiplierDeviation { get; set; }
+
+  [FactorioRconAttribute("starting_frame")]
+  public float StartingFrame { get; set; }
+
+  [FactorioRconAttribute("starting_frame_deviation")]
+  public float StartingFrameDeviation { get; set; }
+
+  [FactorioRconAttribute("starting_frame_speed")]
+  public float StartingFrameSpeed { get; set; }
+
+  [FactorioRconAttribute("starting_frame_speed_deviation")]
+  public float StartingFrameSpeedDeviation { get; set; }
+
+  [FactorioRconAttribute("speed_from_center")]
+  public float SpeedFromCenter { get; set; }
+
+  [FactorioRconAttribute("speed_from_center_deviation")]
+  public float SpeedFromCenterDeviation { get; set; }
+
 }
 
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public class Literal50492551
+public class Literal20706689
 {
   /// <summary>
   /// Literal value: requester
@@ -1491,7 +1533,7 @@ public class Literal50492551
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public class Literal53710617
+public class Literal32187286
 {
   /// <summary>
   /// Literal value: active-provider
@@ -1504,7 +1546,7 @@ public class Literal53710617
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public class Literal54181145
+public class Literal4844372
 {
   /// <summary>
   /// Literal value: passive-provider
@@ -1517,7 +1559,7 @@ public class Literal54181145
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public class Literal64062224
+public class Literal34622967
 {
   /// <summary>
   /// Literal value: buffer
@@ -1530,7 +1572,7 @@ public class Literal64062224
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal3129430
+public class Literal55993668
 {
   /// <summary>
   /// Literal value: storage
@@ -1543,7 +1585,7 @@ public class Literal3129430
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal65718035
+public class Literal35016340
 {
   /// <summary>
   /// Literal value: none
@@ -1553,15 +1595,108 @@ public class Literal65718035
 
 }
 
-public class Table37901460
+public class Table64254500
 {
+  [FactorioRconAttribute("spawn_and_station_height")]
+  public float SpawnAndStationHeight { get; set; }
+
+  [FactorioRconAttribute("spawn_and_station_shadow_height_offset")]
+  public float SpawnAndStationShadowHeightOffset { get; set; }
+
+  [FactorioRconAttribute("charge_approach_distance")]
+  public float ChargeApproachDistance { get; set; }
+
+  [FactorioRconAttribute("logistic_radius")]
+  public float LogisticRadius { get; set; }
+
+  [FactorioRconAttribute("construction_radius")]
+  public float ConstructionRadius { get; set; }
+
+  [FactorioRconAttribute("charging_station_count")]
+  public uint ChargingStationCount { get; set; }
+
+  [FactorioRconAttribute("charging_distance")]
+  public float ChargingDistance { get; set; }
+
+  [FactorioRconAttribute("charging_station_shift")]
+  public Vector ChargingStationShift { get; set; }
+
+  [FactorioRconAttribute("charging_energy")]
+  public double ChargingEnergy { get; set; }
+
+  [FactorioRconAttribute("charging_threshold_distance")]
+  public float ChargingThresholdDistance { get; set; }
+
+  [FactorioRconAttribute("robot_vertical_acceleration")]
+  public float RobotVerticalAcceleration { get; set; }
+
+  [FactorioRconAttribute("stationing_offset")]
+  public Vector StationingOffset { get; set; }
+
+  [FactorioRconAttribute("robot_limit")]
+  public uint RobotLimit { get; set; }
+
+  [FactorioRconAttribute("logistics_connection_distance")]
+  public float LogisticsConnectionDistance { get; set; }
+
+  [FactorioRconAttribute("robots_shrink_when_entering_and_exiting")]
+  public bool RobotsShrinkWhenEnteringAndExiting { get; set; }
+
 }
 
-public class Table57733168
+public class Table7167227
 {
+  /// <summary>
+  /// Is this entity mineable at all?
+  /// </summary>
+  [FactorioRconAttribute("minable")]
+  public bool Minable { get; set; }
+
+  /// <summary>
+  /// Energy required to mine an entity.
+  /// </summary>
+  [FactorioRconAttribute("mining_time")]
+  public double MiningTime { get; set; }
+
+  /// <summary>
+  /// Prototype name of the particle produced when mining this entity. Will only be present if this entity produces any particle during mining.
+  /// </summary>
+  [FactorioRconAttribute("mining_particle")]
+  public string MiningParticle { get; set; }
+
+  /// <summary>
+  /// Products obtained by mining this entity.
+  /// </summary>
+  [FactorioRconAttribute("products")]
+  public Product[] Products { get; set; }
+
+  /// <summary>
+  /// The required fluid amount if any.
+  /// </summary>
+  [FactorioRconAttribute("fluid_amount")]
+  public double FluidAmount { get; set; }
+
+  /// <summary>
+  /// The prototype name of the required fluid if any.
+  /// </summary>
+  [FactorioRconAttribute("required_fluid")]
+  public string RequiredFluid { get; set; }
+
+  /// <summary>
+  /// The mining trigger if any.
+  /// </summary>
+  [FactorioRconAttribute("mining_trigger")]
+  public TriggerItem[] MiningTrigger { get; set; }
+
 }
 
-public class Table4436986
+public class Table16294043
 {
+  [FactorioRconAttribute("min")]
+  public double Min { get; set; }
+
+  [FactorioRconAttribute("max")]
+  public double Max { get; set; }
+
 }
 

@@ -56,7 +56,7 @@ public class LuaTrain
   /// Locomotives of the train.
   /// </summary>
   [FactorioRconAttribute("locomotives")]
-  public Table42331983 Locomotives { get; private set; }
+  public Table18234153 Locomotives { get; private set; }
 
   /// <summary>
   /// The cargo carriages the train contains.
@@ -286,7 +286,19 @@ public class LuaTrain
 
 }
 
-public class Table42331983
+public class Table18234153
 {
+  /// <summary>
+  /// Array of locomotives.
+  /// </summary>
+  [FactorioRconAttribute("front_movers")]
+  public LuaEntity[] FrontMovers { get; set; }
+
+  /// <summary>
+  /// Array of locomotives.
+  /// </summary>
+  [FactorioRconAttribute("back_movers")]
+  public LuaEntity[] BackMovers { get; set; }
+
 }
 

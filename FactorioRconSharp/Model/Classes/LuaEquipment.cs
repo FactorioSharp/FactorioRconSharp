@@ -40,7 +40,7 @@ public class LuaEquipment
   /// Shape of this equipment.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table14011335 Shape { get; private set; }
+  public Table6630602 Shape { get; private set; }
 
   /// <summary>
   /// Current shield value of the equipment.
@@ -113,7 +113,13 @@ public class LuaEquipment
 
 }
 
-public class Table14011335
+public class Table6630602
 {
+  [FactorioRconAttribute("width")]
+  public uint Width { get; set; }
+
+  [FactorioRconAttribute("height")]
+  public uint Height { get; set; }
+
 }
 

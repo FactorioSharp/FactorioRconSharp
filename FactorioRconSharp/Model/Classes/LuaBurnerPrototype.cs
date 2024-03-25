@@ -47,7 +47,7 @@ public class LuaBurnerPrototype
   /// The light flicker definition for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("light_flicker")]
-  public Table42715336 LightFlicker { get; private set; }
+  public Table48209832 LightFlicker { get; private set; }
 
   [FactorioRconAttribute("fuel_categories")]
   public Dictionary<string, bool> FuelCategories { get; private set; }
@@ -72,7 +72,31 @@ public class LuaBurnerPrototype
 
 }
 
-public class Table42715336
+public class Table48209832
 {
+  [FactorioRconAttribute("minimum_intensity")]
+  public float MinimumIntensity { get; set; }
+
+  [FactorioRconAttribute("maximum_intensity")]
+  public float MaximumIntensity { get; set; }
+
+  [FactorioRconAttribute("derivation_change_frequency")]
+  public float DerivationChangeFrequency { get; set; }
+
+  [FactorioRconAttribute("derivation_change_deviation")]
+  public float DerivationChangeDeviation { get; set; }
+
+  [FactorioRconAttribute("border_fix_speed")]
+  public float BorderFixSpeed { get; set; }
+
+  [FactorioRconAttribute("minimum_light_size")]
+  public float MinimumLightSize { get; set; }
+
+  [FactorioRconAttribute("light_intensity_to_size_coefficient")]
+  public float LightIntensityToSizeCoefficient { get; set; }
+
+  [FactorioRconAttribute("color")]
+  public Color Color { get; set; }
+
 }
 

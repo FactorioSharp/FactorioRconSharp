@@ -953,14 +953,14 @@ public class LuaGameScript
   /// <param name="searchDirection">Lua name: search_direction</param>
   /// <param name="stepsLimit">Lua name: steps_limit</param>
   [FactorioRconMethod("request_train_path")]
-  public OneOf<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult> RequestTrainPath(OneOf<TrainStopGoal, RailEnd>[] goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, OneOf<Literal48657371, Literal55492274>? searchDirection = null, uint? stepsLimit = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public OneOf<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult> RequestTrainPath(OneOf<TrainStopGoal, RailEnd>[] goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, OneOf<Literal21621962, Literal51408035>? searchDirection = null, uint? stepsLimit = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
 
 }
 
 /// <summary>
 /// Literal value: respect-movement-direction
 /// </summary>
-public class Literal48657371
+public class Literal21621962
 {
   /// <summary>
   /// Literal value: respect-movement-direction
@@ -973,7 +973,7 @@ public class Literal48657371
 /// <summary>
 /// Literal value: any-direction-with-locomotives
 /// </summary>
-public class Literal55492274
+public class Literal51408035
 {
   /// <summary>
   /// Literal value: any-direction-with-locomotives

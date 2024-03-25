@@ -282,7 +282,7 @@ public class LuaEntity
   /// The belt connectable neighbours of this belt connectable entity. Only entities that input to or are outputs of this entity. Does not contain the other end of an underground belt, see <see cref="LuaEntity.Neighbours" /> for that.
   /// </summary>
   [FactorioRconAttribute("belt_neighbours")]
-  public Table3038911 BeltNeighbours { get; private set; }
+  public Table5773521 BeltNeighbours { get; private set; }
 
   /// <summary>
   /// Fluidboxes of this entity.
@@ -387,13 +387,13 @@ public class LuaEntity
   /// Whether this underground belt goes into or out of the ground.
   /// </summary>
   [FactorioRconAttribute("belt_to_ground_type")]
-  public OneOf<Literal15225125, Literal26458746> BeltToGroundType { get; private set; }
+  public OneOf<Literal41773672, Literal4831898> BeltToGroundType { get; private set; }
 
   /// <summary>
   /// Whether this loader gets items from or puts item into a container.
   /// </summary>
   [FactorioRconAttribute("loader_type")]
-  public OneOf<Literal47005364, Literal61476884> LoaderType { get; set; }
+  public OneOf<Literal3129430, Literal65718035> LoaderType { get; set; }
 
   /// <summary>
   /// Number of rocket parts in the silo.
@@ -553,7 +553,7 @@ public class LuaEntity
   /// Entities that are directly connected to this entity via the circuit network. `nil` if this entity can't be connected to the circuit network.
   /// </summary>
   [FactorioRconAttribute("circuit_connected_entities")]
-  public Table39449526 CircuitConnectedEntities { get; private set; }
+  public Table34361009 CircuitConnectedEntities { get; private set; }
 
   /// <summary>
   /// The connection definition for entities that are directly connected to this entity via the circuit network. `nil` if this entity can't be connected to the circuit network.
@@ -667,7 +667,7 @@ public class LuaEntity
   /// The vehicle modifiers applied to this entity through the attached stickers.
   /// </summary>
   [FactorioRconAttribute("sticker_vehicle_modifiers")]
-  public Table2192437 StickerVehicleModifiers { get; private set; }
+  public Table23737571 StickerVehicleModifiers { get; private set; }
 
   [FactorioRconAttribute("parameters")]
   public ProgrammableSpeakerParameters Parameters { get; set; }
@@ -800,19 +800,19 @@ public class LuaEntity
   /// The filter mode for this filter inserter. `nil` if this inserter doesn't use filters.
   /// </summary>
   [FactorioRconAttribute("inserter_filter_mode")]
-  public OneOf<Literal50346327, Literal50874780> InserterFilterMode { get; set; }
+  public OneOf<Literal50492551, Literal53710617> InserterFilterMode { get; set; }
 
   /// <summary>
   /// The input priority for this splitter.
   /// </summary>
   [FactorioRconAttribute("splitter_input_priority")]
-  public OneOf<Literal60052224, Literal7339810, Literal3137518> SplitterInputPriority { get; set; }
+  public OneOf<Literal37901460, Literal57733168, Literal4436986> SplitterInputPriority { get; set; }
 
   /// <summary>
   /// The output priority for this splitter.
   /// </summary>
   [FactorioRconAttribute("splitter_output_priority")]
-  public OneOf<Literal48979325, Literal295723, Literal10941773> SplitterOutputPriority { get; set; }
+  public OneOf<Literal26067845, Literal10553853, Literal20304321> SplitterOutputPriority { get; set; }
 
   /// <summary>
   /// Whether this land mine is armed.
@@ -1060,7 +1060,7 @@ public class LuaEntity
   /// Type of linked belt. Changing type will also flip direction so the belt is out of the same side.
   /// </summary>
   [FactorioRconAttribute("linked_belt_type")]
-  public OneOf<Literal3318699, Literal55683007> LinkedBeltType { get; set; }
+  public OneOf<Literal54181145, Literal64062224> LinkedBeltType { get; set; }
 
   /// <summary>
   /// Neighbour to which this linked belt is connected to, if any.
@@ -1108,7 +1108,7 @@ public class LuaEntity
   /// Gives what is the current shape of a transport-belt.
   /// </summary>
   [FactorioRconAttribute("belt_shape")]
-  public OneOf<Literal45330878, Literal66629781, Literal49382823> BeltShape { get; private set; }
+  public OneOf<Literal54135081, Literal63094882, Literal49924125> BeltShape { get; private set; }
 
   /// <summary>
   /// Returns a <see cref="LuaGameScript.Print" /> it will ping the location of the entity.
@@ -2006,14 +2006,26 @@ public class LuaEntity
 
 }
 
-public class Table3038911
+public class Table5773521
 {
+  /// <summary>
+  /// Array of transport belt connectable entities.
+  /// </summary>
+  [FactorioRconAttribute("inputs")]
+  public LuaEntity[] Inputs { get; set; }
+
+  /// <summary>
+  /// Array of transport belt connectable entities.
+  /// </summary>
+  [FactorioRconAttribute("outputs")]
+  public LuaEntity[] Outputs { get; set; }
+
 }
 
 /// <summary>
 /// Literal value: straight
 /// </summary>
-public class Literal45330878
+public class Literal54135081
 {
   /// <summary>
   /// Literal value: straight
@@ -2026,7 +2038,7 @@ public class Literal45330878
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal66629781
+public class Literal63094882
 {
   /// <summary>
   /// Literal value: left
@@ -2039,7 +2051,7 @@ public class Literal66629781
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal49382823
+public class Literal49924125
 {
   /// <summary>
   /// Literal value: right
@@ -2052,7 +2064,7 @@ public class Literal49382823
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal15225125
+public class Literal41773672
 {
   /// <summary>
   /// Literal value: input
@@ -2065,7 +2077,7 @@ public class Literal15225125
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal26458746
+public class Literal4831898
 {
   /// <summary>
   /// Literal value: output
@@ -2075,14 +2087,26 @@ public class Literal26458746
 
 }
 
-public class Table39449526
+public class Table34361009
 {
+  /// <summary>
+  /// Entities connected via the red wire.
+  /// </summary>
+  [FactorioRconAttribute("red")]
+  public LuaEntity[] Red { get; set; }
+
+  /// <summary>
+  /// Entities connected via the green wire.
+  /// </summary>
+  [FactorioRconAttribute("green")]
+  public LuaEntity[] Green { get; set; }
+
 }
 
 /// <summary>
 /// Literal value: whitelist
 /// </summary>
-public class Literal50346327
+public class Literal50492551
 {
   /// <summary>
   /// Literal value: whitelist
@@ -2095,7 +2119,7 @@ public class Literal50346327
 /// <summary>
 /// Literal value: blacklist
 /// </summary>
-public class Literal50874780
+public class Literal53710617
 {
   /// <summary>
   /// Literal value: blacklist
@@ -2108,7 +2132,7 @@ public class Literal50874780
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal3318699
+public class Literal54181145
 {
   /// <summary>
   /// Literal value: input
@@ -2121,7 +2145,7 @@ public class Literal3318699
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal55683007
+public class Literal64062224
 {
   /// <summary>
   /// Literal value: output
@@ -2134,7 +2158,7 @@ public class Literal55683007
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal47005364
+public class Literal3129430
 {
   /// <summary>
   /// Literal value: input
@@ -2147,7 +2171,7 @@ public class Literal47005364
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal61476884
+public class Literal65718035
 {
   /// <summary>
   /// Literal value: output
@@ -2160,7 +2184,7 @@ public class Literal61476884
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal60052224
+public class Literal37901460
 {
   /// <summary>
   /// Literal value: left
@@ -2173,7 +2197,7 @@ public class Literal60052224
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal7339810
+public class Literal57733168
 {
   /// <summary>
   /// Literal value: none
@@ -2186,7 +2210,7 @@ public class Literal7339810
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal3137518
+public class Literal4436986
 {
   /// <summary>
   /// Literal value: right
@@ -2199,7 +2223,7 @@ public class Literal3137518
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal48979325
+public class Literal26067845
 {
   /// <summary>
   /// Literal value: left
@@ -2212,7 +2236,7 @@ public class Literal48979325
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal295723
+public class Literal10553853
 {
   /// <summary>
   /// Literal value: none
@@ -2225,7 +2249,7 @@ public class Literal295723
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal10941773
+public class Literal20304321
 {
   /// <summary>
   /// Literal value: right
@@ -2235,7 +2259,13 @@ public class Literal10941773
 
 }
 
-public class Table2192437
+public class Table23737571
 {
+  [FactorioRconAttribute("speed_modifier")]
+  public double SpeedModifier { get; set; }
+
+  [FactorioRconAttribute("friction_modifier")]
+  public double FrictionModifier { get; set; }
+
 }
 

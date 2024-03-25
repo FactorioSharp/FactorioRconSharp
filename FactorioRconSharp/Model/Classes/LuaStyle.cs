@@ -92,13 +92,13 @@ public class LuaStyle
   /// Horizontal align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("horizontal_align")]
-  public OneOf<Literal62103957, Literal16145044, Literal60495737> HorizontalAlign { get; set; }
+  public OneOf<Literal31050716, Literal48085274, Literal3157796> HorizontalAlign { get; set; }
 
   /// <summary>
   /// Vertical align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("vertical_align")]
-  public OneOf<Literal23749772, Literal6326333, Literal32747756> VerticalAlign { get; set; }
+  public OneOf<Literal66313729, Literal50411038, Literal51998856> VerticalAlign { get; set; }
 
   [FactorioRconAttribute("font_color")]
   public Color FontColor { get; set; }
@@ -333,7 +333,7 @@ public class LuaStyle
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal62103957
+public class Literal31050716
 {
   /// <summary>
   /// Literal value: left
@@ -346,7 +346,7 @@ public class Literal62103957
 /// <summary>
 /// Literal value: center
 /// </summary>
-public class Literal16145044
+public class Literal48085274
 {
   /// <summary>
   /// Literal value: center
@@ -359,7 +359,7 @@ public class Literal16145044
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal60495737
+public class Literal3157796
 {
   /// <summary>
   /// Literal value: right
@@ -372,7 +372,7 @@ public class Literal60495737
 /// <summary>
 /// Literal value: top
 /// </summary>
-public class Literal23749772
+public class Literal66313729
 {
   /// <summary>
   /// Literal value: top
@@ -385,7 +385,7 @@ public class Literal23749772
 /// <summary>
 /// Literal value: center
 /// </summary>
-public class Literal6326333
+public class Literal50411038
 {
   /// <summary>
   /// Literal value: center
@@ -398,7 +398,7 @@ public class Literal6326333
 /// <summary>
 /// Literal value: bottom
 /// </summary>
-public class Literal32747756
+public class Literal51998856
 {
   /// <summary>
   /// Literal value: bottom
