@@ -77,10 +77,13 @@ public class FactorioModelFileCompiler
         {
             Name = definition.Name.ToPascalCase(),
             Namespace = "FactorioRconSharp.Model.Definitions",
-            Enums =
+            Usings =
             [
-                CompileEnum(definition)
-            ]
+                "FactorioRconSharp.Model.Builtins",
+                "FactorioRconSharp.Model.Classes",
+                "FactorioRconSharp.Model.Concepts"
+            ],
+            Enums = CompileEnums(definition)
         };
     }
 
@@ -114,14 +117,23 @@ public class FactorioModelFileCompiler
             IsFactorioConcept = true
         };
 
-    FactorioModelEnum CompileEnum(FactorioRuntimeDefinitionSpecification definition) =>
-        new()
-        {
-            Name = definition.Name.ToPascalCase(),
-            LuaName = definition.Name,
-            Documentation = new FactorioModelDocumentation { Summary = definition.Description },
-            Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
-        };
+    FactorioModelEnum[] CompileEnums(FactorioRuntimeDefinitionSpecification definition, string namePrefix = "", string luaNamePrefix = "")
+    {
+        string enumName = $"{namePrefix}{definition.Name.ToPascalCase()}";
+        string luaName = $"{luaNamePrefix}{definition.Name}";
+
+        return new[]
+            {
+                new FactorioModelEnum
+                {
+                    Name = enumName,
+                    LuaName = luaName,
+                    Documentation = new FactorioModelDocumentation { Summary = definition.Description },
+                    Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
+                }
+            }.Concat(definition.Subkeys.SelectMany(def => CompileEnums(def, enumName, $"{luaName}.")))
+            .ToArray();
+    }
 
     FactorioModelEnumValue CompileEnumValue(FactorioRuntimeDefinitionValueSpecification definitionValue) =>
         new()
@@ -272,12 +284,14 @@ public class FactorioModelFileCompiler
                         return "LuaTable";
 
                     default:
-                        if (simpleType.Name.StartsWith("defines."))
+                        string name = simpleType.Name;
+
+                        if (name.StartsWith("defines."))
                         {
-                            return $"{simpleType.Name[8..].ToPascalCase()}";
+                            name = name[8..];
                         }
 
-                        return simpleType.Name.ToPascalCase();
+                        return name.Replace('.', '_').ToPascalCase();
                 }
             case FactorioRuntimeStructTypeSpecification structType:
                 return "Struct";
