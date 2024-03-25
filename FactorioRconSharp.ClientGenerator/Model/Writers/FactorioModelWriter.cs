@@ -57,14 +57,17 @@ public static partial class FactorioModelWriter
             await WriteDocumentation(writer, cls.Documentation, indentLevel);
         }
 
-        if (cls.IsFactorioClass)
+        if (cls.LuaName != null)
         {
-            await WriteLineAsync(writer, $"[{ClassAttribute}(\"{cls.LuaName}\")]", indentLevel);
-        }
+            if (cls.IsFactorioClass)
+            {
+                await WriteLineAsync(writer, $"[{ClassAttribute}(\"{cls.LuaName}\")]", indentLevel);
+            }
 
-        if (cls.IsFactorioConcept)
-        {
-            await WriteLineAsync(writer, $"[{ConceptAttribute}(\"{cls.LuaName}\")]", indentLevel);
+            if (cls.IsFactorioConcept)
+            {
+                await WriteLineAsync(writer, $"[{ConceptAttribute}(\"{cls.LuaName}\")]", indentLevel);
+            }
         }
 
         await WriteLineAsync(writer, $"public {(cls.IsStatic ? "static " : "")}class {cls.Name}", indentLevel);
@@ -134,8 +137,12 @@ public static partial class FactorioModelWriter
         string getter = property.Read ? "get;" : "private get;";
         string setter = property.Write ? "set;" : "private set;";
 
-        await WriteLineAsync(writer, $"[{AttributeAttribute}(\"{property.LuaName}\")]", indentLevel);
-        await WriteLineAsync(writer, $"public {property.Type} {property.Name} {{ {getter} {setter} }}", indentLevel);
+        if (property.LuaName != null)
+        {
+            await WriteLineAsync(writer, $"[{AttributeAttribute}(\"{property.LuaName}\")]", indentLevel);
+        }
+
+        await WriteLineAsync(writer, $"public {(property.IsStatic ? "static " : "")}{property.Type} {property.Name} {{ {getter} {setter} }}", indentLevel);
     }
 
     static async Task WriteOperator(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
@@ -192,8 +199,8 @@ public static partial class FactorioModelWriter
         }
 
         string returnType = op.Optional ? $"{op.ReturnType}?" : op.ReturnType;
-        string getter = op.Read ? "get;" : "private get;";
-        string setter = op.Write ? "set;" : "private set;";
+        string getter = op.Read ? "get" : "private get";
+        string setter = op.Write ? "set" : "private set";
 
         await WriteLineAsync(
             writer,

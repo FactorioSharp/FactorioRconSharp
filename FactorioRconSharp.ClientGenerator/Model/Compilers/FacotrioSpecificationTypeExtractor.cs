@@ -8,21 +8,30 @@ public static class FacotrioSpecificationTypeExtractor
     {
         foreach (FactorioRuntimeClassSpecification cls in specification.Classes)
         {
-            foreach (FactorioRuntimeAttributeSpecification attribute in cls.Attributes)
+            foreach (FactorioRuntimeTypeSpecification factorioRuntimeTypeSpecification in ExtractTypes(cls))
             {
-                foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(attribute))
-                {
-                    yield return type;
-                }
+                yield return factorioRuntimeTypeSpecification;
             }
         }
 
         foreach (FactorioRuntimeConceptSpecification concept in specification.Concepts)
         {
-            foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(concept.Type))
+            foreach (FactorioRuntimeTypeSpecification factorioRuntimeTypeSpecification1 in ExtractTypes(concept))
             {
-                yield return type;
+                yield return factorioRuntimeTypeSpecification1;
             }
+        }
+    }
+
+    public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeClassSpecification cls) => cls.Attributes.SelectMany(ExtractTypes);
+
+    public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeConceptSpecification concept)
+    {
+        yield return concept.Type;
+
+        foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(concept.Type))
+        {
+            yield return type;
         }
     }
 
@@ -43,10 +52,14 @@ public static class FacotrioSpecificationTypeExtractor
             case FactorioRuntimeSimpleTypeSpecification simpleType:
                 break;
             case FactorioRuntimeKeyValueTypeSpecification keyValueType:
+                yield return keyValueType.Key;
+
                 foreach (FactorioRuntimeTypeSpecification keyType in ExtractTypes(keyValueType.Key))
                 {
                     yield return keyType;
                 }
+
+                yield return keyValueType.Value;
 
                 foreach (FactorioRuntimeTypeSpecification valueType in ExtractTypes(keyValueType.Value))
                 {
@@ -55,6 +68,8 @@ public static class FacotrioSpecificationTypeExtractor
 
                 break;
             case FactorioRuntimeArrayTypeSpecification arrayType:
+                yield return arrayType.Value;
+
                 foreach (FactorioRuntimeTypeSpecification elementType in ExtractTypes(arrayType.Value))
                 {
                     yield return elementType;
@@ -64,6 +79,8 @@ public static class FacotrioSpecificationTypeExtractor
             case FactorioRuntimeFunctionTypeSpecification functionType:
                 foreach (FactorioRuntimeTypeSpecification parameter in functionType.Parameters)
                 {
+                    yield return parameter;
+
                     foreach (FactorioRuntimeTypeSpecification elementType in ExtractTypes(parameter))
                     {
                         yield return elementType;
@@ -76,6 +93,8 @@ public static class FacotrioSpecificationTypeExtractor
             case FactorioRuntimeTableTypeSpecification tableType:
                 foreach (FactorioRuntimeParameterSpecification parameter in tableType.Parameters)
                 {
+                    yield return parameter.Type;
+
                     foreach (FactorioRuntimeTypeSpecification elementType in ExtractTypes(parameter.Type))
                     {
                         yield return elementType;
@@ -86,6 +105,8 @@ public static class FacotrioSpecificationTypeExtractor
                 {
                     foreach (FactorioRuntimeParameterSpecification parameter in group.Parameters)
                     {
+                        yield return parameter.Type;
+
                         foreach (FactorioRuntimeTypeSpecification elementType in ExtractTypes(parameter.Type))
                         {
                             yield return elementType;
@@ -97,6 +118,8 @@ public static class FacotrioSpecificationTypeExtractor
             case FactorioRuntimeTupleTypeSpecification tupleType:
                 foreach (FactorioRuntimeParameterSpecification parameter in tupleType.Parameters)
                 {
+                    yield return parameter.Type;
+
                     foreach (FactorioRuntimeTypeSpecification elementType in ExtractTypes(parameter.Type))
                     {
                         yield return elementType;
@@ -107,6 +130,8 @@ public static class FacotrioSpecificationTypeExtractor
             case FactorioRuntimeUnionTypeSpecification unionType:
                 foreach (FactorioRuntimeTypeSpecification option in unionType.Options)
                 {
+                    yield return option;
+
                     foreach (FactorioRuntimeTypeSpecification elementType in ExtractTypes(option))
                     {
                         yield return elementType;

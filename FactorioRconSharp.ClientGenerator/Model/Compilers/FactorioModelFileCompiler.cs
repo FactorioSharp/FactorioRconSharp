@@ -7,6 +7,7 @@ namespace FactorioRconSharp.ClientGenerator.Model.Compilers;
 public class FactorioModelFileCompiler
 {
     readonly FactorioRuntimeApiSpecification _specification;
+    readonly Dictionary<int, FactorioModelClass> _anonymousTypes = new();
 
     public FactorioModelFileCompiler(FactorioRuntimeApiSpecification specification)
     {
@@ -21,6 +22,30 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of class {clsName}");
         }
 
+        List<FactorioModelClass> nestedClasses = new();
+
+        foreach (FactorioRuntimeTypeSpecification type in FacotrioSpecificationTypeExtractor.ExtractTypes(cls))
+        {
+            switch (type)
+            {
+                case FactorioRuntimeLiteralTypeSpecification literalType:
+                    FactorioModelClass compiledLiteralType = CompileLiteralType(literalType);
+                    _anonymousTypes[literalType.GetHashCode()] = compiledLiteralType;
+                    nestedClasses.Add(compiledLiteralType);
+                    break;
+                case FactorioRuntimeStructTypeSpecification structType:
+                    FactorioModelClass compiledStructType = CompileStructType(structType);
+                    _anonymousTypes[structType.GetHashCode()] = compiledStructType;
+                    nestedClasses.Add(compiledStructType);
+                    break;
+                case FactorioRuntimeTableTypeSpecification tableType:
+                    FactorioModelClass compiledTableType = CompileTableType(tableType);
+                    _anonymousTypes[tableType.GetHashCode()] = compiledTableType;
+                    nestedClasses.Add(compiledTableType);
+                    break;
+            }
+        }
+
         return new FactorioModelFile
         {
             Name = cls.Name.ToPascalCase(),
@@ -32,10 +57,7 @@ public class FactorioModelFileCompiler
                 "FactorioRconSharp.Model.Definitions",
                 "OneOf"
             ],
-            Classes =
-            [
-                CompileClass(cls)
-            ]
+            Classes = new[] { CompileClasses(cls) }.Concat(nestedClasses).ToArray()
         };
     }
 
@@ -87,7 +109,7 @@ public class FactorioModelFileCompiler
         };
     }
 
-    FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls) =>
+    FactorioModelClass CompileClasses(FactorioRuntimeClassSpecification cls) =>
         new()
         {
             Name = cls.Name.ToPascalCase(),
@@ -214,6 +236,49 @@ public class FactorioModelFileCompiler
             Optional = parameter.Optional
         };
 
+    FactorioModelClass CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
+    {
+        string name = $"Literal{literalType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" },
+            Properties =
+            [
+                new FactorioModelClassProperty
+                {
+                    Name = "Value",
+                    LuaName = literalType.Value.ToString() ?? "",
+                    Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" },
+                    Type = "object",
+                    IsStatic = true,
+                    Optional = false,
+                    Read = true,
+                    Write = false
+                }
+            ]
+        };
+    }
+
+    FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
+    {
+        string name = $"Struct{structType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            Properties = structType.Attributes.OrderBy(a => a.Order).Select(CompileProperty).ToArray()
+        };
+    }
+
+    FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
+    {
+        string name = $"Table{tableType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name
+        };
+    }
+
     static string? BuildExamples(string[] examples)
     {
         switch (examples.Length)
@@ -251,9 +316,6 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeSimpleTypeSpecification simpleType:
                 switch (simpleType.Name)
                 {
-                    case "nil":
-                        return "LuaNil";
-
                     case "string":
                     case "float":
                     case "double":
@@ -280,6 +342,8 @@ public class FactorioModelFileCompiler
                     case "uint64":
                         return "ulong";
 
+                    case "nil":
+                        return "LuaNil";
                     case "table":
                         return "LuaTable";
 
@@ -293,16 +357,10 @@ public class FactorioModelFileCompiler
 
                         return name.Replace('.', '_').ToPascalCase();
                 }
-            case FactorioRuntimeStructTypeSpecification structType:
-                return "Struct";
             case FactorioRuntimeArrayTypeSpecification arrayType:
                 return $"{BuildTypeName(arrayType.Value)}[]";
             case FactorioRuntimeFunctionTypeSpecification functionType:
                 return functionType.Parameters.Length > 0 ? $"Action<{string.Join(", ", functionType.Parameters.Select(BuildTypeName))}>" : "Action";
-            case FactorioRuntimeLiteralTypeSpecification literalType:
-                return "Literal";
-            case FactorioRuntimeTableTypeSpecification tableType:
-                return $"LuaTable<{string.Join(", ", tableType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))}>";
             case FactorioRuntimeTupleTypeSpecification tupleType:
                 return $"({string.Join(", ", tupleType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))})";
             case FactorioRuntimeUnionTypeSpecification unionType:
@@ -313,6 +371,12 @@ public class FactorioModelFileCompiler
                     "dictionary" => $"Dictionary<{BuildTypeName(keyValueType.Key)}, {BuildTypeName(keyValueType.Value)}>",
                     _ => $"{keyValueType.Name.ToPascalCase()}<{BuildTypeName(keyValueType.Key)}, {BuildTypeName(keyValueType.Value)}>"
                 };
+            case FactorioRuntimeLiteralTypeSpecification literalType:
+                return $"Literal{literalType.GetHashCode()}";
+            case FactorioRuntimeStructTypeSpecification structType:
+                return $"Struct{structType.GetHashCode()}";
+            case FactorioRuntimeTableTypeSpecification tableType:
+                return $"Table{tableType.GetHashCode()}";
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
