@@ -1,8 +1,10 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
+using CaseExtensions;
 
 namespace FactorioRconSharp.ClientGenerator.Model.Writers;
 
-public static class FactorioModelWriter
+public static partial class FactorioModelWriter
 {
     public static async Task WriteFile(TextWriter writer, FactorioModelFile file)
     {
@@ -196,21 +198,21 @@ public static class FactorioModelWriter
         if (!string.IsNullOrWhiteSpace(documentation.Summary))
         {
             await WriteDocumentationLineAsync(writer, "<summary>", indentLevel);
-            await WriteDocumentationLineAsync(writer, $"{documentation.Summary}", indentLevel);
+            await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Summary)}", indentLevel);
             await WriteDocumentationLineAsync(writer, "</summary>", indentLevel);
         }
 
         if (!string.IsNullOrWhiteSpace(documentation.Remarks))
         {
             await WriteDocumentationLineAsync(writer, "<remarks>", indentLevel);
-            await WriteDocumentationLineAsync(writer, $"{documentation.Remarks}", indentLevel);
+            await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Remarks)}", indentLevel);
             await WriteDocumentationLineAsync(writer, "</remarks>", indentLevel);
         }
 
         if (!string.IsNullOrWhiteSpace(documentation.Examples))
         {
             await WriteDocumentationLineAsync(writer, "<examples>", indentLevel);
-            await WriteDocumentationLineAsync(writer, $"{documentation.Examples}", indentLevel);
+            await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Examples)}", indentLevel);
             await WriteDocumentationLineAsync(writer, "</examples>", indentLevel);
         }
     }
@@ -247,6 +249,21 @@ public static class FactorioModelWriter
         }
 
         return $"{type} {parameter.Name} = {parameter.DefaultValue}";
+    }
+
+    static string ReplaceDocumentationLinks(string documentation)
+    {
+        Regex linkRegex = DocumentationLinkRegex();
+
+        MatchCollection matches = linkRegex.Matches(documentation);
+        foreach (Match match in matches.ToArray())
+        {
+            string symbol = match.Groups["symbol"].Value;
+            string sharpSymbol = string.Join(".", symbol.Split("::").Select(s => s.ToPascalCase()));
+            documentation = documentation.Replace(match.Value, $"<see cref=\"{sharpSymbol}\" />");
+        }
+
+        return documentation;
     }
 
     #region Indent
@@ -296,4 +313,7 @@ public static class FactorioModelWriter
     }
 
     #endregion
+
+    [GeneratedRegex(@"\[.*\]\(runtime:(?<symbol>.*)\)", RegexOptions.Multiline | RegexOptions.Compiled)]
+    private static partial Regex DocumentationLinkRegex();
 }
