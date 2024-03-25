@@ -2,7 +2,7 @@
 
 public class FactorioRuntimeOperatorSpecification
 {
-    public required string Name { get; set; }
+    public required FactorioRuntimeOperatorName Name { get; set; }
     public required int Order { get; set; }
     public required string Description { get; set; }
     public FactorioRuntimeTypeSpecification? Type { get; set; }

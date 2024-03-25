@@ -7,351 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="start parsing factorio runtime api specification">
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Generators/FactorioModelGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Generators/FactorioSpecificationTypesExtractor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Generators/SharpCodeWriter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Resource/FactorioRconModelBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Resource/LuaCustomTable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeArrayTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeConceptSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeFunctionTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeKeyValueTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeLiteralTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeSimpleTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeStructTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeTableTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeTableVariantParameterGroupsSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeTupleTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeUnionTypeSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/Core/Abstractions/FactorioRconLengthOperatorAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAISettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAccumulatorControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAchievementPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAchievementPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAdvancedMapGenSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAlert.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAlignment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAmmoCategoryPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAmmoType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAny.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAnyBasic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconArithmeticCombinatorControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconArithmeticCombinatorParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAttackParameterFluid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAttackParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAutoplaceControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAutoplaceControlPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAutoplaceSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAutoplaceSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAutoplaceSpecificationPeak.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconAutoplaceSpecificationRestriction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBeamTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBlueprintEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBlueprintSignalIcon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBootstrap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBoundingBox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBurner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconBurnerPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCapsuleAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconChartTagSpec.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconChunkIterator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconChunkPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconChunkPositionAndArea.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCircuitCondition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCircuitConditionDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCircuitConnectionDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCircuitNetwork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCircularParticleCreationSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCircularProjectileCreationSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCliffOrientation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCliffPlacementSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCollisionMask.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCollisionMaskLayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCollisionMaskWithFlags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconColor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconColorModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCombinatorControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCommandProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconComparatorString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconConfigurationChangedData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconConstantCombinatorControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconConstantCombinatorParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconContainerControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCopperConnectionDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCraftingQueueItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCursorBoxRenderType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCustomChartTag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCustomCommandData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCustomInputPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCustomTable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconCutsceneWaypoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDamagePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDamageTypeFilters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDeciderCombinatorControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDeciderCombinatorParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDecorative.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDecorativePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDecorativePrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDecorativeResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDifficultySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDisplayResolution.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconDragTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconElectricEnergySourcePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconElemID.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconElemType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEnemyEvolutionMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEnemyExpansionMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityClonedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityDamagedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityDeconstructionCancelledEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityDiedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityMarkedForDeconstructionEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityMarkedForUpgradeEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityPrototypeFlag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityPrototypeFlags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEntityPrototypeIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentCategoryPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentGrid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentGridPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentPoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEquipmentPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEventData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFlowStatistics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidBox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidBoxConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidBoxFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidBoxFilterSpec.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidBoxPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidEnergySourcePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFluidPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFontPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconForce.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconForceCondition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconForceIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconFuelCategoryPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGameScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGameViewSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGenericOnOffControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGroup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGui.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiAnchor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiArrowSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiArrowType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiDirection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiElement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiElementType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGuiLocation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGunShift4Way.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconHeatBufferPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconHeatConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconHeatEnergySourcePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconHeatSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconInfinityInventoryFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconInfinityPipeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconIngredient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconInserterCircuitConditions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconInserterControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconInventory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconInventoryFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemPrototypeFlag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemPrototypeFlags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemPrototypeIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemStack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemStackDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemStackIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconItemStackLocation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLampControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLazyLoadedValue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLocalisedString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticCell.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticContainerControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticNetwork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticPoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticsNetworkSupplyCounts.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLogisticsNetworkSupplyPoints.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapAndDifficultySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapDifficultySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapExchangeStringData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapGenPreset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapGenSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapGenSize.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapViewSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMiningDrillControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModChangeData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModSettingPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModSettingPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModelBase_v1_1_104.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModifierType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModuleCategoryPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModuleEffectValue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconModuleEffects.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMouseButtonFlags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconNamedNoiseExpression.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconNoiseExpression.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconNoiseLayerPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconNthTickEventData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconOffer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconOldTileAndPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconParticlePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPathFinderMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPathfinderFlags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPathfinderWaypoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPermissionGroup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPermissionGroups.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPipeConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPlaceAsTileResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPlayerBuiltEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPlayerIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPlayerMinedEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPlayerRepairedEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPollutionMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPostEntityDiedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPreGhostDeconstructedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPreGhostUpgradedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPrePlayerMinedEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPreRobotMinedEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPrintSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProduct.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProfiler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProgrammableSpeakerAlertParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProgrammableSpeakerCircuitParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProgrammableSpeakerControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProgrammableSpeakerInstrument.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconProgrammableSpeakerParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPrototypeFilterMode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconPrototypeHistory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRCON.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRadiusVisualisationSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRailChainSignalControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRailEnd.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRailPath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRailSignalControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRandomGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRealOrientation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRecipe.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRecipeCategoryPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRecipePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRecipePrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRemote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRenderLayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRendering.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconResistance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconResourceCategoryPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRidingState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRoboportControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRobotBuiltEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRobotMinedEntityEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconRollingStockDrawData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptArea.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptRaisedBuiltEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptRaisedDestroyEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptRaisedReviveEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptRaisedTeleportedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptRenderTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScriptRenderVertexTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconScrollPolicy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSectorScannedEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSelectedPrototypeData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSelectionModeFlags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconShortcutPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSignal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSignalID.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSimpleItemStack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSmokeSource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSoundPath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSoundType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSpawnPointDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSpritePath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSteeringMapSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSteeringMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconStorageTankControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconStyle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSurface.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSurfaceIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconSwitchState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTabAndContent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTags.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTargetType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTechnology.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTechnologyIdentification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTechnologyModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTechnologyPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTechnologyPrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTextAlign.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTilePosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTilePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTilePrototypeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainPathAllGoalsResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainPathAnyGoalResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainPathFinderPathResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainPathRequestType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainSchedule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainScheduleRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainStopControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrainStopGoal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTransportBeltControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTransportLine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTriggerDelivery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTriggerEffectItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTriggerEffectItemType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTriggerItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTriggerTargetMask.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconTrivialSmokePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconUnitGroup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconUnitGroupMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconUnitSpawnDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconUpgradeCancelledEventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconUpgradeFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconVector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconVehicleAutomaticTargetingParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconVerticalTextAlign.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconVirtualSignalPrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconVoidEnergySourcePrototype.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconWaitCondition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconWaitConditionType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconWallControlBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconWireConnectionDefinition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model_old/FactorioRconMapSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model_old/FactorioRconModelBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Converters/FactorioRuntimeTypeSpecificationConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Converters/FactorioRuntimeTypeSpecificationConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/FactorioRconSharp.ClientGenerator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/FactorioRconSharp.ClientGenerator.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/FactorioRconSharpClientGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeApiSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeApiSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeComplexTypeSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Specification/FactorioRuntimeTypeSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/FactorioRconSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconGlobals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model_old/FactorioRconGlobals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconLuaGameScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model_old/FactorioRconLuaGameScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactorioRconSharp/v1_1_104/Model/FactorioRconMapSettings.cs" afterDir="false" />
-    </list>
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -497,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="43822000" />
+      <workItem from="1711272813339" duration="43917000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -611,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711309945514</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="generate classes from lua classes">
+      <option name="closed" value="true" />
+      <created>1711324286849</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711324286849</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +320,8 @@
     <MESSAGE value="handle method parameters" />
     <MESSAGE value="handle arrays properly" />
     <MESSAGE value="start parsing factorio runtime api specification" />
-    <option name="LAST_COMMIT_MESSAGE" value="start parsing factorio runtime api specification" />
+    <MESSAGE value="generate classes from lua classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate classes from lua classes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
