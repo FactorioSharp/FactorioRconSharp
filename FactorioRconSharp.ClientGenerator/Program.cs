@@ -35,6 +35,16 @@ Console.WriteLine();
 
 FactorioModelFileCompiler compiler = new(parsedSpecification);
 
+foreach (FactorioRuntimeDefinitionSpecification definition in parsedSpecification.Defines)
+{
+    FactorioModelFile file = compiler.CompileDefinitionFile(definition.Name);
+
+    string outPath = Path.Join("out", file.Name + ".cs");
+
+    await using StreamWriter writer = File.CreateText(outPath);
+    await FactorioModelWriter.WriteFile(writer, file);
+}
+
 foreach (FactorioRuntimeClassSpecification cls in parsedSpecification.Classes)
 {
     FactorioModelFile file = compiler.CompileClassFile(cls.Name);

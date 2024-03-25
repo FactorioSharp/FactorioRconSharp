@@ -7,7 +7,6 @@ public class FactorioModelClassMethod
 {
     public required string Name { get; set; }
     public required string LuaName { get; set; }
-    public required int Order { get; set; }
     public FactorioModelDocumentation? Documentation { get; set; }
 
     public FactorioModelClassMethodParameter[] Parameters { get; set; } = Array.Empty<FactorioModelClassMethodParameter>();

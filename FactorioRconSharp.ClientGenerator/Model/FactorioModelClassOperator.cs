@@ -6,7 +6,6 @@
 public class FactorioModelClassOperator
 {
     public required FactorioModelClassOperatorType OperatorType { get; set; }
-    public required int Order { get; set; }
     public FactorioModelDocumentation? Documentation { get; set; }
 
     public required string KeyType { get; set; }

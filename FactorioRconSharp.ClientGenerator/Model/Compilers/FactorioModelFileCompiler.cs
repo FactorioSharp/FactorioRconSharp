@@ -27,8 +27,8 @@ public class FactorioModelFileCompiler
             Namespace = "FactorioRconSharp.Model.Classes",
             Usings =
             [
-                "FactorioRconSharp.Core.Abstractions",
-                "FactorioRconSharp.Model.Concepts"
+                "FactorioRconSharp.Model.Concepts",
+                "FactorioRconSharp.Model.Definitions"
             ],
             Classes =
             [
@@ -51,12 +51,31 @@ public class FactorioModelFileCompiler
             Namespace = "FactorioRconSharp.Model.Concepts",
             Usings =
             [
-                "FactorioRconSharp.Core.Abstractions",
-                "FactorioRconSharp.Model.Classes"
+                "FactorioRconSharp.Model.Classes",
+                "FactorioRconSharp.Model.Definitions"
             ],
             Classes =
             [
                 CompileClass(concept)
+            ]
+        };
+    }
+
+    public FactorioModelFile CompileDefinitionFile(string definitionName)
+    {
+        FactorioRuntimeDefinitionSpecification? definition = _specification.Defines.SingleOrDefault(c => c.Name == definitionName);
+        if (definition == null)
+        {
+            throw new InvalidOperationException($"Could not find specification of concept {definitionName}");
+        }
+
+        return new FactorioModelFile
+        {
+            Name = definition.Name.ToPascalCase(),
+            Namespace = "FactorioRconSharp.Model.Definitions",
+            Enums =
+            [
+                CompileEnum(definition)
             ]
         };
     }
@@ -66,15 +85,18 @@ public class FactorioModelFileCompiler
         {
             Name = cls.Name.ToPascalCase(),
             LuaName = cls.Name,
-            Order = cls.Order,
             Documentation = new FactorioModelDocumentation
             {
                 Summary = cls.Description, Examples = BuildExamples(cls.Examples)
             },
+            IsFactorioClass = true,
             BaseClassName = "FactorioRconModelBase",
-            Properties = cls.Attributes.Select(CompileProperty).Concat(cls.Operators.Where(o => o.Name == FactorioRuntimeOperatorName.Length).Select(CompileProperty)).ToArray(),
-            Operators = cls.Operators.Where(o => o.Name != FactorioRuntimeOperatorName.Length).Select(CompileOperator).ToArray(),
-            Methods = cls.Methods.Select(CompileMethod).ToArray()
+            Properties = cls.Attributes.OrderBy(a => a.Order)
+                .Select(CompileProperty)
+                .Concat(cls.Operators.Where(o => o.Name == FactorioRuntimeOperatorName.Length).Select(CompileProperty))
+                .ToArray(),
+            Operators = cls.Operators.OrderBy(o => o.Order).Where(o => o.Name != FactorioRuntimeOperatorName.Length).Select(CompileOperator).ToArray(),
+            Methods = cls.Methods.OrderBy(m => m.Order).Select(CompileMethod).ToArray()
         };
 
     FactorioModelClass CompileClass(FactorioRuntimeConceptSpecification concept) =>
@@ -82,12 +104,29 @@ public class FactorioModelFileCompiler
         {
             Name = concept.Name.ToPascalCase(),
             LuaName = concept.Name,
-            Order = concept.Order,
             Documentation = new FactorioModelDocumentation
             {
                 Summary = concept.Description
             },
+            IsFactorioConcept = true,
             BaseClassName = "FactorioRconModelBase"
+        };
+
+    FactorioModelEnum CompileEnum(FactorioRuntimeDefinitionSpecification definition) =>
+        new()
+        {
+            Name = definition.Name.ToPascalCase(),
+            LuaName = definition.Name,
+            Documentation = new FactorioModelDocumentation { Summary = definition.Description },
+            Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
+        };
+
+    FactorioModelEnumValue CompileEnumValue(FactorioRuntimeDefinitionValueSpecification definitionValue) =>
+        new()
+        {
+            Name = definitionValue.Name.ToPascalCase(),
+            LuaName = definitionValue.Name,
+            Documentation = new FactorioModelDocumentation { Summary = definitionValue.Description }
         };
 
     FactorioModelClassProperty CompileProperty(FactorioRuntimeAttributeSpecification attribute) =>
@@ -95,7 +134,6 @@ public class FactorioModelFileCompiler
         {
             Name = attribute.Name.ToPascalCase(),
             LuaName = attribute.Name,
-            Order = attribute.Order,
             Documentation = new FactorioModelDocumentation { Summary = attribute.Description },
             Type = BuildTypeName(attribute.Type),
             Optional = attribute.Optional,
@@ -116,7 +154,6 @@ public class FactorioModelFileCompiler
                 FactorioRuntimeOperatorName.Length => "length",
                 _ => throw new ArgumentOutOfRangeException(nameof(op.Name), op.Name, null)
             },
-            Order = op.Order,
             Documentation = new FactorioModelDocumentation { Summary = op.Description },
             Type = BuildTypeName(op.Type),
             Optional = op.Optional,
@@ -133,7 +170,6 @@ public class FactorioModelFileCompiler
                 FactorioRuntimeOperatorName.Call => FactorioModelClassOperatorType.Call,
                 _ => throw new ArgumentOutOfRangeException(nameof(op.Name), op.Name, null)
             },
-            Order = op.Order,
             Documentation = new FactorioModelDocumentation { Summary = op.Description },
             KeyType = "uint",
             ReturnType = BuildTypeName(op.Type),
@@ -147,13 +183,12 @@ public class FactorioModelFileCompiler
         {
             Name = method.Name.ToPascalCase(),
             LuaName = method.Name,
-            Order = method.Order,
             Documentation = new FactorioModelDocumentation
             {
                 Summary = method.Description, Remarks = string.Join(Environment.NewLine, method.Notes)
             },
-            Parameters = method.Parameters.Select(CompileParameter).ToArray(),
-            ReturnType = BuildReturnType(method.ReturnValues)
+            Parameters = method.Parameters.OrderBy(p => p.Order).Select(CompileParameter).ToArray(),
+            ReturnType = BuildReturnType(method.ReturnValues.OrderBy(v => v.Order).ToArray())
         };
 
     FactorioModelClassMethodParameter CompileParameter(FactorioRuntimeParameterSpecification parameter) =>
@@ -193,12 +228,12 @@ public class FactorioModelFileCompiler
         return optional ? $"{typeName}?" : typeName;
     }
 
-    string BuildTypeName(FactorioRuntimeTypeSpecification type)
+    string BuildTypeName(FactorioRuntimeTypeSpecification? type)
     {
         switch (type)
         {
             case null:
-                return "???";
+                return "void";
             case FactorioRuntimeSimpleTypeSpecification simpleType:
                 switch (simpleType.Name)
                 {
@@ -260,7 +295,7 @@ public class FactorioModelFileCompiler
             case 1:
                 return BuildTypeName(returnValues[0].Type, returnValues[0].Optional);
             default:
-                return $"({string.Join(", ", returnValues.OrderBy(r => r.Order).Select(p => BuildTypeName(p.Type, p.Optional)))})";
+                return $"({string.Join(", ", returnValues.Select(p => BuildTypeName(p.Type, p.Optional)))})";
         }
     }
 }

@@ -8,4 +8,5 @@ public class FactorioRuntimeApiSpecification
     public required string Stage { get; set; }
     public FactorioRuntimeClassSpecification[] Classes { get; set; } = Array.Empty<FactorioRuntimeClassSpecification>();
     public FactorioRuntimeConceptSpecification[] Concepts { get; set; } = Array.Empty<FactorioRuntimeConceptSpecification>();
+    public FactorioRuntimeDefinitionSpecification[] Defines { get; set; } = Array.Empty<FactorioRuntimeDefinitionSpecification>();
 }

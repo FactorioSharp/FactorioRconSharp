@@ -6,6 +6,8 @@ public static class FactorioModelWriter
 {
     public static async Task WriteFile(TextWriter writer, FactorioModelFile file)
     {
+        await writer.WriteLineAsync("using FactorioRconSharp.Core.Abstractions;");
+
         foreach (string usingStmt in file.Usings)
         {
             await writer.WriteLineAsync($"using {usingStmt};");
@@ -16,13 +18,19 @@ public static class FactorioModelWriter
         if (!string.IsNullOrWhiteSpace(file.Namespace))
         {
             await writer.WriteLineAsync($"namespace {file.Namespace};");
+            await writer.WriteLineAsync();
         }
-
-        await writer.WriteLineAsync();
 
         foreach (FactorioModelClass cls in file.Classes)
         {
             await WriteClass(writer, cls);
+            await writer.WriteLineAsync();
+        }
+
+        foreach (FactorioModelEnum enm in file.Enums)
+        {
+            await WriteEnum(writer, enm);
+            await writer.WriteLineAsync();
         }
     }
 
@@ -31,6 +39,16 @@ public static class FactorioModelWriter
         if (cls.Documentation != null)
         {
             await WriteDocumentation(writer, cls.Documentation, indentLevel);
+        }
+
+        if (cls.IsFactorioClass)
+        {
+            await WriteLineAsync(writer, $"[FactorioRconClass(\"{cls.LuaName}\")]", indentLevel);
+        }
+
+        if (cls.IsFactorioConcept)
+        {
+            await WriteLineAsync(writer, $"[FactorioRconConcept(\"{cls.LuaName}\")]", indentLevel);
         }
 
         string? inheritance = ComputeInheritance(cls);
@@ -61,6 +79,32 @@ public static class FactorioModelWriter
         foreach (FactorioModelClassMethod method in cls.Methods)
         {
             await WriteMethod(writer, method, indentLevel + 1);
+            await writer.WriteLineAsync();
+        }
+
+        await WriteLineAsync(writer, "}", indentLevel);
+    }
+
+    static async Task WriteEnum(TextWriter writer, FactorioModelEnum enm, int indentLevel = 0)
+    {
+        if (enm.Documentation != null)
+        {
+            await WriteDocumentation(writer, enm.Documentation, indentLevel);
+        }
+
+        await WriteLineAsync(writer, $"[FactorioRconDefinition(\"{enm.LuaName}\")]", indentLevel);
+        await WriteLineAsync(writer, $"public enum {enm.Name}", indentLevel);
+        await WriteLineAsync(writer, "{", indentLevel);
+
+        foreach (FactorioModelEnumValue value in enm.Values)
+        {
+            if (value.Documentation != null)
+            {
+                await WriteDocumentation(writer, value.Documentation, indentLevel + 1);
+            }
+
+            await WriteLineAsync(writer, $"[FactorioRconDefinitionValue(\"{value.LuaName}\")]", indentLevel + 1);
+            await WriteLineAsync(writer, $"{value.Name},", indentLevel + 1);
             await writer.WriteLineAsync();
         }
 

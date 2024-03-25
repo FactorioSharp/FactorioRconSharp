@@ -10,4 +10,5 @@ public class FactorioModelFile
     public string[] Usings { get; set; } = Array.Empty<string>();
 
     public FactorioModelClass[] Classes { get; set; } = Array.Empty<FactorioModelClass>();
+    public FactorioModelEnum[] Enums { get; set; } = Array.Empty<FactorioModelEnum>();
 }
