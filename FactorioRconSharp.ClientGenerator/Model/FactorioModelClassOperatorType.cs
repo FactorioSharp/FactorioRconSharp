@@ -5,6 +5,5 @@
 /// </summary>
 public enum FactorioModelClassOperatorType
 {
-    Indexer,
-    Call
+    Indexer
 }

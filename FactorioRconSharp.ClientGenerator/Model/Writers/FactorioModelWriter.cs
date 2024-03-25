@@ -172,11 +172,11 @@ public static partial class FactorioModelWriter
         {
             if (string.IsNullOrEmpty(parameter.LuaName))
             {
-                await WriteDocumentationLineAsync(writer, $"<param name=\"{parameter.Name}></param>\"", indentLevel);
+                await WriteDocumentationLineAsync(writer, $"<param name=\"{parameter.Name}\"></param>", indentLevel);
             }
             else
             {
-                await WriteDocumentationLineAsync(writer, $"<param name=\"{parameter.Name}>Lua name: {parameter.LuaName}</param>\"", indentLevel);
+                await WriteDocumentationLineAsync(writer, $"<param name=\"{parameter.Name}\">Lua name: {parameter.LuaName}</param>", indentLevel);
             }
         }
 

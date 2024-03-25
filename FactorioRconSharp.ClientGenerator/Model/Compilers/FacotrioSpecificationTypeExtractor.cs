@@ -23,7 +23,8 @@ public static class FacotrioSpecificationTypeExtractor
         }
     }
 
-    public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeClassSpecification cls) => cls.Attributes.SelectMany(ExtractTypes);
+    public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeClassSpecification cls) =>
+        cls.Attributes.SelectMany(ExtractTypes).Concat(cls.Operators.SelectMany(ExtractTypes)).Concat(cls.Methods.SelectMany(ExtractTypes));
 
     public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeConceptSpecification concept)
     {
@@ -34,6 +35,16 @@ public static class FacotrioSpecificationTypeExtractor
             yield return type;
         }
     }
+
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeOperatorSpecification op) =>
+        op.Type == null ? Enumerable.Empty<FactorioRuntimeTypeSpecification>() : ExtractTypes(op.Type);
+
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodSpecification method) =>
+        method.Parameters.SelectMany(ExtractTypes).Concat(method.ReturnValues.SelectMany(ExtractTypes));
+
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeParameterSpecification parameter) => ExtractTypes(parameter.Type);
+
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodReturnValueSpecification returnValue) => ExtractTypes(returnValue.Type);
 
     static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeAttributeSpecification attribute)
     {

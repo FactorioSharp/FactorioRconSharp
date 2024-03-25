@@ -97,7 +97,7 @@ public class FactorioModelFileCompiler
 
         return new FactorioModelFile
         {
-            Name = definition.Name.ToPascalCase(),
+            Name = $"{definition.Name.ToPascalCase()}Enum",
             Namespace = "FactorioRconSharp.Model.Definitions",
             Usings =
             [
@@ -121,9 +121,9 @@ public class FactorioModelFileCompiler
             IsFactorioClass = true,
             Properties = cls.Attributes.OrderBy(a => a.Order)
                 .Select(CompileProperty)
-                .Concat(cls.Operators.Where(o => o.Name == FactorioRuntimeOperatorName.Length).Select(CompileProperty))
+                .Concat(cls.Operators.Where(o => o.Name != FactorioRuntimeOperatorName.Index).Select(CompileProperty))
                 .ToArray(),
-            Operators = cls.Operators.OrderBy(o => o.Order).Where(o => o.Name != FactorioRuntimeOperatorName.Length).Select(CompileOperator).ToArray(),
+            Operators = cls.Operators.OrderBy(o => o.Order).Where(o => o.Name == FactorioRuntimeOperatorName.Index).Select(CompileOperator).ToArray(),
             Methods = cls.Methods.OrderBy(m => m.Order).Select(CompileMethod).ToArray()
         };
 
@@ -148,7 +148,7 @@ public class FactorioModelFileCompiler
             {
                 new FactorioModelEnum
                 {
-                    Name = enumName,
+                    Name = $"{enumName}Enum",
                     LuaName = luaName,
                     Documentation = new FactorioModelDocumentation { Summary = definition.Description },
                     Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
@@ -183,11 +183,13 @@ public class FactorioModelFileCompiler
             Name = op.Name switch
             {
                 FactorioRuntimeOperatorName.Length => "Length",
+                FactorioRuntimeOperatorName.Call => "Call",
                 _ => throw new ArgumentOutOfRangeException(nameof(op.Name), op.Name, null)
             },
             LuaName = op.Name switch
             {
                 FactorioRuntimeOperatorName.Length => "length",
+                FactorioRuntimeOperatorName.Call => "call",
                 _ => throw new ArgumentOutOfRangeException(nameof(op.Name), op.Name, null)
             },
             Documentation = new FactorioModelDocumentation { Summary = op.Description },
@@ -203,7 +205,6 @@ public class FactorioModelFileCompiler
             OperatorType = op.Name switch
             {
                 FactorioRuntimeOperatorName.Index => FactorioModelClassOperatorType.Indexer,
-                FactorioRuntimeOperatorName.Call => FactorioModelClassOperatorType.Call,
                 _ => throw new ArgumentOutOfRangeException(nameof(op.Name), op.Name, null)
             },
             Documentation = new FactorioModelDocumentation { Summary = op.Description },
@@ -352,7 +353,7 @@ public class FactorioModelFileCompiler
 
                         if (name.StartsWith("defines."))
                         {
-                            name = name[8..];
+                            name = $"{name[8..]}Enum";
                         }
 
                         return name.Replace('.', '_').ToPascalCase();
@@ -400,6 +401,8 @@ public class FactorioModelFileCompiler
         switch (symbol)
         {
             case "event":
+            case "string":
+            case "interface":
                 return $"@{symbol}";
             default:
                 return symbol;

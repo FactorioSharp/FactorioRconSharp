@@ -22,8 +22,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Model\Builtins\LuaCustomTable.cs" />
-        <Compile Include="Model\Utils\FactorioModelUtils.cs" />
         <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
