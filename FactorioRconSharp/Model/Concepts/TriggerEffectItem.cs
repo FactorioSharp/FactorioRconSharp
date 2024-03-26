@@ -11,7 +11,53 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TriggerEffectItem")]
-public class TriggerEffectItem
+public abstract class TriggerEffectItem
 {
+  [FactorioRconAttribute("type")]
+  public TriggerEffectItemType Type { get; set; }
+
+  [FactorioRconAttribute("repeat_count")]
+  public ushort RepeatCount { get; set; }
+
+  [FactorioRconAttribute("repeat_count_deviation")]
+  public ushort RepeatCountDeviation { get; set; }
+
+  [FactorioRconAttribute("probability")]
+  public float Probability { get; set; }
+
+  [FactorioRconAttribute("affects_target")]
+  public bool AffectsTarget { get; set; }
+
+  [FactorioRconAttribute("show_in_tooltip")]
+  public bool ShowInTooltip { get; set; }
+
+  [FactorioRconAttribute("damage_type_filters")]
+  public DamageTypeFilters DamageTypeFilters { get; set; }
+
+}
+
+public abstract class Table12699242
+{
+  [FactorioRconAttribute("type")]
+  public TriggerEffectItemType Type { get; set; }
+
+  [FactorioRconAttribute("repeat_count")]
+  public ushort RepeatCount { get; set; }
+
+  [FactorioRconAttribute("repeat_count_deviation")]
+  public ushort RepeatCountDeviation { get; set; }
+
+  [FactorioRconAttribute("probability")]
+  public float Probability { get; set; }
+
+  [FactorioRconAttribute("affects_target")]
+  public bool AffectsTarget { get; set; }
+
+  [FactorioRconAttribute("show_in_tooltip")]
+  public bool ShowInTooltip { get; set; }
+
+  [FactorioRconAttribute("damage_type_filters")]
+  public DamageTypeFilters DamageTypeFilters { get; set; }
+
 }
 

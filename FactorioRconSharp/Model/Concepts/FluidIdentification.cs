@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// A fluid may be specified in one of three ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("FluidIdentification")]
-public class FluidIdentification
+public abstract partial class FluidIdentification: OneOfBase<string, LuaFluidPrototype, Fluid>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union33650554: OneOfBase<string, LuaFluidPrototype, Fluid>
 {
 }
 

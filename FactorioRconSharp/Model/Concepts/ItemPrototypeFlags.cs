@@ -16,7 +16,20 @@ namespace FactorioRconSharp.Model.Concepts;
 /// By default, none of these flags are set.
 /// </summary>
 [FactorioRconConcept("ItemPrototypeFlags")]
-public class ItemPrototypeFlags
+public abstract class ItemPrototypeFlags: Dictionary<ItemPrototypeFlag, Literal1484740>
 {
+}
+
+/// <summary>
+/// Literal value: True
+/// </summary>
+public abstract class Literal1484740
+{
+  /// <summary>
+  /// Literal value: True
+  /// </summary>
+  [FactorioRconAttribute("True")]
+  public static object Value { get; private set; }
+
 }
 

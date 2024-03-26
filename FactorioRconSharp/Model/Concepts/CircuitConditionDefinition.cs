@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CircuitConditionDefinition")]
-public class CircuitConditionDefinition
+public abstract class CircuitConditionDefinition
 {
+  [FactorioRconAttribute("condition")]
+  public CircuitCondition Condition { get; set; }
+
+  /// <summary>
+  /// Whether the condition is currently fulfilled
+  /// </summary>
+  [FactorioRconAttribute("fulfilled")]
+  public bool Fulfilled { get; set; }
+
+}
+
+public abstract class Table43473739
+{
+  [FactorioRconAttribute("condition")]
+  public CircuitCondition Condition { get; set; }
+
+  /// <summary>
+  /// Whether the condition is currently fulfilled
+  /// </summary>
+  [FactorioRconAttribute("fulfilled")]
+  public bool Fulfilled { get; set; }
+
 }
 

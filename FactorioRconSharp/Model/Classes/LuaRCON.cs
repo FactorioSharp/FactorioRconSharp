@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// An interface to send messages to the calling RCON interface through the global object named `rcon`.
 /// </summary>
 [FactorioRconClass("LuaRCON")]
-public class LuaRCON
+public abstract class LuaRCON: LuaObject
 {
   /// <summary>
   /// This object's name.
@@ -27,7 +27,7 @@ public class LuaRCON
   /// </summary>
   /// <param name="message">Lua name: message</param>
   [FactorioRconMethod("print")]
-  public void Print(LocalisedString message) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Print(LocalisedString message);
 
 }
 

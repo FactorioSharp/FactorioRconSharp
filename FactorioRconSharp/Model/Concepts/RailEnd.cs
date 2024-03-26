@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("RailEnd")]
-public class RailEnd
+public abstract class RailEnd
 {
+  [FactorioRconAttribute("rail")]
+  public LuaEntity Rail { get; set; }
+
+  [FactorioRconAttribute("direction")]
+  public RailDirectionEnum Direction { get; set; }
+
+}
+
+public abstract class Table64556810
+{
+  [FactorioRconAttribute("rail")]
+  public LuaEntity Rail { get; set; }
+
+  [FactorioRconAttribute("direction")]
+  public RailDirectionEnum Direction { get; set; }
+
 }
 

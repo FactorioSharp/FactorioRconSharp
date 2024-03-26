@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// An item prototype may be specified in one of three ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("ItemPrototypeIdentification")]
-public class ItemPrototypeIdentification
+public abstract partial class ItemPrototypeIdentification: OneOfBase<LuaItemStack, LuaItemPrototype, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union54935415: OneOfBase<LuaItemStack, LuaItemPrototype, string>
 {
 }
 

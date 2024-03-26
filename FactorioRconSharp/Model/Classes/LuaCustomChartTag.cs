@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A custom tag that shows on the map view.
 /// </summary>
 [FactorioRconClass("LuaCustomChartTag")]
-public class LuaCustomChartTag
+public abstract class LuaCustomChartTag: LuaObject
 {
   /// <summary>
   /// This tag's icon, if it has one. Writing `nil` removes it.
@@ -71,13 +71,13 @@ public class LuaCustomChartTag
   /// Destroys this tag.
   /// </summary>
   [FactorioRconMethod("destroy")]
-  public void Destroy() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Destroy();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

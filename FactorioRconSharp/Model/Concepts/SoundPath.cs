@@ -38,7 +38,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// - `"entity-close"` - Uses [Entity::close_sound](prototype:EntityPrototype::close_sound)
 /// </summary>
 [FactorioRconConcept("SoundPath")]
-public class SoundPath
+public abstract class SoundPath: string
 {
 }
 

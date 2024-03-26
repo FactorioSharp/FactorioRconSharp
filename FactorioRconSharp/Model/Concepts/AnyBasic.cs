@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// Any basic type (string, number, boolean) or table.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("AnyBasic")]
-public class AnyBasic
+public abstract partial class AnyBasic: OneOfBase<string, bool, double, LuaTable>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union17924607: OneOfBase<string, bool, double, LuaTable>
 {
 }
 

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A single logistic network of a given force on a given surface.
 /// </summary>
 [FactorioRconClass("LuaLogisticNetwork")]
-public class LuaLogisticNetwork
+public abstract class LuaLogisticNetwork: LuaObject
 {
   /// <summary>
   /// The force this logistic network belongs to.
@@ -56,91 +56,91 @@ public class LuaLogisticNetwork
   /// All cells in this network.
   /// </summary>
   [FactorioRconAttribute("cells")]
-  public LuaLogisticCell[] Cells { get; private set; }
+  public List<LuaLogisticCell> Cells { get; private set; }
 
   /// <summary>
   /// All entities that have logistic provider points in this network.
   /// </summary>
   [FactorioRconAttribute("providers")]
-  public LuaEntity[] Providers { get; private set; }
+  public List<LuaEntity> Providers { get; private set; }
 
   /// <summary>
   /// All entities that have empty logistic provider points in this network.
   /// </summary>
   [FactorioRconAttribute("empty_providers")]
-  public LuaEntity[] EmptyProviders { get; private set; }
+  public List<LuaEntity> EmptyProviders { get; private set; }
 
   /// <summary>
   /// All entities that have logistic requester points in this network.
   /// </summary>
   [FactorioRconAttribute("requesters")]
-  public LuaEntity[] Requesters { get; private set; }
+  public List<LuaEntity> Requesters { get; private set; }
 
   /// <summary>
   /// All entities that have logistic storage points in this network.
   /// </summary>
   [FactorioRconAttribute("storages")]
-  public LuaEntity[] Storages { get; private set; }
+  public List<LuaEntity> Storages { get; private set; }
 
   /// <summary>
   /// All other entities that have logistic points in this network (inserters mostly).
   /// </summary>
   [FactorioRconAttribute("logistic_members")]
-  public LuaEntity[] LogisticMembers { get; private set; }
+  public List<LuaEntity> LogisticMembers { get; private set; }
 
   /// <summary>
   /// All things that have provider points in this network.
   /// </summary>
   [FactorioRconAttribute("provider_points")]
-  public LuaLogisticPoint[] ProviderPoints { get; private set; }
+  public List<LuaLogisticPoint> ProviderPoints { get; private set; }
 
   /// <summary>
   /// All passive provider points in this network.
   /// </summary>
   [FactorioRconAttribute("passive_provider_points")]
-  public LuaLogisticPoint[] PassiveProviderPoints { get; private set; }
+  public List<LuaLogisticPoint> PassiveProviderPoints { get; private set; }
 
   /// <summary>
   /// All active provider points in this network.
   /// </summary>
   [FactorioRconAttribute("active_provider_points")]
-  public LuaLogisticPoint[] ActiveProviderPoints { get; private set; }
+  public List<LuaLogisticPoint> ActiveProviderPoints { get; private set; }
 
   /// <summary>
   /// All things that have empty provider points in this network.
   /// </summary>
   [FactorioRconAttribute("empty_provider_points")]
-  public LuaLogisticPoint[] EmptyProviderPoints { get; private set; }
+  public List<LuaLogisticPoint> EmptyProviderPoints { get; private set; }
 
   /// <summary>
   /// All things that have requester points in this network.
   /// </summary>
   [FactorioRconAttribute("requester_points")]
-  public LuaLogisticPoint[] RequesterPoints { get; private set; }
+  public List<LuaLogisticPoint> RequesterPoints { get; private set; }
 
   /// <summary>
   /// All things that have storage points in this network.
   /// </summary>
   [FactorioRconAttribute("storage_points")]
-  public LuaLogisticPoint[] StoragePoints { get; private set; }
+  public List<LuaLogisticPoint> StoragePoints { get; private set; }
 
   /// <summary>
   /// All robots in this logistic network.
   /// </summary>
   [FactorioRconAttribute("robots")]
-  public LuaEntity[] Robots { get; private set; }
+  public List<LuaEntity> Robots { get; private set; }
 
   /// <summary>
   /// All construction robots in this logistic network.
   /// </summary>
   [FactorioRconAttribute("construction_robots")]
-  public LuaEntity[] ConstructionRobots { get; private set; }
+  public List<LuaEntity> ConstructionRobots { get; private set; }
 
   /// <summary>
   /// All logistic robots in this logistic network.
   /// </summary>
   [FactorioRconAttribute("logistic_robots")]
-  public LuaEntity[] LogisticRobots { get; private set; }
+  public List<LuaEntity> LogisticRobots { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -160,13 +160,13 @@ public class LuaLogisticNetwork
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public int GetItemCount(string? item = null, OneOf<Literal35318532, Literal3491672>? member = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract int GetItemCount(string? item = null, Union39948218? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
   /// </summary>
   [FactorioRconMethod("get_contents")]
-  public Dictionary<string, uint> GetContents() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> GetContents();
 
   /// <summary>
   /// Remove items from the logistic network. This will actually remove the items from some logistic chests.
@@ -174,7 +174,7 @@ public class LuaLogisticNetwork
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public uint RemoveItem(ItemStackIdentification item, OneOf<Literal44203036, Literal55848526, Literal31968364, Literal247016>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint RemoveItem(ItemStackIdentification item, Union1689058? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,14 +182,14 @@ public class LuaLogisticNetwork
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public uint Insert(ItemStackIdentification item, OneOf<Literal6216253, Literal63432468, Literal57013419, Literal56431129>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint Insert(ItemStackIdentification item, Union62495167? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("find_cell_closest_to")]
-  public LuaLogisticCell? FindCellClosestTo(MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaLogisticCell? FindCellClosestTo(MapPosition position);
 
   /// <summary>
   /// Find the 'best' logistic point with this item ID and from the given position or from given chest type.
@@ -199,7 +199,7 @@ public class LuaLogisticNetwork
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, OneOf<Literal58490299, Literal20336737, Literal24418296, Literal43022188>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Union30619839? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public class LuaLogisticNetwork
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, OneOf<Literal5187339, Literal41825261, Literal5915254, Literal57111475>? members = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Union59192235? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.
@@ -216,34 +216,39 @@ public class LuaLogisticNetwork
   /// <param name="count">Lua name: count</param>
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   [FactorioRconMethod("can_satisfy_request")]
-  public bool CanSatisfyRequest(string item, uint? count = null, bool? includeBuffers = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanSatisfyRequest(string item, uint? count = null, bool? includeBuffers = null);
 
   /// <summary>
   /// Get the amount of items of the given type indexed by the storage member.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_supply_counts")]
-  public LogisticsNetworkSupplyCounts GetSupplyCounts(string item) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LogisticsNetworkSupplyCounts GetSupplyCounts(string item);
 
   /// <summary>
   /// Gets the logistic points with of the given type indexed by the storage member.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_supply_points")]
-  public LogisticsNetworkSupplyPoints GetSupplyPoints(string item) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LogisticsNetworkSupplyPoints GetSupplyPoints(string item);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union39948218: OneOfBase<Literal42629054, Literal33771145>
+{
 }
 
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal35318532
+public abstract class Literal42629054
 {
   /// <summary>
   /// Literal value: storage
@@ -256,7 +261,7 @@ public class Literal35318532
 /// <summary>
 /// Literal value: providers
 /// </summary>
-public class Literal3491672
+public abstract class Literal33771145
 {
   /// <summary>
   /// Literal value: providers
@@ -266,10 +271,15 @@ public class Literal3491672
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union62495167: OneOfBase<Literal41572837, Literal61799993, Literal4898379, Literal47022312>
+{
+}
+
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal6216253
+public abstract class Literal41572837
 {
   /// <summary>
   /// Literal value: storage
@@ -282,7 +292,7 @@ public class Literal6216253
 /// <summary>
 /// Literal value: storage-empty
 /// </summary>
-public class Literal63432468
+public abstract class Literal61799993
 {
   /// <summary>
   /// Literal value: storage-empty
@@ -295,7 +305,7 @@ public class Literal63432468
 /// <summary>
 /// Literal value: storage-empty-slot
 /// </summary>
-public class Literal57013419
+public abstract class Literal4898379
 {
   /// <summary>
   /// Literal value: storage-empty-slot
@@ -308,7 +318,7 @@ public class Literal57013419
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public class Literal56431129
+public abstract class Literal47022312
 {
   /// <summary>
   /// Literal value: requester
@@ -318,10 +328,15 @@ public class Literal56431129
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union1689058: OneOfBase<Literal62103957, Literal16145044, Literal60495737, Literal23749772>
+{
+}
+
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public class Literal44203036
+public abstract class Literal62103957
 {
   /// <summary>
   /// Literal value: active-provider
@@ -334,7 +349,7 @@ public class Literal44203036
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public class Literal55848526
+public abstract class Literal16145044
 {
   /// <summary>
   /// Literal value: passive-provider
@@ -347,7 +362,7 @@ public class Literal55848526
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public class Literal31968364
+public abstract class Literal60495737
 {
   /// <summary>
   /// Literal value: buffer
@@ -360,7 +375,7 @@ public class Literal31968364
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal247016
+public abstract class Literal23749772
 {
   /// <summary>
   /// Literal value: storage
@@ -370,10 +385,15 @@ public class Literal247016
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union59192235: OneOfBase<Literal6326333, Literal32747756, Literal3707448, Literal2957860>
+{
+}
+
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal5187339
+public abstract class Literal6326333
 {
   /// <summary>
   /// Literal value: storage
@@ -386,7 +406,7 @@ public class Literal5187339
 /// <summary>
 /// Literal value: storage-empty
 /// </summary>
-public class Literal41825261
+public abstract class Literal32747756
 {
   /// <summary>
   /// Literal value: storage-empty
@@ -399,7 +419,7 @@ public class Literal41825261
 /// <summary>
 /// Literal value: storage-empty-slot
 /// </summary>
-public class Literal5915254
+public abstract class Literal3707448
 {
   /// <summary>
   /// Literal value: storage-empty-slot
@@ -412,7 +432,7 @@ public class Literal5915254
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public class Literal57111475
+public abstract class Literal2957860
 {
   /// <summary>
   /// Literal value: requester
@@ -422,10 +442,15 @@ public class Literal57111475
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union30619839: OneOfBase<Literal42331983, Literal22779505, Literal37535352, Literal46630754>
+{
+}
+
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public class Literal58490299
+public abstract class Literal42331983
 {
   /// <summary>
   /// Literal value: active-provider
@@ -438,7 +463,7 @@ public class Literal58490299
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public class Literal20336737
+public abstract class Literal22779505
 {
   /// <summary>
   /// Literal value: passive-provider
@@ -451,7 +476,7 @@ public class Literal20336737
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public class Literal24418296
+public abstract class Literal37535352
 {
   /// <summary>
   /// Literal value: buffer
@@ -464,7 +489,7 @@ public class Literal24418296
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal43022188
+public abstract class Literal46630754
 {
   /// <summary>
   /// Literal value: storage

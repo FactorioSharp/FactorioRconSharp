@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ElemID")]
-public class ElemID
+public abstract class ElemID
 {
+  [FactorioRconAttribute("type")]
+  public ElemType Type { get; set; }
+
+  /// <summary>
+  /// Name of a prototype as defined by `type`.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+}
+
+public abstract class Table6322590
+{
+  [FactorioRconAttribute("type")]
+  public ElemType Type { get; set; }
+
+  /// <summary>
+  /// Name of a prototype as defined by `type`.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
 }
 

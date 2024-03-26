@@ -14,7 +14,20 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A set of flags. Active flags are in the dictionary as `true`, while inactive flags aren't present at all.
 /// </summary>
 [FactorioRconConcept("CollisionMask")]
-public class CollisionMask
+public abstract class CollisionMask: Dictionary<CollisionMaskLayer, Literal45363346>
 {
+}
+
+/// <summary>
+/// Literal value: True
+/// </summary>
+public abstract class Literal45363346
+{
+  /// <summary>
+  /// Literal value: True
+  /// </summary>
+  [FactorioRconAttribute("True")]
+  public static object Value { get; private set; }
+
 }
 

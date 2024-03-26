@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A prototype of a fluidbox owned by some <see cref="LuaEntityPrototype" />.
 /// </summary>
 [FactorioRconClass("LuaFluidBoxPrototype")]
-public class LuaFluidBoxPrototype
+public abstract class LuaFluidBoxPrototype: LuaObject
 {
   /// <summary>
   /// The entity that this belongs to.
@@ -32,13 +32,13 @@ public class LuaFluidBoxPrototype
   /// The pipe connection points.
   /// </summary>
   [FactorioRconAttribute("pipe_connections")]
-  public FluidBoxConnection[] PipeConnections { get; private set; }
+  public List<FluidBoxConnection> PipeConnections { get; private set; }
 
   /// <summary>
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public OneOf<Literal1401080, Literal29422698, Literal13896890, Literal23399238> ProductionType { get; private set; }
+  public Union49382823 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -74,7 +74,7 @@ public class LuaFluidBoxPrototype
   /// The secondary draw orders for the 4 possible connection directions.
   /// </summary>
   [FactorioRconAttribute("secondary_draw_orders")]
-  public int[] SecondaryDrawOrders { get; private set; }
+  public List<int> SecondaryDrawOrders { get; private set; }
 
   /// <summary>
   /// The render layer.
@@ -98,14 +98,19 @@ public class LuaFluidBoxPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union49382823: OneOfBase<Literal15225125, Literal26458746, Literal39449526, Literal50346327>
+{
 }
 
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal1401080
+public abstract class Literal15225125
 {
   /// <summary>
   /// Literal value: input
@@ -118,7 +123,7 @@ public class Literal1401080
 /// <summary>
 /// Literal value: input-output
 /// </summary>
-public class Literal29422698
+public abstract class Literal26458746
 {
   /// <summary>
   /// Literal value: input-output
@@ -131,7 +136,7 @@ public class Literal29422698
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal13896890
+public abstract class Literal39449526
 {
   /// <summary>
   /// Literal value: output
@@ -144,7 +149,7 @@ public class Literal13896890
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal23399238
+public abstract class Literal50346327
 {
   /// <summary>
   /// Literal value: none

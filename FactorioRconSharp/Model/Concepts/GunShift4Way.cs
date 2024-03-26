@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("GunShift4Way")]
-public class GunShift4Way
+public abstract class GunShift4Way
 {
+  [FactorioRconAttribute("north")]
+  public Vector North { get; set; }
+
+  [FactorioRconAttribute("east")]
+  public Vector East { get; set; }
+
+  [FactorioRconAttribute("south")]
+  public Vector South { get; set; }
+
+  [FactorioRconAttribute("west")]
+  public Vector West { get; set; }
+
+}
+
+public abstract class Table9247418
+{
+  [FactorioRconAttribute("north")]
+  public Vector North { get; set; }
+
+  [FactorioRconAttribute("east")]
+  public Vector East { get; set; }
+
+  [FactorioRconAttribute("south")]
+  public Vector South { get; set; }
+
+  [FactorioRconAttribute("west")]
+  public Vector West { get; set; }
+
 }
 

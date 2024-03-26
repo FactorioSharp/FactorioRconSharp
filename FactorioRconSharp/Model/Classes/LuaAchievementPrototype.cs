@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a achievement.
 /// </summary>
 [FactorioRconClass("LuaAchievementPrototype")]
-public class LuaAchievementPrototype
+public abstract class LuaAchievementPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -56,7 +56,7 @@ public class LuaAchievementPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A train. Trains are a sequence of connected rolling stocks -- locomotives and wagons.
 /// </summary>
 [FactorioRconClass("LuaTrain")]
-public class LuaTrain
+public abstract class LuaTrain: LuaObject
 {
   /// <summary>
   /// When `true`, the train is explicitly controlled by the player or script. When `false`, the train moves autonomously according to its schedule.
@@ -50,25 +50,25 @@ public class LuaTrain
   /// The rolling stocks this train is composed of, with the numbering starting at the <see cref="LuaTrain.FrontStock" /> of the train.
   /// </summary>
   [FactorioRconAttribute("carriages")]
-  public LuaEntity[] Carriages { get; private set; }
+  public List<LuaEntity> Carriages { get; private set; }
 
   /// <summary>
   /// Locomotives of the train.
   /// </summary>
   [FactorioRconAttribute("locomotives")]
-  public Table18234153 Locomotives { get; private set; }
+  public Table58490299 Locomotives { get; private set; }
 
   /// <summary>
   /// The cargo carriages the train contains.
   /// </summary>
   [FactorioRconAttribute("cargo_wagons")]
-  public LuaEntity[] CargoWagons { get; private set; }
+  public List<LuaEntity> CargoWagons { get; private set; }
 
   /// <summary>
   /// The fluid carriages the train contains.
   /// </summary>
   [FactorioRconAttribute("fluid_wagons")]
-  public LuaEntity[] FluidWagons { get; private set; }
+  public List<LuaEntity> FluidWagons { get; private set; }
 
   /// <summary>
   /// This train's current schedule, if any. Set to `nil` to clear.
@@ -146,7 +146,7 @@ public class LuaTrain
   /// The player passengers on the train
   /// </summary>
   [FactorioRconAttribute("passengers")]
-  public LuaPlayer[] Passengers { get; private set; }
+  public List<LuaPlayer> Passengers { get; private set; }
 
   /// <summary>
   /// The riding state of this train.
@@ -197,108 +197,108 @@ public class LuaTrain
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_item_count")]
-  public uint GetItemCount(string? item = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetItemCount(string? item = null);
 
   /// <summary>
   /// Get a mapping of the train's inventory.
   /// </summary>
   [FactorioRconMethod("get_contents")]
-  public Dictionary<string, uint> GetContents() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> GetContents();
 
   /// <summary>
   /// Remove some items from the train.
   /// </summary>
   /// <param name="stack">Lua name: stack</param>
   [FactorioRconMethod("remove_item")]
-  public uint RemoveItem(ItemStackIdentification stack) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint RemoveItem(ItemStackIdentification stack);
 
   /// <summary>
   /// Insert a stack into the train.
   /// </summary>
   /// <param name="stack">Lua name: stack</param>
   [FactorioRconMethod("insert")]
-  public void Insert(ItemStackIdentification stack) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Insert(ItemStackIdentification stack);
 
   /// <summary>
   /// Clear all items in this train.
   /// </summary>
   [FactorioRconMethod("clear_items_inside")]
-  public void ClearItemsInside() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearItemsInside();
 
   /// <summary>
   /// Checks if the path is invalid and tries to re-path if it isn't.
   /// </summary>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("recalculate_path")]
-  public bool RecalculatePath(bool? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RecalculatePath(bool? force = null);
 
   /// <summary>
   /// Get the amount of a particular fluid stored in the train.
   /// </summary>
   /// <param name="fluid">Lua name: fluid</param>
   [FactorioRconMethod("get_fluid_count")]
-  public double GetFluidCount(string? fluid = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetFluidCount(string? fluid = null);
 
   /// <summary>
   /// Gets a mapping of the train's fluid inventory.
   /// </summary>
   [FactorioRconMethod("get_fluid_contents")]
-  public Dictionary<string, double> GetFluidContents() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, double> GetFluidContents();
 
   /// <summary>
   /// Remove some fluid from the train.
   /// </summary>
   /// <param name="fluid">Lua name: fluid</param>
   [FactorioRconMethod("remove_fluid")]
-  public double RemoveFluid(Fluid fluid) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double RemoveFluid(Fluid fluid);
 
   /// <summary>
   /// Inserts the given fluid into the first available location in this train.
   /// </summary>
   /// <param name="fluid">Lua name: fluid</param>
   [FactorioRconMethod("insert_fluid")]
-  public double InsertFluid(Fluid fluid) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double InsertFluid(Fluid fluid);
 
   /// <summary>
   /// Clears all fluids in this train.
   /// </summary>
   [FactorioRconMethod("clear_fluids_inside")]
-  public void ClearFluidsInside() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearFluidsInside();
 
   /// <summary>
   /// Go to the station specified by the index in the train's schedule.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("go_to_station")]
-  public void GoToStation(uint index) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void GoToStation(uint index);
 
   /// <summary>
   /// Gets all rails under the train.
   /// </summary>
   [FactorioRconMethod("get_rails")]
-  public LuaEntity[] GetRails() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetRails();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 
-public class Table18234153
+public abstract class Table58490299
 {
   /// <summary>
   /// Array of locomotives.
   /// </summary>
   [FactorioRconAttribute("front_movers")]
-  public LuaEntity[] FrontMovers { get; set; }
+  public List<LuaEntity> FrontMovers { get; set; }
 
   /// <summary>
   /// Array of locomotives.
   /// </summary>
   [FactorioRconAttribute("back_movers")]
-  public LuaEntity[] BackMovers { get; set; }
+  public List<LuaEntity> BackMovers { get; set; }
 
 }
 

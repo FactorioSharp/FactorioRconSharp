@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Resistance")]
-public class Resistance
+public abstract class Resistance
 {
+  /// <summary>
+  /// Absolute damage decrease
+  /// </summary>
+  [FactorioRconAttribute("decrease")]
+  public float Decrease { get; set; }
+
+  /// <summary>
+  /// Percentual damage decrease
+  /// </summary>
+  [FactorioRconAttribute("percent")]
+  public float Percent { get; set; }
+
+}
+
+public abstract class Table57482069
+{
+  /// <summary>
+  /// Absolute damage decrease
+  /// </summary>
+  [FactorioRconAttribute("decrease")]
+  public float Decrease { get; set; }
+
+  /// <summary>
+  /// Percentual damage decrease
+  /// </summary>
+  [FactorioRconAttribute("percent")]
+  public float Percent { get; set; }
+
 }
 

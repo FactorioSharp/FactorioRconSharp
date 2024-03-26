@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AttackParameterFluid")]
-public class AttackParameterFluid
+public abstract class AttackParameterFluid
 {
+  /// <summary>
+  /// Name of the <see cref="LuaFluidPrototype" />.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public string Type { get; set; }
+
+  /// <summary>
+  /// Multiplier applied to the damage of an attack.
+  /// </summary>
+  [FactorioRconAttribute("damage_modifier")]
+  public double DamageModifier { get; set; }
+
+}
+
+public abstract class Table33439030
+{
+  /// <summary>
+  /// Name of the <see cref="LuaFluidPrototype" />.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public string Type { get; set; }
+
+  /// <summary>
+  /// Multiplier applied to the damage of an attack.
+  /// </summary>
+  [FactorioRconAttribute("damage_modifier")]
+  public double DamageModifier { get; set; }
+
 }
 

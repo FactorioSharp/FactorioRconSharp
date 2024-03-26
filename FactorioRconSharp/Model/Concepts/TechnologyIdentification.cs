@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// A technology may be specified in one of three ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("TechnologyIdentification")]
-public class TechnologyIdentification
+public abstract partial class TechnologyIdentification: OneOfBase<string, LuaTechnology, LuaTechnologyPrototype>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union45707720: OneOfBase<string, LuaTechnology, LuaTechnologyPrototype>
 {
 }
 

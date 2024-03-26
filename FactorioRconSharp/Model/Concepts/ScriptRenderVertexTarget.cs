@@ -14,7 +14,34 @@ namespace FactorioRconSharp.Model.Concepts;
 /// One vertex of a ScriptRenderPolygon.
 /// </summary>
 [FactorioRconConcept("ScriptRenderVertexTarget")]
-public class ScriptRenderVertexTarget
+public abstract class ScriptRenderVertexTarget
+{
+  [FactorioRconAttribute("target")]
+  public Union6088603 Target { get; set; }
+
+  /// <summary>
+  /// Only used if `target` is a LuaEntity.
+  /// </summary>
+  [FactorioRconAttribute("target_offset")]
+  public Vector TargetOffset { get; set; }
+
+}
+
+public abstract class Table14674581
+{
+  [FactorioRconAttribute("target")]
+  public Union6088603 Target { get; set; }
+
+  /// <summary>
+  /// Only used if `target` is a LuaEntity.
+  /// </summary>
+  [FactorioRconAttribute("target_offset")]
+  public Vector TargetOffset { get; set; }
+
+}
+
+[GenerateOneOf]
+public abstract partial class Union6088603: OneOfBase<MapPosition, LuaEntity>
 {
 }
 

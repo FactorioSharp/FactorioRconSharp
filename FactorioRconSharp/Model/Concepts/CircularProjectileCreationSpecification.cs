@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CircularProjectileCreationSpecification")]
-public class CircularProjectileCreationSpecification
+public abstract class CircularProjectileCreationSpecification
 {
+  [FactorioRconAttribute("[1]")]
+  public RealOrientation [1] { get; set; }
+
+  [FactorioRconAttribute("[2]")]
+  public Vector [2] { get; set; }
+
+}
+
+public abstract class Table61816437
+{
+  [FactorioRconAttribute("[1]")]
+  public RealOrientation [1] { get; set; }
+
+  [FactorioRconAttribute("[2]")]
+  public Vector [2] { get; set; }
+
 }
 

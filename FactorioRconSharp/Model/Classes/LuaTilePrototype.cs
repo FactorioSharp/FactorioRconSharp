@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a tile.
 /// </summary>
 [FactorioRconClass("LuaTilePrototype")]
-public class LuaTilePrototype
+public abstract class LuaTilePrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -80,7 +80,7 @@ public class LuaTilePrototype
   public bool NeedsCorrection { get; private set; }
 
   [FactorioRconAttribute("mineable_properties")]
-  public Table2174563 MineableProperties { get; private set; }
+  public Table11183252 MineableProperties { get; private set; }
 
   /// <summary>
   /// The next direction of this tile, if any. Used when a tile has multiple directions (such as hazard concrete)
@@ -92,7 +92,7 @@ public class LuaTilePrototype
   /// Items that when placed will produce this tile, if any. Construction bots will choose the first item in the list to build this tile.
   /// </summary>
   [FactorioRconAttribute("items_to_place_this")]
-  public ItemStackDefinition[] ItemsToPlaceThis { get; private set; }
+  public List<ItemStackDefinition> ItemsToPlaceThis { get; private set; }
 
   /// <summary>
   /// False if this tile is not allowed in blueprints regardless of the ability to build it.
@@ -128,11 +128,11 @@ public class LuaTilePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 
-public class Table2174563
+public abstract class Table11183252
 {
   /// <summary>
   /// Is this tile mineable at all?
@@ -156,7 +156,7 @@ public class Table2174563
   /// Products obtained by mining this tile.
   /// </summary>
   [FactorioRconAttribute("products")]
-  public Product[] Products { get; set; }
+  public List<Product> Products { get; set; }
 
 }
 

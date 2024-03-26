@@ -11,7 +11,47 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("LogisticFilter")]
-public class LogisticFilter
+public abstract class LogisticFilter
 {
+  /// <summary>
+  /// The index this filter applies to.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+  public uint Index { get; set; }
+
+  /// <summary>
+  /// The item name for this filter.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  /// <summary>
+  /// The count for this filter.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+  public uint Count { get; set; }
+
+}
+
+public abstract class Table34336325
+{
+  /// <summary>
+  /// The index this filter applies to.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+  public uint Index { get; set; }
+
+  /// <summary>
+  /// The item name for this filter.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  /// <summary>
+  /// The count for this filter.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+  public uint Count { get; set; }
+
 }
 

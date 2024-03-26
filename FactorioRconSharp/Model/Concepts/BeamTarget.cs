@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("BeamTarget")]
-public class BeamTarget
+public abstract class BeamTarget
 {
+  /// <summary>
+  /// The target entity.
+  /// </summary>
+  [FactorioRconAttribute("entity")]
+  public LuaEntity Entity { get; set; }
+
+  /// <summary>
+  /// The target position.
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
+}
+
+public abstract class Table15794481
+{
+  /// <summary>
+  /// The target entity.
+  /// </summary>
+  [FactorioRconAttribute("entity")]
+  public LuaEntity Entity { get; set; }
+
+  /// <summary>
+  /// The target position.
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
 }
 

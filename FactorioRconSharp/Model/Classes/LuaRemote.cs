@@ -25,7 +25,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// ```
 /// </examples>
 [FactorioRconClass("LuaRemote")]
-public class LuaRemote
+public abstract class LuaRemote: LuaObject
 {
   /// <summary>
   /// This object's name.
@@ -37,7 +37,7 @@ public class LuaRemote
   /// List of all registered interfaces. For each interface name, `remote.interfaces[name]` is a dictionary mapping the interface's registered functions to `true`.
   /// </summary>
   [FactorioRconAttribute("interfaces")]
-  public Dictionary<string, Dictionary<string, Literal52307948>> Interfaces { get; private set; }
+  public Dictionary<string, Dictionary<string, Literal8810861>> Interfaces { get; private set; }
 
   /// <summary>
   /// Add a remote interface.
@@ -45,14 +45,14 @@ public class LuaRemote
   /// <param name="name">Lua name: name</param>
   /// <param name="functions">Lua name: functions</param>
   [FactorioRconMethod("add_interface")]
-  public void AddInterface(string name, Dictionary<string, Action> functions) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddInterface(string name, Dictionary<string, Action> functions);
 
   /// <summary>
   /// Removes an interface with the given name.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("remove_interface")]
-  public bool RemoveInterface(string name) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RemoveInterface(string name);
 
   /// <summary>
   /// Call a function of an interface.
@@ -60,14 +60,14 @@ public class LuaRemote
   /// <param name="@interface">Lua name: interface</param>
   /// <param name="function">Lua name: function</param>
   [FactorioRconMethod("call")]
-  public Any? Call(string @interface, string function) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Any? Call(string @interface, string function);
 
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public class Literal52307948
+public abstract class Literal8810861
 {
   /// <summary>
   /// Literal value: True

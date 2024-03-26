@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("RidingState")]
-public class RidingState
+public abstract class RidingState
 {
+  [FactorioRconAttribute("acceleration")]
+  public RidingAccelerationEnum Acceleration { get; set; }
+
+  [FactorioRconAttribute("direction")]
+  public RidingDirectionEnum Direction { get; set; }
+
+}
+
+public abstract class Table24658497
+{
+  [FactorioRconAttribute("acceleration")]
+  public RidingAccelerationEnum Acceleration { get; set; }
+
+  [FactorioRconAttribute("direction")]
+  public RidingDirectionEnum Direction { get; set; }
+
 }
 

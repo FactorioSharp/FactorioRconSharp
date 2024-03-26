@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Entry point for registering event handlers. It is accessible through the global object named `script`.
 /// </summary>
 [FactorioRconClass("LuaBootstrap")]
-public class LuaBootstrap
+public abstract class LuaBootstrap: LuaObject
 {
   /// <summary>
   /// The name of the mod from the environment this is used in.
@@ -26,7 +26,7 @@ public class LuaBootstrap
   /// Information about the currently running scenario/campaign/tutorial.
   /// </summary>
   [FactorioRconAttribute("level")]
-  public Table42715336 Level { get; private set; }
+  public Table48209832 Level { get; private set; }
 
   /// <summary>
   /// A dictionary listing the names of all currently active mods and mapping them to their version.
@@ -48,7 +48,7 @@ public class LuaBootstrap
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_init")]
-  public void OnInit(OneOf<Action, LuaNil> handler) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OnInit(Union5773521 handler);
 
   /// <summary>
   /// Register a function to be run on save load. This is only called for mods that have been part of the save previously, or for players connecting to a running multiplayer session.
@@ -67,7 +67,7 @@ public class LuaBootstrap
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_load")]
-  public void OnLoad(OneOf<Action, LuaNil> handler) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OnLoad(Union54135081 handler);
 
   /// <summary>
   /// Register a function to be run when mod configuration changes. This is called when the game version or any mod version changed, when any mod was added or removed, when a startup setting has changed, when any prototypes have been added or removed, or when a migration was applied. It allows the mod to make any changes it deems appropriate to both the data structures in its <see cref="LuaGameScript" />.
@@ -77,7 +77,7 @@ public class LuaBootstrap
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_configuration_changed")]
-  public void OnConfigurationChanged(OneOf<Action<ConfigurationChangedData>, LuaNil> handler) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OnConfigurationChanged(Union63094882 handler);
 
   /// <summary>
   /// Register a handler to run on the specified event(s). Each mod can only register once for every event, as any additional registration will overwrite the previous one. This holds true even if different filters are used for subsequent registrations.
@@ -86,7 +86,7 @@ public class LuaBootstrap
   /// <param name="handler">Lua name: handler</param>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("on_event")]
-  public void OnEvent(OneOf<EventsEnum, string, OneOf<EventsEnum, string>[]> @event, OneOf<Action<EventData>, LuaNil> handler, EventFilter? filters = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OnEvent(Union49924125 @event, Union41773672 handler, EventFilter? filters = null);
 
   /// <summary>
   /// Register a handler to run every nth-tick(s). When the game is on tick 0 it will trigger all registered handlers.
@@ -94,7 +94,7 @@ public class LuaBootstrap
   /// <param name="tick">Lua name: tick</param>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_nth_tick")]
-  public void OnNthTick(OneOf<uint, uint[], LuaNil> tick, OneOf<Action<NthTickEventData>, LuaNil> handler) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OnNthTick(Union4831898 tick, Union34361009 handler);
 
   /// <summary>
   /// Registers an entity so that after it's destroyed, <see cref="OnEntityDestroyed" /> will receive the event when it is destroyed. Registering the same entity multiple times will still only fire the destruction event once, and will return the same registration number.
@@ -104,7 +104,7 @@ public class LuaBootstrap
   /// </remarks>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("register_on_entity_destroyed")]
-  public ulong RegisterOnEntityDestroyed(LuaEntity entity) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong RegisterOnEntityDestroyed(LuaEntity entity);
 
   /// <summary>
   /// Register a metatable to have linkage recorded and restored when saving/loading. The metatable itself will not be saved. Instead, only the linkage to a registered metatable is saved, and the metatable registered under that name will be used when loading the table.
@@ -115,26 +115,26 @@ public class LuaBootstrap
   /// <param name="name">Lua name: name</param>
   /// <param name="metatable">Lua name: metatable</param>
   [FactorioRconMethod("register_metatable")]
-  public void RegisterMetatable(string name, LuaTable metatable) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RegisterMetatable(string name, LuaTable metatable);
 
   /// <summary>
   /// Generate a new, unique event ID that can be used to raise custom events with <see cref="LuaBootstrap.RaiseEvent" />.
   /// </summary>
   [FactorioRconMethod("generate_event_name")]
-  public uint GenerateEventName() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GenerateEventName();
 
   /// <summary>
   /// Find the event handler for an event.
   /// </summary>
   /// <param name="@event">Lua name: event</param>
   [FactorioRconMethod("get_event_handler")]
-  public Action<EventData>? GetEventHandler(uint @event) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Action<EventData>? GetEventHandler(uint @event);
 
   /// <summary>
   /// Gets the mod event order as a string.
   /// </summary>
   [FactorioRconMethod("get_event_order")]
-  public string GetEventOrder() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string GetEventOrder();
 
   /// <summary>
   /// Sets the filters for the given event. The filters are only retained when set after the actual event registration, because registering for an event with different or no filters will overwrite previously set ones.
@@ -142,14 +142,14 @@ public class LuaBootstrap
   /// <param name="@event">Lua name: event</param>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("set_event_filter")]
-  public void SetEventFilter(uint @event, EventFilter? filters = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetEventFilter(uint @event, EventFilter? filters = null);
 
   /// <summary>
   /// Gets the filters for the given event.
   /// </summary>
   /// <param name="@event">Lua name: event</param>
   [FactorioRconMethod("get_event_filter")]
-  public EventFilter? GetEventFilter(uint @event) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract EventFilter? GetEventFilter(uint @event);
 
   /// <summary>
   /// Gets the prototype history for the given type and name.
@@ -157,7 +157,7 @@ public class LuaBootstrap
   /// <param name="type">Lua name: type</param>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_prototype_history")]
-  public PrototypeHistory GetPrototypeHistory(string type, string name) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract PrototypeHistory GetPrototypeHistory(string type, string name);
 
   /// <summary>
   /// Raise an event. Only events generated with <see cref="LuaBootstrap.GenerateEventName" /> and the following can be raised:
@@ -176,64 +176,64 @@ public class LuaBootstrap
   /// <param name="@event">Lua name: event</param>
   /// <param name="data">Lua name: data</param>
   [FactorioRconMethod("raise_event")]
-  public void RaiseEvent(uint @event, LuaTable data) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseEvent(uint @event, LuaTable data);
 
   /// <param name="playerIndex">Lua name: player_index</param>
   /// <param name="message">Lua name: message</param>
   [FactorioRconMethod("raise_console_chat")]
-  public void RaiseConsoleChat(uint playerIndex, string message) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseConsoleChat(uint playerIndex, string message);
 
   /// <param name="itemStack">Lua name: item_stack</param>
   /// <param name="playerIndex">Lua name: player_index</param>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("raise_player_crafted_item")]
-  public void RaisePlayerCraftedItem(LuaItemStack itemStack, uint playerIndex, LuaRecipe recipe) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaisePlayerCraftedItem(LuaItemStack itemStack, uint playerIndex, LuaRecipe recipe);
 
   /// <param name="playerIndex">Lua name: player_index</param>
   /// <param name="entity">Lua name: entity</param>
   /// <param name="fromPlayer">Lua name: from_player</param>
   /// <param name="isSplit">Lua name: is_split</param>
   [FactorioRconMethod("raise_player_fast_transferred")]
-  public void RaisePlayerFastTransferred(uint playerIndex, LuaEntity entity, bool fromPlayer, bool isSplit) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaisePlayerFastTransferred(uint playerIndex, LuaEntity entity, bool fromPlayer, bool isSplit);
 
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("raise_biter_base_built")]
-  public void RaiseBiterBaseBuilt(LuaEntity entity) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseBiterBaseBuilt(LuaEntity entity);
 
   /// <param name="playerIndex">Lua name: player_index</param>
   /// <param name="market">Lua name: market</param>
   /// <param name="offerIndex">Lua name: offer_index</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("raise_market_item_purchased")]
-  public void RaiseMarketItemPurchased(uint playerIndex, LuaEntity market, uint offerIndex, uint count) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseMarketItemPurchased(uint playerIndex, LuaEntity market, uint offerIndex, uint count);
 
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("raise_script_built")]
-  public void RaiseScriptBuilt(LuaEntity entity) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseScriptBuilt(LuaEntity entity);
 
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("raise_script_destroy")]
-  public void RaiseScriptDestroy(LuaEntity entity) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseScriptDestroy(LuaEntity entity);
 
   /// <param name="entity">Lua name: entity</param>
   /// <param name="tags">Lua name: tags</param>
   [FactorioRconMethod("raise_script_revive")]
-  public void RaiseScriptRevive(LuaEntity entity, Tags? tags = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseScriptRevive(LuaEntity entity, Tags? tags = null);
 
   /// <param name="entity">Lua name: entity</param>
   /// <param name="oldSurfaceIndex">Lua name: old_surface_index</param>
   /// <param name="oldPosition">Lua name: old_position</param>
   [FactorioRconMethod("raise_script_teleported")]
-  public void RaiseScriptTeleported(LuaEntity entity, byte oldSurfaceIndex, MapPosition oldPosition) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseScriptTeleported(LuaEntity entity, byte oldSurfaceIndex, MapPosition oldPosition);
 
   /// <param name="surfaceIndex">Lua name: surface_index</param>
   /// <param name="tiles">Lua name: tiles</param>
   [FactorioRconMethod("raise_script_set_tiles")]
-  public void RaiseScriptSetTiles(uint surfaceIndex, Tile[] tiles) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RaiseScriptSetTiles(uint surfaceIndex, List<Tile> tiles);
 
 }
 
-public class Table42715336
+public abstract class Table48209832
 {
   /// <summary>
   /// Is this level a simulation? (The main menu and 'Tips and tricks' use simulations)
@@ -265,5 +265,45 @@ public class Table42715336
   [FactorioRconAttribute("mod_name")]
   public string ModName { get; set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union63094882: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union49924125: OneOfBase<EventsEnum, string, List<Union50492551>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union50492551: OneOfBase<EventsEnum, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union41773672: OneOfBase<Action<EventData>, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5773521: OneOfBase<Action, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union54135081: OneOfBase<Action, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union34361009: OneOfBase<Action<NthTickEventData>, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union4831898: OneOfBase<uint, List<uint>, LuaNil>
+{
 }
 

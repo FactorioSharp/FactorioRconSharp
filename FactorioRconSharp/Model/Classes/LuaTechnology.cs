@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// One research item.
 /// </summary>
 [FactorioRconClass("LuaTechnology")]
-public class LuaTechnology
+public abstract class LuaTechnology: LuaObject
 {
   /// <summary>
   /// The force this technology belongs to.
@@ -77,13 +77,13 @@ public class LuaTechnology
   /// The types of ingredients that labs will require to research this technology.
   /// </summary>
   [FactorioRconAttribute("research_unit_ingredients")]
-  public Ingredient[] ResearchUnitIngredients { get; private set; }
+  public List<Ingredient> ResearchUnitIngredients { get; private set; }
 
   /// <summary>
   /// Effects applied when this technology is researched.
   /// </summary>
   [FactorioRconAttribute("effects")]
-  public TechnologyModifier[] Effects { get; private set; }
+  public List<TechnologyModifier> Effects { get; private set; }
 
   /// <summary>
   /// The number of research units required for this technology.
@@ -131,13 +131,13 @@ public class LuaTechnology
   /// Reload this technology from its prototype.
   /// </summary>
   [FactorioRconMethod("reload")]
-  public void Reload() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Reload();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

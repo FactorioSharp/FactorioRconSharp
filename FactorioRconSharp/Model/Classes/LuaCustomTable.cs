@@ -31,7 +31,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// ```</item></list>
 /// </examples>
 [FactorioRconClass("LuaCustomTable")]
-public class LuaCustomTable
+public abstract class LuaCustomTable: LuaObject
 {
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -54,13 +54,13 @@ public class LuaCustomTable
   /// <summary>
   /// Access an element of this custom table.
   /// </summary>
-  public Any this[uint key] { get => throw FactorioModelUtils.UseClientReadAsyncMethod(); set => throw FactorioModelUtils.UseClientExecuteAsyncMethod(); }
+  public abstract Any this[uint key] { get; set; }
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

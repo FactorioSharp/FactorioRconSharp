@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a fluid.
 /// </summary>
 [FactorioRconClass("LuaFluidPrototype")]
-public class LuaFluidPrototype
+public abstract class LuaFluidPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -110,7 +110,7 @@ public class LuaFluidPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

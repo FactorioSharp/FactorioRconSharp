@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a fluid energy source.
 /// </summary>
 [FactorioRconClass("LuaFluidEnergySourcePrototype")]
-public class LuaFluidEnergySourcePrototype
+public abstract class LuaFluidEnergySourcePrototype: LuaObject
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -47,7 +47,7 @@ public class LuaFluidEnergySourcePrototype
   /// The smoke sources for this prototype, if any.
   /// </summary>
   [FactorioRconAttribute("smoke")]
-  public SmokeSource[] Smoke { get; private set; }
+  public List<SmokeSource> Smoke { get; private set; }
 
   [FactorioRconAttribute("maximum_temperature")]
   public double MaximumTemperature { get; private set; }
@@ -74,7 +74,7 @@ public class LuaFluidEnergySourcePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

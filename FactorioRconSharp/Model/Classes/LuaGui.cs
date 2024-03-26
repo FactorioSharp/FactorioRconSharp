@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// The root of the GUI. This type houses the root elements, `top`, `left`, `center`, `goal`, and `screen`, to which other elements can be added to be displayed on screen.
 /// </summary>
 [FactorioRconClass("LuaGui")]
-public class LuaGui
+public abstract class LuaGui: LuaObject
 {
   /// <summary>
   /// The player who owns this gui.
@@ -83,13 +83,13 @@ public class LuaGui
   /// </summary>
   /// <param name="spritePath">Lua name: sprite_path</param>
   [FactorioRconMethod("is_valid_sprite_path")]
-  public bool IsValidSpritePath(SpritePath spritePath) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsValidSpritePath(SpritePath spritePath);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

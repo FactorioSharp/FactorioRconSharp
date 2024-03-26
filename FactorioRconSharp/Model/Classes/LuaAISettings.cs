@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Collection of settings for overriding default ai behavior.
 /// </summary>
 [FactorioRconClass("LuaAISettings")]
-public class LuaAISettings
+public abstract class LuaAISettings: LuaObject
 {
   /// <summary>
   /// If enabled, units that repeatedly fail to succeed at commands will be destroyed.
@@ -56,7 +56,7 @@ public class LuaAISettings
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

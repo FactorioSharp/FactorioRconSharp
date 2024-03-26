@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a shortcut.
 /// </summary>
 [FactorioRconClass("LuaShortcutPrototype")]
-public class LuaShortcutPrototype
+public abstract class LuaShortcutPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -74,7 +74,7 @@ public class LuaShortcutPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

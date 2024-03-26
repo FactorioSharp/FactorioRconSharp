@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a burner energy source.
 /// </summary>
 [FactorioRconClass("LuaBurnerPrototype")]
-public class LuaBurnerPrototype
+public abstract class LuaBurnerPrototype: LuaObject
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -41,13 +41,13 @@ public class LuaBurnerPrototype
   /// The smoke sources for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("smoke")]
-  public SmokeSource[] Smoke { get; private set; }
+  public List<SmokeSource> Smoke { get; private set; }
 
   /// <summary>
   /// The light flicker definition for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("light_flicker")]
-  public Table48209832 LightFlicker { get; private set; }
+  public Table54181145 LightFlicker { get; private set; }
 
   [FactorioRconAttribute("fuel_categories")]
   public Dictionary<string, bool> FuelCategories { get; private set; }
@@ -68,11 +68,11 @@ public class LuaBurnerPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 
-public class Table48209832
+public abstract class Table54181145
 {
   [FactorioRconAttribute("minimum_intensity")]
   public float MinimumIntensity { get; set; }

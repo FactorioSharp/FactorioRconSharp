@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// An abstract base class for behaviors that support switching the entity on or off based on some condition.
 /// </summary>
 [FactorioRconClass("LuaGenericOnOffControlBehavior")]
-public class LuaGenericOnOffControlBehavior
+public abstract class LuaGenericOnOffControlBehavior: LuaObject
 {
   /// <summary>
   /// If the entity is currently disabled because of the control behavior.
@@ -56,7 +56,7 @@ public class LuaGenericOnOffControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

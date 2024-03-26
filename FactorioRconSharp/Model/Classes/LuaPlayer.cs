@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A player in the game. Pay attention that a player may or may not have a character, which is the <see cref="LuaEntity" /> of the little guy running around the world doing things.
 /// </summary>
 [FactorioRconClass("LuaPlayer")]
-public class LuaPlayer
+public abstract class LuaPlayer: LuaObject
 {
   /// <summary>
   /// The character attached to this player, if any. Returns `nil` when the player is disconnected (see <see cref="LuaPlayer.Connected)" />.
@@ -198,7 +198,7 @@ public class LuaPlayer
   /// The filters for this map editor infinity inventory settings.
   /// </summary>
   [FactorioRconAttribute("infinity_inventory_filters")]
-  public InfinityInventoryFilter[] InfinityInventoryFilters { get; set; }
+  public List<InfinityInventoryFilter> InfinityInventoryFilters { get; set; }
 
   /// <summary>
   /// If the main inventory will be auto sorted.
@@ -254,7 +254,7 @@ public class LuaPlayer
   /// <param name="message">Lua name: message</param>
   /// <param name="file">Lua name: file</param>
   [FactorioRconMethod("set_ending_screen_data")]
-  public void SetEndingScreenData(LocalisedString message, string? file = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetEndingScreenData(LocalisedString message, string? file = null);
 
   /// <summary>
   /// Print text to the chat console.
@@ -265,19 +265,19 @@ public class LuaPlayer
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public void Print(LocalisedString message, OneOf<Color, PrintSettings>? printSettings = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Print(LocalisedString message, Union247016? printSettings = null);
 
   /// <summary>
   /// Clear the chat console.
   /// </summary>
   [FactorioRconMethod("clear_console")]
-  public void ClearConsole() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearConsole();
 
   /// <summary>
   /// Get the current goal description, as a localised string.
   /// </summary>
   [FactorioRconMethod("get_goal_description")]
-  public LocalisedString GetGoalDescription() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LocalisedString GetGoalDescription();
 
   /// <summary>
   /// Set the text in the goal window (top left).
@@ -285,7 +285,7 @@ public class LuaPlayer
   /// <param name="text">Lua name: text</param>
   /// <param name="onlyUpdate">Lua name: only_update</param>
   [FactorioRconMethod("set_goal_description")]
-  public void SetGoalDescription(LocalisedString? text = null, bool? onlyUpdate = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetGoalDescription(LocalisedString? text = null, bool? onlyUpdate = null);
 
   /// <summary>
   /// Set the controller type of the player.
@@ -302,82 +302,82 @@ public class LuaPlayer
   /// <param name="finalTransitionTime">Lua name: final_transition_time</param>
   /// <param name="chartModeCutoff">Lua name: chart_mode_cutoff</param>
   [FactorioRconMethod("set_controller")]
-  public void SetController(ControllersEnum type, LuaEntity? character = null, CutsceneWaypoint? waypoints = null, MapPosition? startPosition = null, double? startZoom = null, uint? finalTransitionTime = null, double? chartModeCutoff = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetController(ControllersEnum type, LuaEntity? character = null, CutsceneWaypoint? waypoints = null, MapPosition? startPosition = null, double? startZoom = null, uint? finalTransitionTime = null, double? chartModeCutoff = null);
 
   /// <summary>
   /// Start/end wire dragging at the specified location, wire type is based on the cursor contents
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("drag_wire")]
-  public bool DragWire(MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool DragWire(MapPosition position);
 
   /// <summary>
   /// Disable recipe groups.
   /// </summary>
   [FactorioRconMethod("disable_recipe_groups")]
-  public void DisableRecipeGroups() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisableRecipeGroups();
 
   /// <summary>
   /// Enable recipe groups.
   /// </summary>
   [FactorioRconMethod("enable_recipe_groups")]
-  public void EnableRecipeGroups() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void EnableRecipeGroups();
 
   /// <summary>
   /// Disable recipe subgroups.
   /// </summary>
   [FactorioRconMethod("disable_recipe_subgroups")]
-  public void DisableRecipeSubgroups() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisableRecipeSubgroups();
 
   /// <summary>
   /// Enable recipe subgroups.
   /// </summary>
   [FactorioRconMethod("enable_recipe_subgroups")]
-  public void EnableRecipeSubgroups() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void EnableRecipeSubgroups();
 
   /// <summary>
   /// Print entity statistics to the player's console.
   /// </summary>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("print_entity_statistics")]
-  public void PrintEntityStatistics(string[]? entities = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PrintEntityStatistics(List<string>? entities = null);
 
   /// <summary>
   /// Print construction robot job counts to the players console.
   /// </summary>
   [FactorioRconMethod("print_robot_jobs")]
-  public void PrintRobotJobs() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PrintRobotJobs();
 
   /// <summary>
   /// Print LuaObject counts per mod.
   /// </summary>
   [FactorioRconMethod("print_lua_object_statistics")]
-  public void PrintLuaObjectStatistics() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PrintLuaObjectStatistics();
 
   /// <summary>
   /// Logs a dictionary of chunks -> active entities for the surface this player is on.
   /// </summary>
   [FactorioRconMethod("log_active_entity_chunk_counts")]
-  public void LogActiveEntityChunkCounts() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void LogActiveEntityChunkCounts();
 
   /// <summary>
   /// Logs a dictionary of active entities -> count for the surface this player is on.
   /// </summary>
   [FactorioRconMethod("log_active_entity_counts")]
-  public void LogActiveEntityCounts() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void LogActiveEntityCounts();
 
   /// <summary>
   /// Unlock the achievements of the given player. This has any effect only when this is the local player, the achievement isn't unlocked so far and the achievement is of the type "achievement".
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("unlock_achievement")]
-  public void UnlockAchievement(string name) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UnlockAchievement(string name);
 
   /// <summary>
   /// Invokes the "clear cursor" action on the player as if the user pressed it.
   /// </summary>
   [FactorioRconMethod("clear_cursor")]
-  public bool ClearCursor() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool ClearCursor();
 
   /// <summary>
   /// Creates and attaches a character entity to this player.
@@ -387,7 +387,7 @@ public class LuaPlayer
   /// </remarks>
   /// <param name="character">Lua name: character</param>
   [FactorioRconMethod("create_character")]
-  public bool CreateCharacter(string? character = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CreateCharacter(string? character = null);
 
   /// <summary>
   /// Adds an alert to this player for the given entity of the given alert type.
@@ -395,7 +395,7 @@ public class LuaPlayer
   /// <param name="entity">Lua name: entity</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("add_alert")]
-  public void AddAlert(LuaEntity entity, AlertTypeEnum type) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddAlert(LuaEntity entity, AlertTypeEnum type);
 
   /// <summary>
   /// Adds a custom alert to this player.
@@ -405,7 +405,7 @@ public class LuaPlayer
   /// <param name="message">Lua name: message</param>
   /// <param name="showOnMap">Lua name: show_on_map</param>
   [FactorioRconMethod("add_custom_alert")]
-  public void AddCustomAlert(LuaEntity entity, SignalID icon, LocalisedString message, bool showOnMap) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddCustomAlert(LuaEntity entity, SignalID icon, LocalisedString message, bool showOnMap);
 
   /// <summary>
   /// Removes all alerts matching the given filters or if an empty filters table is given all alerts are removed.
@@ -418,7 +418,7 @@ public class LuaPlayer
   /// <param name="icon">Lua name: icon</param>
   /// <param name="message">Lua name: message</param>
   [FactorioRconMethod("remove_alert")]
-  public void RemoveAlert(LuaEntity? entity = null, OneOf<LuaEntityPrototype, string>? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null, SignalID? icon = null, LocalisedString? message = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RemoveAlert(LuaEntity? entity = null, Union5187339? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null, SignalID? icon = null, LocalisedString? message = null);
 
   /// <summary>
   /// Get all alerts matching the given filters, or all alerts if no filters are given.
@@ -429,56 +429,56 @@ public class LuaPlayer
   /// <param name="type">Lua name: type</param>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_alerts")]
-  public Dictionary<uint, Dictionary<AlertTypeEnum, Alert[]>> GetAlerts(LuaEntity? entity = null, LuaEntityPrototype? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<uint, Dictionary<AlertTypeEnum, List<Alert>>> GetAlerts(LuaEntity? entity = null, LuaEntityPrototype? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Mutes alerts for the given alert category.
   /// </summary>
   /// <param name="alertType">Lua name: alert_type</param>
   [FactorioRconMethod("mute_alert")]
-  public bool MuteAlert(AlertTypeEnum alertType) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool MuteAlert(AlertTypeEnum alertType);
 
   /// <summary>
   /// Unmutes alerts for the given alert category.
   /// </summary>
   /// <param name="alertType">Lua name: alert_type</param>
   [FactorioRconMethod("unmute_alert")]
-  public bool UnmuteAlert(AlertTypeEnum alertType) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool UnmuteAlert(AlertTypeEnum alertType);
 
   /// <summary>
   /// If the given alert type is currently muted.
   /// </summary>
   /// <param name="alertType">Lua name: alert_type</param>
   [FactorioRconMethod("is_alert_muted")]
-  public bool IsAlertMuted(AlertTypeEnum alertType) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsAlertMuted(AlertTypeEnum alertType);
 
   /// <summary>
   /// Enables alerts for the given alert category.
   /// </summary>
   /// <param name="alertType">Lua name: alert_type</param>
   [FactorioRconMethod("enable_alert")]
-  public bool EnableAlert(AlertTypeEnum alertType) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool EnableAlert(AlertTypeEnum alertType);
 
   /// <summary>
   /// Disables alerts for the given alert category.
   /// </summary>
   /// <param name="alertType">Lua name: alert_type</param>
   [FactorioRconMethod("disable_alert")]
-  public bool DisableAlert(AlertTypeEnum alertType) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool DisableAlert(AlertTypeEnum alertType);
 
   /// <summary>
   /// If the given alert type is currently enabled.
   /// </summary>
   /// <param name="alertType">Lua name: alert_type</param>
   [FactorioRconMethod("is_alert_enabled")]
-  public bool IsAlertEnabled(AlertTypeEnum alertType) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsAlertEnabled(AlertTypeEnum alertType);
 
   /// <summary>
   /// Invokes the "smart pipette" action on the player as if the user pressed it.
   /// </summary>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("pipette_entity")]
-  public bool PipetteEntity(OneOf<string, LuaEntity, LuaEntityPrototype> entity) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool PipetteEntity(Union41825261 entity);
 
   /// <summary>
   /// Checks if this player can build the given entity at the given location on the surface the player is on.
@@ -487,7 +487,7 @@ public class LuaPlayer
   /// <param name="position">Lua name: position</param>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("can_place_entity")]
-  public bool CanPlaceEntity(string name, MapPosition position, DirectionEnum? direction = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanPlaceEntity(string name, MapPosition position, DirectionEnum? direction = null);
 
   /// <summary>
   /// Checks if this player can build what ever is in the cursor on the surface the player is on.
@@ -498,7 +498,7 @@ public class LuaPlayer
   /// <param name="terrainBuildingSize">Lua name: terrain_building_size</param>
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   [FactorioRconMethod("can_build_from_cursor")]
-  public bool CanBuildFromCursor(MapPosition position, DirectionEnum? direction = null, bool? alt = null, uint? terrainBuildingSize = null, bool? skipFogOfWar = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanBuildFromCursor(MapPosition position, DirectionEnum? direction = null, bool? alt = null, uint? terrainBuildingSize = null, bool? skipFogOfWar = null);
 
   /// <summary>
   /// Builds whatever is in the cursor on the surface the player is on. The cursor stack will automatically be reduced as if the player built normally.
@@ -509,14 +509,14 @@ public class LuaPlayer
   /// <param name="terrainBuildingSize">Lua name: terrain_building_size</param>
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   [FactorioRconMethod("build_from_cursor")]
-  public void BuildFromCursor(MapPosition position, DirectionEnum? direction = null, bool? alt = null, uint? terrainBuildingSize = null, bool? skipFogOfWar = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void BuildFromCursor(MapPosition position, DirectionEnum? direction = null, bool? alt = null, uint? terrainBuildingSize = null, bool? skipFogOfWar = null);
 
   /// <summary>
   /// Uses the current item in the cursor if it's a capsule or does nothing if not.
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("use_from_cursor")]
-  public void UseFromCursor(MapPosition position) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UseFromCursor(MapPosition position);
 
   /// <summary>
   /// Play a sound for this player.
@@ -529,7 +529,7 @@ public class LuaPlayer
   /// <param name="volumeModifier">Lua name: volume_modifier</param>
   /// <param name="overrideSoundType">Lua name: override_sound_type</param>
   [FactorioRconMethod("play_sound")]
-  public void PlaySound(SoundPath path, MapPosition? position = null, double? volumeModifier = null, SoundType? overrideSoundType = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PlaySound(SoundPath path, MapPosition? position = null, double? volumeModifier = null, SoundType? overrideSoundType = null);
 
   /// <summary>
   /// The characters associated with this player.
@@ -539,7 +539,7 @@ public class LuaPlayer
   /// Characters associated with this player will be logged off when this player disconnects but are not controlled by any player.
   /// </remarks>
   [FactorioRconMethod("get_associated_characters")]
-  public LuaEntity[] GetAssociatedCharacters() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetAssociatedCharacters();
 
   /// <summary>
   /// Associates a character with this player.
@@ -551,7 +551,7 @@ public class LuaPlayer
   /// </remarks>
   /// <param name="character">Lua name: character</param>
   [FactorioRconMethod("associate_character")]
-  public void AssociateCharacter(LuaEntity character) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AssociateCharacter(LuaEntity character);
 
   /// <summary>
   /// Disassociates a character from this player. This is functionally the same as setting <see cref="LuaEntity.AssociatedPlayer" /> to `nil`.
@@ -561,7 +561,7 @@ public class LuaPlayer
   /// </remarks>
   /// <param name="character">Lua name: character</param>
   [FactorioRconMethod("disassociate_character")]
-  public void DisassociateCharacter(LuaEntity character) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisassociateCharacter(LuaEntity character);
 
   /// <summary>
   /// Spawn flying text that is only visible to this player. Either `position` or `create_at_cursor` are required. When `create_at_cursor` is `true`, all parameters other than `text` are ignored.
@@ -577,14 +577,14 @@ public class LuaPlayer
   /// <param name="timeToLive">Lua name: time_to_live</param>
   /// <param name="speed">Lua name: speed</param>
   [FactorioRconMethod("create_local_flying_text")]
-  public void CreateLocalFlyingText(LocalisedString text, MapPosition? position = null, bool? createAtCursor = null, Color? color = null, uint? timeToLive = null, double? speed = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CreateLocalFlyingText(LocalisedString text, MapPosition? position = null, bool? createAtCursor = null, Color? color = null, uint? timeToLive = null, double? speed = null);
 
   /// <summary>
   /// Gets the quick bar filter for the given slot or `nil`.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_quick_bar_slot")]
-  public LuaItemPrototype? GetQuickBarSlot(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaItemPrototype? GetQuickBarSlot(uint index);
 
   /// <summary>
   /// Sets the quick bar filter for the given slot.
@@ -592,14 +592,14 @@ public class LuaPlayer
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_quick_bar_slot")]
-  public void SetQuickBarSlot(uint index, OneOf<string, LuaItemPrototype, LuaItemStack> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetQuickBarSlot(uint index, Union5915254 filter);
 
   /// <summary>
   /// Gets which quick bar page is being used for the given screen page or `nil` if not known.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_active_quick_bar_page")]
-  public byte? GetActiveQuickBarPage(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract byte? GetActiveQuickBarPage(uint index);
 
   /// <summary>
   /// Sets which quick bar page is being used for the given screen page.
@@ -607,20 +607,20 @@ public class LuaPlayer
   /// <param name="screenIndex">Lua name: screen_index</param>
   /// <param name="pageIndex">Lua name: page_index</param>
   [FactorioRconMethod("set_active_quick_bar_page")]
-  public void SetActiveQuickBarPage(uint screenIndex, uint pageIndex) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetActiveQuickBarPage(uint screenIndex, uint pageIndex);
 
   /// <summary>
   /// Jump to the specified cutscene waypoint. Only works when the player is viewing a cutscene.
   /// </summary>
   /// <param name="waypointIndex">Lua name: waypoint_index</param>
   [FactorioRconMethod("jump_to_cutscene_waypoint")]
-  public void JumpToCutsceneWaypoint(uint waypointIndex) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void JumpToCutsceneWaypoint(uint waypointIndex);
 
   /// <summary>
   /// Exit the current cutscene. Errors if not in a cutscene.
   /// </summary>
   [FactorioRconMethod("exit_cutscene")]
-  public void ExitCutscene() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ExitCutscene();
 
   /// <summary>
   /// Queues a request to open the map at the specified position. If the map is already opened, the request will simply set the position, scale, and entity to follow. Render mode change requests are processed before rendering of the next frame.
@@ -629,7 +629,7 @@ public class LuaPlayer
   /// <param name="scale">Lua name: scale</param>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("open_map")]
-  public void OpenMap(MapPosition position, double? scale = null, LuaEntity? entity = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OpenMap(MapPosition position, double? scale = null, LuaEntity? entity = null);
 
   /// <summary>
   /// Queues a request to zoom to world at the specified position. If the player is already zooming to world, the request will simply set the position, scale, and entity to follow. Render mode change requests are processed before rendering of the next frame.
@@ -638,27 +638,27 @@ public class LuaPlayer
   /// <param name="scale">Lua name: scale</param>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("zoom_to_world")]
-  public void ZoomToWorld(MapPosition position, double? scale = null, LuaEntity? entity = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ZoomToWorld(MapPosition position, double? scale = null, LuaEntity? entity = null);
 
   /// <summary>
   /// Queues request to switch to the normal game view from the map or zoom to world view. Render mode change requests are processed before rendering of the next frame.
   /// </summary>
   [FactorioRconMethod("close_map")]
-  public void CloseMap() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CloseMap();
 
   /// <summary>
   /// Is a custom Lua shortcut currently toggled?
   /// </summary>
   /// <param name="prototypeName">Lua name: prototype_name</param>
   [FactorioRconMethod("is_shortcut_toggled")]
-  public bool IsShortcutToggled(string prototypeName) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsShortcutToggled(string prototypeName);
 
   /// <summary>
   /// Is a custom Lua shortcut currently available?
   /// </summary>
   /// <param name="prototypeName">Lua name: prototype_name</param>
   [FactorioRconMethod("is_shortcut_available")]
-  public bool IsShortcutAvailable(string prototypeName) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsShortcutAvailable(string prototypeName);
 
   /// <summary>
   /// Toggle or untoggle a custom Lua shortcut
@@ -666,7 +666,7 @@ public class LuaPlayer
   /// <param name="prototypeName">Lua name: prototype_name</param>
   /// <param name="toggled">Lua name: toggled</param>
   [FactorioRconMethod("set_shortcut_toggled")]
-  public void SetShortcutToggled(string prototypeName, bool toggled) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetShortcutToggled(string prototypeName, bool toggled);
 
   /// <summary>
   /// Make a custom Lua shortcut available or unavailable.
@@ -674,7 +674,7 @@ public class LuaPlayer
   /// <param name="prototypeName">Lua name: prototype_name</param>
   /// <param name="available">Lua name: available</param>
   [FactorioRconMethod("set_shortcut_available")]
-  public void SetShortcutAvailable(string prototypeName, bool available) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetShortcutAvailable(string prototypeName, bool available);
 
   /// <summary>
   /// Asks the player if they would like to connect to the given server.
@@ -687,13 +687,13 @@ public class LuaPlayer
   /// <param name="description">Lua name: description</param>
   /// <param name="password">Lua name: password</param>
   [FactorioRconMethod("connect_to_server")]
-  public void ConnectToServer(string address, LocalisedString? name = null, LocalisedString? description = null, string? password = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ConnectToServer(string address, LocalisedString? name = null, LocalisedString? description = null, string? password = null);
 
   /// <summary>
   /// Toggles this player into or out of the map editor. Does nothing if this player isn't an admin or if the player doesn't have permission to use the map editor.
   /// </summary>
   [FactorioRconMethod("toggle_map_editor")]
-  public void ToggleMapEditor() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ToggleMapEditor();
 
   /// <summary>
   /// Requests a translation for the given localised string. If the request is successful, the <see cref="OnStringTranslated" /> event will be fired with the results.
@@ -703,7 +703,7 @@ public class LuaPlayer
   /// </remarks>
   /// <param name="localisedString">Lua name: localised_string</param>
   [FactorioRconMethod("request_translation")]
-  public uint? RequestTranslation(LocalisedString localisedString) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint? RequestTranslation(LocalisedString localisedString);
 
   /// <summary>
   /// Requests translation for the given set of localised strings. If the request is successful, a <see cref="OnStringTranslated" /> event will be fired for each string with the results.
@@ -713,14 +713,14 @@ public class LuaPlayer
   /// </remarks>
   /// <param name="localisedStrings">Lua name: localised_strings</param>
   [FactorioRconMethod("request_translations")]
-  public uint[]? RequestTranslations(LocalisedString[] localisedStrings) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<uint>? RequestTranslations(List<LocalisedString> localisedStrings);
 
   /// <summary>
   /// Gets the filter for this map editor infinity filters at the given index or `nil` if the filter index doesn't exist or is empty.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_infinity_inventory_filter")]
-  public InfinityInventoryFilter? GetInfinityInventoryFilter(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract InfinityInventoryFilter? GetInfinityInventoryFilter(uint index);
 
   /// <summary>
   /// Sets the filter for this map editor infinity filters at the given index.
@@ -728,33 +728,33 @@ public class LuaPlayer
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_inventory_filter")]
-  public void SetInfinityInventoryFilter(uint index, OneOf<InfinityInventoryFilter, LuaNil> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetInfinityInventoryFilter(uint index, Union57111475 filter);
 
   /// <summary>
   /// Clears all recipe notifications for this player.
   /// </summary>
   [FactorioRconMethod("clear_recipe_notifications")]
-  public void ClearRecipeNotifications() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearRecipeNotifications();
 
   /// <summary>
   /// Adds the given recipe to the list of recipe notifications for this player.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("add_recipe_notification")]
-  public void AddRecipeNotification(string recipe) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddRecipeNotification(string recipe);
 
   /// <summary>
   /// Adds the given blueprint to this player's clipboard queue.
   /// </summary>
   /// <param name="blueprint">Lua name: blueprint</param>
   [FactorioRconMethod("add_to_clipboard")]
-  public void AddToClipboard(LuaItemStack blueprint) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddToClipboard(LuaItemStack blueprint);
 
   /// <summary>
   /// Gets a copy of the currently selected blueprint in the clipboard queue into the player's cursor, as if the player activated Paste.
   /// </summary>
   [FactorioRconMethod("activate_paste")]
-  public void ActivatePaste() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ActivatePaste();
 
   /// <summary>
   /// Starts selection with selection tool from the specified position. Does nothing if the players cursor is not a selection tool.
@@ -762,19 +762,44 @@ public class LuaPlayer
   /// <param name="position">Lua name: position</param>
   /// <param name="selectionMode">Lua name: selection_mode</param>
   [FactorioRconMethod("start_selection")]
-  public void StartSelection(MapPosition position, string selectionMode) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void StartSelection(MapPosition position, string selectionMode);
 
   /// <summary>
   /// Clears the players selection tool selection position.
   /// </summary>
   [FactorioRconMethod("clear_selection")]
-  public void ClearSelection() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearSelection();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union41825261: OneOfBase<string, LuaEntity, LuaEntityPrototype>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union247016: OneOfBase<Color, PrintSettings>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5187339: OneOfBase<LuaEntityPrototype, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union57111475: OneOfBase<InfinityInventoryFilter, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5915254: OneOfBase<string, LuaItemPrototype, LuaItemStack>
+{
 }
 

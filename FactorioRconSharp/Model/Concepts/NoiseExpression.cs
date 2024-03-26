@@ -14,7 +14,23 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A fragment of a functional program used to generate coherent noise, probably for purposes related to terrain generation. These can only be meaningfully written/modified during the data load phase. More detailed information is found on the [prototype docs](prototype:NamedNoiseExpression).
 /// </summary>
 [FactorioRconConcept("NoiseExpression")]
-public class NoiseExpression
+public abstract class NoiseExpression
 {
+  /// <summary>
+  /// Names the type of the expression and determines what other fields are required.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public string Type { get; set; }
+
+}
+
+public abstract class Table16634104
+{
+  /// <summary>
+  /// Names the type of the expression and determines what other fields are required.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public string Type { get; set; }
+
 }
 

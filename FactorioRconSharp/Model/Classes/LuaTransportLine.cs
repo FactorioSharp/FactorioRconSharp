@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// One line on a transport belt.
 /// </summary>
 [FactorioRconClass("LuaTransportLine")]
-public class LuaTransportLine
+public abstract class LuaTransportLine: LuaObject
 {
   /// <summary>
   /// The entity this transport line belongs to.
@@ -26,13 +26,13 @@ public class LuaTransportLine
   /// The transport lines that this transport line outputs items to or an empty table if none.
   /// </summary>
   [FactorioRconAttribute("output_lines")]
-  public LuaTransportLine[] OutputLines { get; private set; }
+  public List<LuaTransportLine> OutputLines { get; private set; }
 
   /// <summary>
   /// The transport lines that this transport line is fed by or an empty table if none.
   /// </summary>
   [FactorioRconAttribute("input_lines")]
-  public LuaTransportLine[] InputLines { get; private set; }
+  public List<LuaTransportLine> InputLines { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -55,40 +55,40 @@ public class LuaTransportLine
   /// <summary>
   /// The indexing operator.
   /// </summary>
-  public LuaItemStack this[uint key] { get => throw FactorioModelUtils.UseClientReadAsyncMethod(); private set => throw FactorioModelUtils.UseClientExecuteAsyncMethod(); }
+  public abstract LuaItemStack this[uint key] { get; }
 
   /// <summary>
   /// Remove all items from this transport line.
   /// </summary>
   [FactorioRconMethod("clear")]
-  public void Clear() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear();
 
   /// <summary>
   /// Count some or all items on this line, similar to how <see cref="LuaInventory.GetItemCount" /> does.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_item_count")]
-  public uint GetItemCount(string? item = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetItemCount(string? item = null);
 
   /// <summary>
   /// Remove some items from this line.
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("remove_item")]
-  public uint RemoveItem(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint RemoveItem(ItemStackIdentification items);
 
   /// <summary>
   /// Can an item be inserted at a given position?
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("can_insert_at")]
-  public bool CanInsertAt(float position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanInsertAt(float position);
 
   /// <summary>
   /// Can an item be inserted at the back of this line?
   /// </summary>
   [FactorioRconMethod("can_insert_at_back")]
-  public bool CanInsertAtBack() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanInsertAtBack();
 
   /// <summary>
   /// Insert items at a given position.
@@ -96,20 +96,20 @@ public class LuaTransportLine
   /// <param name="position">Lua name: position</param>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("insert_at")]
-  public bool InsertAt(float position, ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool InsertAt(float position, ItemStackIdentification items);
 
   /// <summary>
   /// Insert items at the back of this line.
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("insert_at_back")]
-  public bool InsertAtBack(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool InsertAtBack(ItemStackIdentification items);
 
   /// <summary>
   /// Get counts of all items on this line, similar to how <see cref="LuaInventory.GetContents" /> does.
   /// </summary>
   [FactorioRconMethod("get_contents")]
-  public Dictionary<string, uint> GetContents() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> GetContents();
 
   /// <summary>
   /// Returns whether the associated internal transport line of this line is the same as the others associated internal transport line.
@@ -119,13 +119,13 @@ public class LuaTransportLine
   /// </remarks>
   /// <param name="other">Lua name: other</param>
   [FactorioRconMethod("line_equals")]
-  public bool LineEquals(LuaTransportLine other) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool LineEquals(LuaTransportLine other);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

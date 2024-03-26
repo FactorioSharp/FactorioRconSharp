@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for transport belts.
 /// </summary>
 [FactorioRconClass("LuaTransportBeltControlBehavior")]
-public class LuaTransportBeltControlBehavior
+public abstract class LuaTransportBeltControlBehavior: LuaObject
 {
   /// <summary>
   /// If the belt will be enabled/disabled based off the circuit network.
@@ -50,7 +50,7 @@ public class LuaTransportBeltControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

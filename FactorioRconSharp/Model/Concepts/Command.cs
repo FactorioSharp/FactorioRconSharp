@@ -14,7 +14,23 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Commands can be given to enemies and unit groups.
 /// </summary>
 [FactorioRconConcept("Command")]
-public class Command
+public abstract class Command
 {
+  /// <summary>
+  /// Type of command. The remaining fields depend on the value of this field.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public CommandEnum Type { get; set; }
+
+}
+
+public abstract class Table21818579
+{
+  /// <summary>
+  /// Type of command. The remaining fields depend on the value of this field.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public CommandEnum Type { get; set; }
+
 }
 

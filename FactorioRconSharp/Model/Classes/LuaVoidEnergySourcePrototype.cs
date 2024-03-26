@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a void energy source.
 /// </summary>
 [FactorioRconClass("LuaVoidEnergySourcePrototype")]
-public class LuaVoidEnergySourcePrototype
+public abstract class LuaVoidEnergySourcePrototype: LuaObject
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -44,7 +44,7 @@ public class LuaVoidEnergySourcePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

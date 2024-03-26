@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// An object used to measure script performance.
 /// </summary>
 [FactorioRconClass("LuaProfiler")]
-public class LuaProfiler
+public abstract class LuaProfiler: LuaObject
 {
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -32,19 +32,19 @@ public class LuaProfiler
   /// Resets the clock, also restarting it.
   /// </summary>
   [FactorioRconMethod("reset")]
-  public void Reset() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Reset();
 
   /// <summary>
   /// Stops the clock.
   /// </summary>
   [FactorioRconMethod("stop")]
-  public void Stop() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Stop();
 
   /// <summary>
   /// Start the clock again, without resetting it.
   /// </summary>
   [FactorioRconMethod("restart")]
-  public void Restart() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Restart();
 
   /// <summary>
   /// Add the duration of another timer to this timer. Useful to reduce start/stop overhead when accumulating time onto many timers at once.
@@ -54,7 +54,7 @@ public class LuaProfiler
   /// </remarks>
   /// <param name="other">Lua name: other</param>
   [FactorioRconMethod("add")]
-  public void Add(LuaProfiler other) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Add(LuaProfiler other);
 
   /// <summary>
   /// Divides the current duration by a set value. Useful for calculating the average of many iterations.
@@ -64,13 +64,13 @@ public class LuaProfiler
   /// </remarks>
   /// <param name="number">Lua name: number</param>
   [FactorioRconMethod("divide")]
-  public void Divide(double number) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Divide(double number);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

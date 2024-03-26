@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a ammo category.
 /// </summary>
 [FactorioRconClass("LuaAmmoCategoryPrototype")]
-public class LuaAmmoCategoryPrototype
+public abstract class LuaAmmoCategoryPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -53,7 +53,7 @@ public class LuaAmmoCategoryPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

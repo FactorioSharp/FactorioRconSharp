@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ModuleEffects")]
-public class ModuleEffects
+public abstract class ModuleEffects
 {
+  [FactorioRconAttribute("consumption")]
+  public ModuleEffectValue Consumption { get; set; }
+
+  [FactorioRconAttribute("speed")]
+  public ModuleEffectValue Speed { get; set; }
+
+  [FactorioRconAttribute("productivity")]
+  public ModuleEffectValue Productivity { get; set; }
+
+  [FactorioRconAttribute("pollution")]
+  public ModuleEffectValue Pollution { get; set; }
+
+}
+
+public abstract class Table5458650
+{
+  [FactorioRconAttribute("consumption")]
+  public ModuleEffectValue Consumption { get; set; }
+
+  [FactorioRconAttribute("speed")]
+  public ModuleEffectValue Speed { get; set; }
+
+  [FactorioRconAttribute("productivity")]
+  public ModuleEffectValue Productivity { get; set; }
+
+  [FactorioRconAttribute("pollution")]
+  public ModuleEffectValue Pollution { get; set; }
+
 }
 

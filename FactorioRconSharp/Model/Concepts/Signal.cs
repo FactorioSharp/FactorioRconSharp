@@ -14,7 +14,35 @@ namespace FactorioRconSharp.Model.Concepts;
 /// An actual signal transmitted by the network.
 /// </summary>
 [FactorioRconConcept("Signal")]
-public class Signal
+public abstract class Signal
 {
+  /// <summary>
+  /// ID of the signal.
+  /// </summary>
+  [FactorioRconAttribute("signal")]
+  public SignalID Signal { get; set; }
+
+  /// <summary>
+  /// Value of the signal.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+  public int Count { get; set; }
+
+}
+
+public abstract class Table46215422
+{
+  /// <summary>
+  /// ID of the signal.
+  /// </summary>
+  [FactorioRconAttribute("signal")]
+  public SignalID Signal { get; set; }
+
+  /// <summary>
+  /// Value of the signal.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+  public int Count { get; set; }
+
 }
 

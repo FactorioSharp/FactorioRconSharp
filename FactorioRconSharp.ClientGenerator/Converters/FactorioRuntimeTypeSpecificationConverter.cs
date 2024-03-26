@@ -50,6 +50,7 @@ public class FactorioRuntimeTypeSpecificationConverter : JsonConverter<FactorioR
                                     switch (complexType)
                                     {
                                         case "type":
+                                            reader.Read();
                                             typeValue = reader.GetString();
                                             break;
                                         case "literal":

@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("NthTickEventData")]
-public class NthTickEventData
+public abstract class NthTickEventData
 {
+  /// <summary>
+  /// The tick during which the event happened.
+  /// </summary>
+  [FactorioRconAttribute("tick")]
+  public uint Tick { get; set; }
+
+  /// <summary>
+  /// The nth tick this handler was registered to.
+  /// </summary>
+  [FactorioRconAttribute("nth_tick")]
+  public uint NthTick { get; set; }
+
+}
+
+public abstract class Table12626972
+{
+  /// <summary>
+  /// The tick during which the event happened.
+  /// </summary>
+  [FactorioRconAttribute("tick")]
+  public uint Tick { get; set; }
+
+  /// <summary>
+  /// The nth tick this handler was registered to.
+  /// </summary>
+  [FactorioRconAttribute("nth_tick")]
+  public uint NthTick { get; set; }
+
 }
 

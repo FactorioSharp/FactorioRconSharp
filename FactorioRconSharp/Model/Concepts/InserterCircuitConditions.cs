@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("InserterCircuitConditions")]
-public class InserterCircuitConditions
+public abstract class InserterCircuitConditions
 {
+  [FactorioRconAttribute("circuit")]
+  public CircuitCondition Circuit { get; set; }
+
+  [FactorioRconAttribute("logistics")]
+  public CircuitCondition Logistics { get; set; }
+
+}
+
+public abstract class Table19612087
+{
+  [FactorioRconAttribute("circuit")]
+  public CircuitCondition Circuit { get; set; }
+
+  [FactorioRconAttribute("logistics")]
+  public CircuitCondition Logistics { get; set; }
+
 }
 

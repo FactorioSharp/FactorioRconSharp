@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ScriptRenderTarget")]
-public class ScriptRenderTarget
+public abstract class ScriptRenderTarget
 {
+  [FactorioRconAttribute("entity")]
+  public LuaEntity Entity { get; set; }
+
+  [FactorioRconAttribute("entity_offset")]
+  public Vector EntityOffset { get; set; }
+
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
+}
+
+public abstract class Table11279128
+{
+  [FactorioRconAttribute("entity")]
+  public LuaEntity Entity { get; set; }
+
+  [FactorioRconAttribute("entity_offset")]
+  public Vector EntityOffset { get; set; }
+
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
 }
 

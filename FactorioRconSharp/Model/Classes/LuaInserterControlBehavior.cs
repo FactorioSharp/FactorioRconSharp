@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for inserters.
 /// </summary>
 [FactorioRconClass("LuaInserterControlBehavior")]
-public class LuaInserterControlBehavior
+public abstract class LuaInserterControlBehavior: LuaObject
 {
   /// <summary>
   /// `true` if the contents of the inserter hand should be sent to the circuit network
@@ -62,7 +62,7 @@ public class LuaInserterControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

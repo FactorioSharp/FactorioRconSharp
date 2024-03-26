@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A reference to an item and count owned by some external entity.
 /// </summary>
 [FactorioRconClass("LuaItemStack")]
-public class LuaItemStack
+public abstract class LuaItemStack: LuaObject
 {
   /// <summary>
   /// Is this valid for reading? Differs from the usual `valid` in that `valid` will be `true` even if the item stack is blank but the entity that holds it is still valid.
@@ -74,7 +74,7 @@ public class LuaItemStack
   /// Icons of this blueprint item, blueprint book, deconstruction item or upgrade planner. An item that doesn't have icons returns `nil` on read and throws error on write.
   /// </summary>
   [FactorioRconAttribute("blueprint_icons")]
-  public BlueprintSignalIcon[] BlueprintIcons { get; set; }
+  public List<BlueprintSignalIcon> BlueprintIcons { get; set; }
 
   /// <summary>
   /// The snapping grid size in this blueprint item. `nil` if snapping is not enabled.
@@ -128,13 +128,13 @@ public class LuaItemStack
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public OneOf<Literal22550079, Literal3789628, Literal12473332, Literal60613391> PrioritizeInsertionMode { get; set; }
+  public Union12473332 PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
   /// </summary>
   [FactorioRconAttribute("default_icons")]
-  public BlueprintSignalIcon[] DefaultIcons { get; private set; }
+  public List<BlueprintSignalIcon> DefaultIcons { get; private set; }
 
   [FactorioRconAttribute("tags")]
   public Tags Tags { get; set; }
@@ -149,13 +149,13 @@ public class LuaItemStack
   /// The entity filters for this deconstruction item. The attribute is a sparse array with the keys representing the index of the filter. All strings in this array must be entity prototype names that don't have the `"not-deconstructable"` flag set and are either a `cliff` or marked as `minable`.
   /// </summary>
   [FactorioRconAttribute("entity_filters")]
-  public string[] EntityFilters { get; set; }
+  public List<string> EntityFilters { get; set; }
 
   /// <summary>
   /// The tile filters for this deconstruction item. The attribute is a sparse array with the keys representing the index of the filter. All strings in this array must be tile prototype names.
   /// </summary>
   [FactorioRconAttribute("tile_filters")]
-  public string[] TileFilters { get; set; }
+  public List<string> TileFilters { get; set; }
 
   /// <summary>
   /// The blacklist/whitelist entity filter mode for this deconstruction item.
@@ -336,48 +336,48 @@ public class LuaItemStack
   /// Is this blueprint item setup? I.e. is it a non-empty blueprint?
   /// </summary>
   [FactorioRconMethod("is_blueprint_setup")]
-  public bool IsBlueprintSetup() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsBlueprintSetup();
 
   /// <summary>
   /// The entities in this blueprint.
   /// </summary>
   [FactorioRconMethod("get_blueprint_entities")]
-  public BlueprintEntity[]? GetBlueprintEntities() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<BlueprintEntity>? GetBlueprintEntities();
 
   /// <summary>
   /// Set new entities to be a part of this blueprint.
   /// </summary>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("set_blueprint_entities")]
-  public void SetBlueprintEntities(BlueprintEntity[] entities) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBlueprintEntities(List<BlueprintEntity> entities);
 
   /// <summary>
   /// Add ammo to this ammo item.
   /// </summary>
   /// <param name="amount">Lua name: amount</param>
   [FactorioRconMethod("add_ammo")]
-  public void AddAmmo(float amount) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddAmmo(float amount);
 
   /// <summary>
   /// Remove ammo from this ammo item.
   /// </summary>
   /// <param name="amount">Lua name: amount</param>
   [FactorioRconMethod("drain_ammo")]
-  public void DrainAmmo(float amount) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DrainAmmo(float amount);
 
   /// <summary>
   /// Add durability to this tool item.
   /// </summary>
   /// <param name="amount">Lua name: amount</param>
   [FactorioRconMethod("add_durability")]
-  public void AddDurability(double amount) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddDurability(double amount);
 
   /// <summary>
   /// Remove durability from this tool item.
   /// </summary>
   /// <param name="amount">Lua name: amount</param>
   [FactorioRconMethod("drain_durability")]
-  public void DrainDurability(double amount) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DrainDurability(double amount);
 
   /// <summary>
   /// Use the capsule item with the entity as the source, targeting the given position.
@@ -385,74 +385,74 @@ public class LuaItemStack
   /// <param name="entity">Lua name: entity</param>
   /// <param name="targetPosition">Lua name: target_position</param>
   [FactorioRconMethod("use_capsule")]
-  public LuaEntity[] UseCapsule(LuaEntity entity, MapPosition targetPosition) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> UseCapsule(LuaEntity entity, MapPosition targetPosition);
 
   /// <summary>
   /// Would a call to <see cref="LuaItemStack.SetStack" /> succeed?
   /// </summary>
   /// <param name="stack">Lua name: stack</param>
   [FactorioRconMethod("can_set_stack")]
-  public bool CanSetStack(ItemStackIdentification? stack = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanSetStack(ItemStackIdentification? stack = null);
 
   /// <summary>
   /// Set this item stack to another item stack.
   /// </summary>
   /// <param name="stack">Lua name: stack</param>
   [FactorioRconMethod("set_stack")]
-  public bool SetStack(ItemStackIdentification? stack = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetStack(ItemStackIdentification? stack = null);
 
   /// <summary>
   /// Transfers the given item stack into this item stack.
   /// </summary>
   /// <param name="stack">Lua name: stack</param>
   [FactorioRconMethod("transfer_stack")]
-  public bool TransferStack(ItemStackIdentification stack) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool TransferStack(ItemStackIdentification stack);
 
   /// <summary>
   /// Export a supported item (blueprint, blueprint-book, deconstruction-planner, upgrade-planner, item-with-tags) to a string.
   /// </summary>
   [FactorioRconMethod("export_stack")]
-  public string ExportStack() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string ExportStack();
 
   /// <summary>
   /// Import a supported item (blueprint, blueprint-book, deconstruction-planner, upgrade-planner, item-with-tags) from a string.
   /// </summary>
   /// <param name="data">Lua name: data</param>
   [FactorioRconMethod("import_stack")]
-  public int ImportStack(string data) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract int ImportStack(string data);
 
   /// <summary>
   /// Swaps this item stack with the given item stack if allowed.
   /// </summary>
   /// <param name="stack">Lua name: stack</param>
   [FactorioRconMethod("swap_stack")]
-  public bool SwapStack(LuaItemStack stack) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SwapStack(LuaItemStack stack);
 
   /// <summary>
   /// Clear this item stack.
   /// </summary>
   [FactorioRconMethod("clear")]
-  public void Clear() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear();
 
   /// <summary>
   /// A list of the tiles in this blueprint.
   /// </summary>
   [FactorioRconMethod("get_blueprint_tiles")]
-  public Tile[]? GetBlueprintTiles() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<Tile>? GetBlueprintTiles();
 
   /// <summary>
   /// Set specific tiles in this blueprint.
   /// </summary>
   /// <param name="tiles">Lua name: tiles</param>
   [FactorioRconMethod("set_blueprint_tiles")]
-  public void SetBlueprintTiles(Tile[] tiles) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBlueprintTiles(List<Tile> tiles);
 
   /// <summary>
   /// Access the inner inventory of an item.
   /// </summary>
   /// <param name="inventory">Lua name: inventory</param>
   [FactorioRconMethod("get_inventory")]
-  public LuaInventory? GetInventory(InventoryEnum inventory) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetInventory(InventoryEnum inventory);
 
   /// <remarks>
   /// Built entities can be come invalid between the building of the blueprint and the function returning if by_player or raise_built is used and one of those events invalidates the entity.
@@ -466,7 +466,7 @@ public class LuaItemStack
   /// <param name="byPlayer">Lua name: by_player</param>
   /// <param name="raiseBuilt">Lua name: raise_built</param>
   [FactorioRconMethod("build_blueprint")]
-  public LuaEntity[] BuildBlueprint(SurfaceIdentification surface, ForceIdentification force, MapPosition position, bool? forceBuild = null, DirectionEnum? direction = null, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null, bool? raiseBuilt = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> BuildBlueprint(SurfaceIdentification surface, ForceIdentification force, MapPosition position, bool? forceBuild = null, DirectionEnum? direction = null, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null, bool? raiseBuilt = null);
 
   /// <summary>
   /// Deconstruct the given area with this deconstruction item.
@@ -477,7 +477,7 @@ public class LuaItemStack
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   /// <param name="byPlayer">Lua name: by_player</param>
   [FactorioRconMethod("deconstruct_area")]
-  public void DeconstructArea(SurfaceIdentification surface, ForceIdentification force, BoundingBox area, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DeconstructArea(SurfaceIdentification surface, ForceIdentification force, BoundingBox area, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null);
 
   /// <summary>
   /// Cancel deconstruct the given area with this deconstruction item.
@@ -488,7 +488,7 @@ public class LuaItemStack
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   /// <param name="byPlayer">Lua name: by_player</param>
   [FactorioRconMethod("cancel_deconstruct_area")]
-  public void CancelDeconstructArea(SurfaceIdentification surface, ForceIdentification force, BoundingBox area, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CancelDeconstructArea(SurfaceIdentification surface, ForceIdentification force, BoundingBox area, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null);
 
   /// <summary>
   /// Sets up this blueprint using the found blueprintable entities/tiles on the surface.
@@ -503,14 +503,14 @@ public class LuaItemStack
   /// <param name="includeTrains">Lua name: include_trains</param>
   /// <param name="includeFuel">Lua name: include_fuel</param>
   [FactorioRconMethod("create_blueprint")]
-  public Dictionary<uint, LuaEntity> CreateBlueprint(SurfaceIdentification surface, ForceIdentification force, BoundingBox area, bool? alwaysIncludeTiles = null, bool? includeEntities = null, bool? includeModules = null, bool? includeStationNames = null, bool? includeTrains = null, bool? includeFuel = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<uint, LuaEntity> CreateBlueprint(SurfaceIdentification surface, ForceIdentification force, BoundingBox area, bool? alwaysIncludeTiles = null, bool? includeEntities = null, bool? includeModules = null, bool? includeStationNames = null, bool? includeTrains = null, bool? includeFuel = null);
 
   /// <summary>
   /// Gets the tag with the given name or returns `nil` if it doesn't exist.
   /// </summary>
   /// <param name="tagName">Lua name: tag_name</param>
   [FactorioRconMethod("get_tag")]
-  public AnyBasic? GetTag(string tagName) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract AnyBasic? GetTag(string tagName);
 
   /// <summary>
   /// Sets the tag with the given name and value.
@@ -518,27 +518,27 @@ public class LuaItemStack
   /// <param name="tagName">Lua name: tag_name</param>
   /// <param name="tag">Lua name: tag</param>
   [FactorioRconMethod("set_tag")]
-  public void SetTag(string tagName, AnyBasic tag) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetTag(string tagName, AnyBasic tag);
 
   /// <summary>
   /// Removes a tag with the given name.
   /// </summary>
   /// <param name="tag">Lua name: tag</param>
   [FactorioRconMethod("remove_tag")]
-  public bool RemoveTag(string tag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RemoveTag(string tag);
 
   /// <summary>
   /// Clears this blueprint item.
   /// </summary>
   [FactorioRconMethod("clear_blueprint")]
-  public void ClearBlueprint() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearBlueprint();
 
   /// <summary>
   /// Gets the entity filter at the given index for this deconstruction item.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_entity_filter")]
-  public string? GetEntityFilter(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetEntityFilter(uint index);
 
   /// <summary>
   /// Sets the entity filter at the given index for this deconstruction item.
@@ -546,14 +546,14 @@ public class LuaItemStack
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_entity_filter")]
-  public bool SetEntityFilter(uint index, OneOf<string, LuaEntityPrototype, LuaEntity, LuaNil> filter) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetEntityFilter(uint index, Union60613391 filter);
 
   /// <summary>
   /// Gets the tile filter at the given index for this deconstruction item.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_tile_filter")]
-  public string? GetTileFilter(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetTileFilter(uint index);
 
   /// <summary>
   /// Sets the tile filter at the given index for this deconstruction item.
@@ -561,19 +561,19 @@ public class LuaItemStack
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_tile_filter")]
-  public bool SetTileFilter(uint index, OneOf<string, LuaTilePrototype, LuaTile, LuaNil> filter) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetTileFilter(uint index, Union64921669 filter);
 
   /// <summary>
   /// Clears all settings/filters on this deconstruction item resetting it to default values.
   /// </summary>
   [FactorioRconMethod("clear_deconstruction_item")]
-  public void ClearDeconstructionItem() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearDeconstructionItem();
 
   /// <summary>
   /// Clears all settings/filters on this upgrade item resetting it to default values.
   /// </summary>
   [FactorioRconMethod("clear_upgrade_item")]
-  public void ClearUpgradeItem() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearUpgradeItem();
 
   /// <summary>
   /// Gets the filter at the given index for this upgrade item.
@@ -581,7 +581,7 @@ public class LuaItemStack
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public UpgradeFilter GetMapper(uint index, OneOf<Literal64921669, Literal21177779> type) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract UpgradeFilter GetMapper(uint index, Union21177779 type);
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,20 +590,20 @@ public class LuaItemStack
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public void SetMapper(uint index, OneOf<Literal42080192, Literal11268815> type, OneOf<UpgradeFilter, LuaNil> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetMapper(uint index, Union42080192 type, Union11268815 filter);
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.
   /// </summary>
   [FactorioRconMethod("get_blueprint_entity_count")]
-  public uint GetBlueprintEntityCount() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetBlueprintEntityCount();
 
   /// <summary>
   /// Gets the tags for the given blueprint entity index in this blueprint item.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_blueprint_entity_tags")]
-  public Tags GetBlueprintEntityTags(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Tags GetBlueprintEntityTags(uint index);
 
   /// <summary>
   /// Sets the tags on the given blueprint entity index in this blueprint item.
@@ -611,7 +611,7 @@ public class LuaItemStack
   /// <param name="index">Lua name: index</param>
   /// <param name="tags">Lua name: tags</param>
   [FactorioRconMethod("set_blueprint_entity_tags")]
-  public void SetBlueprintEntityTags(uint index, Tags tags) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBlueprintEntityTags(uint index, Tags tags);
 
   /// <summary>
   /// Gets the given tag on the given blueprint entity index in this blueprint item.
@@ -619,7 +619,7 @@ public class LuaItemStack
   /// <param name="index">Lua name: index</param>
   /// <param name="tag">Lua name: tag</param>
   [FactorioRconMethod("get_blueprint_entity_tag")]
-  public AnyBasic? GetBlueprintEntityTag(uint index, string tag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract AnyBasic? GetBlueprintEntityTag(uint index, string tag);
 
   /// <summary>
   /// Sets the given tag on the given blueprint entity index in this blueprint item.
@@ -628,26 +628,31 @@ public class LuaItemStack
   /// <param name="tag">Lua name: tag</param>
   /// <param name="value">Lua name: value</param>
   [FactorioRconMethod("set_blueprint_entity_tag")]
-  public void SetBlueprintEntityTag(uint index, string tag, AnyBasic value) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBlueprintEntityTag(uint index, string tag, AnyBasic value);
 
   /// <summary>
   /// Creates the equipment grid for this item if it doesn't exist and this is an item-with-entity-data that supports equipment grids.
   /// </summary>
   [FactorioRconMethod("create_grid")]
-  public LuaEquipmentGrid CreateGrid() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEquipmentGrid CreateGrid();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union12473332: OneOfBase<Literal35318532, Literal3491672, Literal6216253, Literal63432468>
+{
 }
 
 /// <summary>
 /// Literal value: default
 /// </summary>
-public class Literal22550079
+public abstract class Literal35318532
 {
   /// <summary>
   /// Literal value: default
@@ -660,7 +665,7 @@ public class Literal22550079
 /// <summary>
 /// Literal value: never
 /// </summary>
-public class Literal3789628
+public abstract class Literal3491672
 {
   /// <summary>
   /// Literal value: never
@@ -673,7 +678,7 @@ public class Literal3789628
 /// <summary>
 /// Literal value: always
 /// </summary>
-public class Literal12473332
+public abstract class Literal6216253
 {
   /// <summary>
   /// Literal value: always
@@ -686,7 +691,7 @@ public class Literal12473332
 /// <summary>
 /// Literal value: when-manually-filtered
 /// </summary>
-public class Literal60613391
+public abstract class Literal63432468
 {
   /// <summary>
   /// Literal value: when-manually-filtered
@@ -696,10 +701,15 @@ public class Literal60613391
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union21177779: OneOfBase<Literal57013419, Literal56431129>
+{
+}
+
 /// <summary>
 /// Literal value: from
 /// </summary>
-public class Literal64921669
+public abstract class Literal57013419
 {
   /// <summary>
   /// Literal value: from
@@ -712,7 +722,7 @@ public class Literal64921669
 /// <summary>
 /// Literal value: to
 /// </summary>
-public class Literal21177779
+public abstract class Literal56431129
 {
   /// <summary>
   /// Literal value: to
@@ -722,10 +732,25 @@ public class Literal21177779
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union60613391: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union11268815: OneOfBase<UpgradeFilter, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union42080192: OneOfBase<Literal44203036, Literal55848526>
+{
+}
+
 /// <summary>
 /// Literal value: from
 /// </summary>
-public class Literal42080192
+public abstract class Literal44203036
 {
   /// <summary>
   /// Literal value: from
@@ -738,7 +763,7 @@ public class Literal42080192
 /// <summary>
 /// Literal value: to
 /// </summary>
-public class Literal11268815
+public abstract class Literal55848526
 {
   /// <summary>
   /// Literal value: to
@@ -746,5 +771,10 @@ public class Literal11268815
   [FactorioRconAttribute("to")]
   public static object Value { get; private set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union64921669: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
+{
 }
 

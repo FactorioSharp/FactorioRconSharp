@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AdvancedMapGenSettings")]
-public class AdvancedMapGenSettings
+public abstract class AdvancedMapGenSettings
 {
+  [FactorioRconAttribute("pollution")]
+  public PollutionMapSettings Pollution { get; set; }
+
+  [FactorioRconAttribute("enemy_evolution")]
+  public EnemyEvolutionMapSettings EnemyEvolution { get; set; }
+
+  [FactorioRconAttribute("enemy_expansion")]
+  public EnemyExpansionMapSettings EnemyExpansion { get; set; }
+
+  [FactorioRconAttribute("difficulty_settings")]
+  public DifficultySettings DifficultySettings { get; set; }
+
+}
+
+public abstract class Table3157796
+{
+  [FactorioRconAttribute("pollution")]
+  public PollutionMapSettings Pollution { get; set; }
+
+  [FactorioRconAttribute("enemy_evolution")]
+  public EnemyEvolutionMapSettings EnemyEvolution { get; set; }
+
+  [FactorioRconAttribute("enemy_expansion")]
+  public EnemyExpansionMapSettings EnemyExpansion { get; set; }
+
+  [FactorioRconAttribute("difficulty_settings")]
+  public DifficultySettings DifficultySettings { get; set; }
+
 }
 

@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// An entity prototype may be specified in one of three ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("EntityPrototypeIdentification")]
-public class EntityPrototypeIdentification
+public abstract partial class EntityPrototypeIdentification: OneOfBase<LuaEntity, LuaEntityPrototype, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5141801: OneOfBase<LuaEntity, LuaEntityPrototype, string>
 {
 }
 

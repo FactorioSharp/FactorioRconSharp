@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for constant combinators.
 /// </summary>
 [FactorioRconClass("LuaConstantCombinatorControlBehavior")]
-public class LuaConstantCombinatorControlBehavior
+public abstract class LuaConstantCombinatorControlBehavior: LuaObject
 {
   /// <summary>
   /// This constant combinator's parameters. `nil` if the <see cref="LuaEntityPrototype.ItemSlotCount" /> of the combinator's prototype is `0`.
@@ -22,7 +22,7 @@ public class LuaConstantCombinatorControlBehavior
   /// Writing `nil` clears the combinator's parameters.
   /// </summary>
   [FactorioRconAttribute("parameters")]
-  public ConstantCombinatorParameters[] Parameters { get; set; }
+  public List<ConstantCombinatorParameters> Parameters { get; set; }
 
   /// <summary>
   /// Turns this constant combinator on and off.
@@ -54,20 +54,20 @@ public class LuaConstantCombinatorControlBehavior
   /// <param name="index">Lua name: index</param>
   /// <param name="signal">Lua name: signal</param>
   [FactorioRconMethod("set_signal")]
-  public void SetSignal(uint index, Signal? signal = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetSignal(uint index, Signal? signal = null);
 
   /// <summary>
   /// Gets the signal at the given index. Returned <see cref="Signal" /> will not contain signal if none is set for the index.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_signal")]
-  public Signal GetSignal(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Signal GetSignal(uint index);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

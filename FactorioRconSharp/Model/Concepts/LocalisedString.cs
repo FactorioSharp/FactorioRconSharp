@@ -22,8 +22,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// 
 /// Furthermore, when an API function expects a localised string, it will also accept a regular string (i.e. not a table) which will not be translated, as well as a number, boolean or `nil`, which will be converted to their textual representation.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("LocalisedString")]
-public class LocalisedString
+public abstract partial class LocalisedString: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union52094183: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>
 {
 }
 

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A permission group that defines what players in this group are allowed to do.
 /// </summary>
 [FactorioRconClass("LuaPermissionGroup")]
-public class LuaPermissionGroup
+public abstract class LuaPermissionGroup: LuaObject
 {
   /// <summary>
   /// The name of this group.
@@ -26,7 +26,7 @@ public class LuaPermissionGroup
   /// The players in this group.
   /// </summary>
   [FactorioRconAttribute("players")]
-  public LuaPlayer[] Players { get; private set; }
+  public List<LuaPlayer> Players { get; private set; }
 
   /// <summary>
   /// The group ID
@@ -51,21 +51,21 @@ public class LuaPermissionGroup
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("add_player")]
-  public bool AddPlayer(PlayerIdentification player) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool AddPlayer(PlayerIdentification player);
 
   /// <summary>
   /// Removes the given player from this group.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("remove_player")]
-  public bool RemovePlayer(PlayerIdentification player) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RemovePlayer(PlayerIdentification player);
 
   /// <summary>
   /// Whether this group allows the given action.
   /// </summary>
   /// <param name="action">Lua name: action</param>
   [FactorioRconMethod("allows_action")]
-  public bool AllowsAction(InputActionEnum action) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool AllowsAction(InputActionEnum action);
 
   /// <summary>
   /// Sets whether this group allows the performance the given action.
@@ -73,19 +73,19 @@ public class LuaPermissionGroup
   /// <param name="action">Lua name: action</param>
   /// <param name="allowAction">Lua name: allow_action</param>
   [FactorioRconMethod("set_allows_action")]
-  public bool SetAllowsAction(InputActionEnum action, bool allowAction) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetAllowsAction(InputActionEnum action, bool allowAction);
 
   /// <summary>
   /// Destroys this group.
   /// </summary>
   [FactorioRconMethod("destroy")]
-  public bool Destroy() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool Destroy();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DisplayResolution")]
-public class DisplayResolution
+public abstract class DisplayResolution
 {
+  [FactorioRconAttribute("width")]
+  public uint Width { get; set; }
+
+  [FactorioRconAttribute("height")]
+  public uint Height { get; set; }
+
+}
+
+public abstract class Table8140213
+{
+  [FactorioRconAttribute("width")]
+  public uint Width { get; set; }
+
+  [FactorioRconAttribute("height")]
+  public uint Height { get; set; }
+
 }
 

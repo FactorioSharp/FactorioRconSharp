@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Style of a GUI element. All of the attributes listed here may be `nil` if not available for a particular GUI element.
 /// </summary>
 [FactorioRconClass("LuaStyle")]
-public class LuaStyle
+public abstract class LuaStyle: LuaObject
 {
   /// <summary>
   /// Gui of the <see cref="LuaGuiElement" /> of this style.
@@ -92,13 +92,13 @@ public class LuaStyle
   /// Horizontal align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("horizontal_align")]
-  public OneOf<Literal31050716, Literal48085274, Literal3157796> HorizontalAlign { get; set; }
+  public Union23172240 HorizontalAlign { get; set; }
 
   /// <summary>
   /// Vertical align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("vertical_align")]
-  public OneOf<Literal66313729, Literal50411038, Literal51998856> VerticalAlign { get; set; }
+  public Union52066542 VerticalAlign { get; set; }
 
   [FactorioRconAttribute("font_color")]
   public Color FontColor { get; set; }
@@ -278,19 +278,19 @@ public class LuaStyle
   /// Sets both width and height to the given value. Also accepts an array with two values, setting width to the first and height to the second one.
   /// </summary>
   [FactorioRconAttribute("size")]
-  public OneOf<int, int[]> Size { private get; set; }
+  public Union47413886 Size { private get; set; }
 
   /// <summary>
   /// Sets top/right/bottom/left paddings to this value. An array with two values sets top/bottom padding to the first value and left/right padding to the second value. An array with four values sets top, right, bottom, left padding respectively.
   /// </summary>
   [FactorioRconAttribute("padding")]
-  public OneOf<int, int[]> Padding { private get; set; }
+  public Union9483329 Padding { private get; set; }
 
   /// <summary>
   /// Sets top/right/bottom/left margins to this value. An array with two values sets top/bottom margin to the first value and left/right margin to the second value. An array with four values sets top, right, bottom, left margin respectively.
   /// </summary>
   [FactorioRconAttribute("margin")]
-  public OneOf<int, int[]> Margin { private get; set; }
+  public Union15338853 Margin { private get; set; }
 
   /// <summary>
   /// Space between the table cell contents and border. Sets top/right/bottom/left cell paddings to this value.
@@ -302,13 +302,13 @@ public class LuaStyle
   /// Sets `extra_top/right/bottom/left_padding_when_activated` to this value. An array with two values sets top/bottom padding to the first value and left/right padding to the second value. An array with four values sets top, right, bottom, left padding respectively.
   /// </summary>
   [FactorioRconAttribute("extra_padding_when_activated")]
-  public OneOf<int, int[]> ExtraPaddingWhenActivated { private get; set; }
+  public Union30666649 ExtraPaddingWhenActivated { private get; set; }
 
   /// <summary>
   /// Sets `extra_top/right/bottom/left_margin_when_activated` to this value. An array with two values sets top/bottom margin to the first value and left/right margin to the second value. An array with four values sets top, right, bottom, left margin respectively.
   /// </summary>
   [FactorioRconAttribute("extra_margin_when_activated")]
-  public OneOf<int, int[]> ExtraMarginWhenActivated { private get; set; }
+  public Union60924210 ExtraMarginWhenActivated { private get; set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -326,14 +326,29 @@ public class LuaStyle
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union60924210: OneOfBase<int, List<int>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union30666649: OneOfBase<int, List<int>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union23172240: OneOfBase<Literal39603294, Literal56035750, Literal60056837>
+{
 }
 
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal31050716
+public abstract class Literal39603294
 {
   /// <summary>
   /// Literal value: left
@@ -346,7 +361,7 @@ public class Literal31050716
 /// <summary>
 /// Literal value: center
 /// </summary>
-public class Literal48085274
+public abstract class Literal56035750
 {
   /// <summary>
   /// Literal value: center
@@ -359,7 +374,7 @@ public class Literal48085274
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal3157796
+public abstract class Literal60056837
 {
   /// <summary>
   /// Literal value: right
@@ -369,10 +384,30 @@ public class Literal3157796
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union15338853: OneOfBase<int, List<int>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union9483329: OneOfBase<int, List<int>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union47413886: OneOfBase<int, List<int>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union52066542: OneOfBase<Literal7510476, Literal9452180, Literal14186372>
+{
+}
+
 /// <summary>
 /// Literal value: top
 /// </summary>
-public class Literal66313729
+public abstract class Literal7510476
 {
   /// <summary>
   /// Literal value: top
@@ -385,7 +420,7 @@ public class Literal66313729
 /// <summary>
 /// Literal value: center
 /// </summary>
-public class Literal50411038
+public abstract class Literal9452180
 {
   /// <summary>
   /// Literal value: center
@@ -398,7 +433,7 @@ public class Literal50411038
 /// <summary>
 /// Literal value: bottom
 /// </summary>
-public class Literal51998856
+public abstract class Literal14186372
 {
   /// <summary>
   /// Literal value: bottom

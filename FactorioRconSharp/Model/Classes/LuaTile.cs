@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A single "square" on the map.
 /// </summary>
 [FactorioRconClass("LuaTile")]
-public class LuaTile
+public abstract class LuaTile: LuaObject
 {
   /// <summary>
   /// Prototype name of this tile. E.g. `"sand-3"` or `"grass-2"`.
@@ -60,14 +60,14 @@ public class LuaTile
   /// </summary>
   /// <param name="layer">Lua name: layer</param>
   [FactorioRconMethod("collides_with")]
-  public bool CollidesWith(CollisionMaskLayer layer) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CollidesWith(CollisionMaskLayer layer);
 
   /// <summary>
   /// Is this tile marked for deconstruction?
   /// </summary>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("to_be_deconstructed")]
-  public bool ToBeDeconstructed(ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool ToBeDeconstructed(ForceIdentification? force = null);
 
   /// <summary>
   /// Orders deconstruction of this tile by the given force.
@@ -75,7 +75,7 @@ public class LuaTile
   /// <param name="force">Lua name: force</param>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("order_deconstruction")]
-  public LuaEntity? OrderDeconstruction(ForceIdentification force, PlayerIdentification? player = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? OrderDeconstruction(ForceIdentification force, PlayerIdentification? player = null);
 
   /// <summary>
   /// Cancels deconstruction if it is scheduled, does nothing otherwise.
@@ -83,27 +83,27 @@ public class LuaTile
   /// <param name="force">Lua name: force</param>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("cancel_deconstruction")]
-  public void CancelDeconstruction(ForceIdentification force, PlayerIdentification? player = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CancelDeconstruction(ForceIdentification force, PlayerIdentification? player = null);
 
   /// <summary>
   /// Does this tile have any tile ghosts on it.
   /// </summary>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("has_tile_ghost")]
-  public bool HasTileGhost(ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool HasTileGhost(ForceIdentification? force = null);
 
   /// <summary>
   /// Gets all tile ghosts on this tile.
   /// </summary>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_tile_ghosts")]
-  public LuaTile[] GetTileGhosts(ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaTile> GetTileGhosts(ForceIdentification? force = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

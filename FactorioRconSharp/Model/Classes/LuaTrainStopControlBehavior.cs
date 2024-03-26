@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for train stops.
 /// </summary>
 [FactorioRconClass("LuaTrainStopControlBehavior")]
-public class LuaTrainStopControlBehavior
+public abstract class LuaTrainStopControlBehavior: LuaObject
 {
   /// <summary>
   /// `true` if the train stop should send the circuit network contents to the train to use.
@@ -86,7 +86,7 @@ public class LuaTrainStopControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

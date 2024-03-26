@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of an autoplace control.
 /// </summary>
 [FactorioRconClass("LuaAutoplaceControlPrototype")]
-public class LuaAutoplaceControlPrototype
+public abstract class LuaAutoplaceControlPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -65,7 +65,7 @@ public class LuaAutoplaceControlPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

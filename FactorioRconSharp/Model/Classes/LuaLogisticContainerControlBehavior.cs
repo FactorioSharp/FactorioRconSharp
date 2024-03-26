@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for logistic chests.
 /// </summary>
 [FactorioRconClass("LuaLogisticContainerControlBehavior")]
-public class LuaLogisticContainerControlBehavior
+public abstract class LuaLogisticContainerControlBehavior: LuaObject
 {
   /// <summary>
   /// The circuit mode of operations for the logistic container. Can only be set on containers whose <see cref="LuaEntityPrototype.LogisticMode" /> is set to "requester".
@@ -38,7 +38,7 @@ public class LuaLogisticContainerControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

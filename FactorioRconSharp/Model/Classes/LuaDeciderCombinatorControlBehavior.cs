@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for decider combinators.
 /// </summary>
 [FactorioRconClass("LuaDeciderCombinatorControlBehavior")]
-public class LuaDeciderCombinatorControlBehavior
+public abstract class LuaDeciderCombinatorControlBehavior: LuaObject
 {
   /// <summary>
   /// This decider combinator's parameters.
@@ -38,7 +38,7 @@ public class LuaDeciderCombinatorControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

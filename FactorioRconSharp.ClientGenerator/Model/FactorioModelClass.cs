@@ -9,7 +9,11 @@ public class FactorioModelClass
     public string? LuaName { get; set; }
     public FactorioModelDocumentation? Documentation { get; set; }
 
-    public bool IsStatic { get; set; }
+    public string? BaseClass { get; set; }
+    public string[] Attributes { get; set; } = Array.Empty<string>();
+
+    public bool IsPartial { get; set; }
+
     public bool IsFactorioClass { get; set; }
     public bool IsFactorioConcept { get; set; }
 

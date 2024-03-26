@@ -7,7 +7,6 @@ namespace FactorioRconSharp.ClientGenerator.Model.Compilers;
 public class FactorioModelFileCompiler
 {
     readonly FactorioRuntimeApiSpecification _specification;
-    readonly Dictionary<int, FactorioModelClass> _anonymousTypes = new();
 
     public FactorioModelFileCompiler(FactorioRuntimeApiSpecification specification)
     {
@@ -22,29 +21,8 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of class {clsName}");
         }
 
-        List<FactorioModelClass> nestedClasses = new();
-
-        foreach (FactorioRuntimeTypeSpecification type in FacotrioSpecificationTypeExtractor.ExtractTypes(cls))
-        {
-            switch (type)
-            {
-                case FactorioRuntimeLiteralTypeSpecification literalType:
-                    FactorioModelClass compiledLiteralType = CompileLiteralType(literalType);
-                    _anonymousTypes[literalType.GetHashCode()] = compiledLiteralType;
-                    nestedClasses.Add(compiledLiteralType);
-                    break;
-                case FactorioRuntimeStructTypeSpecification structType:
-                    FactorioModelClass compiledStructType = CompileStructType(structType);
-                    _anonymousTypes[structType.GetHashCode()] = compiledStructType;
-                    nestedClasses.Add(compiledStructType);
-                    break;
-                case FactorioRuntimeTableTypeSpecification tableType:
-                    FactorioModelClass compiledTableType = CompileTableType(tableType);
-                    _anonymousTypes[tableType.GetHashCode()] = compiledTableType;
-                    nestedClasses.Add(compiledTableType);
-                    break;
-            }
-        }
+        IEnumerable<FactorioRuntimeTypeSpecification> types = FactorioSpecificationTypeExtractor.ExtractTypes(cls);
+        IEnumerable<FactorioModelClass> nestedClasses = GenerateNestedTypeClasses(types);
 
         return new FactorioModelFile
         {
@@ -69,6 +47,9 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of concept {conceptName}");
         }
 
+        IEnumerable<FactorioRuntimeTypeSpecification> types = FactorioSpecificationTypeExtractor.ExtractTypes(concept);
+        IEnumerable<FactorioModelClass> nestedClasses = GenerateNestedTypeClasses(types);
+
         return new FactorioModelFile
         {
             Name = concept.Name.ToPascalCase(),
@@ -80,10 +61,7 @@ public class FactorioModelFileCompiler
                 "FactorioRconSharp.Model.Definitions",
                 "OneOf"
             ],
-            Classes =
-            [
-                CompileClass(concept)
-            ]
+            Classes = new[] { CompileClass(concept) }.Concat(nestedClasses).ToArray()
         };
     }
 
@@ -118,6 +96,7 @@ public class FactorioModelFileCompiler
             {
                 Summary = cls.Description, Examples = BuildExamples(cls.Examples)
             },
+            BaseClass = "LuaObject",
             IsFactorioClass = true,
             Properties = cls.Attributes.OrderBy(a => a.Order)
                 .Select(CompileProperty)
@@ -127,8 +106,9 @@ public class FactorioModelFileCompiler
             Methods = cls.Methods.OrderBy(m => m.Order).Select(CompileMethod).ToArray()
         };
 
-    FactorioModelClass CompileClass(FactorioRuntimeConceptSpecification concept) =>
-        new()
+    FactorioModelClass CompileClass(FactorioRuntimeConceptSpecification concept)
+    {
+        FactorioModelClass result = new()
         {
             Name = concept.Name.ToPascalCase(),
             LuaName = concept.Name,
@@ -138,6 +118,44 @@ public class FactorioModelFileCompiler
             },
             IsFactorioConcept = true
         };
+
+        switch (concept.Type)
+        {
+            case FactorioRuntimeSimpleTypeSpecification:
+            case FactorioRuntimeArrayTypeSpecification:
+            case FactorioRuntimeFunctionTypeSpecification:
+            case FactorioRuntimeKeyValueTypeSpecification:
+                string typeName = BuildTypeName(concept.Type);
+                result.BaseClass = typeName;
+                break;
+            case FactorioRuntimeLiteralTypeSpecification literalType:
+                FactorioModelClass compiledLiteralType = CompileLiteralType(literalType);
+                result.Properties = compiledLiteralType.Properties;
+                break;
+            case FactorioRuntimeStructTypeSpecification structType:
+                FactorioModelClass compiledStructType = CompileStructType(structType);
+                result.Properties = compiledStructType.Properties;
+                break;
+            case FactorioRuntimeTableTypeSpecification tableType:
+                FactorioModelClass compiledTableType = CompileTableType(tableType);
+                result.Properties = compiledTableType.Properties;
+                break;
+            case FactorioRuntimeTupleTypeSpecification tupleType:
+                FactorioModelClass compiledTupleType = CompileTupleType(tupleType);
+                result.Properties = compiledTupleType.Properties;
+                break;
+            case FactorioRuntimeUnionTypeSpecification unionType:
+                FactorioModelClass compiledUnionType = CompileUnionType(unionType);
+                result.BaseClass = compiledUnionType.BaseClass;
+                result.IsPartial = compiledUnionType.IsPartial;
+                result.Attributes = compiledUnionType.Attributes;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
+        return result;
+    }
 
     FactorioModelEnum[] CompileEnums(FactorioRuntimeDefinitionSpecification definition, string namePrefix = "", string luaNamePrefix = "")
     {
@@ -293,6 +311,28 @@ public class FactorioModelFileCompiler
         };
     }
 
+    FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
+    {
+        string name = $"Tuple{tupleType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            Properties = tupleType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
+        };
+    }
+
+    FactorioModelClass CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType)
+    {
+        string name = $"Union{unionType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
+            Attributes = ["GenerateOneOf"],
+            IsPartial = true
+        };
+    }
+
     static string? BuildExamples(string[] examples)
     {
         switch (examples.Length)
@@ -331,9 +371,13 @@ public class FactorioModelFileCompiler
                 switch (simpleType.Name)
                 {
                     case "string":
+                        return "string";
+
                     case "float":
+                        return "float";
                     case "double":
-                        return simpleType.Name;
+                    case "number":
+                        return "double";
 
                     case "boolean":
                         return "bool";
@@ -372,13 +416,9 @@ public class FactorioModelFileCompiler
                         return name.Replace('.', '_').ToPascalCase();
                 }
             case FactorioRuntimeArrayTypeSpecification arrayType:
-                return $"{BuildTypeName(arrayType.Value)}[]";
+                return $"List<{BuildTypeName(arrayType.Value)}>";
             case FactorioRuntimeFunctionTypeSpecification functionType:
                 return functionType.Parameters.Length > 0 ? $"Action<{string.Join(", ", functionType.Parameters.Select(BuildTypeName))}>" : "Action";
-            case FactorioRuntimeTupleTypeSpecification tupleType:
-                return $"({string.Join(", ", tupleType.Parameters.OrderBy(p => p.Order).Select(p => BuildTypeName(p.Type, p.Optional)))})";
-            case FactorioRuntimeUnionTypeSpecification unionType:
-                return $"OneOf<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>";
             case FactorioRuntimeKeyValueTypeSpecification keyValueType:
                 return keyValueType.Name switch
                 {
@@ -391,6 +431,10 @@ public class FactorioModelFileCompiler
                 return $"Struct{structType.GetHashCode()}";
             case FactorioRuntimeTableTypeSpecification tableType:
                 return $"Table{tableType.GetHashCode()}";
+            case FactorioRuntimeTupleTypeSpecification tupleType:
+                return $"Tuple{tupleType.GetHashCode()}";
+            case FactorioRuntimeUnionTypeSpecification unionType:
+                return $"Union{unionType.GetHashCode()}";
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
@@ -419,6 +463,31 @@ public class FactorioModelFileCompiler
                 return $"@{symbol}";
             default:
                 return symbol;
+        }
+    }
+
+    IEnumerable<FactorioModelClass> GenerateNestedTypeClasses(IEnumerable<FactorioRuntimeTypeSpecification> types)
+    {
+        foreach (FactorioRuntimeTypeSpecification type in types)
+        {
+            switch (type)
+            {
+                case FactorioRuntimeLiteralTypeSpecification literalType:
+                    yield return CompileLiteralType(literalType);
+                    break;
+                case FactorioRuntimeStructTypeSpecification structType:
+                    yield return CompileStructType(structType);
+                    break;
+                case FactorioRuntimeTableTypeSpecification tableType:
+                    yield return CompileTableType(tableType);
+                    break;
+                case FactorioRuntimeTupleTypeSpecification tupleType:
+                    yield return CompileTupleType(tupleType);
+                    break;
+                case FactorioRuntimeUnionTypeSpecification unionType:
+                    yield return CompileUnionType(unionType);
+                    break;
+            }
         }
     }
 }

@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// A player may be specified in one of three ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("PlayerIdentification")]
-public class PlayerIdentification
+public abstract partial class PlayerIdentification: OneOfBase<uint, string, LuaPlayer>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union61613035: OneOfBase<uint, string, LuaPlayer>
 {
 }
 

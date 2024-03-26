@@ -14,13 +14,13 @@ namespace FactorioRconSharp.Model.Classes;
 /// A collection of units moving and attacking together. The engine creates autonomous unit groups to attack polluted areas. The script can create and control such groups as well. Groups can accept commands in the same manner as regular units.
 /// </summary>
 [FactorioRconClass("LuaUnitGroup")]
-public class LuaUnitGroup
+public abstract class LuaUnitGroup: LuaObject
 {
   /// <summary>
   /// Members of this group.
   /// </summary>
   [FactorioRconAttribute("members")]
-  public LuaEntity[] Members { get; private set; }
+  public List<LuaEntity> Members { get; private set; }
 
   /// <summary>
   /// Group position. This can have different meanings depending on the group state. When the group is gathering, the position is the place of gathering. When the group is moving, the position is the expected position of its members along the path. When the group is attacking, it is the average position of its members.
@@ -90,45 +90,45 @@ public class LuaUnitGroup
   /// </remarks>
   /// <param name="unit">Lua name: unit</param>
   [FactorioRconMethod("add_member")]
-  public void AddMember(LuaEntity unit) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddMember(LuaEntity unit);
 
   /// <summary>
   /// Give this group a command.
   /// </summary>
   /// <param name="command">Lua name: command</param>
   [FactorioRconMethod("set_command")]
-  public void SetCommand(Command command) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetCommand(Command command);
 
   /// <summary>
   /// Give this group a distraction command.
   /// </summary>
   /// <param name="command">Lua name: command</param>
   [FactorioRconMethod("set_distraction_command")]
-  public void SetDistractionCommand(Command command) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetDistractionCommand(Command command);
 
   /// <summary>
   /// Make this group autonomous. Autonomous groups will automatically attack polluted areas. Autonomous groups aren't considered to be <see cref="LuaUnitGroup.IsScriptDriven" />.
   /// </summary>
   [FactorioRconMethod("set_autonomous")]
-  public void SetAutonomous() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetAutonomous();
 
   /// <summary>
   /// Make the group start moving even if some of its members haven't yet arrived.
   /// </summary>
   [FactorioRconMethod("start_moving")]
-  public void StartMoving() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void StartMoving();
 
   /// <summary>
   /// Dissolve this group. Its members won't be destroyed, they will be merely unlinked from this group.
   /// </summary>
   [FactorioRconMethod("destroy")]
-  public void Destroy() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Destroy();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

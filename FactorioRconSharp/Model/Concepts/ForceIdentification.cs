@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// A force may be specified in one of three ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("ForceIdentification")]
-public class ForceIdentification
+public abstract partial class ForceIdentification: OneOfBase<byte, string, LuaForce>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union4075575: OneOfBase<byte, string, LuaForce>
 {
 }
 

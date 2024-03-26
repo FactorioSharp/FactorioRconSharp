@@ -11,7 +11,41 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DragTarget")]
-public class DragTarget
+public abstract class DragTarget
 {
+  [FactorioRconAttribute("target_entity")]
+  public LuaEntity TargetEntity { get; set; }
+
+  /// <summary>
+  /// If the wire being dragged is a circuit wire this is the connector id.
+  /// </summary>
+  [FactorioRconAttribute("target_circuit_id")]
+  public CircuitConnectorIdEnum TargetCircuitId { get; set; }
+
+  /// <summary>
+  /// If the wire being dragged is copper wire this is the wire id.
+  /// </summary>
+  [FactorioRconAttribute("target_wire_id")]
+  public WireConnectionIdEnum TargetWireId { get; set; }
+
+}
+
+public abstract class Table191593
+{
+  [FactorioRconAttribute("target_entity")]
+  public LuaEntity TargetEntity { get; set; }
+
+  /// <summary>
+  /// If the wire being dragged is a circuit wire this is the connector id.
+  /// </summary>
+  [FactorioRconAttribute("target_circuit_id")]
+  public CircuitConnectorIdEnum TargetCircuitId { get; set; }
+
+  /// <summary>
+  /// If the wire being dragged is copper wire this is the wire id.
+  /// </summary>
+  [FactorioRconAttribute("target_wire_id")]
+  public WireConnectionIdEnum TargetWireId { get; set; }
+
 }
 

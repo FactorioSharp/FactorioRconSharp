@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// This is an abstract base class containing the common functionality between <see cref="LuaEntity" />, it must refer to a character entity.
 /// </summary>
 [FactorioRconClass("LuaControl")]
-public class LuaControl
+public abstract class LuaControl: LuaObject
 {
   /// <summary>
   /// The surface this entity is currently on.
@@ -64,7 +64,7 @@ public class LuaControl
   /// This is the GUI that will asked to close (by firing the <see cref="OnGuiClosed)Event" /> when the `Esc` or `E` keys are pressed. If this attribute is not `nil`, and a new GUI is written to it, the existing one will be asked to close.
   /// </summary>
   [FactorioRconAttribute("opened")]
-  public OneOf<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum> Opened { get; set; }
+  public Union64062224 Opened { get; set; }
 
   /// <summary>
   /// Size of the crafting queue.
@@ -82,7 +82,7 @@ public class LuaControl
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table45330878 WalkingState { get; set; }
+  public Table3129430 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public class LuaControl
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table36963566 MiningState { get; set; }
+  public Table65718035 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table3038911 ShootingState { get; set; }
+  public Table37901460 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public class LuaControl
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table25474675 RepairState { get; set; }
+  public Table57733168 RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -136,13 +136,13 @@ public class LuaControl
   /// The current crafting queue items.
   /// </summary>
   [FactorioRconAttribute("crafting_queue")]
-  public CraftingQueueItem[] CraftingQueue { get; private set; }
+  public List<CraftingQueueItem> CraftingQueue { get; private set; }
 
   /// <summary>
   /// The current combat robots following the character.
   /// </summary>
   [FactorioRconAttribute("following_robots")]
-  public LuaEntity[] FollowingRobots { get; private set; }
+  public List<LuaEntity> FollowingRobots { get; private set; }
 
   /// <summary>
   /// When `true` hand crafting is free and instant.
@@ -157,7 +157,7 @@ public class LuaControl
   public double CharacterMiningSpeedModifier { get; set; }
 
   [FactorioRconAttribute("character_additional_mining_categories")]
-  public string[] CharacterAdditionalMiningCategories { get; set; }
+  public List<string> CharacterAdditionalMiningCategories { get; set; }
 
   /// <summary>
   /// Modifies the running speed of this character by the given value as a percentage. Setting the running modifier to `0.5` makes the character run 50% faster. The minimum value of `-1` reduces the movement speed by 100%, resulting in a speed of `0`.
@@ -272,33 +272,33 @@ public class LuaControl
   /// </remarks>
   /// <param name="inventory">Lua name: inventory</param>
   [FactorioRconMethod("get_inventory")]
-  public LuaInventory? GetInventory(InventoryEnum inventory) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetInventory(InventoryEnum inventory);
 
   /// <summary>
   /// The highest index of all inventories this entity can use. Allows iteration over all of them if desired.
   /// </summary>
   [FactorioRconMethod("get_max_inventory_index")]
-  public InventoryEnum GetMaxInventoryIndex() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract InventoryEnum GetMaxInventoryIndex();
 
   /// <summary>
   /// Gets the main inventory for this character or player if this is a character or player.
   /// </summary>
   [FactorioRconMethod("get_main_inventory")]
-  public LuaInventory? GetMainInventory() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetMainInventory();
 
   /// <summary>
   /// Can at least some items be inserted?
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("can_insert")]
-  public bool CanInsert(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanInsert(ItemStackIdentification items);
 
   /// <summary>
   /// Insert items into this entity. This works the same way as inserters or shift-clicking: the "best" inventory is chosen automatically.
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("insert")]
-  public uint Insert(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint Insert(ItemStackIdentification items);
 
   /// <summary>
   /// Create an arrow which points at this entity. This is used in the tutorial. For examples, see `control.lua` in the campaign missions.
@@ -306,46 +306,46 @@ public class LuaControl
   /// <param name="margin">Lua name: margin</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("set_gui_arrow")]
-  public void SetGuiArrow(uint margin, GuiArrowType type) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetGuiArrow(uint margin, GuiArrowType type);
 
   /// <summary>
   /// Removes the arrow created by `set_gui_arrow`.
   /// </summary>
   [FactorioRconMethod("clear_gui_arrow")]
-  public void ClearGuiArrow() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearGuiArrow();
 
   /// <summary>
   /// Get the number of all or some items in this entity.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_item_count")]
-  public uint GetItemCount(string? item = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetItemCount(string? item = null);
 
   /// <summary>
   /// Does this entity have any item inside it?
   /// </summary>
   [FactorioRconMethod("has_items_inside")]
-  public bool HasItemsInside() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool HasItemsInside();
 
   /// <summary>
   /// Can a given entity be opened or accessed?
   /// </summary>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("can_reach_entity")]
-  public bool CanReachEntity(LuaEntity entity) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanReachEntity(LuaEntity entity);
 
   /// <summary>
   /// Remove all items from this entity.
   /// </summary>
   [FactorioRconMethod("clear_items_inside")]
-  public void ClearItemsInside() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearItemsInside();
 
   /// <summary>
   /// Remove items from this entity.
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("remove_item")]
-  public uint RemoveItem(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint RemoveItem(ItemStackIdentification items);
 
   /// <summary>
   /// Teleport the entity to a given position, possibly on another surface.
@@ -359,45 +359,45 @@ public class LuaControl
   /// <param name="surface">Lua name: surface</param>
   /// <param name="raiseTeleported">Lua name: raise_teleported</param>
   [FactorioRconMethod("teleport")]
-  public bool Teleport(MapPosition position, SurfaceIdentification? surface = null, bool? raiseTeleported = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool Teleport(MapPosition position, SurfaceIdentification? surface = null, bool? raiseTeleported = null);
 
   /// <summary>
   /// Select an entity, as if by hovering the mouse above it.
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("update_selected_entity")]
-  public void UpdateSelectedEntity(MapPosition position) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UpdateSelectedEntity(MapPosition position);
 
   /// <summary>
   /// Unselect any selected entity.
   /// </summary>
   [FactorioRconMethod("clear_selected_entity")]
-  public void ClearSelectedEntity() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearSelectedEntity();
 
   /// <summary>
   /// Disable the flashlight.
   /// </summary>
   [FactorioRconMethod("disable_flashlight")]
-  public void DisableFlashlight() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisableFlashlight();
 
   /// <summary>
   /// Enable the flashlight.
   /// </summary>
   [FactorioRconMethod("enable_flashlight")]
-  public void EnableFlashlight() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void EnableFlashlight();
 
   /// <summary>
   /// Is the flashlight enabled.
   /// </summary>
   [FactorioRconMethod("is_flashlight_enabled")]
-  public bool IsFlashlightEnabled() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsFlashlightEnabled();
 
   /// <summary>
   /// Gets the count of the given recipe that can be crafted.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_craftable_count")]
-  public uint GetCraftableCount(OneOf<string, LuaRecipe> recipe) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetCraftableCount(Union4436986 recipe);
 
   /// <summary>
   /// Begins crafting the given count of the given recipe.
@@ -406,7 +406,7 @@ public class LuaControl
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="silent">Lua name: silent</param>
   [FactorioRconMethod("begin_crafting")]
-  public uint BeginCrafting(uint count, OneOf<string, LuaRecipe> recipe, bool? silent = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint BeginCrafting(uint count, Union26067845 recipe, bool? silent = null);
 
   /// <summary>
   /// Cancels crafting the given count of the given crafting queue index.
@@ -414,7 +414,7 @@ public class LuaControl
   /// <param name="index">Lua name: index</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("cancel_crafting")]
-  public void CancelCrafting(uint index, uint count) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CancelCrafting(uint index, uint count);
 
   /// <summary>
   /// Mines the given entity as if this player (or character) mined it.
@@ -422,27 +422,27 @@ public class LuaControl
   /// <param name="entity">Lua name: entity</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("mine_entity")]
-  public bool MineEntity(LuaEntity entity, bool? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool MineEntity(LuaEntity entity, bool? force = null);
 
   /// <summary>
   /// Mines the given tile as if this player (or character) mined it.
   /// </summary>
   /// <param name="tile">Lua name: tile</param>
   [FactorioRconMethod("mine_tile")]
-  public bool MineTile(LuaTile tile) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool MineTile(LuaTile tile);
 
   /// <summary>
   /// When `true` control adapter is a LuaPlayer object, `false` for entities including characters with players.
   /// </summary>
   [FactorioRconMethod("is_player")]
-  public bool IsPlayer() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsPlayer();
 
   /// <summary>
   /// Open the technology GUI and select a given technology.
   /// </summary>
   /// <param name="technology">Lua name: technology</param>
   [FactorioRconMethod("open_technology_gui")]
-  public void OpenTechnologyGui(TechnologyIdentification? technology = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OpenTechnologyGui(TechnologyIdentification? technology = null);
 
   /// <summary>
   /// Sets a personal logistic request and auto-trash slot to the given value.
@@ -453,7 +453,7 @@ public class LuaControl
   /// <param name="slotIndex">Lua name: slot_index</param>
   /// <param name="value">Lua name: value</param>
   [FactorioRconMethod("set_personal_logistic_slot")]
-  public bool SetPersonalLogisticSlot(uint slotIndex, LogisticParameters value) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetPersonalLogisticSlot(uint slotIndex, LogisticParameters value);
 
   /// <summary>
   /// Sets a vehicle logistic request and auto-trash slot to the given value. Only used on `spider-vehicle`.
@@ -461,35 +461,35 @@ public class LuaControl
   /// <param name="slotIndex">Lua name: slot_index</param>
   /// <param name="value">Lua name: value</param>
   [FactorioRconMethod("set_vehicle_logistic_slot")]
-  public bool SetVehicleLogisticSlot(uint slotIndex, LogisticParameters value) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetVehicleLogisticSlot(uint slotIndex, LogisticParameters value);
 
   /// <summary>
   /// Gets the parameters of a personal logistic request and auto-trash slot.
   /// </summary>
   /// <param name="slotIndex">Lua name: slot_index</param>
   [FactorioRconMethod("get_personal_logistic_slot")]
-  public LogisticParameters GetPersonalLogisticSlot(uint slotIndex) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LogisticParameters GetPersonalLogisticSlot(uint slotIndex);
 
   /// <summary>
   /// Gets the parameters of a vehicle logistic request and auto-trash slot. Only used on `spider-vehicle`.
   /// </summary>
   /// <param name="slotIndex">Lua name: slot_index</param>
   [FactorioRconMethod("get_vehicle_logistic_slot")]
-  public LogisticParameters GetVehicleLogisticSlot(uint slotIndex) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LogisticParameters GetVehicleLogisticSlot(uint slotIndex);
 
   /// <remarks>
   /// This will silently fail if personal logistics are not researched yet.
   /// </remarks>
   /// <param name="slotIndex">Lua name: slot_index</param>
   [FactorioRconMethod("clear_personal_logistic_slot")]
-  public void ClearPersonalLogisticSlot(uint slotIndex) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearPersonalLogisticSlot(uint slotIndex);
 
   /// <remarks>
   /// This will silently fail if the vehicle does not use logistics.
   /// </remarks>
   /// <param name="slotIndex">Lua name: slot_index</param>
   [FactorioRconMethod("clear_vehicle_logistic_slot")]
-  public void ClearVehicleLogisticSlot(uint slotIndex) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearVehicleLogisticSlot(uint slotIndex);
 
   /// <summary>
   /// Returns whether the player is holding a blueprint. This takes both blueprint items as well as blueprint records from the blueprint library into account.
@@ -497,23 +497,23 @@ public class LuaControl
   /// Note that both this method and <see cref="LuaControl.GetBlueprintEntities" /> refer to the currently selected blueprint, meaning a blueprint book with a selected blueprint will return the information as well.
   /// </summary>
   [FactorioRconMethod("is_cursor_blueprint")]
-  public bool IsCursorBlueprint() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsCursorBlueprint();
 
   /// <summary>
   /// Gets the entities that are part of the currently selected blueprint, regardless of it being in a blueprint book or picked from the blueprint library.
   /// </summary>
   [FactorioRconMethod("get_blueprint_entities")]
-  public BlueprintEntity[]? GetBlueprintEntities() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<BlueprintEntity>? GetBlueprintEntities();
 
   /// <summary>
   /// Returns whether the player is holding something in the cursor. It takes into account items from the blueprint library, as well as items and ghost cursor.
   /// </summary>
   [FactorioRconMethod("is_cursor_empty")]
-  public bool IsCursorEmpty() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsCursorEmpty();
 
 }
 
-public class Table36963566
+public abstract class Table65718035
 {
   /// <summary>
   /// Whether the player is mining at all.
@@ -529,7 +529,12 @@ public class Table36963566
 
 }
 
-public class Table25474675
+[GenerateOneOf]
+public abstract partial class Union64062224: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
+{
+}
+
+public abstract class Table57733168
 {
   /// <summary>
   /// The current state
@@ -545,7 +550,7 @@ public class Table25474675
 
 }
 
-public class Table3038911
+public abstract class Table37901460
 {
   /// <summary>
   /// The current state
@@ -561,7 +566,7 @@ public class Table3038911
 
 }
 
-public class Table45330878
+public abstract class Table3129430
 {
   /// <summary>
   /// If `false`, the player is currently not walking; otherwise it's going somewhere
@@ -575,5 +580,15 @@ public class Table45330878
   [FactorioRconAttribute("direction")]
   public DirectionEnum Direction { get; set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union26067845: OneOfBase<string, LuaRecipe>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union4436986: OneOfBase<string, LuaRecipe>
+{
 }
 

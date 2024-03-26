@@ -13,8 +13,34 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// Coordinates of a chunk in a <see cref="MapPosition" /> can be translated to a ChunkPosition by dividing the `x`/`y` values by 32.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("ChunkPosition")]
-public class ChunkPosition
+public abstract partial class ChunkPosition: OneOfBase<Table42472704, Table27986180>
 {
+}
+
+[GenerateOneOf]
+public abstract partial class Union1147910: OneOfBase<Table42472704, Table27986180>
+{
+}
+
+public abstract class Table42472704
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
+}
+
+public abstract class Table27986180
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
 }
 

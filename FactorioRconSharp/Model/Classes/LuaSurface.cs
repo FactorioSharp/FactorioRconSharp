@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A "domain" of the world. Surfaces can only be created and deleted through the API. Surfaces are uniquely identified by their name. Every game contains at least the surface "nauvis".
 /// </summary>
 [FactorioRconClass("LuaSurface")]
-public class LuaSurface
+public abstract class LuaSurface: LuaObject
 {
   /// <summary>
   /// The name of this surface. Names are unique among surfaces.
@@ -166,7 +166,7 @@ public class LuaSurface
   /// </remarks>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("get_pollution")]
-  public double GetPollution(MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetPollution(MapPosition position);
 
   /// <summary>
   /// Check for collisions with terrain or other entities.
@@ -179,7 +179,7 @@ public class LuaSurface
   /// <param name="forced">Lua name: forced</param>
   /// <param name="innerName">Lua name: inner_name</param>
   [FactorioRconMethod("can_place_entity")]
-  public bool CanPlaceEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, BuildCheckTypeEnum? buildCheckType = null, bool? forced = null, string? innerName = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanPlaceEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, BuildCheckTypeEnum? buildCheckType = null, bool? forced = null, string? innerName = null);
 
   /// <summary>
   /// If there exists an entity at the given location that can be fast-replaced with the given entity parameters.
@@ -189,7 +189,7 @@ public class LuaSurface
   /// <param name="direction">Lua name: direction</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("can_fast_replace")]
-  public bool CanFastReplace(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanFastReplace(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Find an entity of the given name at the given position. This checks both the exact position and the bounding box of the entity.
@@ -197,7 +197,7 @@ public class LuaSurface
   /// <param name="entity">Lua name: entity</param>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("find_entity")]
-  public LuaEntity? FindEntity(string entity, MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? FindEntity(string entity, MapPosition position);
 
   /// <summary>
   /// Find entities in a given area.
@@ -206,7 +206,7 @@ public class LuaSurface
   /// </summary>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("find_entities")]
-  public LuaEntity[] FindEntities(BoundingBox? area = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> FindEntities(BoundingBox? area = null);
 
   /// <summary>
   /// Find all entities of the given type or name in the given area.
@@ -235,7 +235,7 @@ public class LuaSurface
   /// <param name="hasItemInside">Lua name: has_item_inside</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_entities_filtered")]
-  public LuaEntity[] FindEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, OneOf<string, string[]>? name = null, OneOf<string, string[]>? type = null, OneOf<string, string[]>? ghostName = null, OneOf<string, string[]>? ghostType = null, OneOf<DirectionEnum, DirectionEnum[]>? direction = null, OneOf<CollisionMaskLayer, CollisionMaskLayer[]>? collisionMask = null, OneOf<ForceIdentification, ForceIdentification[]>? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, LuaItemPrototype? hasItemInside = null, bool? invert = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> FindEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union55133730? name = null, Union26682107? type = null, Union47713876? ghostName = null, Union20582959? ghostType = null, Union23372000? direction = null, Union59457647? collisionMask = null, Union52449292? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, LuaItemPrototype? hasItemInside = null, bool? invert = null);
 
   /// <summary>
   /// Find all tiles of the given name in the given area.
@@ -256,7 +256,7 @@ public class LuaSurface
   /// <param name="collisionMask">Lua name: collision_mask</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_tiles_filtered")]
-  public LuaTile[] FindTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, OneOf<string, string[]>? name = null, OneOf<ForceIdentification, ForceIdentification[]>? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, OneOf<CollisionMaskLayer, CollisionMaskLayer[]>? collisionMask = null, bool? invert = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaTile> FindTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union61575639? name = null, Union63706159? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union8317655? collisionMask = null, bool? invert = null);
 
   /// <summary>
   /// Count entities of given type or name in a given area. Works just like <see cref="LuaSurface.FindEntitiesFiltered" />, except this only returns the count. As it doesn't construct all the wrapper objects, this is more efficient if one is only interested in the number of entities.
@@ -279,7 +279,7 @@ public class LuaSurface
   /// <param name="isMilitaryTarget">Lua name: is_military_target</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("count_entities_filtered")]
-  public uint CountEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, OneOf<string, string[]>? name = null, OneOf<string, string[]>? type = null, OneOf<string, string[]>? ghostName = null, OneOf<string, string[]>? ghostType = null, OneOf<DirectionEnum, DirectionEnum[]>? direction = null, OneOf<CollisionMaskLayer, CollisionMaskLayer[]>? collisionMask = null, OneOf<ForceIdentification, ForceIdentification[]>? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, bool? invert = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint CountEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union39317806? name = null, Union45472684? type = null, Union4767743? ghostName = null, Union42188773? ghostType = null, Union17480744? direction = null, Union42807775? collisionMask = null, Union40383808? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, bool? invert = null);
 
   /// <summary>
   /// Count tiles of a given name in a given area. Works just like <see cref="LuaSurface.FindTilesFiltered" />, except this only returns the count. As it doesn't construct all the wrapper objects, this is more efficient if one is only interested in the number of tiles.
@@ -298,7 +298,7 @@ public class LuaSurface
   /// <param name="collisionMask">Lua name: collision_mask</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("count_tiles_filtered")]
-  public uint CountTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, OneOf<string, string[]>? name = null, OneOf<ForceIdentification, ForceIdentification[]>? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, OneOf<CollisionMaskLayer, CollisionMaskLayer[]>? collisionMask = null, bool? invert = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint CountTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union17805896? name = null, Union54838380? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union15754142? collisionMask = null, bool? invert = null);
 
   /// <summary>
   /// Find a non-colliding position within a given radius.
@@ -312,7 +312,7 @@ public class LuaSurface
   /// <param name="precision">Lua name: precision</param>
   /// <param name="forceToTileCenter">Lua name: force_to_tile_center</param>
   [FactorioRconMethod("find_non_colliding_position")]
-  public MapPosition? FindNonCollidingPosition(string name, MapPosition center, double radius, double precision, bool? forceToTileCenter = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract MapPosition? FindNonCollidingPosition(string name, MapPosition center, double radius, double precision, bool? forceToTileCenter = null);
 
   /// <summary>
   /// Find a non-colliding position within a given rectangle.
@@ -322,7 +322,7 @@ public class LuaSurface
   /// <param name="precision">Lua name: precision</param>
   /// <param name="forceToTileCenter">Lua name: force_to_tile_center</param>
   [FactorioRconMethod("find_non_colliding_position_in_box")]
-  public MapPosition? FindNonCollidingPositionInBox(string name, BoundingBox searchSpace, double precision, bool? forceToTileCenter = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract MapPosition? FindNonCollidingPositionInBox(string name, BoundingBox searchSpace, double precision, bool? forceToTileCenter = null);
 
   /// <summary>
   /// Spill items on the ground centered at a given location.
@@ -333,7 +333,7 @@ public class LuaSurface
   /// <param name="force">Lua name: force</param>
   /// <param name="allowBelts">Lua name: allow_belts</param>
   [FactorioRconMethod("spill_item_stack")]
-  public LuaEntity[] SpillItemStack(MapPosition position, ItemStackIdentification items, bool? enableLooted = null, ForceIdentification? force = null, bool? allowBelts = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> SpillItemStack(MapPosition position, ItemStackIdentification items, bool? enableLooted = null, ForceIdentification? force = null, bool? allowBelts = null);
 
   /// <summary>
   /// Find enemy units (entities with type "unit") of a given force within an area.
@@ -345,7 +345,7 @@ public class LuaSurface
   /// <param name="radius">Lua name: radius</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("find_enemy_units")]
-  public LuaEntity[] FindEnemyUnits(MapPosition center, double radius, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> FindEnemyUnits(MapPosition center, double radius, ForceIdentification? force = null);
 
   /// <summary>
   /// Find units (entities with type "unit") of a given force and force condition within a given area.
@@ -357,7 +357,7 @@ public class LuaSurface
   /// <param name="force">Lua name: force</param>
   /// <param name="condition">Lua name: condition</param>
   [FactorioRconMethod("find_units")]
-  public LuaEntity[] FindUnits(BoundingBox area, ForceIdentification force, ForceCondition condition) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> FindUnits(BoundingBox area, ForceIdentification force, ForceCondition condition);
 
   /// <summary>
   /// Find the enemy military target ([military entity](https://wiki.factorio.com/Military_units_and_structures)) closest to the given position.
@@ -366,7 +366,7 @@ public class LuaSurface
   /// <param name="maxDistance">Lua name: max_distance</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("find_nearest_enemy")]
-  public LuaEntity? FindNearestEnemy(MapPosition position, double maxDistance, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? FindNearestEnemy(MapPosition position, double maxDistance, ForceIdentification? force = null);
 
   /// <summary>
   /// Find the enemy entity-with-owner closest to the given position.
@@ -375,7 +375,7 @@ public class LuaSurface
   /// <param name="maxDistance">Lua name: max_distance</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("find_nearest_enemy_entity_with_owner")]
-  public LuaEntity FindNearestEnemyEntityWithOwner(MapPosition position, double maxDistance, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity FindNearestEnemyEntityWithOwner(MapPosition position, double maxDistance, ForceIdentification? force = null);
 
   /// <summary>
   /// Give a command to multiple units. This will automatically select suitable units for the task.
@@ -385,7 +385,7 @@ public class LuaSurface
   /// <param name="force">Lua name: force</param>
   /// <param name="unitSearchDistance">Lua name: unit_search_distance</param>
   [FactorioRconMethod("set_multi_command")]
-  public uint SetMultiCommand(Command command, uint unitCount, ForceIdentification? force = null, uint? unitSearchDistance = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint SetMultiCommand(Command command, uint unitCount, ForceIdentification? force = null, uint? unitSearchDistance = null);
 
   /// <summary>
   /// Create an entity on this surface.
@@ -406,12 +406,12 @@ public class LuaSurface
   /// <param name="moveStuckPlayers">Lua name: move_stuck_players</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("create_entity")]
-  public LuaEntity? CreateEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, OneOf<LuaEntity, MapPosition>? target = null, OneOf<LuaEntity, MapPosition>? source = null, bool? fastReplace = null, PlayerIdentification? player = null, LuaEntity? character = null, bool? spill = null, bool? raiseBuilt = null, bool? createBuildEffectSmoke = null, bool? spawnDecorations = null, bool? moveStuckPlayers = null, LuaItemStack? item = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? CreateEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, Union46032354? target = null, Union25475503? source = null, bool? fastReplace = null, PlayerIdentification? player = null, LuaEntity? character = null, bool? spill = null, bool? raiseBuilt = null, bool? createBuildEffectSmoke = null, bool? spawnDecorations = null, bool? moveStuckPlayers = null, LuaItemStack? item = null);
 
   /// <param name="name">Lua name: name</param>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("create_trivial_smoke")]
-  public void CreateTrivialSmoke(string name, MapPosition position) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CreateTrivialSmoke(string name, MapPosition position);
 
   /// <summary>
   /// Creates a particle at the given location
@@ -423,7 +423,7 @@ public class LuaSurface
   /// <param name="verticalSpeed">Lua name: vertical_speed</param>
   /// <param name="frameSpeed">Lua name: frame_speed</param>
   [FactorioRconMethod("create_particle")]
-  public void CreateParticle(string name, MapPosition position, Vector movement, float height, float verticalSpeed, float frameSpeed) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CreateParticle(string name, MapPosition position, Vector movement, float height, float verticalSpeed, float frameSpeed);
 
   /// <summary>
   /// Create a new unit group at a given position.
@@ -431,7 +431,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("create_unit_group")]
-  public LuaUnitGroup CreateUnitGroup(MapPosition position, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaUnitGroup CreateUnitGroup(MapPosition position, ForceIdentification? force = null);
 
   /// <summary>
   /// Send a group to build a new base.
@@ -443,7 +443,7 @@ public class LuaSurface
   /// <param name="unitCount">Lua name: unit_count</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("build_enemy_base")]
-  public void BuildEnemyBase(MapPosition position, uint unitCount, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void BuildEnemyBase(MapPosition position, uint unitCount, ForceIdentification? force = null);
 
   /// <summary>
   /// Get the tile at a given position. An alternative call signature for this method is passing it a single <see cref="TilePosition" />.
@@ -454,7 +454,7 @@ public class LuaSurface
   /// <param name="x">Lua name: x</param>
   /// <param name="y">Lua name: y</param>
   [FactorioRconMethod("get_tile")]
-  public LuaTile GetTile(int x, int y) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaTile GetTile(int x, int y);
 
   /// <summary>
   /// Set tiles at specified locations. Can automatically correct the edges around modified tiles.
@@ -470,7 +470,7 @@ public class LuaSurface
   /// <param name="removeCollidingDecoratives">Lua name: remove_colliding_decoratives</param>
   /// <param name="raiseEvent">Lua name: raise_event</param>
   [FactorioRconMethod("set_tiles")]
-  public void SetTiles(Tile[] tiles, bool? correctTiles = null, OneOf<bool, Literal41728762>? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetTiles(List<Tile> tiles, bool? correctTiles = null, Union3069544? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null);
 
   /// <summary>
   /// Spawn pollution at the given position.
@@ -478,20 +478,20 @@ public class LuaSurface
   /// <param name="source">Lua name: source</param>
   /// <param name="amount">Lua name: amount</param>
   [FactorioRconMethod("pollute")]
-  public void Pollute(MapPosition source, double amount) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Pollute(MapPosition source, double amount);
 
   /// <summary>
   /// Get an iterator going over every chunk on this surface.
   /// </summary>
   [FactorioRconMethod("get_chunks")]
-  public LuaChunkIterator GetChunks() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaChunkIterator GetChunks();
 
   /// <summary>
   /// Is a given chunk generated?
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("is_chunk_generated")]
-  public bool IsChunkGenerated(ChunkPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsChunkGenerated(ChunkPosition position);
 
   /// <summary>
   /// Request that the game's map generator generate chunks at the given position for the given radius on this surface. If the radius is `0`, then only the chunk at the given position is generated.
@@ -499,13 +499,13 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="radius">Lua name: radius</param>
   [FactorioRconMethod("request_to_generate_chunks")]
-  public void RequestToGenerateChunks(MapPosition position, uint? radius = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RequestToGenerateChunks(MapPosition position, uint? radius = null);
 
   /// <summary>
   /// Blocks and generates all chunks that have been requested using all available threads.
   /// </summary>
   [FactorioRconMethod("force_generate_chunk_requests")]
-  public void ForceGenerateChunkRequests() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ForceGenerateChunkRequests();
 
   /// <summary>
   /// Set generated status of a chunk. Useful when copying chunks.
@@ -513,7 +513,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="status">Lua name: status</param>
   [FactorioRconMethod("set_chunk_generated_status")]
-  public void SetChunkGeneratedStatus(ChunkPosition position, ChunkGeneratedStatusEnum status) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetChunkGeneratedStatus(ChunkPosition position, ChunkGeneratedStatusEnum status);
 
   /// <summary>
   /// Find the logistic network that covers a given position.
@@ -521,7 +521,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("find_logistic_network_by_position")]
-  public LuaLogisticNetwork? FindLogisticNetworkByPosition(MapPosition position, ForceIdentification force) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaLogisticNetwork? FindLogisticNetworkByPosition(MapPosition position, ForceIdentification force);
 
   /// <summary>
   /// Find the logistic network with a cell closest to a given position.
@@ -529,7 +529,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("find_closest_logistic_network_by_position")]
-  public LuaLogisticNetwork? FindClosestLogisticNetworkByPosition(MapPosition position, ForceIdentification force) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaLogisticNetwork? FindClosestLogisticNetworkByPosition(MapPosition position, ForceIdentification force);
 
   /// <summary>
   /// Finds all of the logistics networks whose construction area intersects with the given position.
@@ -537,7 +537,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("find_logistic_networks_by_construction_area")]
-  public LuaLogisticNetwork[] FindLogisticNetworksByConstructionArea(MapPosition position, ForceIdentification force) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaLogisticNetwork> FindLogisticNetworksByConstructionArea(MapPosition position, ForceIdentification force);
 
   /// <summary>
   /// Place a deconstruction request.
@@ -548,7 +548,7 @@ public class LuaSurface
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("deconstruct_area")]
-  public void DeconstructArea(BoundingBox area, ForceIdentification force, PlayerIdentification? player = null, bool? skipFogOfWar = null, LuaItemStack? item = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DeconstructArea(BoundingBox area, ForceIdentification force, PlayerIdentification? player = null, bool? skipFogOfWar = null, LuaItemStack? item = null);
 
   /// <summary>
   /// Cancel a deconstruction order.
@@ -559,7 +559,7 @@ public class LuaSurface
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("cancel_deconstruct_area")]
-  public void CancelDeconstructArea(BoundingBox area, ForceIdentification force, PlayerIdentification? player = null, bool? skipFogOfWar = null, LuaItemStack? item = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CancelDeconstructArea(BoundingBox area, ForceIdentification force, PlayerIdentification? player = null, bool? skipFogOfWar = null, LuaItemStack? item = null);
 
   /// <summary>
   /// Place an upgrade request.
@@ -570,7 +570,7 @@ public class LuaSurface
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("upgrade_area")]
-  public void UpgradeArea(BoundingBox area, ForceIdentification force, LuaItemStack item, PlayerIdentification? player = null, bool? skipFogOfWar = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UpgradeArea(BoundingBox area, ForceIdentification force, LuaItemStack item, PlayerIdentification? player = null, bool? skipFogOfWar = null);
 
   /// <summary>
   /// Cancel a upgrade order.
@@ -581,14 +581,14 @@ public class LuaSurface
   /// <param name="skipFogOfWar">Lua name: skip_fog_of_war</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("cancel_upgrade_area")]
-  public void CancelUpgradeArea(BoundingBox area, ForceIdentification force, PlayerIdentification? player = null, bool? skipFogOfWar = null, LuaItemStack? item = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CancelUpgradeArea(BoundingBox area, ForceIdentification force, PlayerIdentification? player = null, bool? skipFogOfWar = null, LuaItemStack? item = null);
 
   /// <summary>
   /// The hidden tile name.
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("get_hidden_tile")]
-  public string? GetHiddenTile(TilePosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetHiddenTile(TilePosition position);
 
   /// <summary>
   /// Set the hidden tile for the specified position. While during normal gameplay only <see cref="LuaTilePrototype.MineableProperties" /> tiles can become hidden, this method allows any kind of tile to be set as the hidden one.
@@ -596,7 +596,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="tile">Lua name: tile</param>
   [FactorioRconMethod("set_hidden_tile")]
-  public void SetHiddenTile(TilePosition position, OneOf<string, LuaTilePrototype> tile) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetHiddenTile(TilePosition position, Union46464282 tile);
 
   /// <summary>
   /// Gets all tiles of the given types that are connected horizontally or vertically to the given tile position including the given tile position.
@@ -609,11 +609,11 @@ public class LuaSurface
   /// <param name="includeDiagonal">Lua name: include_diagonal</param>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("get_connected_tiles")]
-  public TilePosition[] GetConnectedTiles(TilePosition position, string[] tiles, bool? includeDiagonal = null, BoundingBox? area = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<TilePosition> GetConnectedTiles(TilePosition position, List<string> tiles, bool? includeDiagonal = null, BoundingBox? area = null);
 
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("delete_chunk")]
-  public void DeleteChunk(ChunkPosition position) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DeleteChunk(ChunkPosition position);
 
   /// <summary>
   /// Regenerate autoplacement of some entities on this surface. This can be used to autoplace newly-added entities.
@@ -624,7 +624,7 @@ public class LuaSurface
   /// <param name="entities">Lua name: entities</param>
   /// <param name="chunks">Lua name: chunks</param>
   [FactorioRconMethod("regenerate_entity")]
-  public void RegenerateEntity(OneOf<string, string[]>? entities = null, ChunkPosition[]? chunks = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RegenerateEntity(Union41456853? entities = null, List<ChunkPosition>? chunks = null);
 
   /// <summary>
   /// Regenerate autoplacement of some decoratives on this surface. This can be used to autoplace newly-added decoratives.
@@ -635,7 +635,7 @@ public class LuaSurface
   /// <param name="decoratives">Lua name: decoratives</param>
   /// <param name="chunks">Lua name: chunks</param>
   [FactorioRconMethod("regenerate_decorative")]
-  public void RegenerateDecorative(OneOf<string, string[]>? decoratives = null, ChunkPosition[]? chunks = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RegenerateDecorative(Union57508556? decoratives = null, List<ChunkPosition>? chunks = null);
 
   /// <summary>
   /// Print text to the chat console of all players on this surface.
@@ -646,7 +646,7 @@ public class LuaSurface
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public void Print(LocalisedString message, OneOf<Color, PrintSettings>? printSettings = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Print(LocalisedString message, Union47441805? printSettings = null);
 
   /// <summary>
   /// Removes all decoratives from the given area. If no area and no position are given, then the entire surface is searched.
@@ -661,7 +661,7 @@ public class LuaSurface
   /// <param name="limit">Lua name: limit</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("destroy_decoratives")]
-  public void DestroyDecoratives(BoundingBox? area = null, TilePosition? position = null, OneOf<string, string[], LuaDecorativePrototype, LuaDecorativePrototype[]>? name = null, OneOf<CollisionMaskLayer, CollisionMaskLayer[]>? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DestroyDecoratives(BoundingBox? area = null, TilePosition? position = null, Union10516355? name = null, Union53560841? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
 
   /// <summary>
   /// Adds the given decoratives to the surface.
@@ -672,7 +672,7 @@ public class LuaSurface
   /// <param name="checkCollision">Lua name: check_collision</param>
   /// <param name="decoratives">Lua name: decoratives</param>
   [FactorioRconMethod("create_decoratives")]
-  public void CreateDecoratives(Decorative[] decoratives, bool? checkCollision = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CreateDecoratives(List<Decorative> decoratives, bool? checkCollision = null);
 
   /// <summary>
   /// Find decoratives of a given name in a given area.
@@ -689,17 +689,17 @@ public class LuaSurface
   /// <param name="limit">Lua name: limit</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_decoratives_filtered")]
-  public DecorativeResult[] FindDecorativesFiltered(BoundingBox? area = null, TilePosition? position = null, OneOf<string, string[], LuaDecorativePrototype, LuaDecorativePrototype[]>? name = null, OneOf<CollisionMaskLayer, CollisionMaskLayer[]>? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<DecorativeResult> FindDecorativesFiltered(BoundingBox? area = null, TilePosition? position = null, Union35594062? name = null, Union41911884? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
 
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_trains")]
-  public LuaTrain[] GetTrains(ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaTrain> GetTrains(ForceIdentification? force = null);
 
   /// <summary>
   /// Clears all pollution on this surface.
   /// </summary>
   [FactorioRconMethod("clear_pollution")]
-  public void ClearPollution() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearPollution();
 
   /// <summary>
   /// Play a sound for every player on this surface.
@@ -712,19 +712,19 @@ public class LuaSurface
   /// <param name="volumeModifier">Lua name: volume_modifier</param>
   /// <param name="overrideSoundType">Lua name: override_sound_type</param>
   [FactorioRconMethod("play_sound")]
-  public void PlaySound(SoundPath path, MapPosition? position = null, double? volumeModifier = null, SoundType? overrideSoundType = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PlaySound(SoundPath path, MapPosition? position = null, double? volumeModifier = null, SoundType? overrideSoundType = null);
 
   /// <summary>
   /// Gets the resource amount of all resources on this surface
   /// </summary>
   [FactorioRconMethod("get_resource_counts")]
-  public Dictionary<string, uint> GetResourceCounts() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> GetResourceCounts();
 
   /// <summary>
   /// Gets a random generated chunk position or 0,0 if no chunks have been generated on this surface.
   /// </summary>
   [FactorioRconMethod("get_random_chunk")]
-  public ChunkPosition GetRandomChunk() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ChunkPosition GetRandomChunk();
 
   /// <summary>
   /// Clones the given area.
@@ -744,7 +744,7 @@ public class LuaSurface
   /// <param name="expandMap">Lua name: expand_map</param>
   /// <param name="createBuildEffectSmoke">Lua name: create_build_effect_smoke</param>
   [FactorioRconMethod("clone_area")]
-  public void CloneArea(BoundingBox sourceArea, BoundingBox destinationArea, SurfaceIdentification? destinationSurface = null, ForceIdentification? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? createBuildEffectSmoke = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CloneArea(BoundingBox sourceArea, BoundingBox destinationArea, SurfaceIdentification? destinationSurface = null, ForceIdentification? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? createBuildEffectSmoke = null);
 
   /// <summary>
   /// Clones the given area.
@@ -767,7 +767,7 @@ public class LuaSurface
   /// <param name="manualCollisionMode">Lua name: manual_collision_mode</param>
   /// <param name="createBuildEffectSmoke">Lua name: create_build_effect_smoke</param>
   [FactorioRconMethod("clone_brush")]
-  public void CloneBrush(TilePosition sourceOffset, TilePosition destinationOffset, TilePosition[] sourcePositions, SurfaceIdentification? destinationSurface = null, OneOf<LuaForce, string>? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? manualCollisionMode = null, bool? createBuildEffectSmoke = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CloneBrush(TilePosition sourceOffset, TilePosition destinationOffset, List<TilePosition> sourcePositions, SurfaceIdentification? destinationSurface = null, Union7235849? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? manualCollisionMode = null, bool? createBuildEffectSmoke = null);
 
   /// <summary>
   /// Clones the given entities.
@@ -782,14 +782,14 @@ public class LuaSurface
   /// <param name="snapToGrid">Lua name: snap_to_grid</param>
   /// <param name="createBuildEffectSmoke">Lua name: create_build_effect_smoke</param>
   [FactorioRconMethod("clone_entities")]
-  public void CloneEntities(LuaEntity[] entities, Vector destinationOffset, SurfaceIdentification? destinationSurface = null, ForceIdentification? destinationForce = null, bool? snapToGrid = null, bool? createBuildEffectSmoke = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CloneEntities(List<LuaEntity> entities, Vector destinationOffset, SurfaceIdentification? destinationSurface = null, ForceIdentification? destinationForce = null, bool? snapToGrid = null, bool? createBuildEffectSmoke = null);
 
   /// <summary>
   /// Clears this surface deleting all entities and chunks on it.
   /// </summary>
   /// <param name="ignoreCharacters">Lua name: ignore_characters</param>
   [FactorioRconMethod("clear")]
-  public void Clear(bool? ignoreCharacters = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear(bool? ignoreCharacters = null);
 
   /// <summary>
   /// Generates a path with the specified constraints (as an array of <see cref="LuaEntity.SetCommand" /> instead.
@@ -807,21 +807,21 @@ public class LuaSurface
   /// <param name="pathResolutionModifier">Lua name: path_resolution_modifier</param>
   /// <param name="entityToIgnore">Lua name: entity_to_ignore</param>
   [FactorioRconMethod("request_path")]
-  public uint RequestPath(BoundingBox boundingBox, OneOf<CollisionMaskWithFlags, string[]> collisionMask, MapPosition start, MapPosition goal, ForceIdentification force, double? radius = null, PathfinderFlags? pathfindFlags = null, bool? canOpenGates = null, int? pathResolutionModifier = null, LuaEntity? entityToIgnore = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint RequestPath(BoundingBox boundingBox, Union66399853 collisionMask, MapPosition start, MapPosition goal, ForceIdentification force, double? radius = null, PathfinderFlags? pathfindFlags = null, bool? canOpenGates = null, int? pathResolutionModifier = null, LuaEntity? entityToIgnore = null);
 
   /// <summary>
   /// Gets the script areas that match the given name or if no name is given all areas are returned.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_script_areas")]
-  public ScriptArea[] GetScriptAreas(string? name = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<ScriptArea> GetScriptAreas(string? name = null);
 
   /// <summary>
   /// Gets the first script area by name or id.
   /// </summary>
   /// <param name="key">Lua name: key</param>
   [FactorioRconMethod("get_script_area")]
-  public ScriptArea? GetScriptArea(OneOf<string, uint>? key = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptArea? GetScriptArea(Union40875492? key = null);
 
   /// <summary>
   /// Sets the given script area to the new values.
@@ -829,35 +829,35 @@ public class LuaSurface
   /// <param name="id">Lua name: id</param>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("edit_script_area")]
-  public void EditScriptArea(uint id, ScriptArea area) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void EditScriptArea(uint id, ScriptArea area);
 
   /// <summary>
   /// Adds the given script area.
   /// </summary>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("add_script_area")]
-  public uint AddScriptArea(ScriptArea area) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint AddScriptArea(ScriptArea area);
 
   /// <summary>
   /// Removes the given script area.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("remove_script_area")]
-  public bool RemoveScriptArea(uint id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RemoveScriptArea(uint id);
 
   /// <summary>
   /// Gets the script positions that match the given name or if no name is given all positions are returned.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_script_positions")]
-  public ScriptPosition[] GetScriptPositions(string? name = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<ScriptPosition> GetScriptPositions(string? name = null);
 
   /// <summary>
   /// Gets the first script position by name or id.
   /// </summary>
   /// <param name="key">Lua name: key</param>
   [FactorioRconMethod("get_script_position")]
-  public ScriptPosition? GetScriptPosition(OneOf<string, uint>? key = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptPosition? GetScriptPosition(Union35998227? key = null);
 
   /// <summary>
   /// Sets the given script position to the new values.
@@ -865,33 +865,33 @@ public class LuaSurface
   /// <param name="id">Lua name: id</param>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("edit_script_position")]
-  public void EditScriptPosition(uint id, ScriptPosition area) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void EditScriptPosition(uint id, ScriptPosition area);
 
   /// <summary>
   /// Adds the given script position.
   /// </summary>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("add_script_position")]
-  public uint AddScriptPosition(ScriptPosition area) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint AddScriptPosition(ScriptPosition area);
 
   /// <summary>
   /// Removes the given script position.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("remove_script_position")]
-  public bool RemoveScriptPosition(uint id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RemoveScriptPosition(uint id);
 
   /// <summary>
   /// Gets the map exchange string for the current map generation settings of this surface.
   /// </summary>
   [FactorioRconMethod("get_map_exchange_string")]
-  public string GetMapExchangeString() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string GetMapExchangeString();
 
   /// <summary>
   /// Gets the starting area radius of this surface.
   /// </summary>
   [FactorioRconMethod("get_starting_area_radius")]
-  public double GetStartingAreaRadius() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetStartingAreaRadius();
 
   /// <summary>
   /// Gets the closest entity in the list to this position.
@@ -899,7 +899,7 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("get_closest")]
-  public LuaEntity? GetClosest(MapPosition position, LuaEntity[] entities) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? GetClosest(MapPosition position, List<LuaEntity> entities);
 
   /// <summary>
   /// Gets train stops matching the given filters.
@@ -907,13 +907,13 @@ public class LuaSurface
   /// <param name="name">Lua name: name</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_train_stops")]
-  public LuaEntity[] GetTrainStops(OneOf<string, string[]>? name = null, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetTrainStops(Union56866013? name = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the total amount of pollution on the surface by iterating over all of the chunks containing pollution.
   /// </summary>
   [FactorioRconMethod("get_total_pollution")]
-  public double GetTotalPollution() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetTotalPollution();
 
   /// <summary>
   /// Whether the given entity prototype collides at the given position and direction.
@@ -923,7 +923,7 @@ public class LuaSurface
   /// <param name="useMapGenerationBoundingBox">Lua name: use_map_generation_bounding_box</param>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("entity_prototype_collides")]
-  public bool EntityPrototypeCollides(EntityPrototypeIdentification prototype, MapPosition position, bool useMapGenerationBoundingBox, DirectionEnum? direction = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool EntityPrototypeCollides(EntityPrototypeIdentification prototype, MapPosition position, bool useMapGenerationBoundingBox, DirectionEnum? direction = null);
 
   /// <summary>
   /// Whether the given decorative prototype collides at the given position and direction.
@@ -931,12 +931,12 @@ public class LuaSurface
   /// <param name="prototype">Lua name: prototype</param>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("decorative_prototype_collides")]
-  public bool DecorativePrototypeCollides(string prototype, MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool DecorativePrototypeCollides(string prototype, MapPosition position);
 
   /// <param name="propertyNames">Lua name: property_names</param>
   /// <param name="positions">Lua name: positions</param>
   [FactorioRconMethod("calculate_tile_properties")]
-  public Dictionary<string, double[]> CalculateTileProperties(string[] propertyNames, MapPosition[] positions) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, List<double>> CalculateTileProperties(List<string> propertyNames, List<MapPosition> positions);
 
   /// <summary>
   /// Returns all the military targets (entities with force) on this chunk for the given force.
@@ -944,27 +944,207 @@ public class LuaSurface
   /// <param name="position">Lua name: position</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_entities_with_force")]
-  public LuaEntity[] GetEntitiesWithForce(ChunkPosition position, ForceIdentification force) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetEntitiesWithForce(ChunkPosition position, ForceIdentification force);
 
   /// <summary>
   /// Sets the given area to the checkerboard lab tiles.
   /// </summary>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("build_checkerboard")]
-  public void BuildCheckerboard(BoundingBox area) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void BuildCheckerboard(BoundingBox area);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union7235849: OneOfBase<LuaForce, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union42807775: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union17480744: OneOfBase<DirectionEnum, List<DirectionEnum>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union40383808: OneOfBase<ForceIdentification, List<ForceIdentification>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union4767743: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union42188773: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union39317806: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union45472684: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union15754142: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union54838380: OneOfBase<ForceIdentification, List<ForceIdentification>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union17805896: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union25475503: OneOfBase<LuaEntity, MapPosition>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union46032354: OneOfBase<LuaEntity, MapPosition>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union53560841: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union10516355: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union41911884: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union35594062: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union59457647: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union23372000: OneOfBase<DirectionEnum, List<DirectionEnum>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union52449292: OneOfBase<ForceIdentification, List<ForceIdentification>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union47713876: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union20582959: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union55133730: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union26682107: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union8317655: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union63706159: OneOfBase<ForceIdentification, List<ForceIdentification>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union61575639: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union40875492: OneOfBase<string, uint>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union35998227: OneOfBase<string, uint>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union56866013: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union47441805: OneOfBase<Color, PrintSettings>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union57508556: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union41456853: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union66399853: OneOfBase<CollisionMaskWithFlags, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union46464282: OneOfBase<string, LuaTilePrototype>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union3069544: OneOfBase<bool, Literal23667699>
+{
 }
 
 /// <summary>
 /// Literal value: abort_on_collision
 /// </summary>
-public class Literal41728762
+public abstract class Literal23667699
 {
   /// <summary>
   /// Literal value: abort_on_collision

@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TrainSchedule")]
-public class TrainSchedule
+public abstract class TrainSchedule
 {
+  /// <summary>
+  /// Index of the currently active record
+  /// </summary>
+  [FactorioRconAttribute("current")]
+  public uint Current { get; set; }
+
+  [FactorioRconAttribute("records")]
+  public List<TrainScheduleRecord> Records { get; set; }
+
+}
+
+public abstract class Table15816579
+{
+  /// <summary>
+  /// Index of the currently active record
+  /// </summary>
+  [FactorioRconAttribute("current")]
+  public uint Current { get; set; }
+
+  [FactorioRconAttribute("records")]
+  public List<TrainScheduleRecord> Records { get; set; }
+
 }
 

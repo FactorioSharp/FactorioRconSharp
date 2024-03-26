@@ -14,13 +14,13 @@ namespace FactorioRconSharp.Model.Classes;
 /// A reference to the burner energy source owned by a specific <see cref="LuaEquipment" />.
 /// </summary>
 [FactorioRconClass("LuaBurner")]
-public class LuaBurner
+public abstract class LuaBurner: LuaObject
 {
   /// <summary>
   /// The owner of this burner energy source
   /// </summary>
   [FactorioRconAttribute("owner")]
-  public OneOf<LuaEntity, LuaEquipment> Owner { get; private set; }
+  public Union53710617 Owner { get; private set; }
 
   /// <summary>
   /// The fuel inventory.
@@ -80,7 +80,12 @@ public class LuaBurner
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union53710617: OneOfBase<LuaEntity, LuaEquipment>
+{
 }
 

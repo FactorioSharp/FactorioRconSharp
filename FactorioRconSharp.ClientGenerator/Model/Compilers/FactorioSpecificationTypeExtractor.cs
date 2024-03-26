@@ -2,7 +2,7 @@
 
 namespace FactorioRconSharp.ClientGenerator.Model.Compilers;
 
-public static class FacotrioSpecificationTypeExtractor
+public static class FactorioSpecificationTypeExtractor
 {
     public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(this FactorioRuntimeApiSpecification specification)
     {
@@ -36,15 +36,43 @@ public static class FacotrioSpecificationTypeExtractor
         }
     }
 
-    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeOperatorSpecification op) =>
-        op.Type == null ? Enumerable.Empty<FactorioRuntimeTypeSpecification>() : ExtractTypes(op.Type);
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeOperatorSpecification op)
+    {
+        if (op.Type == null)
+        {
+            yield break;
+        }
+
+        yield return op.Type;
+
+        foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(op.Type))
+        {
+            yield return type;
+        }
+    }
 
     static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodSpecification method) =>
         method.Parameters.SelectMany(ExtractTypes).Concat(method.ReturnValues.SelectMany(ExtractTypes));
 
-    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeParameterSpecification parameter) => ExtractTypes(parameter.Type);
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeParameterSpecification parameter)
+    {
+        yield return parameter.Type;
 
-    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodReturnValueSpecification returnValue) => ExtractTypes(returnValue.Type);
+        foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(parameter.Type))
+        {
+            yield return type;
+        }
+    }
+
+    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodReturnValueSpecification returnValue)
+    {
+        yield return returnValue.Type;
+
+        foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(returnValue.Type))
+        {
+            yield return type;
+        }
+    }
 
     static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeAttributeSpecification attribute)
     {

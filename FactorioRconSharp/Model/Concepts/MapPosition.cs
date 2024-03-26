@@ -15,8 +15,34 @@ namespace FactorioRconSharp.Model.Concepts;
 /// 
 /// The coordinates are saved as a fixed-size 32 bit integer, with 8 bits reserved for decimal precision, meaning the smallest value step is `1/2^8 = 0.00390625` tiles.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("MapPosition")]
-public class MapPosition
+public abstract partial class MapPosition: OneOfBase<Table52818505, Table55341663>
 {
+}
+
+[GenerateOneOf]
+public abstract partial class Union45789204: OneOfBase<Table52818505, Table55341663>
+{
+}
+
+public abstract class Table52818505
+{
+  [FactorioRconAttribute("x")]
+  public double X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public double Y { get; set; }
+
+}
+
+public abstract class Table55341663
+{
+  [FactorioRconAttribute("x")]
+  public double X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public double Y { get; set; }
+
 }
 

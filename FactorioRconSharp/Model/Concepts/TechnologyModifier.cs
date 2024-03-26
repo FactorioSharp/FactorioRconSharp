@@ -14,7 +14,23 @@ namespace FactorioRconSharp.Model.Concepts;
 /// The effect that is applied when a technology is researched. It is a table that contains at least the field `type`.
 /// </summary>
 [FactorioRconConcept("TechnologyModifier")]
-public class TechnologyModifier
+public abstract class TechnologyModifier
 {
+  /// <summary>
+  /// Modifier type. Specifies which of the other fields will be available.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public ModifierType Type { get; set; }
+
+}
+
+public abstract class Table20338027
+{
+  /// <summary>
+  /// Modifier type. Specifies which of the other fields will be available.
+  /// </summary>
+  [FactorioRconAttribute("type")]
+  public ModifierType Type { get; set; }
+
 }
 

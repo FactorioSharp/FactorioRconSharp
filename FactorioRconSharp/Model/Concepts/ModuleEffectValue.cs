@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ModuleEffectValue")]
-public class ModuleEffectValue
+public abstract class ModuleEffectValue
 {
+  /// <summary>
+  /// The percentual increase of the attribute. A value of `0.6` means a 60% increase.
+  /// </summary>
+  [FactorioRconAttribute("bonus")]
+  public float Bonus { get; set; }
+
+}
+
+public abstract class Table64982994
+{
+  /// <summary>
+  /// The percentual increase of the attribute. A value of `0.6` means a 60% increase.
+  /// </summary>
+  [FactorioRconAttribute("bonus")]
+  public float Bonus { get; set; }
+
 }
 

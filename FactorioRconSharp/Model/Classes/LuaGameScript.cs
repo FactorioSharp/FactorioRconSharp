@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Main toplevel type, provides access to most of the API though its members. An instance of LuaGameScript is available as the global object named `game`.
 /// </summary>
 [FactorioRconClass("LuaGameScript")]
-public class LuaGameScript
+public abstract class LuaGameScript: LuaObject
 {
   /// <summary>
   /// This object's name.
@@ -36,7 +36,7 @@ public class LuaGameScript
   /// If only a single player is required, <see cref="LuaGameScript.GetPlayer" /> should be used instead, as it avoids the unnecessary overhead of passing the whole table to Lua.
   /// </summary>
   [FactorioRconAttribute("players")]
-  public LuaCustomTable<OneOf<uint, string>, LuaPlayer> Players { get; private set; }
+  public LuaCustomTable<Union13896890, LuaPlayer> Players { get; private set; }
 
   /// <summary>
   /// The currently active set of map settings. Even though this property is marked as read-only, the members of the dictionary that is returned can be modified mid-game.
@@ -60,7 +60,7 @@ public class LuaGameScript
   /// Get a table of all the forces that currently exist. This sparse table allows you to find forces by indexing it with either their `name` or `index`. Iterating this table with `pairs()` will only iterate the hash part of the table. Iterating with `ipairs()` will not work at all.
   /// </summary>
   [FactorioRconAttribute("forces")]
-  public LuaCustomTable<OneOf<uint, string>, LuaForce> Forces { get; private set; }
+  public LuaCustomTable<Union23399238, LuaForce> Forces { get; private set; }
 
   /// <summary>
   /// A dictionary containing every LuaEntityPrototype indexed by `name`.
@@ -302,7 +302,7 @@ public class LuaGameScript
   /// Get a table of all the surfaces that currently exist. This sparse table allows you to find surfaces by indexing it with either their `name` or `index`. Iterating this table with `pairs()` will only iterate the hash part of the table. Iterating with `ipairs()` will not work at all.
   /// </summary>
   [FactorioRconAttribute("surfaces")]
-  public LuaCustomTable<OneOf<uint, string>, LuaSurface> Surfaces { get; private set; }
+  public LuaCustomTable<Union21621962, LuaSurface> Surfaces { get; private set; }
 
   /// <summary>
   /// The active mods versions. The keys are mod names, the values are the versions.
@@ -316,7 +316,7 @@ public class LuaGameScript
   /// This is primarily useful when you want to do some action against all online players.
   /// </summary>
   [FactorioRconAttribute("connected_players")]
-  public LuaPlayer[] ConnectedPlayers { get; private set; }
+  public List<LuaPlayer> ConnectedPlayers { get; private set; }
 
   [FactorioRconAttribute("permissions")]
   public LuaPermissionGroups Permissions { get; private set; }
@@ -393,20 +393,20 @@ public class LuaGameScript
   /// <param name="canContinue">Lua name: can_continue</param>
   /// <param name="victoriousForce">Lua name: victorious_force</param>
   [FactorioRconMethod("set_game_state")]
-  public void SetGameState(bool? gameFinished = null, bool? playerWon = null, string? nextLevel = null, bool? canContinue = null, ForceIdentification? victoriousForce = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetGameState(bool? gameFinished = null, bool? playerWon = null, string? nextLevel = null, bool? canContinue = null, ForceIdentification? victoriousForce = null);
 
   /// <summary>
   /// Reset scenario state (game_finished, player_won, etc.).
   /// </summary>
   [FactorioRconMethod("reset_game_state")]
-  public void ResetGameState() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ResetGameState();
 
   /// <summary>
   /// Gets an entity by its name tag. Entity name tags can be set in the entity "extra settings" GUI in the map editor.
   /// </summary>
   /// <param name="tag">Lua name: tag</param>
   [FactorioRconMethod("get_entity_by_tag")]
-  public LuaEntity? GetEntityByTag(string tag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? GetEntityByTag(string tag);
 
   /// <summary>
   /// Show an in-game message dialog.
@@ -420,13 +420,13 @@ public class LuaGameScript
   /// <param name="style">Lua name: style</param>
   /// <param name="wrapperFrameStyle">Lua name: wrapper_frame_style</param>
   [FactorioRconMethod("show_message_dialog")]
-  public void ShowMessageDialog(LocalisedString text, string? image = null, GuiArrowSpecification? pointTo = null, string? style = null, string? wrapperFrameStyle = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ShowMessageDialog(LocalisedString text, string? image = null, GuiArrowSpecification? pointTo = null, string? style = null, string? wrapperFrameStyle = null);
 
   /// <summary>
   /// Is this the demo version of Factorio?
   /// </summary>
   [FactorioRconMethod("is_demo")]
-  public bool IsDemo() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsDemo();
 
   /// <summary>
   /// Forces a reload of the scenario script from the original scenario location.
@@ -435,7 +435,7 @@ public class LuaGameScript
   /// This disables the replay if replay is enabled.
   /// </remarks>
   [FactorioRconMethod("reload_script")]
-  public void ReloadScript() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ReloadScript();
 
   /// <summary>
   /// Forces a reload of all mods.
@@ -446,7 +446,7 @@ public class LuaGameScript
   /// This disables the replay if replay is enabled.
   /// </remarks>
   [FactorioRconMethod("reload_mods")]
-  public void ReloadMods() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ReloadMods();
 
   /// <summary>
   /// Saves the current configuration of Atlas to a file. This will result in huge file containing all of the game graphics moved to as small space as possible.
@@ -455,7 +455,7 @@ public class LuaGameScript
   /// Exists mainly for debugging reasons.
   /// </remarks>
   [FactorioRconMethod("save_atlas")]
-  public void SaveAtlas() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SaveAtlas();
 
   /// <summary>
   /// Run internal consistency checks. Allegedly prints any errors it finds.
@@ -464,7 +464,7 @@ public class LuaGameScript
   /// Exists mainly for debugging reasons.
   /// </remarks>
   [FactorioRconMethod("check_consistency")]
-  public void CheckConsistency() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CheckConsistency();
 
   /// <summary>
   /// Regenerate autoplacement of some entities on all surfaces. This can be used to autoplace newly-added entities.
@@ -474,7 +474,7 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("regenerate_entity")]
-  public void RegenerateEntity(OneOf<string, string[]> entities) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RegenerateEntity(Union51408035 entities);
 
   /// <summary>
   /// Take a screenshot of the game and save it to the `script-output` folder, located in the game's [user data directory](https://wiki.factorio.com/User_data_directory). The name of the image file can be specified via the `path` parameter.
@@ -499,13 +499,13 @@ public class LuaGameScript
   /// <param name="waterTick">Lua name: water_tick</param>
   /// <param name="forceRender">Lua name: force_render</param>
   [FactorioRconMethod("take_screenshot")]
-  public void TakeScreenshot(PlayerIdentification? player = null, PlayerIdentification? byPlayer = null, SurfaceIdentification? surface = null, MapPosition? position = null, TilePosition? resolution = null, double? zoom = null, string? path = null, bool? showGui = null, bool? showEntityInfo = null, bool? showCursorBuildingPreview = null, bool? antiAlias = null, int? quality = null, bool? allowInReplay = null, double? daytime = null, uint? waterTick = null, bool? forceRender = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void TakeScreenshot(PlayerIdentification? player = null, PlayerIdentification? byPlayer = null, SurfaceIdentification? surface = null, MapPosition? position = null, TilePosition? resolution = null, double? zoom = null, string? path = null, bool? showGui = null, bool? showEntityInfo = null, bool? showCursorBuildingPreview = null, bool? antiAlias = null, int? quality = null, bool? allowInReplay = null, double? daytime = null, uint? waterTick = null, bool? forceRender = null);
 
   /// <summary>
   /// Forces the screenshot saving system to wait until all queued screenshots have been written to disk.
   /// </summary>
   [FactorioRconMethod("set_wait_for_screenshots_to_finish")]
-  public void SetWaitForScreenshotsToFinish() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetWaitForScreenshotsToFinish();
 
   /// <summary>
   /// Take a screenshot of the technology screen and save it to the `script-output` folder, located in the game's [user data directory](https://wiki.factorio.com/User_data_directory). The name of the image file can be specified via the `path` parameter.
@@ -517,21 +517,21 @@ public class LuaGameScript
   /// <param name="skipDisabled">Lua name: skip_disabled</param>
   /// <param name="quality">Lua name: quality</param>
   [FactorioRconMethod("take_technology_screenshot")]
-  public void TakeTechnologyScreenshot(ForceIdentification? force = null, string? path = null, PlayerIdentification? byPlayer = null, TechnologyIdentification? selectedTechnology = null, bool? skipDisabled = null, int? quality = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void TakeTechnologyScreenshot(ForceIdentification? force = null, string? path = null, PlayerIdentification? byPlayer = null, TechnologyIdentification? selectedTechnology = null, bool? skipDisabled = null, int? quality = null);
 
   /// <summary>
   /// Convert a table to a JSON string
   /// </summary>
   /// <param name="data">Lua name: data</param>
   [FactorioRconMethod("table_to_json")]
-  public string TableToJson(LuaTable data) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string TableToJson(LuaTable data);
 
   /// <summary>
   /// Convert a JSON string to a table.
   /// </summary>
   /// <param name="json">Lua name: json</param>
   [FactorioRconMethod("json_to_table")]
-  public AnyBasic? JsonToTable(string json) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract AnyBasic? JsonToTable(string json);
 
   /// <summary>
   /// Write a file to the `script-output` folder, located in the game's [user data directory](https://wiki.factorio.com/User_data_directory). The name and file extension of the file can be specified via the `filename` parameter.
@@ -541,27 +541,27 @@ public class LuaGameScript
   /// <param name="append">Lua name: append</param>
   /// <param name="forPlayer">Lua name: for_player</param>
   [FactorioRconMethod("write_file")]
-  public void WriteFile(string filename, LocalisedString data, bool? append = null, uint? forPlayer = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void WriteFile(string filename, LocalisedString data, bool? append = null, uint? forPlayer = null);
 
   /// <summary>
   /// Remove a file or directory in the `script-output` folder, located in the game's <see cref="LuaGameScript.WriteFile" />.
   /// </summary>
   /// <param name="path">Lua name: path</param>
   [FactorioRconMethod("remove_path")]
-  public void RemovePath(string path) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RemovePath(string path);
 
   /// <summary>
   /// Remove players who are currently not connected from the map.
   /// </summary>
   /// <param name="players">Lua name: players</param>
   [FactorioRconMethod("remove_offline_players")]
-  public void RemoveOfflinePlayers(PlayerIdentification[]? players = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RemoveOfflinePlayers(List<PlayerIdentification>? players = null);
 
   /// <summary>
   /// Force a CRC check. Tells all peers to calculate their current CRC, which are then compared to each other. If a mismatch is detected, the game desyncs and some peers are forced to reconnect.
   /// </summary>
   [FactorioRconMethod("force_crc")]
-  public void ForceCrc() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ForceCrc();
 
   /// <summary>
   /// Create a new force.
@@ -572,7 +572,7 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("create_force")]
-  public LuaForce CreateForce(string force) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaForce CreateForce(string force);
 
   /// <summary>
   /// Marks two forces to be merged together. All players and entities in the source force will be reassigned to the target force. The source force will then be destroyed. Importantly, this does not merge technologies or bonuses, which are instead retained from the target force.
@@ -584,7 +584,7 @@ public class LuaGameScript
   /// <param name="source">Lua name: source</param>
   /// <param name="destination">Lua name: destination</param>
   [FactorioRconMethod("merge_forces")]
-  public void MergeForces(ForceIdentification source, ForceIdentification destination) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void MergeForces(ForceIdentification source, ForceIdentification destination);
 
   /// <summary>
   /// Create a new surface.
@@ -596,14 +596,14 @@ public class LuaGameScript
   /// <param name="name">Lua name: name</param>
   /// <param name="settings">Lua name: settings</param>
   [FactorioRconMethod("create_surface")]
-  public LuaSurface CreateSurface(string name, MapGenSettings? settings = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaSurface CreateSurface(string name, MapGenSettings? settings = null);
 
   /// <summary>
   /// Instruct the server to save the map. Only actually saves when in multiplayer.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("server_save")]
-  public void ServerSave(string? name = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ServerSave(string? name = null);
 
   /// <summary>
   /// Instruct the game to perform an auto-save.
@@ -613,33 +613,33 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("auto_save")]
-  public void AutoSave(string? name = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AutoSave(string? name = null);
 
   /// <summary>
   /// Deletes the given surface and all entities on it.
   /// </summary>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("delete_surface")]
-  public void DeleteSurface(SurfaceIdentification surface) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DeleteSurface(SurfaceIdentification surface);
 
   /// <summary>
   /// Disables replay saving for the current save file. Once done there's no way to re-enable replay saving for the save file without loading an old save.
   /// </summary>
   [FactorioRconMethod("disable_replay")]
-  public void DisableReplay() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisableReplay();
 
   /// <summary>
   /// Disables tutorial triggers, that unlock new tutorials and show notices about unlocked tutorials.
   /// </summary>
   [FactorioRconMethod("disable_tutorial_triggers")]
-  public void DisableTutorialTriggers() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisableTutorialTriggers();
 
   /// <summary>
   /// Converts the given direction into the string version of the direction.
   /// </summary>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("direction_to_string")]
-  public void DirectionToString(DirectionEnum direction) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DirectionToString(DirectionEnum direction);
 
   /// <summary>
   /// Print text to the chat console all players.
@@ -650,7 +650,7 @@ public class LuaGameScript
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public void Print(LocalisedString message, OneOf<Color, PrintSettings>? printSettings = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Print(LocalisedString message, Union5826912? printSettings = null);
 
   /// <summary>
   /// Creates a deterministic standalone random generator with the given seed or if a seed is not provided the initial map seed is used.
@@ -660,7 +660,7 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="seed">Lua name: seed</param>
   [FactorioRconMethod("create_random_generator")]
-  public LuaRandomGenerator CreateRandomGenerator(uint? seed = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaRandomGenerator CreateRandomGenerator(uint? seed = null);
 
   /// <summary>
   /// Goes over all items, entities, tiles, recipes, technologies among other things and logs if the locale is incorrect.
@@ -669,7 +669,7 @@ public class LuaGameScript
   /// Also prints true/false if called from the console.
   /// </remarks>
   [FactorioRconMethod("check_prototype_translations")]
-  public void CheckPrototypeTranslations() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CheckPrototypeTranslations();
 
   /// <summary>
   /// Play a sound for every player in the game.
@@ -682,21 +682,21 @@ public class LuaGameScript
   /// <param name="volumeModifier">Lua name: volume_modifier</param>
   /// <param name="overrideSoundType">Lua name: override_sound_type</param>
   [FactorioRconMethod("play_sound")]
-  public void PlaySound(SoundPath path, MapPosition? position = null, double? volumeModifier = null, SoundType? overrideSoundType = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PlaySound(SoundPath path, MapPosition? position = null, double? volumeModifier = null, SoundType? overrideSoundType = null);
 
   /// <summary>
   /// Checks if the given SoundPath is valid.
   /// </summary>
   /// <param name="soundPath">Lua name: sound_path</param>
   [FactorioRconMethod("is_valid_sound_path")]
-  public bool IsValidSoundPath(SoundPath soundPath) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsValidSoundPath(SoundPath soundPath);
 
   /// <summary>
   /// Checks if the given SpritePath is valid and contains a loaded sprite. The existence of the image is not checked for paths of type `file`.
   /// </summary>
   /// <param name="spritePath">Lua name: sprite_path</param>
   [FactorioRconMethod("is_valid_sprite_path")]
-  public bool IsValidSpritePath(SpritePath spritePath) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsValidSpritePath(SpritePath spritePath);
 
   /// <summary>
   /// Kicks the given player from this multiplayer game. Does nothing if this is a single player game or if the player running this isn't an admin.
@@ -704,7 +704,7 @@ public class LuaGameScript
   /// <param name="player">Lua name: player</param>
   /// <param name="reason">Lua name: reason</param>
   [FactorioRconMethod("kick_player")]
-  public void KickPlayer(PlayerIdentification player, string? reason = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void KickPlayer(PlayerIdentification player, string? reason = null);
 
   /// <summary>
   /// Bans the given player from this multiplayer game. Does nothing if this is a single player game of if the player running this isn't an admin.
@@ -712,47 +712,47 @@ public class LuaGameScript
   /// <param name="player">Lua name: player</param>
   /// <param name="reason">Lua name: reason</param>
   [FactorioRconMethod("ban_player")]
-  public void BanPlayer(PlayerIdentification player, string? reason = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void BanPlayer(PlayerIdentification player, string? reason = null);
 
   /// <summary>
   /// Unbans the given player from this multiplayer game. Does nothing if this is a single player game of if the player running this isn't an admin.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("unban_player")]
-  public void UnbanPlayer(PlayerIdentification player) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UnbanPlayer(PlayerIdentification player);
 
   /// <summary>
   /// Purges the given players messages from the game. Does nothing if the player running this isn't an admin.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("purge_player")]
-  public void PurgePlayer(PlayerIdentification player) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void PurgePlayer(PlayerIdentification player);
 
   /// <summary>
   /// Mutes the given player. Does nothing if the player running this isn't an admin.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("mute_player")]
-  public void MutePlayer(PlayerIdentification player) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void MutePlayer(PlayerIdentification player);
 
   /// <summary>
   /// Unmutes the given player. Does nothing if the player running this isn't an admin.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("unmute_player")]
-  public void UnmutePlayer(PlayerIdentification player) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UnmutePlayer(PlayerIdentification player);
 
   /// <summary>
   /// Counts how many distinct groups of pipes exist in the world.
   /// </summary>
   [FactorioRconMethod("count_pipe_groups")]
-  public void CountPipeGroups() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CountPipeGroups();
 
   /// <summary>
   /// Whether the save is loaded as a multiplayer map.
   /// </summary>
   [FactorioRconMethod("is_multiplayer")]
-  public bool IsMultiplayer() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsMultiplayer();
 
   /// <summary>
   /// Gets the number of entities that are active (updated each tick).
@@ -762,20 +762,20 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_active_entities_count")]
-  public uint GetActiveEntitiesCount(SurfaceIdentification? surface = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetActiveEntitiesCount(SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Gets the map exchange string for the map generation settings that were used to create this map.
   /// </summary>
   [FactorioRconMethod("get_map_exchange_string")]
-  public string GetMapExchangeString() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string GetMapExchangeString();
 
   /// <summary>
   /// Convert a map exchange string to map gen settings and map settings.
   /// </summary>
   /// <param name="mapExchangeString">Lua name: map_exchange_string</param>
   [FactorioRconMethod("parse_map_exchange_string")]
-  public MapExchangeStringData ParseMapExchangeString(string mapExchangeString) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract MapExchangeStringData ParseMapExchangeString(string mapExchangeString);
 
   /// <summary>
   /// Gets train stops matching the given filters.
@@ -784,14 +784,14 @@ public class LuaGameScript
   /// <param name="surface">Lua name: surface</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_train_stops")]
-  public LuaEntity[] GetTrainStops(OneOf<string, string[]>? name = null, SurfaceIdentification? surface = null, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetTrainStops(Union55256301? name = null, SurfaceIdentification? surface = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the given player or returns `nil` if no player is found.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("get_player")]
-  public LuaPlayer? GetPlayer(OneOf<uint, string> player) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaPlayer? GetPlayer(Union19531649 player);
 
   /// <summary>
   /// Gets the given surface or returns `nil` if no surface is found.
@@ -801,7 +801,7 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_surface")]
-  public LuaSurface? GetSurface(OneOf<uint, string> surface) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaSurface? GetSurface(Union7511460 surface);
 
   /// <summary>
   /// Creates a <see cref="LuaProfiler" />, which is used for measuring script performance.
@@ -811,7 +811,7 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="stopped">Lua name: stopped</param>
   [FactorioRconMethod("create_profiler")]
-  public LuaProfiler CreateProfiler(bool? stopped = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaProfiler CreateProfiler(bool? stopped = null);
 
   /// <summary>
   /// Evaluate an expression, substituting variables as provided. For details on the formula, see [TechnologyPrototype::unit](prototype:TechnologyPrototype::unit).
@@ -819,77 +819,77 @@ public class LuaGameScript
   /// <param name="expression">Lua name: expression</param>
   /// <param name="variables">Lua name: variables</param>
   [FactorioRconMethod("evaluate_expression")]
-  public double EvaluateExpression(string expression, Dictionary<string, double>? variables = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double EvaluateExpression(string expression, Dictionary<string, double>? variables = null);
 
   /// <summary>
   /// Returns a dictionary of all LuaEntityPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_entity_prototypes")]
-  public LuaCustomTable<string, LuaEntityPrototype> GetFilteredEntityPrototypes(EntityPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaEntityPrototype> GetFilteredEntityPrototypes(List<EntityPrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaItemPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_item_prototypes")]
-  public LuaCustomTable<string, LuaItemPrototype> GetFilteredItemPrototypes(ItemPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaItemPrototype> GetFilteredItemPrototypes(List<ItemPrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaEquipmentPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_equipment_prototypes")]
-  public LuaCustomTable<string, LuaEquipmentPrototype> GetFilteredEquipmentPrototypes(EquipmentPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaEquipmentPrototype> GetFilteredEquipmentPrototypes(List<EquipmentPrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaModSettingPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_mod_setting_prototypes")]
-  public LuaCustomTable<string, LuaModSettingPrototype> GetFilteredModSettingPrototypes(ModSettingPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaModSettingPrototype> GetFilteredModSettingPrototypes(List<ModSettingPrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaAchievementPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_achievement_prototypes")]
-  public LuaCustomTable<string, LuaAchievementPrototype> GetFilteredAchievementPrototypes(AchievementPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaAchievementPrototype> GetFilteredAchievementPrototypes(List<AchievementPrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaTilePrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_tile_prototypes")]
-  public LuaCustomTable<string, LuaTilePrototype> GetFilteredTilePrototypes(TilePrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaTilePrototype> GetFilteredTilePrototypes(List<TilePrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaDecorativePrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_decorative_prototypes")]
-  public LuaCustomTable<string, LuaDecorativePrototype> GetFilteredDecorativePrototypes(DecorativePrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaDecorativePrototype> GetFilteredDecorativePrototypes(List<DecorativePrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaFluidPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_fluid_prototypes")]
-  public LuaCustomTable<string, LuaFluidPrototype> GetFilteredFluidPrototypes(FluidPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaFluidPrototype> GetFilteredFluidPrototypes(List<FluidPrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaRecipePrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_recipe_prototypes")]
-  public LuaCustomTable<string, LuaRecipePrototype> GetFilteredRecipePrototypes(RecipePrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaRecipePrototype> GetFilteredRecipePrototypes(List<RecipePrototypeFilter> filters);
 
   /// <summary>
   /// Returns a dictionary of all LuaTechnologyPrototypes that fit the given filters. The prototypes are indexed by `name`.
   /// </summary>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("get_filtered_technology_prototypes")]
-  public LuaCustomTable<string, LuaTechnologyPrototype> GetFilteredTechnologyPrototypes(TechnologyPrototypeFilter[] filters) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCustomTable<string, LuaTechnologyPrototype> GetFilteredTechnologyPrototypes(List<TechnologyPrototypeFilter> filters);
 
   /// <summary>
   /// Creates an inventory that is not owned by any game object. It can be resized later with <see cref="LuaInventory.Resize" />.
@@ -899,7 +899,7 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="size">Lua name: size</param>
   [FactorioRconMethod("create_inventory")]
-  public LuaInventory CreateInventory(ushort size) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory CreateInventory(ushort size);
 
   /// <summary>
   /// Gets the inventories created through <see cref="LuaGameScript.CreateInventory" />
@@ -909,34 +909,34 @@ public class LuaGameScript
   /// </remarks>
   /// <param name="mod">Lua name: mod</param>
   [FactorioRconMethod("get_script_inventories")]
-  public Dictionary<string, LuaInventory[]> GetScriptInventories(string? mod = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, List<LuaInventory>> GetScriptInventories(string? mod = null);
 
   /// <summary>
   /// Resets the amount of time played for this map.
   /// </summary>
   [FactorioRconMethod("reset_time_played")]
-  public void ResetTimePlayed() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ResetTimePlayed();
 
   /// <summary>
   /// Deflates and base64 encodes the given string.
   /// </summary>
   /// <param name="@string">Lua name: string</param>
   [FactorioRconMethod("encode_string")]
-  public string? EncodeString(string @string) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? EncodeString(string @string);
 
   /// <summary>
   /// Base64 decodes and inflates the given string.
   /// </summary>
   /// <param name="@string">Lua name: string</param>
   [FactorioRconMethod("decode_string")]
-  public string? DecodeString(string @string) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? DecodeString(string @string);
 
   /// <summary>
   /// Searches for a train with given ID.
   /// </summary>
   /// <param name="trainId">Lua name: train_id</param>
   [FactorioRconMethod("get_train_by_id")]
-  public LuaTrain? GetTrainById(uint trainId) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaTrain? GetTrainById(uint trainId);
 
   /// <summary>
   /// Direct access to Trains Pathfinder. Allows to search rail paths or querying which stops are accessible
@@ -953,14 +953,64 @@ public class LuaGameScript
   /// <param name="searchDirection">Lua name: search_direction</param>
   /// <param name="stepsLimit">Lua name: steps_limit</param>
   [FactorioRconMethod("request_train_path")]
-  public OneOf<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult> RequestTrainPath(OneOf<TrainStopGoal, RailEnd>[] goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, OneOf<Literal21621962, Literal51408035>? searchDirection = null, uint? stepsLimit = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union38855053 RequestTrainPath(List<Union23522948> goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, Union24219861? searchDirection = null, uint? stepsLimit = null);
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union23399238: OneOfBase<uint, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union13896890: OneOfBase<uint, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union21621962: OneOfBase<uint, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union19531649: OneOfBase<uint, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union7511460: OneOfBase<uint, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union55256301: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5826912: OneOfBase<Color, PrintSettings>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union51408035: OneOfBase<string, List<string>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union23522948: OneOfBase<TrainStopGoal, RailEnd>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union24219861: OneOfBase<Literal10649759, Literal22318356>
+{
 }
 
 /// <summary>
 /// Literal value: respect-movement-direction
 /// </summary>
-public class Literal21621962
+public abstract class Literal10649759
 {
   /// <summary>
   /// Literal value: respect-movement-direction
@@ -973,7 +1023,7 @@ public class Literal21621962
 /// <summary>
 /// Literal value: any-direction-with-locomotives
 /// </summary>
-public class Literal51408035
+public abstract class Literal22318356
 {
   /// <summary>
   /// Literal value: any-direction-with-locomotives
@@ -981,5 +1031,10 @@ public class Literal51408035
   [FactorioRconAttribute("any-direction-with-locomotives")]
   public static object Value { get; private set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union38855053: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
+{
 }
 

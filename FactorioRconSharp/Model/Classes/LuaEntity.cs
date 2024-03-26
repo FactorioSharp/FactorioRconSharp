@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Most functions on LuaEntity also work when the entity is contained in a ghost.
 /// </summary>
 [FactorioRconClass("LuaEntity")]
-public class LuaEntity
+public abstract class LuaEntity: LuaObject
 {
   /// <summary>
   /// Name of the entity prototype. E.g. "inserter" or "filter-inserter".
@@ -198,7 +198,7 @@ public class LuaEntity
   /// The prototype of the entity or tile contained in this ghost.
   /// </summary>
   [FactorioRconAttribute("ghost_prototype")]
-  public OneOf<LuaEntityPrototype, LuaTilePrototype> GhostPrototype { get; private set; }
+  public Union52307948 GhostPrototype { get; private set; }
 
   /// <summary>
   /// Position where the entity puts its stuff.
@@ -276,13 +276,13 @@ public class LuaEntity
   /// - When called on a cliff entity, this is a dictionary of all connections indexed by the connection direction "north", "south", "east", and "west".
   /// </summary>
   [FactorioRconAttribute("neighbours")]
-  public OneOf<Dictionary<string, LuaEntity[]>, LuaEntity[][], LuaEntity> Neighbours { get; private set; }
+  public Union40535505 Neighbours { get; private set; }
 
   /// <summary>
   /// The belt connectable neighbours of this belt connectable entity. Only entities that input to or are outputs of this entity. Does not contain the other end of an underground belt, see <see cref="LuaEntity.Neighbours" /> for that.
   /// </summary>
   [FactorioRconAttribute("belt_neighbours")]
-  public Table5773521 BeltNeighbours { get; private set; }
+  public Table34678979 BeltNeighbours { get; private set; }
 
   /// <summary>
   /// Fluidboxes of this entity.
@@ -387,13 +387,13 @@ public class LuaEntity
   /// Whether this underground belt goes into or out of the ground.
   /// </summary>
   [FactorioRconAttribute("belt_to_ground_type")]
-  public OneOf<Literal41773672, Literal4831898> BeltToGroundType { get; private set; }
+  public Union66166301 BeltToGroundType { get; private set; }
 
   /// <summary>
   /// Whether this loader gets items from or puts item into a container.
   /// </summary>
   [FactorioRconAttribute("loader_type")]
-  public OneOf<Literal3129430, Literal65718035> LoaderType { get; set; }
+  public Union39774547 LoaderType { get; set; }
 
   /// <summary>
   /// Number of rocket parts in the silo.
@@ -449,7 +449,7 @@ public class LuaEntity
   /// Reading this property will return a <see cref="PlayerIdentification" /> can be used when writing.
   /// </summary>
   [FactorioRconAttribute("last_user")]
-  public OneOf<LuaPlayer, PlayerIdentification> LastUser { get; set; }
+  public Union12611187 LastUser { get; set; }
 
   /// <summary>
   /// The buffer size for the electric energy source. `nil` if the entity doesn't have an electric energy source.
@@ -553,19 +553,19 @@ public class LuaEntity
   /// Entities that are directly connected to this entity via the circuit network. `nil` if this entity can't be connected to the circuit network.
   /// </summary>
   [FactorioRconAttribute("circuit_connected_entities")]
-  public Table34361009 CircuitConnectedEntities { get; private set; }
+  public Table30180123 CircuitConnectedEntities { get; private set; }
 
   /// <summary>
   /// The connection definition for entities that are directly connected to this entity via the circuit network. `nil` if this entity can't be connected to the circuit network.
   /// </summary>
   [FactorioRconAttribute("circuit_connection_definitions")]
-  public CircuitConnectionDefinition[] CircuitConnectionDefinitions { get; private set; }
+  public List<CircuitConnectionDefinition> CircuitConnectionDefinitions { get; private set; }
 
   /// <summary>
   /// The connection definition for entities that are directly connected to this entity via copper cables.
   /// </summary>
   [FactorioRconAttribute("copper_connection_definitions")]
-  public CopperConnectionDefinition[] CopperConnectionDefinitions { get; private set; }
+  public List<CopperConnectionDefinition> CopperConnectionDefinitions { get; private set; }
 
   /// <summary>
   /// The index of the configured request with the highest index for this entity. This means 0 if no requests are set and e.g. 20 if the 20th request slot is configured.
@@ -655,7 +655,7 @@ public class LuaEntity
   /// The sticker entities attached to this entity, if any.
   /// </summary>
   [FactorioRconAttribute("stickers")]
-  public LuaEntity[] Stickers { get; private set; }
+  public List<LuaEntity> Stickers { get; private set; }
 
   /// <summary>
   /// The entity this sticker is sticked to.
@@ -667,7 +667,7 @@ public class LuaEntity
   /// The vehicle modifiers applied to this entity through the attached stickers.
   /// </summary>
   [FactorioRconAttribute("sticker_vehicle_modifiers")]
-  public Table23737571 StickerVehicleModifiers { get; private set; }
+  public Table2808346 StickerVehicleModifiers { get; private set; }
 
   [FactorioRconAttribute("parameters")]
   public ProgrammableSpeakerParameters Parameters { get; set; }
@@ -718,7 +718,7 @@ public class LuaEntity
   /// The units associated with this spawner entity.
   /// </summary>
   [FactorioRconAttribute("units")]
-  public LuaEntity[] Units { get; private set; }
+  public List<LuaEntity> Units { get; private set; }
 
   /// <summary>
   /// The state of this power switch.
@@ -742,7 +742,7 @@ public class LuaEntity
   /// The filters for this infinity container.
   /// </summary>
   [FactorioRconAttribute("infinity_container_filters")]
-  public InfinityInventoryFilter[] InfinityContainerFilters { get; set; }
+  public List<InfinityInventoryFilter> InfinityContainerFilters { get; set; }
 
   /// <summary>
   /// Whether items not included in this infinity container filters should be removed from the container.
@@ -776,7 +776,7 @@ public class LuaEntity
   /// Reading this property will return a <see cref="PlayerIdentification" /> can be used when writing.
   /// </summary>
   [FactorioRconAttribute("associated_player")]
-  public OneOf<LuaPlayer, PlayerIdentification> AssociatedPlayer { get; set; }
+  public Union14333193 AssociatedPlayer { get; set; }
 
   /// <summary>
   /// The last tick this character entity was attacked.
@@ -800,19 +800,19 @@ public class LuaEntity
   /// The filter mode for this filter inserter. `nil` if this inserter doesn't use filters.
   /// </summary>
   [FactorioRconAttribute("inserter_filter_mode")]
-  public OneOf<Literal50492551, Literal53710617> InserterFilterMode { get; set; }
+  public Union13009416 InserterFilterMode { get; set; }
 
   /// <summary>
   /// The input priority for this splitter.
   /// </summary>
   [FactorioRconAttribute("splitter_input_priority")]
-  public OneOf<Literal37901460, Literal57733168, Literal4436986> SplitterInputPriority { get; set; }
+  public Union41728762 SplitterInputPriority { get; set; }
 
   /// <summary>
   /// The output priority for this splitter.
   /// </summary>
   [FactorioRconAttribute("splitter_output_priority")]
-  public OneOf<Literal26067845, Literal10553853, Literal20304321> SplitterOutputPriority { get; set; }
+  public Union2174563 SplitterOutputPriority { get; set; }
 
   /// <summary>
   /// Whether this land mine is armed.
@@ -892,13 +892,13 @@ public class LuaEntity
   /// Reading this property will return a <see cref="PlayerIdentification" /> can be used when writing.
   /// </summary>
   [FactorioRconAttribute("render_player")]
-  public OneOf<LuaPlayer, PlayerIdentification> RenderPlayer { get; set; }
+  public Union63062333 RenderPlayer { get; set; }
 
   /// <summary>
   /// The forces that this `simple-entity-with-owner`, `simple-entity-with-force`, or `flying-text` is visible to. `nil` or an empty array when this entity is rendered for all forces.
   /// </summary>
   [FactorioRconAttribute("render_to_forces")]
-  public ForceIdentification[] RenderToForces { get; set; }
+  public List<ForceIdentification> RenderToForces { get; set; }
 
   /// <summary>
   /// The rail target of this pump, if any.
@@ -994,7 +994,7 @@ public class LuaEntity
   /// The queued destination positions of spidertron's autopilot.
   /// </summary>
   [FactorioRconAttribute("autopilot_destinations")]
-  public MapPosition[] AutopilotDestinations { get; private set; }
+  public List<MapPosition> AutopilotDestinations { get; private set; }
 
   /// <summary>
   /// Amount of trains related to this particular train stop. Includes train stopped at this train stop (until it finds a path to next target) and trains having this train stop as goal or waypoint.
@@ -1060,7 +1060,7 @@ public class LuaEntity
   /// Type of linked belt. Changing type will also flip direction so the belt is out of the same side.
   /// </summary>
   [FactorioRconAttribute("linked_belt_type")]
-  public OneOf<Literal54181145, Literal64062224> LinkedBeltType { get; set; }
+  public Union16868352 LinkedBeltType { get; set; }
 
   /// <summary>
   /// Neighbour to which this linked belt is connected to, if any.
@@ -1108,7 +1108,7 @@ public class LuaEntity
   /// Gives what is the current shape of a transport-belt.
   /// </summary>
   [FactorioRconAttribute("belt_shape")]
-  public OneOf<Literal54135081, Literal63094882, Literal49924125> BeltShape { get; private set; }
+  public Union19420176 BeltShape { get; private set; }
 
   /// <summary>
   /// Returns a <see cref="LuaGameScript.Print" /> it will ping the location of the entity.
@@ -1132,25 +1132,25 @@ public class LuaEntity
   /// Gets the entity's output inventory if it has one.
   /// </summary>
   [FactorioRconMethod("get_output_inventory")]
-  public LuaInventory? GetOutputInventory() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetOutputInventory();
 
   /// <summary>
   /// Inventory for storing modules of this entity; `nil` if this entity has no module inventory.
   /// </summary>
   [FactorioRconMethod("get_module_inventory")]
-  public LuaInventory? GetModuleInventory() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetModuleInventory();
 
   /// <summary>
   /// The fuel inventory for this entity or `nil` if this entity doesn't have a fuel inventory.
   /// </summary>
   [FactorioRconMethod("get_fuel_inventory")]
-  public LuaInventory? GetFuelInventory() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetFuelInventory();
 
   /// <summary>
   /// The burnt result inventory for this entity or `nil` if this entity doesn't have a burnt result inventory.
   /// </summary>
   [FactorioRconMethod("get_burnt_result_inventory")]
-  public LuaInventory? GetBurntResultInventory() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaInventory? GetBurntResultInventory();
 
   /// <summary>
   /// Damages the entity.
@@ -1160,13 +1160,13 @@ public class LuaEntity
   /// <param name="type">Lua name: type</param>
   /// <param name="dealer">Lua name: dealer</param>
   [FactorioRconMethod("damage")]
-  public float Damage(float damage, ForceIdentification force, string? type = null, LuaEntity? dealer = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float Damage(float damage, ForceIdentification force, string? type = null, LuaEntity? dealer = null);
 
   /// <summary>
   /// Whether the entity can be destroyed
   /// </summary>
   [FactorioRconMethod("can_be_destroyed")]
-  public bool CanBeDestroyed() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanBeDestroyed();
 
   /// <summary>
   /// Destroys the entity.
@@ -1177,27 +1177,27 @@ public class LuaEntity
   /// <param name="doCliffCorrection">Lua name: do_cliff_correction</param>
   /// <param name="raiseDestroy">Lua name: raise_destroy</param>
   [FactorioRconMethod("destroy")]
-  public bool Destroy(bool? doCliffCorrection = null, bool? raiseDestroy = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool Destroy(bool? doCliffCorrection = null, bool? raiseDestroy = null);
 
   /// <summary>
   /// Give the entity a command.
   /// </summary>
   /// <param name="command">Lua name: command</param>
   [FactorioRconMethod("set_command")]
-  public void SetCommand(Command command) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetCommand(Command command);
 
   /// <summary>
   /// Give the entity a distraction command.
   /// </summary>
   /// <param name="command">Lua name: command</param>
   [FactorioRconMethod("set_distraction_command")]
-  public void SetDistractionCommand(Command command) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetDistractionCommand(Command command);
 
   /// <summary>
   /// Has this unit been assigned a command?
   /// </summary>
   [FactorioRconMethod("has_command")]
-  public bool HasCommand() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool HasCommand();
 
   /// <summary>
   /// Immediately kills the entity. Does nothing if the entity doesn't have health.
@@ -1207,7 +1207,7 @@ public class LuaEntity
   /// <param name="force">Lua name: force</param>
   /// <param name="cause">Lua name: cause</param>
   [FactorioRconMethod("die")]
-  public bool Die(ForceIdentification? force = null, LuaEntity? cause = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool Die(ForceIdentification? force = null, LuaEntity? cause = null);
 
   /// <summary>
   /// Test whether this entity's prototype has a certain flag set.
@@ -1217,21 +1217,21 @@ public class LuaEntity
   /// </remarks>
   /// <param name="flag">Lua name: flag</param>
   [FactorioRconMethod("has_flag")]
-  public bool HasFlag(EntityPrototypeFlag flag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool HasFlag(EntityPrototypeFlag flag);
 
   /// <summary>
   /// Same as <see cref="LuaEntity.HasFlag" />, but targets the inner entity on a entity ghost.
   /// </summary>
   /// <param name="flag">Lua name: flag</param>
   [FactorioRconMethod("ghost_has_flag")]
-  public bool GhostHasFlag(EntityPrototypeFlag flag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GhostHasFlag(EntityPrototypeFlag flag);
 
   /// <summary>
   /// Offer a thing on the market.
   /// </summary>
   /// <param name="offer">Lua name: offer</param>
   [FactorioRconMethod("add_market_item")]
-  public void AddMarketItem(Offer offer) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddMarketItem(Offer offer);
 
   /// <summary>
   /// Remove an offer from a market.
@@ -1241,19 +1241,19 @@ public class LuaEntity
   /// </remarks>
   /// <param name="offer">Lua name: offer</param>
   [FactorioRconMethod("remove_market_item")]
-  public bool RemoveMarketItem(uint offer) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool RemoveMarketItem(uint offer);
 
   /// <summary>
   /// Get all offers in a market as an array.
   /// </summary>
   [FactorioRconMethod("get_market_items")]
-  public Offer[] GetMarketItems() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<Offer> GetMarketItems();
 
   /// <summary>
   /// Removes all offers from a market.
   /// </summary>
   [FactorioRconMethod("clear_market_items")]
-  public void ClearMarketItems() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearMarketItems();
 
   /// <summary>
   /// Connect two devices with a circuit wire or copper cable. Depending on which type of connection should be made, there are different procedures:
@@ -1263,7 +1263,7 @@ public class LuaEntity
   /// </summary>
   /// <param name="target">Lua name: target</param>
   [FactorioRconMethod("connect_neighbour")]
-  public bool ConnectNeighbour(OneOf<LuaEntity, WireConnectionDefinition> target) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool ConnectNeighbour(Union26314214 target);
 
   /// <summary>
   /// Disconnect circuit wires or copper cables between devices. Depending on which type of connection should be cut, there are different procedures:
@@ -1275,7 +1275,7 @@ public class LuaEntity
   /// </summary>
   /// <param name="target">Lua name: target</param>
   [FactorioRconMethod("disconnect_neighbour")]
-  public void DisconnectNeighbour(OneOf<WireTypeEnum, LuaEntity, WireConnectionDefinition>? target = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisconnectNeighbour(Union24914721? target = null);
 
   /// <summary>
   /// Sets the entity to be deconstructed by construction robots.
@@ -1283,7 +1283,7 @@ public class LuaEntity
   /// <param name="force">Lua name: force</param>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("order_deconstruction")]
-  public bool OrderDeconstruction(ForceIdentification force, PlayerIdentification? player = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool OrderDeconstruction(ForceIdentification force, PlayerIdentification? player = null);
 
   /// <summary>
   /// Cancels deconstruction if it is scheduled, does nothing otherwise.
@@ -1291,13 +1291,13 @@ public class LuaEntity
   /// <param name="force">Lua name: force</param>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("cancel_deconstruction")]
-  public void CancelDeconstruction(ForceIdentification force, PlayerIdentification? player = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CancelDeconstruction(ForceIdentification force, PlayerIdentification? player = null);
 
   /// <summary>
   /// Is this entity marked for deconstruction?
   /// </summary>
   [FactorioRconMethod("to_be_deconstructed")]
-  public bool ToBeDeconstructed() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool ToBeDeconstructed();
 
   /// <summary>
   /// Sets the entity to be upgraded by construction robots.
@@ -1307,7 +1307,7 @@ public class LuaEntity
   /// <param name="player">Lua name: player</param>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("order_upgrade")]
-  public bool OrderUpgrade(ForceIdentification force, EntityPrototypeIdentification target, PlayerIdentification? player = null, DirectionEnum? direction = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool OrderUpgrade(ForceIdentification force, EntityPrototypeIdentification target, PlayerIdentification? player = null, DirectionEnum? direction = null);
 
   /// <summary>
   /// Cancels upgrade if it is scheduled, does nothing otherwise.
@@ -1315,13 +1315,13 @@ public class LuaEntity
   /// <param name="force">Lua name: force</param>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("cancel_upgrade")]
-  public bool CancelUpgrade(ForceIdentification force, PlayerIdentification? player = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CancelUpgrade(ForceIdentification force, PlayerIdentification? player = null);
 
   /// <summary>
   /// Is this entity marked for upgrade?
   /// </summary>
   [FactorioRconMethod("to_be_upgraded")]
-  public bool ToBeUpgraded() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool ToBeUpgraded();
 
   /// <summary>
   /// Get a logistic requester slot.
@@ -1331,7 +1331,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="slot">Lua name: slot</param>
   [FactorioRconMethod("get_request_slot")]
-  public SimpleItemStack? GetRequestSlot(uint slot) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract SimpleItemStack? GetRequestSlot(uint slot);
 
   /// <summary>
   /// Set a logistic requester slot.
@@ -1342,7 +1342,7 @@ public class LuaEntity
   /// <param name="request">Lua name: request</param>
   /// <param name="slot">Lua name: slot</param>
   [FactorioRconMethod("set_request_slot")]
-  public bool SetRequestSlot(ItemStackIdentification request, uint slot) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetRequestSlot(ItemStackIdentification request, uint slot);
 
   /// <summary>
   /// Clear a logistic requester slot.
@@ -1352,50 +1352,50 @@ public class LuaEntity
   /// </remarks>
   /// <param name="slot">Lua name: slot</param>
   [FactorioRconMethod("clear_request_slot")]
-  public void ClearRequestSlot(uint slot) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearRequestSlot(uint slot);
 
   /// <summary>
   /// Returns whether a craft is currently in process. It does not indicate whether progress is currently being made, but whether a crafting process has been started in this machine.
   /// </summary>
   [FactorioRconMethod("is_crafting")]
-  public bool IsCrafting() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsCrafting();
 
   [FactorioRconMethod("is_opened")]
-  public bool IsOpened() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsOpened();
 
   [FactorioRconMethod("is_opening")]
-  public bool IsOpening() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsOpening();
 
   [FactorioRconMethod("is_closed")]
-  public bool IsClosed() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsClosed();
 
   [FactorioRconMethod("is_closing")]
-  public bool IsClosing() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsClosing();
 
   /// <param name="force">Lua name: force</param>
   /// <param name="extraTime">Lua name: extra_time</param>
   [FactorioRconMethod("request_to_open")]
-  public void RequestToOpen(ForceIdentification force, uint? extraTime = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RequestToOpen(ForceIdentification force, uint? extraTime = null);
 
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("request_to_close")]
-  public void RequestToClose(ForceIdentification force) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RequestToClose(ForceIdentification force);
 
   /// <summary>
   /// Get a transport line of a belt or belt connectable entity.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_transport_line")]
-  public LuaTransportLine GetTransportLine(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaTransportLine GetTransportLine(uint index);
 
   /// <summary>
   /// Get the maximum transport line index of a belt or belt connectable entity.
   /// </summary>
   [FactorioRconMethod("get_max_transport_line_index")]
-  public uint GetMaxTransportLineIndex() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetMaxTransportLineIndex();
 
   [FactorioRconMethod("launch_rocket")]
-  public bool LaunchRocket() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool LaunchRocket();
 
   /// <summary>
   /// Revive a ghost. I.e. turn it from a ghost to a real entity or tile.
@@ -1403,7 +1403,7 @@ public class LuaEntity
   /// <param name="returnItemRequestProxy">Lua name: return_item_request_proxy</param>
   /// <param name="raiseRevive">Lua name: raise_revive</param>
   [FactorioRconMethod("revive")]
-  public (Dictionary<string, uint>?, LuaEntity?, LuaEntity?) Revive(bool? returnItemRequestProxy = null, bool? raiseRevive = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (Dictionary<string, uint>?, LuaEntity?, LuaEntity?) Revive(bool? returnItemRequestProxy = null, bool? raiseRevive = null);
 
   /// <summary>
   /// Revives a ghost silently.
@@ -1411,18 +1411,18 @@ public class LuaEntity
   /// <param name="returnItemRequestProxy">Lua name: return_item_request_proxy</param>
   /// <param name="raiseRevive">Lua name: raise_revive</param>
   [FactorioRconMethod("silent_revive")]
-  public (Dictionary<string, uint>?, LuaEntity?, LuaEntity?) SilentRevive(bool? returnItemRequestProxy = null, bool? raiseRevive = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (Dictionary<string, uint>?, LuaEntity?, LuaEntity?) SilentRevive(bool? returnItemRequestProxy = null, bool? raiseRevive = null);
 
   /// <param name="railDirection">Lua name: rail_direction</param>
   /// <param name="railConnectionDirection">Lua name: rail_connection_direction</param>
   [FactorioRconMethod("get_connected_rail")]
-  public (LuaEntity?, RailDirectionEnum?, RailConnectionDirectionEnum?) GetConnectedRail(RailDirectionEnum railDirection, RailConnectionDirectionEnum railConnectionDirection) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (LuaEntity?, RailDirectionEnum?, RailConnectionDirectionEnum?) GetConnectedRail(RailDirectionEnum railDirection, RailConnectionDirectionEnum railConnectionDirection);
 
   /// <summary>
   /// Get the rails that this signal is connected to.
   /// </summary>
   [FactorioRconMethod("get_connected_rails")]
-  public LuaEntity[] GetConnectedRails() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetConnectedRails();
 
   /// <summary>
   /// Get the rail signal or train stop at the start/end of the rail segment this rail is in.
@@ -1433,7 +1433,7 @@ public class LuaEntity
   /// <param name="direction">Lua name: direction</param>
   /// <param name="inElseOut">Lua name: in_else_out</param>
   [FactorioRconMethod("get_rail_segment_entity")]
-  public LuaEntity? GetRailSegmentEntity(RailDirectionEnum direction, bool inElseOut) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? GetRailSegmentEntity(RailDirectionEnum direction, bool inElseOut);
 
   /// <summary>
   /// Get the rail at the end of the rail segment this rail is in.
@@ -1443,7 +1443,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("get_rail_segment_end")]
-  public (LuaEntity, RailDirectionEnum) GetRailSegmentEnd(RailDirectionEnum direction) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (LuaEntity, RailDirectionEnum) GetRailSegmentEnd(RailDirectionEnum direction);
 
   /// <summary>
   /// Get all rails of a rail segment this rail is in
@@ -1453,7 +1453,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("get_rail_segment_rails")]
-  public LuaEntity[] GetRailSegmentRails(RailDirectionEnum direction) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetRailSegmentRails(RailDirectionEnum direction);
 
   /// <summary>
   /// Get the length of the rail segment this rail is in.
@@ -1462,7 +1462,7 @@ public class LuaEntity
   /// A rail segment is a continuous section of rail with no branches, signals, nor train stops.
   /// </remarks>
   [FactorioRconMethod("get_rail_segment_length")]
-  public double GetRailSegmentLength() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetRailSegmentLength();
 
   /// <summary>
   /// Get a rail from each rail segment that overlaps with this rail's rail segment.
@@ -1471,45 +1471,45 @@ public class LuaEntity
   /// A rail segment is a continuous section of rail with no branches, signals, nor train stops.
   /// </remarks>
   [FactorioRconMethod("get_rail_segment_overlaps")]
-  public LuaEntity[] GetRailSegmentOverlaps() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetRailSegmentOverlaps();
 
   /// <summary>
   /// Checks if this rail and other rail both belong to the same rail segment.
   /// </summary>
   /// <param name="otherRail">Lua name: other_rail</param>
   [FactorioRconMethod("is_rail_in_same_rail_segment_as")]
-  public bool IsRailInSameRailSegmentAs(LuaEntity otherRail) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsRailInSameRailSegmentAs(LuaEntity otherRail);
 
   /// <summary>
   /// Checks if this rail and other rail both belong to the same rail block.
   /// </summary>
   /// <param name="otherRail">Lua name: other_rail</param>
   [FactorioRconMethod("is_rail_in_same_rail_block_as")]
-  public bool IsRailInSameRailBlockAs(LuaEntity otherRail) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsRailInSameRailBlockAs(LuaEntity otherRail);
 
   /// <summary>
   /// Returns all parent signals. Parent signals are always RailChainSignal. Parent signals are those signals that are checking state of this signal to determine their own chain state.
   /// </summary>
   [FactorioRconMethod("get_parent_signals")]
-  public LuaEntity[] GetParentSignals() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetParentSignals();
 
   /// <summary>
   /// Returns all child signals. Child signals can be either RailSignal or RailChainSignal. Child signals are signals which are checked by this signal to determine a chain state.
   /// </summary>
   [FactorioRconMethod("get_child_signals")]
-  public LuaEntity[] GetChildSignals() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetChildSignals();
 
   /// <summary>
   /// Returns all signals guarding entrance to a rail block this rail belongs to.
   /// </summary>
   [FactorioRconMethod("get_inbound_signals")]
-  public LuaEntity[] GetInboundSignals() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetInboundSignals();
 
   /// <summary>
   /// Returns all signals guarding exit from a rail block this rail belongs to.
   /// </summary>
   [FactorioRconMethod("get_outbound_signals")]
-  public LuaEntity[] GetOutboundSignals() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetOutboundSignals();
 
   /// <summary>
   /// Get the filter for a slot in an inserter, loader, or logistic storage container.
@@ -1519,7 +1519,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="slotIndex">Lua name: slot_index</param>
   [FactorioRconMethod("get_filter")]
-  public string? GetFilter(uint slotIndex) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetFilter(uint slotIndex);
 
   /// <summary>
   /// Set the filter for a slot in an inserter, loader, or logistic storage container.
@@ -1530,14 +1530,14 @@ public class LuaEntity
   /// <param name="slotIndex">Lua name: slot_index</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("set_filter")]
-  public void SetFilter(uint slotIndex, OneOf<string, LuaNil> item) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetFilter(uint slotIndex, Union51438283 item);
 
   /// <summary>
   /// Gets the filter for this infinity container at the given index, or `nil` if the filter index doesn't exist or is empty.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_infinity_container_filter")]
-  public InfinityInventoryFilter? GetInfinityContainerFilter(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract InfinityInventoryFilter? GetInfinityContainerFilter(uint index);
 
   /// <summary>
   /// Sets the filter for this infinity container at the given index.
@@ -1545,50 +1545,50 @@ public class LuaEntity
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_container_filter")]
-  public void SetInfinityContainerFilter(uint index, OneOf<InfinityInventoryFilter, LuaNil> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetInfinityContainerFilter(uint index, Union15315213 filter);
 
   /// <summary>
   /// Gets the filter for this infinity pipe, or `nil` if the filter is empty.
   /// </summary>
   [FactorioRconMethod("get_infinity_pipe_filter")]
-  public InfinityPipeFilter? GetInfinityPipeFilter() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract InfinityPipeFilter? GetInfinityPipeFilter();
 
   /// <summary>
   /// Sets the filter for this infinity pipe.
   /// </summary>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_pipe_filter")]
-  public void SetInfinityPipeFilter(OneOf<InfinityPipeFilter, LuaNil> filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetInfinityPipeFilter(Union41488021 filter);
 
   /// <summary>
   /// Gets the heat setting for this heat interface.
   /// </summary>
   [FactorioRconMethod("get_heat_setting")]
-  public HeatSetting GetHeatSetting() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract HeatSetting GetHeatSetting();
 
   /// <summary>
   /// Sets the heat setting for this heat interface.
   /// </summary>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_heat_setting")]
-  public void SetHeatSetting(HeatSetting filter) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetHeatSetting(HeatSetting filter);
 
   /// <summary>
   /// Gets the control behavior of the entity (if any).
   /// </summary>
   [FactorioRconMethod("get_control_behavior")]
-  public LuaControlBehavior? GetControlBehavior() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaControlBehavior? GetControlBehavior();
 
   /// <summary>
   /// Gets (and or creates if needed) the control behavior of the entity.
   /// </summary>
   [FactorioRconMethod("get_or_create_control_behavior")]
-  public LuaControlBehavior? GetOrCreateControlBehavior() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaControlBehavior? GetOrCreateControlBehavior();
 
   /// <param name="wire">Lua name: wire</param>
   /// <param name="circuitConnector">Lua name: circuit_connector</param>
   [FactorioRconMethod("get_circuit_network")]
-  public LuaCircuitNetwork? GetCircuitNetwork(WireTypeEnum wire, CircuitConnectorIdEnum? circuitConnector = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaCircuitNetwork? GetCircuitNetwork(WireTypeEnum wire, CircuitConnectorIdEnum? circuitConnector = null);
 
   /// <summary>
   /// Read a single signal from the combined circuit networks.
@@ -1596,20 +1596,20 @@ public class LuaEntity
   /// <param name="signal">Lua name: signal</param>
   /// <param name="circuitConnector">Lua name: circuit_connector</param>
   [FactorioRconMethod("get_merged_signal")]
-  public int GetMergedSignal(SignalID signal, CircuitConnectorIdEnum? circuitConnector = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract int GetMergedSignal(SignalID signal, CircuitConnectorIdEnum? circuitConnector = null);
 
   /// <summary>
   /// The merged circuit network signals or `nil` if there are no signals.
   /// </summary>
   /// <param name="circuitConnector">Lua name: circuit_connector</param>
   [FactorioRconMethod("get_merged_signals")]
-  public Signal[]? GetMergedSignals(CircuitConnectorIdEnum? circuitConnector = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<Signal>? GetMergedSignals(CircuitConnectorIdEnum? circuitConnector = null);
 
   /// <summary>
   /// Whether this entity supports a backer name.
   /// </summary>
   [FactorioRconMethod("supports_backer_name")]
-  public bool SupportsBackerName() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SupportsBackerName();
 
   /// <summary>
   /// Copies settings from the given entity onto this entity.
@@ -1617,7 +1617,7 @@ public class LuaEntity
   /// <param name="entity">Lua name: entity</param>
   /// <param name="byPlayer">Lua name: by_player</param>
   [FactorioRconMethod("copy_settings")]
-  public Dictionary<string, uint> CopySettings(LuaEntity entity, PlayerIdentification? byPlayer = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> CopySettings(LuaEntity entity, PlayerIdentification? byPlayer = null);
 
   /// <summary>
   /// Gets all the `LuaLogisticPoint`s that this entity owns. Optionally returns only the point specified by the index parameter.
@@ -1627,7 +1627,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_logistic_point")]
-  public OneOf<LuaLogisticPoint, Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>>? GetLogisticPoint(LogisticMemberIndexEnum? index = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union62301924? GetLogisticPoint(LogisticMemberIndexEnum? index = null);
 
   /// <summary>
   /// Plays a note with the given instrument and note.
@@ -1635,40 +1635,40 @@ public class LuaEntity
   /// <param name="instrument">Lua name: instrument</param>
   /// <param name="note">Lua name: note</param>
   [FactorioRconMethod("play_note")]
-  public bool PlayNote(uint instrument, uint note) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool PlayNote(uint instrument, uint note);
 
   /// <summary>
   /// Connects the rolling stock in the given direction.
   /// </summary>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("connect_rolling_stock")]
-  public bool ConnectRollingStock(RailDirectionEnum direction) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool ConnectRollingStock(RailDirectionEnum direction);
 
   /// <summary>
   /// Tries to disconnect this rolling stock in the given direction.
   /// </summary>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("disconnect_rolling_stock")]
-  public bool DisconnectRollingStock(RailDirectionEnum direction) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool DisconnectRollingStock(RailDirectionEnum direction);
 
   /// <summary>
   /// Reconnect loader, beacon, cliff and mining drill connections to entities that might have been teleported out or in by the script. The game doesn't do this automatically as we don't want to loose performance by checking this in normal games.
   /// </summary>
   [FactorioRconMethod("update_connections")]
-  public void UpdateConnections() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void UpdateConnections();
 
   /// <summary>
   /// Current recipe being assembled by this machine, if any.
   /// </summary>
   [FactorioRconMethod("get_recipe")]
-  public LuaRecipe? GetRecipe() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaRecipe? GetRecipe();
 
   /// <summary>
   /// Sets the given recipe in this assembly machine.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("set_recipe")]
-  public Dictionary<string, uint> SetRecipe(OneOf<string, LuaRecipe, LuaNil> recipe) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> SetRecipe(Union61925337 recipe);
 
   /// <summary>
   /// Rotates this entity as if the player rotated it.
@@ -1679,13 +1679,13 @@ public class LuaEntity
   /// <param name="enableLooted">Lua name: enable_looted</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("rotate")]
-  public (bool, Dictionary<string, uint>?) Rotate(bool? reverse = null, PlayerIdentification? byPlayer = null, bool? spillItems = null, bool? enableLooted = null, ForceIdentification? force = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (bool, Dictionary<string, uint>?) Rotate(bool? reverse = null, PlayerIdentification? byPlayer = null, bool? spillItems = null, bool? enableLooted = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the driver of this vehicle if any.
   /// </summary>
   [FactorioRconMethod("get_driver")]
-  public OneOf<LuaEntity, LuaPlayer>? GetDriver() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union51004322? GetDriver();
 
   /// <summary>
   /// Sets the driver of this vehicle.
@@ -1695,7 +1695,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="driver">Lua name: driver</param>
   [FactorioRconMethod("set_driver")]
-  public void SetDriver(OneOf<LuaEntity, PlayerIdentification>? driver = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetDriver(Union2730334? driver = null);
 
   /// <summary>
   /// Gets the passenger of this car or spidertron if any.
@@ -1704,7 +1704,7 @@ public class LuaEntity
   /// This differs over <see cref="LuaEntity.GetDriver" /> in that the passenger can't drive the car.
   /// </remarks>
   [FactorioRconMethod("get_passenger")]
-  public OneOf<LuaEntity, LuaPlayer>? GetPassenger() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union12070837? GetPassenger();
 
   /// <summary>
   /// Sets the passenger of this car or spidertron.
@@ -1714,25 +1714,25 @@ public class LuaEntity
   /// </remarks>
   /// <param name="passenger">Lua name: passenger</param>
   [FactorioRconMethod("set_passenger")]
-  public void SetPassenger(OneOf<LuaEntity, PlayerIdentification>? passenger = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetPassenger(Union14509978? passenger = null);
 
   /// <summary>
   /// Returns `true` if this entity produces or consumes electricity and is connected to an electric network that has at least one entity that can produce power.
   /// </summary>
   [FactorioRconMethod("is_connected_to_electric_network")]
-  public bool IsConnectedToElectricNetwork() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsConnectedToElectricNetwork();
 
   /// <summary>
   /// The trains scheduled to stop at this train stop.
   /// </summary>
   [FactorioRconMethod("get_train_stop_trains")]
-  public LuaTrain[] GetTrainStopTrains() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaTrain> GetTrainStopTrains();
 
   /// <summary>
   /// The train currently stopped at this train stop, if any.
   /// </summary>
   [FactorioRconMethod("get_stopped_train")]
-  public LuaTrain? GetStoppedTrain() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaTrain? GetStoppedTrain();
 
   /// <summary>
   /// Clones this entity.
@@ -1742,7 +1742,7 @@ public class LuaEntity
   /// <param name="force">Lua name: force</param>
   /// <param name="createBuildEffectSmoke">Lua name: create_build_effect_smoke</param>
   [FactorioRconMethod("clone")]
-  public LuaEntity? Clone(MapPosition position, LuaSurface? surface = null, ForceIdentification? force = null, bool? createBuildEffectSmoke = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntity? Clone(MapPosition position, LuaSurface? surface = null, ForceIdentification? force = null, bool? createBuildEffectSmoke = null);
 
   /// <summary>
   /// Get the amount of all or some fluid in this entity.
@@ -1752,7 +1752,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="fluid">Lua name: fluid</param>
   [FactorioRconMethod("get_fluid_count")]
-  public double GetFluidCount(string? fluid = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetFluidCount(string? fluid = null);
 
   /// <summary>
   /// Get amounts of all fluids in this entity.
@@ -1761,7 +1761,7 @@ public class LuaEntity
   /// If information about fluid temperatures is required, <see cref="LuaEntity.Fluidbox" /> should be used instead.
   /// </remarks>
   [FactorioRconMethod("get_fluid_contents")]
-  public Dictionary<string, double> GetFluidContents() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, double> GetFluidContents();
 
   /// <summary>
   /// Remove fluid from this entity.
@@ -1775,70 +1775,70 @@ public class LuaEntity
   /// <param name="maximumTemperature">Lua name: maximum_temperature</param>
   /// <param name="temperature">Lua name: temperature</param>
   [FactorioRconMethod("remove_fluid")]
-  public double RemoveFluid(string name, double amount, double? minimumTemperature = null, double? maximumTemperature = null, double? temperature = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double RemoveFluid(string name, double amount, double? minimumTemperature = null, double? maximumTemperature = null, double? temperature = null);
 
   /// <summary>
   /// Insert fluid into this entity. Fluidbox is chosen automatically.
   /// </summary>
   /// <param name="fluid">Lua name: fluid</param>
   [FactorioRconMethod("insert_fluid")]
-  public double InsertFluid(Fluid fluid) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double InsertFluid(Fluid fluid);
 
   /// <summary>
   /// Remove all fluids from this entity.
   /// </summary>
   [FactorioRconMethod("clear_fluid_inside")]
-  public void ClearFluidInside() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearFluidInside();
 
   /// <summary>
   /// Get the source of this beam.
   /// </summary>
   [FactorioRconMethod("get_beam_source")]
-  public BeamTarget? GetBeamSource() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract BeamTarget? GetBeamSource();
 
   /// <summary>
   /// Set the source of this beam.
   /// </summary>
   /// <param name="source">Lua name: source</param>
   [FactorioRconMethod("set_beam_source")]
-  public void SetBeamSource(OneOf<LuaEntity, MapPosition> source) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBeamSource(Union18136189 source);
 
   /// <summary>
   /// Get the target of this beam.
   /// </summary>
   [FactorioRconMethod("get_beam_target")]
-  public BeamTarget? GetBeamTarget() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract BeamTarget? GetBeamTarget();
 
   /// <summary>
   /// Set the target of this beam.
   /// </summary>
   /// <param name="target">Lua name: target</param>
   [FactorioRconMethod("set_beam_target")]
-  public void SetBeamTarget(OneOf<LuaEntity, MapPosition> target) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBeamTarget(Union56187442 target);
 
   /// <summary>
   /// The radius of this entity.
   /// </summary>
   [FactorioRconMethod("get_radius")]
-  public double GetRadius() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetRadius();
 
   /// <summary>
   /// The health ratio of this entity between 1 and 0 (for full health and no health respectively).
   /// </summary>
   [FactorioRconMethod("get_health_ratio")]
-  public float? GetHealthRatio() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetHealthRatio();
 
   /// <summary>
   /// Creates the same smoke that is created when you place a building by hand. You can play the building sound to go with it by using <see cref="LuaSurface.PlaySound" />, eg: entity.surface.play_sound{path="entity-build/"..entity.prototype.name, position=entity.position}
   /// </summary>
   [FactorioRconMethod("create_build_effect_smoke")]
-  public void CreateBuildEffectSmoke() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CreateBuildEffectSmoke();
 
   /// <summary>
   /// Release the unit from the spawner which spawned it. This allows the spawner to continue spawning additional units.
   /// </summary>
   [FactorioRconMethod("release_from_spawner")]
-  public void ReleaseFromSpawner() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ReleaseFromSpawner();
 
   /// <summary>
   /// Toggle this entity's equipment movement bonus. Does nothing if the entity does not have an equipment grid.
@@ -1847,7 +1847,7 @@ public class LuaEntity
   /// This property can also be read and written on the equipment grid of this entity.
   /// </remarks>
   [FactorioRconMethod("toggle_equipment_movement_bonus")]
-  public void ToggleEquipmentMovementBonus() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ToggleEquipmentMovementBonus();
 
   /// <summary>
   /// Whether this character can shoot the given entity or position.
@@ -1855,37 +1855,37 @@ public class LuaEntity
   /// <param name="target">Lua name: target</param>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("can_shoot")]
-  public bool CanShoot(LuaEntity target, MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanShoot(LuaEntity target, MapPosition position);
 
   /// <summary>
   /// Only works if the entity is a speech-bubble, with an "effect" defined in its wrapper_flow_style. Starts animating the opacity of the speech bubble towards zero, and destroys the entity when it hits zero.
   /// </summary>
   [FactorioRconMethod("start_fading_out")]
-  public void StartFadingOut() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void StartFadingOut();
 
   /// <summary>
   /// Returns the new entity prototype.
   /// </summary>
   [FactorioRconMethod("get_upgrade_target")]
-  public LuaEntityPrototype? GetUpgradeTarget() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaEntityPrototype? GetUpgradeTarget();
 
   /// <summary>
   /// Returns the new entity direction after upgrading.
   /// </summary>
   [FactorioRconMethod("get_upgrade_direction")]
-  public DirectionEnum? GetUpgradeDirection() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract DirectionEnum? GetUpgradeDirection();
 
   /// <summary>
   /// Returns the amount of damage to be taken by this entity.
   /// </summary>
   [FactorioRconMethod("get_damage_to_be_taken")]
-  public float? GetDamageToBeTaken() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetDamageToBeTaken();
 
   /// <summary>
   /// Depletes and destroys this resource entity.
   /// </summary>
   [FactorioRconMethod("deplete")]
-  public void Deplete() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Deplete();
 
   /// <summary>
   /// Mines this entity.
@@ -1899,59 +1899,59 @@ public class LuaEntity
   /// <param name="raiseDestroyed">Lua name: raise_destroyed</param>
   /// <param name="ignoreMinable">Lua name: ignore_minable</param>
   [FactorioRconMethod("mine")]
-  public bool Mine(LuaInventory? inventory = null, bool? force = null, bool? raiseDestroyed = null, bool? ignoreMinable = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool Mine(LuaInventory? inventory = null, bool? force = null, bool? raiseDestroyed = null, bool? ignoreMinable = null);
 
   /// <summary>
   /// Triggers spawn_decoration actions defined in the entity prototype or does nothing if entity is not "turret" or "unit-spawner".
   /// </summary>
   [FactorioRconMethod("spawn_decorations")]
-  public void SpawnDecorations() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SpawnDecorations();
 
   /// <summary>
   /// Can wires reach between these entities.
   /// </summary>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("can_wires_reach")]
-  public bool CanWiresReach(LuaEntity entity) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanWiresReach(LuaEntity entity);
 
   /// <summary>
   /// Gets rolling stock connected to the given end of this stock.
   /// </summary>
   /// <param name="direction">Lua name: direction</param>
   [FactorioRconMethod("get_connected_rolling_stock")]
-  public (LuaEntity?, RailDirectionEnum?) GetConnectedRollingStock(RailDirectionEnum direction) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (LuaEntity?, RailDirectionEnum?) GetConnectedRollingStock(RailDirectionEnum direction);
 
   /// <summary>
   /// Is this entity or tile ghost or item request proxy registered for construction? If false, it means a construction robot has been dispatched to build the entity, or it is not an entity that can be constructed.
   /// </summary>
   [FactorioRconMethod("is_registered_for_construction")]
-  public bool IsRegisteredForConstruction() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsRegisteredForConstruction();
 
   /// <summary>
   /// Is this entity registered for deconstruction with this force? If false, it means a construction robot has been dispatched to deconstruct it, or it is not marked for deconstruction. The complexity is effectively O(1) - it depends on the number of objects targeting this entity which should be small enough.
   /// </summary>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("is_registered_for_deconstruction")]
-  public bool IsRegisteredForDeconstruction(ForceIdentification force) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsRegisteredForDeconstruction(ForceIdentification force);
 
   /// <summary>
   /// Is this entity registered for upgrade? If false, it means a construction robot has been dispatched to upgrade it, or it is not marked for upgrade. This is worst-case O(N) complexity where N is the current number of things in the upgrade queue.
   /// </summary>
   [FactorioRconMethod("is_registered_for_upgrade")]
-  public bool IsRegisteredForUpgrade() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsRegisteredForUpgrade();
 
   /// <summary>
   /// Is this entity registered for repair? If false, it means a construction robot has been dispatched to upgrade it, or it is not damaged. This is worst-case O(N) complexity where N is the current number of things in the repair queue.
   /// </summary>
   [FactorioRconMethod("is_registered_for_repair")]
-  public bool IsRegisteredForRepair() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsRegisteredForRepair();
 
   /// <summary>
   /// Adds the given position to this spidertron's autopilot's queue of destinations.
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("add_autopilot_destination")]
-  public void AddAutopilotDestination(MapPosition position) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddAutopilotDestination(MapPosition position);
 
   /// <summary>
   /// Connects current linked belt with another one.
@@ -1963,7 +1963,7 @@ public class LuaEntity
   /// </remarks>
   /// <param name="neighbour">Lua name: neighbour</param>
   [FactorioRconMethod("connect_linked_belts")]
-  public void ConnectLinkedBelts(LuaEntity neighbour) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ConnectLinkedBelts(LuaEntity neighbour);
 
   /// <summary>
   /// Disconnects linked belt from its neighbour.
@@ -1972,60 +1972,70 @@ public class LuaEntity
   /// Can also be used on entity ghost if it contains linked-belt
   /// </remarks>
   [FactorioRconMethod("disconnect_linked_belts")]
-  public void DisconnectLinkedBelts() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void DisconnectLinkedBelts();
 
   /// <summary>
   /// Gets legs of given SpiderVehicle.
   /// </summary>
   [FactorioRconMethod("get_spider_legs")]
-  public LuaEntity[] GetSpiderLegs() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetSpiderLegs();
 
   /// <summary>
   /// Sets the <see cref="LuaEntity.AutopilotDestination" />, which it will continue moving towards if set.
   /// </summary>
   [FactorioRconMethod("stop_spider")]
-  public void StopSpider() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void StopSpider();
 
   /// <summary>
   /// Returns a table with all beacons affecting this effect receiver. Can only be used when the entity has an effect receiver (AssemblingMachine, Furnace, Lab, MiningDrills)
   /// </summary>
   [FactorioRconMethod("get_beacons")]
-  public LuaEntity[]? GetBeacons() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity>? GetBeacons();
 
   /// <summary>
   /// Returns a table with all entities affected by this beacon
   /// </summary>
   [FactorioRconMethod("get_beacon_effect_receivers")]
-  public LuaEntity[] GetBeaconEffectReceivers() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaEntity> GetBeaconEffectReceivers();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 
-public class Table5773521
+[GenerateOneOf]
+public abstract partial class Union14333193: OneOfBase<LuaPlayer, PlayerIdentification>
+{
+}
+
+public abstract class Table34678979
 {
   /// <summary>
   /// Array of transport belt connectable entities.
   /// </summary>
   [FactorioRconAttribute("inputs")]
-  public LuaEntity[] Inputs { get; set; }
+  public List<LuaEntity> Inputs { get; set; }
 
   /// <summary>
   /// Array of transport belt connectable entities.
   /// </summary>
   [FactorioRconAttribute("outputs")]
-  public LuaEntity[] Outputs { get; set; }
+  public List<LuaEntity> Outputs { get; set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union19420176: OneOfBase<Literal18823110, Literal8999294, Literal59652943>
+{
 }
 
 /// <summary>
 /// Literal value: straight
 /// </summary>
-public class Literal54135081
+public abstract class Literal18823110
 {
   /// <summary>
   /// Literal value: straight
@@ -2038,7 +2048,7 @@ public class Literal54135081
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal63094882
+public abstract class Literal8999294
 {
   /// <summary>
   /// Literal value: left
@@ -2051,7 +2061,7 @@ public class Literal63094882
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal49924125
+public abstract class Literal59652943
 {
   /// <summary>
   /// Literal value: right
@@ -2061,10 +2071,15 @@ public class Literal49924125
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union66166301: OneOfBase<Literal52213762, Literal37804102>
+{
+}
+
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal41773672
+public abstract class Literal52213762
 {
   /// <summary>
   /// Literal value: input
@@ -2077,7 +2092,7 @@ public class Literal41773672
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal4831898
+public abstract class Literal37804102
 {
   /// <summary>
   /// Literal value: output
@@ -2087,26 +2102,36 @@ public class Literal4831898
 
 }
 
-public class Table34361009
+public abstract class Table30180123
 {
   /// <summary>
   /// Entities connected via the red wire.
   /// </summary>
   [FactorioRconAttribute("red")]
-  public LuaEntity[] Red { get; set; }
+  public List<LuaEntity> Red { get; set; }
 
   /// <summary>
   /// Entities connected via the green wire.
   /// </summary>
   [FactorioRconAttribute("green")]
-  public LuaEntity[] Green { get; set; }
+  public List<LuaEntity> Green { get; set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union52307948: OneOfBase<LuaEntityPrototype, LuaTilePrototype>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union13009416: OneOfBase<Literal22577141, Literal50757320>
+{
 }
 
 /// <summary>
 /// Literal value: whitelist
 /// </summary>
-public class Literal50492551
+public abstract class Literal22577141
 {
   /// <summary>
   /// Literal value: whitelist
@@ -2119,7 +2144,7 @@ public class Literal50492551
 /// <summary>
 /// Literal value: blacklist
 /// </summary>
-public class Literal53710617
+public abstract class Literal50757320
 {
   /// <summary>
   /// Literal value: blacklist
@@ -2129,10 +2154,20 @@ public class Literal53710617
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union12611187: OneOfBase<LuaPlayer, PlayerIdentification>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union16868352: OneOfBase<Literal62676156, Literal5669220>
+{
+}
+
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal54181145
+public abstract class Literal62676156
 {
   /// <summary>
   /// Literal value: input
@@ -2145,7 +2180,7 @@ public class Literal54181145
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal64062224
+public abstract class Literal5669220
 {
   /// <summary>
   /// Literal value: output
@@ -2155,10 +2190,15 @@ public class Literal64062224
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union39774547: OneOfBase<Literal30189679, Literal3085464>
+{
+}
+
 /// <summary>
 /// Literal value: input
 /// </summary>
-public class Literal3129430
+public abstract class Literal30189679
 {
   /// <summary>
   /// Literal value: input
@@ -2171,7 +2211,7 @@ public class Literal3129430
 /// <summary>
 /// Literal value: output
 /// </summary>
-public class Literal65718035
+public abstract class Literal3085464
 {
   /// <summary>
   /// Literal value: output
@@ -2181,10 +2221,25 @@ public class Literal65718035
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union40535505: OneOfBase<Dictionary<string, List<LuaEntity>>, List<List<LuaEntity>>, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union63062333: OneOfBase<LuaPlayer, PlayerIdentification>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union41728762: OneOfBase<Literal22369618, Literal44739154, Literal22367068>
+{
+}
+
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal37901460
+public abstract class Literal22369618
 {
   /// <summary>
   /// Literal value: left
@@ -2197,7 +2252,7 @@ public class Literal37901460
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal57733168
+public abstract class Literal44739154
 {
   /// <summary>
   /// Literal value: none
@@ -2210,7 +2265,7 @@ public class Literal57733168
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal4436986
+public abstract class Literal22367068
 {
   /// <summary>
   /// Literal value: right
@@ -2220,10 +2275,15 @@ public class Literal4436986
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union2174563: OneOfBase<Literal44665200, Literal20222386, Literal49578303>
+{
+}
+
 /// <summary>
 /// Literal value: left
 /// </summary>
-public class Literal26067845
+public abstract class Literal44665200
 {
   /// <summary>
   /// Literal value: left
@@ -2236,7 +2296,7 @@ public class Literal26067845
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal10553853
+public abstract class Literal20222386
 {
   /// <summary>
   /// Literal value: none
@@ -2249,7 +2309,7 @@ public class Literal10553853
 /// <summary>
 /// Literal value: right
 /// </summary>
-public class Literal20304321
+public abstract class Literal49578303
 {
   /// <summary>
   /// Literal value: right
@@ -2259,7 +2319,7 @@ public class Literal20304321
 
 }
 
-public class Table23737571
+public abstract class Table2808346
 {
   [FactorioRconAttribute("speed_modifier")]
   public double SpeedModifier { get; set; }
@@ -2267,5 +2327,70 @@ public class Table23737571
   [FactorioRconAttribute("friction_modifier")]
   public double FrictionModifier { get; set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union26314214: OneOfBase<LuaEntity, WireConnectionDefinition>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union24914721: OneOfBase<WireTypeEnum, LuaEntity, WireConnectionDefinition>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union51004322: OneOfBase<LuaEntity, LuaPlayer>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union62301924: OneOfBase<LuaLogisticPoint, Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union12070837: OneOfBase<LuaEntity, LuaPlayer>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union18136189: OneOfBase<LuaEntity, MapPosition>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union56187442: OneOfBase<LuaEntity, MapPosition>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union2730334: OneOfBase<LuaEntity, PlayerIdentification>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union51438283: OneOfBase<string, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union15315213: OneOfBase<InfinityInventoryFilter, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union41488021: OneOfBase<InfinityPipeFilter, LuaNil>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union14509978: OneOfBase<LuaEntity, PlayerIdentification>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union61925337: OneOfBase<string, LuaRecipe, LuaNil>
+{
 }
 

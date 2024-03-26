@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A crafting recipe prototype.
 /// </summary>
 [FactorioRconClass("LuaRecipePrototype")]
-public class LuaRecipePrototype
+public abstract class LuaRecipePrototype: LuaObject
 {
   /// <summary>
   /// If this recipe prototype is enabled by default (enabled at the beginning of a game).
@@ -47,13 +47,13 @@ public class LuaRecipePrototype
   /// The ingredients to this recipe.
   /// </summary>
   [FactorioRconAttribute("ingredients")]
-  public Ingredient[] Ingredients { get; private set; }
+  public List<Ingredient> Ingredients { get; private set; }
 
   /// <summary>
   /// The results/products of this recipe.
   /// </summary>
   [FactorioRconAttribute("products")]
-  public Product[] Products { get; private set; }
+  public List<Product> Products { get; private set; }
 
   /// <summary>
   /// The main product of this recipe, if any.
@@ -185,7 +185,7 @@ public class LuaRecipePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

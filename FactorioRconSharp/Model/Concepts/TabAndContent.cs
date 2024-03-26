@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TabAndContent")]
-public class TabAndContent
+public abstract class TabAndContent
 {
+  [FactorioRconAttribute("tab")]
+  public LuaGuiElement Tab { get; set; }
+
+  [FactorioRconAttribute("content")]
+  public LuaGuiElement Content { get; set; }
+
+}
+
+public abstract class Table46124038
+{
+  [FactorioRconAttribute("tab")]
+  public LuaGuiElement Tab { get; set; }
+
+  [FactorioRconAttribute("content")]
+  public LuaGuiElement Content { get; set; }
+
 }
 

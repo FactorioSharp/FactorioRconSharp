@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A storage of item stacks.
 /// </summary>
 [FactorioRconClass("LuaInventory")]
-public class LuaInventory
+public abstract class LuaInventory: LuaObject
 {
   /// <summary>
   /// The inventory index this inventory uses, if any.
@@ -67,59 +67,59 @@ public class LuaInventory
   /// <summary>
   /// The indexing operator.
   /// </summary>
-  public LuaItemStack this[uint key] { get => throw FactorioModelUtils.UseClientReadAsyncMethod(); private set => throw FactorioModelUtils.UseClientExecuteAsyncMethod(); }
+  public abstract LuaItemStack this[uint key] { get; }
 
   /// <summary>
   /// Make this inventory empty.
   /// </summary>
   [FactorioRconMethod("clear")]
-  public void Clear() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear();
 
   /// <summary>
   /// Can at least some items be inserted?
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("can_insert")]
-  public bool CanInsert(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanInsert(ItemStackIdentification items);
 
   /// <summary>
   /// Insert items into this inventory.
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("insert")]
-  public uint Insert(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint Insert(ItemStackIdentification items);
 
   /// <summary>
   /// Remove items from this inventory.
   /// </summary>
   /// <param name="items">Lua name: items</param>
   [FactorioRconMethod("remove")]
-  public uint Remove(ItemStackIdentification items) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint Remove(ItemStackIdentification items);
 
   /// <summary>
   /// Get the number of all or some items in this inventory.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_item_count")]
-  public uint GetItemCount(string? item = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetItemCount(string? item = null);
 
   /// <summary>
   /// Does this inventory contain nothing?
   /// </summary>
   [FactorioRconMethod("is_empty")]
-  public bool IsEmpty() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsEmpty();
 
   /// <summary>
   /// Is every stack in this inventory full? Ignores stacks blocked by the current bar.
   /// </summary>
   [FactorioRconMethod("is_full")]
-  public bool IsFull() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsFull();
 
   /// <summary>
   /// Get counts of all items in this inventory.
   /// </summary>
   [FactorioRconMethod("get_contents")]
-  public Dictionary<string, uint> GetContents() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint> GetContents();
 
   /// <summary>
   /// Does this inventory support a bar? Bar is the draggable red thing, found for example on chests, that limits the portion of the inventory that may be manipulated by machines.
@@ -128,7 +128,7 @@ public class LuaInventory
   /// "Supporting a bar" doesn't mean that the bar is set to some nontrivial value. Supporting a bar means the inventory supports having this limit at all. The character's inventory is an example of an inventory without a bar; the wooden chest's inventory is an example of one with a bar.
   /// </remarks>
   [FactorioRconMethod("supports_bar")]
-  public bool SupportsBar() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SupportsBar();
 
   /// <summary>
   /// Get the current bar. This is the index at which the red area starts.
@@ -137,7 +137,7 @@ public class LuaInventory
   /// Only useable if this inventory supports having a bar.
   /// </remarks>
   [FactorioRconMethod("get_bar")]
-  public uint GetBar() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetBar();
 
   /// <summary>
   /// Set the current bar.
@@ -147,19 +147,19 @@ public class LuaInventory
   /// </remarks>
   /// <param name="bar">Lua name: bar</param>
   [FactorioRconMethod("set_bar")]
-  public void SetBar(uint? bar = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetBar(uint? bar = null);
 
   /// <summary>
   /// If this inventory supports filters.
   /// </summary>
   [FactorioRconMethod("supports_filters")]
-  public bool SupportsFilters() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SupportsFilters();
 
   /// <summary>
   /// If this inventory supports filters and has at least 1 filter set.
   /// </summary>
   [FactorioRconMethod("is_filtered")]
-  public bool IsFiltered() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsFiltered();
 
   /// <summary>
   /// If the given inventory slot filter can be set to the given filter.
@@ -167,14 +167,14 @@ public class LuaInventory
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("can_set_filter")]
-  public bool CanSetFilter(uint index, string filter) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool CanSetFilter(uint index, string filter);
 
   /// <summary>
   /// Gets the filter for the given item stack index.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_filter")]
-  public string? GetFilter(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetFilter(uint index);
 
   /// <summary>
   /// Sets the filter for the given item stack index.
@@ -185,21 +185,21 @@ public class LuaInventory
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public bool SetFilter(uint index, OneOf<string, LuaNil> filter) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetFilter(uint index, Union50874780 filter);
 
   /// <summary>
   /// Finds the first LuaItemStack in the inventory that matches the given item name.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("find_item_stack")]
-  public (LuaItemStack?, uint?) FindItemStack(string item) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (LuaItemStack?, uint?) FindItemStack(string item);
 
   /// <summary>
   /// Finds the first empty stack. Filtered slots are excluded unless a filter item is given.
   /// </summary>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("find_empty_stack")]
-  public (LuaItemStack?, uint?) FindEmptyStack(string? item = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract (LuaItemStack?, uint?) FindEmptyStack(string? item = null);
 
   /// <summary>
   /// Counts the number of empty stacks.
@@ -207,7 +207,7 @@ public class LuaInventory
   /// <param name="includeFiltered">Lua name: include_filtered</param>
   /// <param name="includeBar">Lua name: include_bar</param>
   [FactorioRconMethod("count_empty_stacks")]
-  public uint CountEmptyStacks(bool? includeFiltered = null, bool? includeBar = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint CountEmptyStacks(bool? includeFiltered = null, bool? includeBar = null);
 
   /// <summary>
   /// Gets the number of the given item that can be inserted into this inventory.
@@ -219,13 +219,13 @@ public class LuaInventory
   /// </remarks>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("get_insertable_count")]
-  public uint GetInsertableCount(string item) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetInsertableCount(string item);
 
   /// <summary>
   /// Sorts and merges the items in this inventory.
   /// </summary>
   [FactorioRconMethod("sort_and_merge")]
-  public void SortAndMerge() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SortAndMerge();
 
   /// <summary>
   /// Resizes the inventory.
@@ -236,7 +236,7 @@ public class LuaInventory
   /// </remarks>
   /// <param name="size">Lua name: size</param>
   [FactorioRconMethod("resize")]
-  public void Resize(ushort size) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Resize(ushort size);
 
   /// <summary>
   /// Destroys this inventory.
@@ -245,13 +245,18 @@ public class LuaInventory
   /// Only inventories created by <see cref="LuaGameScript.CreateInventory" /> can be destroyed this way.
   /// </remarks>
   [FactorioRconMethod("destroy")]
-  public void Destroy() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Destroy();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union50874780: OneOfBase<string, LuaNil>
+{
 }
 

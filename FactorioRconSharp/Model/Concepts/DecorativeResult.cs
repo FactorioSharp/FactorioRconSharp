@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DecorativeResult")]
-public class DecorativeResult
+public abstract class DecorativeResult
 {
+  [FactorioRconAttribute("position")]
+  public TilePosition Position { get; set; }
+
+  [FactorioRconAttribute("decorative")]
+  public LuaDecorativePrototype Decorative { get; set; }
+
+  [FactorioRconAttribute("amount")]
+  public uint Amount { get; set; }
+
+}
+
+public abstract class Table43253384
+{
+  [FactorioRconAttribute("position")]
+  public TilePosition Position { get; set; }
+
+  [FactorioRconAttribute("decorative")]
+  public LuaDecorativePrototype Decorative { get; set; }
+
+  [FactorioRconAttribute("amount")]
+  public uint Amount { get; set; }
+
 }
 

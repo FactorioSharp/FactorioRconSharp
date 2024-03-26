@@ -13,8 +13,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// An item may be specified in one of two ways.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("ItemStackIdentification")]
-public class ItemStackIdentification
+public abstract partial class ItemStackIdentification: OneOfBase<SimpleItemStack, LuaItemStack>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union44656632: OneOfBase<SimpleItemStack, LuaItemStack>
 {
 }
 

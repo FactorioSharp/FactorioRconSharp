@@ -11,7 +11,41 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CircuitConnectionDefinition")]
-public class CircuitConnectionDefinition
+public abstract class CircuitConnectionDefinition
 {
+  /// <summary>
+  /// Wire color, either <see cref="Defines.WireType.Green" />.
+  /// </summary>
+  [FactorioRconAttribute("wire")]
+  public WireTypeEnum Wire { get; set; }
+
+  [FactorioRconAttribute("target_entity")]
+  public LuaEntity TargetEntity { get; set; }
+
+  [FactorioRconAttribute("source_circuit_id")]
+  public CircuitConnectorIdEnum SourceCircuitId { get; set; }
+
+  [FactorioRconAttribute("target_circuit_id")]
+  public CircuitConnectorIdEnum TargetCircuitId { get; set; }
+
+}
+
+public abstract class Table65024491
+{
+  /// <summary>
+  /// Wire color, either <see cref="Defines.WireType.Green" />.
+  /// </summary>
+  [FactorioRconAttribute("wire")]
+  public WireTypeEnum Wire { get; set; }
+
+  [FactorioRconAttribute("target_entity")]
+  public LuaEntity TargetEntity { get; set; }
+
+  [FactorioRconAttribute("source_circuit_id")]
+  public CircuitConnectorIdEnum SourceCircuitId { get; set; }
+
+  [FactorioRconAttribute("target_circuit_id")]
+  public CircuitConnectorIdEnum TargetCircuitId { get; set; }
+
 }
 

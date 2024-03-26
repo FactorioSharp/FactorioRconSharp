@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of an equipment grid.
 /// </summary>
 [FactorioRconClass("LuaEquipmentGridPrototype")]
-public class LuaEquipmentGridPrototype
+public abstract class LuaEquipmentGridPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -38,7 +38,7 @@ public class LuaEquipmentGridPrototype
   /// Equipment category names for the <see cref="LuaEquipmentPrototype.EquipmentCategories" /> that may be inserted into this equipment grid. The grid will accept any equipment that has at least one category in this list.
   /// </summary>
   [FactorioRconAttribute("equipment_categories")]
-  public string[] EquipmentCategories { get; private set; }
+  public List<string> EquipmentCategories { get; private set; }
 
   [FactorioRconAttribute("width")]
   public uint Width { get; private set; }
@@ -68,7 +68,7 @@ public class LuaEquipmentGridPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

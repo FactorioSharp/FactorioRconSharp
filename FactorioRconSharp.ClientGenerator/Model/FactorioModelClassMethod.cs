@@ -9,8 +9,6 @@ public class FactorioModelClassMethod
     public required string LuaName { get; set; }
     public FactorioModelDocumentation? Documentation { get; set; }
 
-    public bool IsStatic { get; set; }
-
     public FactorioModelClassMethodParameter[] Parameters { get; set; } = Array.Empty<FactorioModelClassMethodParameter>();
     public required string? ReturnType { get; set; }
 }

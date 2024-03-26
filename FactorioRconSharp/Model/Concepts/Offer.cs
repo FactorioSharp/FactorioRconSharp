@@ -14,7 +14,35 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A single offer on a market entity.
 /// </summary>
 [FactorioRconConcept("Offer")]
-public class Offer
+public abstract class Offer
 {
+  /// <summary>
+  /// List of prices.
+  /// </summary>
+  [FactorioRconAttribute("price")]
+  public List<Ingredient> Price { get; set; }
+
+  /// <summary>
+  /// The action that will take place when a player accepts the offer. Usually a `"give-item"` modifier.
+  /// </summary>
+  [FactorioRconAttribute("offer")]
+  public TechnologyModifier Offer { get; set; }
+
+}
+
+public abstract class Table30637870
+{
+  /// <summary>
+  /// List of prices.
+  /// </summary>
+  [FactorioRconAttribute("price")]
+  public List<Ingredient> Price { get; set; }
+
+  /// <summary>
+  /// The action that will take place when a player accepts the offer. Usually a `"give-item"` modifier.
+  /// </summary>
+  [FactorioRconAttribute("offer")]
+  public TechnologyModifier Offer { get; set; }
+
 }
 

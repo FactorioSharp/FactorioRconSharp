@@ -13,8 +13,34 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// Coordinates of a tile on a <see cref="MapPosition" />, except it rounds any non-integer `x`/`y` down to whole numbers. It can be specified either with or without explicit keys.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("TilePosition")]
-public class TilePosition
+public abstract partial class TilePosition: OneOfBase<Table60873714, Table3279578>
 {
+}
+
+[GenerateOneOf]
+public abstract partial class Union15681389: OneOfBase<Table60873714, Table3279578>
+{
+}
+
+public abstract class Table60873714
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
+}
+
+public abstract class Table3279578
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
 }
 

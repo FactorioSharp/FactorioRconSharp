@@ -19,7 +19,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// ```
 /// </examples>
 [FactorioRconClass("LuaItemPrototype")]
-public class LuaItemPrototype
+public abstract class LuaItemPrototype: LuaObject
 {
   /// <summary>
   /// Type of this prototype. E.g. `"gun"` or `"mining-tool"`.
@@ -145,7 +145,7 @@ public class LuaItemPrototype
   /// The results of launching this item in a rocket.
   /// </summary>
   [FactorioRconAttribute("rocket_launch_products")]
-  public Product[] RocketLaunchProducts { get; private set; }
+  public List<Product> RocketLaunchProducts { get; private set; }
 
   /// <summary>
   /// If this item can be mod-opened.
@@ -214,13 +214,13 @@ public class LuaItemPrototype
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public OneOf<Literal23522948, Literal24219861, Literal38855053> FilterMode { get; private set; }
+  public Union3318699 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public OneOf<Literal10649759, Literal22318356, Literal66032303, Literal44501086> InsertionPriorityMode { get; private set; }
+  public Union55683007 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -274,7 +274,7 @@ public class LuaItemPrototype
   /// An array of recipe names this module is allowed to work with. Empty when all recipes are allowed.
   /// </summary>
   [FactorioRconAttribute("limitations")]
-  public string[] Limitations { get; private set; }
+  public List<string> Limitations { get; private set; }
 
   /// <summary>
   /// The limitation message key used when the player attempts to use this modules in some place it's not allowed.
@@ -298,7 +298,7 @@ public class LuaItemPrototype
   /// The repair result of this repair tool prototype.
   /// </summary>
   [FactorioRconAttribute("repair_result")]
-  public TriggerItem[] RepairResult { get; private set; }
+  public List<TriggerItem> RepairResult { get; private set; }
 
   /// <summary>
   /// The color used when doing normal selection with this selection tool prototype.
@@ -539,27 +539,32 @@ public class LuaItemPrototype
   /// </summary>
   /// <param name="flag">Lua name: flag</param>
   [FactorioRconMethod("has_flag")]
-  public bool HasFlag(ItemPrototypeFlag flag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool HasFlag(ItemPrototypeFlag flag);
 
   /// <summary>
   /// The type of this ammo prototype.
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public AmmoType? GetAmmoType(OneOf<Literal62107587, Literal29190913, Literal9029417, Literal55400036>? ammoSourceType = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract AmmoType? GetAmmoType(Union47005364? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union3318699: OneOfBase<Literal61476884, Literal60052224, Literal7339810>
+{
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal23522948
+public abstract class Literal61476884
 {
   /// <summary>
   /// Literal value: none
@@ -572,7 +577,7 @@ public class Literal23522948
 /// <summary>
 /// Literal value: whitelist
 /// </summary>
-public class Literal24219861
+public abstract class Literal60052224
 {
   /// <summary>
   /// Literal value: whitelist
@@ -585,7 +590,7 @@ public class Literal24219861
 /// <summary>
 /// Literal value: blacklist
 /// </summary>
-public class Literal38855053
+public abstract class Literal7339810
 {
   /// <summary>
   /// Literal value: blacklist
@@ -595,10 +600,15 @@ public class Literal38855053
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union55683007: OneOfBase<Literal3137518, Literal48979325, Literal295723, Literal10941773>
+{
+}
+
 /// <summary>
 /// Literal value: default
 /// </summary>
-public class Literal10649759
+public abstract class Literal3137518
 {
   /// <summary>
   /// Literal value: default
@@ -611,7 +621,7 @@ public class Literal10649759
 /// <summary>
 /// Literal value: never
 /// </summary>
-public class Literal22318356
+public abstract class Literal48979325
 {
   /// <summary>
   /// Literal value: never
@@ -624,7 +634,7 @@ public class Literal22318356
 /// <summary>
 /// Literal value: always
 /// </summary>
-public class Literal66032303
+public abstract class Literal295723
 {
   /// <summary>
   /// Literal value: always
@@ -637,7 +647,7 @@ public class Literal66032303
 /// <summary>
 /// Literal value: when-manually-filtered
 /// </summary>
-public class Literal44501086
+public abstract class Literal10941773
 {
   /// <summary>
   /// Literal value: when-manually-filtered
@@ -647,10 +657,15 @@ public class Literal44501086
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union47005364: OneOfBase<Literal2192437, Literal14011335, Literal48657371, Literal55492274>
+{
+}
+
 /// <summary>
 /// Literal value: default
 /// </summary>
-public class Literal62107587
+public abstract class Literal2192437
 {
   /// <summary>
   /// Literal value: default
@@ -663,7 +678,7 @@ public class Literal62107587
 /// <summary>
 /// Literal value: player
 /// </summary>
-public class Literal29190913
+public abstract class Literal14011335
 {
   /// <summary>
   /// Literal value: player
@@ -676,7 +691,7 @@ public class Literal29190913
 /// <summary>
 /// Literal value: turret
 /// </summary>
-public class Literal9029417
+public abstract class Literal48657371
 {
   /// <summary>
   /// Literal value: turret
@@ -689,7 +704,7 @@ public class Literal9029417
 /// <summary>
 /// Literal value: vehicle
 /// </summary>
-public class Literal55400036
+public abstract class Literal55492274
 {
   /// <summary>
   /// Literal value: vehicle

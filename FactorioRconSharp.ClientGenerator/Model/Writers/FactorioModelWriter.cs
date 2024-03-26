@@ -5,8 +5,6 @@ namespace FactorioRconSharp.ClientGenerator.Model.Writers;
 
 public static partial class FactorioModelWriter
 {
-    const string UseExecuteAsyncException = "FactorioModelUtils.UseClientExecuteAsyncMethod";
-    const string UseReadAsyncException = "FactorioModelUtils.UseClientReadAsyncMethod";
     const string ClassAttribute = "FactorioRconClass";
     const string ConceptAttribute = "FactorioRconConcept";
     const string DefinitionAttribute = "FactorioRconDefinition";
@@ -57,6 +55,11 @@ public static partial class FactorioModelWriter
             await WriteDocumentation(writer, cls.Documentation, indentLevel);
         }
 
+        foreach (string attribute in cls.Attributes)
+        {
+            await WriteLineAsync(writer, $"[{attribute}]", indentLevel);
+        }
+
         if (cls.LuaName != null)
         {
             if (cls.IsFactorioClass)
@@ -70,7 +73,16 @@ public static partial class FactorioModelWriter
             }
         }
 
-        await WriteLineAsync(writer, $"public {(cls.IsStatic ? "static " : "")}class {cls.Name}", indentLevel);
+        string classDeclaration = $"public abstract {(cls.IsPartial ? "partial " : "")}class {cls.Name}";
+
+        if (string.IsNullOrWhiteSpace(cls.BaseClass))
+        {
+            await WriteLineAsync(writer, classDeclaration, indentLevel);
+        }
+        else
+        {
+            await WriteLineAsync(writer, $"{classDeclaration}: {cls.BaseClass}", indentLevel);
+        }
 
         await WriteLineAsync(writer, "{", indentLevel);
 
@@ -181,14 +193,9 @@ public static partial class FactorioModelWriter
         }
 
         IEnumerable<string> parameters = method.Parameters.OrderBy(p => p.Optional ? 1 : 0).Select(ComputeParameter);
-        string exception = method.ReturnType == null ? $"{UseExecuteAsyncException}()" : $"{UseReadAsyncException}()";
 
         await WriteLineAsync(writer, $"[{MethodAttribute}(\"{method.LuaName}\")]", indentLevel);
-        await WriteLineAsync(
-            writer,
-            $"public {(method.IsStatic ? "static " : "")}{method.ReturnType ?? "void"} {method.Name}({string.Join(", ", parameters)}) => throw {exception};",
-            indentLevel
-        );
+        await WriteLineAsync(writer, $"public abstract {method.ReturnType ?? "void"} {method.Name}({string.Join(", ", parameters)});", indentLevel);
     }
 
     static async Task WriteIndexer(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
@@ -199,14 +206,10 @@ public static partial class FactorioModelWriter
         }
 
         string returnType = op.Optional ? $"{op.ReturnType}?" : op.ReturnType;
-        string getter = op.Read ? "get" : "private get";
-        string setter = op.Write ? "set" : "private set";
+        string getter = op.Read ? "get; " : "";
+        string setter = op.Write ? "set; " : "";
 
-        await WriteLineAsync(
-            writer,
-            $"public {returnType} this[{op.KeyType} key] {{ {getter} => throw {UseReadAsyncException}(); {setter} => throw {UseExecuteAsyncException}(); }}",
-            indentLevel
-        );
+        await WriteLineAsync(writer, $"public abstract {returnType} this[{op.KeyType} key] {{ {getter}{setter}}}", indentLevel);
     }
 
     static async Task WriteDocumentation(TextWriter writer, FactorioModelDocumentation documentation, int indentLevel = 0)

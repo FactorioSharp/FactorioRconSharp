@@ -11,7 +11,47 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ConstantCombinatorParameters")]
-public class ConstantCombinatorParameters
+public abstract class ConstantCombinatorParameters
 {
+  /// <summary>
+  /// Signal to emit.
+  /// </summary>
+  [FactorioRconAttribute("signal")]
+  public SignalID Signal { get; set; }
+
+  /// <summary>
+  /// Value of the signal to emit.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+  public int Count { get; set; }
+
+  /// <summary>
+  /// Index of the constant combinator's slot to set this signal to.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+  public uint Index { get; set; }
+
+}
+
+public abstract class Table10675717
+{
+  /// <summary>
+  /// Signal to emit.
+  /// </summary>
+  [FactorioRconAttribute("signal")]
+  public SignalID Signal { get; set; }
+
+  /// <summary>
+  /// Value of the signal to emit.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+  public int Count { get; set; }
+
+  /// <summary>
+  /// Index of the constant combinator's slot to set this signal to.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+  public uint Index { get; set; }
+
 }
 

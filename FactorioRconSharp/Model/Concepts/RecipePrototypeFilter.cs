@@ -14,7 +14,78 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("RecipePrototypeFilter")]
-public class RecipePrototypeFilter
+public abstract class RecipePrototypeFilter
 {
+  /// <summary>
+  /// The condition to filter on. One of `"enabled"`, `"hidden"`, `"hidden-from-flow-stats"`, `"hidden-from-player-crafting"`, `"allow-as-intermediate"`, `"allow-intermediates"`, `"allow-decomposition"`, `"always-show-made-in"`, `"always-show-products"`, `"show-amount-in-title"`, `"has-ingredients"`, `"has-products"`, `"has-ingredient-item"`, `"has-ingredient-fluid"`, `"has-product-item"`, `"has-product-fluid"`, `"subgroup"`, `"category"`, `"energy"`, `"emissions-multiplier"`, `"request-paste-multiplier"`, `"overload-multiplier"`.
+  /// </summary>
+  [FactorioRconAttribute("filter")]
+  public string Filter { get; set; }
+
+  /// <summary>
+  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
+  /// </summary>
+  [FactorioRconAttribute("mode")]
+  public Union3568373 Mode { get; set; }
+
+  /// <summary>
+  /// Inverts the condition. Default is `false`.
+  /// </summary>
+  [FactorioRconAttribute("invert")]
+  public bool Invert { get; set; }
+
+}
+
+public abstract class Table20047726
+{
+  /// <summary>
+  /// The condition to filter on. One of `"enabled"`, `"hidden"`, `"hidden-from-flow-stats"`, `"hidden-from-player-crafting"`, `"allow-as-intermediate"`, `"allow-intermediates"`, `"allow-decomposition"`, `"always-show-made-in"`, `"always-show-products"`, `"show-amount-in-title"`, `"has-ingredients"`, `"has-products"`, `"has-ingredient-item"`, `"has-ingredient-fluid"`, `"has-product-item"`, `"has-product-fluid"`, `"subgroup"`, `"category"`, `"energy"`, `"emissions-multiplier"`, `"request-paste-multiplier"`, `"overload-multiplier"`.
+  /// </summary>
+  [FactorioRconAttribute("filter")]
+  public string Filter { get; set; }
+
+  /// <summary>
+  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
+  /// </summary>
+  [FactorioRconAttribute("mode")]
+  public Union3568373 Mode { get; set; }
+
+  /// <summary>
+  /// Inverts the condition. Default is `false`.
+  /// </summary>
+  [FactorioRconAttribute("invert")]
+  public bool Invert { get; set; }
+
+}
+
+[GenerateOneOf]
+public abstract partial class Union3568373: OneOfBase<Literal64920960, Literal53265285>
+{
+}
+
+/// <summary>
+/// Literal value: or
+/// </summary>
+public abstract class Literal64920960
+{
+  /// <summary>
+  /// Literal value: or
+  /// </summary>
+  [FactorioRconAttribute("or")]
+  public static object Value { get; private set; }
+
+}
+
+/// <summary>
+/// Literal value: and
+/// </summary>
+public abstract class Literal53265285
+{
+  /// <summary>
+  /// Literal value: and
+  /// </summary>
+  [FactorioRconAttribute("and")]
+  public static object Value { get; private set; }
+
 }
 

@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("InventoryFilter")]
-public class InventoryFilter
+public abstract class InventoryFilter
 {
+  /// <summary>
+  /// Position of the corresponding filter slot.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+  public uint Index { get; set; }
+
+  /// <summary>
+  /// Item prototype name of the item to filter.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+}
+
+public abstract class Table31879635
+{
+  /// <summary>
+  /// Position of the corresponding filter slot.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+  public uint Index { get; set; }
+
+  /// <summary>
+  /// Item prototype name of the item to filter.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
 }
 

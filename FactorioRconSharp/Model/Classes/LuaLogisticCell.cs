@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Logistic cell of a particular <see cref="LuaEntity).A"LogisticCell"IsTheGivenNameForSettingsAndPropertiesUsedByWhatWouldNormallyBeSeenAsA"Roboport".ALogisticCellHoweverDoesn'THaveToBeAttachedToTheRoboportEntity(TheCharacterHasOneForThePersonalRoboport" />.
 /// </summary>
 [FactorioRconClass("LuaLogisticCell")]
-public class LuaLogisticCell
+public abstract class LuaLogisticCell: LuaObject
 {
   /// <summary>
   /// Logistic radius of this cell.
@@ -92,19 +92,19 @@ public class LuaLogisticCell
   /// Neighbouring cells.
   /// </summary>
   [FactorioRconAttribute("neighbours")]
-  public LuaLogisticCell[] Neighbours { get; private set; }
+  public List<LuaLogisticCell> Neighbours { get; private set; }
 
   /// <summary>
   /// Robots currently being charged.
   /// </summary>
   [FactorioRconAttribute("charging_robots")]
-  public LuaEntity[] ChargingRobots { get; private set; }
+  public List<LuaEntity> ChargingRobots { get; private set; }
 
   /// <summary>
   /// Robots waiting to charge.
   /// </summary>
   [FactorioRconAttribute("to_charge_robots")]
-  public LuaEntity[] ToChargeRobots { get; private set; }
+  public List<LuaEntity> ToChargeRobots { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -123,27 +123,27 @@ public class LuaLogisticCell
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("is_in_logistic_range")]
-  public bool IsInLogisticRange(MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsInLogisticRange(MapPosition position);
 
   /// <summary>
   /// Is a given position within the construction range of this cell?
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("is_in_construction_range")]
-  public bool IsInConstructionRange(MapPosition position) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsInConstructionRange(MapPosition position);
 
   /// <summary>
   /// Are two cells neighbours?
   /// </summary>
   /// <param name="other">Lua name: other</param>
   [FactorioRconMethod("is_neighbour_with")]
-  public bool IsNeighbourWith(LuaLogisticCell other) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsNeighbourWith(LuaLogisticCell other);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

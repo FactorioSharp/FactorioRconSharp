@@ -19,19 +19,19 @@ namespace FactorioRconSharp.Model.Classes;
 /// - The electric network GUI shows "power consumption" on the left side, so in this case `input` describes the power consumption numbers.
 /// </summary>
 [FactorioRconClass("LuaFlowStatistics")]
-public class LuaFlowStatistics
+public abstract class LuaFlowStatistics: LuaObject
 {
   /// <summary>
   /// List of input counts indexed by prototype name. Represents the data that is shown on the left side of the GUI for the given statistics.
   /// </summary>
   [FactorioRconAttribute("input_counts")]
-  public Dictionary<string, OneOf<ulong, double>> InputCounts { get; private set; }
+  public Dictionary<string, Union28484652> InputCounts { get; private set; }
 
   /// <summary>
   /// List of output counts indexed by prototype name. Represents the data that is shown on the right side of the GUI for the given statistics.
   /// </summary>
   [FactorioRconAttribute("output_counts")]
-  public Dictionary<string, OneOf<ulong, double>> OutputCounts { get; private set; }
+  public Dictionary<string, Union20748542> OutputCounts { get; private set; }
 
   /// <summary>
   /// The force these statistics belong to. `nil` for pollution statistics.
@@ -56,7 +56,7 @@ public class LuaFlowStatistics
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_input_count")]
-  public OneOf<ulong, double> GetInputCount(string name) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union64836814 GetInputCount(string name);
 
   /// <summary>
   /// Sets the total input count for a given prototype.
@@ -64,14 +64,14 @@ public class LuaFlowStatistics
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("set_input_count")]
-  public void SetInputCount(string name, OneOf<ulong, double> count) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetInputCount(string name, Union1219419 count);
 
   /// <summary>
   /// Gets the total output count for a given prototype.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_output_count")]
-  public OneOf<ulong, double> GetOutputCount(string name) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union35363151 GetOutputCount(string name);
 
   /// <summary>
   /// Sets the total output count for a given prototype.
@@ -79,7 +79,7 @@ public class LuaFlowStatistics
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("set_output_count")]
-  public void SetOutputCount(string name, OneOf<ulong, double> count) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetOutputCount(string name, Union18898419 count);
 
   /// <summary>
   /// Gets the flow count value for the given time frame. If `sample_index` is not provided, then the value returned is the average across the provided precision time period. These are the values shown in the bottom section of the statistics GUIs.
@@ -94,7 +94,7 @@ public class LuaFlowStatistics
   /// <param name="sampleIndex">Lua name: sample_index</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("get_flow_count")]
-  public double GetFlowCount(string name, bool input, FlowPrecisionIndexEnum precisionIndex, ushort? sampleIndex = null, bool? count = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetFlowCount(string name, bool input, FlowPrecisionIndexEnum precisionIndex, ushort? sampleIndex = null, bool? count = null);
 
   /// <summary>
   /// Adds a value to this flow statistics.
@@ -102,19 +102,49 @@ public class LuaFlowStatistics
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("on_flow")]
-  public void OnFlow(string name, float count) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void OnFlow(string name, float count);
 
   /// <summary>
   /// Reset all the statistics data to 0.
   /// </summary>
   [FactorioRconMethod("clear")]
-  public void Clear() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union28484652: OneOfBase<ulong, double>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union20748542: OneOfBase<ulong, double>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union64836814: OneOfBase<ulong, double>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union35363151: OneOfBase<ulong, double>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1219419: OneOfBase<ulong, double>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union18898419: OneOfBase<ulong, double>
+{
 }
 

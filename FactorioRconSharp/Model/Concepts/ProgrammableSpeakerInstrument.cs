@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerInstrument")]
-public class ProgrammableSpeakerInstrument
+public abstract class ProgrammableSpeakerInstrument
 {
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  [FactorioRconAttribute("notes")]
+  public List<string> Notes { get; set; }
+
+}
+
+public abstract class Table45421080
+{
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  [FactorioRconAttribute("notes")]
+  public List<string> Notes { get; set; }
+
 }
 

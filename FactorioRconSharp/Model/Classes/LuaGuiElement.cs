@@ -35,7 +35,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// ```</item></list>
 /// </examples>
 [FactorioRconClass("LuaGuiElement")]
-public class LuaGuiElement
+public abstract class LuaGuiElement: LuaObject
 {
   /// <summary>
   /// The index of this GUI element (unique amongst the GUI elements of a LuaPlayer).
@@ -83,7 +83,7 @@ public class LuaGuiElement
   /// The style of this element. When read, this evaluates to a <see cref="LuaStyle).ForWriting,ItOnlyAcceptsAStringThatSpecifiesTheTextualIdentifier(PrototypeName" /> of the desired style.
   /// </summary>
   [FactorioRconAttribute("style")]
-  public OneOf<LuaStyle, string> Style { get; set; }
+  public Union66032303 Style { get; set; }
 
   /// <summary>
   /// Sets whether this GUI element is visible or completely hidden, taking no space in the layout.
@@ -101,7 +101,7 @@ public class LuaGuiElement
   /// Names of all the children of this element. These are the identifiers that can be used to access the child as an attribute of this element.
   /// </summary>
   [FactorioRconAttribute("children_names")]
-  public string[] ChildrenNames { get; private set; }
+  public List<string> ChildrenNames { get; private set; }
 
   /// <summary>
   /// Is this checkbox or radiobutton checked?
@@ -173,13 +173,13 @@ public class LuaGuiElement
   /// The child-elements of this GUI element.
   /// </summary>
   [FactorioRconAttribute("children")]
-  public LuaGuiElement[] Children { get; private set; }
+  public List<LuaGuiElement> Children { get; private set; }
 
   /// <summary>
   /// The items in this dropdown or listbox.
   /// </summary>
   [FactorioRconAttribute("items")]
-  public LocalisedString[] Items { get; set; }
+  public List<LocalisedString> Items { get; set; }
 
   /// <summary>
   /// The selected index for this dropdown or listbox. Returns `0` if none is selected.
@@ -275,7 +275,7 @@ public class LuaGuiElement
   /// The elem value of this choose-elem-button, if any.
   /// </summary>
   [FactorioRconAttribute("elem_value")]
-  public OneOf<string, SignalID> ElemValue { get; set; }
+  public Union44501086 ElemValue { get; set; }
 
   /// <summary>
   /// The elem filters of this choose-elem-button, if any. The compatible type of filter is determined by `elem_type`.
@@ -413,7 +413,7 @@ public class LuaGuiElement
   /// The tabs and contents being shown in this tabbed-pane.
   /// </summary>
   [FactorioRconAttribute("tabs")]
-  public TabAndContent[] Tabs { get; private set; }
+  public List<TabAndContent> Tabs { get; private set; }
 
   /// <summary>
   /// The entity associated with this entity-preview, camera, minimap, if any.
@@ -490,7 +490,7 @@ public class LuaGuiElement
   /// <summary>
   /// The indexing operator. Gets children by name.
   /// </summary>
-  public LuaGuiElement? this[uint key] { get => throw FactorioModelUtils.UseClientReadAsyncMethod(); private set => throw FactorioModelUtils.UseClientExecuteAsyncMethod(); }
+  public abstract LuaGuiElement? this[uint key] { get; }
 
   /// <summary>
   /// Add a new child element to this GuiElement.
@@ -510,13 +510,13 @@ public class LuaGuiElement
   /// <param name="gameControllerInteraction">Lua name: game_controller_interaction</param>
   /// <param name="raiseHoverEvents">Lua name: raise_hover_events</param>
   [FactorioRconMethod("add")]
-  public LuaGuiElement Add(GuiElementType type, string? name = null, LocalisedString? caption = null, LocalisedString? tooltip = null, ElemID? elemTooltip = null, bool? enabled = null, bool? visible = null, bool? ignoredByInteraction = null, string? style = null, Tags? tags = null, uint? index = null, GuiAnchor? anchor = null, GameControllerInteractionEnum? gameControllerInteraction = null, bool? raiseHoverEvents = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaGuiElement Add(GuiElementType type, string? name = null, LocalisedString? caption = null, LocalisedString? tooltip = null, ElemID? elemTooltip = null, bool? enabled = null, bool? visible = null, bool? ignoredByInteraction = null, string? style = null, Tags? tags = null, uint? index = null, GuiAnchor? anchor = null, GameControllerInteractionEnum? gameControllerInteraction = null, bool? raiseHoverEvents = null);
 
   /// <summary>
   /// Remove children of this element. Any <see cref="LuaGuiElement" /> objects referring to the destroyed elements become invalid after this operation.
   /// </summary>
   [FactorioRconMethod("clear")]
-  public void Clear() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear();
 
   /// <summary>
   /// Remove this element, along with its children. Any <see cref="LuaGuiElement" /> objects referring to the destroyed elements become invalid after this operation.
@@ -525,7 +525,7 @@ public class LuaGuiElement
   /// The top-level GUI elements - <see cref="LuaGui.Screen" /> - can't be destroyed.
   /// </remarks>
   [FactorioRconMethod("destroy")]
-  public void Destroy() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Destroy();
 
   /// <summary>
   /// The mod that owns this Gui element or `nil` if it's owned by the scenario script.
@@ -534,7 +534,7 @@ public class LuaGuiElement
   /// This has a not-super-expensive, but non-free cost to get.
   /// </remarks>
   [FactorioRconMethod("get_mod")]
-  public string? GetMod() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetMod();
 
   /// <summary>
   /// Gets the index that this element has in its parent element.
@@ -543,7 +543,7 @@ public class LuaGuiElement
   /// This iterates through the children of the parent of this element, meaning this has a non-free cost to get, but is faster than doing the equivalent in Lua.
   /// </remarks>
   [FactorioRconMethod("get_index_in_parent")]
-  public uint GetIndexInParent() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetIndexInParent();
 
   /// <summary>
   /// Swaps the children at the given indices in this element.
@@ -551,20 +551,20 @@ public class LuaGuiElement
   /// <param name="index1">Lua name: index_1</param>
   /// <param name="index2">Lua name: index_2</param>
   [FactorioRconMethod("swap_children")]
-  public void SwapChildren(uint index1, uint index2) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SwapChildren(uint index1, uint index2);
 
   /// <summary>
   /// Removes the items in this dropdown or listbox.
   /// </summary>
   [FactorioRconMethod("clear_items")]
-  public void ClearItems() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ClearItems();
 
   /// <summary>
   /// Gets the item at the given index from this dropdown or listbox.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_item")]
-  public LocalisedString GetItem(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LocalisedString GetItem(uint index);
 
   /// <summary>
   /// Sets the given string at the given index in this dropdown or listbox.
@@ -572,7 +572,7 @@ public class LuaGuiElement
   /// <param name="index">Lua name: index</param>
   /// <param name="@string">Lua name: string</param>
   [FactorioRconMethod("set_item")]
-  public void SetItem(uint index, LocalisedString @string) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetItem(uint index, LocalisedString @string);
 
   /// <summary>
   /// Inserts a string at the end or at the given index of this dropdown or listbox.
@@ -580,26 +580,26 @@ public class LuaGuiElement
   /// <param name="@string">Lua name: string</param>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("add_item")]
-  public void AddItem(LocalisedString @string, uint? index = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddItem(LocalisedString @string, uint? index = null);
 
   /// <summary>
   /// Removes the item at the given index from this dropdown or listbox.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("remove_item")]
-  public void RemoveItem(uint index) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RemoveItem(uint index);
 
   /// <summary>
   /// Gets this sliders minimum value.
   /// </summary>
   [FactorioRconMethod("get_slider_minimum")]
-  public double GetSliderMinimum() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetSliderMinimum();
 
   /// <summary>
   /// Gets this sliders maximum value.
   /// </summary>
   [FactorioRconMethod("get_slider_maximum")]
-  public double GetSliderMaximum() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetSliderMaximum();
 
   /// <summary>
   /// Sets this sliders minimum and maximum values.
@@ -610,25 +610,25 @@ public class LuaGuiElement
   /// <param name="minimum">Lua name: minimum</param>
   /// <param name="maximum">Lua name: maximum</param>
   [FactorioRconMethod("set_slider_minimum_maximum")]
-  public void SetSliderMinimumMaximum(double minimum, double maximum) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetSliderMinimumMaximum(double minimum, double maximum);
 
   /// <summary>
   /// Gets the minimum distance this slider can move.
   /// </summary>
   [FactorioRconMethod("get_slider_value_step")]
-  public double GetSliderValueStep() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetSliderValueStep();
 
   /// <summary>
   /// Returns whether this slider only allows being moved to discrete positions.
   /// </summary>
   [FactorioRconMethod("get_slider_discrete_slider")]
-  public bool GetSliderDiscreteSlider() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GetSliderDiscreteSlider();
 
   /// <summary>
   /// Returns whether this slider only allows discrete values.
   /// </summary>
   [FactorioRconMethod("get_slider_discrete_values")]
-  public bool GetSliderDiscreteValues() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GetSliderDiscreteValues();
 
   /// <summary>
   /// Sets the minimum distance this slider can move.
@@ -638,51 +638,51 @@ public class LuaGuiElement
   /// </remarks>
   /// <param name="value">Lua name: value</param>
   [FactorioRconMethod("set_slider_value_step")]
-  public void SetSliderValueStep(double value) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetSliderValueStep(double value);
 
   /// <summary>
   /// Sets whether this slider only allows being moved to discrete positions.
   /// </summary>
   /// <param name="value">Lua name: value</param>
   [FactorioRconMethod("set_slider_discrete_slider")]
-  public void SetSliderDiscreteSlider(bool value) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetSliderDiscreteSlider(bool value);
 
   /// <summary>
   /// Sets whether this slider only allows discrete values.
   /// </summary>
   /// <param name="value">Lua name: value</param>
   [FactorioRconMethod("set_slider_discrete_values")]
-  public void SetSliderDiscreteValues(bool value) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetSliderDiscreteValues(bool value);
 
   /// <summary>
   /// Focuses this GUI element if possible.
   /// </summary>
   [FactorioRconMethod("focus")]
-  public void Focus() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Focus();
 
   /// <summary>
   /// Scrolls this scroll bar to the top.
   /// </summary>
   [FactorioRconMethod("scroll_to_top")]
-  public void ScrollToTop() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ScrollToTop();
 
   /// <summary>
   /// Scrolls this scroll bar to the bottom.
   /// </summary>
   [FactorioRconMethod("scroll_to_bottom")]
-  public void ScrollToBottom() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ScrollToBottom();
 
   /// <summary>
   /// Scrolls this scroll bar to the left.
   /// </summary>
   [FactorioRconMethod("scroll_to_left")]
-  public void ScrollToLeft() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ScrollToLeft();
 
   /// <summary>
   /// Scrolls this scroll bar to the right.
   /// </summary>
   [FactorioRconMethod("scroll_to_right")]
-  public void ScrollToRight() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ScrollToRight();
 
   /// <summary>
   /// Scrolls this scroll bar such that the specified GUI element is visible to the player.
@@ -690,13 +690,13 @@ public class LuaGuiElement
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public void ScrollToElement(LuaGuiElement element, OneOf<Literal5826912, Literal55256301>? scrollMode = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ScrollToElement(LuaGuiElement element, Union62107587? scrollMode = null);
 
   /// <summary>
   /// Selects all the text in this textbox.
   /// </summary>
   [FactorioRconMethod("select_all")]
-  public void SelectAll() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SelectAll();
 
   /// <summary>
   /// Selects a range of text in this textbox.
@@ -704,7 +704,7 @@ public class LuaGuiElement
   /// <param name="startIndex">Lua name: start_index</param>
   /// <param name="endIndex">Lua name: end_index</param>
   [FactorioRconMethod("select")]
-  public void Select(int startIndex, int endIndex) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Select(int startIndex, int endIndex);
 
   /// <summary>
   /// Adds the given tab and content widgets to this tabbed pane as a new tab.
@@ -712,7 +712,7 @@ public class LuaGuiElement
   /// <param name="tab">Lua name: tab</param>
   /// <param name="content">Lua name: content</param>
   [FactorioRconMethod("add_tab")]
-  public void AddTab(LuaGuiElement tab, LuaGuiElement content) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void AddTab(LuaGuiElement tab, LuaGuiElement content);
 
   /// <summary>
   /// Removes the given tab and its associated content from this tabbed pane.
@@ -723,13 +723,13 @@ public class LuaGuiElement
   /// </remarks>
   /// <param name="tab">Lua name: tab</param>
   [FactorioRconMethod("remove_tab")]
-  public void RemoveTab(LuaGuiElement tab) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void RemoveTab(LuaGuiElement tab);
 
   /// <summary>
   /// Forces this frame to re-auto-center. Only works on frames stored directly in <see cref="LuaGui.Screen" />.
   /// </summary>
   [FactorioRconMethod("force_auto_center")]
-  public void ForceAutoCenter() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ForceAutoCenter();
 
   /// <summary>
   /// Scrolls the scroll bar such that the specified listbox item is visible to the player.
@@ -737,7 +737,7 @@ public class LuaGuiElement
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public void ScrollToItem(int index, OneOf<Literal19531649, Literal7511460>? scrollMode = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void ScrollToItem(int index, Union29190913? scrollMode = null);
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.
@@ -746,26 +746,41 @@ public class LuaGuiElement
   /// Only works for elements in <see cref="LuaGui.Screen" />
   /// </remarks>
   [FactorioRconMethod("bring_to_front")]
-  public void BringToFront() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void BringToFront();
 
   /// <summary>
   /// Closes the dropdown list if this is a dropdown and it is open.
   /// </summary>
   [FactorioRconMethod("close_dropdown")]
-  public void CloseDropdown() => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void CloseDropdown();
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union44501086: OneOfBase<string, SignalID>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union66032303: OneOfBase<LuaStyle, string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union62107587: OneOfBase<Literal9029417, Literal55400036>
+{
 }
 
 /// <summary>
 /// Literal value: in-view
 /// </summary>
-public class Literal5826912
+public abstract class Literal9029417
 {
   /// <summary>
   /// Literal value: in-view
@@ -778,7 +793,7 @@ public class Literal5826912
 /// <summary>
 /// Literal value: top-third
 /// </summary>
-public class Literal55256301
+public abstract class Literal55400036
 {
   /// <summary>
   /// Literal value: top-third
@@ -788,10 +803,15 @@ public class Literal55256301
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union29190913: OneOfBase<Literal22550079, Literal3789628>
+{
+}
+
 /// <summary>
 /// Literal value: in-view
 /// </summary>
-public class Literal19531649
+public abstract class Literal22550079
 {
   /// <summary>
   /// Literal value: in-view
@@ -804,7 +824,7 @@ public class Literal19531649
 /// <summary>
 /// Literal value: top-third
 /// </summary>
-public class Literal7511460
+public abstract class Literal3789628
 {
   /// <summary>
   /// Literal value: top-third

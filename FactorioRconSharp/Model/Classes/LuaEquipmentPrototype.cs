@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a modular equipment.
 /// </summary>
 [FactorioRconClass("LuaEquipmentPrototype")]
-public class LuaEquipmentPrototype
+public abstract class LuaEquipmentPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -44,7 +44,7 @@ public class LuaEquipmentPrototype
   /// Shape of this equipment prototype.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table38414640 Shape { get; private set; }
+  public Table45330878 Shape { get; private set; }
 
   /// <summary>
   /// The result item when taking this equipment out of an equipment grid, if any.
@@ -74,7 +74,7 @@ public class LuaEquipmentPrototype
   /// The logistic parameters for this roboport equipment.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table5024928 LogisticParameters { get; private set; }
+  public Table66629781 LogisticParameters { get; private set; }
 
   [FactorioRconAttribute("energy_consumption")]
   public double EnergyConsumption { get; private set; }
@@ -92,7 +92,7 @@ public class LuaEquipmentPrototype
   /// Category names for this equipment. These <see cref="LuaEquipmentGridPrototype.EquipmentCategories" /> will be used to determine whether this equipment is allowed in a particular equipment grid.
   /// </summary>
   [FactorioRconAttribute("equipment_categories")]
-  public string[] EquipmentCategories { get; private set; }
+  public List<string> EquipmentCategories { get; private set; }
 
   /// <summary>
   /// The burner energy source prototype this equipment uses, if any.
@@ -140,11 +140,11 @@ public class LuaEquipmentPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 
-public class Table5024928
+public abstract class Table66629781
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -193,7 +193,7 @@ public class Table5024928
 
 }
 
-public class Table38414640
+public abstract class Table45330878
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
@@ -205,7 +205,7 @@ public class Table38414640
   /// Only set when the shape is "manual"
   /// </summary>
   [FactorioRconAttribute("points")]
-  public EquipmentPoint[] Points { get; set; }
+  public List<EquipmentPoint> Points { get; set; }
 
 }
 

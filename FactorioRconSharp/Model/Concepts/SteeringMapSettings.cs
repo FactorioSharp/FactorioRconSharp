@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("SteeringMapSettings")]
-public class SteeringMapSettings
+public abstract class SteeringMapSettings
 {
+  [FactorioRconAttribute("default")]
+  public SteeringMapSetting Default { get; set; }
+
+  [FactorioRconAttribute("moving")]
+  public SteeringMapSetting Moving { get; set; }
+
+}
+
+public abstract class Table8828568
+{
+  [FactorioRconAttribute("default")]
+  public SteeringMapSetting Default { get; set; }
+
+  [FactorioRconAttribute("moving")]
+  public SteeringMapSetting Moving { get; set; }
+
 }
 

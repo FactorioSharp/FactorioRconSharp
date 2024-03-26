@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a custom input.
 /// </summary>
 [FactorioRconClass("LuaCustomInputPrototype")]
-public class LuaCustomInputPrototype
+public abstract class LuaCustomInputPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -68,7 +68,7 @@ public class LuaCustomInputPrototype
   /// The consuming type.
   /// </summary>
   [FactorioRconAttribute("consuming")]
-  public OneOf<Literal66629781, Literal49382823> Consuming { get; private set; }
+  public Union42715336 Consuming { get; private set; }
 
   /// <summary>
   /// The action that happens when this custom input is triggered.
@@ -122,14 +122,19 @@ public class LuaCustomInputPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union42715336: OneOfBase<Literal36963566, Literal25474675>
+{
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal66629781
+public abstract class Literal36963566
 {
   /// <summary>
   /// Literal value: none
@@ -142,7 +147,7 @@ public class Literal66629781
 /// <summary>
 /// Literal value: game-only
 /// </summary>
-public class Literal49382823
+public abstract class Literal25474675
 {
   /// <summary>
   /// Literal value: game-only

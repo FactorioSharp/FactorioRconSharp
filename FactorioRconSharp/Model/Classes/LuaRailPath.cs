@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A rail path.
 /// </summary>
 [FactorioRconClass("LuaRailPath")]
-public class LuaRailPath
+public abstract class LuaRailPath: LuaObject
 {
   /// <summary>
   /// The total number of rails in this path.
@@ -68,7 +68,7 @@ public class LuaRailPath
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

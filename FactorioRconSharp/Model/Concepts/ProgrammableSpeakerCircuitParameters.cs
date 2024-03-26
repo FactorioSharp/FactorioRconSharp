@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerCircuitParameters")]
-public class ProgrammableSpeakerCircuitParameters
+public abstract class ProgrammableSpeakerCircuitParameters
 {
+  [FactorioRconAttribute("signal_value_is_pitch")]
+  public bool SignalValueIsPitch { get; set; }
+
+  [FactorioRconAttribute("instrument_id")]
+  public uint InstrumentId { get; set; }
+
+  [FactorioRconAttribute("note_id")]
+  public uint NoteId { get; set; }
+
+}
+
+public abstract class Table15737621
+{
+  [FactorioRconAttribute("signal_value_is_pitch")]
+  public bool SignalValueIsPitch { get; set; }
+
+  [FactorioRconAttribute("instrument_id")]
+  public uint InstrumentId { get; set; }
+
+  [FactorioRconAttribute("note_id")]
+  public uint NoteId { get; set; }
+
 }
 

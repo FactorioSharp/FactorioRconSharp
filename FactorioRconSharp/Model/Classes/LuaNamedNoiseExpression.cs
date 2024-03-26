@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a named noise expression.
 /// </summary>
 [FactorioRconClass("LuaNamedNoiseExpression")]
-public class LuaNamedNoiseExpression
+public abstract class LuaNamedNoiseExpression: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -62,7 +62,7 @@ public class LuaNamedNoiseExpression
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

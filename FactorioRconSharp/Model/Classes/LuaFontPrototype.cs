@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a font.
 /// </summary>
 [FactorioRconClass("LuaFontPrototype")]
-public class LuaFontPrototype
+public abstract class LuaFontPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -59,7 +59,7 @@ public class LuaFontPrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

@@ -14,7 +14,35 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A position defined using the map editor.
 /// </summary>
 [FactorioRconConcept("ScriptPosition")]
-public class ScriptPosition
+public abstract class ScriptPosition
 {
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  [FactorioRconAttribute("color")]
+  public Color Color { get; set; }
+
+  [FactorioRconAttribute("id")]
+  public uint Id { get; set; }
+
+}
+
+public abstract class Table63786199
+{
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
+
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  [FactorioRconAttribute("color")]
+  public Color Color { get; set; }
+
+  [FactorioRconAttribute("id")]
+  public uint Id { get; set; }
+
 }
 

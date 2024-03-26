@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerParameters")]
-public class ProgrammableSpeakerParameters
+public abstract class ProgrammableSpeakerParameters
 {
+  [FactorioRconAttribute("playback_volume")]
+  public double PlaybackVolume { get; set; }
+
+  [FactorioRconAttribute("playback_globally")]
+  public bool PlaybackGlobally { get; set; }
+
+  [FactorioRconAttribute("allow_polyphony")]
+  public bool AllowPolyphony { get; set; }
+
+}
+
+public abstract class Table2858361
+{
+  [FactorioRconAttribute("playback_volume")]
+  public double PlaybackVolume { get; set; }
+
+  [FactorioRconAttribute("playback_globally")]
+  public bool PlaybackGlobally { get; set; }
+
+  [FactorioRconAttribute("allow_polyphony")]
+  public bool AllowPolyphony { get; set; }
+
 }
 

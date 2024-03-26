@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// A circuit network associated with a given entity, connector, and wire type.
 /// </summary>
 [FactorioRconClass("LuaCircuitNetwork")]
-public class LuaCircuitNetwork
+public abstract class LuaCircuitNetwork: LuaObject
 {
   /// <summary>
   /// The entity this circuit network reference is associated with.
@@ -38,7 +38,7 @@ public class LuaCircuitNetwork
   /// The circuit network signals last tick. `nil` if there were no signals last tick.
   /// </summary>
   [FactorioRconAttribute("signals")]
-  public Signal[] Signals { get; private set; }
+  public List<Signal> Signals { get; private set; }
 
   /// <summary>
   /// The circuit networks ID.
@@ -66,13 +66,13 @@ public class LuaCircuitNetwork
 
   /// <param name="signal">Lua name: signal</param>
   [FactorioRconMethod("get_signal")]
-  public int GetSignal(SignalID signal) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract int GetSignal(SignalID signal);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

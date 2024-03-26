@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("OldTileAndPosition")]
-public class OldTileAndPosition
+public abstract class OldTileAndPosition
 {
+  [FactorioRconAttribute("old_tile")]
+  public LuaTilePrototype OldTile { get; set; }
+
+  [FactorioRconAttribute("position")]
+  public TilePosition Position { get; set; }
+
+}
+
+public abstract class Table16083019
+{
+  [FactorioRconAttribute("old_tile")]
+  public LuaTilePrototype OldTile { get; set; }
+
+  [FactorioRconAttribute("position")]
+  public TilePosition Position { get; set; }
+
 }
 

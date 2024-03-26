@@ -14,13 +14,13 @@ namespace FactorioRconSharp.Model.Classes;
 /// All permission groups.
 /// </summary>
 [FactorioRconClass("LuaPermissionGroups")]
-public class LuaPermissionGroups
+public abstract class LuaPermissionGroups: LuaObject
 {
   /// <summary>
   /// All of the permission groups.
   /// </summary>
   [FactorioRconAttribute("groups")]
-  public LuaPermissionGroup[] Groups { get; private set; }
+  public List<LuaPermissionGroup> Groups { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -39,20 +39,25 @@ public class LuaPermissionGroups
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("create_group")]
-  public LuaPermissionGroup? CreateGroup(string? name = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaPermissionGroup? CreateGroup(string? name = null);
 
   /// <summary>
   /// Gets the permission group with the given name or group ID.
   /// </summary>
   /// <param name="group">Lua name: group</param>
   [FactorioRconMethod("get_group")]
-  public LuaPermissionGroup? GetGroup(OneOf<string, uint> group) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaPermissionGroup? GetGroup(Union31968364 group);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union31968364: OneOfBase<string, uint>
+{
 }
 

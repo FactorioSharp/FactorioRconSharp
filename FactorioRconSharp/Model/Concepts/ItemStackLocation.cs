@@ -11,7 +11,23 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ItemStackLocation")]
-public class ItemStackLocation
+public abstract class ItemStackLocation
 {
+  [FactorioRconAttribute("inventory")]
+  public InventoryEnum Inventory { get; set; }
+
+  [FactorioRconAttribute("slot")]
+  public uint Slot { get; set; }
+
+}
+
+public abstract class Table41682650
+{
+  [FactorioRconAttribute("inventory")]
+  public InventoryEnum Inventory { get; set; }
+
+  [FactorioRconAttribute("slot")]
+  public uint Slot { get; set; }
+
 }
 

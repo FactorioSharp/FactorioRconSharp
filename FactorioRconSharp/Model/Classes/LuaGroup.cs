@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Item group or subgroup.
 /// </summary>
 [FactorioRconClass("LuaGroup")]
-public class LuaGroup
+public abstract class LuaGroup: LuaObject
 {
   [FactorioRconAttribute("name")]
   public string Name { get; private set; }
@@ -38,7 +38,7 @@ public class LuaGroup
   /// Subgroups of this group.
   /// </summary>
   [FactorioRconAttribute("subgroups")]
-  public LuaGroup[] Subgroups { get; private set; }
+  public List<LuaGroup> Subgroups { get; private set; }
 
   /// <summary>
   /// The additional order value used in recipe ordering.
@@ -68,7 +68,7 @@ public class LuaGroup
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

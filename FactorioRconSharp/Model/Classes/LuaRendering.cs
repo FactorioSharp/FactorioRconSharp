@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Allows rendering of geometric shapes, text and sprites in the game world through the global object named `rendering`. Each render object is identified by an id that is universally unique for the lifetime of a whole game.
 /// </summary>
 [FactorioRconClass("LuaRendering")]
-public class LuaRendering
+public abstract class LuaRendering: LuaObject
 {
   /// <summary>
   /// This object's name.
@@ -42,7 +42,7 @@ public class LuaRendering
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_line")]
-  public ulong DrawLine(Color color, float width, OneOf<MapPosition, LuaEntity> from, OneOf<MapPosition, LuaEntity> to, SurfaceIdentification surface, double? gapLength = null, double? dashLength = null, double? dashOffset = null, Vector? fromOffset = null, Vector? toOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawLine(Color color, float width, Union57566403 from, Union49582139 to, SurfaceIdentification surface, double? gapLength = null, double? dashLength = null, double? dashOffset = null, Vector? fromOffset = null, Vector? toOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a text.
@@ -69,7 +69,7 @@ public class LuaRendering
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   /// <param name="useRichText">Lua name: use_rich_text</param>
   [FactorioRconMethod("draw_text")]
-  public ulong DrawText(LocalisedString text, SurfaceIdentification surface, OneOf<MapPosition, LuaEntity> target, Color color, Vector? targetOffset = null, double? scale = null, string? font = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? drawOnGround = null, RealOrientation? orientation = null, TextAlign? alignment = null, VerticalTextAlign? verticalAlignment = null, bool? scaleWithZoom = null, bool? onlyInAltMode = null, bool? useRichText = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawText(LocalisedString text, SurfaceIdentification surface, Union22599820 target, Color color, Vector? targetOffset = null, double? scale = null, string? font = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, RealOrientation? orientation = null, TextAlign? alignment = null, VerticalTextAlign? verticalAlignment = null, bool? scaleWithZoom = null, bool? onlyInAltMode = null, bool? useRichText = null);
 
   /// <summary>
   /// Create a circle.
@@ -88,7 +88,7 @@ public class LuaRendering
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_circle")]
-  public ulong DrawCircle(Color color, double radius, OneOf<MapPosition, LuaEntity> target, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? targetOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawCircle(Color color, double radius, Union30887001 target, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a rectangle.
@@ -108,7 +108,7 @@ public class LuaRendering
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_rectangle")]
-  public ulong DrawRectangle(Color color, OneOf<MapPosition, LuaEntity> leftTop, OneOf<MapPosition, LuaEntity> rightBottom, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? leftTopOffset = null, Vector? rightBottomOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawRectangle(Color color, Union1968367 leftTop, Union5720734 rightBottom, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? leftTopOffset = null, Vector? rightBottomOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create an arc.
@@ -128,7 +128,7 @@ public class LuaRendering
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_arc")]
-  public ulong DrawArc(Color color, double maxRadius, double minRadius, float startAngle, float angle, OneOf<MapPosition, LuaEntity> target, SurfaceIdentification surface, Vector? targetOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawArc(Color color, double maxRadius, double minRadius, float startAngle, float angle, Union10340569 target, SurfaceIdentification surface, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a triangle mesh defined by a triangle strip.
@@ -149,7 +149,7 @@ public class LuaRendering
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_polygon")]
-  public ulong DrawPolygon(Color color, ScriptRenderVertexTarget[] vertices, SurfaceIdentification surface, OneOf<MapPosition, LuaEntity>? target = null, Vector? targetOffset = null, RealOrientation? orientation = null, OneOf<MapPosition, LuaEntity>? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawPolygon(Color color, List<ScriptRenderVertexTarget> vertices, SurfaceIdentification surface, Union47056750? target = null, Vector? targetOffset = null, RealOrientation? orientation = null, Union63378184? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a sprite.
@@ -173,7 +173,7 @@ public class LuaRendering
   /// <param name="visible">Lua name: visible</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_sprite")]
-  public ulong DrawSprite(SpritePath sprite, OneOf<MapPosition, LuaEntity> target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, OneOf<MapPosition, LuaEntity>? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawSprite(SpritePath sprite, Union60082571 target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, Union63291458? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a light.
@@ -197,7 +197,7 @@ public class LuaRendering
   /// <param name="visible">Lua name: visible</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_light")]
-  public ulong DrawLight(SpritePath sprite, OneOf<MapPosition, LuaEntity> target, SurfaceIdentification surface, RealOrientation? orientation = null, float? scale = null, float? intensity = null, float? minimumDarkness = null, bool? oriented = null, Color? color = null, Vector? targetOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawLight(SpritePath sprite, Union8462621 target, SurfaceIdentification surface, RealOrientation? orientation = null, float? scale = null, float? intensity = null, float? minimumDarkness = null, bool? oriented = null, Color? color = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create an animation.
@@ -223,70 +223,70 @@ public class LuaRendering
   /// <param name="visible">Lua name: visible</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_animation")]
-  public ulong DrawAnimation(string animation, OneOf<MapPosition, LuaEntity> target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, double? animationSpeed = null, double? animationOffset = null, OneOf<MapPosition, LuaEntity>? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, ForceIdentification[]? forces = null, PlayerIdentification[]? players = null, bool? visible = null, bool? onlyInAltMode = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ulong DrawAnimation(string animation, Union42604054 target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, double? animationSpeed = null, double? animationOffset = null, Union44681534? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Destroy the object with the given id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("destroy")]
-  public void Destroy(ulong id) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Destroy(ulong id);
 
   /// <summary>
   /// Does a font with this name exist?
   /// </summary>
   /// <param name="fontName">Lua name: font_name</param>
   [FactorioRconMethod("is_font_valid")]
-  public bool IsFontValid(string fontName) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsFontValid(string fontName);
 
   /// <summary>
   /// Does a valid object with this id exist?
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("is_valid")]
-  public bool IsValid(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool IsValid(ulong id);
 
   /// <summary>
   /// Gets an array of all valid object ids.
   /// </summary>
   /// <param name="modName">Lua name: mod_name</param>
   [FactorioRconMethod("get_all_ids")]
-  public ulong[] GetAllIds(string? modName = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<ulong> GetAllIds(string? modName = null);
 
   /// <summary>
   /// Destroys all render objects.
   /// </summary>
   /// <param name="modName">Lua name: mod_name</param>
   [FactorioRconMethod("clear")]
-  public void Clear(string? modName = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void Clear(string? modName = null);
 
   /// <summary>
   /// Gets the type of the given object.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_type")]
-  public OneOf<Literal40535505, Literal34678979, Literal66166301, Literal39774547, Literal12611187, Literal30180123, Literal2808346, Literal14333193, Literal13009416> GetType(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union32846161 GetType(ulong id);
 
   /// <summary>
   /// Reorder this object so that it is drawn in front of the already existing objects.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("bring_to_front")]
-  public void BringToFront(ulong id) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void BringToFront(ulong id);
 
   /// <summary>
   /// The surface the object with this id is rendered on.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_surface")]
-  public LuaSurface GetSurface(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LuaSurface GetSurface(ulong id);
 
   /// <summary>
   /// Get the time to live of the object with this id. This will be 0 if the object does not expire.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_time_to_live")]
-  public uint GetTimeToLive(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint GetTimeToLive(ulong id);
 
   /// <summary>
   /// Set the time to live of the object with this id. Set to 0 if the object should not expire.
@@ -294,14 +294,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="timeToLive">Lua name: time_to_live</param>
   [FactorioRconMethod("set_time_to_live")]
-  public void SetTimeToLive(ulong id, uint timeToLive) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetTimeToLive(ulong id, uint timeToLive);
 
   /// <summary>
   /// Get the forces that the object with this id is rendered to or `nil` if visible to all forces.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_forces")]
-  public LuaForce[]? GetForces(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaForce>? GetForces(ulong id);
 
   /// <summary>
   /// Set the forces that the object with this id is rendered to.
@@ -309,14 +309,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="forces">Lua name: forces</param>
   [FactorioRconMethod("set_forces")]
-  public void SetForces(ulong id, ForceIdentification[] forces) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetForces(ulong id, List<ForceIdentification> forces);
 
   /// <summary>
   /// Get the players that the object with this id is rendered to or `nil` if visible to all players.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_players")]
-  public LuaPlayer[]? GetPlayers(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaPlayer>? GetPlayers(ulong id);
 
   /// <summary>
   /// Set the players that the object with this id is rendered to.
@@ -324,14 +324,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="players">Lua name: players</param>
   [FactorioRconMethod("set_players")]
-  public void SetPlayers(ulong id, PlayerIdentification[] players) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetPlayers(ulong id, List<PlayerIdentification> players);
 
   /// <summary>
   /// Get whether this is rendered to anyone at all.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_visible")]
-  public bool GetVisible(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GetVisible(ulong id);
 
   /// <summary>
   /// Set whether this is rendered to anyone at all.
@@ -339,14 +339,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="visible">Lua name: visible</param>
   [FactorioRconMethod("set_visible")]
-  public void SetVisible(ulong id, bool visible) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetVisible(ulong id, bool visible);
 
   /// <summary>
   /// Get whether this is being drawn on the ground, under most entities and sprites.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_draw_on_ground")]
-  public bool GetDrawOnGround(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GetDrawOnGround(ulong id);
 
   /// <summary>
   /// Set whether this is being drawn on the ground, under most entities and sprites.
@@ -354,14 +354,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   [FactorioRconMethod("set_draw_on_ground")]
-  public void SetDrawOnGround(ulong id, bool drawOnGround) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetDrawOnGround(ulong id, bool drawOnGround);
 
   /// <summary>
   /// Get whether this is only rendered in alt-mode.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_only_in_alt_mode")]
-  public bool GetOnlyInAltMode(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GetOnlyInAltMode(ulong id);
 
   /// <summary>
   /// Set whether this is only rendered in alt-mode.
@@ -369,14 +369,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("set_only_in_alt_mode")]
-  public void SetOnlyInAltMode(ulong id, bool onlyInAltMode) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetOnlyInAltMode(ulong id, bool onlyInAltMode);
 
   /// <summary>
   /// Get whether this uses the target orientation.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_use_target_orientation")]
-  public bool GetUseTargetOrientation(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool GetUseTargetOrientation(ulong id);
 
   /// <summary>
   /// Set whether this uses the target orientation.
@@ -384,14 +384,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="useTargetOrientation">Lua name: use_target_orientation</param>
   [FactorioRconMethod("set_use_target_orientation")]
-  public void SetUseTargetOrientation(ulong id, bool useTargetOrientation) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetUseTargetOrientation(ulong id, bool useTargetOrientation);
 
   /// <summary>
   /// Get the color or tint of the object with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_color")]
-  public Color? GetColor(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Color? GetColor(ulong id);
 
   /// <summary>
   /// Set the color or tint of the object with this id. Does nothing if this object does not support color.
@@ -399,14 +399,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="color">Lua name: color</param>
   [FactorioRconMethod("set_color")]
-  public void SetColor(ulong id, Color color) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetColor(ulong id, Color color);
 
   /// <summary>
   /// Get the width of the object with this id. Value is in pixels (32 per tile).
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_width")]
-  public float? GetWidth(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetWidth(ulong id);
 
   /// <summary>
   /// Set the width of the object with this id. Does nothing if this object does not support width. Value is in pixels (32 per tile).
@@ -414,14 +414,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="width">Lua name: width</param>
   [FactorioRconMethod("set_width")]
-  public void SetWidth(ulong id, float width) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetWidth(ulong id, float width);
 
   /// <summary>
   /// Get from where the line with this id is drawn.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_from")]
-  public ScriptRenderTarget? GetFrom(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptRenderTarget? GetFrom(ulong id);
 
   /// <summary>
   /// Set from where the line with this id is drawn. Does nothing if the object is not a line.
@@ -430,14 +430,14 @@ public class LuaRendering
   /// <param name="from">Lua name: from</param>
   /// <param name="fromOffset">Lua name: from_offset</param>
   [FactorioRconMethod("set_from")]
-  public void SetFrom(ulong id, OneOf<MapPosition, LuaEntity> from, Vector? fromOffset = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetFrom(ulong id, Union7348436 from, Vector? fromOffset = null);
 
   /// <summary>
   /// Get where the line with this id is drawn to.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_to")]
-  public ScriptRenderTarget? GetTo(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptRenderTarget? GetTo(ulong id);
 
   /// <summary>
   /// Set where the line with this id is drawn to. Does nothing if this object is not a line.
@@ -446,14 +446,14 @@ public class LuaRendering
   /// <param name="to">Lua name: to</param>
   /// <param name="toOffset">Lua name: to_offset</param>
   [FactorioRconMethod("set_to")]
-  public void SetTo(ulong id, OneOf<MapPosition, LuaEntity> to, Vector? toOffset = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetTo(ulong id, Union3456706 to, Vector? toOffset = null);
 
   /// <summary>
   /// Get the dash length of the line with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_dash_length")]
-  public double? GetDashLength(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetDashLength(ulong id);
 
   /// <summary>
   /// Set the dash length of the line with this id. Does nothing if this object is not a line.
@@ -461,14 +461,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="dashLength">Lua name: dash_length</param>
   [FactorioRconMethod("set_dash_length")]
-  public void SetDashLength(ulong id, double dashLength) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetDashLength(ulong id, double dashLength);
 
   /// <summary>
   /// Get the length of the gaps in the line with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_gap_length")]
-  public double? GetGapLength(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetGapLength(ulong id);
 
   /// <summary>
   /// Set the length of the gaps in the line with this id. Does nothing if this object is not a line.
@@ -476,7 +476,7 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="gapLength">Lua name: gap_length</param>
   [FactorioRconMethod("set_gap_length")]
-  public void SetGapLength(ulong id, double gapLength) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetGapLength(ulong id, double gapLength);
 
   /// <summary>
   /// Set the length of the dashes and the length of the gaps in the line with this id. Does nothing if this object is not a line.
@@ -485,7 +485,7 @@ public class LuaRendering
   /// <param name="dashLength">Lua name: dash_length</param>
   /// <param name="gapLength">Lua name: gap_length</param>
   [FactorioRconMethod("set_dashes")]
-  public void SetDashes(ulong id, double dashLength, double gapLength) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetDashes(ulong id, double dashLength, double gapLength);
 
   /// <summary>
   /// Get where the object with this id is drawn.
@@ -495,7 +495,7 @@ public class LuaRendering
   /// </remarks>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_target")]
-  public ScriptRenderTarget? GetTarget(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptRenderTarget? GetTarget(ulong id);
 
   /// <summary>
   /// Set where the object with this id is drawn. Does nothing if this object does not support target.
@@ -507,7 +507,7 @@ public class LuaRendering
   /// <param name="target">Lua name: target</param>
   /// <param name="targetOffset">Lua name: target_offset</param>
   [FactorioRconMethod("set_target")]
-  public void SetTarget(ulong id, OneOf<MapPosition, LuaEntity> target, Vector? targetOffset = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetTarget(ulong id, Union60789260 target, Vector? targetOffset = null);
 
   /// <summary>
   /// Get the orientation of the object with this id.
@@ -517,7 +517,7 @@ public class LuaRendering
   /// </remarks>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_orientation")]
-  public RealOrientation? GetOrientation(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract RealOrientation? GetOrientation(ulong id);
 
   /// <summary>
   /// Set the orientation of the object with this id. Does nothing if this object is not a text, polygon, sprite, light or animation.
@@ -528,14 +528,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="orientation">Lua name: orientation</param>
   [FactorioRconMethod("set_orientation")]
-  public void SetOrientation(ulong id, RealOrientation orientation) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetOrientation(ulong id, RealOrientation orientation);
 
   /// <summary>
   /// Get the scale of the text or light with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_scale")]
-  public double? GetScale(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetScale(ulong id);
 
   /// <summary>
   /// Set the scale of the text or light with this id. Does nothing if this object is not a text or light.
@@ -543,14 +543,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="scale">Lua name: scale</param>
   [FactorioRconMethod("set_scale")]
-  public void SetScale(ulong id, double scale) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetScale(ulong id, double scale);
 
   /// <summary>
   /// Get the text that is displayed by the text with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_text")]
-  public LocalisedString? GetText(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract LocalisedString? GetText(ulong id);
 
   /// <summary>
   /// Set the text that is displayed by the text with this id. Does nothing if this object is not a text.
@@ -558,14 +558,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="text">Lua name: text</param>
   [FactorioRconMethod("set_text")]
-  public void SetText(ulong id, LocalisedString text) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetText(ulong id, LocalisedString text);
 
   /// <summary>
   /// Get the font of the text with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_font")]
-  public string? GetFont(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetFont(ulong id);
 
   /// <summary>
   /// Set the font of the text with this id. Does nothing if this object is not a text.
@@ -573,14 +573,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="font">Lua name: font</param>
   [FactorioRconMethod("set_font")]
-  public void SetFont(ulong id, string font) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetFont(ulong id, string font);
 
   /// <summary>
   /// Get the alignment of the text with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_alignment")]
-  public TextAlign? GetAlignment(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract TextAlign? GetAlignment(ulong id);
 
   /// <summary>
   /// Set the alignment of the text with this id. Does nothing if this object is not a text.
@@ -588,14 +588,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="alignment">Lua name: alignment</param>
   [FactorioRconMethod("set_alignment")]
-  public void SetAlignment(ulong id, TextAlign alignment) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetAlignment(ulong id, TextAlign alignment);
 
   /// <summary>
   /// Get the vertical alignment of the text with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_vertical_alignment")]
-  public VerticalTextAlign? GetVerticalAlignment(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract VerticalTextAlign? GetVerticalAlignment(ulong id);
 
   /// <summary>
   /// Set the vertical alignment of the text with this id. Does nothing if this object is not a text.
@@ -603,14 +603,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="alignment">Lua name: alignment</param>
   [FactorioRconMethod("set_vertical_alignment")]
-  public void SetVerticalAlignment(ulong id, VerticalTextAlign alignment) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetVerticalAlignment(ulong id, VerticalTextAlign alignment);
 
   /// <summary>
   /// Get if the text with this id scales with player zoom.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_scale_with_zoom")]
-  public bool? GetScaleWithZoom(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool? GetScaleWithZoom(ulong id);
 
   /// <summary>
   /// Set if the text with this id scales with player zoom, resulting in it always being the same size on screen, and the size compared to the game world changes. Does nothing if this object is not a text.
@@ -618,14 +618,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="scaleWithZoom">Lua name: scale_with_zoom</param>
   [FactorioRconMethod("set_scale_with_zoom")]
-  public void SetScaleWithZoom(ulong id, bool scaleWithZoom) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetScaleWithZoom(ulong id, bool scaleWithZoom);
 
   /// <summary>
   /// Get if the text with this id parses rich text tags.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_use_rich_text")]
-  public bool? GetUseRichText(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool? GetUseRichText(ulong id);
 
   /// <summary>
   /// Set if the text with this id parses rich text tags.
@@ -633,14 +633,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="useRichText">Lua name: use_rich_text</param>
   [FactorioRconMethod("set_use_rich_text")]
-  public void SetUseRichText(ulong id, bool useRichText) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetUseRichText(ulong id, bool useRichText);
 
   /// <summary>
   /// Get if the circle or rectangle with this id is filled.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_filled")]
-  public bool? GetFilled(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool? GetFilled(ulong id);
 
   /// <summary>
   /// Set if the circle or rectangle with this id is filled. Does nothing if this object is not a circle or rectangle.
@@ -648,14 +648,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="filled">Lua name: filled</param>
   [FactorioRconMethod("set_filled")]
-  public void SetFilled(ulong id, bool filled) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetFilled(ulong id, bool filled);
 
   /// <summary>
   /// Get the radius of the circle with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_radius")]
-  public double? GetRadius(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetRadius(ulong id);
 
   /// <summary>
   /// Set the radius of the circle with this id. Does nothing if this object is not a circle.
@@ -663,14 +663,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="radius">Lua name: radius</param>
   [FactorioRconMethod("set_radius")]
-  public void SetRadius(ulong id, double radius) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetRadius(ulong id, double radius);
 
   /// <summary>
   /// Get where top left corner of the rectangle with this id is drawn.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_left_top")]
-  public ScriptRenderTarget? GetLeftTop(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptRenderTarget? GetLeftTop(ulong id);
 
   /// <summary>
   /// Set where top left corner of the rectangle with this id is drawn. Does nothing if this object is not a rectangle.
@@ -679,14 +679,14 @@ public class LuaRendering
   /// <param name="leftTop">Lua name: left_top</param>
   /// <param name="leftTopOffset">Lua name: left_top_offset</param>
   [FactorioRconMethod("set_left_top")]
-  public void SetLeftTop(ulong id, OneOf<MapPosition, LuaEntity> leftTop, Vector? leftTopOffset = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetLeftTop(ulong id, Union34610141 leftTop, Vector? leftTopOffset = null);
 
   /// <summary>
   /// Get where bottom right corner of the rectangle with this id is drawn.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_right_bottom")]
-  public ScriptRenderTarget? GetRightBottom(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptRenderTarget? GetRightBottom(ulong id);
 
   /// <summary>
   /// Set where top bottom right of the rectangle with this id is drawn. Does nothing if this object is not a rectangle.
@@ -695,7 +695,7 @@ public class LuaRendering
   /// <param name="rightBottom">Lua name: right_bottom</param>
   /// <param name="rightBottomOffset">Lua name: right_bottom_offset</param>
   [FactorioRconMethod("set_right_bottom")]
-  public void SetRightBottom(ulong id, OneOf<MapPosition, LuaEntity> rightBottom, Vector? rightBottomOffset = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetRightBottom(ulong id, Union5506821 rightBottom, Vector? rightBottomOffset = null);
 
   /// <summary>
   /// Set the corners of the rectangle with this id. Does nothing if this object is not a rectangle.
@@ -706,14 +706,14 @@ public class LuaRendering
   /// <param name="rightBottom">Lua name: right_bottom</param>
   /// <param name="rightBottomOffset">Lua name: right_bottom_offset</param>
   [FactorioRconMethod("set_corners")]
-  public void SetCorners(ulong id, OneOf<MapPosition, LuaEntity> leftTop, Vector leftTopOffset, OneOf<MapPosition, LuaEntity> rightBottom, Vector rightBottomOffset) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetCorners(ulong id, Union2425794 leftTop, Vector leftTopOffset, Union22645523 rightBottom, Vector rightBottomOffset);
 
   /// <summary>
   /// Get the radius of the outer edge of the arc with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_max_radius")]
-  public double? GetMaxRadius(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetMaxRadius(ulong id);
 
   /// <summary>
   /// Set the radius of the outer edge of the arc with this id. Does nothing if this object is not a arc.
@@ -721,14 +721,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="maxRadius">Lua name: max_radius</param>
   [FactorioRconMethod("set_max_radius")]
-  public void SetMaxRadius(ulong id, double maxRadius) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetMaxRadius(ulong id, double maxRadius);
 
   /// <summary>
   /// Get the radius of the inner edge of the arc with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_min_radius")]
-  public double? GetMinRadius(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetMinRadius(ulong id);
 
   /// <summary>
   /// Set the radius of the inner edge of the arc with this id. Does nothing if this object is not a arc.
@@ -736,14 +736,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="minRadius">Lua name: min_radius</param>
   [FactorioRconMethod("set_min_radius")]
-  public void SetMinRadius(ulong id, double minRadius) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetMinRadius(ulong id, double minRadius);
 
   /// <summary>
   /// Get where the arc with this id starts.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_start_angle")]
-  public float? GetStartAngle(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetStartAngle(ulong id);
 
   /// <summary>
   /// Set where the arc with this id starts. Does nothing if this object is not a arc.
@@ -751,14 +751,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="startAngle">Lua name: start_angle</param>
   [FactorioRconMethod("set_start_angle")]
-  public void SetStartAngle(ulong id, float startAngle) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetStartAngle(ulong id, float startAngle);
 
   /// <summary>
   /// Get the angle of the arc with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_angle")]
-  public float? GetAngle(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetAngle(ulong id);
 
   /// <summary>
   /// Set the angle of the arc with this id. Does nothing if this object is not a arc.
@@ -766,14 +766,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="angle">Lua name: angle</param>
   [FactorioRconMethod("set_angle")]
-  public void SetAngle(ulong id, float angle) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetAngle(ulong id, float angle);
 
   /// <summary>
   /// Get the vertices of the polygon with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_vertices")]
-  public ScriptRenderTarget[]? GetVertices(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<ScriptRenderTarget>? GetVertices(ulong id);
 
   /// <summary>
   /// Set the vertices of the polygon with this id. Does nothing if this object is not a polygon.
@@ -781,14 +781,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="vertices">Lua name: vertices</param>
   [FactorioRconMethod("set_vertices")]
-  public void SetVertices(ulong id, ScriptRenderVertexTarget[] vertices) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetVertices(ulong id, List<ScriptRenderVertexTarget> vertices);
 
   /// <summary>
   /// Get the sprite of the sprite or light with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_sprite")]
-  public SpritePath? GetSprite(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract SpritePath? GetSprite(ulong id);
 
   /// <summary>
   /// Set the sprite of the sprite or light with this id. Does nothing if this object is not a sprite or light.
@@ -796,14 +796,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="sprite">Lua name: sprite</param>
   [FactorioRconMethod("set_sprite")]
-  public void SetSprite(ulong id, SpritePath sprite) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetSprite(ulong id, SpritePath sprite);
 
   /// <summary>
   /// Get the horizontal scale of the sprite or animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_x_scale")]
-  public double? GetXScale(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetXScale(ulong id);
 
   /// <summary>
   /// Set the horizontal scale of the sprite or animation with this id. Does nothing if this object is not a sprite or animation.
@@ -811,14 +811,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="xScale">Lua name: x_scale</param>
   [FactorioRconMethod("set_x_scale")]
-  public void SetXScale(ulong id, double xScale) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetXScale(ulong id, double xScale);
 
   /// <summary>
   /// Get the vertical scale of the sprite or animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_y_scale")]
-  public double? GetYScale(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetYScale(ulong id);
 
   /// <summary>
   /// Set the vertical scale of the sprite or animation with this id. Does nothing if this object is not a sprite or animation.
@@ -826,14 +826,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="yScale">Lua name: y_scale</param>
   [FactorioRconMethod("set_y_scale")]
-  public void SetYScale(ulong id, double yScale) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetYScale(ulong id, double yScale);
 
   /// <summary>
   /// Get the render layer of the sprite or animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_render_layer")]
-  public RenderLayer? GetRenderLayer(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract RenderLayer? GetRenderLayer(ulong id);
 
   /// <summary>
   /// Set the render layer of the sprite or animation with this id. Does nothing if this object is not a sprite or animation.
@@ -841,7 +841,7 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="renderLayer">Lua name: render_layer</param>
   [FactorioRconMethod("set_render_layer")]
-  public void SetRenderLayer(ulong id, RenderLayer renderLayer) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetRenderLayer(ulong id, RenderLayer renderLayer);
 
   /// <summary>
   /// The object rotates so that it faces this target. Note that `orientation` is still applied to the object. Get the orientation_target of the object with this id.
@@ -851,7 +851,7 @@ public class LuaRendering
   /// </remarks>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_orientation_target")]
-  public ScriptRenderTarget? GetOrientationTarget(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract ScriptRenderTarget? GetOrientationTarget(ulong id);
 
   /// <summary>
   /// The object rotates so that it faces this target. Note that `orientation` is still applied to the object. Set the orientation_target of the object with this id. Does nothing if this object is not a polygon, sprite, or animation. Set to `nil` if the object should not have an orientation_target.
@@ -863,14 +863,14 @@ public class LuaRendering
   /// <param name="orientationTarget">Lua name: orientation_target</param>
   /// <param name="orientationTargetOffset">Lua name: orientation_target_offset</param>
   [FactorioRconMethod("set_orientation_target")]
-  public void SetOrientationTarget(ulong id, OneOf<MapPosition, LuaEntity> orientationTarget, Vector? orientationTargetOffset = null) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetOrientationTarget(ulong id, Union32578014 orientationTarget, Vector? orientationTargetOffset = null);
 
   /// <summary>
   /// Offsets the center of the sprite or animation if `orientation_target` is given. This offset will rotate together with the sprite or animation. Get the oriented_offset of the sprite or animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_oriented_offset")]
-  public Vector? GetOrientedOffset(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Vector? GetOrientedOffset(ulong id);
 
   /// <summary>
   /// Offsets the center of the sprite or animation if `orientation_target` is given. This offset will rotate together with the sprite or animation. Set the oriented_offset of the sprite or animation with this id. Does nothing if this object is not a sprite or animation.
@@ -878,14 +878,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="orientedOffset">Lua name: oriented_offset</param>
   [FactorioRconMethod("set_oriented_offset")]
-  public void SetOrientedOffset(ulong id, Vector orientedOffset) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetOrientedOffset(ulong id, Vector orientedOffset);
 
   /// <summary>
   /// Get the intensity of the light with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_intensity")]
-  public float? GetIntensity(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetIntensity(ulong id);
 
   /// <summary>
   /// Set the intensity of the light with this id. Does nothing if this object is not a light.
@@ -893,14 +893,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="intensity">Lua name: intensity</param>
   [FactorioRconMethod("set_intensity")]
-  public void SetIntensity(ulong id, float intensity) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetIntensity(ulong id, float intensity);
 
   /// <summary>
   /// Get the minimum darkness at which the light with this id is rendered.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_minimum_darkness")]
-  public float? GetMinimumDarkness(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract float? GetMinimumDarkness(ulong id);
 
   /// <summary>
   /// Set the minimum darkness at which the light with this id is rendered. Does nothing if this object is not a light.
@@ -908,14 +908,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="minimumDarkness">Lua name: minimum_darkness</param>
   [FactorioRconMethod("set_minimum_darkness")]
-  public void SetMinimumDarkness(ulong id, float minimumDarkness) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetMinimumDarkness(ulong id, float minimumDarkness);
 
   /// <summary>
   /// Get if the light with this id is rendered has the same orientation as the target entity. Note that `orientation` is still applied to the sprite.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_oriented")]
-  public bool? GetOriented(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool? GetOriented(ulong id);
 
   /// <summary>
   /// Set if the light with this id is rendered has the same orientation as the target entity. Does nothing if this object is not a light. Note that `orientation` is still applied to the sprite.
@@ -923,14 +923,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="oriented">Lua name: oriented</param>
   [FactorioRconMethod("set_oriented")]
-  public void SetOriented(ulong id, bool oriented) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetOriented(ulong id, bool oriented);
 
   /// <summary>
   /// Get the animation prototype name of the animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_animation")]
-  public string? GetAnimation(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetAnimation(ulong id);
 
   /// <summary>
   /// Set the animation prototype name of the animation with this id. Does nothing if this object is not an animation.
@@ -938,14 +938,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="animation">Lua name: animation</param>
   [FactorioRconMethod("set_animation")]
-  public void SetAnimation(ulong id, string animation) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetAnimation(ulong id, string animation);
 
   /// <summary>
   /// Get the animation speed of the animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_animation_speed")]
-  public double? GetAnimationSpeed(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetAnimationSpeed(ulong id);
 
   /// <summary>
   /// Set the animation speed of the animation with this id. Does nothing if this object is not an animation.
@@ -953,14 +953,14 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="animationSpeed">Lua name: animation_speed</param>
   [FactorioRconMethod("set_animation_speed")]
-  public void SetAnimationSpeed(ulong id, double animationSpeed) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetAnimationSpeed(ulong id, double animationSpeed);
 
   /// <summary>
   /// Get the animation offset of the animation with this id.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_animation_offset")]
-  public double? GetAnimationOffset(ulong id) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double? GetAnimationOffset(ulong id);
 
   /// <summary>
   /// Set the animation offset of the animation with this id. Does nothing if this object is not an animation.
@@ -968,14 +968,89 @@ public class LuaRendering
   /// <param name="id">Lua name: id</param>
   /// <param name="animationOffset">Lua name: animation_offset</param>
   [FactorioRconMethod("set_animation_offset")]
-  public void SetAnimationOffset(ulong id, double animationOffset) => throw FactorioModelUtils.UseClientExecuteAsyncMethod();
+  public abstract void SetAnimationOffset(ulong id, double animationOffset);
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union44681534: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union42604054: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union10340569: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union30887001: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union8462621: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union57566403: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union49582139: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union63378184: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union47056750: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1968367: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5720734: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union63291458: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union60082571: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union22599820: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union32846161: OneOfBase<Literal64535838, Literal39015791, Literal34298139, Literal61071619, Literal45057425, Literal56511993, Literal10568980, Literal55507966, Literal40528844>
+{
 }
 
 /// <summary>
 /// Literal value: text
 /// </summary>
-public class Literal40535505
+public abstract class Literal64535838
 {
   /// <summary>
   /// Literal value: text
@@ -988,7 +1063,7 @@ public class Literal40535505
 /// <summary>
 /// Literal value: line
 /// </summary>
-public class Literal34678979
+public abstract class Literal39015791
 {
   /// <summary>
   /// Literal value: line
@@ -1001,7 +1076,7 @@ public class Literal34678979
 /// <summary>
 /// Literal value: circle
 /// </summary>
-public class Literal66166301
+public abstract class Literal34298139
 {
   /// <summary>
   /// Literal value: circle
@@ -1014,7 +1089,7 @@ public class Literal66166301
 /// <summary>
 /// Literal value: rectangle
 /// </summary>
-public class Literal39774547
+public abstract class Literal61071619
 {
   /// <summary>
   /// Literal value: rectangle
@@ -1027,7 +1102,7 @@ public class Literal39774547
 /// <summary>
 /// Literal value: arc
 /// </summary>
-public class Literal12611187
+public abstract class Literal45057425
 {
   /// <summary>
   /// Literal value: arc
@@ -1040,7 +1115,7 @@ public class Literal12611187
 /// <summary>
 /// Literal value: polygon
 /// </summary>
-public class Literal30180123
+public abstract class Literal56511993
 {
   /// <summary>
   /// Literal value: polygon
@@ -1053,7 +1128,7 @@ public class Literal30180123
 /// <summary>
 /// Literal value: sprite
 /// </summary>
-public class Literal2808346
+public abstract class Literal10568980
 {
   /// <summary>
   /// Literal value: sprite
@@ -1066,7 +1141,7 @@ public class Literal2808346
 /// <summary>
 /// Literal value: light
 /// </summary>
-public class Literal14333193
+public abstract class Literal55507966
 {
   /// <summary>
   /// Literal value: light
@@ -1079,7 +1154,7 @@ public class Literal14333193
 /// <summary>
 /// Literal value: animation
 /// </summary>
-public class Literal13009416
+public abstract class Literal40528844
 {
   /// <summary>
   /// Literal value: animation
@@ -1087,5 +1162,45 @@ public class Literal13009416
   [FactorioRconAttribute("animation")]
   public static object Value { get; private set; }
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union2425794: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union22645523: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union7348436: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union34610141: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union32578014: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union5506821: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union60789260: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union3456706: OneOfBase<MapPosition, LuaEntity>
+{
 }
 

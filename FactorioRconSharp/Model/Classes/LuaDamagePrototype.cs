@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a damage.
 /// </summary>
 [FactorioRconClass("LuaDamagePrototype")]
-public class LuaDamagePrototype
+public abstract class LuaDamagePrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -56,7 +56,7 @@ public class LuaDamagePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

@@ -24,7 +24,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// ```
 /// </examples>
 [FactorioRconClass("LuaFluidBox")]
-public class LuaFluidBox
+public abstract class LuaFluidBox: LuaObject
 {
   /// <summary>
   /// The entity that owns this fluidbox.
@@ -55,42 +55,42 @@ public class LuaFluidBox
   /// 
   /// Is `nil` if the given fluid box does not contain any fluid. Writing `nil` removes all fluid from the fluid box.
   /// </summary>
-  public Fluid? this[uint key] { get => throw FactorioModelUtils.UseClientReadAsyncMethod(); private set => throw FactorioModelUtils.UseClientExecuteAsyncMethod(); }
+  public abstract Fluid? this[uint key] { get; }
 
   /// <summary>
   /// The prototype of this fluidbox index. If this is used on a fluidbox of a crafting machine which due to recipe was created by merging multiple prototypes, a table of prototypes that were merged will be returned instead
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_prototype")]
-  public OneOf<LuaFluidBoxPrototype, LuaFluidBoxPrototype[]> GetPrototype(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Union16294043 GetPrototype(uint index);
 
   /// <summary>
   /// The capacity of the given fluidbox index.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_capacity")]
-  public double GetCapacity(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetCapacity(uint index);
 
   /// <summary>
   /// The fluidboxes to which the fluidbox at the given index is connected.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_connections")]
-  public LuaFluidBox[] GetConnections(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<LuaFluidBox> GetConnections(uint index);
 
   /// <summary>
   /// Get the fluid box's connections and associated data.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_pipe_connections")]
-  public PipeConnection[] GetPipeConnections(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract List<PipeConnection> GetPipeConnections(uint index);
 
   /// <summary>
   /// Get a fluid box filter
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_filter")]
-  public FluidBoxFilter? GetFilter(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract FluidBoxFilter? GetFilter(uint index);
 
   /// <summary>
   /// Set a fluid box filter.
@@ -101,7 +101,7 @@ public class LuaFluidBox
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public bool SetFilter(uint index, OneOf<FluidBoxFilterSpec, LuaNil> filter) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool SetFilter(uint index, Union6630602 filter);
 
   /// <summary>
   /// Flow through the fluidbox in the last tick. It is the larger of in-flow and out-flow.
@@ -111,28 +111,28 @@ public class LuaFluidBox
   /// </remarks>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_flow")]
-  public double GetFlow(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract double GetFlow(uint index);
 
   /// <summary>
   /// Returns the fluid the fluidbox is locked onto
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_locked_fluid")]
-  public string? GetLockedFluid(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string? GetLockedFluid(uint index);
 
   /// <summary>
   /// Gets unique fluid system identifier of selected fluid box. May return nil for fluid wagon, fluid turret's internal buffer or a fluidbox which does not belong to a fluid system
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_fluid_system_id")]
-  public uint? GetFluidSystemId(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint? GetFluidSystemId(uint index);
 
   /// <summary>
   /// Gets counts of all fluids in the fluid system. May return `nil` for fluid wagon, fluid turret's internal buffer, or a fluidbox which does not belong to a fluid system.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_fluid_system_contents")]
-  public Dictionary<string, uint>? GetFluidSystemContents(uint index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, uint>? GetFluidSystemContents(uint index);
 
   /// <summary>
   /// Flushes all fluid from this fluidbox and its fluid system.
@@ -140,13 +140,23 @@ public class LuaFluidBox
   /// <param name="index">Lua name: index</param>
   /// <param name="fluid">Lua name: fluid</param>
   [FactorioRconMethod("flush")]
-  public Dictionary<string, float> Flush(uint index, FluidIdentification? fluid = null) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract Dictionary<string, float> Flush(uint index, FluidIdentification? fluid = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union16294043: OneOfBase<LuaFluidBoxPrototype, List<LuaFluidBoxPrototype>>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union6630602: OneOfBase<FluidBoxFilterSpec, LuaNil>
+{
 }
 

@@ -11,7 +11,29 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSettings")]
-public class AutoplaceSettings
+public abstract class AutoplaceSettings
 {
+  /// <summary>
+  /// Whether missing autoplace names for this type should be default enabled.
+  /// </summary>
+  [FactorioRconAttribute("treat_missing_as_default")]
+  public bool TreatMissingAsDefault { get; set; }
+
+  [FactorioRconAttribute("settings")]
+  public Dictionary<string, AutoplaceControl> Settings { get; set; }
+
+}
+
+public abstract class Table27683095
+{
+  /// <summary>
+  /// Whether missing autoplace names for this type should be default enabled.
+  /// </summary>
+  [FactorioRconAttribute("treat_missing_as_default")]
+  public bool TreatMissingAsDefault { get; set; }
+
+  [FactorioRconAttribute("settings")]
+  public Dictionary<string, AutoplaceControl> Settings { get; set; }
+
 }
 

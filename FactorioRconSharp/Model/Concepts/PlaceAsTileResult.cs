@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("PlaceAsTileResult")]
-public class PlaceAsTileResult
+public abstract class PlaceAsTileResult
 {
+  /// <summary>
+  /// The tile prototype.
+  /// </summary>
+  [FactorioRconAttribute("result")]
+  public LuaTilePrototype Result { get; set; }
+
+  [FactorioRconAttribute("condition_size")]
+  public uint ConditionSize { get; set; }
+
+  [FactorioRconAttribute("condition")]
+  public CollisionMask Condition { get; set; }
+
+}
+
+public abstract class Table41281876
+{
+  /// <summary>
+  /// The tile prototype.
+  /// </summary>
+  [FactorioRconAttribute("result")]
+  public LuaTilePrototype Result { get; set; }
+
+  [FactorioRconAttribute("condition_size")]
+  public uint ConditionSize { get; set; }
+
+  [FactorioRconAttribute("condition")]
+  public CollisionMask Condition { get; set; }
+
 }
 

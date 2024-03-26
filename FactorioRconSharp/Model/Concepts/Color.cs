@@ -15,8 +15,46 @@ namespace FactorioRconSharp.Model.Concepts;
 /// 
 /// Similar to <see cref="MapPosition),ColorAllowsTheShortHandNotationOfPassingAnArrayOfExactly3Or4Numbers.TheGameUsuallyExpectsColorsToBeInPreMultipliedForm(ColorChannelsArePreMultipliedByAlpha" />.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("Color")]
-public class Color
+public abstract partial class Color: OneOfBase<Table28649084, Table25517075>
 {
+}
+
+[GenerateOneOf]
+public abstract partial class Union12558393: OneOfBase<Table28649084, Table25517075>
+{
+}
+
+public abstract class Table28649084
+{
+  [FactorioRconAttribute("r")]
+  public float R { get; set; }
+
+  [FactorioRconAttribute("g")]
+  public float G { get; set; }
+
+  [FactorioRconAttribute("b")]
+  public float B { get; set; }
+
+  [FactorioRconAttribute("a")]
+  public float A { get; set; }
+
+}
+
+public abstract class Table25517075
+{
+  [FactorioRconAttribute("r")]
+  public float R { get; set; }
+
+  [FactorioRconAttribute("g")]
+  public float G { get; set; }
+
+  [FactorioRconAttribute("b")]
+  public float B { get; set; }
+
+  [FactorioRconAttribute("a")]
+  public float A { get; set; }
+
 }
 

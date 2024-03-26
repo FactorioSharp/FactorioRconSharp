@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of a heat energy source.
 /// </summary>
 [FactorioRconClass("LuaHeatEnergySourcePrototype")]
-public class LuaHeatEnergySourcePrototype
+public abstract class LuaHeatEnergySourcePrototype: LuaObject
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -50,7 +50,7 @@ public class LuaHeatEnergySourcePrototype
   public double MinimumGlowTemperature { get; private set; }
 
   [FactorioRconAttribute("connections")]
-  public HeatConnection[] Connections { get; private set; }
+  public List<HeatConnection> Connections { get; private set; }
 
   [FactorioRconAttribute("heat_buffer_prototype")]
   public LuaHeatBufferPrototype HeatBufferPrototype { get; private set; }
@@ -71,7 +71,7 @@ public class LuaHeatEnergySourcePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

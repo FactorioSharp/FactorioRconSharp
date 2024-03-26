@@ -11,7 +11,47 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("LogisticParameters")]
-public class LogisticParameters
+public abstract class LogisticParameters
 {
+  /// <summary>
+  /// The item. `nil` clears the filter.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  /// <summary>
+  /// Defaults to `0`.
+  /// </summary>
+  [FactorioRconAttribute("min")]
+  public uint Min { get; set; }
+
+  /// <summary>
+  /// Defaults to max uint.
+  /// </summary>
+  [FactorioRconAttribute("max")]
+  public uint Max { get; set; }
+
+}
+
+public abstract class Table56229350
+{
+  /// <summary>
+  /// The item. `nil` clears the filter.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+  /// <summary>
+  /// Defaults to `0`.
+  /// </summary>
+  [FactorioRconAttribute("min")]
+  public uint Min { get; set; }
+
+  /// <summary>
+  /// Defaults to max uint.
+  /// </summary>
+  [FactorioRconAttribute("max")]
+  public uint Max { get; set; }
+
 }
 

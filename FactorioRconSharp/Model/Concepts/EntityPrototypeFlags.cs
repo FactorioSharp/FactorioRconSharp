@@ -16,7 +16,20 @@ namespace FactorioRconSharp.Model.Concepts;
 /// By default, none of these flags are set.
 /// </summary>
 [FactorioRconConcept("EntityPrototypeFlags")]
-public class EntityPrototypeFlags
+public abstract class EntityPrototypeFlags: Dictionary<EntityPrototypeFlag, Literal28626239>
 {
+}
+
+/// <summary>
+/// Literal value: True
+/// </summary>
+public abstract class Literal28626239
+{
+  /// <summary>
+  /// Literal value: True
+  /// </summary>
+  [FactorioRconAttribute("True")]
+  public static object Value { get; private set; }
+
 }
 

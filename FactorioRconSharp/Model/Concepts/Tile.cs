@@ -11,7 +11,35 @@ using OneOf;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Tile")]
-public class Tile
+public abstract class Tile
 {
+  /// <summary>
+  /// The position of the tile.
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public TilePosition Position { get; set; }
+
+  /// <summary>
+  /// The prototype name of the tile.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
+}
+
+public abstract class Table35898994
+{
+  /// <summary>
+  /// The position of the tile.
+  /// </summary>
+  [FactorioRconAttribute("position")]
+  public TilePosition Position { get; set; }
+
+  /// <summary>
+  /// The prototype name of the tile.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
 }
 

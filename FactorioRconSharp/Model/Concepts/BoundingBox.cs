@@ -13,8 +13,40 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// Two positions, specifying the top-left and bottom-right corner of the box respectively. Like with <see cref="MapPosition" />, the names of the members may be omitted. When read from the game, the third member `orientation` is present if it is non-zero.
 /// </summary>
+[GenerateOneOf]
 [FactorioRconConcept("BoundingBox")]
-public class BoundingBox
+public abstract partial class BoundingBox: OneOfBase<Table19655016, Table10102168>
 {
+}
+
+[GenerateOneOf]
+public abstract partial class Union42479535: OneOfBase<Table19655016, Table10102168>
+{
+}
+
+public abstract class Table19655016
+{
+  [FactorioRconAttribute("left_top")]
+  public MapPosition LeftTop { get; set; }
+
+  [FactorioRconAttribute("right_bottom")]
+  public MapPosition RightBottom { get; set; }
+
+  [FactorioRconAttribute("orientation")]
+  public RealOrientation Orientation { get; set; }
+
+}
+
+public abstract class Table10102168
+{
+  [FactorioRconAttribute("left_top")]
+  public MapPosition LeftTop { get; set; }
+
+  [FactorioRconAttribute("right_bottom")]
+  public MapPosition RightBottom { get; set; }
+
+  [FactorioRconAttribute("orientation")]
+  public RealOrientation Orientation { get; set; }
+
 }
 

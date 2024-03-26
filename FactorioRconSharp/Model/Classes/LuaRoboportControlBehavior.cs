@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Control behavior for roboports.
 /// </summary>
 [FactorioRconClass("LuaRoboportControlBehavior")]
-public class LuaRoboportControlBehavior
+public abstract class LuaRoboportControlBehavior: LuaObject
 {
   /// <summary>
   /// `true` if the roboport should report the logistics network content to the circuit network.
@@ -56,7 +56,7 @@ public class LuaRoboportControlBehavior
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

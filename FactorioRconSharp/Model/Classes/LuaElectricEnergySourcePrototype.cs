@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of an electric energy source.
 /// </summary>
 [FactorioRconClass("LuaElectricEnergySourcePrototype")]
-public class LuaElectricEnergySourcePrototype
+public abstract class LuaElectricEnergySourcePrototype: LuaObject
 {
   [FactorioRconAttribute("buffer_capacity")]
   public double BufferCapacity { get; private set; }
@@ -59,7 +59,7 @@ public class LuaElectricEnergySourcePrototype
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 

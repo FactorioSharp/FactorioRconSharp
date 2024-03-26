@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// Prototype of an entity.
 /// </summary>
 [FactorioRconClass("LuaEntityPrototype")]
-public class LuaEntityPrototype
+public abstract class LuaEntityPrototype: LuaObject
 {
   /// <summary>
   /// Type of this prototype.
@@ -74,13 +74,13 @@ public class LuaEntityPrototype
   /// Whether this entity is minable and what can be obtained by mining it.
   /// </summary>
   [FactorioRconAttribute("mineable_properties")]
-  public Table7167227 MineableProperties { get; private set; }
+  public Table10553853 MineableProperties { get; private set; }
 
   /// <summary>
   /// Items that when placed will produce this entity, if any. Construction bots will choose the first item in the list to build this entity.
   /// </summary>
   [FactorioRconAttribute("items_to_place_this")]
-  public ItemStackDefinition[] ItemsToPlaceThis { get; private set; }
+  public List<ItemStackDefinition> ItemsToPlaceThis { get; private set; }
 
   /// <summary>
   /// The bounding box used for collision checking.
@@ -209,7 +209,7 @@ public class LuaEntityPrototype
   /// Loot that will be dropped when this entity is killed, if any.
   /// </summary>
   [FactorioRconAttribute("loot")]
-  public Loot[] Loot { get; private set; }
+  public List<Loot> Loot { get; private set; }
 
   /// <summary>
   /// Repair-speed modifier for this entity, if any. Actual repair speed will be `tool_repair_speed * entity_repair_speed_modifier`.
@@ -239,19 +239,19 @@ public class LuaEntityPrototype
   /// The result units and spawn points with weight and evolution factor for a biter spawner entity.
   /// </summary>
   [FactorioRconAttribute("result_units")]
-  public UnitSpawnDefinition[] ResultUnits { get; private set; }
+  public List<UnitSpawnDefinition> ResultUnits { get; private set; }
 
   /// <summary>
   /// The attack result of this entity, if any.
   /// </summary>
   [FactorioRconAttribute("attack_result")]
-  public TriggerItem[] AttackResult { get; private set; }
+  public List<TriggerItem> AttackResult { get; private set; }
 
   /// <summary>
   /// The final attack result for this projectile.
   /// </summary>
   [FactorioRconAttribute("final_attack_result")]
-  public TriggerItem[] FinalAttackResult { get; private set; }
+  public List<TriggerItem> FinalAttackResult { get; private set; }
 
   /// <summary>
   /// The attack parameters for this entity, if any.
@@ -263,7 +263,7 @@ public class LuaEntityPrototype
   /// The spawning cooldown for this enemy spawner prototype.
   /// </summary>
   [FactorioRconAttribute("spawn_cooldown")]
-  public Table16294043 SpawnCooldown { get; private set; }
+  public Table20304321 SpawnCooldown { get; private set; }
 
   /// <summary>
   /// The mining radius of this mining drill prototype.
@@ -281,7 +281,7 @@ public class LuaEntityPrototype
   /// The logistic mode of this logistic container.
   /// </summary>
   [FactorioRconAttribute("logistic_mode")]
-  public OneOf<Literal20706689, Literal32187286, Literal4844372, Literal34622967, Literal55993668, Literal35016340> LogisticMode { get; private set; }
+  public Union23737571 LogisticMode { get; private set; }
 
   /// <summary>
   /// The max underground distance for underground belts and underground pipes.
@@ -299,13 +299,13 @@ public class LuaEntityPrototype
   /// The remains left behind when this entity is mined.
   /// </summary>
   [FactorioRconAttribute("remains_when_mined")]
-  public LuaEntityPrototype[] RemainsWhenMined { get; private set; }
+  public List<LuaEntityPrototype> RemainsWhenMined { get; private set; }
 
   /// <summary>
   /// Entities this entity can be pasted onto in addition to the normal allowed ones.
   /// </summary>
   [FactorioRconAttribute("additional_pastable_entities")]
-  public LuaEntityPrototype[] AdditionalPastableEntities { get; private set; }
+  public List<LuaEntityPrototype> AdditionalPastableEntities { get; private set; }
 
   /// <summary>
   /// When false copy-paste is not allowed for this entity.
@@ -323,13 +323,13 @@ public class LuaEntityPrototype
   /// The smoke trigger run when this entity is built, if any.
   /// </summary>
   [FactorioRconAttribute("created_smoke")]
-  public Table52116595 CreatedSmoke { get; private set; }
+  public Table28726945 CreatedSmoke { get; private set; }
 
   /// <summary>
   /// The trigger to run when this entity is created, if any.
   /// </summary>
   [FactorioRconAttribute("created_effect")]
-  public TriggerItem[] CreatedEffect { get; private set; }
+  public List<TriggerItem> CreatedEffect { get; private set; }
 
   /// <summary>
   /// The map color used when charting this entity if a friendly or enemy color isn't defined, if any.
@@ -359,7 +359,7 @@ public class LuaEntityPrototype
   /// The instruments for this programmable speaker.
   /// </summary>
   [FactorioRconAttribute("instruments")]
-  public ProgrammableSpeakerInstrument[] Instruments { get; private set; }
+  public List<ProgrammableSpeakerInstrument> Instruments { get; private set; }
 
   /// <summary>
   /// The maximum polyphony for this programmable speaker.
@@ -491,7 +491,7 @@ public class LuaEntityPrototype
   /// A vector of the gun prototypes of this car, spider vehicle, artillery wagon, or turret.
   /// </summary>
   [FactorioRconAttribute("indexed_guns")]
-  public LuaItemPrototype[] IndexedGuns { get; private set; }
+  public List<LuaItemPrototype> IndexedGuns { get; private set; }
 
   /// <summary>
   /// The default speed of this flying robot, rolling stock or unit. For rolling stocks, this is their `max_speed`.
@@ -635,7 +635,7 @@ public class LuaEntityPrototype
   /// The boiler operation mode of this boiler prototype.
   /// </summary>
   [FactorioRconAttribute("boiler_mode")]
-  public OneOf<Literal28726945, Literal66394946> BoilerMode { get; private set; }
+  public Union66394946 BoilerMode { get; private set; }
 
   /// <summary>
   /// The fluid this offshore pump produces.
@@ -893,7 +893,7 @@ public class LuaEntityPrototype
   /// The fluidbox prototypes for this entity.
   /// </summary>
   [FactorioRconAttribute("fluidbox_prototypes")]
-  public LuaFluidBoxPrototype[] FluidboxPrototypes { get; private set; }
+  public List<LuaFluidBoxPrototype> FluidboxPrototypes { get; private set; }
 
   [FactorioRconAttribute("neighbour_bonus")]
   public double NeighbourBonus { get; private set; }
@@ -1125,7 +1125,7 @@ public class LuaEntityPrototype
   /// The item prototype names that are the inputs of this lab prototype.
   /// </summary>
   [FactorioRconAttribute("lab_inputs")]
-  public string[] LabInputs { get; private set; }
+  public List<string> LabInputs { get; private set; }
 
   /// <summary>
   /// The base researching speed of this lab prototype.
@@ -1254,7 +1254,7 @@ public class LuaEntityPrototype
   /// The logistic parameters for this roboport.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table64254500 LogisticParameters { get; private set; }
+  public Table52116595 LogisticParameters { get; private set; }
 
   /// <summary>
   /// The height of this spider vehicle prototype.
@@ -1349,7 +1349,7 @@ public class LuaEntityPrototype
   public double VerticalSelectionShift { get; private set; }
 
   [FactorioRconAttribute("spawn_decoration")]
-  public TriggerEffectItem[] SpawnDecoration { get; private set; }
+  public List<TriggerEffectItem> SpawnDecoration { get; private set; }
 
   [FactorioRconAttribute("spawn_decorations_on_expansion")]
   public bool SpawnDecorationsOnExpansion { get; private set; }
@@ -1428,27 +1428,32 @@ public class LuaEntityPrototype
   /// </summary>
   /// <param name="flag">Lua name: flag</param>
   [FactorioRconMethod("has_flag")]
-  public bool HasFlag(EntityPrototypeFlag flag) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract bool HasFlag(EntityPrototypeFlag flag);
 
   /// <summary>
   /// Gets the base size of the given inventory on this entity or `nil` if the given inventory doesn't exist.
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_inventory_size")]
-  public uint? GetInventorySize(InventoryEnum index) => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract uint? GetInventorySize(InventoryEnum index);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
+}
+
+[GenerateOneOf]
+public abstract partial class Union66394946: OneOfBase<Literal20706689, Literal32187286>
+{
 }
 
 /// <summary>
 /// Literal value: heat-water-inside
 /// </summary>
-public class Literal28726945
+public abstract class Literal20706689
 {
   /// <summary>
   /// Literal value: heat-water-inside
@@ -1461,7 +1466,7 @@ public class Literal28726945
 /// <summary>
 /// Literal value: output-to-separate-pipe
 /// </summary>
-public class Literal66394946
+public abstract class Literal32187286
 {
   /// <summary>
   /// Literal value: output-to-separate-pipe
@@ -1471,13 +1476,13 @@ public class Literal66394946
 
 }
 
-public class Table52116595
+public abstract class Table28726945
 {
   [FactorioRconAttribute("smoke_name")]
   public string SmokeName { get; set; }
 
   [FactorioRconAttribute("offsets")]
-  public Vector[] Offsets { get; set; }
+  public List<Vector> Offsets { get; set; }
 
   [FactorioRconAttribute("offset_deviation")]
   public BoundingBox OffsetDeviation { get; set; }
@@ -1517,10 +1522,15 @@ public class Table52116595
 
 }
 
+[GenerateOneOf]
+public abstract partial class Union23737571: OneOfBase<Literal4844372, Literal34622967, Literal55993668, Literal35016340, Literal64254500, Literal7167227>
+{
+}
+
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public class Literal20706689
+public abstract class Literal4844372
 {
   /// <summary>
   /// Literal value: requester
@@ -1533,7 +1543,7 @@ public class Literal20706689
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public class Literal32187286
+public abstract class Literal34622967
 {
   /// <summary>
   /// Literal value: active-provider
@@ -1546,7 +1556,7 @@ public class Literal32187286
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public class Literal4844372
+public abstract class Literal55993668
 {
   /// <summary>
   /// Literal value: passive-provider
@@ -1559,7 +1569,7 @@ public class Literal4844372
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public class Literal34622967
+public abstract class Literal35016340
 {
   /// <summary>
   /// Literal value: buffer
@@ -1572,7 +1582,7 @@ public class Literal34622967
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public class Literal55993668
+public abstract class Literal64254500
 {
   /// <summary>
   /// Literal value: storage
@@ -1585,7 +1595,7 @@ public class Literal55993668
 /// <summary>
 /// Literal value: none
 /// </summary>
-public class Literal35016340
+public abstract class Literal7167227
 {
   /// <summary>
   /// Literal value: none
@@ -1595,7 +1605,7 @@ public class Literal35016340
 
 }
 
-public class Table64254500
+public abstract class Table52116595
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -1644,7 +1654,7 @@ public class Table64254500
 
 }
 
-public class Table7167227
+public abstract class Table10553853
 {
   /// <summary>
   /// Is this entity mineable at all?
@@ -1668,7 +1678,7 @@ public class Table7167227
   /// Products obtained by mining this entity.
   /// </summary>
   [FactorioRconAttribute("products")]
-  public Product[] Products { get; set; }
+  public List<Product> Products { get; set; }
 
   /// <summary>
   /// The required fluid amount if any.
@@ -1686,11 +1696,11 @@ public class Table7167227
   /// The mining trigger if any.
   /// </summary>
   [FactorioRconAttribute("mining_trigger")]
-  public TriggerItem[] MiningTrigger { get; set; }
+  public List<TriggerItem> MiningTrigger { get; set; }
 
 }
 
-public class Table16294043
+public abstract class Table20304321
 {
   [FactorioRconAttribute("min")]
   public double Min { get; set; }

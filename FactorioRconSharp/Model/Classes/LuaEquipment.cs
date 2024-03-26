@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Classes;
 /// An equipment reference becomes invalid once the equipment is removed or the equipment grid it resides in is destroyed.
 /// </summary>
 [FactorioRconClass("LuaEquipment")]
-public class LuaEquipment
+public abstract class LuaEquipment: LuaObject
 {
   /// <summary>
   /// Name of this equipment.
@@ -40,7 +40,7 @@ public class LuaEquipment
   /// Shape of this equipment.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table6630602 Shape { get; private set; }
+  public Table3038911 Shape { get; private set; }
 
   /// <summary>
   /// Current shield value of the equipment.
@@ -109,11 +109,11 @@ public class LuaEquipment
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-  public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+  public abstract string Help();
 
 }
 
-public class Table6630602
+public abstract class Table3038911
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
