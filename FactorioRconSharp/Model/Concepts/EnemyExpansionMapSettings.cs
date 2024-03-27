@@ -114,7 +114,7 @@ public abstract class EnemyExpansionMapSettings
 
 }
 
-public abstract class Table44927025
+public abstract class Table3157796
 {
   /// <summary>
   /// Whether enemy expansion is enabled at all.

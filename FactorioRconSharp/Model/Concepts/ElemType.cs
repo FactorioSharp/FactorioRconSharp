@@ -15,155 +15,155 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ElemType")]
-public abstract partial class ElemType: OneOfBase<Literal40196552, Literal51417822, Literal19066549, Literal25216348, Literal26833123, Literal13077851, Literal28915924, Literal14701405, Literal15384326, Literal37920736, Literal43424763>
+public abstract partial class ElemType: OneOfBase<Literal31968364, Literal247016, Literal5187339, Literal41825261, Literal5915254, Literal57111475, Literal58490299, Literal20336737, Literal24418296, Literal43022188, Literal31050716>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union7318883: OneOfBase<Literal40196552, Literal51417822, Literal19066549, Literal25216348, Literal26833123, Literal13077851, Literal28915924, Literal14701405, Literal15384326, Literal37920736, Literal43424763>
+public abstract partial class Union55848526: OneOfBase<Literal31968364, Literal247016, Literal5187339, Literal41825261, Literal5915254, Literal57111475, Literal58490299, Literal20336737, Literal24418296, Literal43022188, Literal31050716>
 {
 }
 
 /// <summary>
 /// Literal value: achievement
 /// </summary>
-public abstract class Literal40196552
+public enum Literal31968364
 {
   /// <summary>
   /// Literal value: achievement
   /// </summary>
-  [FactorioRconAttribute("achievement")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("achievement")]
+  Achievement,
 
 }
 
 /// <summary>
 /// Literal value: decorative
 /// </summary>
-public abstract class Literal51417822
+public enum Literal247016
 {
   /// <summary>
   /// Literal value: decorative
   /// </summary>
-  [FactorioRconAttribute("decorative")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("decorative")]
+  Decorative,
 
 }
 
 /// <summary>
 /// Literal value: entity
 /// </summary>
-public abstract class Literal19066549
+public enum Literal5187339
 {
   /// <summary>
   /// Literal value: entity
   /// </summary>
-  [FactorioRconAttribute("entity")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("entity")]
+  Entity,
 
 }
 
 /// <summary>
 /// Literal value: equipment
 /// </summary>
-public abstract class Literal25216348
+public enum Literal41825261
 {
   /// <summary>
   /// Literal value: equipment
   /// </summary>
-  [FactorioRconAttribute("equipment")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("equipment")]
+  Equipment,
 
 }
 
 /// <summary>
 /// Literal value: fluid
 /// </summary>
-public abstract class Literal26833123
+public enum Literal5915254
 {
   /// <summary>
   /// Literal value: fluid
   /// </summary>
-  [FactorioRconAttribute("fluid")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fluid")]
+  Fluid,
 
 }
 
 /// <summary>
 /// Literal value: item
 /// </summary>
-public abstract class Literal13077851
+public enum Literal57111475
 {
   /// <summary>
   /// Literal value: item
   /// </summary>
-  [FactorioRconAttribute("item")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item")]
+  Item,
 
 }
 
 /// <summary>
 /// Literal value: item-group
 /// </summary>
-public abstract class Literal28915924
+public enum Literal58490299
 {
   /// <summary>
   /// Literal value: item-group
   /// </summary>
-  [FactorioRconAttribute("item-group")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item-group")]
+  ItemGroup,
 
 }
 
 /// <summary>
 /// Literal value: recipe
 /// </summary>
-public abstract class Literal14701405
+public enum Literal20336737
 {
   /// <summary>
   /// Literal value: recipe
   /// </summary>
-  [FactorioRconAttribute("recipe")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("recipe")]
+  Recipe,
 
 }
 
 /// <summary>
 /// Literal value: signal
 /// </summary>
-public abstract class Literal15384326
+public enum Literal24418296
 {
   /// <summary>
   /// Literal value: signal
   /// </summary>
-  [FactorioRconAttribute("signal")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("signal")]
+  Signal,
 
 }
 
 /// <summary>
 /// Literal value: technology
 /// </summary>
-public abstract class Literal37920736
+public enum Literal43022188
 {
   /// <summary>
   /// Literal value: technology
   /// </summary>
-  [FactorioRconAttribute("technology")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("technology")]
+  Technology,
 
 }
 
 /// <summary>
 /// Literal value: tile
 /// </summary>
-public abstract class Literal43424763
+public enum Literal31050716
 {
   /// <summary>
   /// Literal value: tile
   /// </summary>
-  [FactorioRconAttribute("tile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("tile")]
+  Tile,
 
 }
 

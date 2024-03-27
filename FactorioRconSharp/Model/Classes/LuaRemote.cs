@@ -37,7 +37,7 @@ public abstract class LuaRemote: LuaObject
   /// List of all registered interfaces. For each interface name, `remote.interfaces[name]` is a dictionary mapping the interface's registered functions to `true`.
   /// </summary>
   [FactorioRconAttribute("interfaces")]
-  public Dictionary<string, Dictionary<string, Literal8810861>> Interfaces { get; private set; }
+  public Dictionary<string, Dictionary<string, Literal27162691>> Interfaces { get; private set; }
 
   /// <summary>
   /// Add a remote interface.
@@ -67,13 +67,13 @@ public abstract class LuaRemote: LuaObject
 /// <summary>
 /// Literal value: True
 /// </summary>
-public abstract class Literal8810861
+public enum Literal27162691
 {
   /// <summary>
   /// Literal value: True
   /// </summary>
-  [FactorioRconAttribute("True")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("True")]
+  True,
 
 }
 

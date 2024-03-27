@@ -15,38 +15,38 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("GuiDirection")]
-public abstract partial class GuiDirection: OneOfBase<Literal48472089, Literal63513313>
+public abstract partial class GuiDirection: OneOfBase<Literal15794481, Literal63248657>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union1671451: OneOfBase<Literal48472089, Literal63513313>
+public abstract partial class Union51882681: OneOfBase<Literal15794481, Literal63248657>
 {
 }
 
 /// <summary>
 /// Literal value: horizontal
 /// </summary>
-public abstract class Literal48472089
+public enum Literal15794481
 {
   /// <summary>
   /// Literal value: horizontal
   /// </summary>
-  [FactorioRconAttribute("horizontal")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("horizontal")]
+  Horizontal,
 
 }
 
 /// <summary>
 /// Literal value: vertical
 /// </summary>
-public abstract class Literal63513313
+public enum Literal63248657
 {
   /// <summary>
   /// Literal value: vertical
   /// </summary>
-  [FactorioRconAttribute("vertical")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("vertical")]
+  Vertical,
 
 }
 

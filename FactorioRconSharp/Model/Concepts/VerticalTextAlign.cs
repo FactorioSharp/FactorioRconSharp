@@ -17,64 +17,64 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("VerticalTextAlign")]
-public abstract partial class VerticalTextAlign: OneOfBase<Literal51862043, Literal15361084, Literal54147313, Literal63351761>
+public abstract partial class VerticalTextAlign: OneOfBase<Literal48677406, Literal2358652, Literal1292050, Literal37469460>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union5665281: OneOfBase<Literal51862043, Literal15361084, Literal54147313, Literal63351761>
+public abstract partial class Union64159197: OneOfBase<Literal48677406, Literal2358652, Literal1292050, Literal37469460>
 {
 }
 
 /// <summary>
 /// Literal value: top
 /// </summary>
-public abstract class Literal51862043
+public enum Literal48677406
 {
   /// <summary>
   /// Literal value: top
   /// </summary>
-  [FactorioRconAttribute("top")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("top")]
+  Top,
 
 }
 
 /// <summary>
 /// Literal value: middle
 /// </summary>
-public abstract class Literal15361084
+public enum Literal2358652
 {
   /// <summary>
   /// Literal value: middle
   /// </summary>
-  [FactorioRconAttribute("middle")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("middle")]
+  Middle,
 
 }
 
 /// <summary>
 /// Literal value: baseline
 /// </summary>
-public abstract class Literal54147313
+public enum Literal1292050
 {
   /// <summary>
   /// Literal value: baseline
   /// </summary>
-  [FactorioRconAttribute("baseline")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("baseline")]
+  Baseline,
 
 }
 
 /// <summary>
 /// Literal value: bottom
 /// </summary>
-public abstract class Literal63351761
+public enum Literal37469460
 {
   /// <summary>
   /// Literal value: bottom
   /// </summary>
-  [FactorioRconAttribute("bottom")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("bottom")]
+  Bottom,
 
 }
 

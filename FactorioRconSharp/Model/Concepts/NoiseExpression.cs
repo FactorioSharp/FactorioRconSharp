@@ -24,7 +24,7 @@ public abstract class NoiseExpression
 
 }
 
-public abstract class Table16634104
+public abstract class Table22496961
 {
   /// <summary>
   /// Names the type of the expression and determines what other fields are required.

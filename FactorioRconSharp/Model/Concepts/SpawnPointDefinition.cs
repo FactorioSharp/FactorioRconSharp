@@ -27,7 +27,7 @@ public abstract class SpawnPointDefinition
 
 }
 
-public abstract class Table27867915
+public abstract class Table66825917
 {
   /// <summary>
   /// Evolution factor for which this weight applies.

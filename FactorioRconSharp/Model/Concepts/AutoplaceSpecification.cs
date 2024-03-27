@@ -72,7 +72,7 @@ public abstract class AutoplaceSpecification
 
 }
 
-public abstract class Table30095983
+public abstract class Table57000122
 {
   [FactorioRconAttribute("probability_expression")]
   public NoiseExpression ProbabilityExpression { get; set; }

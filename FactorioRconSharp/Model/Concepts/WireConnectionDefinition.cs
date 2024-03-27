@@ -51,7 +51,7 @@ public abstract class WireConnectionDefinition
 
 }
 
-public abstract class Table34112860
+public abstract class Table42666981
 {
   /// <summary>
   /// The type of wire used.

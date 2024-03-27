@@ -15,571 +15,571 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("RenderLayer")]
-public abstract partial class RenderLayer: OneOfBase<string, Literal1206379, Literal34984991, Literal7931792, Literal28695393, Literal26860048, Literal40743915, Literal40722866, Literal40112427, Literal22409705, Literal45901694, Literal56080734, Literal15728564, Literal53475173, Literal7276169, Literal9682309, Literal12351531, Literal22650100, Literal52873146, Literal56926232, Literal40248002, Literal26341382, Literal25702594, Literal7177733, Literal6827688, Literal63785227, Literal37832273, Literal23394110, Literal7340556, Literal11549555, Literal66501655, Literal49499825, Literal26208800, Literal21857710, Literal29893828, Literal61614672, Literal41995027, Literal9896236, Literal18555401, Literal1235721, Literal35835924, Literal32608861, Literal6132884, Literal43635917>
+public abstract partial class RenderLayer: OneOfBase<string, Literal21337957, Literal45443930, Literal14798442, Literal42331837, Literal16553355, Literal12076145, Literal52272470, Literal23980061, Literal33819242, Literal39115446, Literal16118003, Literal2933762, Literal61609009, Literal18720791, Literal57592306, Literal1478876, Literal31056402, Literal48204678, Literal5665281, Literal51862043, Literal15361084, Literal54147313, Literal63351761, Literal55318575, Literal20839390, Literal34974026, Literal63365906, Literal55615624, Literal27077418, Literal31754879, Literal62872692, Literal45258134, Literal10896719, Literal27504513, Literal40723880, Literal49895113, Literal41164413, Literal59146305, Literal34112860, Literal45281424, Literal11385827, Literal37775789, Literal55094081>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union60208167: OneOfBase<string, Literal1206379, Literal34984991, Literal7931792, Literal28695393, Literal26860048, Literal40743915, Literal40722866, Literal40112427, Literal22409705, Literal45901694, Literal56080734, Literal15728564, Literal53475173, Literal7276169, Literal9682309, Literal12351531, Literal22650100, Literal52873146, Literal56926232, Literal40248002, Literal26341382, Literal25702594, Literal7177733, Literal6827688, Literal63785227, Literal37832273, Literal23394110, Literal7340556, Literal11549555, Literal66501655, Literal49499825, Literal26208800, Literal21857710, Literal29893828, Literal61614672, Literal41995027, Literal9896236, Literal18555401, Literal1235721, Literal35835924, Literal32608861, Literal6132884, Literal43635917>
+public abstract partial class Union23385714: OneOfBase<string, Literal21337957, Literal45443930, Literal14798442, Literal42331837, Literal16553355, Literal12076145, Literal52272470, Literal23980061, Literal33819242, Literal39115446, Literal16118003, Literal2933762, Literal61609009, Literal18720791, Literal57592306, Literal1478876, Literal31056402, Literal48204678, Literal5665281, Literal51862043, Literal15361084, Literal54147313, Literal63351761, Literal55318575, Literal20839390, Literal34974026, Literal63365906, Literal55615624, Literal27077418, Literal31754879, Literal62872692, Literal45258134, Literal10896719, Literal27504513, Literal40723880, Literal49895113, Literal41164413, Literal59146305, Literal34112860, Literal45281424, Literal11385827, Literal37775789, Literal55094081>
 {
 }
 
 /// <summary>
 /// Literal value: water-tile
 /// </summary>
-public abstract class Literal1206379
+public enum Literal21337957
 {
   /// <summary>
   /// Literal value: water-tile
   /// </summary>
-  [FactorioRconAttribute("water-tile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("water-tile")]
+  WaterTile,
 
 }
 
 /// <summary>
 /// Literal value: ground-tile
 /// </summary>
-public abstract class Literal34984991
+public enum Literal45443930
 {
   /// <summary>
   /// Literal value: ground-tile
   /// </summary>
-  [FactorioRconAttribute("ground-tile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("ground-tile")]
+  GroundTile,
 
 }
 
 /// <summary>
 /// Literal value: tile-transition
 /// </summary>
-public abstract class Literal7931792
+public enum Literal14798442
 {
   /// <summary>
   /// Literal value: tile-transition
   /// </summary>
-  [FactorioRconAttribute("tile-transition")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("tile-transition")]
+  TileTransition,
 
 }
 
 /// <summary>
 /// Literal value: decals
 /// </summary>
-public abstract class Literal28695393
+public enum Literal42331837
 {
   /// <summary>
   /// Literal value: decals
   /// </summary>
-  [FactorioRconAttribute("decals")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("decals")]
+  Decals,
 
 }
 
 /// <summary>
 /// Literal value: lower-radius-visualization
 /// </summary>
-public abstract class Literal26860048
+public enum Literal16553355
 {
   /// <summary>
   /// Literal value: lower-radius-visualization
   /// </summary>
-  [FactorioRconAttribute("lower-radius-visualization")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("lower-radius-visualization")]
+  LowerRadiusVisualization,
 
 }
 
 /// <summary>
 /// Literal value: radius-visualization
 /// </summary>
-public abstract class Literal40743915
+public enum Literal12076145
 {
   /// <summary>
   /// Literal value: radius-visualization
   /// </summary>
-  [FactorioRconAttribute("radius-visualization")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("radius-visualization")]
+  RadiusVisualization,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt-integration
 /// </summary>
-public abstract class Literal40722866
+public enum Literal52272470
 {
   /// <summary>
   /// Literal value: transport-belt-integration
   /// </summary>
-  [FactorioRconAttribute("transport-belt-integration")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("transport-belt-integration")]
+  TransportBeltIntegration,
 
 }
 
 /// <summary>
 /// Literal value: resource
 /// </summary>
-public abstract class Literal40112427
+public enum Literal23980061
 {
   /// <summary>
   /// Literal value: resource
   /// </summary>
-  [FactorioRconAttribute("resource")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("resource")]
+  Resource,
 
 }
 
 /// <summary>
 /// Literal value: building-smoke
 /// </summary>
-public abstract class Literal22409705
+public enum Literal33819242
 {
   /// <summary>
   /// Literal value: building-smoke
   /// </summary>
-  [FactorioRconAttribute("building-smoke")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("building-smoke")]
+  BuildingSmoke,
 
 }
 
 /// <summary>
 /// Literal value: decorative
 /// </summary>
-public abstract class Literal45901694
+public enum Literal39115446
 {
   /// <summary>
   /// Literal value: decorative
   /// </summary>
-  [FactorioRconAttribute("decorative")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("decorative")]
+  Decorative,
 
 }
 
 /// <summary>
 /// Literal value: ground-patch
 /// </summary>
-public abstract class Literal56080734
+public enum Literal16118003
 {
   /// <summary>
   /// Literal value: ground-patch
   /// </summary>
-  [FactorioRconAttribute("ground-patch")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("ground-patch")]
+  GroundPatch,
 
 }
 
 /// <summary>
 /// Literal value: ground-patch-higher
 /// </summary>
-public abstract class Literal15728564
+public enum Literal2933762
 {
   /// <summary>
   /// Literal value: ground-patch-higher
   /// </summary>
-  [FactorioRconAttribute("ground-patch-higher")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("ground-patch-higher")]
+  GroundPatchHigher,
 
 }
 
 /// <summary>
 /// Literal value: ground-patch-higher2
 /// </summary>
-public abstract class Literal53475173
+public enum Literal61609009
 {
   /// <summary>
   /// Literal value: ground-patch-higher2
   /// </summary>
-  [FactorioRconAttribute("ground-patch-higher2")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("ground-patch-higher2")]
+  GroundPatchHigher2,
 
 }
 
 /// <summary>
 /// Literal value: remnants
 /// </summary>
-public abstract class Literal7276169
+public enum Literal18720791
 {
   /// <summary>
   /// Literal value: remnants
   /// </summary>
-  [FactorioRconAttribute("remnants")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("remnants")]
+  Remnants,
 
 }
 
 /// <summary>
 /// Literal value: floor
 /// </summary>
-public abstract class Literal9682309
+public enum Literal57592306
 {
   /// <summary>
   /// Literal value: floor
   /// </summary>
-  [FactorioRconAttribute("floor")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("floor")]
+  Floor,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt
 /// </summary>
-public abstract class Literal12351531
+public enum Literal1478876
 {
   /// <summary>
   /// Literal value: transport-belt
   /// </summary>
-  [FactorioRconAttribute("transport-belt")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("transport-belt")]
+  TransportBelt,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt-endings
 /// </summary>
-public abstract class Literal22650100
+public enum Literal31056402
 {
   /// <summary>
   /// Literal value: transport-belt-endings
   /// </summary>
-  [FactorioRconAttribute("transport-belt-endings")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("transport-belt-endings")]
+  TransportBeltEndings,
 
 }
 
 /// <summary>
 /// Literal value: floor-mechanics-under-corpse
 /// </summary>
-public abstract class Literal52873146
+public enum Literal48204678
 {
   /// <summary>
   /// Literal value: floor-mechanics-under-corpse
   /// </summary>
-  [FactorioRconAttribute("floor-mechanics-under-corpse")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("floor-mechanics-under-corpse")]
+  FloorMechanicsUnderCorpse,
 
 }
 
 /// <summary>
 /// Literal value: corpse
 /// </summary>
-public abstract class Literal56926232
+public enum Literal5665281
 {
   /// <summary>
   /// Literal value: corpse
   /// </summary>
-  [FactorioRconAttribute("corpse")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("corpse")]
+  Corpse,
 
 }
 
 /// <summary>
 /// Literal value: floor-mechanics
 /// </summary>
-public abstract class Literal40248002
+public enum Literal51862043
 {
   /// <summary>
   /// Literal value: floor-mechanics
   /// </summary>
-  [FactorioRconAttribute("floor-mechanics")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("floor-mechanics")]
+  FloorMechanics,
 
 }
 
 /// <summary>
 /// Literal value: item
 /// </summary>
-public abstract class Literal26341382
+public enum Literal15361084
 {
   /// <summary>
   /// Literal value: item
   /// </summary>
-  [FactorioRconAttribute("item")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item")]
+  Item,
 
 }
 
 /// <summary>
 /// Literal value: lower-object
 /// </summary>
-public abstract class Literal25702594
+public enum Literal54147313
 {
   /// <summary>
   /// Literal value: lower-object
   /// </summary>
-  [FactorioRconAttribute("lower-object")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("lower-object")]
+  LowerObject,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt-circuit-connector
 /// </summary>
-public abstract class Literal7177733
+public enum Literal63351761
 {
   /// <summary>
   /// Literal value: transport-belt-circuit-connector
   /// </summary>
-  [FactorioRconAttribute("transport-belt-circuit-connector")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("transport-belt-circuit-connector")]
+  TransportBeltCircuitConnector,
 
 }
 
 /// <summary>
 /// Literal value: lower-object-above-shadow
 /// </summary>
-public abstract class Literal6827688
+public enum Literal55318575
 {
   /// <summary>
   /// Literal value: lower-object-above-shadow
   /// </summary>
-  [FactorioRconAttribute("lower-object-above-shadow")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("lower-object-above-shadow")]
+  LowerObjectAboveShadow,
 
 }
 
 /// <summary>
 /// Literal value: object
 /// </summary>
-public abstract class Literal63785227
+public enum Literal20839390
 {
   /// <summary>
   /// Literal value: object
   /// </summary>
-  [FactorioRconAttribute("object")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("object")]
+  Object,
 
 }
 
 /// <summary>
 /// Literal value: higher-object-under
 /// </summary>
-public abstract class Literal37832273
+public enum Literal34974026
 {
   /// <summary>
   /// Literal value: higher-object-under
   /// </summary>
-  [FactorioRconAttribute("higher-object-under")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("higher-object-under")]
+  HigherObjectUnder,
 
 }
 
 /// <summary>
 /// Literal value: higher-object-above
 /// </summary>
-public abstract class Literal23394110
+public enum Literal63365906
 {
   /// <summary>
   /// Literal value: higher-object-above
   /// </summary>
-  [FactorioRconAttribute("higher-object-above")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("higher-object-above")]
+  HigherObjectAbove,
 
 }
 
 /// <summary>
 /// Literal value: item-in-inserter-hand
 /// </summary>
-public abstract class Literal7340556
+public enum Literal55615624
 {
   /// <summary>
   /// Literal value: item-in-inserter-hand
   /// </summary>
-  [FactorioRconAttribute("item-in-inserter-hand")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item-in-inserter-hand")]
+  ItemInInserterHand,
 
 }
 
 /// <summary>
 /// Literal value: wires
 /// </summary>
-public abstract class Literal11549555
+public enum Literal27077418
 {
   /// <summary>
   /// Literal value: wires
   /// </summary>
-  [FactorioRconAttribute("wires")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("wires")]
+  Wires,
 
 }
 
 /// <summary>
 /// Literal value: wires-above
 /// </summary>
-public abstract class Literal66501655
+public enum Literal31754879
 {
   /// <summary>
   /// Literal value: wires-above
   /// </summary>
-  [FactorioRconAttribute("wires-above")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("wires-above")]
+  WiresAbove,
 
 }
 
 /// <summary>
 /// Literal value: entity-info-icon
 /// </summary>
-public abstract class Literal49499825
+public enum Literal62872692
 {
   /// <summary>
   /// Literal value: entity-info-icon
   /// </summary>
-  [FactorioRconAttribute("entity-info-icon")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("entity-info-icon")]
+  EntityInfoIcon,
 
 }
 
 /// <summary>
 /// Literal value: entity-info-icon-above
 /// </summary>
-public abstract class Literal26208800
+public enum Literal45258134
 {
   /// <summary>
   /// Literal value: entity-info-icon-above
   /// </summary>
-  [FactorioRconAttribute("entity-info-icon-above")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("entity-info-icon-above")]
+  EntityInfoIconAbove,
 
 }
 
 /// <summary>
 /// Literal value: explosion
 /// </summary>
-public abstract class Literal21857710
+public enum Literal10896719
 {
   /// <summary>
   /// Literal value: explosion
   /// </summary>
-  [FactorioRconAttribute("explosion")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("explosion")]
+  Explosion,
 
 }
 
 /// <summary>
 /// Literal value: projectile
 /// </summary>
-public abstract class Literal29893828
+public enum Literal27504513
 {
   /// <summary>
   /// Literal value: projectile
   /// </summary>
-  [FactorioRconAttribute("projectile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("projectile")]
+  Projectile,
 
 }
 
 /// <summary>
 /// Literal value: smoke
 /// </summary>
-public abstract class Literal61614672
+public enum Literal40723880
 {
   /// <summary>
   /// Literal value: smoke
   /// </summary>
-  [FactorioRconAttribute("smoke")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("smoke")]
+  Smoke,
 
 }
 
 /// <summary>
 /// Literal value: air-object
 /// </summary>
-public abstract class Literal41995027
+public enum Literal49895113
 {
   /// <summary>
   /// Literal value: air-object
   /// </summary>
-  [FactorioRconAttribute("air-object")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("air-object")]
+  AirObject,
 
 }
 
 /// <summary>
 /// Literal value: air-entity-info-icon
 /// </summary>
-public abstract class Literal9896236
+public enum Literal41164413
 {
   /// <summary>
   /// Literal value: air-entity-info-icon
   /// </summary>
-  [FactorioRconAttribute("air-entity-info-icon")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("air-entity-info-icon")]
+  AirEntityInfoIcon,
 
 }
 
 /// <summary>
 /// Literal value: light-effect
 /// </summary>
-public abstract class Literal18555401
+public enum Literal59146305
 {
   /// <summary>
   /// Literal value: light-effect
   /// </summary>
-  [FactorioRconAttribute("light-effect")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("light-effect")]
+  LightEffect,
 
 }
 
 /// <summary>
 /// Literal value: selection-box
 /// </summary>
-public abstract class Literal1235721
+public enum Literal34112860
 {
   /// <summary>
   /// Literal value: selection-box
   /// </summary>
-  [FactorioRconAttribute("selection-box")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("selection-box")]
+  SelectionBox,
 
 }
 
 /// <summary>
 /// Literal value: higher-selection-box
 /// </summary>
-public abstract class Literal35835924
+public enum Literal45281424
 {
   /// <summary>
   /// Literal value: higher-selection-box
   /// </summary>
-  [FactorioRconAttribute("higher-selection-box")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("higher-selection-box")]
+  HigherSelectionBox,
 
 }
 
 /// <summary>
 /// Literal value: collision-selection-box
 /// </summary>
-public abstract class Literal32608861
+public enum Literal11385827
 {
   /// <summary>
   /// Literal value: collision-selection-box
   /// </summary>
-  [FactorioRconAttribute("collision-selection-box")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("collision-selection-box")]
+  CollisionSelectionBox,
 
 }
 
 /// <summary>
 /// Literal value: arrow
 /// </summary>
-public abstract class Literal6132884
+public enum Literal37775789
 {
   /// <summary>
   /// Literal value: arrow
   /// </summary>
-  [FactorioRconAttribute("arrow")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("arrow")]
+  Arrow,
 
 }
 
 /// <summary>
 /// Literal value: cursor
 /// </summary>
-public abstract class Literal43635917
+public enum Literal55094081
 {
   /// <summary>
   /// Literal value: cursor
   /// </summary>
-  [FactorioRconAttribute("cursor")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("cursor")]
+  Cursor,
 
 }
 

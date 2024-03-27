@@ -33,7 +33,7 @@ public abstract class SelectedPrototypeData
 
 }
 
-public abstract class Table26766297
+public abstract class Table36222945
 {
   /// <summary>
   /// E.g. `"entity"`.

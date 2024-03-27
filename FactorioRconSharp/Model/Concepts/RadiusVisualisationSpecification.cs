@@ -27,7 +27,7 @@ public abstract class RadiusVisualisationSpecification
 
 }
 
-public abstract class Table36937578
+public abstract class Table38756850
 {
   [FactorioRconAttribute("distance")]
   public double Distance { get; set; }

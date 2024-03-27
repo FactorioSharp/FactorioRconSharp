@@ -21,7 +21,7 @@ public abstract class DisplayResolution
 
 }
 
-public abstract class Table8140213
+public abstract class Table57013419
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }

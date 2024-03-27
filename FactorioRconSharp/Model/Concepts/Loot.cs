@@ -39,7 +39,7 @@ public abstract class Loot
 
 }
 
-public abstract class Table65863075
+public abstract class Table51027520
 {
   /// <summary>
   /// Item prototype name of the result.

@@ -24,7 +24,7 @@ public abstract class ScriptRenderTarget
 
 }
 
-public abstract class Table11279128
+public abstract class Table8023324
 {
   [FactorioRconAttribute("entity")]
   public LuaEntity Entity { get; set; }

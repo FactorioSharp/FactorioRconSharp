@@ -24,7 +24,7 @@ public abstract class MapExchangeStringData
 
 }
 
-public abstract class Table66858053
+public abstract class Table3908350
 {
   [FactorioRconAttribute("map_settings")]
   public MapAndDifficultySettings MapSettings { get; set; }

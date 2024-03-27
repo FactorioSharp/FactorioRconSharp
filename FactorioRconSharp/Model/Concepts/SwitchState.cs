@@ -15,51 +15,51 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("SwitchState")]
-public abstract partial class SwitchState: OneOfBase<Literal1084693, Literal22778559, Literal8587703>
+public abstract partial class SwitchState: OneOfBase<Literal19313531, Literal23221489, Literal2334549>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union51182215: OneOfBase<Literal1084693, Literal22778559, Literal8587703>
+public abstract partial class Union63146650: OneOfBase<Literal19313531, Literal23221489, Literal2334549>
 {
 }
 
 /// <summary>
 /// Literal value: left
 /// </summary>
-public abstract class Literal1084693
+public enum Literal19313531
 {
   /// <summary>
   /// Literal value: left
   /// </summary>
-  [FactorioRconAttribute("left")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("left")]
+  Left,
 
 }
 
 /// <summary>
 /// Literal value: right
 /// </summary>
-public abstract class Literal22778559
+public enum Literal23221489
 {
   /// <summary>
   /// Literal value: right
   /// </summary>
-  [FactorioRconAttribute("right")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("right")]
+  Right,
 
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public abstract class Literal8587703
+public enum Literal2334549
 {
   /// <summary>
   /// Literal value: none
   /// </summary>
-  [FactorioRconAttribute("none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none")]
+  None,
 
 }
 

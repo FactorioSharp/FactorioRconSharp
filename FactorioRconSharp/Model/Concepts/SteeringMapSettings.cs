@@ -21,7 +21,7 @@ public abstract class SteeringMapSettings
 
 }
 
-public abstract class Table8828568
+public abstract class Table30477555
 {
   [FactorioRconAttribute("default")]
   public SteeringMapSetting Default { get; set; }

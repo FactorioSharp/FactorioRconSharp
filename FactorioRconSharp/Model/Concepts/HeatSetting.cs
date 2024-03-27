@@ -26,11 +26,11 @@ public abstract class HeatSetting
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union49515534 Mode { get; set; }
+  public Union27867915 Mode { get; set; }
 
 }
 
-public abstract class Table59559901
+public abstract class Table23696664
 {
   /// <summary>
   /// The target temperature. Defaults to the minimum temperature of the heat buffer.
@@ -42,77 +42,77 @@ public abstract class Table59559901
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union49515534 Mode { get; set; }
+  public Union27867915 Mode { get; set; }
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union49515534: OneOfBase<Literal26664368, Literal35069176, Literal10373162, Literal32386246, Literal66785904>
+public abstract partial class Union27867915: OneOfBase<Literal48355310, Literal8828568, Literal51182215, Literal1084693, Literal22778559>
 {
 }
 
 /// <summary>
 /// Literal value: at-least
 /// </summary>
-public abstract class Literal26664368
+public enum Literal48355310
 {
   /// <summary>
   /// Literal value: at-least
   /// </summary>
-  [FactorioRconAttribute("at-least")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("at-least")]
+  AtLeast,
 
 }
 
 /// <summary>
 /// Literal value: at-most
 /// </summary>
-public abstract class Literal35069176
+public enum Literal8828568
 {
   /// <summary>
   /// Literal value: at-most
   /// </summary>
-  [FactorioRconAttribute("at-most")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("at-most")]
+  AtMost,
 
 }
 
 /// <summary>
 /// Literal value: exactly
 /// </summary>
-public abstract class Literal10373162
+public enum Literal51182215
 {
   /// <summary>
   /// Literal value: exactly
   /// </summary>
-  [FactorioRconAttribute("exactly")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("exactly")]
+  Exactly,
 
 }
 
 /// <summary>
 /// Literal value: add
 /// </summary>
-public abstract class Literal32386246
+public enum Literal1084693
 {
   /// <summary>
   /// Literal value: add
   /// </summary>
-  [FactorioRconAttribute("add")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("add")]
+  Add,
 
 }
 
 /// <summary>
 /// Literal value: remove
 /// </summary>
-public abstract class Literal66785904
+public enum Literal22778559
 {
   /// <summary>
   /// Literal value: remove
   /// </summary>
-  [FactorioRconAttribute("remove")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("remove")]
+  Remove,
 
 }
 

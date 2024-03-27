@@ -32,7 +32,7 @@ public abstract class InfinityInventoryFilter
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union63935578 Mode { get; set; }
+  public Union46124038 Mode { get; set; }
 
   /// <summary>
   /// The index of this filter in the filters list. Not required when writing a filter.
@@ -42,7 +42,7 @@ public abstract class InfinityInventoryFilter
 
 }
 
-public abstract class Table57743045
+public abstract class Table8587703
 {
   /// <summary>
   /// Name of the item.
@@ -60,7 +60,7 @@ public abstract class Table57743045
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union63935578 Mode { get; set; }
+  public Union46124038 Mode { get; set; }
 
   /// <summary>
   /// The index of this filter in the filters list. Not required when writing a filter.
@@ -71,46 +71,46 @@ public abstract class Table57743045
 }
 
 [GenerateOneOf]
-public abstract partial class Union63935578: OneOfBase<Literal42192436, Literal15621100, Literal50358721>
+public abstract partial class Union46124038: OneOfBase<Literal29080708, Literal6715097, Literal6799314>
 {
 }
 
 /// <summary>
 /// Literal value: at-least
 /// </summary>
-public abstract class Literal42192436
+public enum Literal29080708
 {
   /// <summary>
   /// Literal value: at-least
   /// </summary>
-  [FactorioRconAttribute("at-least")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("at-least")]
+  AtLeast,
 
 }
 
 /// <summary>
 /// Literal value: at-most
 /// </summary>
-public abstract class Literal15621100
+public enum Literal6715097
 {
   /// <summary>
   /// Literal value: at-most
   /// </summary>
-  [FactorioRconAttribute("at-most")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("at-most")]
+  AtMost,
 
 }
 
 /// <summary>
 /// Literal value: exactly
 /// </summary>
-public abstract class Literal50358721
+public enum Literal6799314
 {
   /// <summary>
   /// Literal value: exactly
   /// </summary>
-  [FactorioRconAttribute("exactly")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("exactly")]
+  Exactly,
 
 }
 

@@ -24,7 +24,7 @@ public abstract class CopperConnectionDefinition
 
 }
 
-public abstract class Table16754362
+public abstract class Table38486436
 {
   [FactorioRconAttribute("source_wire_connector")]
   public WireConnectionIdEnum SourceWireConnector { get; set; }

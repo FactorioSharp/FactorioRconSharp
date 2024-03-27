@@ -26,7 +26,7 @@ public abstract class LuaUpgradeCancelledEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union11900006 Mode { get; set; }
+  public Union38547184 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class LuaUpgradeCancelledEventFilter
 
 }
 
-public abstract class Table27527918
+public abstract class Table52239385
 {
   /// <summary>
   /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`.
@@ -48,7 +48,7 @@ public abstract class Table27527918
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union11900006 Mode { get; set; }
+  public Union38547184 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,33 +59,33 @@ public abstract class Table27527918
 }
 
 [GenerateOneOf]
-public abstract partial class Union11900006: OneOfBase<Literal37647038, Literal50763147>
+public abstract partial class Union38547184: OneOfBase<Literal44126517, Literal4600603>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal37647038
+public enum Literal44126517
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal50763147
+public enum Literal4600603
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 

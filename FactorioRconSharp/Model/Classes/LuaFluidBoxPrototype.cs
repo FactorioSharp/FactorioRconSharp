@@ -38,7 +38,7 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public Union49382823 ProductionType { get; private set; }
+  public Union8462621 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -103,59 +103,59 @@ public abstract class LuaFluidBoxPrototype: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union49382823: OneOfBase<Literal15225125, Literal26458746, Literal39449526, Literal50346327>
+public abstract partial class Union8462621: OneOfBase<Literal44681534, Literal42604054, Literal32846161, Literal7348436>
 {
 }
 
 /// <summary>
 /// Literal value: input
 /// </summary>
-public abstract class Literal15225125
+public enum Literal44681534
 {
   /// <summary>
   /// Literal value: input
   /// </summary>
-  [FactorioRconAttribute("input")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("input")]
+  Input,
 
 }
 
 /// <summary>
 /// Literal value: input-output
 /// </summary>
-public abstract class Literal26458746
+public enum Literal42604054
 {
   /// <summary>
   /// Literal value: input-output
   /// </summary>
-  [FactorioRconAttribute("input-output")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("input-output")]
+  InputOutput,
 
 }
 
 /// <summary>
 /// Literal value: output
 /// </summary>
-public abstract class Literal39449526
+public enum Literal32846161
 {
   /// <summary>
   /// Literal value: output
   /// </summary>
-  [FactorioRconAttribute("output")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("output")]
+  Output,
 
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public abstract class Literal50346327
+public enum Literal7348436
 {
   /// <summary>
   /// Literal value: none
   /// </summary>
-  [FactorioRconAttribute("none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none")]
+  None,
 
 }
 

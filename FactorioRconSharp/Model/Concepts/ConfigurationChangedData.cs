@@ -45,7 +45,7 @@ public abstract class ConfigurationChangedData
 
 }
 
-public abstract class Table49129953
+public abstract class Table59015382
 {
   /// <summary>
   /// Old version of the map. Present only when loading map version other than the current version.

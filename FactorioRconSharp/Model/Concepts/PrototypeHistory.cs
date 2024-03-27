@@ -27,7 +27,7 @@ public abstract class PrototypeHistory
 
 }
 
-public abstract class Table64023188
+public abstract class Table21019525
 {
   /// <summary>
   /// The mod that created this prototype.

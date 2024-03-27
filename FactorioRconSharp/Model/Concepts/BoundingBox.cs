@@ -15,16 +15,16 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("BoundingBox")]
-public abstract partial class BoundingBox: OneOfBase<Table19655016, Table10102168>
+public abstract partial class BoundingBox: OneOfBase<Table55797291, Table7508718>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union42479535: OneOfBase<Table19655016, Table10102168>
+public abstract partial class Union34321427: OneOfBase<Table55797291, Table7508718>
 {
 }
 
-public abstract class Table19655016
+public abstract class Table55797291
 {
   [FactorioRconAttribute("left_top")]
   public MapPosition LeftTop { get; set; }
@@ -37,7 +37,7 @@ public abstract class Table19655016
 
 }
 
-public abstract class Table10102168
+public abstract class Table7508718
 {
   [FactorioRconAttribute("left_top")]
   public MapPosition LeftTop { get; set; }

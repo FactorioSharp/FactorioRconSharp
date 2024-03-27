@@ -21,7 +21,7 @@ public abstract class VehicleAutomaticTargetingParameters
 
 }
 
-public abstract class Table48204678
+public abstract class Table13782879
 {
   [FactorioRconAttribute("auto_target_without_gunner")]
   public bool AutoTargetWithoutGunner { get; set; }

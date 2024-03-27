@@ -22,7 +22,7 @@ public class FactorioModelFileCompiler
         }
 
         IEnumerable<FactorioRuntimeTypeSpecification> types = FactorioSpecificationTypeExtractor.ExtractTypes(cls);
-        IEnumerable<FactorioModelClass> nestedClasses = GenerateNestedTypeClasses(types);
+        IEnumerable<FactorioModelTopLevelStatement> statementsFromNestedTypes = types.SelectMany(CompileType);
 
         return new FactorioModelFile
         {
@@ -35,7 +35,7 @@ public class FactorioModelFileCompiler
                 "FactorioRconSharp.Model.Definitions",
                 "OneOf"
             ],
-            Classes = new[] { CompileClasses(cls) }.Concat(nestedClasses).ToArray()
+            Statements = new[] { CompileClass(cls) }.Concat(statementsFromNestedTypes).ToArray()
         };
     }
 
@@ -48,7 +48,7 @@ public class FactorioModelFileCompiler
         }
 
         IEnumerable<FactorioRuntimeTypeSpecification> types = FactorioSpecificationTypeExtractor.ExtractTypes(concept);
-        IEnumerable<FactorioModelClass> nestedClasses = GenerateNestedTypeClasses(types);
+        IEnumerable<FactorioModelTopLevelStatement> nestedSymbols = types.SelectMany(CompileType);
 
         return new FactorioModelFile
         {
@@ -61,7 +61,7 @@ public class FactorioModelFileCompiler
                 "FactorioRconSharp.Model.Definitions",
                 "OneOf"
             ],
-            Classes = new[] { CompileClass(concept) }.Concat(nestedClasses).ToArray()
+            Statements = new[] { CompileConcept(concept) }.Concat(nestedSymbols).ToArray()
         };
     }
 
@@ -83,11 +83,11 @@ public class FactorioModelFileCompiler
                 "FactorioRconSharp.Model.Classes",
                 "FactorioRconSharp.Model.Concepts"
             ],
-            Enums = CompileEnums(definition)
+            Statements = CompileDefinition(definition).ToArray<FactorioModelTopLevelStatement>()
         };
     }
 
-    FactorioModelClass CompileClasses(FactorioRuntimeClassSpecification cls) =>
+    FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls) =>
         new()
         {
             Name = cls.Name.ToPascalCase(),
@@ -106,73 +106,66 @@ public class FactorioModelFileCompiler
             Methods = cls.Methods.OrderBy(m => m.Order).Select(CompileMethod).ToArray()
         };
 
-    FactorioModelClass CompileClass(FactorioRuntimeConceptSpecification concept)
+    FactorioModelTopLevelStatement CompileConcept(FactorioRuntimeConceptSpecification concept)
     {
-        FactorioModelClass result = new()
-        {
-            Name = concept.Name.ToPascalCase(),
-            LuaName = concept.Name,
-            Documentation = new FactorioModelDocumentation
-            {
-                Summary = concept.Description
-            },
-            IsFactorioConcept = true
-        };
-
+        FactorioModelTopLevelStatement symbol;
         switch (concept.Type)
         {
             case FactorioRuntimeSimpleTypeSpecification:
             case FactorioRuntimeArrayTypeSpecification:
             case FactorioRuntimeFunctionTypeSpecification:
             case FactorioRuntimeKeyValueTypeSpecification:
-                string typeName = BuildTypeName(concept.Type);
-                result.BaseClass = typeName;
+                symbol = new FactorioModelClass
+                {
+                    Name = "",
+                    BaseClass = BuildTypeName(concept.Type)
+                };
                 break;
             case FactorioRuntimeLiteralTypeSpecification literalType:
-                FactorioModelClass compiledLiteralType = CompileLiteralType(literalType);
-                result.Properties = compiledLiteralType.Properties;
+                symbol = CompileLiteralType(literalType);
                 break;
             case FactorioRuntimeStructTypeSpecification structType:
-                FactorioModelClass compiledStructType = CompileStructType(structType);
-                result.Properties = compiledStructType.Properties;
+                symbol = CompileStructType(structType);
                 break;
             case FactorioRuntimeTableTypeSpecification tableType:
-                FactorioModelClass compiledTableType = CompileTableType(tableType);
-                result.Properties = compiledTableType.Properties;
+                symbol = CompileTableType(tableType);
                 break;
             case FactorioRuntimeTupleTypeSpecification tupleType:
-                FactorioModelClass compiledTupleType = CompileTupleType(tupleType);
-                result.Properties = compiledTupleType.Properties;
+                symbol = CompileTupleType(tupleType);
                 break;
             case FactorioRuntimeUnionTypeSpecification unionType:
-                FactorioModelClass compiledUnionType = CompileUnionType(unionType);
-                result.BaseClass = compiledUnionType.BaseClass;
-                result.IsPartial = compiledUnionType.IsPartial;
-                result.Attributes = compiledUnionType.Attributes;
+                symbol = CompileUnionType(unionType);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
 
-        return result;
+        symbol.Name = concept.Name.ToPascalCase();
+        symbol.LuaName = concept.Name;
+        symbol.Documentation = new FactorioModelDocumentation
+        {
+            Summary = concept.Description
+        };
+        symbol.IsFactorioConcept = true;
+
+        return symbol;
     }
 
-    FactorioModelEnum[] CompileEnums(FactorioRuntimeDefinitionSpecification definition, string namePrefix = "", string luaNamePrefix = "")
+    IEnumerable<FactorioModelEnum> CompileDefinition(FactorioRuntimeDefinitionSpecification definition, string namePrefix = "", string luaNamePrefix = "")
     {
         string enumName = $"{namePrefix}{definition.Name.ToPascalCase()}";
         string luaName = $"{luaNamePrefix}{definition.Name}";
 
         return new[]
+        {
+            new FactorioModelEnum
             {
-                new FactorioModelEnum
-                {
-                    Name = $"{enumName}Enum",
-                    LuaName = luaName,
-                    Documentation = new FactorioModelDocumentation { Summary = definition.Description },
-                    Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
-                }
-            }.Concat(definition.Subkeys.SelectMany(def => CompileEnums(def, enumName, $"{luaName}.")))
-            .ToArray();
+                Name = $"{enumName}Enum",
+                LuaName = luaName,
+                Documentation = new FactorioModelDocumentation { Summary = definition.Description },
+                Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
+            }
+        }.Concat(definition.Subkeys.SelectMany(def => CompileDefinition(def, enumName, $"{luaName}.")));
     }
 
     FactorioModelEnumValue CompileEnumValue(FactorioRuntimeDefinitionValueSpecification definitionValue) =>
@@ -267,27 +260,20 @@ public class FactorioModelFileCompiler
             Optional = parameter.Optional
         };
 
-    FactorioModelClass CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
+    FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
     {
         string name = $"Literal{literalType.GetHashCode()}";
-        return new FactorioModelClass
+        string valueName = literalType.Value.ToString() ?? "value";
+
+        return new FactorioModelEnum
         {
             Name = name,
             Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" },
-            Properties =
-            [
-                new FactorioModelClassProperty
-                {
-                    Name = "Value",
-                    LuaName = literalType.Value.ToString() ?? "",
-                    Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" },
-                    Type = "object",
-                    IsStatic = true,
-                    Optional = false,
-                    Read = true,
-                    Write = false
-                }
-            ]
+            Values = new[]
+            {
+                new FactorioModelEnumValue
+                    { Name = valueName.ToPascalCase(), LuaName = valueName, Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" } }
+            }
         };
     }
 
@@ -466,28 +452,25 @@ public class FactorioModelFileCompiler
         }
     }
 
-    IEnumerable<FactorioModelClass> GenerateNestedTypeClasses(IEnumerable<FactorioRuntimeTypeSpecification> types)
+    IEnumerable<FactorioModelTopLevelStatement> CompileType(FactorioRuntimeTypeSpecification type)
     {
-        foreach (FactorioRuntimeTypeSpecification type in types)
+        switch (type)
         {
-            switch (type)
-            {
-                case FactorioRuntimeLiteralTypeSpecification literalType:
-                    yield return CompileLiteralType(literalType);
-                    break;
-                case FactorioRuntimeStructTypeSpecification structType:
-                    yield return CompileStructType(structType);
-                    break;
-                case FactorioRuntimeTableTypeSpecification tableType:
-                    yield return CompileTableType(tableType);
-                    break;
-                case FactorioRuntimeTupleTypeSpecification tupleType:
-                    yield return CompileTupleType(tupleType);
-                    break;
-                case FactorioRuntimeUnionTypeSpecification unionType:
-                    yield return CompileUnionType(unionType);
-                    break;
-            }
+            case FactorioRuntimeLiteralTypeSpecification literalType:
+                yield return CompileLiteralType(literalType);
+                break;
+            case FactorioRuntimeStructTypeSpecification structType:
+                yield return CompileStructType(structType);
+                break;
+            case FactorioRuntimeTableTypeSpecification tableType:
+                yield return CompileTableType(tableType);
+                break;
+            case FactorioRuntimeTupleTypeSpecification tupleType:
+                yield return CompileTupleType(tupleType);
+                break;
+            case FactorioRuntimeUnionTypeSpecification unionType:
+                yield return CompileUnionType(unionType);
+                break;
         }
     }
 }

@@ -160,7 +160,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public abstract int GetItemCount(string? item = null, Union39948218? member = null);
+  public abstract int GetItemCount(string? item = null, Union64612267? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public abstract uint RemoveItem(ItemStackIdentification item, Union1689058? members = null);
+  public abstract uint RemoveItem(ItemStackIdentification item, Union61816437? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public abstract uint Insert(ItemStackIdentification item, Union62495167? members = null);
+  public abstract uint Insert(ItemStackIdentification item, Union47846228? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Union30619839? members = null);
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Union45363346? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Union59192235? members = null);
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Union40468632? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.
@@ -241,261 +241,261 @@ public abstract class LuaLogisticNetwork: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union39948218: OneOfBase<Literal42629054, Literal33771145>
+public abstract partial class Union64612267: OneOfBase<Literal32739668, Literal9926279>
 {
 }
 
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public abstract class Literal42629054
+public enum Literal32739668
 {
   /// <summary>
   /// Literal value: storage
   /// </summary>
-  [FactorioRconAttribute("storage")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage")]
+  Storage,
 
 }
 
 /// <summary>
 /// Literal value: providers
 /// </summary>
-public abstract class Literal33771145
+public enum Literal9926279
 {
   /// <summary>
   /// Literal value: providers
   /// </summary>
-  [FactorioRconAttribute("providers")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("providers")]
+  Providers,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union62495167: OneOfBase<Literal41572837, Literal61799993, Literal4898379, Literal47022312>
+public abstract partial class Union47846228: OneOfBase<Literal19426640, Literal26501661, Literal30350669, Literal7754184>
 {
 }
 
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public abstract class Literal41572837
+public enum Literal19426640
 {
   /// <summary>
   /// Literal value: storage
   /// </summary>
-  [FactorioRconAttribute("storage")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage")]
+  Storage,
 
 }
 
 /// <summary>
 /// Literal value: storage-empty
 /// </summary>
-public abstract class Literal61799993
+public enum Literal26501661
 {
   /// <summary>
   /// Literal value: storage-empty
   /// </summary>
-  [FactorioRconAttribute("storage-empty")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage-empty")]
+  StorageEmpty,
 
 }
 
 /// <summary>
 /// Literal value: storage-empty-slot
 /// </summary>
-public abstract class Literal4898379
+public enum Literal30350669
 {
   /// <summary>
   /// Literal value: storage-empty-slot
   /// </summary>
-  [FactorioRconAttribute("storage-empty-slot")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage-empty-slot")]
+  StorageEmptySlot,
 
 }
 
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public abstract class Literal47022312
+public enum Literal7754184
 {
   /// <summary>
   /// Literal value: requester
   /// </summary>
-  [FactorioRconAttribute("requester")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("requester")]
+  Requester,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union1689058: OneOfBase<Literal62103957, Literal16145044, Literal60495737, Literal23749772>
+public abstract partial class Union61816437: OneOfBase<Literal23544769, Literal11709672, Literal4036177, Literal49940297>
 {
 }
 
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public abstract class Literal62103957
+public enum Literal23544769
 {
   /// <summary>
   /// Literal value: active-provider
   /// </summary>
-  [FactorioRconAttribute("active-provider")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("active-provider")]
+  ActiveProvider,
 
 }
 
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public abstract class Literal16145044
+public enum Literal11709672
 {
   /// <summary>
   /// Literal value: passive-provider
   /// </summary>
-  [FactorioRconAttribute("passive-provider")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("passive-provider")]
+  PassiveProvider,
 
 }
 
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public abstract class Literal60495737
+public enum Literal4036177
 {
   /// <summary>
   /// Literal value: buffer
   /// </summary>
-  [FactorioRconAttribute("buffer")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("buffer")]
+  Buffer,
 
 }
 
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public abstract class Literal23749772
+public enum Literal49940297
 {
   /// <summary>
   /// Literal value: storage
   /// </summary>
-  [FactorioRconAttribute("storage")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage")]
+  Storage,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union59192235: OneOfBase<Literal6326333, Literal32747756, Literal3707448, Literal2957860>
+public abstract partial class Union40468632: OneOfBase<Literal38982485, Literal56750250, Literal35144529, Literal12558393>
 {
 }
 
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public abstract class Literal6326333
+public enum Literal38982485
 {
   /// <summary>
   /// Literal value: storage
   /// </summary>
-  [FactorioRconAttribute("storage")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage")]
+  Storage,
 
 }
 
 /// <summary>
 /// Literal value: storage-empty
 /// </summary>
-public abstract class Literal32747756
+public enum Literal56750250
 {
   /// <summary>
   /// Literal value: storage-empty
   /// </summary>
-  [FactorioRconAttribute("storage-empty")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage-empty")]
+  StorageEmpty,
 
 }
 
 /// <summary>
 /// Literal value: storage-empty-slot
 /// </summary>
-public abstract class Literal3707448
+public enum Literal35144529
 {
   /// <summary>
   /// Literal value: storage-empty-slot
   /// </summary>
-  [FactorioRconAttribute("storage-empty-slot")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage-empty-slot")]
+  StorageEmptySlot,
 
 }
 
 /// <summary>
 /// Literal value: requester
 /// </summary>
-public abstract class Literal2957860
+public enum Literal12558393
 {
   /// <summary>
   /// Literal value: requester
   /// </summary>
-  [FactorioRconAttribute("requester")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("requester")]
+  Requester,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union30619839: OneOfBase<Literal42331983, Literal22779505, Literal37535352, Literal46630754>
+public abstract partial class Union45363346: OneOfBase<Literal28649084, Literal25517075, Literal1797691, Literal52133063>
 {
 }
 
 /// <summary>
 /// Literal value: active-provider
 /// </summary>
-public abstract class Literal42331983
+public enum Literal28649084
 {
   /// <summary>
   /// Literal value: active-provider
   /// </summary>
-  [FactorioRconAttribute("active-provider")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("active-provider")]
+  ActiveProvider,
 
 }
 
 /// <summary>
 /// Literal value: passive-provider
 /// </summary>
-public abstract class Literal22779505
+public enum Literal25517075
 {
   /// <summary>
   /// Literal value: passive-provider
   /// </summary>
-  [FactorioRconAttribute("passive-provider")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("passive-provider")]
+  PassiveProvider,
 
 }
 
 /// <summary>
 /// Literal value: buffer
 /// </summary>
-public abstract class Literal37535352
+public enum Literal1797691
 {
   /// <summary>
   /// Literal value: buffer
   /// </summary>
-  [FactorioRconAttribute("buffer")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("buffer")]
+  Buffer,
 
 }
 
 /// <summary>
 /// Literal value: storage
 /// </summary>
-public abstract class Literal46630754
+public enum Literal52133063
 {
   /// <summary>
   /// Literal value: storage
   /// </summary>
-  [FactorioRconAttribute("storage")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("storage")]
+  Storage,
 
 }
 

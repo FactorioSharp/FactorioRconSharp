@@ -36,7 +36,7 @@ public abstract class TriggerEffectItem
 
 }
 
-public abstract class Table12699242
+public abstract class Table35885672
 {
   [FactorioRconAttribute("type")]
   public TriggerEffectItemType Type { get; set; }

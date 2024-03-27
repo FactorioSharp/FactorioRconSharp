@@ -27,7 +27,7 @@ public abstract class Decorative
 
 }
 
-public abstract class Table32101292
+public abstract class Table14600233
 {
   /// <summary>
   /// The name of the decorative prototype.

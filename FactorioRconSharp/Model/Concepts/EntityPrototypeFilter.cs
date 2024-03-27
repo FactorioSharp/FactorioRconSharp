@@ -26,7 +26,7 @@ public abstract class EntityPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union28705829 Mode { get; set; }
+  public Union36601332 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class EntityPrototypeFilter
 
 }
 
-public abstract class Table28759041
+public abstract class Table26717201
 {
   /// <summary>
   /// The condition to filter on. One of `"flying-robot"`, `"robot-with-logistics-interface"`, `"rail"`, `"ghost"`, `"explosion"`, `"vehicle"`, `"crafting-machine"`, `"rolling-stock"`, `"turret"`, `"transport-belt-connectable"`, `"wall-connectable"`, `"buildable"`, `"placable-in-editor"`, `"clonable"`, `"selectable"`, `"hidden"`, `"entity-with-health"`, `"building"`, `"fast-replaceable"`, `"uses-direction"`, `"minable"`, `"circuit-connectable"`, `"autoplace"`, `"blueprintable"`, `"item-to-place"`, `"name"`, `"type"`, `"collision-mask"`, `"flag"`, `"build-base-evolution-requirement"`, `"selection-priority"`, `"emissions"`, `"crafting-category"`.
@@ -48,7 +48,7 @@ public abstract class Table28759041
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union28705829 Mode { get; set; }
+  public Union36601332 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,105 +59,105 @@ public abstract class Table28759041
 }
 
 [GenerateOneOf]
-public abstract partial class Union28705829: OneOfBase<Literal27162691, Literal49520539>
+public abstract partial class Union36601332: OneOfBase<Literal54805688, Literal45861104>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal27162691
+public enum Literal54805688
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal49520539
+public enum Literal45861104
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union26809489: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union54903627: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union39277698: OneOfBase<Literal65311427, Literal14983193, Literal31859421, Literal51507982>
+public abstract partial class Union48701316: OneOfBase<Literal3052046, Literal21400478, Literal16634104, Literal12626972>
 {
 }
 
 /// <summary>
 /// Literal value: collides
 /// </summary>
-public abstract class Literal65311427
+public enum Literal3052046
 {
   /// <summary>
   /// Literal value: collides
   /// </summary>
-  [FactorioRconAttribute("collides")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("collides")]
+  Collides,
 
 }
 
 /// <summary>
 /// Literal value: layers-equals
 /// </summary>
-public abstract class Literal14983193
+public enum Literal21400478
 {
   /// <summary>
   /// Literal value: layers-equals
   /// </summary>
-  [FactorioRconAttribute("layers-equals")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("layers-equals")]
+  LayersEquals,
 
 }
 
 /// <summary>
 /// Literal value: contains-any
 /// </summary>
-public abstract class Literal31859421
+public enum Literal16634104
 {
   /// <summary>
   /// Literal value: contains-any
   /// </summary>
-  [FactorioRconAttribute("contains-any")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("contains-any")]
+  ContainsAny,
 
 }
 
 /// <summary>
 /// Literal value: contains-all
 /// </summary>
-public abstract class Literal51507982
+public enum Literal12626972
 {
   /// <summary>
   /// Literal value: contains-all
   /// </summary>
-  [FactorioRconAttribute("contains-all")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("contains-all")]
+  ContainsAll,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union17336470: OneOfBase<string, List<string>>
+public abstract partial class Union30637870: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union32995582: OneOfBase<string, List<string>>
+public abstract partial class Union16083019: OneOfBase<string, List<string>>
 {
 }
 

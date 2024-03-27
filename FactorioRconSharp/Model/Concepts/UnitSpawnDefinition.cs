@@ -27,7 +27,7 @@ public abstract class UnitSpawnDefinition
 
 }
 
-public abstract class Table31056402
+public abstract class Table48932684
 {
   /// <summary>
   /// Prototype name of the unit that would be spawned.

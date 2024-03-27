@@ -27,7 +27,7 @@ public abstract class Resistance
 
 }
 
-public abstract class Table57482069
+public abstract class Table16125021
 {
   /// <summary>
   /// Absolute damage decrease

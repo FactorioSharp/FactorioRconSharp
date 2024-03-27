@@ -33,7 +33,7 @@ public abstract class SteeringMapSetting
 
 }
 
-public abstract class Table48355310
+public abstract class Table58903419
 {
   /// <summary>
   /// Does not include the radius of the unit.

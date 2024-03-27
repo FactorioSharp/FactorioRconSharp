@@ -33,7 +33,7 @@ public abstract class MapGenPreset
 
 }
 
-public abstract class Table59835361
+public abstract class Table14966502
 {
   /// <summary>
   /// The string used to alphabetically sort the presets. It is a simple string that has no additional semantic meaning.

@@ -46,7 +46,7 @@ public abstract class LuaPermissionGroups: LuaObject
   /// </summary>
   /// <param name="group">Lua name: group</param>
   [FactorioRconMethod("get_group")]
-  public abstract LuaPermissionGroup? GetGroup(Union31968364 group);
+  public abstract LuaPermissionGroup? GetGroup(Union48209832 group);
 
   /// <summary>
   /// All methods and properties that this object supports.
@@ -57,7 +57,7 @@ public abstract class LuaPermissionGroups: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union31968364: OneOfBase<string, uint>
+public abstract partial class Union48209832: OneOfBase<string, uint>
 {
 }
 

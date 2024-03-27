@@ -41,7 +41,7 @@ public abstract class ArithmeticCombinatorParameters
   /// When not specified, defaults to `"*"`.
   /// </summary>
   [FactorioRconAttribute("operation")]
-  public Union42209503 Operation { get; set; }
+  public Union66394946 Operation { get; set; }
 
   /// <summary>
   /// Specifies the signal to output.
@@ -51,7 +51,7 @@ public abstract class ArithmeticCombinatorParameters
 
 }
 
-public abstract class Table50051574
+public abstract class Table28726945
 {
   /// <summary>
   /// First signal to use in an operation. If not specified, the second argument will be the value of `first_constant`.
@@ -81,7 +81,7 @@ public abstract class Table50051574
   /// When not specified, defaults to `"*"`.
   /// </summary>
   [FactorioRconAttribute("operation")]
-  public Union42209503 Operation { get; set; }
+  public Union66394946 Operation { get; set; }
 
   /// <summary>
   /// Specifies the signal to output.
@@ -92,150 +92,150 @@ public abstract class Table50051574
 }
 
 [GenerateOneOf]
-public abstract partial class Union42209503: OneOfBase<Literal16116045, Literal64712146, Literal64712930, Literal64735656, Literal65394697, Literal17398045, Literal34781257, Literal2023519, Literal58682072, Literal24058510, Literal26608156>
+public abstract partial class Union66394946: OneOfBase<Literal52116595, Literal20706689, Literal32187286, Literal4844372, Literal34622967, Literal55993668, Literal35016340, Literal64254500, Literal7167227, Literal16294043, Literal6630602>
 {
 }
 
 /// <summary>
 /// Literal value: *
 /// </summary>
-public abstract class Literal16116045
+public enum Literal52116595
 {
   /// <summary>
   /// Literal value: *
   /// </summary>
-  [FactorioRconAttribute("*")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("*")]
+  *,
 
 }
 
 /// <summary>
 /// Literal value: /
 /// </summary>
-public abstract class Literal64712146
+public enum Literal20706689
 {
   /// <summary>
   /// Literal value: /
   /// </summary>
-  [FactorioRconAttribute("/")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("/")]
+  /,
 
 }
 
 /// <summary>
 /// Literal value: +
 /// </summary>
-public abstract class Literal64712930
+public enum Literal32187286
 {
   /// <summary>
   /// Literal value: +
   /// </summary>
-  [FactorioRconAttribute("+")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("+")]
+  +,
 
 }
 
 /// <summary>
 /// Literal value: -
 /// </summary>
-public abstract class Literal64735656
+public enum Literal4844372
 {
   /// <summary>
   /// Literal value: -
   /// </summary>
-  [FactorioRconAttribute("-")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("-")]
+  ,
 
 }
 
 /// <summary>
 /// Literal value: %
 /// </summary>
-public abstract class Literal65394697
+public enum Literal34622967
 {
   /// <summary>
   /// Literal value: %
   /// </summary>
-  [FactorioRconAttribute("%")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("%")]
+  %,
 
 }
 
 /// <summary>
 /// Literal value: ^
 /// </summary>
-public abstract class Literal17398045
+public enum Literal55993668
 {
   /// <summary>
   /// Literal value: ^
   /// </summary>
-  [FactorioRconAttribute("^")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("^")]
+  ^,
 
 }
 
 /// <summary>
 /// Literal value: <<
 /// </summary>
-public abstract class Literal34781257
+public enum Literal35016340
 {
   /// <summary>
   /// Literal value: <<
   /// </summary>
-  [FactorioRconAttribute("<<")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("<<")]
+  <<,
 
 }
 
 /// <summary>
 /// Literal value: >>
 /// </summary>
-public abstract class Literal2023519
+public enum Literal64254500
 {
   /// <summary>
   /// Literal value: >>
   /// </summary>
-  [FactorioRconAttribute(">>")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue(">>")]
+  >>,
 
 }
 
 /// <summary>
 /// Literal value: AND
 /// </summary>
-public abstract class Literal58682072
+public enum Literal7167227
 {
   /// <summary>
   /// Literal value: AND
   /// </summary>
-  [FactorioRconAttribute("AND")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("AND")]
+  AND,
 
 }
 
 /// <summary>
 /// Literal value: OR
 /// </summary>
-public abstract class Literal24058510
+public enum Literal16294043
 {
   /// <summary>
   /// Literal value: OR
   /// </summary>
-  [FactorioRconAttribute("OR")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("OR")]
+  OR,
 
 }
 
 /// <summary>
 /// Literal value: XOR
 /// </summary>
-public abstract class Literal26608156
+public enum Literal6630602
 {
   /// <summary>
   /// Literal value: XOR
   /// </summary>
-  [FactorioRconAttribute("XOR")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("XOR")]
+  XOR,
 
 }
 

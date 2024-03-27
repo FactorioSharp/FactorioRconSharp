@@ -26,7 +26,7 @@ public abstract class TilePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union37007761 Mode { get; set; }
+  public Union1102641 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class TilePrototypeFilter
 
 }
 
-public abstract class Table1762274
+public abstract class Table64832787
 {
   /// <summary>
   /// The condition to filter on. One of `"minable"`, `"autoplace"`, `"blueprintable"`, `"item-to-place"`, `"collision-mask"`, `"walking-speed-modifier"`, `"vehicle-friction-modifier"`, `"decorative-removal-probability"`, `"emissions"`.
@@ -48,7 +48,7 @@ public abstract class Table1762274
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union37007761 Mode { get; set; }
+  public Union1102641 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,38 +59,38 @@ public abstract class Table1762274
 }
 
 [GenerateOneOf]
-public abstract partial class Union37007761: OneOfBase<Literal38965481, Literal12968752>
+public abstract partial class Union1102641: OneOfBase<Literal31976601, Literal54906217>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal38965481
+public enum Literal31976601
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal12968752
+public enum Literal54906217
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union3908350: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union48776432: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 

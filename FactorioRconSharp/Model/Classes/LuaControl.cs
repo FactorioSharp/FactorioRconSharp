@@ -64,7 +64,7 @@ public abstract class LuaControl: LuaObject
   /// This is the GUI that will asked to close (by firing the <see cref="OnGuiClosed)Event" /> when the `Esc` or `E` keys are pressed. If this attribute is not `nil`, and a new GUI is written to it, the existing one will be asked to close.
   /// </summary>
   [FactorioRconAttribute("opened")]
-  public Union64062224 Opened { get; set; }
+  public Union42194754 Opened { get; set; }
 
   /// <summary>
   /// Size of the crafting queue.
@@ -82,7 +82,7 @@ public abstract class LuaControl: LuaObject
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table3129430 WalkingState { get; set; }
+  public Table15688314 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public abstract class LuaControl: LuaObject
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table65718035 MiningState { get; set; }
+  public Table52307948 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table37901460 ShootingState { get; set; }
+  public Table40535505 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public abstract class LuaControl: LuaObject
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table57733168 RepairState { get; set; }
+  public Table34678979 RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -397,7 +397,7 @@ public abstract class LuaControl: LuaObject
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_craftable_count")]
-  public abstract uint GetCraftableCount(Union4436986 recipe);
+  public abstract uint GetCraftableCount(Union66166301 recipe);
 
   /// <summary>
   /// Begins crafting the given count of the given recipe.
@@ -406,7 +406,7 @@ public abstract class LuaControl: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="silent">Lua name: silent</param>
   [FactorioRconMethod("begin_crafting")]
-  public abstract uint BeginCrafting(uint count, Union26067845 recipe, bool? silent = null);
+  public abstract uint BeginCrafting(uint count, Union39774547 recipe, bool? silent = null);
 
   /// <summary>
   /// Cancels crafting the given count of the given crafting queue index.
@@ -513,7 +513,7 @@ public abstract class LuaControl: LuaObject
 
 }
 
-public abstract class Table65718035
+public abstract class Table52307948
 {
   /// <summary>
   /// Whether the player is mining at all.
@@ -530,11 +530,11 @@ public abstract class Table65718035
 }
 
 [GenerateOneOf]
-public abstract partial class Union64062224: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
+public abstract partial class Union42194754: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
 {
 }
 
-public abstract class Table57733168
+public abstract class Table34678979
 {
   /// <summary>
   /// The current state
@@ -550,7 +550,7 @@ public abstract class Table57733168
 
 }
 
-public abstract class Table37901460
+public abstract class Table40535505
 {
   /// <summary>
   /// The current state
@@ -566,7 +566,7 @@ public abstract class Table37901460
 
 }
 
-public abstract class Table3129430
+public abstract class Table15688314
 {
   /// <summary>
   /// If `false`, the player is currently not walking; otherwise it's going somewhere
@@ -583,12 +583,12 @@ public abstract class Table3129430
 }
 
 [GenerateOneOf]
-public abstract partial class Union26067845: OneOfBase<string, LuaRecipe>
+public abstract partial class Union39774547: OneOfBase<string, LuaRecipe>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union4436986: OneOfBase<string, LuaRecipe>
+public abstract partial class Union66166301: OneOfBase<string, LuaRecipe>
 {
 }
 

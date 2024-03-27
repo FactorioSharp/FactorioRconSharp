@@ -27,7 +27,7 @@ public abstract class LogisticsNetworkSupplyPoints
 
 }
 
-public abstract class Table44243738
+public abstract class Table29528754
 {
   [FactorioRconAttribute("storage")]
   public List<LuaLogisticPoint> Storage { get; set; }

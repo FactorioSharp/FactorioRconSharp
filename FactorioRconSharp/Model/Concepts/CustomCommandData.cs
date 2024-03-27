@@ -39,7 +39,7 @@ public abstract class CustomCommandData
 
 }
 
-public abstract class Table13066146
+public abstract class Table45793136
 {
   /// <summary>
   /// The name of the command.

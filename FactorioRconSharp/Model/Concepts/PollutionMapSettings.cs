@@ -90,7 +90,7 @@ public abstract class PollutionMapSettings
 
 }
 
-public abstract class Table18805330
+public abstract class Table7941859
 {
   /// <summary>
   /// Whether pollution is enabled at all.

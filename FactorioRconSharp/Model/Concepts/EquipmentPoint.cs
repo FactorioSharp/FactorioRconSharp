@@ -24,7 +24,7 @@ public abstract class EquipmentPoint
 
 }
 
-public abstract class Table35461715
+public abstract class Table63785227
 {
   [FactorioRconAttribute("x")]
   public uint X { get; set; }

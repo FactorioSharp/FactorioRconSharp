@@ -20,7 +20,7 @@ public abstract partial class TechnologyIdentification: OneOfBase<string, LuaTec
 }
 
 [GenerateOneOf]
-public abstract partial class Union45707720: OneOfBase<string, LuaTechnology, LuaTechnologyPrototype>
+public abstract partial class Union29044451: OneOfBase<string, LuaTechnology, LuaTechnologyPrototype>
 {
 }
 

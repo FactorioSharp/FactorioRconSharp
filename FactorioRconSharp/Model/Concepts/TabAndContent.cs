@@ -21,7 +21,7 @@ public abstract class TabAndContent
 
 }
 
-public abstract class Table46124038
+public abstract class Table593062
 {
   [FactorioRconAttribute("tab")]
   public LuaGuiElement Tab { get; set; }

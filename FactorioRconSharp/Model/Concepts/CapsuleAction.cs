@@ -14,84 +14,84 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class CapsuleAction
 {
   [FactorioRconAttribute("type")]
-  public Union54608724 Type { get; set; }
+  public Union6599358 Type { get; set; }
 
 }
 
-public abstract class Table3289664
+public abstract class Table16426255
 {
   [FactorioRconAttribute("type")]
-  public Union54608724 Type { get; set; }
+  public Union6599358 Type { get; set; }
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union54608724: OneOfBase<Literal7256877, Literal69002, Literal2553105, Literal27356029, Literal5540138>
+public abstract partial class Union6599358: OneOfBase<Literal57163663, Literal47133519, Literal24694787, Literal45060192, Literal31677167>
 {
 }
 
 /// <summary>
 /// Literal value: throw
 /// </summary>
-public abstract class Literal7256877
+public enum Literal57163663
 {
   /// <summary>
   /// Literal value: throw
   /// </summary>
-  [FactorioRconAttribute("throw")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("throw")]
+  Throw,
 
 }
 
 /// <summary>
 /// Literal value: equipment-remote
 /// </summary>
-public abstract class Literal69002
+public enum Literal47133519
 {
   /// <summary>
   /// Literal value: equipment-remote
   /// </summary>
-  [FactorioRconAttribute("equipment-remote")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("equipment-remote")]
+  EquipmentRemote,
 
 }
 
 /// <summary>
 /// Literal value: use-on-self
 /// </summary>
-public abstract class Literal2553105
+public enum Literal24694787
 {
   /// <summary>
   /// Literal value: use-on-self
   /// </summary>
-  [FactorioRconAttribute("use-on-self")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("use-on-self")]
+  UseOnSelf,
 
 }
 
 /// <summary>
 /// Literal value: artillery-remote
 /// </summary>
-public abstract class Literal27356029
+public enum Literal45060192
 {
   /// <summary>
   /// Literal value: artillery-remote
   /// </summary>
-  [FactorioRconAttribute("artillery-remote")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("artillery-remote")]
+  ArtilleryRemote,
 
 }
 
 /// <summary>
 /// Literal value: destroy-cliffs
 /// </summary>
-public abstract class Literal5540138
+public enum Literal31677167
 {
   /// <summary>
   /// Literal value: destroy-cliffs
   /// </summary>
-  [FactorioRconAttribute("destroy-cliffs")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("destroy-cliffs")]
+  DestroyCliffs,
 
 }
 

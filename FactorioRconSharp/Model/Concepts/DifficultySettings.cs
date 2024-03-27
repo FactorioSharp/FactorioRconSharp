@@ -32,11 +32,11 @@ public abstract class DifficultySettings
   /// Changing this to `"always"` or `"after-victory"` does not automatically unlock the research queue. See <see cref="LuaForce.ResearchQueueEnabled" /> for that.
   /// </summary>
   [FactorioRconAttribute("research_queue_setting")]
-  public Union59621546 ResearchQueueSetting { get; set; }
+  public Union35318532 ResearchQueueSetting { get; set; }
 
 }
 
-public abstract class Struct18075529
+public abstract class Struct11268815
 {
   [FactorioRconAttribute("recipe_difficulty")]
   public DifficultySettingsRecipeDifficultyEnum RecipeDifficulty { get; set; }
@@ -54,51 +54,51 @@ public abstract class Struct18075529
   /// Changing this to `"always"` or `"after-victory"` does not automatically unlock the research queue. See <see cref="LuaForce.ResearchQueueEnabled" /> for that.
   /// </summary>
   [FactorioRconAttribute("research_queue_setting")]
-  public Union59621546 ResearchQueueSetting { get; set; }
+  public Union35318532 ResearchQueueSetting { get; set; }
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union59621546: OneOfBase<Literal21353980, Literal33592719, Literal34817906>
+public abstract partial class Union35318532: OneOfBase<Literal3491672, Literal6216253, Literal63432468>
 {
 }
 
 /// <summary>
 /// Literal value: after-victory
 /// </summary>
-public abstract class Literal21353980
+public enum Literal3491672
 {
   /// <summary>
   /// Literal value: after-victory
   /// </summary>
-  [FactorioRconAttribute("after-victory")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("after-victory")]
+  AfterVictory,
 
 }
 
 /// <summary>
 /// Literal value: always
 /// </summary>
-public abstract class Literal33592719
+public enum Literal6216253
 {
   /// <summary>
   /// Literal value: always
   /// </summary>
-  [FactorioRconAttribute("always")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("always")]
+  Always,
 
 }
 
 /// <summary>
 /// Literal value: never
 /// </summary>
-public abstract class Literal34817906
+public enum Literal63432468
 {
   /// <summary>
   /// Literal value: never
   /// </summary>
-  [FactorioRconAttribute("never")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("never")]
+  Never,
 
 }
 

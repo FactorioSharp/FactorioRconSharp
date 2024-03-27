@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class ScriptRenderVertexTarget
 {
   [FactorioRconAttribute("target")]
-  public Union6088603 Target { get; set; }
+  public Union48624990 Target { get; set; }
 
   /// <summary>
   /// Only used if `target` is a LuaEntity.
@@ -27,10 +27,10 @@ public abstract class ScriptRenderVertexTarget
 
 }
 
-public abstract class Table14674581
+public abstract class Table34272077
 {
   [FactorioRconAttribute("target")]
-  public Union6088603 Target { get; set; }
+  public Union48624990 Target { get; set; }
 
   /// <summary>
   /// Only used if `target` is a LuaEntity.
@@ -41,7 +41,7 @@ public abstract class Table14674581
 }
 
 [GenerateOneOf]
-public abstract partial class Union6088603: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union48624990: OneOfBase<MapPosition, LuaEntity>
 {
 }
 

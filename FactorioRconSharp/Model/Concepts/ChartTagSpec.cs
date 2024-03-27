@@ -27,7 +27,7 @@ public abstract class ChartTagSpec
 
 }
 
-public abstract class Table3658530
+public abstract class Table46222623
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }

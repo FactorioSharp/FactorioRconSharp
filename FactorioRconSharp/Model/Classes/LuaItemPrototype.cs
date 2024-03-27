@@ -214,13 +214,13 @@ public abstract class LuaItemPrototype: LuaObject
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public Union3318699 FilterMode { get; private set; }
+  public Union18898419 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public Union55683007 InsertionPriorityMode { get; private set; }
+  public Union11183252 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -546,7 +546,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public abstract AmmoType? GetAmmoType(Union47005364? ammoSourceType = null);
+  public abstract AmmoType? GetAmmoType(Union55878869? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
@@ -557,160 +557,160 @@ public abstract class LuaItemPrototype: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union3318699: OneOfBase<Literal61476884, Literal60052224, Literal7339810>
+public abstract partial class Union18898419: OneOfBase<Literal9874484, Literal17924607, Literal50051574>
 {
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public abstract class Literal61476884
+public enum Literal9874484
 {
   /// <summary>
   /// Literal value: none
   /// </summary>
-  [FactorioRconAttribute("none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none")]
+  None,
 
 }
 
 /// <summary>
 /// Literal value: whitelist
 /// </summary>
-public abstract class Literal60052224
+public enum Literal17924607
 {
   /// <summary>
   /// Literal value: whitelist
   /// </summary>
-  [FactorioRconAttribute("whitelist")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("whitelist")]
+  Whitelist,
 
 }
 
 /// <summary>
 /// Literal value: blacklist
 /// </summary>
-public abstract class Literal7339810
+public enum Literal50051574
 {
   /// <summary>
   /// Literal value: blacklist
   /// </summary>
-  [FactorioRconAttribute("blacklist")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("blacklist")]
+  Blacklist,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union55683007: OneOfBase<Literal3137518, Literal48979325, Literal295723, Literal10941773>
+public abstract partial class Union11183252: OneOfBase<Literal42209503, Literal16116045, Literal64712146, Literal64712930>
 {
 }
 
 /// <summary>
 /// Literal value: default
 /// </summary>
-public abstract class Literal3137518
+public enum Literal42209503
 {
   /// <summary>
   /// Literal value: default
   /// </summary>
-  [FactorioRconAttribute("default")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("default")]
+  Default,
 
 }
 
 /// <summary>
 /// Literal value: never
 /// </summary>
-public abstract class Literal48979325
+public enum Literal16116045
 {
   /// <summary>
   /// Literal value: never
   /// </summary>
-  [FactorioRconAttribute("never")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("never")]
+  Never,
 
 }
 
 /// <summary>
 /// Literal value: always
 /// </summary>
-public abstract class Literal295723
+public enum Literal64712146
 {
   /// <summary>
   /// Literal value: always
   /// </summary>
-  [FactorioRconAttribute("always")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("always")]
+  Always,
 
 }
 
 /// <summary>
 /// Literal value: when-manually-filtered
 /// </summary>
-public abstract class Literal10941773
+public enum Literal64712930
 {
   /// <summary>
   /// Literal value: when-manually-filtered
   /// </summary>
-  [FactorioRconAttribute("when-manually-filtered")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("when-manually-filtered")]
+  WhenManuallyFiltered,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union47005364: OneOfBase<Literal2192437, Literal14011335, Literal48657371, Literal55492274>
+public abstract partial class Union55878869: OneOfBase<Literal64735656, Literal65394697, Literal17398045, Literal34781257>
 {
 }
 
 /// <summary>
 /// Literal value: default
 /// </summary>
-public abstract class Literal2192437
+public enum Literal64735656
 {
   /// <summary>
   /// Literal value: default
   /// </summary>
-  [FactorioRconAttribute("default")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("default")]
+  Default,
 
 }
 
 /// <summary>
 /// Literal value: player
 /// </summary>
-public abstract class Literal14011335
+public enum Literal65394697
 {
   /// <summary>
   /// Literal value: player
   /// </summary>
-  [FactorioRconAttribute("player")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("player")]
+  Player,
 
 }
 
 /// <summary>
 /// Literal value: turret
 /// </summary>
-public abstract class Literal48657371
+public enum Literal17398045
 {
   /// <summary>
   /// Literal value: turret
   /// </summary>
-  [FactorioRconAttribute("turret")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("turret")]
+  Turret,
 
 }
 
 /// <summary>
 /// Literal value: vehicle
 /// </summary>
-public abstract class Literal55492274
+public enum Literal34781257
 {
   /// <summary>
   /// Literal value: vehicle
   /// </summary>
-  [FactorioRconAttribute("vehicle")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("vehicle")]
+  Vehicle,
 
 }
 

@@ -51,7 +51,7 @@ public abstract class PrintSettings
 
 }
 
-public abstract class Table37075351
+public abstract class Table28391192
 {
   /// <summary>
   /// Color of the message to print. Defaults to white.

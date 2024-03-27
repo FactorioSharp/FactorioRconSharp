@@ -26,7 +26,7 @@ public abstract class LuaBootstrap: LuaObject
   /// Information about the currently running scenario/campaign/tutorial.
   /// </summary>
   [FactorioRconAttribute("level")]
-  public Table48209832 Level { get; private set; }
+  public Table42715336 Level { get; private set; }
 
   /// <summary>
   /// A dictionary listing the names of all currently active mods and mapping them to their version.
@@ -48,7 +48,7 @@ public abstract class LuaBootstrap: LuaObject
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_init")]
-  public abstract void OnInit(Union5773521 handler);
+  public abstract void OnInit(Union36963566 handler);
 
   /// <summary>
   /// Register a function to be run on save load. This is only called for mods that have been part of the save previously, or for players connecting to a running multiplayer session.
@@ -67,7 +67,7 @@ public abstract class LuaBootstrap: LuaObject
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_load")]
-  public abstract void OnLoad(Union54135081 handler);
+  public abstract void OnLoad(Union25474675 handler);
 
   /// <summary>
   /// Register a function to be run when mod configuration changes. This is called when the game version or any mod version changed, when any mod was added or removed, when a startup setting has changed, when any prototypes have been added or removed, or when a migration was applied. It allows the mod to make any changes it deems appropriate to both the data structures in its <see cref="LuaGameScript" />.
@@ -77,7 +77,7 @@ public abstract class LuaBootstrap: LuaObject
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_configuration_changed")]
-  public abstract void OnConfigurationChanged(Union63094882 handler);
+  public abstract void OnConfigurationChanged(Union3038911 handler);
 
   /// <summary>
   /// Register a handler to run on the specified event(s). Each mod can only register once for every event, as any additional registration will overwrite the previous one. This holds true even if different filters are used for subsequent registrations.
@@ -86,7 +86,7 @@ public abstract class LuaBootstrap: LuaObject
   /// <param name="handler">Lua name: handler</param>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("on_event")]
-  public abstract void OnEvent(Union49924125 @event, Union41773672 handler, EventFilter? filters = null);
+  public abstract void OnEvent(Union45330878 @event, Union66629781 handler, EventFilter? filters = null);
 
   /// <summary>
   /// Register a handler to run every nth-tick(s). When the game is on tick 0 it will trigger all registered handlers.
@@ -94,7 +94,7 @@ public abstract class LuaBootstrap: LuaObject
   /// <param name="tick">Lua name: tick</param>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_nth_tick")]
-  public abstract void OnNthTick(Union4831898 tick, Union34361009 handler);
+  public abstract void OnNthTick(Union49382823 tick, Union15225125 handler);
 
   /// <summary>
   /// Registers an entity so that after it's destroyed, <see cref="OnEntityDestroyed" /> will receive the event when it is destroyed. Registering the same entity multiple times will still only fire the destruction event once, and will return the same registration number.
@@ -233,7 +233,7 @@ public abstract class LuaBootstrap: LuaObject
 
 }
 
-public abstract class Table48209832
+public abstract class Table42715336
 {
   /// <summary>
   /// Is this level a simulation? (The main menu and 'Tips and tricks' use simulations)
@@ -268,42 +268,42 @@ public abstract class Table48209832
 }
 
 [GenerateOneOf]
-public abstract partial class Union63094882: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
+public abstract partial class Union3038911: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union49924125: OneOfBase<EventsEnum, string, List<Union50492551>>
+public abstract partial class Union45330878: OneOfBase<EventsEnum, string, List<Union26458746>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union50492551: OneOfBase<EventsEnum, string>
+public abstract partial class Union26458746: OneOfBase<EventsEnum, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union41773672: OneOfBase<Action<EventData>, LuaNil>
+public abstract partial class Union66629781: OneOfBase<Action<EventData>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union5773521: OneOfBase<Action, LuaNil>
+public abstract partial class Union36963566: OneOfBase<Action, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union54135081: OneOfBase<Action, LuaNil>
+public abstract partial class Union25474675: OneOfBase<Action, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union34361009: OneOfBase<Action<NthTickEventData>, LuaNil>
+public abstract partial class Union15225125: OneOfBase<Action<NthTickEventData>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union4831898: OneOfBase<uint, List<uint>, LuaNil>
+public abstract partial class Union49382823: OneOfBase<uint, List<uint>, LuaNil>
 {
 }
 

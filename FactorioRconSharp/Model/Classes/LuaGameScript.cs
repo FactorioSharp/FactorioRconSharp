@@ -36,7 +36,7 @@ public abstract class LuaGameScript: LuaObject
   /// If only a single player is required, <see cref="LuaGameScript.GetPlayer" /> should be used instead, as it avoids the unnecessary overhead of passing the whole table to Lua.
   /// </summary>
   [FactorioRconAttribute("players")]
-  public LuaCustomTable<Union13896890, LuaPlayer> Players { get; private set; }
+  public LuaCustomTable<Union18823110, LuaPlayer> Players { get; private set; }
 
   /// <summary>
   /// The currently active set of map settings. Even though this property is marked as read-only, the members of the dictionary that is returned can be modified mid-game.
@@ -60,7 +60,7 @@ public abstract class LuaGameScript: LuaObject
   /// Get a table of all the forces that currently exist. This sparse table allows you to find forces by indexing it with either their `name` or `index`. Iterating this table with `pairs()` will only iterate the hash part of the table. Iterating with `ipairs()` will not work at all.
   /// </summary>
   [FactorioRconAttribute("forces")]
-  public LuaCustomTable<Union23399238, LuaForce> Forces { get; private set; }
+  public LuaCustomTable<Union8999294, LuaForce> Forces { get; private set; }
 
   /// <summary>
   /// A dictionary containing every LuaEntityPrototype indexed by `name`.
@@ -302,7 +302,7 @@ public abstract class LuaGameScript: LuaObject
   /// Get a table of all the surfaces that currently exist. This sparse table allows you to find surfaces by indexing it with either their `name` or `index`. Iterating this table with `pairs()` will only iterate the hash part of the table. Iterating with `ipairs()` will not work at all.
   /// </summary>
   [FactorioRconAttribute("surfaces")]
-  public LuaCustomTable<Union21621962, LuaSurface> Surfaces { get; private set; }
+  public LuaCustomTable<Union59652943, LuaSurface> Surfaces { get; private set; }
 
   /// <summary>
   /// The active mods versions. The keys are mod names, the values are the versions.
@@ -474,7 +474,7 @@ public abstract class LuaGameScript: LuaObject
   /// </remarks>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("regenerate_entity")]
-  public abstract void RegenerateEntity(Union51408035 entities);
+  public abstract void RegenerateEntity(Union52213762 entities);
 
   /// <summary>
   /// Take a screenshot of the game and save it to the `script-output` folder, located in the game's [user data directory](https://wiki.factorio.com/User_data_directory). The name of the image file can be specified via the `path` parameter.
@@ -650,7 +650,7 @@ public abstract class LuaGameScript: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union5826912? printSettings = null);
+  public abstract void Print(LocalisedString message, Union37804102? printSettings = null);
 
   /// <summary>
   /// Creates a deterministic standalone random generator with the given seed or if a seed is not provided the initial map seed is used.
@@ -784,14 +784,14 @@ public abstract class LuaGameScript: LuaObject
   /// <param name="surface">Lua name: surface</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union55256301? name = null, SurfaceIdentification? surface = null, ForceIdentification? force = null);
+  public abstract List<LuaEntity> GetTrainStops(Union22577141? name = null, SurfaceIdentification? surface = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the given player or returns `nil` if no player is found.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("get_player")]
-  public abstract LuaPlayer? GetPlayer(Union19531649 player);
+  public abstract LuaPlayer? GetPlayer(Union50757320 player);
 
   /// <summary>
   /// Gets the given surface or returns `nil` if no surface is found.
@@ -801,7 +801,7 @@ public abstract class LuaGameScript: LuaObject
   /// </remarks>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_surface")]
-  public abstract LuaSurface? GetSurface(Union7511460 surface);
+  public abstract LuaSurface? GetSurface(Union62676156 surface);
 
   /// <summary>
   /// Creates a <see cref="LuaProfiler" />, which is used for measuring script performance.
@@ -953,88 +953,88 @@ public abstract class LuaGameScript: LuaObject
   /// <param name="searchDirection">Lua name: search_direction</param>
   /// <param name="stepsLimit">Lua name: steps_limit</param>
   [FactorioRconMethod("request_train_path")]
-  public abstract Union38855053 RequestTrainPath(List<Union23522948> goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, Union24219861? searchDirection = null, uint? stepsLimit = null);
+  public abstract Union3085464 RequestTrainPath(List<Union5669220> goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, Union30189679? searchDirection = null, uint? stepsLimit = null);
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union23399238: OneOfBase<uint, string>
+public abstract partial class Union8999294: OneOfBase<uint, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union13896890: OneOfBase<uint, string>
+public abstract partial class Union18823110: OneOfBase<uint, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union21621962: OneOfBase<uint, string>
+public abstract partial class Union59652943: OneOfBase<uint, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union19531649: OneOfBase<uint, string>
+public abstract partial class Union50757320: OneOfBase<uint, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union7511460: OneOfBase<uint, string>
+public abstract partial class Union62676156: OneOfBase<uint, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union55256301: OneOfBase<string, List<string>>
+public abstract partial class Union22577141: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union5826912: OneOfBase<Color, PrintSettings>
+public abstract partial class Union37804102: OneOfBase<Color, PrintSettings>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union51408035: OneOfBase<string, List<string>>
+public abstract partial class Union52213762: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union23522948: OneOfBase<TrainStopGoal, RailEnd>
+public abstract partial class Union5669220: OneOfBase<TrainStopGoal, RailEnd>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union24219861: OneOfBase<Literal10649759, Literal22318356>
+public abstract partial class Union30189679: OneOfBase<Literal22369618, Literal44739154>
 {
 }
 
 /// <summary>
 /// Literal value: respect-movement-direction
 /// </summary>
-public abstract class Literal10649759
+public enum Literal22369618
 {
   /// <summary>
   /// Literal value: respect-movement-direction
   /// </summary>
-  [FactorioRconAttribute("respect-movement-direction")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("respect-movement-direction")]
+  RespectMovementDirection,
 
 }
 
 /// <summary>
 /// Literal value: any-direction-with-locomotives
 /// </summary>
-public abstract class Literal22318356
+public enum Literal44739154
 {
   /// <summary>
   /// Literal value: any-direction-with-locomotives
   /// </summary>
-  [FactorioRconAttribute("any-direction-with-locomotives")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("any-direction-with-locomotives")]
+  AnyDirectionWithLocomotives,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union38855053: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
+public abstract partial class Union3085464: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
 {
 }
 

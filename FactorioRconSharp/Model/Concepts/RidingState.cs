@@ -21,7 +21,7 @@ public abstract class RidingState
 
 }
 
-public abstract class Table24658497
+public abstract class Table3081139
 {
   [FactorioRconAttribute("acceleration")]
   public RidingAccelerationEnum Acceleration { get; set; }

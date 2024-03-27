@@ -26,7 +26,7 @@ public abstract class TechnologyPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union43591415 Mode { get; set; }
+  public Union31079178 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class TechnologyPrototypeFilter
 
 }
 
-public abstract class Table24445403
+public abstract class Table65866461
 {
   /// <summary>
   /// The condition to filter on. One of `"enabled"`, `"hidden"`, `"upgrade"`, `"visible-when-disabled"`, `"has-effects"`, `"has-prerequisites"`, `"research-unit-ingredient"`, `"unlocks-recipe"`, `"level"`, `"max-level"`, `"time"`.
@@ -48,7 +48,7 @@ public abstract class Table24445403
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union43591415 Mode { get; set; }
+  public Union31079178 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,33 +59,33 @@ public abstract class Table24445403
 }
 
 [GenerateOneOf]
-public abstract partial class Union43591415: OneOfBase<Literal43004497, Literal30679207>
+public abstract partial class Union31079178: OneOfBase<Literal28880940, Literal32240917>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal43004497
+public enum Literal28880940
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal30679207
+public enum Literal32240917
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 

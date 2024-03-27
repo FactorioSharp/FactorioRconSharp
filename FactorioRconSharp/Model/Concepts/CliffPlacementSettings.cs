@@ -39,7 +39,7 @@ public abstract class CliffPlacementSettings
 
 }
 
-public abstract class Table47846228
+public abstract class Table65387658
 {
   /// <summary>
   /// Name of the cliff prototype.

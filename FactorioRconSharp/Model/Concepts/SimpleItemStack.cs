@@ -20,7 +20,7 @@ public abstract partial class SimpleItemStack: OneOfBase<string, ItemStackDefini
 }
 
 [GenerateOneOf]
-public abstract partial class Union59367627: OneOfBase<string, ItemStackDefinition>
+public abstract partial class Union27400066: OneOfBase<string, ItemStackDefinition>
 {
 }
 

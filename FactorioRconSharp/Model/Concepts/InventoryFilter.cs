@@ -27,7 +27,7 @@ public abstract class InventoryFilter
 
 }
 
-public abstract class Table31879635
+public abstract class Table51530538
 {
   /// <summary>
   /// Position of the corresponding filter slot.

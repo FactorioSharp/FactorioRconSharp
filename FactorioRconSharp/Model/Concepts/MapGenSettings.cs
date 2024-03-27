@@ -44,7 +44,7 @@ public abstract class MapGenSettings
   /// Each setting in this dictionary maps the string type to the settings for that type.
   /// </summary>
   [FactorioRconAttribute("autoplace_settings")]
-  public Dictionary<Union57000122, AutoplaceSettings> AutoplaceSettings { get; set; }
+  public Dictionary<Union23558896, AutoplaceSettings> AutoplaceSettings { get; set; }
 
   /// <summary>
   /// Map generation settings for entities of the type "cliff".
@@ -108,7 +108,7 @@ public abstract class MapGenSettings
 
 }
 
-public abstract class Table57503891
+public abstract class Table45861094
 {
   /// <summary>
   /// The inverse of 'water scale' in the map generator GUI. Lower `terrain_segmentation` increases the scale of elevation features (lakes, continents, etc). This behavior can be overridden with alternate elevation generators (see `property_expression_names`, below).
@@ -138,7 +138,7 @@ public abstract class Table57503891
   /// Each setting in this dictionary maps the string type to the settings for that type.
   /// </summary>
   [FactorioRconAttribute("autoplace_settings")]
-  public Dictionary<Union57000122, AutoplaceSettings> AutoplaceSettings { get; set; }
+  public Dictionary<Union23558896, AutoplaceSettings> AutoplaceSettings { get; set; }
 
   /// <summary>
   /// Map generation settings for entities of the type "cliff".
@@ -203,46 +203,46 @@ public abstract class Table57503891
 }
 
 [GenerateOneOf]
-public abstract partial class Union57000122: OneOfBase<Literal42390816, Literal21374126, Literal15869906>
+public abstract partial class Union23558896: OneOfBase<Literal24974776, Literal54708252, Literal8022616>
 {
 }
 
 /// <summary>
 /// Literal value: entity
 /// </summary>
-public abstract class Literal42390816
+public enum Literal24974776
 {
   /// <summary>
   /// Literal value: entity
   /// </summary>
-  [FactorioRconAttribute("entity")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("entity")]
+  Entity,
 
 }
 
 /// <summary>
 /// Literal value: tile
 /// </summary>
-public abstract class Literal21374126
+public enum Literal54708252
 {
   /// <summary>
   /// Literal value: tile
   /// </summary>
-  [FactorioRconAttribute("tile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("tile")]
+  Tile,
 
 }
 
 /// <summary>
 /// Literal value: decorative
 /// </summary>
-public abstract class Literal15869906
+public enum Literal8022616
 {
   /// <summary>
   /// Literal value: decorative
   /// </summary>
-  [FactorioRconAttribute("decorative")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("decorative")]
+  Decorative,
 
 }
 

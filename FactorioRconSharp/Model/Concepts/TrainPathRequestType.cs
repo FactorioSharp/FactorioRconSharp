@@ -15,64 +15,64 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("TrainPathRequestType")]
-public abstract partial class TrainPathRequestType: OneOfBase<Literal63132315, Literal54194300, Literal59032059, Literal36702536>
+public abstract partial class TrainPathRequestType: OneOfBase<Literal58563035, Literal20606438, Literal60715806, Literal15927932>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union57932624: OneOfBase<Literal63132315, Literal54194300, Literal59032059, Literal36702536>
+public abstract partial class Union57557785: OneOfBase<Literal58563035, Literal20606438, Literal60715806, Literal15927932>
 {
 }
 
 /// <summary>
 /// Literal value: path
 /// </summary>
-public abstract class Literal63132315
+public enum Literal58563035
 {
   /// <summary>
   /// Literal value: path
   /// </summary>
-  [FactorioRconAttribute("path")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("path")]
+  Path,
 
 }
 
 /// <summary>
 /// Literal value: any-goal-accessible
 /// </summary>
-public abstract class Literal54194300
+public enum Literal20606438
 {
   /// <summary>
   /// Literal value: any-goal-accessible
   /// </summary>
-  [FactorioRconAttribute("any-goal-accessible")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("any-goal-accessible")]
+  AnyGoalAccessible,
 
 }
 
 /// <summary>
 /// Literal value: all-goals-accessible
 /// </summary>
-public abstract class Literal59032059
+public enum Literal60715806
 {
   /// <summary>
   /// Literal value: all-goals-accessible
   /// </summary>
-  [FactorioRconAttribute("all-goals-accessible")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("all-goals-accessible")]
+  AllGoalsAccessible,
 
 }
 
 /// <summary>
 /// Literal value: all-goals-penalties
 /// </summary>
-public abstract class Literal36702536
+public enum Literal15927932
 {
   /// <summary>
   /// Literal value: all-goals-penalties
   /// </summary>
-  [FactorioRconAttribute("all-goals-penalties")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("all-goals-penalties")]
+  AllGoalsPenalties,
 
 }
 

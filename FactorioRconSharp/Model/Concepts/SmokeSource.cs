@@ -72,7 +72,7 @@ public abstract class SmokeSource
 
 }
 
-public abstract class Table38760623
+public abstract class Table56404425
 {
   [FactorioRconAttribute("name")]
   public string Name { get; set; }

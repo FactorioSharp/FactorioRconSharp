@@ -30,7 +30,7 @@ public abstract class Offer
 
 }
 
-public abstract class Table30637870
+public abstract class Table62354113
 {
   /// <summary>
   /// List of prices.

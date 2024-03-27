@@ -26,7 +26,7 @@ public abstract class LuaPostEntityDiedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union30673304 Mode { get; set; }
+  public Union4662014 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class LuaPostEntityDiedEventFilter
 
 }
 
-public abstract class Table7999996
+public abstract class Table14045351
 {
   /// <summary>
   /// The condition to filter on. Can only be `"type"`.
@@ -48,7 +48,7 @@ public abstract class Table7999996
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union30673304 Mode { get; set; }
+  public Union4662014 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,33 +59,33 @@ public abstract class Table7999996
 }
 
 [GenerateOneOf]
-public abstract partial class Union30673304: OneOfBase<Literal17110604, Literal26445479>
+public abstract partial class Union4662014: OneOfBase<Literal980705, Literal28440464>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal17110604
+public enum Literal980705
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal26445479
+public enum Literal28440464
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 

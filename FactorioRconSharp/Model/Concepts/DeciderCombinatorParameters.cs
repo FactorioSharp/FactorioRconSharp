@@ -51,7 +51,7 @@ public abstract class DeciderCombinatorParameters
 
 }
 
-public abstract class Table51812814
+public abstract class Table19016246
 {
   /// <summary>
   /// Defaults to blank.

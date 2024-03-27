@@ -27,7 +27,7 @@ public abstract class GunShift4Way
 
 }
 
-public abstract class Table9247418
+public abstract class Table45385690
 {
   [FactorioRconAttribute("north")]
   public Vector North { get; set; }

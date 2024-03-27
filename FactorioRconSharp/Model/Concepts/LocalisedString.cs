@@ -29,7 +29,7 @@ public abstract partial class LocalisedString: OneOfBase<string, double, bool, L
 }
 
 [GenerateOneOf]
-public abstract partial class Union52094183: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>
+public abstract partial class Union48174076: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>
 {
 }
 

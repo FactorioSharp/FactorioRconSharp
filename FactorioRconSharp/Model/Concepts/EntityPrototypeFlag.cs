@@ -15,350 +15,350 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("EntityPrototypeFlag")]
-public abstract partial class EntityPrototypeFlag: OneOfBase<Literal3169322, Literal37478775, Literal28840036, Literal12197122, Literal66960737, Literal62220688, Literal40016800, Literal45485984, Literal24642464, Literal7894961, Literal59207139, Literal7678533, Literal52064999, Literal40423386, Literal58903342, Literal64762098, Literal56774454, Literal61617675, Literal20117377, Literal59893671, Literal30334093, Literal61500996, Literal16266972, Literal67048036, Literal65101548, Literal867461>
+public abstract partial class EntityPrototypeFlag: OneOfBase<Literal36937578, Literal64556810, Literal60208167, Literal1206379, Literal34984991, Literal7931792, Literal28695393, Literal26860048, Literal40743915, Literal40722866, Literal40112427, Literal22409705, Literal45901694, Literal56080734, Literal15728564, Literal53475173, Literal7276169, Literal9682309, Literal12351531, Literal22650100, Literal52873146, Literal56926232, Literal40248002, Literal26341382, Literal25702594, Literal7177733>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union6196845: OneOfBase<Literal3169322, Literal37478775, Literal28840036, Literal12197122, Literal66960737, Literal62220688, Literal40016800, Literal45485984, Literal24642464, Literal7894961, Literal59207139, Literal7678533, Literal52064999, Literal40423386, Literal58903342, Literal64762098, Literal56774454, Literal61617675, Literal20117377, Literal59893671, Literal30334093, Literal61500996, Literal16266972, Literal67048036, Literal65101548, Literal867461>
+public abstract partial class Union63754376: OneOfBase<Literal36937578, Literal64556810, Literal60208167, Literal1206379, Literal34984991, Literal7931792, Literal28695393, Literal26860048, Literal40743915, Literal40722866, Literal40112427, Literal22409705, Literal45901694, Literal56080734, Literal15728564, Literal53475173, Literal7276169, Literal9682309, Literal12351531, Literal22650100, Literal52873146, Literal56926232, Literal40248002, Literal26341382, Literal25702594, Literal7177733>
 {
 }
 
 /// <summary>
 /// Literal value: not-rotatable
 /// </summary>
-public abstract class Literal3169322
+public enum Literal36937578
 {
   /// <summary>
   /// Literal value: not-rotatable
   /// </summary>
-  [FactorioRconAttribute("not-rotatable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-rotatable")]
+  NotRotatable,
 
 }
 
 /// <summary>
 /// Literal value: placeable-neutral
 /// </summary>
-public abstract class Literal37478775
+public enum Literal64556810
 {
   /// <summary>
   /// Literal value: placeable-neutral
   /// </summary>
-  [FactorioRconAttribute("placeable-neutral")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("placeable-neutral")]
+  PlaceableNeutral,
 
 }
 
 /// <summary>
 /// Literal value: placeable-player
 /// </summary>
-public abstract class Literal28840036
+public enum Literal60208167
 {
   /// <summary>
   /// Literal value: placeable-player
   /// </summary>
-  [FactorioRconAttribute("placeable-player")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("placeable-player")]
+  PlaceablePlayer,
 
 }
 
 /// <summary>
 /// Literal value: placeable-enemy
 /// </summary>
-public abstract class Literal12197122
+public enum Literal1206379
 {
   /// <summary>
   /// Literal value: placeable-enemy
   /// </summary>
-  [FactorioRconAttribute("placeable-enemy")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("placeable-enemy")]
+  PlaceableEnemy,
 
 }
 
 /// <summary>
 /// Literal value: placeable-off-grid
 /// </summary>
-public abstract class Literal66960737
+public enum Literal34984991
 {
   /// <summary>
   /// Literal value: placeable-off-grid
   /// </summary>
-  [FactorioRconAttribute("placeable-off-grid")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("placeable-off-grid")]
+  PlaceableOffGrid,
 
 }
 
 /// <summary>
 /// Literal value: player-creation
 /// </summary>
-public abstract class Literal62220688
+public enum Literal7931792
 {
   /// <summary>
   /// Literal value: player-creation
   /// </summary>
-  [FactorioRconAttribute("player-creation")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("player-creation")]
+  PlayerCreation,
 
 }
 
 /// <summary>
 /// Literal value: building-direction-8-way
 /// </summary>
-public abstract class Literal40016800
+public enum Literal28695393
 {
   /// <summary>
   /// Literal value: building-direction-8-way
   /// </summary>
-  [FactorioRconAttribute("building-direction-8-way")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("building-direction-8-way")]
+  BuildingDirection8Way,
 
 }
 
 /// <summary>
 /// Literal value: filter-directions
 /// </summary>
-public abstract class Literal45485984
+public enum Literal26860048
 {
   /// <summary>
   /// Literal value: filter-directions
   /// </summary>
-  [FactorioRconAttribute("filter-directions")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("filter-directions")]
+  FilterDirections,
 
 }
 
 /// <summary>
 /// Literal value: fast-replaceable-no-build-while-moving
 /// </summary>
-public abstract class Literal24642464
+public enum Literal40743915
 {
   /// <summary>
   /// Literal value: fast-replaceable-no-build-while-moving
   /// </summary>
-  [FactorioRconAttribute("fast-replaceable-no-build-while-moving")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fast-replaceable-no-build-while-moving")]
+  FastReplaceableNoBuildWhileMoving,
 
 }
 
 /// <summary>
 /// Literal value: breaths-air
 /// </summary>
-public abstract class Literal7894961
+public enum Literal40722866
 {
   /// <summary>
   /// Literal value: breaths-air
   /// </summary>
-  [FactorioRconAttribute("breaths-air")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("breaths-air")]
+  BreathsAir,
 
 }
 
 /// <summary>
 /// Literal value: not-repairable
 /// </summary>
-public abstract class Literal59207139
+public enum Literal40112427
 {
   /// <summary>
   /// Literal value: not-repairable
   /// </summary>
-  [FactorioRconAttribute("not-repairable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-repairable")]
+  NotRepairable,
 
 }
 
 /// <summary>
 /// Literal value: not-on-map
 /// </summary>
-public abstract class Literal7678533
+public enum Literal22409705
 {
   /// <summary>
   /// Literal value: not-on-map
   /// </summary>
-  [FactorioRconAttribute("not-on-map")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-on-map")]
+  NotOnMap,
 
 }
 
 /// <summary>
 /// Literal value: not-deconstructable
 /// </summary>
-public abstract class Literal52064999
+public enum Literal45901694
 {
   /// <summary>
   /// Literal value: not-deconstructable
   /// </summary>
-  [FactorioRconAttribute("not-deconstructable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-deconstructable")]
+  NotDeconstructable,
 
 }
 
 /// <summary>
 /// Literal value: not-blueprintable
 /// </summary>
-public abstract class Literal40423386
+public enum Literal56080734
 {
   /// <summary>
   /// Literal value: not-blueprintable
   /// </summary>
-  [FactorioRconAttribute("not-blueprintable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-blueprintable")]
+  NotBlueprintable,
 
 }
 
 /// <summary>
 /// Literal value: hidden
 /// </summary>
-public abstract class Literal58903342
+public enum Literal15728564
 {
   /// <summary>
   /// Literal value: hidden
   /// </summary>
-  [FactorioRconAttribute("hidden")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("hidden")]
+  Hidden,
 
 }
 
 /// <summary>
 /// Literal value: hide-alt-info
 /// </summary>
-public abstract class Literal64762098
+public enum Literal53475173
 {
   /// <summary>
   /// Literal value: hide-alt-info
   /// </summary>
-  [FactorioRconAttribute("hide-alt-info")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("hide-alt-info")]
+  HideAltInfo,
 
 }
 
 /// <summary>
 /// Literal value: fast-replaceable-no-cross-type-while-moving
 /// </summary>
-public abstract class Literal56774454
+public enum Literal7276169
 {
   /// <summary>
   /// Literal value: fast-replaceable-no-cross-type-while-moving
   /// </summary>
-  [FactorioRconAttribute("fast-replaceable-no-cross-type-while-moving")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fast-replaceable-no-cross-type-while-moving")]
+  FastReplaceableNoCrossTypeWhileMoving,
 
 }
 
 /// <summary>
 /// Literal value: no-gap-fill-while-building
 /// </summary>
-public abstract class Literal61617675
+public enum Literal9682309
 {
   /// <summary>
   /// Literal value: no-gap-fill-while-building
   /// </summary>
-  [FactorioRconAttribute("no-gap-fill-while-building")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("no-gap-fill-while-building")]
+  NoGapFillWhileBuilding,
 
 }
 
 /// <summary>
 /// Literal value: not-flammable
 /// </summary>
-public abstract class Literal20117377
+public enum Literal12351531
 {
   /// <summary>
   /// Literal value: not-flammable
   /// </summary>
-  [FactorioRconAttribute("not-flammable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-flammable")]
+  NotFlammable,
 
 }
 
 /// <summary>
 /// Literal value: no-automated-item-removal
 /// </summary>
-public abstract class Literal59893671
+public enum Literal22650100
 {
   /// <summary>
   /// Literal value: no-automated-item-removal
   /// </summary>
-  [FactorioRconAttribute("no-automated-item-removal")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("no-automated-item-removal")]
+  NoAutomatedItemRemoval,
 
 }
 
 /// <summary>
 /// Literal value: no-automated-item-insertion
 /// </summary>
-public abstract class Literal30334093
+public enum Literal52873146
 {
   /// <summary>
   /// Literal value: no-automated-item-insertion
   /// </summary>
-  [FactorioRconAttribute("no-automated-item-insertion")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("no-automated-item-insertion")]
+  NoAutomatedItemInsertion,
 
 }
 
 /// <summary>
 /// Literal value: no-copy-paste
 /// </summary>
-public abstract class Literal61500996
+public enum Literal56926232
 {
   /// <summary>
   /// Literal value: no-copy-paste
   /// </summary>
-  [FactorioRconAttribute("no-copy-paste")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("no-copy-paste")]
+  NoCopyPaste,
 
 }
 
 /// <summary>
 /// Literal value: not-selectable-in-game
 /// </summary>
-public abstract class Literal16266972
+public enum Literal40248002
 {
   /// <summary>
   /// Literal value: not-selectable-in-game
   /// </summary>
-  [FactorioRconAttribute("not-selectable-in-game")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-selectable-in-game")]
+  NotSelectableInGame,
 
 }
 
 /// <summary>
 /// Literal value: not-upgradable
 /// </summary>
-public abstract class Literal67048036
+public enum Literal26341382
 {
   /// <summary>
   /// Literal value: not-upgradable
   /// </summary>
-  [FactorioRconAttribute("not-upgradable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-upgradable")]
+  NotUpgradable,
 
 }
 
 /// <summary>
 /// Literal value: not-in-kill-statistics
 /// </summary>
-public abstract class Literal65101548
+public enum Literal25702594
 {
   /// <summary>
   /// Literal value: not-in-kill-statistics
   /// </summary>
-  [FactorioRconAttribute("not-in-kill-statistics")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-in-kill-statistics")]
+  NotInKillStatistics,
 
 }
 
 /// <summary>
 /// Literal value: not-in-made-in
 /// </summary>
-public abstract class Literal867461
+public enum Literal7177733
 {
   /// <summary>
   /// Literal value: not-in-made-in
   /// </summary>
-  [FactorioRconAttribute("not-in-made-in")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-in-made-in")]
+  NotInMadeIn,
 
 }
 

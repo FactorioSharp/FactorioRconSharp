@@ -24,7 +24,7 @@ public abstract class AutoplaceSettings
 
 }
 
-public abstract class Table27683095
+public abstract class Table57503891
 {
   /// <summary>
   /// Whether missing autoplace names for this type should be default enabled.

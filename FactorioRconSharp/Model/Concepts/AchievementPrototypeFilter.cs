@@ -26,7 +26,7 @@ public abstract class AchievementPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union24418296 Mode { get; set; }
+  public Union5991177 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class AchievementPrototypeFilter
 
 }
 
-public abstract class Table20336737
+public abstract class Table51116765
 {
   /// <summary>
   /// The condition to filter on. One of `"allowed-without-fight"`, `"type"`.
@@ -48,7 +48,7 @@ public abstract class Table20336737
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union24418296 Mode { get; set; }
+  public Union5991177 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,38 +59,38 @@ public abstract class Table20336737
 }
 
 [GenerateOneOf]
-public abstract partial class Union24418296: OneOfBase<Literal43022188, Literal31050716>
+public abstract partial class Union5991177: OneOfBase<Literal39526418, Literal5415451>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal43022188
+public enum Literal39526418
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal31050716
+public enum Literal5415451
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union48085274: OneOfBase<string, List<string>>
+public abstract partial class Union22830370: OneOfBase<string, List<string>>
 {
 }
 

@@ -21,7 +21,7 @@ public abstract class ProgrammableSpeakerInstrument
 
 }
 
-public abstract class Table45421080
+public abstract class Table56775157
 {
   [FactorioRconAttribute("name")]
   public string Name { get; set; }

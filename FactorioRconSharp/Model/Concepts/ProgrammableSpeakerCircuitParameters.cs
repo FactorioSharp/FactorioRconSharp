@@ -24,7 +24,7 @@ public abstract class ProgrammableSpeakerCircuitParameters
 
 }
 
-public abstract class Table15737621
+public abstract class Table45925640
 {
   [FactorioRconAttribute("signal_value_is_pitch")]
   public bool SignalValueIsPitch { get; set; }

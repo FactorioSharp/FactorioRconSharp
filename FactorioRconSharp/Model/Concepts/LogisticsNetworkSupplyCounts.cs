@@ -39,7 +39,7 @@ public abstract class LogisticsNetworkSupplyCounts
 
 }
 
-public abstract class Table20038436
+public abstract class Table42672010
 {
   /// <summary>
   /// Number of available items in the storage members.

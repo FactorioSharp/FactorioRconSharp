@@ -39,7 +39,7 @@ public abstract class TrainPathAllGoalsResult
 
 }
 
-public abstract class Table14966502
+public abstract class Table5230407
 {
   /// <summary>
   /// Amount of goals that are accessible.

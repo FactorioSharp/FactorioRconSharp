@@ -27,7 +27,7 @@ public abstract class BeamTarget
 
 }
 
-public abstract class Table15794481
+public abstract class Table15869906
 {
   /// <summary>
   /// The target entity.

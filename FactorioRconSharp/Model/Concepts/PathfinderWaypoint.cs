@@ -27,7 +27,7 @@ public abstract class PathfinderWaypoint
 
 }
 
-public abstract class Table25871395
+public abstract class Table15003156
 {
   /// <summary>
   /// The position of the waypoint on its surface.

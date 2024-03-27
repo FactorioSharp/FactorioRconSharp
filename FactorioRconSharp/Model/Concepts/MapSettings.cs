@@ -42,7 +42,7 @@ public abstract class MapSettings
 
 }
 
-public abstract class Struct61404363
+public abstract class Struct59037117
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }

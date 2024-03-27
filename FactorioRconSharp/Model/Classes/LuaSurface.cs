@@ -235,7 +235,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="hasItemInside">Lua name: has_item_inside</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_entities_filtered")]
-  public abstract List<LuaEntity> FindEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union55133730? name = null, Union26682107? type = null, Union47713876? ghostName = null, Union20582959? ghostType = null, Union23372000? direction = null, Union59457647? collisionMask = null, Union52449292? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, LuaItemPrototype? hasItemInside = null, bool? invert = null);
+  public abstract List<LuaEntity> FindEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union15574864? name = null, Union49017889? type = null, Union12232643? ghostName = null, Union19202350? ghostType = null, Union19997254? direction = null, Union43049476? collisionMask = null, Union40475271? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, LuaItemPrototype? hasItemInside = null, bool? invert = null);
 
   /// <summary>
   /// Find all tiles of the given name in the given area.
@@ -256,7 +256,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="collisionMask">Lua name: collision_mask</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_tiles_filtered")]
-  public abstract List<LuaTile> FindTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union61575639? name = null, Union63706159? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union8317655? collisionMask = null, bool? invert = null);
+  public abstract List<LuaTile> FindTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union32932185? name = null, Union15509283? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union47116051? collisionMask = null, bool? invert = null);
 
   /// <summary>
   /// Count entities of given type or name in a given area. Works just like <see cref="LuaSurface.FindEntitiesFiltered" />, except this only returns the count. As it doesn't construct all the wrapper objects, this is more efficient if one is only interested in the number of entities.
@@ -279,7 +279,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="isMilitaryTarget">Lua name: is_military_target</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("count_entities_filtered")]
-  public abstract uint CountEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union39317806? name = null, Union45472684? type = null, Union4767743? ghostName = null, Union42188773? ghostType = null, Union17480744? direction = null, Union42807775? collisionMask = null, Union40383808? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, bool? invert = null);
+  public abstract uint CountEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union24188202? name = null, Union30369223? type = null, Union8292248? ghostName = null, Union39148604? ghostType = null, Union61567707? direction = null, Union40633064? collisionMask = null, Union37508179? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, bool? invert = null);
 
   /// <summary>
   /// Count tiles of a given name in a given area. Works just like <see cref="LuaSurface.FindTilesFiltered" />, except this only returns the count. As it doesn't construct all the wrapper objects, this is more efficient if one is only interested in the number of tiles.
@@ -298,7 +298,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="collisionMask">Lua name: collision_mask</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("count_tiles_filtered")]
-  public abstract uint CountTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union17805896? name = null, Union54838380? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union15754142? collisionMask = null, bool? invert = null);
+  public abstract uint CountTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union13995376? name = null, Union3212748? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union26060844? collisionMask = null, bool? invert = null);
 
   /// <summary>
   /// Find a non-colliding position within a given radius.
@@ -406,7 +406,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="moveStuckPlayers">Lua name: move_stuck_players</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("create_entity")]
-  public abstract LuaEntity? CreateEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, Union46032354? target = null, Union25475503? source = null, bool? fastReplace = null, PlayerIdentification? player = null, LuaEntity? character = null, bool? spill = null, bool? raiseBuilt = null, bool? createBuildEffectSmoke = null, bool? spawnDecorations = null, bool? moveStuckPlayers = null, LuaItemStack? item = null);
+  public abstract LuaEntity? CreateEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, Union17566981? target = null, Union39680416? source = null, bool? fastReplace = null, PlayerIdentification? player = null, LuaEntity? character = null, bool? spill = null, bool? raiseBuilt = null, bool? createBuildEffectSmoke = null, bool? spawnDecorations = null, bool? moveStuckPlayers = null, LuaItemStack? item = null);
 
   /// <param name="name">Lua name: name</param>
   /// <param name="position">Lua name: position</param>
@@ -470,7 +470,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="removeCollidingDecoratives">Lua name: remove_colliding_decoratives</param>
   /// <param name="raiseEvent">Lua name: raise_event</param>
   [FactorioRconMethod("set_tiles")]
-  public abstract void SetTiles(List<Tile> tiles, bool? correctTiles = null, Union3069544? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null);
+  public abstract void SetTiles(List<Tile> tiles, bool? correctTiles = null, Union9881388? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null);
 
   /// <summary>
   /// Spawn pollution at the given position.
@@ -596,7 +596,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="position">Lua name: position</param>
   /// <param name="tile">Lua name: tile</param>
   [FactorioRconMethod("set_hidden_tile")]
-  public abstract void SetHiddenTile(TilePosition position, Union46464282 tile);
+  public abstract void SetHiddenTile(TilePosition position, Union18124803 tile);
 
   /// <summary>
   /// Gets all tiles of the given types that are connected horizontally or vertically to the given tile position including the given tile position.
@@ -624,7 +624,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="entities">Lua name: entities</param>
   /// <param name="chunks">Lua name: chunks</param>
   [FactorioRconMethod("regenerate_entity")]
-  public abstract void RegenerateEntity(Union41456853? entities = null, List<ChunkPosition>? chunks = null);
+  public abstract void RegenerateEntity(Union55857246? entities = null, List<ChunkPosition>? chunks = null);
 
   /// <summary>
   /// Regenerate autoplacement of some decoratives on this surface. This can be used to autoplace newly-added decoratives.
@@ -635,7 +635,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="decoratives">Lua name: decoratives</param>
   /// <param name="chunks">Lua name: chunks</param>
   [FactorioRconMethod("regenerate_decorative")]
-  public abstract void RegenerateDecorative(Union57508556? decoratives = null, List<ChunkPosition>? chunks = null);
+  public abstract void RegenerateDecorative(Union9247418? decoratives = null, List<ChunkPosition>? chunks = null);
 
   /// <summary>
   /// Print text to the chat console of all players on this surface.
@@ -646,7 +646,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union47441805? printSettings = null);
+  public abstract void Print(LocalisedString message, Union66848554? printSettings = null);
 
   /// <summary>
   /// Removes all decoratives from the given area. If no area and no position are given, then the entire surface is searched.
@@ -661,7 +661,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="limit">Lua name: limit</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("destroy_decoratives")]
-  public abstract void DestroyDecoratives(BoundingBox? area = null, TilePosition? position = null, Union10516355? name = null, Union53560841? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
+  public abstract void DestroyDecoratives(BoundingBox? area = null, TilePosition? position = null, Union59559901? name = null, Union49515534? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
 
   /// <summary>
   /// Adds the given decoratives to the surface.
@@ -689,7 +689,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="limit">Lua name: limit</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_decoratives_filtered")]
-  public abstract List<DecorativeResult> FindDecorativesFiltered(BoundingBox? area = null, TilePosition? position = null, Union35594062? name = null, Union41911884? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
+  public abstract List<DecorativeResult> FindDecorativesFiltered(BoundingBox? area = null, TilePosition? position = null, Union26664368? name = null, Union35069176? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
 
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_trains")]
@@ -767,7 +767,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="manualCollisionMode">Lua name: manual_collision_mode</param>
   /// <param name="createBuildEffectSmoke">Lua name: create_build_effect_smoke</param>
   [FactorioRconMethod("clone_brush")]
-  public abstract void CloneBrush(TilePosition sourceOffset, TilePosition destinationOffset, List<TilePosition> sourcePositions, SurfaceIdentification? destinationSurface = null, Union7235849? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? manualCollisionMode = null, bool? createBuildEffectSmoke = null);
+  public abstract void CloneBrush(TilePosition sourceOffset, TilePosition destinationOffset, List<TilePosition> sourcePositions, SurfaceIdentification? destinationSurface = null, Union10373162? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? manualCollisionMode = null, bool? createBuildEffectSmoke = null);
 
   /// <summary>
   /// Clones the given entities.
@@ -807,7 +807,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="pathResolutionModifier">Lua name: path_resolution_modifier</param>
   /// <param name="entityToIgnore">Lua name: entity_to_ignore</param>
   [FactorioRconMethod("request_path")]
-  public abstract uint RequestPath(BoundingBox boundingBox, Union66399853 collisionMask, MapPosition start, MapPosition goal, ForceIdentification force, double? radius = null, PathfinderFlags? pathfindFlags = null, bool? canOpenGates = null, int? pathResolutionModifier = null, LuaEntity? entityToIgnore = null);
+  public abstract uint RequestPath(BoundingBox boundingBox, Union32386246 collisionMask, MapPosition start, MapPosition goal, ForceIdentification force, double? radius = null, PathfinderFlags? pathfindFlags = null, bool? canOpenGates = null, int? pathResolutionModifier = null, LuaEntity? entityToIgnore = null);
 
   /// <summary>
   /// Gets the script areas that match the given name or if no name is given all areas are returned.
@@ -821,7 +821,7 @@ public abstract class LuaSurface: LuaObject
   /// </summary>
   /// <param name="key">Lua name: key</param>
   [FactorioRconMethod("get_script_area")]
-  public abstract ScriptArea? GetScriptArea(Union40875492? key = null);
+  public abstract ScriptArea? GetScriptArea(Union66785904? key = null);
 
   /// <summary>
   /// Sets the given script area to the new values.
@@ -857,7 +857,7 @@ public abstract class LuaSurface: LuaObject
   /// </summary>
   /// <param name="key">Lua name: key</param>
   [FactorioRconMethod("get_script_position")]
-  public abstract ScriptPosition? GetScriptPosition(Union35998227? key = null);
+  public abstract ScriptPosition? GetScriptPosition(Union57743045? key = null);
 
   /// <summary>
   /// Sets the given script position to the new values.
@@ -907,7 +907,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union56866013? name = null, ForceIdentification? force = null);
+  public abstract List<LuaEntity> GetTrainStops(Union63935578? name = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the total amount of pollution on the surface by iterating over all of the chunks containing pollution.
@@ -962,195 +962,195 @@ public abstract class LuaSurface: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union7235849: OneOfBase<LuaForce, string>
+public abstract partial class Union10373162: OneOfBase<LuaForce, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union42807775: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union40633064: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union17480744: OneOfBase<DirectionEnum, List<DirectionEnum>>
+public abstract partial class Union61567707: OneOfBase<DirectionEnum, List<DirectionEnum>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union40383808: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract partial class Union37508179: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union4767743: OneOfBase<string, List<string>>
+public abstract partial class Union8292248: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union42188773: OneOfBase<string, List<string>>
+public abstract partial class Union39148604: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union39317806: OneOfBase<string, List<string>>
+public abstract partial class Union24188202: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union45472684: OneOfBase<string, List<string>>
+public abstract partial class Union30369223: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union15754142: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union26060844: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union54838380: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract partial class Union3212748: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union17805896: OneOfBase<string, List<string>>
+public abstract partial class Union13995376: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union25475503: OneOfBase<LuaEntity, MapPosition>
+public abstract partial class Union39680416: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union46032354: OneOfBase<LuaEntity, MapPosition>
+public abstract partial class Union17566981: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union53560841: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union49515534: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union10516355: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+public abstract partial class Union59559901: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union41911884: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union35069176: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union35594062: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+public abstract partial class Union26664368: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union59457647: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union43049476: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union23372000: OneOfBase<DirectionEnum, List<DirectionEnum>>
+public abstract partial class Union19997254: OneOfBase<DirectionEnum, List<DirectionEnum>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union52449292: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract partial class Union40475271: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union47713876: OneOfBase<string, List<string>>
+public abstract partial class Union12232643: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union20582959: OneOfBase<string, List<string>>
+public abstract partial class Union19202350: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union55133730: OneOfBase<string, List<string>>
+public abstract partial class Union15574864: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union26682107: OneOfBase<string, List<string>>
+public abstract partial class Union49017889: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union8317655: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union47116051: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union63706159: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract partial class Union15509283: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union61575639: OneOfBase<string, List<string>>
+public abstract partial class Union32932185: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union40875492: OneOfBase<string, uint>
+public abstract partial class Union66785904: OneOfBase<string, uint>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union35998227: OneOfBase<string, uint>
+public abstract partial class Union57743045: OneOfBase<string, uint>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union56866013: OneOfBase<string, List<string>>
+public abstract partial class Union63935578: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union47441805: OneOfBase<Color, PrintSettings>
+public abstract partial class Union66848554: OneOfBase<Color, PrintSettings>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union57508556: OneOfBase<string, List<string>>
+public abstract partial class Union9247418: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union41456853: OneOfBase<string, List<string>>
+public abstract partial class Union55857246: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union66399853: OneOfBase<CollisionMaskWithFlags, List<string>>
+public abstract partial class Union32386246: OneOfBase<CollisionMaskWithFlags, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union46464282: OneOfBase<string, LuaTilePrototype>
+public abstract partial class Union18124803: OneOfBase<string, LuaTilePrototype>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union3069544: OneOfBase<bool, Literal23667699>
+public abstract partial class Union9881388: OneOfBase<bool, Literal42192436>
 {
 }
 
 /// <summary>
 /// Literal value: abort_on_collision
 /// </summary>
-public abstract class Literal23667699
+public enum Literal42192436
 {
   /// <summary>
   /// Literal value: abort_on_collision
   /// </summary>
-  [FactorioRconAttribute("abort_on_collision")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("abort_on_collision")]
+  AbortOnCollision,
 
 }
 

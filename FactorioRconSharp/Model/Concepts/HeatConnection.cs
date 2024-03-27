@@ -21,7 +21,7 @@ public abstract class HeatConnection
 
 }
 
-public abstract class Table66848554
+public abstract class Table41116594
 {
   [FactorioRconAttribute("position")]
   public Vector Position { get; set; }

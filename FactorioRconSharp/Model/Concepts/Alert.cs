@@ -42,7 +42,7 @@ public abstract class Alert
 
 }
 
-public abstract class Table66313729
+public abstract class Table7206868
 {
   /// <summary>
   /// The tick this alert was created.

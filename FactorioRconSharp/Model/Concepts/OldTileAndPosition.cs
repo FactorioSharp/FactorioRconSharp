@@ -21,7 +21,7 @@ public abstract class OldTileAndPosition
 
 }
 
-public abstract class Table16083019
+public abstract class Table63438839
 {
   [FactorioRconAttribute("old_tile")]
   public LuaTilePrototype OldTile { get; set; }

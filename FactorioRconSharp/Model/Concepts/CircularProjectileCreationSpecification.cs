@@ -21,7 +21,7 @@ public abstract class CircularProjectileCreationSpecification
 
 }
 
-public abstract class Table61816437
+public abstract class Table5826912
 {
   [FactorioRconAttribute("[1]")]
   public RealOrientation [1] { get; set; }

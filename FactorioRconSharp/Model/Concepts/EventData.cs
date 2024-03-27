@@ -36,7 +36,7 @@ public abstract class EventData
 
 }
 
-public abstract class Table51434360
+public abstract class Table29893828
 {
   /// <summary>
   /// The identifier of the event this handler was registered to.

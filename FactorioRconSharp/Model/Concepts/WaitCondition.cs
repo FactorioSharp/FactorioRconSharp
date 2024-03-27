@@ -20,7 +20,7 @@ public abstract class WaitCondition
   /// Specifies how this condition is to be compared with the preceding conditions in the corresponding `wait_conditions` array.
   /// </summary>
   [FactorioRconAttribute("compare_type")]
-  public Union20839390 CompareType { get; set; }
+  public Union37759012 CompareType { get; set; }
 
   /// <summary>
   /// Number of ticks to wait when `type` is `"time"`, or number of ticks of inactivity when `type` is `"inactivity"`.
@@ -36,7 +36,7 @@ public abstract class WaitCondition
 
 }
 
-public abstract class Table55318575
+public abstract class Table12872528
 {
   [FactorioRconAttribute("type")]
   public WaitConditionType Type { get; set; }
@@ -45,7 +45,7 @@ public abstract class Table55318575
   /// Specifies how this condition is to be compared with the preceding conditions in the corresponding `wait_conditions` array.
   /// </summary>
   [FactorioRconAttribute("compare_type")]
-  public Union20839390 CompareType { get; set; }
+  public Union37759012 CompareType { get; set; }
 
   /// <summary>
   /// Number of ticks to wait when `type` is `"time"`, or number of ticks of inactivity when `type` is `"inactivity"`.
@@ -62,33 +62,33 @@ public abstract class Table55318575
 }
 
 [GenerateOneOf]
-public abstract partial class Union20839390: OneOfBase<Literal34974026, Literal63365906>
+public abstract partial class Union37759012: OneOfBase<Literal21269535, Literal12836762>
 {
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal34974026
+public enum Literal21269535
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal63365906
+public enum Literal12836762
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 

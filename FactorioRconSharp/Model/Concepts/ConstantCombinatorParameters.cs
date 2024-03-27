@@ -33,7 +33,7 @@ public abstract class ConstantCombinatorParameters
 
 }
 
-public abstract class Table10675717
+public abstract class Table33724501
 {
   /// <summary>
   /// Signal to emit.

@@ -30,7 +30,7 @@ public abstract class ScriptArea
 
 }
 
-public abstract class Table1723951
+public abstract class Table16605191
 {
   [FactorioRconAttribute("area")]
   public BoundingBox Area { get; set; }

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerDelivery
 {
   [FactorioRconAttribute("type")]
-  public Union24974776 Type { get; set; }
+  public Union23275074 Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
   public List<TriggerEffectItem> SourceEffects { get; set; }
@@ -24,10 +24,10 @@ public abstract class TriggerDelivery
 
 }
 
-public abstract class Table23558896
+public abstract class Table26257675
 {
   [FactorioRconAttribute("type")]
-  public Union24974776 Type { get; set; }
+  public Union23275074 Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
   public List<TriggerEffectItem> SourceEffects { get; set; }
@@ -38,85 +38,85 @@ public abstract class Table23558896
 }
 
 [GenerateOneOf]
-public abstract partial class Union24974776: OneOfBase<Literal54708252, Literal8022616, Literal34257225, Literal48313086, Literal7941859, Literal32561327>
+public abstract partial class Union23275074: OneOfBase<Literal3888511, Literal45657968, Literal49012660, Literal12081011, Literal14805024, Literal26692523>
 {
 }
 
 /// <summary>
 /// Literal value: instant
 /// </summary>
-public abstract class Literal54708252
+public enum Literal3888511
 {
   /// <summary>
   /// Literal value: instant
   /// </summary>
-  [FactorioRconAttribute("instant")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("instant")]
+  Instant,
 
 }
 
 /// <summary>
 /// Literal value: projectile
 /// </summary>
-public abstract class Literal8022616
+public enum Literal45657968
 {
   /// <summary>
   /// Literal value: projectile
   /// </summary>
-  [FactorioRconAttribute("projectile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("projectile")]
+  Projectile,
 
 }
 
 /// <summary>
 /// Literal value: flame-thrower
 /// </summary>
-public abstract class Literal34257225
+public enum Literal49012660
 {
   /// <summary>
   /// Literal value: flame-thrower
   /// </summary>
-  [FactorioRconAttribute("flame-thrower")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("flame-thrower")]
+  FlameThrower,
 
 }
 
 /// <summary>
 /// Literal value: beam
 /// </summary>
-public abstract class Literal48313086
+public enum Literal12081011
 {
   /// <summary>
   /// Literal value: beam
   /// </summary>
-  [FactorioRconAttribute("beam")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("beam")]
+  Beam,
 
 }
 
 /// <summary>
 /// Literal value: stream
 /// </summary>
-public abstract class Literal7941859
+public enum Literal14805024
 {
   /// <summary>
   /// Literal value: stream
   /// </summary>
-  [FactorioRconAttribute("stream")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("stream")]
+  Stream,
 
 }
 
 /// <summary>
 /// Literal value: artillery
 /// </summary>
-public abstract class Literal32561327
+public enum Literal26692523
 {
   /// <summary>
   /// Literal value: artillery
   /// </summary>
-  [FactorioRconAttribute("artillery")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("artillery")]
+  Artillery,
 
 }
 

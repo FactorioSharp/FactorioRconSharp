@@ -23,7 +23,7 @@ public abstract class CutsceneWaypoint
   /// Entity or unit group to pan the camera to.
   /// </summary>
   [FactorioRconAttribute("target")]
-  public Union1954745 Target { get; set; }
+  public Union58648462 Target { get; set; }
 
   /// <summary>
   /// How many ticks it will take to reach this waypoint from the previous one.
@@ -45,7 +45,7 @@ public abstract class CutsceneWaypoint
 
 }
 
-public abstract class Table28529661
+public abstract class Table52932533
 {
   /// <summary>
   /// Position to pan the camera to.
@@ -57,7 +57,7 @@ public abstract class Table28529661
   /// Entity or unit group to pan the camera to.
   /// </summary>
   [FactorioRconAttribute("target")]
-  public Union1954745 Target { get; set; }
+  public Union58648462 Target { get; set; }
 
   /// <summary>
   /// How many ticks it will take to reach this waypoint from the previous one.
@@ -80,7 +80,7 @@ public abstract class Table28529661
 }
 
 [GenerateOneOf]
-public abstract partial class Union1954745: OneOfBase<LuaEntity, LuaUnitGroup>
+public abstract partial class Union58648462: OneOfBase<LuaEntity, LuaUnitGroup>
 {
 }
 

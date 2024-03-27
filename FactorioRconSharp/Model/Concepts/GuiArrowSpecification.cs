@@ -27,7 +27,7 @@ public abstract class GuiArrowSpecification
 
 }
 
-public abstract class Table33324024
+public abstract class Table24038422
 {
   [FactorioRconAttribute("margin")]
   public uint Margin { get; set; }
@@ -41,59 +41,59 @@ public abstract class Table33324024
 }
 
 [GenerateOneOf]
-public abstract partial class Union26872619: OneOfBase<Literal41108474, Literal51295077, Literal11162226, Literal55269108>
+public abstract partial class Union26025613: OneOfBase<Literal16545285, Literal10051224, Literal23050047, Literal64471607>
 {
 }
 
 /// <summary>
 /// Literal value: player
 /// </summary>
-public abstract class Literal41108474
+public enum Literal16545285
 {
   /// <summary>
   /// Literal value: player
   /// </summary>
-  [FactorioRconAttribute("player")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("player")]
+  Player,
 
 }
 
 /// <summary>
 /// Literal value: target
 /// </summary>
-public abstract class Literal51295077
+public enum Literal10051224
 {
   /// <summary>
   /// Literal value: target
   /// </summary>
-  [FactorioRconAttribute("target")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("target")]
+  Target,
 
 }
 
 /// <summary>
 /// Literal value: player-quickbar
 /// </summary>
-public abstract class Literal11162226
+public enum Literal23050047
 {
   /// <summary>
   /// Literal value: player-quickbar
   /// </summary>
-  [FactorioRconAttribute("player-quickbar")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("player-quickbar")]
+  PlayerQuickbar,
 
 }
 
 /// <summary>
 /// Literal value: player-equipment-bar
 /// </summary>
-public abstract class Literal55269108
+public enum Literal64471607
 {
   /// <summary>
   /// Literal value: player-equipment-bar
   /// </summary>
-  [FactorioRconAttribute("player-equipment-bar")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("player-equipment-bar")]
+  PlayerEquipmentBar,
 
 }
 

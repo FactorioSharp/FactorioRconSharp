@@ -12,337 +12,337 @@ namespace FactorioRconSharp.Model.Concepts;
 
 [GenerateOneOf]
 [FactorioRconConcept("GuiElementType")]
-public abstract partial class GuiElementType: OneOfBase<Literal63149944, Literal19409071, Literal25992150, Literal15574864, Literal49017889, Literal12232643, Literal19202350, Literal19997254, Literal43049476, Literal40475271, Literal32932185, Literal15509283, Literal47116051, Literal24188202, Literal30369223, Literal8292248, Literal39148604, Literal61567707, Literal40633064, Literal37508179, Literal13995376, Literal3212748, Literal26060844, Literal17566981, Literal39680416>
+public abstract partial class GuiElementType: OneOfBase<Literal42479535, Literal19655016, Literal10102168, Literal10818951, Literal25871395, Literal6428384, Literal778356, Literal16345490, Literal7710979, Literal27712842, Literal45098773, Literal7550150, Literal24335424, Literal41281876, Literal61613035, Literal18805330, Literal59367627, Literal38760623, Literal8666726, Literal47783528, Literal63930002, Literal352779, Literal7408374, Literal21358135, Literal45867655>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union29946769: OneOfBase<Literal63149944, Literal19409071, Literal25992150, Literal15574864, Literal49017889, Literal12232643, Literal19202350, Literal19997254, Literal43049476, Literal40475271, Literal32932185, Literal15509283, Literal47116051, Literal24188202, Literal30369223, Literal8292248, Literal39148604, Literal61567707, Literal40633064, Literal37508179, Literal13995376, Literal3212748, Literal26060844, Literal17566981, Literal39680416>
+public abstract partial class Union53153398: OneOfBase<Literal42479535, Literal19655016, Literal10102168, Literal10818951, Literal25871395, Literal6428384, Literal778356, Literal16345490, Literal7710979, Literal27712842, Literal45098773, Literal7550150, Literal24335424, Literal41281876, Literal61613035, Literal18805330, Literal59367627, Literal38760623, Literal8666726, Literal47783528, Literal63930002, Literal352779, Literal7408374, Literal21358135, Literal45867655>
 {
 }
 
 /// <summary>
 /// Literal value: button
 /// </summary>
-public abstract class Literal63149944
+public enum Literal42479535
 {
   /// <summary>
   /// Literal value: button
   /// </summary>
-  [FactorioRconAttribute("button")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button")]
+  Button,
 
 }
 
 /// <summary>
 /// Literal value: sprite-button
 /// </summary>
-public abstract class Literal19409071
+public enum Literal19655016
 {
   /// <summary>
   /// Literal value: sprite-button
   /// </summary>
-  [FactorioRconAttribute("sprite-button")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("sprite-button")]
+  SpriteButton,
 
 }
 
 /// <summary>
 /// Literal value: checkbox
 /// </summary>
-public abstract class Literal25992150
+public enum Literal10102168
 {
   /// <summary>
   /// Literal value: checkbox
   /// </summary>
-  [FactorioRconAttribute("checkbox")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("checkbox")]
+  Checkbox,
 
 }
 
 /// <summary>
 /// Literal value: flow
 /// </summary>
-public abstract class Literal15574864
+public enum Literal10818951
 {
   /// <summary>
   /// Literal value: flow
   /// </summary>
-  [FactorioRconAttribute("flow")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("flow")]
+  Flow,
 
 }
 
 /// <summary>
 /// Literal value: frame
 /// </summary>
-public abstract class Literal49017889
+public enum Literal25871395
 {
   /// <summary>
   /// Literal value: frame
   /// </summary>
-  [FactorioRconAttribute("frame")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("frame")]
+  Frame,
 
 }
 
 /// <summary>
 /// Literal value: label
 /// </summary>
-public abstract class Literal12232643
+public enum Literal6428384
 {
   /// <summary>
   /// Literal value: label
   /// </summary>
-  [FactorioRconAttribute("label")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("label")]
+  Label,
 
 }
 
 /// <summary>
 /// Literal value: line
 /// </summary>
-public abstract class Literal19202350
+public enum Literal778356
 {
   /// <summary>
   /// Literal value: line
   /// </summary>
-  [FactorioRconAttribute("line")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("line")]
+  Line,
 
 }
 
 /// <summary>
 /// Literal value: progressbar
 /// </summary>
-public abstract class Literal19997254
+public enum Literal16345490
 {
   /// <summary>
   /// Literal value: progressbar
   /// </summary>
-  [FactorioRconAttribute("progressbar")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("progressbar")]
+  Progressbar,
 
 }
 
 /// <summary>
 /// Literal value: table
 /// </summary>
-public abstract class Literal43049476
+public enum Literal7710979
 {
   /// <summary>
   /// Literal value: table
   /// </summary>
-  [FactorioRconAttribute("table")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("table")]
+  Table,
 
 }
 
 /// <summary>
 /// Literal value: textfield
 /// </summary>
-public abstract class Literal40475271
+public enum Literal27712842
 {
   /// <summary>
   /// Literal value: textfield
   /// </summary>
-  [FactorioRconAttribute("textfield")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("textfield")]
+  Textfield,
 
 }
 
 /// <summary>
 /// Literal value: radiobutton
 /// </summary>
-public abstract class Literal32932185
+public enum Literal45098773
 {
   /// <summary>
   /// Literal value: radiobutton
   /// </summary>
-  [FactorioRconAttribute("radiobutton")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("radiobutton")]
+  Radiobutton,
 
 }
 
 /// <summary>
 /// Literal value: sprite
 /// </summary>
-public abstract class Literal15509283
+public enum Literal7550150
 {
   /// <summary>
   /// Literal value: sprite
   /// </summary>
-  [FactorioRconAttribute("sprite")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("sprite")]
+  Sprite,
 
 }
 
 /// <summary>
 /// Literal value: scroll-pane
 /// </summary>
-public abstract class Literal47116051
+public enum Literal24335424
 {
   /// <summary>
   /// Literal value: scroll-pane
   /// </summary>
-  [FactorioRconAttribute("scroll-pane")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("scroll-pane")]
+  ScrollPane,
 
 }
 
 /// <summary>
 /// Literal value: drop-down
 /// </summary>
-public abstract class Literal24188202
+public enum Literal41281876
 {
   /// <summary>
   /// Literal value: drop-down
   /// </summary>
-  [FactorioRconAttribute("drop-down")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("drop-down")]
+  DropDown,
 
 }
 
 /// <summary>
 /// Literal value: list-box
 /// </summary>
-public abstract class Literal30369223
+public enum Literal61613035
 {
   /// <summary>
   /// Literal value: list-box
   /// </summary>
-  [FactorioRconAttribute("list-box")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("list-box")]
+  ListBox,
 
 }
 
 /// <summary>
 /// Literal value: camera
 /// </summary>
-public abstract class Literal8292248
+public enum Literal18805330
 {
   /// <summary>
   /// Literal value: camera
   /// </summary>
-  [FactorioRconAttribute("camera")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("camera")]
+  Camera,
 
 }
 
 /// <summary>
 /// Literal value: choose-elem-button
 /// </summary>
-public abstract class Literal39148604
+public enum Literal59367627
 {
   /// <summary>
   /// Literal value: choose-elem-button
   /// </summary>
-  [FactorioRconAttribute("choose-elem-button")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("choose-elem-button")]
+  ChooseElemButton,
 
 }
 
 /// <summary>
 /// Literal value: text-box
 /// </summary>
-public abstract class Literal61567707
+public enum Literal38760623
 {
   /// <summary>
   /// Literal value: text-box
   /// </summary>
-  [FactorioRconAttribute("text-box")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("text-box")]
+  TextBox,
 
 }
 
 /// <summary>
 /// Literal value: slider
 /// </summary>
-public abstract class Literal40633064
+public enum Literal8666726
 {
   /// <summary>
   /// Literal value: slider
   /// </summary>
-  [FactorioRconAttribute("slider")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("slider")]
+  Slider,
 
 }
 
 /// <summary>
 /// Literal value: minimap
 /// </summary>
-public abstract class Literal37508179
+public enum Literal47783528
 {
   /// <summary>
   /// Literal value: minimap
   /// </summary>
-  [FactorioRconAttribute("minimap")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("minimap")]
+  Minimap,
 
 }
 
 /// <summary>
 /// Literal value: entity-preview
 /// </summary>
-public abstract class Literal13995376
+public enum Literal63930002
 {
   /// <summary>
   /// Literal value: entity-preview
   /// </summary>
-  [FactorioRconAttribute("entity-preview")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("entity-preview")]
+  EntityPreview,
 
 }
 
 /// <summary>
 /// Literal value: empty-widget
 /// </summary>
-public abstract class Literal3212748
+public enum Literal352779
 {
   /// <summary>
   /// Literal value: empty-widget
   /// </summary>
-  [FactorioRconAttribute("empty-widget")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("empty-widget")]
+  EmptyWidget,
 
 }
 
 /// <summary>
 /// Literal value: tabbed-pane
 /// </summary>
-public abstract class Literal26060844
+public enum Literal7408374
 {
   /// <summary>
   /// Literal value: tabbed-pane
   /// </summary>
-  [FactorioRconAttribute("tabbed-pane")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("tabbed-pane")]
+  TabbedPane,
 
 }
 
 /// <summary>
 /// Literal value: tab
 /// </summary>
-public abstract class Literal17566981
+public enum Literal21358135
 {
   /// <summary>
   /// Literal value: tab
   /// </summary>
-  [FactorioRconAttribute("tab")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("tab")]
+  Tab,
 
 }
 
 /// <summary>
 /// Literal value: switch
 /// </summary>
-public abstract class Literal39680416
+public enum Literal45867655
 {
   /// <summary>
   /// Literal value: switch
   /// </summary>
-  [FactorioRconAttribute("switch")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("switch")]
+  Switch,
 
 }
 

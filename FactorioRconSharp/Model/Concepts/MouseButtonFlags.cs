@@ -16,142 +16,142 @@ namespace FactorioRconSharp.Model.Concepts;
 /// To write to this, use an array<see cref="String" />] of the mouse buttons that should be possible to use with on button. The flag `"left-and-right"` can also be set, which will set `"left"` and `"right"` to `true`.
 /// </summary>
 [FactorioRconConcept("MouseButtonFlags")]
-public abstract class MouseButtonFlags: Dictionary<Union24083131, Literal27322174>
+public abstract class MouseButtonFlags: Dictionary<Union57195083, Literal48044684>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union24083131: OneOfBase<Literal54145554, Literal26717201, Literal36601332, Literal54805688, Literal45861104, Literal54903627, Literal48701316, Literal3052046, Literal21400478>
+public abstract partial class Union57195083: OneOfBase<Literal51118573, Literal6043628, Literal41047511, Literal49527150, Literal27001207, Literal44837509, Literal25219370, Literal60273114, Literal3089856>
 {
 }
 
 /// <summary>
 /// Literal value: left
 /// </summary>
-public abstract class Literal54145554
+public enum Literal51118573
 {
   /// <summary>
   /// Literal value: left
   /// </summary>
-  [FactorioRconAttribute("left")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("left")]
+  Left,
 
 }
 
 /// <summary>
 /// Literal value: right
 /// </summary>
-public abstract class Literal26717201
+public enum Literal6043628
 {
   /// <summary>
   /// Literal value: right
   /// </summary>
-  [FactorioRconAttribute("right")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("right")]
+  Right,
 
 }
 
 /// <summary>
 /// Literal value: middle
 /// </summary>
-public abstract class Literal36601332
+public enum Literal41047511
 {
   /// <summary>
   /// Literal value: middle
   /// </summary>
-  [FactorioRconAttribute("middle")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("middle")]
+  Middle,
 
 }
 
 /// <summary>
 /// Literal value: button-4
 /// </summary>
-public abstract class Literal54805688
+public enum Literal49527150
 {
   /// <summary>
   /// Literal value: button-4
   /// </summary>
-  [FactorioRconAttribute("button-4")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button-4")]
+  Button4,
 
 }
 
 /// <summary>
 /// Literal value: button-5
 /// </summary>
-public abstract class Literal45861104
+public enum Literal27001207
 {
   /// <summary>
   /// Literal value: button-5
   /// </summary>
-  [FactorioRconAttribute("button-5")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button-5")]
+  Button5,
 
 }
 
 /// <summary>
 /// Literal value: button-6
 /// </summary>
-public abstract class Literal54903627
+public enum Literal44837509
 {
   /// <summary>
   /// Literal value: button-6
   /// </summary>
-  [FactorioRconAttribute("button-6")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button-6")]
+  Button6,
 
 }
 
 /// <summary>
 /// Literal value: button-7
 /// </summary>
-public abstract class Literal48701316
+public enum Literal25219370
 {
   /// <summary>
   /// Literal value: button-7
   /// </summary>
-  [FactorioRconAttribute("button-7")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button-7")]
+  Button7,
 
 }
 
 /// <summary>
 /// Literal value: button-8
 /// </summary>
-public abstract class Literal3052046
+public enum Literal60273114
 {
   /// <summary>
   /// Literal value: button-8
   /// </summary>
-  [FactorioRconAttribute("button-8")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button-8")]
+  Button8,
 
 }
 
 /// <summary>
 /// Literal value: button-9
 /// </summary>
-public abstract class Literal21400478
+public enum Literal3089856
 {
   /// <summary>
   /// Literal value: button-9
   /// </summary>
-  [FactorioRconAttribute("button-9")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("button-9")]
+  Button9,
 
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public abstract class Literal27322174
+public enum Literal48044684
 {
   /// <summary>
   /// Literal value: True
   /// </summary>
-  [FactorioRconAttribute("True")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("True")]
+  True,
 
 }
 

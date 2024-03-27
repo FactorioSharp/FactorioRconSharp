@@ -27,7 +27,7 @@ public abstract class PlaceAsTileResult
 
 }
 
-public abstract class Table41281876
+public abstract class Table34257225
 {
   /// <summary>
   /// The tile prototype.

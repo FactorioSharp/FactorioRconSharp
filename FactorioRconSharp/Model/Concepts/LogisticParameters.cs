@@ -33,7 +33,7 @@ public abstract class LogisticParameters
 
 }
 
-public abstract class Table56229350
+public abstract class Table47753423
 {
   /// <summary>
   /// The item. `nil` clears the filter.

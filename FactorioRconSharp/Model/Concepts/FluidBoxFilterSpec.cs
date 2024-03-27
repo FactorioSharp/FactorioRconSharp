@@ -39,7 +39,7 @@ public abstract class FluidBoxFilterSpec
 
 }
 
-public abstract class Table39658150
+public abstract class Table43635917
 {
   /// <summary>
   /// Fluid prototype name of the filtered fluid.

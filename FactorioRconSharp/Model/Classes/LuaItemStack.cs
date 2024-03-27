@@ -128,7 +128,7 @@ public abstract class LuaItemStack: LuaObject
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public Union12473332 PrioritizeInsertionMode { get; set; }
+  public Union2023519 PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
@@ -546,7 +546,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_entity_filter")]
-  public abstract bool SetEntityFilter(uint index, Union60613391 filter);
+  public abstract bool SetEntityFilter(uint index, Union58682072 filter);
 
   /// <summary>
   /// Gets the tile filter at the given index for this deconstruction item.
@@ -561,7 +561,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_tile_filter")]
-  public abstract bool SetTileFilter(uint index, Union64921669 filter);
+  public abstract bool SetTileFilter(uint index, Union24058510 filter);
 
   /// <summary>
   /// Clears all settings/filters on this deconstruction item resetting it to default values.
@@ -581,7 +581,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public abstract UpgradeFilter GetMapper(uint index, Union21177779 type);
+  public abstract UpgradeFilter GetMapper(uint index, Union26608156 type);
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,7 +590,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public abstract void SetMapper(uint index, Union42080192 type, Union11268815 filter);
+  public abstract void SetMapper(uint index, Union33439030 type, Union30207786 filter);
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.
@@ -645,136 +645,136 @@ public abstract class LuaItemStack: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union12473332: OneOfBase<Literal35318532, Literal3491672, Literal6216253, Literal63432468>
+public abstract partial class Union2023519: OneOfBase<Literal3610582, Literal37598025, Literal16600924, Literal11664751>
 {
 }
 
 /// <summary>
 /// Literal value: default
 /// </summary>
-public abstract class Literal35318532
+public enum Literal3610582
 {
   /// <summary>
   /// Literal value: default
   /// </summary>
-  [FactorioRconAttribute("default")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("default")]
+  Default,
 
 }
 
 /// <summary>
 /// Literal value: never
 /// </summary>
-public abstract class Literal3491672
+public enum Literal37598025
 {
   /// <summary>
   /// Literal value: never
   /// </summary>
-  [FactorioRconAttribute("never")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("never")]
+  Never,
 
 }
 
 /// <summary>
 /// Literal value: always
 /// </summary>
-public abstract class Literal6216253
+public enum Literal16600924
 {
   /// <summary>
   /// Literal value: always
   /// </summary>
-  [FactorioRconAttribute("always")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("always")]
+  Always,
 
 }
 
 /// <summary>
 /// Literal value: when-manually-filtered
 /// </summary>
-public abstract class Literal63432468
+public enum Literal11664751
 {
   /// <summary>
   /// Literal value: when-manually-filtered
   /// </summary>
-  [FactorioRconAttribute("when-manually-filtered")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("when-manually-filtered")]
+  WhenManuallyFiltered,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union21177779: OneOfBase<Literal57013419, Literal56431129>
+public abstract partial class Union26608156: OneOfBase<Literal2733477, Literal12161986>
 {
 }
 
 /// <summary>
 /// Literal value: from
 /// </summary>
-public abstract class Literal57013419
+public enum Literal2733477
 {
   /// <summary>
   /// Literal value: from
   /// </summary>
-  [FactorioRconAttribute("from")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("from")]
+  From,
 
 }
 
 /// <summary>
 /// Literal value: to
 /// </summary>
-public abstract class Literal56431129
+public enum Literal12161986
 {
   /// <summary>
   /// Literal value: to
   /// </summary>
-  [FactorioRconAttribute("to")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("to")]
+  To,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union60613391: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
+public abstract partial class Union58682072: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union11268815: OneOfBase<UpgradeFilter, LuaNil>
+public abstract partial class Union30207786: OneOfBase<UpgradeFilter, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union42080192: OneOfBase<Literal44203036, Literal55848526>
+public abstract partial class Union33439030: OneOfBase<Literal17153280, Literal27683095>
 {
 }
 
 /// <summary>
 /// Literal value: from
 /// </summary>
-public abstract class Literal44203036
+public enum Literal17153280
 {
   /// <summary>
   /// Literal value: from
   /// </summary>
-  [FactorioRconAttribute("from")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("from")]
+  From,
 
 }
 
 /// <summary>
 /// Literal value: to
 /// </summary>
-public abstract class Literal55848526
+public enum Literal27683095
 {
   /// <summary>
   /// Literal value: to
   /// </summary>
-  [FactorioRconAttribute("to")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("to")]
+  To,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union64921669: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
+public abstract partial class Union24058510: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
 {
 }
 

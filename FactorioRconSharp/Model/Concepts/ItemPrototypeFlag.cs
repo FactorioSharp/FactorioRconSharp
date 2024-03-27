@@ -15,155 +15,155 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ItemPrototypeFlag")]
-public abstract partial class ItemPrototypeFlag: OneOfBase<Literal47484882, Literal12110199, Literal45424197, Literal2973708, Literal42918335, Literal44474540, Literal34945278, Literal17906896, Literal58575377, Literal19805307, Literal61707732>
+public abstract partial class ItemPrototypeFlag: OneOfBase<Literal19967849, Literal42196733, Literal15745719, Literal53972668, Literal21703524, Literal25422420, Literal66161566, Literal39637243, Literal8629381, Literal48925463, Literal9552293>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union44813449: OneOfBase<Literal47484882, Literal12110199, Literal45424197, Literal2973708, Literal42918335, Literal44474540, Literal34945278, Literal17906896, Literal58575377, Literal19805307, Literal61707732>
+public abstract partial class Union26143632: OneOfBase<Literal19967849, Literal42196733, Literal15745719, Literal53972668, Literal21703524, Literal25422420, Literal66161566, Literal39637243, Literal8629381, Literal48925463, Literal9552293>
 {
 }
 
 /// <summary>
 /// Literal value: draw-logistic-overlay
 /// </summary>
-public abstract class Literal47484882
+public enum Literal19967849
 {
   /// <summary>
   /// Literal value: draw-logistic-overlay
   /// </summary>
-  [FactorioRconAttribute("draw-logistic-overlay")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("draw-logistic-overlay")]
+  DrawLogisticOverlay,
 
 }
 
 /// <summary>
 /// Literal value: hidden
 /// </summary>
-public abstract class Literal12110199
+public enum Literal42196733
 {
   /// <summary>
   /// Literal value: hidden
   /// </summary>
-  [FactorioRconAttribute("hidden")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("hidden")]
+  Hidden,
 
 }
 
 /// <summary>
 /// Literal value: always-show
 /// </summary>
-public abstract class Literal45424197
+public enum Literal15745719
 {
   /// <summary>
   /// Literal value: always-show
   /// </summary>
-  [FactorioRconAttribute("always-show")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("always-show")]
+  AlwaysShow,
 
 }
 
 /// <summary>
 /// Literal value: hide-from-bonus-gui
 /// </summary>
-public abstract class Literal2973708
+public enum Literal53972668
 {
   /// <summary>
   /// Literal value: hide-from-bonus-gui
   /// </summary>
-  [FactorioRconAttribute("hide-from-bonus-gui")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("hide-from-bonus-gui")]
+  HideFromBonusGui,
 
 }
 
 /// <summary>
 /// Literal value: hide-from-fuel-tooltip
 /// </summary>
-public abstract class Literal42918335
+public enum Literal21703524
 {
   /// <summary>
   /// Literal value: hide-from-fuel-tooltip
   /// </summary>
-  [FactorioRconAttribute("hide-from-fuel-tooltip")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("hide-from-fuel-tooltip")]
+  HideFromFuelTooltip,
 
 }
 
 /// <summary>
 /// Literal value: not-stackable
 /// </summary>
-public abstract class Literal44474540
+public enum Literal25422420
 {
   /// <summary>
   /// Literal value: not-stackable
   /// </summary>
-  [FactorioRconAttribute("not-stackable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-stackable")]
+  NotStackable,
 
 }
 
 /// <summary>
 /// Literal value: can-extend-inventory
 /// </summary>
-public abstract class Literal34945278
+public enum Literal66161566
 {
   /// <summary>
   /// Literal value: can-extend-inventory
   /// </summary>
-  [FactorioRconAttribute("can-extend-inventory")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("can-extend-inventory")]
+  CanExtendInventory,
 
 }
 
 /// <summary>
 /// Literal value: primary-place-result
 /// </summary>
-public abstract class Literal17906896
+public enum Literal39637243
 {
   /// <summary>
   /// Literal value: primary-place-result
   /// </summary>
-  [FactorioRconAttribute("primary-place-result")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("primary-place-result")]
+  PrimaryPlaceResult,
 
 }
 
 /// <summary>
 /// Literal value: mod-openable
 /// </summary>
-public abstract class Literal58575377
+public enum Literal8629381
 {
   /// <summary>
   /// Literal value: mod-openable
   /// </summary>
-  [FactorioRconAttribute("mod-openable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("mod-openable")]
+  ModOpenable,
 
 }
 
 /// <summary>
 /// Literal value: only-in-cursor
 /// </summary>
-public abstract class Literal19805307
+public enum Literal48925463
 {
   /// <summary>
   /// Literal value: only-in-cursor
   /// </summary>
-  [FactorioRconAttribute("only-in-cursor")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("only-in-cursor")]
+  OnlyInCursor,
 
 }
 
 /// <summary>
 /// Literal value: spawnable
 /// </summary>
-public abstract class Literal61707732
+public enum Literal9552293
 {
   /// <summary>
   /// Literal value: spawnable
   /// </summary>
-  [FactorioRconAttribute("spawnable")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("spawnable")]
+  Spawnable,
 
 }
 

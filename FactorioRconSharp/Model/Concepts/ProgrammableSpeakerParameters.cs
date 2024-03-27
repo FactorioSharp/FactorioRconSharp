@@ -24,7 +24,7 @@ public abstract class ProgrammableSpeakerParameters
 
 }
 
-public abstract class Table2858361
+public abstract class Table35866821
 {
   [FactorioRconAttribute("playback_volume")]
   public double PlaybackVolume { get; set; }

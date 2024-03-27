@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class FluidBoxConnection
 {
   [FactorioRconAttribute("type")]
-  public Union30384602 Type { get; set; }
+  public Union18555401 Type { get; set; }
 
   /// <summary>
   /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.
@@ -33,10 +33,10 @@ public abstract class FluidBoxConnection
 
 }
 
-public abstract class Table17189561
+public abstract class Table9896236
 {
   [FactorioRconAttribute("type")]
-  public Union30384602 Type { get; set; }
+  public Union18555401 Type { get; set; }
 
   /// <summary>
   /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.
@@ -53,46 +53,46 @@ public abstract class Table17189561
 }
 
 [GenerateOneOf]
-public abstract partial class Union30384602: OneOfBase<Literal63167771, Literal4161677, Literal3117632>
+public abstract partial class Union18555401: OneOfBase<Literal1235721, Literal35835924, Literal32608861>
 {
 }
 
 /// <summary>
 /// Literal value: input
 /// </summary>
-public abstract class Literal63167771
+public enum Literal1235721
 {
   /// <summary>
   /// Literal value: input
   /// </summary>
-  [FactorioRconAttribute("input")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("input")]
+  Input,
 
 }
 
 /// <summary>
 /// Literal value: output
 /// </summary>
-public abstract class Literal4161677
+public enum Literal35835924
 {
   /// <summary>
   /// Literal value: output
   /// </summary>
-  [FactorioRconAttribute("output")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("output")]
+  Output,
 
 }
 
 /// <summary>
 /// Literal value: input-output
 /// </summary>
-public abstract class Literal3117632
+public enum Literal32608861
 {
   /// <summary>
   /// Literal value: input-output
   /// </summary>
-  [FactorioRconAttribute("input-output")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("input-output")]
+  InputOutput,
 
 }
 

@@ -20,7 +20,7 @@ public abstract partial class AnyBasic: OneOfBase<string, bool, double, LuaTable
 }
 
 [GenerateOneOf]
-public abstract partial class Union17924607: OneOfBase<string, bool, double, LuaTable>
+public abstract partial class Union23737571: OneOfBase<string, bool, double, LuaTable>
 {
 }
 

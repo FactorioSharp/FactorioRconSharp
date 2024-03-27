@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class Product
 {
   [FactorioRconAttribute("type")]
-  public Union21854613 Type { get; set; }
+  public Union53346435 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the result.
@@ -32,13 +32,13 @@ public abstract class Product
   /// Minimal amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_min")]
-  public Union3314337 AmountMin { get; set; }
+  public Union3542765 AmountMin { get; set; }
 
   /// <summary>
   /// Maximum amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_max")]
-  public Union55521637 AmountMax { get; set; }
+  public Union35631340 AmountMax { get; set; }
 
   /// <summary>
   /// A value in range [0, 1]. Item or fluid is only given with this probability; otherwise no product is produced.
@@ -50,14 +50,14 @@ public abstract class Product
   /// How much of this product is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union41034663 CatalystAmount { get; set; }
+  public Union26675914 CatalystAmount { get; set; }
 
 }
 
-public abstract class Table29610714
+public abstract class Table18038223
 {
   [FactorioRconAttribute("type")]
-  public Union21854613 Type { get; set; }
+  public Union53346435 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the result.
@@ -75,13 +75,13 @@ public abstract class Table29610714
   /// Minimal amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_min")]
-  public Union3314337 AmountMin { get; set; }
+  public Union3542765 AmountMin { get; set; }
 
   /// <summary>
   /// Maximum amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_max")]
-  public Union55521637 AmountMax { get; set; }
+  public Union35631340 AmountMax { get; set; }
 
   /// <summary>
   /// A value in range [0, 1]. Item or fluid is only given with this probability; otherwise no product is produced.
@@ -93,53 +93,53 @@ public abstract class Table29610714
   /// How much of this product is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union41034663 CatalystAmount { get; set; }
+  public Union26675914 CatalystAmount { get; set; }
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union55521637: OneOfBase<uint, double>
+public abstract partial class Union35631340: OneOfBase<uint, double>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union3314337: OneOfBase<uint, double>
+public abstract partial class Union3542765: OneOfBase<uint, double>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union41034663: OneOfBase<uint, double>
+public abstract partial class Union26675914: OneOfBase<uint, double>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union21854613: OneOfBase<Literal41887540, Literal6335121>
+public abstract partial class Union53346435: OneOfBase<Literal35404016, Literal20083532>
 {
 }
 
 /// <summary>
 /// Literal value: item
 /// </summary>
-public abstract class Literal41887540
+public enum Literal35404016
 {
   /// <summary>
   /// Literal value: item
   /// </summary>
-  [FactorioRconAttribute("item")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item")]
+  Item,
 
 }
 
 /// <summary>
 /// Literal value: fluid
 /// </summary>
-public abstract class Literal6335121
+public enum Literal20083532
 {
   /// <summary>
   /// Literal value: fluid
   /// </summary>
-  [FactorioRconAttribute("fluid")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fluid")]
+  Fluid,
 
 }
 

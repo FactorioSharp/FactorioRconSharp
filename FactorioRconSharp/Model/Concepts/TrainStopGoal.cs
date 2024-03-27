@@ -21,7 +21,7 @@ public abstract class TrainStopGoal
 
 }
 
-public abstract class Table48342539
+public abstract class Table40245115
 {
   /// <summary>
   /// Train stop target. Must be connected to rail (<see cref="LuaEntity.ConnectedRail)ReturnsValidLuaEntity" />.

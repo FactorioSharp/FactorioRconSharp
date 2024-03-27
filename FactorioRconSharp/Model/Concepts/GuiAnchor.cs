@@ -39,7 +39,7 @@ public abstract class GuiAnchor
 
 }
 
-public abstract class Table17347795
+public abstract class Table56367281
 {
   [FactorioRconAttribute("gui")]
   public RelativeGuiTypeEnum Gui { get; set; }

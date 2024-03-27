@@ -30,7 +30,7 @@ public abstract class DragTarget
 
 }
 
-public abstract class Table191593
+public abstract class Table56431129
 {
   [FactorioRconAttribute("target_entity")]
   public LuaEntity TargetEntity { get; set; }

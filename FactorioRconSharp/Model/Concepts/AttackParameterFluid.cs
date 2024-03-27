@@ -27,7 +27,7 @@ public abstract class AttackParameterFluid
 
 }
 
-public abstract class Table33439030
+public abstract class Table30673304
 {
   /// <summary>
   /// Name of the <see cref="LuaFluidPrototype" />.

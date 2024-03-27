@@ -27,7 +27,7 @@ public abstract class NthTickEventData
 
 }
 
-public abstract class Table12626972
+public abstract class Table48432117
 {
   /// <summary>
   /// The tick during which the event happened.

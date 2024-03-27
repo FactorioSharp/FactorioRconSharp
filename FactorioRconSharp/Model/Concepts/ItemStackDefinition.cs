@@ -51,7 +51,7 @@ public abstract class ItemStackDefinition
 
 }
 
-public abstract class Table19344466
+public abstract class Table36017716
 {
   /// <summary>
   /// Prototype name of the item the stack holds.

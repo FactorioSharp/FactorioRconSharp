@@ -24,7 +24,7 @@ public abstract class ElemID
 
 }
 
-public abstract class Table6322590
+public abstract class Table44203036
 {
   [FactorioRconAttribute("type")]
   public ElemType Type { get; set; }

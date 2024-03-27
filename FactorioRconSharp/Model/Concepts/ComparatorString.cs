@@ -15,129 +15,129 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ComparatorString")]
-public abstract partial class ComparatorString: OneOfBase<Literal31364015, Literal28379535, Literal64109423, Literal35236192, Literal21943666, Literal53052340, Literal5896758, Literal60375305, Literal46228029>
+public abstract partial class ComparatorString: OneOfBase<Literal8636590, Literal49134518, Literal15614904, Literal50179053, Literal45906415, Literal56217625, Literal19698399, Literal34382671, Literal57573383>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union41622463: OneOfBase<Literal31364015, Literal28379535, Literal64109423, Literal35236192, Literal21943666, Literal53052340, Literal5896758, Literal60375305, Literal46228029>
+public abstract partial class Union35009294: OneOfBase<Literal8636590, Literal49134518, Literal15614904, Literal50179053, Literal45906415, Literal56217625, Literal19698399, Literal34382671, Literal57573383>
 {
 }
 
 /// <summary>
 /// Literal value: =
 /// </summary>
-public abstract class Literal31364015
+public enum Literal8636590
 {
   /// <summary>
   /// Literal value: =
   /// </summary>
-  [FactorioRconAttribute("=")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("=")]
+  =,
 
 }
 
 /// <summary>
 /// Literal value: >
 /// </summary>
-public abstract class Literal28379535
+public enum Literal49134518
 {
   /// <summary>
   /// Literal value: >
   /// </summary>
-  [FactorioRconAttribute(">")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue(">")]
+  >,
 
 }
 
 /// <summary>
 /// Literal value: <
 /// </summary>
-public abstract class Literal64109423
+public enum Literal15614904
 {
   /// <summary>
   /// Literal value: <
   /// </summary>
-  [FactorioRconAttribute("<")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("<")]
+  <,
 
 }
 
 /// <summary>
 /// Literal value: ≥
 /// </summary>
-public abstract class Literal35236192
+public enum Literal50179053
 {
   /// <summary>
   /// Literal value: ≥
   /// </summary>
-  [FactorioRconAttribute("≥")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("≥")]
+  ≥,
 
 }
 
 /// <summary>
 /// Literal value: >=
 /// </summary>
-public abstract class Literal21943666
+public enum Literal45906415
 {
   /// <summary>
   /// Literal value: >=
   /// </summary>
-  [FactorioRconAttribute(">=")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue(">=")]
+  >=,
 
 }
 
 /// <summary>
 /// Literal value: ≤
 /// </summary>
-public abstract class Literal53052340
+public enum Literal56217625
 {
   /// <summary>
   /// Literal value: ≤
   /// </summary>
-  [FactorioRconAttribute("≤")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("≤")]
+  ≤,
 
 }
 
 /// <summary>
 /// Literal value: <=
 /// </summary>
-public abstract class Literal5896758
+public enum Literal19698399
 {
   /// <summary>
   /// Literal value: <=
   /// </summary>
-  [FactorioRconAttribute("<=")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("<=")]
+  <=,
 
 }
 
 /// <summary>
 /// Literal value: ≠
 /// </summary>
-public abstract class Literal60375305
+public enum Literal34382671
 {
   /// <summary>
   /// Literal value: ≠
   /// </summary>
-  [FactorioRconAttribute("≠")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("≠")]
+  ≠,
 
 }
 
 /// <summary>
 /// Literal value: !=
 /// </summary>
-public abstract class Literal46228029
+public enum Literal57573383
 {
   /// <summary>
   /// Literal value: !=
   /// </summary>
-  [FactorioRconAttribute("!=")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("!=")]
+  !=,
 
 }
 

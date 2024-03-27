@@ -15,16 +15,16 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("GuiLocation")]
-public abstract partial class GuiLocation: OneOfBase<Table18124803, Table55857246>
+public abstract partial class GuiLocation: OneOfBase<Table17449605, Table36276505>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union9881388: OneOfBase<Table18124803, Table55857246>
+public abstract partial class Union14486303: OneOfBase<Table17449605, Table36276505>
 {
 }
 
-public abstract class Table18124803
+public abstract class Table17449605
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -34,7 +34,7 @@ public abstract class Table18124803
 
 }
 
-public abstract class Table55857246
+public abstract class Table36276505
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }

@@ -42,7 +42,7 @@ public abstract class MapViewSettings
 
 }
 
-public abstract class Table35896081
+public abstract class Table34354794
 {
   [FactorioRconAttribute("show-logistic-network")]
   public bool ShowLogisticNetwork { get; set; }

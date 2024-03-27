@@ -15,103 +15,103 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("SoundType")]
-public abstract partial class SoundType: OneOfBase<Literal47783528, Literal63930002, Literal352779, Literal7408374, Literal21358135, Literal45867655, Literal23696664>
+public abstract partial class SoundType: OneOfBase<Literal57263796, Literal50037355, Literal41797171, Literal4158431, Literal53485662, Literal7580331, Literal18503033>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union8666726: OneOfBase<Literal47783528, Literal63930002, Literal352779, Literal7408374, Literal21358135, Literal45867655, Literal23696664>
+public abstract partial class Union25115601: OneOfBase<Literal57263796, Literal50037355, Literal41797171, Literal4158431, Literal53485662, Literal7580331, Literal18503033>
 {
 }
 
 /// <summary>
 /// Literal value: game-effect
 /// </summary>
-public abstract class Literal47783528
+public enum Literal57263796
 {
   /// <summary>
   /// Literal value: game-effect
   /// </summary>
-  [FactorioRconAttribute("game-effect")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("game-effect")]
+  GameEffect,
 
 }
 
 /// <summary>
 /// Literal value: gui-effect
 /// </summary>
-public abstract class Literal63930002
+public enum Literal50037355
 {
   /// <summary>
   /// Literal value: gui-effect
   /// </summary>
-  [FactorioRconAttribute("gui-effect")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("gui-effect")]
+  GuiEffect,
 
 }
 
 /// <summary>
 /// Literal value: ambient
 /// </summary>
-public abstract class Literal352779
+public enum Literal41797171
 {
   /// <summary>
   /// Literal value: ambient
   /// </summary>
-  [FactorioRconAttribute("ambient")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("ambient")]
+  Ambient,
 
 }
 
 /// <summary>
 /// Literal value: environment
 /// </summary>
-public abstract class Literal7408374
+public enum Literal4158431
 {
   /// <summary>
   /// Literal value: environment
   /// </summary>
-  [FactorioRconAttribute("environment")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("environment")]
+  Environment,
 
 }
 
 /// <summary>
 /// Literal value: walking
 /// </summary>
-public abstract class Literal21358135
+public enum Literal53485662
 {
   /// <summary>
   /// Literal value: walking
   /// </summary>
-  [FactorioRconAttribute("walking")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("walking")]
+  Walking,
 
 }
 
 /// <summary>
 /// Literal value: alert
 /// </summary>
-public abstract class Literal45867655
+public enum Literal7580331
 {
   /// <summary>
   /// Literal value: alert
   /// </summary>
-  [FactorioRconAttribute("alert")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("alert")]
+  Alert,
 
 }
 
 /// <summary>
 /// Literal value: wind
 /// </summary>
-public abstract class Literal23696664
+public enum Literal18503033
 {
   /// <summary>
   /// Literal value: wind
   /// </summary>
-  [FactorioRconAttribute("wind")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("wind")]
+  Wind,
 
 }
 

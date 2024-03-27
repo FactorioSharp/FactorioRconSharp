@@ -123,7 +123,7 @@ public abstract class AutoplaceSpecificationPeak
 
 }
 
-public abstract class Table28035885
+public abstract class Table42390816
 {
   [FactorioRconAttribute("influence")]
   public double Influence { get; set; }

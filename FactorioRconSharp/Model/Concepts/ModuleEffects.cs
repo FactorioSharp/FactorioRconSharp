@@ -27,7 +27,7 @@ public abstract class ModuleEffects
 
 }
 
-public abstract class Table5458650
+public abstract class Table4286343
 {
   [FactorioRconAttribute("consumption")]
   public ModuleEffectValue Consumption { get; set; }

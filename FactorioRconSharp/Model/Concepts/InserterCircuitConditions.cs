@@ -21,7 +21,7 @@ public abstract class InserterCircuitConditions
 
 }
 
-public abstract class Table19612087
+public abstract class Table15681389
 {
   [FactorioRconAttribute("circuit")]
   public CircuitCondition Circuit { get; set; }

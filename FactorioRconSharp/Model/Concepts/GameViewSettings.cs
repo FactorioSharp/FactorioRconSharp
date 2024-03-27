@@ -108,7 +108,7 @@ public abstract class GameViewSettings
 
 }
 
-public abstract class Struct276258
+public abstract class Struct28035885
 {
   /// <summary>
   /// Show the controller GUI elements. This includes the toolbar, the selected tool slot, the armour slot, and the gun and ammunition slots.

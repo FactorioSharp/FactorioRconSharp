@@ -15,51 +15,51 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("PrototypeFilterMode")]
-public abstract partial class PrototypeFilterMode: OneOfBase<Literal30778096, Literal65047755, Literal57956701>
+public abstract partial class PrototypeFilterMode: OneOfBase<Literal65357506, Literal30330347, Literal32957531>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union20783124: OneOfBase<Literal30778096, Literal65047755, Literal57956701>
+public abstract partial class Union12699242: OneOfBase<Literal65357506, Literal30330347, Literal32957531>
 {
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public abstract class Literal30778096
+public enum Literal65357506
 {
   /// <summary>
   /// Literal value: none
   /// </summary>
-  [FactorioRconAttribute("none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none")]
+  None,
 
 }
 
 /// <summary>
 /// Literal value: whitelist
 /// </summary>
-public abstract class Literal65047755
+public enum Literal30330347
 {
   /// <summary>
   /// Literal value: whitelist
   /// </summary>
-  [FactorioRconAttribute("whitelist")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("whitelist")]
+  Whitelist,
 
 }
 
 /// <summary>
 /// Literal value: blacklist
 /// </summary>
-public abstract class Literal57956701
+public enum Literal32957531
 {
   /// <summary>
   /// Literal value: blacklist
   /// </summary>
-  [FactorioRconAttribute("blacklist")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("blacklist")]
+  Blacklist,
 
 }
 

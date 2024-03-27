@@ -39,7 +39,7 @@ public abstract class CraftingQueueItem
 
 }
 
-public abstract class Table16023056
+public abstract class Table42364838
 {
   /// <summary>
   /// The index of the item in the crafting queue.

@@ -33,7 +33,7 @@ public abstract class LogisticFilter
 
 }
 
-public abstract class Table34336325
+public abstract class Table54870941
 {
   /// <summary>
   /// The index this filter applies to.

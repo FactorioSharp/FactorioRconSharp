@@ -51,7 +51,7 @@ public abstract class PathfinderFlags
 
 }
 
-public abstract class Table10818951
+public abstract class Table517350
 {
   /// <summary>
   /// Allows pathing through friendly entities. Defaults to `false`.

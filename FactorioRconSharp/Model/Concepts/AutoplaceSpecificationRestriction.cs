@@ -27,7 +27,7 @@ public abstract class AutoplaceSpecificationRestriction
 
 }
 
-public abstract class Table51882681
+public abstract class Table21374126
 {
   /// <summary>
   /// Tile prototype name

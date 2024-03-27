@@ -27,7 +27,7 @@ public abstract class AdvancedMapGenSettings
 
 }
 
-public abstract class Table3157796
+public abstract class Table58100981
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }

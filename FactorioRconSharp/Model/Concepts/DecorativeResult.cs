@@ -24,7 +24,7 @@ public abstract class DecorativeResult
 
 }
 
-public abstract class Table43253384
+public abstract class Table54145554
 {
   [FactorioRconAttribute("position")]
   public TilePosition Position { get; set; }

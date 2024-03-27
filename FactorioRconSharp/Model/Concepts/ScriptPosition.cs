@@ -30,7 +30,7 @@ public abstract class ScriptPosition
 
 }
 
-public abstract class Table63786199
+public abstract class Table13164703
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }

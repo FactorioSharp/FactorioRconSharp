@@ -53,25 +53,25 @@ public abstract class LuaModSettingPrototype: LuaObject
   /// The default value of this setting.
   /// </summary>
   [FactorioRconAttribute("default_value")]
-  public Union47616313 DefaultValue { get; private set; }
+  public Union35463846 DefaultValue { get; private set; }
 
   /// <summary>
   /// The minimum value for this setting. `nil` if this setting type doesn't support a minimum.
   /// </summary>
   [FactorioRconAttribute("minimum_value")]
-  public Union16973140 MinimumValue { get; private set; }
+  public Union21818579 MinimumValue { get; private set; }
 
   /// <summary>
   /// The maximum value for this setting. `nil` if this setting type doesn't support a maximum.
   /// </summary>
   [FactorioRconAttribute("maximum_value")]
-  public Union24026409 MaximumValue { get; private set; }
+  public Union28759041 MaximumValue { get; private set; }
 
   /// <summary>
   /// The allowed values for this setting. `nil` if this setting doesn't use the a fixed set of values.
   /// </summary>
   [FactorioRconAttribute("allowed_values")]
-  public Union16561909 AllowedValues { get; private set; }
+  public Union28705829 AllowedValues { get; private set; }
 
   /// <summary>
   /// Whether this string setting allows blank values. `nil` if not a string setting.
@@ -112,22 +112,22 @@ public abstract class LuaModSettingPrototype: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union16561909: OneOfBase<List<string>, List<int>, List<double>>
+public abstract partial class Union28705829: OneOfBase<List<string>, List<int>, List<double>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union47616313: OneOfBase<bool, double, int, string>
+public abstract partial class Union35463846: OneOfBase<bool, double, int, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union24026409: OneOfBase<double, int>
+public abstract partial class Union28759041: OneOfBase<double, int>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union16973140: OneOfBase<double, int>
+public abstract partial class Union21818579: OneOfBase<double, int>
 {
 }
 

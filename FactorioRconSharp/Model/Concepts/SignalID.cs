@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class SignalID
 {
   [FactorioRconAttribute("type")]
-  public Union52364178 Type { get; set; }
+  public Union58977344 Type { get; set; }
 
   /// <summary>
   /// Name of the item, fluid or virtual signal.
@@ -24,10 +24,10 @@ public abstract class SignalID
 
 }
 
-public abstract class Table32249050
+public abstract class Table32116985
 {
   [FactorioRconAttribute("type")]
-  public Union52364178 Type { get; set; }
+  public Union58977344 Type { get; set; }
 
   /// <summary>
   /// Name of the item, fluid or virtual signal.
@@ -38,46 +38,46 @@ public abstract class Table32249050
 }
 
 [GenerateOneOf]
-public abstract partial class Union52364178: OneOfBase<Literal58426401, Literal14293208, Literal59086672>
+public abstract partial class Union58977344: OneOfBase<Literal32621385, Literal6496097, Literal54169101>
 {
 }
 
 /// <summary>
 /// Literal value: item
 /// </summary>
-public abstract class Literal58426401
+public enum Literal32621385
 {
   /// <summary>
   /// Literal value: item
   /// </summary>
-  [FactorioRconAttribute("item")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item")]
+  Item,
 
 }
 
 /// <summary>
 /// Literal value: fluid
 /// </summary>
-public abstract class Literal14293208
+public enum Literal6496097
 {
   /// <summary>
   /// Literal value: fluid
   /// </summary>
-  [FactorioRconAttribute("fluid")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fluid")]
+  Fluid,
 
 }
 
 /// <summary>
 /// Literal value: virtual
 /// </summary>
-public abstract class Literal59086672
+public enum Literal54169101
 {
   /// <summary>
   /// Literal value: virtual
   /// </summary>
-  [FactorioRconAttribute("virtual")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("virtual")]
+  Virtual,
 
 }
 

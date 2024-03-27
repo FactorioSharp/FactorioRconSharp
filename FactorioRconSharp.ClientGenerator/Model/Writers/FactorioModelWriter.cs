@@ -35,15 +35,20 @@ public static partial class FactorioModelWriter
             await writer.WriteLineAsync();
         }
 
-        foreach (FactorioModelClass cls in file.Classes)
+        foreach (FactorioModelTopLevelStatement statement in file.Statements)
         {
-            await WriteClass(writer, cls);
-            await writer.WriteLineAsync();
-        }
+            switch (statement)
+            {
+                case FactorioModelClass cls:
+                    await WriteClass(writer, cls);
+                    break;
+                case FactorioModelEnum enm:
+                    await WriteEnum(writer, enm);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(statement));
 
-        foreach (FactorioModelEnum enm in file.Enums)
-        {
-            await WriteEnum(writer, enm);
+            }
             await writer.WriteLineAsync();
         }
     }
@@ -60,7 +65,7 @@ public static partial class FactorioModelWriter
             await WriteLineAsync(writer, $"[{attribute}]", indentLevel);
         }
 
-        if (cls.LuaName != null)
+        if (!string.IsNullOrWhiteSpace(cls.LuaName))
         {
             if (cls.IsFactorioClass)
             {
@@ -114,7 +119,11 @@ public static partial class FactorioModelWriter
             await WriteDocumentation(writer, enm.Documentation, indentLevel);
         }
 
-        await WriteLineAsync(writer, $"[{DefinitionAttribute}(\"{enm.LuaName}\")]", indentLevel);
+        if (!string.IsNullOrWhiteSpace(enm.LuaName))
+        {
+            await WriteLineAsync(writer, $"[{DefinitionAttribute}(\"{enm.LuaName}\")]", indentLevel);
+        }
+
         await WriteLineAsync(writer, $"public enum {enm.Name}", indentLevel);
         await WriteLineAsync(writer, "{", indentLevel);
 
@@ -125,7 +134,11 @@ public static partial class FactorioModelWriter
                 await WriteDocumentation(writer, value.Documentation, indentLevel + 1);
             }
 
-            await WriteLineAsync(writer, $"[{DefinitionValueAttribute}(\"{value.LuaName}\")]", indentLevel + 1);
+            if (!string.IsNullOrWhiteSpace(value.LuaName))
+            {
+                await WriteLineAsync(writer, $"[{DefinitionValueAttribute}(\"{value.LuaName}\")]", indentLevel + 1);
+            }
+
             await WriteLineAsync(writer, $"{value.Name},", indentLevel + 1);
             await writer.WriteLineAsync();
         }

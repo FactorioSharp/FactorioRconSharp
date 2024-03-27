@@ -42,7 +42,7 @@ public abstract class EnemyEvolutionMapSettings
 
 }
 
-public abstract class Table23731046
+public abstract class Table48085274
 {
   /// <summary>
   /// Whether enemy evolution is enabled at all.

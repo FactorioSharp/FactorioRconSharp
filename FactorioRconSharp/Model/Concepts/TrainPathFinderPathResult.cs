@@ -57,7 +57,7 @@ public abstract class TrainPathFinderPathResult
 
 }
 
-public abstract class Table63233351
+public abstract class Table36696232
 {
   /// <summary>
   /// True if found path.

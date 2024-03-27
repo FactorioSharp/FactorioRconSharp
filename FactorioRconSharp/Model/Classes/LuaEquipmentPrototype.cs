@@ -44,7 +44,7 @@ public abstract class LuaEquipmentPrototype: LuaObject
   /// Shape of this equipment prototype.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table45330878 Shape { get; private set; }
+  public Table30887001 Shape { get; private set; }
 
   /// <summary>
   /// The result item when taking this equipment out of an equipment grid, if any.
@@ -74,7 +74,7 @@ public abstract class LuaEquipmentPrototype: LuaObject
   /// The logistic parameters for this roboport equipment.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table66629781 LogisticParameters { get; private set; }
+  public Table1968367 LogisticParameters { get; private set; }
 
   [FactorioRconAttribute("energy_consumption")]
   public double EnergyConsumption { get; private set; }
@@ -144,7 +144,7 @@ public abstract class LuaEquipmentPrototype: LuaObject
 
 }
 
-public abstract class Table66629781
+public abstract class Table1968367
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -193,7 +193,7 @@ public abstract class Table66629781
 
 }
 
-public abstract class Table45330878
+public abstract class Table30887001
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }

@@ -213,7 +213,7 @@ public abstract class PathFinderMapSettings
 
 }
 
-public abstract class Table63754376
+public abstract class Table27787024
 {
   /// <summary>
   /// The pathfinder performs a step of the backward search every `fwd2bwd_ratio`'th step. The minimum allowed value is `2`, which means symmetric search. The default value is `5`.

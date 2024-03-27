@@ -33,7 +33,7 @@ public abstract class Fluid
 
 }
 
-public abstract class Table43226536
+public abstract class Table41995027
 {
   /// <summary>
   /// Fluid prototype name of the fluid.

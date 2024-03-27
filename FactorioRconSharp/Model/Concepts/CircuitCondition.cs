@@ -39,7 +39,7 @@ public abstract class CircuitCondition
 
 }
 
-public abstract class Table61028817
+public abstract class Table13896890
 {
   /// <summary>
   /// Specifies how the inputs should be compared. If not specified, defaults to `"<"`.

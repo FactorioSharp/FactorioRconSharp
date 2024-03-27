@@ -27,7 +27,7 @@ public abstract class Tile
 
 }
 
-public abstract class Table35898994
+public abstract class Table7752592
 {
   /// <summary>
   /// The position of the tile.

@@ -21,7 +21,7 @@ public abstract class ItemStackLocation
 
 }
 
-public abstract class Table41682650
+public abstract class Table24802162
 {
   [FactorioRconAttribute("inventory")]
   public InventoryEnum Inventory { get; set; }

@@ -30,7 +30,7 @@ public abstract class CircuitConnectionDefinition
 
 }
 
-public abstract class Table65024491
+public abstract class Table21621962
 {
   /// <summary>
   /// Wire color, either <see cref="Defines.WireType.Green" />.

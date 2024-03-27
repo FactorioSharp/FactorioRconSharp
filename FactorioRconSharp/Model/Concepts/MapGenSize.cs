@@ -17,220 +17,220 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapGenSize")]
-public abstract partial class MapGenSize: OneOfBase<float, Literal59035966, Literal34321427, Literal55797291, Literal7508718, Literal16426255, Literal6599358, Literal57163663, Literal47133519, Literal24694787, Literal45060192, Literal31677167, Literal46222623, Literal65387658, Literal17193897, Literal28860985, Literal31662221>
+public abstract partial class MapGenSize: OneOfBase<float, Literal43902125, Literal65202077, Literal11812043, Literal7004948, Literal1816909, Literal52690363, Literal51625527, Literal20745280, Literal64742208, Literal65584704, Literal22908237, Literal60359114, Literal5583861, Literal27714268, Literal65516287, Literal20924132>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union57574093: OneOfBase<float, Literal59035966, Literal34321427, Literal55797291, Literal7508718, Literal16426255, Literal6599358, Literal57163663, Literal47133519, Literal24694787, Literal45060192, Literal31677167, Literal46222623, Literal65387658, Literal17193897, Literal28860985, Literal31662221>
+public abstract partial class Union66308631: OneOfBase<float, Literal43902125, Literal65202077, Literal11812043, Literal7004948, Literal1816909, Literal52690363, Literal51625527, Literal20745280, Literal64742208, Literal65584704, Literal22908237, Literal60359114, Literal5583861, Literal27714268, Literal65516287, Literal20924132>
 {
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public abstract class Literal59035966
+public enum Literal43902125
 {
   /// <summary>
   /// Literal value: none
   /// </summary>
-  [FactorioRconAttribute("none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none")]
+  None,
 
 }
 
 /// <summary>
 /// Literal value: very-low
 /// </summary>
-public abstract class Literal34321427
+public enum Literal65202077
 {
   /// <summary>
   /// Literal value: very-low
   /// </summary>
-  [FactorioRconAttribute("very-low")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("very-low")]
+  VeryLow,
 
 }
 
 /// <summary>
 /// Literal value: very-small
 /// </summary>
-public abstract class Literal55797291
+public enum Literal11812043
 {
   /// <summary>
   /// Literal value: very-small
   /// </summary>
-  [FactorioRconAttribute("very-small")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("very-small")]
+  VerySmall,
 
 }
 
 /// <summary>
 /// Literal value: very-poor
 /// </summary>
-public abstract class Literal7508718
+public enum Literal7004948
 {
   /// <summary>
   /// Literal value: very-poor
   /// </summary>
-  [FactorioRconAttribute("very-poor")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("very-poor")]
+  VeryPoor,
 
 }
 
 /// <summary>
 /// Literal value: low
 /// </summary>
-public abstract class Literal16426255
+public enum Literal1816909
 {
   /// <summary>
   /// Literal value: low
   /// </summary>
-  [FactorioRconAttribute("low")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("low")]
+  Low,
 
 }
 
 /// <summary>
 /// Literal value: small
 /// </summary>
-public abstract class Literal6599358
+public enum Literal52690363
 {
   /// <summary>
   /// Literal value: small
   /// </summary>
-  [FactorioRconAttribute("small")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("small")]
+  Small,
 
 }
 
 /// <summary>
 /// Literal value: poor
 /// </summary>
-public abstract class Literal57163663
+public enum Literal51625527
 {
   /// <summary>
   /// Literal value: poor
   /// </summary>
-  [FactorioRconAttribute("poor")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("poor")]
+  Poor,
 
 }
 
 /// <summary>
 /// Literal value: normal
 /// </summary>
-public abstract class Literal47133519
+public enum Literal20745280
 {
   /// <summary>
   /// Literal value: normal
   /// </summary>
-  [FactorioRconAttribute("normal")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("normal")]
+  Normal,
 
 }
 
 /// <summary>
 /// Literal value: medium
 /// </summary>
-public abstract class Literal24694787
+public enum Literal64742208
 {
   /// <summary>
   /// Literal value: medium
   /// </summary>
-  [FactorioRconAttribute("medium")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("medium")]
+  Medium,
 
 }
 
 /// <summary>
 /// Literal value: regular
 /// </summary>
-public abstract class Literal45060192
+public enum Literal65584704
 {
   /// <summary>
   /// Literal value: regular
   /// </summary>
-  [FactorioRconAttribute("regular")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("regular")]
+  Regular,
 
 }
 
 /// <summary>
 /// Literal value: high
 /// </summary>
-public abstract class Literal31677167
+public enum Literal22908237
 {
   /// <summary>
   /// Literal value: high
   /// </summary>
-  [FactorioRconAttribute("high")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("high")]
+  High,
 
 }
 
 /// <summary>
 /// Literal value: big
 /// </summary>
-public abstract class Literal46222623
+public enum Literal60359114
 {
   /// <summary>
   /// Literal value: big
   /// </summary>
-  [FactorioRconAttribute("big")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("big")]
+  Big,
 
 }
 
 /// <summary>
 /// Literal value: good
 /// </summary>
-public abstract class Literal65387658
+public enum Literal5583861
 {
   /// <summary>
   /// Literal value: good
   /// </summary>
-  [FactorioRconAttribute("good")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("good")]
+  Good,
 
 }
 
 /// <summary>
 /// Literal value: very-high
 /// </summary>
-public abstract class Literal17193897
+public enum Literal27714268
 {
   /// <summary>
   /// Literal value: very-high
   /// </summary>
-  [FactorioRconAttribute("very-high")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("very-high")]
+  VeryHigh,
 
 }
 
 /// <summary>
 /// Literal value: very-big
 /// </summary>
-public abstract class Literal28860985
+public enum Literal65516287
 {
   /// <summary>
   /// Literal value: very-big
   /// </summary>
-  [FactorioRconAttribute("very-big")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("very-big")]
+  VeryBig,
 
 }
 
 /// <summary>
 /// Literal value: very-good
 /// </summary>
-public abstract class Literal31662221
+public enum Literal20924132
 {
   /// <summary>
   /// Literal value: very-good
   /// </summary>
-  [FactorioRconAttribute("very-good")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("very-good")]
+  VeryGood,
 
 }
 

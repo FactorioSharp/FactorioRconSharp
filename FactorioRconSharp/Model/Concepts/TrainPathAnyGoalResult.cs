@@ -39,7 +39,7 @@ public abstract class TrainPathAnyGoalResult
 
 }
 
-public abstract class Table23474046
+public abstract class Table17464078
 {
   /// <summary>
   /// True if any goal was accessible.

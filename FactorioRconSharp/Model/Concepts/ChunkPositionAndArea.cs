@@ -27,7 +27,7 @@ public abstract class ChunkPositionAndArea
 
 }
 
-public abstract class Table28855723
+public abstract class Table29422698
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }

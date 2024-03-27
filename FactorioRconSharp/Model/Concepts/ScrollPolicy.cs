@@ -15,77 +15,77 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ScrollPolicy")]
-public abstract partial class ScrollPolicy: OneOfBase<Literal13799077, Literal40803818, Literal33346292, Literal25853278, Literal17047191>
+public abstract partial class ScrollPolicy: OneOfBase<Literal35893325, Literal15562337, Literal58373622, Literal17886530, Literal40072824>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union23951738: OneOfBase<Literal13799077, Literal40803818, Literal33346292, Literal25853278, Literal17047191>
+public abstract partial class Union14491846: OneOfBase<Literal35893325, Literal15562337, Literal58373622, Literal17886530, Literal40072824>
 {
 }
 
 /// <summary>
 /// Literal value: never
 /// </summary>
-public abstract class Literal13799077
+public enum Literal35893325
 {
   /// <summary>
   /// Literal value: never
   /// </summary>
-  [FactorioRconAttribute("never")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("never")]
+  Never,
 
 }
 
 /// <summary>
 /// Literal value: dont-show-but-allow-scrolling
 /// </summary>
-public abstract class Literal40803818
+public enum Literal15562337
 {
   /// <summary>
   /// Literal value: dont-show-but-allow-scrolling
   /// </summary>
-  [FactorioRconAttribute("dont-show-but-allow-scrolling")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("dont-show-but-allow-scrolling")]
+  DontShowButAllowScrolling,
 
 }
 
 /// <summary>
 /// Literal value: always
 /// </summary>
-public abstract class Literal33346292
+public enum Literal58373622
 {
   /// <summary>
   /// Literal value: always
   /// </summary>
-  [FactorioRconAttribute("always")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("always")]
+  Always,
 
 }
 
 /// <summary>
 /// Literal value: auto
 /// </summary>
-public abstract class Literal25853278
+public enum Literal17886530
 {
   /// <summary>
   /// Literal value: auto
   /// </summary>
-  [FactorioRconAttribute("auto")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("auto")]
+  Auto,
 
 }
 
 /// <summary>
 /// Literal value: auto-and-reserve-space
 /// </summary>
-public abstract class Literal17047191
+public enum Literal40072824
 {
   /// <summary>
   /// Literal value: auto-and-reserve-space
   /// </summary>
-  [FactorioRconAttribute("auto-and-reserve-space")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("auto-and-reserve-space")]
+  AutoAndReserveSpace,
 
 }
 

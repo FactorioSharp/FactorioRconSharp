@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class Ingredient
 {
   [FactorioRconAttribute("type")]
-  public Union21178267 Type { get; set; }
+  public Union40648905 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the required item or fluid.
@@ -32,14 +32,14 @@ public abstract class Ingredient
   /// How much of this ingredient is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union10189992 CatalystAmount { get; set; }
+  public Union48320655 CatalystAmount { get; set; }
 
 }
 
-public abstract class Table7672581
+public abstract class Table40283584
 {
   [FactorioRconAttribute("type")]
-  public Union21178267 Type { get; set; }
+  public Union40648905 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the required item or fluid.
@@ -57,43 +57,43 @@ public abstract class Table7672581
   /// How much of this ingredient is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union10189992 CatalystAmount { get; set; }
+  public Union48320655 CatalystAmount { get; set; }
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union10189992: OneOfBase<uint, double>
+public abstract partial class Union48320655: OneOfBase<uint, double>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union21178267: OneOfBase<Literal27074336, Literal46958254>
+public abstract partial class Union40648905: OneOfBase<Literal8100796, Literal35898994>
 {
 }
 
 /// <summary>
 /// Literal value: item
 /// </summary>
-public abstract class Literal27074336
+public enum Literal8100796
 {
   /// <summary>
   /// Literal value: item
   /// </summary>
-  [FactorioRconAttribute("item")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item")]
+  Item,
 
 }
 
 /// <summary>
 /// Literal value: fluid
 /// </summary>
-public abstract class Literal46958254
+public enum Literal35898994
 {
   /// <summary>
   /// Literal value: fluid
   /// </summary>
-  [FactorioRconAttribute("fluid")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fluid")]
+  Fluid,
 
 }
 

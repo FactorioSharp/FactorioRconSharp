@@ -42,7 +42,7 @@ public abstract class TrainScheduleRecord
 
 }
 
-public abstract class Table45861094
+public abstract class Table40727441
 {
   /// <summary>
   /// Name of the station.

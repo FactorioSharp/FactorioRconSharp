@@ -17,7 +17,7 @@ public abstract class AttackParameters
   /// The type of AttackParameter.
   /// </summary>
   [FactorioRconAttribute("type")]
-  public Union3610582 Type { get; set; }
+  public Union26445479 Type { get; set; }
 
   /// <summary>
   /// Maximum range of attack.
@@ -35,7 +35,7 @@ public abstract class AttackParameters
   /// Defines how the range is determined.
   /// </summary>
   [FactorioRconAttribute("range_mode")]
-  public Union37598025 RangeMode { get; set; }
+  public Union28721410 RangeMode { get; set; }
 
   /// <summary>
   /// When searching for the nearest enemy to attack, `fire_penalty` is added to the enemy's distance if they are on fire.
@@ -108,13 +108,13 @@ public abstract class AttackParameters
 
 }
 
-public abstract class Table30207786
+public abstract class Table17110604
 {
   /// <summary>
   /// The type of AttackParameter.
   /// </summary>
   [FactorioRconAttribute("type")]
-  public Union3610582 Type { get; set; }
+  public Union26445479 Type { get; set; }
 
   /// <summary>
   /// Maximum range of attack.
@@ -132,7 +132,7 @@ public abstract class Table30207786
   /// Defines how the range is determined.
   /// </summary>
   [FactorioRconAttribute("range_mode")]
-  public Union37598025 RangeMode { get; set; }
+  public Union28721410 RangeMode { get; set; }
 
   /// <summary>
   /// When searching for the nearest enemy to attack, `fire_penalty` is added to the enemy's distance if they are on fire.
@@ -206,77 +206,77 @@ public abstract class Table30207786
 }
 
 [GenerateOneOf]
-public abstract partial class Union37598025: OneOfBase<Literal16600924, Literal11664751>
+public abstract partial class Union28721410: OneOfBase<Literal27614525, Literal62623739>
 {
 }
 
 /// <summary>
 /// Literal value: center-to-center
 /// </summary>
-public abstract class Literal16600924
+public enum Literal27614525
 {
   /// <summary>
   /// Literal value: center-to-center
   /// </summary>
-  [FactorioRconAttribute("center-to-center")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("center-to-center")]
+  CenterToCenter,
 
 }
 
 /// <summary>
 /// Literal value: bounding-box-to-bounding-box
 /// </summary>
-public abstract class Literal11664751
+public enum Literal62623739
 {
   /// <summary>
   /// Literal value: bounding-box-to-bounding-box
   /// </summary>
-  [FactorioRconAttribute("bounding-box-to-bounding-box")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("bounding-box-to-bounding-box")]
+  BoundingBoxToBoundingBox,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union3610582: OneOfBase<Literal2733477, Literal12161986, Literal17153280>
+public abstract partial class Union26445479: OneOfBase<Literal4149120, Literal53215622, Literal66858053>
 {
 }
 
 /// <summary>
 /// Literal value: projectile
 /// </summary>
-public abstract class Literal2733477
+public enum Literal4149120
 {
   /// <summary>
   /// Literal value: projectile
   /// </summary>
-  [FactorioRconAttribute("projectile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("projectile")]
+  Projectile,
 
 }
 
 /// <summary>
 /// Literal value: stream
 /// </summary>
-public abstract class Literal12161986
+public enum Literal53215622
 {
   /// <summary>
   /// Literal value: stream
   /// </summary>
-  [FactorioRconAttribute("stream")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("stream")]
+  Stream,
 
 }
 
 /// <summary>
 /// Literal value: beam
 /// </summary>
-public abstract class Literal17153280
+public enum Literal66858053
 {
   /// <summary>
   /// Literal value: beam
   /// </summary>
-  [FactorioRconAttribute("beam")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("beam")]
+  Beam,
 
 }
 

@@ -24,7 +24,7 @@ public abstract class CircuitConditionDefinition
 
 }
 
-public abstract class Table43473739
+public abstract class Table23399238
 {
   [FactorioRconAttribute("condition")]
   public CircuitCondition Condition { get; set; }

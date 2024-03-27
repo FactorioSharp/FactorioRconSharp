@@ -17,10 +17,10 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class PipeConnection
 {
   [FactorioRconAttribute("flow_direction")]
-  public Union778356 FlowDirection { get; set; }
+  public Union1188066 FlowDirection { get; set; }
 
   [FactorioRconAttribute("connection_type")]
-  public Union16345490 ConnectionType { get; set; }
+  public Union34453934 ConnectionType { get; set; }
 
   /// <summary>
   /// The absolute position of this connection within the entity.
@@ -54,13 +54,13 @@ public abstract class PipeConnection
 
 }
 
-public abstract class Table6428384
+public abstract class Table32438350
 {
   [FactorioRconAttribute("flow_direction")]
-  public Union778356 FlowDirection { get; set; }
+  public Union1188066 FlowDirection { get; set; }
 
   [FactorioRconAttribute("connection_type")]
-  public Union16345490 ConnectionType { get; set; }
+  public Union34453934 ConnectionType { get; set; }
 
   /// <summary>
   /// The absolute position of this connection within the entity.
@@ -95,77 +95,77 @@ public abstract class Table6428384
 }
 
 [GenerateOneOf]
-public abstract partial class Union16345490: OneOfBase<Literal7710979, Literal27712842>
+public abstract partial class Union34453934: OneOfBase<Literal59640001, Literal51838452>
 {
 }
 
 /// <summary>
 /// Literal value: normal
 /// </summary>
-public abstract class Literal7710979
+public enum Literal59640001
 {
   /// <summary>
   /// Literal value: normal
   /// </summary>
-  [FactorioRconAttribute("normal")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("normal")]
+  Normal,
 
 }
 
 /// <summary>
 /// Literal value: underground
 /// </summary>
-public abstract class Literal27712842
+public enum Literal51838452
 {
   /// <summary>
   /// Literal value: underground
   /// </summary>
-  [FactorioRconAttribute("underground")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("underground")]
+  Underground,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union778356: OneOfBase<Literal45098773, Literal7550150, Literal24335424>
+public abstract partial class Union1188066: OneOfBase<Literal26920103, Literal42485501, Literal24119994>
 {
 }
 
 /// <summary>
 /// Literal value: input
 /// </summary>
-public abstract class Literal45098773
+public enum Literal26920103
 {
   /// <summary>
   /// Literal value: input
   /// </summary>
-  [FactorioRconAttribute("input")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("input")]
+  Input,
 
 }
 
 /// <summary>
 /// Literal value: output
 /// </summary>
-public abstract class Literal7550150
+public enum Literal42485501
 {
   /// <summary>
   /// Literal value: output
   /// </summary>
-  [FactorioRconAttribute("output")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("output")]
+  Output,
 
 }
 
 /// <summary>
 /// Literal value: input-output
 /// </summary>
-public abstract class Literal24335424
+public enum Literal24119994
 {
   /// <summary>
   /// Literal value: input-output
   /// </summary>
-  [FactorioRconAttribute("input-output")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("input-output")]
+  InputOutput,
 
 }
 

@@ -15,272 +15,272 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("TriggerEffectItemType")]
-public abstract partial class TriggerEffectItemType: OneOfBase<Literal30330347, Literal32957531, Literal21019525, Literal38756850, Literal8587493, Literal46119628, Literal28988105, Literal4770431, Literal33070207, Literal23385714, Literal21337957, Literal45443930, Literal14798442, Literal42331837, Literal16553355, Literal12076145, Literal52272470, Literal23980061, Literal33819242, Literal39115446>
+public abstract partial class TriggerEffectItemType: OneOfBase<Literal47971044, Literal48983005, Literal11221016, Literal56974020, Literal41633851, Literal66530998, Literal50350770, Literal50886210, Literal66413973, Literal46957030, Literal19576616, Literal30850960, Literal22262626, Literal41636382, Literal66604392, Literal52479197, Literal45501714, Literal44481292, Literal14889060, Literal29129561>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union65357506: OneOfBase<Literal30330347, Literal32957531, Literal21019525, Literal38756850, Literal8587493, Literal46119628, Literal28988105, Literal4770431, Literal33070207, Literal23385714, Literal21337957, Literal45443930, Literal14798442, Literal42331837, Literal16553355, Literal12076145, Literal52272470, Literal23980061, Literal33819242, Literal39115446>
+public abstract partial class Union34051556: OneOfBase<Literal47971044, Literal48983005, Literal11221016, Literal56974020, Literal41633851, Literal66530998, Literal50350770, Literal50886210, Literal66413973, Literal46957030, Literal19576616, Literal30850960, Literal22262626, Literal41636382, Literal66604392, Literal52479197, Literal45501714, Literal44481292, Literal14889060, Literal29129561>
 {
 }
 
 /// <summary>
 /// Literal value: damage
 /// </summary>
-public abstract class Literal30330347
+public enum Literal47971044
 {
   /// <summary>
   /// Literal value: damage
   /// </summary>
-  [FactorioRconAttribute("damage")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("damage")]
+  Damage,
 
 }
 
 /// <summary>
 /// Literal value: create-entity
 /// </summary>
-public abstract class Literal32957531
+public enum Literal48983005
 {
   /// <summary>
   /// Literal value: create-entity
   /// </summary>
-  [FactorioRconAttribute("create-entity")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-entity")]
+  CreateEntity,
 
 }
 
 /// <summary>
 /// Literal value: create-explosion
 /// </summary>
-public abstract class Literal21019525
+public enum Literal11221016
 {
   /// <summary>
   /// Literal value: create-explosion
   /// </summary>
-  [FactorioRconAttribute("create-explosion")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-explosion")]
+  CreateExplosion,
 
 }
 
 /// <summary>
 /// Literal value: create-fire
 /// </summary>
-public abstract class Literal38756850
+public enum Literal56974020
 {
   /// <summary>
   /// Literal value: create-fire
   /// </summary>
-  [FactorioRconAttribute("create-fire")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-fire")]
+  CreateFire,
 
 }
 
 /// <summary>
 /// Literal value: create-smoke
 /// </summary>
-public abstract class Literal8587493
+public enum Literal41633851
 {
   /// <summary>
   /// Literal value: create-smoke
   /// </summary>
-  [FactorioRconAttribute("create-smoke")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-smoke")]
+  CreateSmoke,
 
 }
 
 /// <summary>
 /// Literal value: create-trivial-smoke
 /// </summary>
-public abstract class Literal46119628
+public enum Literal66530998
 {
   /// <summary>
   /// Literal value: create-trivial-smoke
   /// </summary>
-  [FactorioRconAttribute("create-trivial-smoke")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-trivial-smoke")]
+  CreateTrivialSmoke,
 
 }
 
 /// <summary>
 /// Literal value: create-particle
 /// </summary>
-public abstract class Literal28988105
+public enum Literal50350770
 {
   /// <summary>
   /// Literal value: create-particle
   /// </summary>
-  [FactorioRconAttribute("create-particle")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-particle")]
+  CreateParticle,
 
 }
 
 /// <summary>
 /// Literal value: create-sticker
 /// </summary>
-public abstract class Literal4770431
+public enum Literal50886210
 {
   /// <summary>
   /// Literal value: create-sticker
   /// </summary>
-  [FactorioRconAttribute("create-sticker")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-sticker")]
+  CreateSticker,
 
 }
 
 /// <summary>
 /// Literal value: create-decorative
 /// </summary>
-public abstract class Literal33070207
+public enum Literal66413973
 {
   /// <summary>
   /// Literal value: create-decorative
   /// </summary>
-  [FactorioRconAttribute("create-decorative")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("create-decorative")]
+  CreateDecorative,
 
 }
 
 /// <summary>
 /// Literal value: nested-result
 /// </summary>
-public abstract class Literal23385714
+public enum Literal46957030
 {
   /// <summary>
   /// Literal value: nested-result
   /// </summary>
-  [FactorioRconAttribute("nested-result")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("nested-result")]
+  NestedResult,
 
 }
 
 /// <summary>
 /// Literal value: play-sound
 /// </summary>
-public abstract class Literal21337957
+public enum Literal19576616
 {
   /// <summary>
   /// Literal value: play-sound
   /// </summary>
-  [FactorioRconAttribute("play-sound")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("play-sound")]
+  PlaySound,
 
 }
 
 /// <summary>
 /// Literal value: push-back
 /// </summary>
-public abstract class Literal45443930
+public enum Literal30850960
 {
   /// <summary>
   /// Literal value: push-back
   /// </summary>
-  [FactorioRconAttribute("push-back")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("push-back")]
+  PushBack,
 
 }
 
 /// <summary>
 /// Literal value: destroy-cliffs
 /// </summary>
-public abstract class Literal14798442
+public enum Literal22262626
 {
   /// <summary>
   /// Literal value: destroy-cliffs
   /// </summary>
-  [FactorioRconAttribute("destroy-cliffs")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("destroy-cliffs")]
+  DestroyCliffs,
 
 }
 
 /// <summary>
 /// Literal value: show-explosion-on-chart
 /// </summary>
-public abstract class Literal42331837
+public enum Literal41636382
 {
   /// <summary>
   /// Literal value: show-explosion-on-chart
   /// </summary>
-  [FactorioRconAttribute("show-explosion-on-chart")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("show-explosion-on-chart")]
+  ShowExplosionOnChart,
 
 }
 
 /// <summary>
 /// Literal value: insert-item
 /// </summary>
-public abstract class Literal16553355
+public enum Literal66604392
 {
   /// <summary>
   /// Literal value: insert-item
   /// </summary>
-  [FactorioRconAttribute("insert-item")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("insert-item")]
+  InsertItem,
 
 }
 
 /// <summary>
 /// Literal value: script
 /// </summary>
-public abstract class Literal12076145
+public enum Literal52479197
 {
   /// <summary>
   /// Literal value: script
   /// </summary>
-  [FactorioRconAttribute("script")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("script")]
+  Script,
 
 }
 
 /// <summary>
 /// Literal value: set-tile
 /// </summary>
-public abstract class Literal52272470
+public enum Literal45501714
 {
   /// <summary>
   /// Literal value: set-tile
   /// </summary>
-  [FactorioRconAttribute("set-tile")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("set-tile")]
+  SetTile,
 
 }
 
 /// <summary>
 /// Literal value: invoke-tile-trigger
 /// </summary>
-public abstract class Literal23980061
+public enum Literal44481292
 {
   /// <summary>
   /// Literal value: invoke-tile-trigger
   /// </summary>
-  [FactorioRconAttribute("invoke-tile-trigger")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("invoke-tile-trigger")]
+  InvokeTileTrigger,
 
 }
 
 /// <summary>
 /// Literal value: destroy-decoratives
 /// </summary>
-public abstract class Literal33819242
+public enum Literal14889060
 {
   /// <summary>
   /// Literal value: destroy-decoratives
   /// </summary>
-  [FactorioRconAttribute("destroy-decoratives")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("destroy-decoratives")]
+  DestroyDecoratives,
 
 }
 
 /// <summary>
 /// Literal value: camera-effect
 /// </summary>
-public abstract class Literal39115446
+public enum Literal29129561
 {
   /// <summary>
   /// Literal value: camera-effect
   /// </summary>
-  [FactorioRconAttribute("camera-effect")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("camera-effect")]
+  CameraEffect,
 
 }
 

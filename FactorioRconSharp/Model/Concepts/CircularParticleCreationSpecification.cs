@@ -66,7 +66,7 @@ public abstract class CircularParticleCreationSpecification
 
 }
 
-public abstract class Table64612267
+public abstract class Table51408035
 {
   /// <summary>
   /// Name of the <see cref="LuaEntityPrototype" />.

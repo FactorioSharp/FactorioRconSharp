@@ -26,7 +26,7 @@ public abstract class FluidPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union4014260 Mode { get; set; }
+  public Union51998856 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -36,7 +36,7 @@ public abstract class FluidPrototypeFilter
 
 }
 
-public abstract class Table36726479
+public abstract class Table50411038
 {
   /// <summary>
   /// The condition to filter on. One of `"hidden"`, `"name"`, `"subgroup"`, `"default-temperature"`, `"max-temperature"`, `"heat-capacity"`, `"fuel-value"`, `"emissions-multiplier"`, `"gas-temperature"`.
@@ -48,7 +48,7 @@ public abstract class Table36726479
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union4014260 Mode { get; set; }
+  public Union51998856 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -59,38 +59,38 @@ public abstract class Table36726479
 }
 
 [GenerateOneOf]
-public abstract partial class Union4014260: OneOfBase<Literal65361721, Literal9453167>
+public abstract partial class Union51998856: OneOfBase<Literal18234153, Literal47372899>
 {
 }
 
 /// <summary>
 /// Literal value: or
 /// </summary>
-public abstract class Literal65361721
+public enum Literal18234153
 {
   /// <summary>
   /// Literal value: or
   /// </summary>
-  [FactorioRconAttribute("or")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("or")]
+  Or,
 
 }
 
 /// <summary>
 /// Literal value: and
 /// </summary>
-public abstract class Literal9453167
+public enum Literal47372899
 {
   /// <summary>
   /// Literal value: and
   /// </summary>
-  [FactorioRconAttribute("and")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("and")]
+  And,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union43519078: OneOfBase<string, List<string>>
+public abstract partial class Union55306802: OneOfBase<string, List<string>>
 {
 }
 

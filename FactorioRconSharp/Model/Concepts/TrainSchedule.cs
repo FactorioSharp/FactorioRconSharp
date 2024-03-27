@@ -24,7 +24,7 @@ public abstract class TrainSchedule
 
 }
 
-public abstract class Table15816579
+public abstract class Table59256863
 {
   /// <summary>
   /// Index of the currently active record

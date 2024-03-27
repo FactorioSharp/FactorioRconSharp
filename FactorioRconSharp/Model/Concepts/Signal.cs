@@ -30,7 +30,7 @@ public abstract class Signal
 
 }
 
-public abstract class Table46215422
+public abstract class Table33504864
 {
   /// <summary>
   /// ID of the signal.

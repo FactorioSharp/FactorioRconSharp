@@ -15,142 +15,142 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("WaitConditionType")]
-public abstract partial class WaitConditionType: OneOfBase<Literal27077418, Literal31754879, Literal62872692, Literal45258134, Literal10896719, Literal27504513, Literal40723880, Literal49895113, Literal41164413, Literal59146305>
+public abstract partial class WaitConditionType: OneOfBase<Literal58298707, Literal12940920, Literal39742366, Literal11677949, Literal3116217, Literal23261451, Literal3493458, Literal34201432, Literal52317446, Literal40810954>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union55615624: OneOfBase<Literal27077418, Literal31754879, Literal62872692, Literal45258134, Literal10896719, Literal27504513, Literal40723880, Literal49895113, Literal41164413, Literal59146305>
+public abstract partial class Union36721781: OneOfBase<Literal58298707, Literal12940920, Literal39742366, Literal11677949, Literal3116217, Literal23261451, Literal3493458, Literal34201432, Literal52317446, Literal40810954>
 {
 }
 
 /// <summary>
 /// Literal value: time
 /// </summary>
-public abstract class Literal27077418
+public enum Literal58298707
 {
   /// <summary>
   /// Literal value: time
   /// </summary>
-  [FactorioRconAttribute("time")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("time")]
+  Time,
 
 }
 
 /// <summary>
 /// Literal value: full
 /// </summary>
-public abstract class Literal31754879
+public enum Literal12940920
 {
   /// <summary>
   /// Literal value: full
   /// </summary>
-  [FactorioRconAttribute("full")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("full")]
+  Full,
 
 }
 
 /// <summary>
 /// Literal value: empty
 /// </summary>
-public abstract class Literal62872692
+public enum Literal39742366
 {
   /// <summary>
   /// Literal value: empty
   /// </summary>
-  [FactorioRconAttribute("empty")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("empty")]
+  Empty,
 
 }
 
 /// <summary>
 /// Literal value: item_count
 /// </summary>
-public abstract class Literal45258134
+public enum Literal11677949
 {
   /// <summary>
   /// Literal value: item_count
   /// </summary>
-  [FactorioRconAttribute("item_count")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("item_count")]
+  ItemCount,
 
 }
 
 /// <summary>
 /// Literal value: circuit
 /// </summary>
-public abstract class Literal10896719
+public enum Literal3116217
 {
   /// <summary>
   /// Literal value: circuit
   /// </summary>
-  [FactorioRconAttribute("circuit")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("circuit")]
+  Circuit,
 
 }
 
 /// <summary>
 /// Literal value: inactivity
 /// </summary>
-public abstract class Literal27504513
+public enum Literal23261451
 {
   /// <summary>
   /// Literal value: inactivity
   /// </summary>
-  [FactorioRconAttribute("inactivity")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("inactivity")]
+  Inactivity,
 
 }
 
 /// <summary>
 /// Literal value: robots_inactive
 /// </summary>
-public abstract class Literal40723880
+public enum Literal3493458
 {
   /// <summary>
   /// Literal value: robots_inactive
   /// </summary>
-  [FactorioRconAttribute("robots_inactive")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("robots_inactive")]
+  RobotsInactive,
 
 }
 
 /// <summary>
 /// Literal value: fluid_count
 /// </summary>
-public abstract class Literal49895113
+public enum Literal34201432
 {
   /// <summary>
   /// Literal value: fluid_count
   /// </summary>
-  [FactorioRconAttribute("fluid_count")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("fluid_count")]
+  FluidCount,
 
 }
 
 /// <summary>
 /// Literal value: passenger_present
 /// </summary>
-public abstract class Literal41164413
+public enum Literal52317446
 {
   /// <summary>
   /// Literal value: passenger_present
   /// </summary>
-  [FactorioRconAttribute("passenger_present")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("passenger_present")]
+  PassengerPresent,
 
 }
 
 /// <summary>
 /// Literal value: passenger_not_present
 /// </summary>
-public abstract class Literal59146305
+public enum Literal40810954
 {
   /// <summary>
   /// Literal value: passenger_not_present
   /// </summary>
-  [FactorioRconAttribute("passenger_not_present")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("passenger_not_present")]
+  PassengerNotPresent,
 
 }
 

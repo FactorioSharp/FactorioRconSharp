@@ -27,7 +27,7 @@ public abstract class BlueprintSignalIcon
 
 }
 
-public abstract class Table53153398
+public abstract class Table59035966
 {
   /// <summary>
   /// The icon to use. It can be any item icon as well as any virtual signal icon.

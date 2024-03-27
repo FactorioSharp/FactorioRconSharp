@@ -12,272 +12,272 @@ namespace FactorioRconSharp.Model.Concepts;
 
 [GenerateOneOf]
 [FactorioRconConcept("CliffOrientation")]
-public abstract partial class CliffOrientation: OneOfBase<Literal32175649, Literal49648336, Literal25049104, Literal54401616, Literal66702757, Literal52082941, Literal48020641, Literal31933260, Literal40679951, Literal28763203, Literal57605583, Literal51031801, Literal9128462, Literal2208787, Literal14616266, Literal3930951, Literal11227474, Literal12763355, Literal2482114, Literal24729382>
+public abstract partial class CliffOrientation: OneOfBase<Literal19531649, Literal7511460, Literal23522948, Literal24219861, Literal38855053, Literal10649759, Literal22318356, Literal66032303, Literal44501086, Literal62107587, Literal29190913, Literal9029417, Literal55400036, Literal22550079, Literal3789628, Literal12473332, Literal60613391, Literal64921669, Literal21177779, Literal42080192>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union57095957: OneOfBase<Literal32175649, Literal49648336, Literal25049104, Literal54401616, Literal66702757, Literal52082941, Literal48020641, Literal31933260, Literal40679951, Literal28763203, Literal57605583, Literal51031801, Literal9128462, Literal2208787, Literal14616266, Literal3930951, Literal11227474, Literal12763355, Literal2482114, Literal24729382>
+public abstract partial class Union55256301: OneOfBase<Literal19531649, Literal7511460, Literal23522948, Literal24219861, Literal38855053, Literal10649759, Literal22318356, Literal66032303, Literal44501086, Literal62107587, Literal29190913, Literal9029417, Literal55400036, Literal22550079, Literal3789628, Literal12473332, Literal60613391, Literal64921669, Literal21177779, Literal42080192>
 {
 }
 
 /// <summary>
 /// Literal value: west-to-east
 /// </summary>
-public abstract class Literal32175649
+public enum Literal19531649
 {
   /// <summary>
   /// Literal value: west-to-east
   /// </summary>
-  [FactorioRconAttribute("west-to-east")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("west-to-east")]
+  WestToEast,
 
 }
 
 /// <summary>
 /// Literal value: north-to-south
 /// </summary>
-public abstract class Literal49648336
+public enum Literal7511460
 {
   /// <summary>
   /// Literal value: north-to-south
   /// </summary>
-  [FactorioRconAttribute("north-to-south")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("north-to-south")]
+  NorthToSouth,
 
 }
 
 /// <summary>
 /// Literal value: east-to-west
 /// </summary>
-public abstract class Literal25049104
+public enum Literal23522948
 {
   /// <summary>
   /// Literal value: east-to-west
   /// </summary>
-  [FactorioRconAttribute("east-to-west")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("east-to-west")]
+  EastToWest,
 
 }
 
 /// <summary>
 /// Literal value: south-to-north
 /// </summary>
-public abstract class Literal54401616
+public enum Literal24219861
 {
   /// <summary>
   /// Literal value: south-to-north
   /// </summary>
-  [FactorioRconAttribute("south-to-north")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("south-to-north")]
+  SouthToNorth,
 
 }
 
 /// <summary>
 /// Literal value: west-to-north
 /// </summary>
-public abstract class Literal66702757
+public enum Literal38855053
 {
   /// <summary>
   /// Literal value: west-to-north
   /// </summary>
-  [FactorioRconAttribute("west-to-north")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("west-to-north")]
+  WestToNorth,
 
 }
 
 /// <summary>
 /// Literal value: north-to-east
 /// </summary>
-public abstract class Literal52082941
+public enum Literal10649759
 {
   /// <summary>
   /// Literal value: north-to-east
   /// </summary>
-  [FactorioRconAttribute("north-to-east")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("north-to-east")]
+  NorthToEast,
 
 }
 
 /// <summary>
 /// Literal value: east-to-south
 /// </summary>
-public abstract class Literal48020641
+public enum Literal22318356
 {
   /// <summary>
   /// Literal value: east-to-south
   /// </summary>
-  [FactorioRconAttribute("east-to-south")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("east-to-south")]
+  EastToSouth,
 
 }
 
 /// <summary>
 /// Literal value: south-to-west
 /// </summary>
-public abstract class Literal31933260
+public enum Literal66032303
 {
   /// <summary>
   /// Literal value: south-to-west
   /// </summary>
-  [FactorioRconAttribute("south-to-west")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("south-to-west")]
+  SouthToWest,
 
 }
 
 /// <summary>
 /// Literal value: west-to-south
 /// </summary>
-public abstract class Literal40679951
+public enum Literal44501086
 {
   /// <summary>
   /// Literal value: west-to-south
   /// </summary>
-  [FactorioRconAttribute("west-to-south")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("west-to-south")]
+  WestToSouth,
 
 }
 
 /// <summary>
 /// Literal value: north-to-west
 /// </summary>
-public abstract class Literal28763203
+public enum Literal62107587
 {
   /// <summary>
   /// Literal value: north-to-west
   /// </summary>
-  [FactorioRconAttribute("north-to-west")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("north-to-west")]
+  NorthToWest,
 
 }
 
 /// <summary>
 /// Literal value: east-to-north
 /// </summary>
-public abstract class Literal57605583
+public enum Literal29190913
 {
   /// <summary>
   /// Literal value: east-to-north
   /// </summary>
-  [FactorioRconAttribute("east-to-north")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("east-to-north")]
+  EastToNorth,
 
 }
 
 /// <summary>
 /// Literal value: south-to-east
 /// </summary>
-public abstract class Literal51031801
+public enum Literal9029417
 {
   /// <summary>
   /// Literal value: south-to-east
   /// </summary>
-  [FactorioRconAttribute("south-to-east")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("south-to-east")]
+  SouthToEast,
 
 }
 
 /// <summary>
 /// Literal value: west-to-none
 /// </summary>
-public abstract class Literal9128462
+public enum Literal55400036
 {
   /// <summary>
   /// Literal value: west-to-none
   /// </summary>
-  [FactorioRconAttribute("west-to-none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("west-to-none")]
+  WestToNone,
 
 }
 
 /// <summary>
 /// Literal value: none-to-east
 /// </summary>
-public abstract class Literal2208787
+public enum Literal22550079
 {
   /// <summary>
   /// Literal value: none-to-east
   /// </summary>
-  [FactorioRconAttribute("none-to-east")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none-to-east")]
+  NoneToEast,
 
 }
 
 /// <summary>
 /// Literal value: east-to-none
 /// </summary>
-public abstract class Literal14616266
+public enum Literal3789628
 {
   /// <summary>
   /// Literal value: east-to-none
   /// </summary>
-  [FactorioRconAttribute("east-to-none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("east-to-none")]
+  EastToNone,
 
 }
 
 /// <summary>
 /// Literal value: none-to-west
 /// </summary>
-public abstract class Literal3930951
+public enum Literal12473332
 {
   /// <summary>
   /// Literal value: none-to-west
   /// </summary>
-  [FactorioRconAttribute("none-to-west")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none-to-west")]
+  NoneToWest,
 
 }
 
 /// <summary>
 /// Literal value: north-to-none
 /// </summary>
-public abstract class Literal11227474
+public enum Literal60613391
 {
   /// <summary>
   /// Literal value: north-to-none
   /// </summary>
-  [FactorioRconAttribute("north-to-none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("north-to-none")]
+  NorthToNone,
 
 }
 
 /// <summary>
 /// Literal value: none-to-south
 /// </summary>
-public abstract class Literal12763355
+public enum Literal64921669
 {
   /// <summary>
   /// Literal value: none-to-south
   /// </summary>
-  [FactorioRconAttribute("none-to-south")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none-to-south")]
+  NoneToSouth,
 
 }
 
 /// <summary>
 /// Literal value: south-to-none
 /// </summary>
-public abstract class Literal2482114
+public enum Literal21177779
 {
   /// <summary>
   /// Literal value: south-to-none
   /// </summary>
-  [FactorioRconAttribute("south-to-none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("south-to-none")]
+  SouthToNone,
 
 }
 
 /// <summary>
 /// Literal value: none-to-north
 /// </summary>
-public abstract class Literal24729382
+public enum Literal42080192
 {
   /// <summary>
   /// Literal value: none-to-north
   /// </summary>
-  [FactorioRconAttribute("none-to-north")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none-to-north")]
+  NoneToNorth,
 
 }
 

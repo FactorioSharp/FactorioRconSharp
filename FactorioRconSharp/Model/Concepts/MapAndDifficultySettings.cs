@@ -45,7 +45,7 @@ public abstract class MapAndDifficultySettings
 
 }
 
-public abstract class Table66297147
+public abstract class Table60873714
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }

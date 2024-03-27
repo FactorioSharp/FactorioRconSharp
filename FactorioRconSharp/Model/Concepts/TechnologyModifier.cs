@@ -24,7 +24,7 @@ public abstract class TechnologyModifier
 
 }
 
-public abstract class Table20338027
+public abstract class Table36982738
 {
   /// <summary>
   /// Modifier type. Specifies which of the other fields will be available.

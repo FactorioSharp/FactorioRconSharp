@@ -27,7 +27,7 @@ public abstract class ProgrammableSpeakerAlertParameters
 
 }
 
-public abstract class Table33072896
+public abstract class Table45551519
 {
   [FactorioRconAttribute("show_alert")]
   public bool ShowAlert { get; set; }

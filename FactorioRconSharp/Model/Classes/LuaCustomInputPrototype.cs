@@ -68,7 +68,7 @@ public abstract class LuaCustomInputPrototype: LuaObject
   /// The consuming type.
   /// </summary>
   [FactorioRconAttribute("consuming")]
-  public Union42715336 Consuming { get; private set; }
+  public Union12611187 Consuming { get; private set; }
 
   /// <summary>
   /// The action that happens when this custom input is triggered.
@@ -127,33 +127,33 @@ public abstract class LuaCustomInputPrototype: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union42715336: OneOfBase<Literal36963566, Literal25474675>
+public abstract partial class Union12611187: OneOfBase<Literal30180123, Literal2808346>
 {
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public abstract class Literal36963566
+public enum Literal30180123
 {
   /// <summary>
   /// Literal value: none
   /// </summary>
-  [FactorioRconAttribute("none")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("none")]
+  None,
 
 }
 
 /// <summary>
 /// Literal value: game-only
 /// </summary>
-public abstract class Literal25474675
+public enum Literal2808346
 {
   /// <summary>
   /// Literal value: game-only
   /// </summary>
-  [FactorioRconAttribute("game-only")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("game-only")]
+  GameOnly,
 
 }
 

@@ -21,7 +21,7 @@ public abstract class RailEnd
 
 }
 
-public abstract class Table64556810
+public abstract class Table8587493
 {
   [FactorioRconAttribute("rail")]
   public LuaEntity Rail { get; set; }

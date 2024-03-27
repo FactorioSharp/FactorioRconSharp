@@ -48,7 +48,7 @@ public abstract class AmmoType
 
 }
 
-public abstract class Table55878869
+public abstract class Table7999996
 {
   [FactorioRconAttribute("action")]
   public List<TriggerItem> Action { get; set; }

@@ -20,7 +20,7 @@ public abstract partial class EntityPrototypeIdentification: OneOfBase<LuaEntity
 }
 
 [GenerateOneOf]
-public abstract partial class Union5141801: OneOfBase<LuaEntity, LuaEntityPrototype, string>
+public abstract partial class Union6827688: OneOfBase<LuaEntity, LuaEntityPrototype, string>
 {
 }
 

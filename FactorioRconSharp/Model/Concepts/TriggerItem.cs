@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerItem
 {
   [FactorioRconAttribute("type")]
-  public Union2933762 Type { get; set; }
+  public Union3225441 Type { get; set; }
 
   [FactorioRconAttribute("action_delivery")]
   public List<TriggerDelivery> ActionDelivery { get; set; }
@@ -51,10 +51,10 @@ public abstract class TriggerItem
 
 }
 
-public abstract class Table16118003
+public abstract class Table39450901
 {
   [FactorioRconAttribute("type")]
-  public Union2933762 Type { get; set; }
+  public Union3225441 Type { get; set; }
 
   [FactorioRconAttribute("action_delivery")]
   public List<TriggerDelivery> ActionDelivery { get; set; }
@@ -92,59 +92,59 @@ public abstract class Table16118003
 }
 
 [GenerateOneOf]
-public abstract partial class Union2933762: OneOfBase<Literal61609009, Literal18720791, Literal57592306, Literal1478876>
+public abstract partial class Union3225441: OneOfBase<Literal26428938, Literal28241715, Literal13703386, Literal61853901>
 {
 }
 
 /// <summary>
 /// Literal value: direct
 /// </summary>
-public abstract class Literal61609009
+public enum Literal26428938
 {
   /// <summary>
   /// Literal value: direct
   /// </summary>
-  [FactorioRconAttribute("direct")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("direct")]
+  Direct,
 
 }
 
 /// <summary>
 /// Literal value: area
 /// </summary>
-public abstract class Literal18720791
+public enum Literal28241715
 {
   /// <summary>
   /// Literal value: area
   /// </summary>
-  [FactorioRconAttribute("area")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("area")]
+  Area,
 
 }
 
 /// <summary>
 /// Literal value: line
 /// </summary>
-public abstract class Literal57592306
+public enum Literal13703386
 {
   /// <summary>
   /// Literal value: line
   /// </summary>
-  [FactorioRconAttribute("line")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("line")]
+  Line,
 
 }
 
 /// <summary>
 /// Literal value: cluster
 /// </summary>
-public abstract class Literal1478876
+public enum Literal61853901
 {
   /// <summary>
   /// Literal value: cluster
   /// </summary>
-  [FactorioRconAttribute("cluster")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("cluster")]
+  Cluster,
 
 }
 

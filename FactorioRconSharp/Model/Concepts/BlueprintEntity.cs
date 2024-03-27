@@ -72,7 +72,7 @@ public abstract class BlueprintEntity
 
 }
 
-public abstract class Table63248657
+public abstract class Table57574093
 {
   /// <summary>
   /// The entity's unique identifier in the blueprint.

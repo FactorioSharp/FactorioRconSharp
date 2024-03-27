@@ -12,103 +12,103 @@ namespace FactorioRconSharp.Model.Concepts;
 
 [GenerateOneOf]
 [FactorioRconConcept("ForceCondition")]
-public abstract partial class ForceCondition: OneOfBase<Literal13418196, Literal40147308, Literal49792773, Literal32548782, Literal367991, Literal12143729, Literal65198764>
+public abstract partial class ForceCondition: OneOfBase<Literal29782071, Literal21443715, Literal47664838, Literal61437506, Literal15119229, Literal49068367, Literal23802763>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union26843437: OneOfBase<Literal13418196, Literal40147308, Literal49792773, Literal32548782, Literal367991, Literal12143729, Literal65198764>
+public abstract partial class Union20592155: OneOfBase<Literal29782071, Literal21443715, Literal47664838, Literal61437506, Literal15119229, Literal49068367, Literal23802763>
 {
 }
 
 /// <summary>
 /// Literal value: all
 /// </summary>
-public abstract class Literal13418196
+public enum Literal29782071
 {
   /// <summary>
   /// Literal value: all
   /// </summary>
-  [FactorioRconAttribute("all")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("all")]
+  All,
 
 }
 
 /// <summary>
 /// Literal value: enemy
 /// </summary>
-public abstract class Literal40147308
+public enum Literal21443715
 {
   /// <summary>
   /// Literal value: enemy
   /// </summary>
-  [FactorioRconAttribute("enemy")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("enemy")]
+  Enemy,
 
 }
 
 /// <summary>
 /// Literal value: ally
 /// </summary>
-public abstract class Literal49792773
+public enum Literal47664838
 {
   /// <summary>
   /// Literal value: ally
   /// </summary>
-  [FactorioRconAttribute("ally")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("ally")]
+  Ally,
 
 }
 
 /// <summary>
 /// Literal value: friend
 /// </summary>
-public abstract class Literal32548782
+public enum Literal61437506
 {
   /// <summary>
   /// Literal value: friend
   /// </summary>
-  [FactorioRconAttribute("friend")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("friend")]
+  Friend,
 
 }
 
 /// <summary>
 /// Literal value: not-friend
 /// </summary>
-public abstract class Literal367991
+public enum Literal15119229
 {
   /// <summary>
   /// Literal value: not-friend
   /// </summary>
-  [FactorioRconAttribute("not-friend")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-friend")]
+  NotFriend,
 
 }
 
 /// <summary>
 /// Literal value: same
 /// </summary>
-public abstract class Literal12143729
+public enum Literal49068367
 {
   /// <summary>
   /// Literal value: same
   /// </summary>
-  [FactorioRconAttribute("same")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("same")]
+  Same,
 
 }
 
 /// <summary>
 /// Literal value: not-same
 /// </summary>
-public abstract class Literal65198764
+public enum Literal23802763
 {
   /// <summary>
   /// Literal value: not-same
   /// </summary>
-  [FactorioRconAttribute("not-same")]
-  public static object Value { get; private set; }
+  [FactorioRconDefinitionValue("not-same")]
+  NotSame,
 
 }
 
