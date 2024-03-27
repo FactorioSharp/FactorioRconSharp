@@ -40,7 +40,7 @@ public abstract class LuaEquipment: LuaObject
   /// Shape of this equipment.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table1632111866 Shape { get; private set; }
+  public Table335975160 Shape { get; private set; }
 
   /// <summary>
   /// Current shield value of the equipment.

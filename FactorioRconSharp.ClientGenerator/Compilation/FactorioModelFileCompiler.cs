@@ -91,7 +91,7 @@ public class FactorioModelFileCompiler
                 symbol = new FactorioModelClass
                 {
                     Name = name,
-                    BaseClass = BuildTypeName(concept.Type)
+                    BaseClass = $"Alias<{BuildTypeName(concept.Type)}>"
                 };
                 break;
             case FactorioRuntimeLiteralTypeSpecification literalType:

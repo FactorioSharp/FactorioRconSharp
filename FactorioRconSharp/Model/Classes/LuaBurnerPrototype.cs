@@ -47,7 +47,7 @@ public abstract class LuaBurnerPrototype: LuaObject
   /// The light flicker definition for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("light_flicker")]
-  public Table1104743620 LightFlicker { get; private set; }
+  public Table1955073838 LightFlicker { get; private set; }
 
   [FactorioRconAttribute("fuel_categories")]
   public Dictionary<string, bool> FuelCategories { get; private set; }

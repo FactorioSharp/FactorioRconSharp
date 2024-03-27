@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A set of trigger target masks.
 /// </summary>
 [FactorioRconConcept("TriggerTargetMask")]
-public abstract class TriggerTargetMask: Dictionary<string, bool>
+public abstract class TriggerTargetMask: Alias<Dictionary<string, bool>>
 {
 }
 
