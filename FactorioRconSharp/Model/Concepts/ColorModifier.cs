@@ -2,10 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
+using FactorioRconSharp.Model.Utils;
 using OneOf;
 
 namespace FactorioRconSharp.Model.Concepts;
@@ -15,39 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ColorModifier")]
-public abstract partial class ColorModifier: OneOfBase<Table37920736, Table43424763>
+public abstract partial class ColorModifier: OneOfBase<Table765329, Table54524775>
 {
-}
-
-public abstract class Table37920736
-{
-  [FactorioRconAttribute("r")]
-  public float R { get; set; }
-
-  [FactorioRconAttribute("g")]
-  public float G { get; set; }
-
-  [FactorioRconAttribute("b")]
-  public float B { get; set; }
-
-  [FactorioRconAttribute("a")]
-  public float A { get; set; }
-
-}
-
-public abstract class Table43424763
-{
-  [FactorioRconAttribute("r")]
-  public float R { get; set; }
-
-  [FactorioRconAttribute("g")]
-  public float G { get; set; }
-
-  [FactorioRconAttribute("b")]
-  public float B { get; set; }
-
-  [FactorioRconAttribute("a")]
-  public float A { get; set; }
-
 }
 

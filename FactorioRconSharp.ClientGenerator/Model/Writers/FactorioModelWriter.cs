@@ -19,10 +19,10 @@ public static partial class FactorioModelWriter
 
         await writer.WriteLineAsync();
 
-        await writer.WriteLineAsync("using FactorioRconSharp.Core.Abstractions;");
-        await writer.WriteLineAsync("using FactorioRconSharp.Model.Utils;");
+        List<string> usingStmts = ["FactorioRconSharp.Core.Abstractions", "FactorioRconSharp.Model.Utils"];
+        usingStmts.AddRange(file.Usings.Concat(file.Statements.SelectMany(stmt => stmt.RequireAdditionalUsing)));
 
-        foreach (string usingStmt in file.Usings)
+        foreach (string usingStmt in usingStmts.Distinct().Order())
         {
             await writer.WriteLineAsync($"using {usingStmt};");
         }

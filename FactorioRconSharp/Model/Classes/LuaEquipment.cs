@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -40,7 +40,7 @@ public abstract class LuaEquipment: LuaObject
   /// Shape of this equipment.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table44739154 Shape { get; private set; }
+  public Table60882831 Shape { get; private set; }
 
   /// <summary>
   /// Current shield value of the equipment.
@@ -110,16 +110,6 @@ public abstract class LuaEquipment: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-public abstract class Table44739154
-{
-  [FactorioRconAttribute("width")]
-  public uint Width { get; set; }
-
-  [FactorioRconAttribute("height")]
-  public uint Height { get; set; }
 
 }
 

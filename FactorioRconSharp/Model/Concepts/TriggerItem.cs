@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerItem
 {
   [FactorioRconAttribute("type")]
-  public Union14042645 Type { get; set; }
+  public Union22434147 Type { get; set; }
 
   [FactorioRconAttribute("action_delivery")]
   public List<TriggerDelivery> ActionDelivery { get; set; }
@@ -48,41 +48,6 @@ public abstract class TriggerItem
 
   [FactorioRconAttribute("probability")]
   public float Probability { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - direct
-///   - area
-///   - line
-///   - cluster
-/// </summary>
-public enum Union14042645
-{
-  /// <summary>
-  /// Literal value: direct
-  /// </summary>
-  [FactorioRconDefinitionValue("direct")]
-  Direct,
-
-  /// <summary>
-  /// Literal value: area
-  /// </summary>
-  [FactorioRconDefinitionValue("area")]
-  Area,
-
-  /// <summary>
-  /// Literal value: line
-  /// </summary>
-  [FactorioRconDefinitionValue("line")]
-  Line,
-
-  /// <summary>
-  /// Literal value: cluster
-  /// </summary>
-  [FactorioRconDefinitionValue("cluster")]
-  Cluster,
 
 }
 

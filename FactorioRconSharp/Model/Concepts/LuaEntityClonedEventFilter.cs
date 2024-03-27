@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -26,34 +26,13 @@ public abstract class LuaEntityClonedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union12076145 Mode { get; set; }
+  public Union33426085 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
   /// </summary>
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - or
-///   - and
-/// </summary>
-public enum Union12076145
-{
-  /// <summary>
-  /// Literal value: or
-  /// </summary>
-  [FactorioRconDefinitionValue("or")]
-  Or,
-
-  /// <summary>
-  /// Literal value: and
-  /// </summary>
-  [FactorioRconDefinitionValue("and")]
-  And,
 
 }
 

@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -74,7 +74,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// Whether this entity is minable and what can be obtained by mining it.
   /// </summary>
   [FactorioRconAttribute("mineable_properties")]
-  public Table5896758 MineableProperties { get; private set; }
+  public Table45657870 MineableProperties { get; private set; }
 
   /// <summary>
   /// Items that when placed will produce this entity, if any. Construction bots will choose the first item in the list to build this entity.
@@ -263,7 +263,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The spawning cooldown for this enemy spawner prototype.
   /// </summary>
   [FactorioRconAttribute("spawn_cooldown")]
-  public Table60375305 SpawnCooldown { get; private set; }
+  public Table2607901 SpawnCooldown { get; private set; }
 
   /// <summary>
   /// The mining radius of this mining drill prototype.
@@ -281,7 +281,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The logistic mode of this logistic container.
   /// </summary>
   [FactorioRconAttribute("logistic_mode")]
-  public Union46228029 LogisticMode { get; private set; }
+  public Union1839699 LogisticMode { get; private set; }
 
   /// <summary>
   /// The max underground distance for underground belts and underground pipes.
@@ -323,7 +323,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The smoke trigger run when this entity is built, if any.
   /// </summary>
   [FactorioRconAttribute("created_smoke")]
-  public Table49129953 CreatedSmoke { get; private set; }
+  public Table16191007 CreatedSmoke { get; private set; }
 
   /// <summary>
   /// The trigger to run when this entity is created, if any.
@@ -635,7 +635,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The boiler operation mode of this boiler prototype.
   /// </summary>
   [FactorioRconAttribute("boiler_mode")]
-  public Union10675717 BoilerMode { get; private set; }
+  public Union59779505 BoilerMode { get; private set; }
 
   /// <summary>
   /// The fluid this offshore pump produces.
@@ -1254,7 +1254,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The logistic parameters for this roboport.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table16754362 LogisticParameters { get; private set; }
+  public Table54162335 LogisticParameters { get; private set; }
 
   /// <summary>
   /// The height of this spider vehicle prototype.
@@ -1442,227 +1442,6 @@ public abstract class LuaEntityPrototype: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - heat-water-inside
-///   - output-to-separate-pipe
-/// </summary>
-public enum Union10675717
-{
-  /// <summary>
-  /// Literal value: heat-water-inside
-  /// </summary>
-  [FactorioRconDefinitionValue("heat-water-inside")]
-  HeatWaterInside,
-
-  /// <summary>
-  /// Literal value: output-to-separate-pipe
-  /// </summary>
-  [FactorioRconDefinitionValue("output-to-separate-pipe")]
-  OutputToSeparatePipe,
-
-}
-
-public abstract class Table49129953
-{
-  [FactorioRconAttribute("smoke_name")]
-  public string SmokeName { get; set; }
-
-  [FactorioRconAttribute("offsets")]
-  public List<Vector> Offsets { get; set; }
-
-  [FactorioRconAttribute("offset_deviation")]
-  public BoundingBox OffsetDeviation { get; set; }
-
-  [FactorioRconAttribute("initial_height")]
-  public float InitialHeight { get; set; }
-
-  [FactorioRconAttribute("max_radius")]
-  public float MaxRadius { get; set; }
-
-  [FactorioRconAttribute("speed")]
-  public Vector Speed { get; set; }
-
-  [FactorioRconAttribute("speed_multiplier")]
-  public float SpeedMultiplier { get; set; }
-
-  [FactorioRconAttribute("speed_multiplier_deviation")]
-  public float SpeedMultiplierDeviation { get; set; }
-
-  [FactorioRconAttribute("starting_frame")]
-  public float StartingFrame { get; set; }
-
-  [FactorioRconAttribute("starting_frame_deviation")]
-  public float StartingFrameDeviation { get; set; }
-
-  [FactorioRconAttribute("starting_frame_speed")]
-  public float StartingFrameSpeed { get; set; }
-
-  [FactorioRconAttribute("starting_frame_speed_deviation")]
-  public float StartingFrameSpeedDeviation { get; set; }
-
-  [FactorioRconAttribute("speed_from_center")]
-  public float SpeedFromCenter { get; set; }
-
-  [FactorioRconAttribute("speed_from_center_deviation")]
-  public float SpeedFromCenterDeviation { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - requester
-///   - active-provider
-///   - passive-provider
-///   - buffer
-///   - storage
-///   - none
-/// </summary>
-public enum Union46228029
-{
-  /// <summary>
-  /// Literal value: requester
-  /// </summary>
-  [FactorioRconDefinitionValue("requester")]
-  Requester,
-
-  /// <summary>
-  /// Literal value: active-provider
-  /// </summary>
-  [FactorioRconDefinitionValue("active-provider")]
-  ActiveProvider,
-
-  /// <summary>
-  /// Literal value: passive-provider
-  /// </summary>
-  [FactorioRconDefinitionValue("passive-provider")]
-  PassiveProvider,
-
-  /// <summary>
-  /// Literal value: buffer
-  /// </summary>
-  [FactorioRconDefinitionValue("buffer")]
-  Buffer,
-
-  /// <summary>
-  /// Literal value: storage
-  /// </summary>
-  [FactorioRconDefinitionValue("storage")]
-  Storage,
-
-  /// <summary>
-  /// Literal value: none
-  /// </summary>
-  [FactorioRconDefinitionValue("none")]
-  None,
-
-}
-
-public abstract class Table16754362
-{
-  [FactorioRconAttribute("spawn_and_station_height")]
-  public float SpawnAndStationHeight { get; set; }
-
-  [FactorioRconAttribute("spawn_and_station_shadow_height_offset")]
-  public float SpawnAndStationShadowHeightOffset { get; set; }
-
-  [FactorioRconAttribute("charge_approach_distance")]
-  public float ChargeApproachDistance { get; set; }
-
-  [FactorioRconAttribute("logistic_radius")]
-  public float LogisticRadius { get; set; }
-
-  [FactorioRconAttribute("construction_radius")]
-  public float ConstructionRadius { get; set; }
-
-  [FactorioRconAttribute("charging_station_count")]
-  public uint ChargingStationCount { get; set; }
-
-  [FactorioRconAttribute("charging_distance")]
-  public float ChargingDistance { get; set; }
-
-  [FactorioRconAttribute("charging_station_shift")]
-  public Vector ChargingStationShift { get; set; }
-
-  [FactorioRconAttribute("charging_energy")]
-  public double ChargingEnergy { get; set; }
-
-  [FactorioRconAttribute("charging_threshold_distance")]
-  public float ChargingThresholdDistance { get; set; }
-
-  [FactorioRconAttribute("robot_vertical_acceleration")]
-  public float RobotVerticalAcceleration { get; set; }
-
-  [FactorioRconAttribute("stationing_offset")]
-  public Vector StationingOffset { get; set; }
-
-  [FactorioRconAttribute("robot_limit")]
-  public uint RobotLimit { get; set; }
-
-  [FactorioRconAttribute("logistics_connection_distance")]
-  public float LogisticsConnectionDistance { get; set; }
-
-  [FactorioRconAttribute("robots_shrink_when_entering_and_exiting")]
-  public bool RobotsShrinkWhenEnteringAndExiting { get; set; }
-
-}
-
-public abstract class Table5896758
-{
-  /// <summary>
-  /// Is this entity mineable at all?
-  /// </summary>
-  [FactorioRconAttribute("minable")]
-  public bool Minable { get; set; }
-
-  /// <summary>
-  /// Energy required to mine an entity.
-  /// </summary>
-  [FactorioRconAttribute("mining_time")]
-  public double MiningTime { get; set; }
-
-  /// <summary>
-  /// Prototype name of the particle produced when mining this entity. Will only be present if this entity produces any particle during mining.
-  /// </summary>
-  [FactorioRconAttribute("mining_particle")]
-  public string MiningParticle { get; set; }
-
-  /// <summary>
-  /// Products obtained by mining this entity.
-  /// </summary>
-  [FactorioRconAttribute("products")]
-  public List<Product> Products { get; set; }
-
-  /// <summary>
-  /// The required fluid amount if any.
-  /// </summary>
-  [FactorioRconAttribute("fluid_amount")]
-  public double FluidAmount { get; set; }
-
-  /// <summary>
-  /// The prototype name of the required fluid if any.
-  /// </summary>
-  [FactorioRconAttribute("required_fluid")]
-  public string RequiredFluid { get; set; }
-
-  /// <summary>
-  /// The mining trigger if any.
-  /// </summary>
-  [FactorioRconAttribute("mining_trigger")]
-  public List<TriggerItem> MiningTrigger { get; set; }
-
-}
-
-public abstract class Table60375305
-{
-  [FactorioRconAttribute("min")]
-  public double Min { get; set; }
-
-  [FactorioRconAttribute("max")]
-  public double Max { get; set; }
 
 }
 

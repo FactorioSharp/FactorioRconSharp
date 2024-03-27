@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -37,7 +37,7 @@ public abstract class LuaRemote: LuaObject
   /// List of all registered interfaces. For each interface name, `remote.interfaces[name]` is a dictionary mapping the interface's registered functions to `true`.
   /// </summary>
   [FactorioRconAttribute("interfaces")]
-  public Dictionary<string, Dictionary<string, Literal35016340>> Interfaces { get; private set; }
+  public Dictionary<string, Dictionary<string, Literal33043209>> Interfaces { get; private set; }
 
   /// <summary>
   /// Add a remote interface.
@@ -61,19 +61,6 @@ public abstract class LuaRemote: LuaObject
   /// <param name="function">Lua name: function</param>
   [FactorioRconMethod("call")]
   public abstract Any? Call(string @interface, string function);
-
-}
-
-/// <summary>
-/// Literal value: True
-/// </summary>
-public enum Literal35016340
-{
-  /// <summary>
-  /// Literal value: True
-  /// </summary>
-  [FactorioRconDefinitionValue("True")]
-  True,
 
 }
 

@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -23,20 +23,7 @@ public abstract class DamageTypeFilters
   /// The damage types to filter for. The value in the dictionary is meaningless and exists just to allow for easy lookup.
   /// </summary>
   [FactorioRconAttribute("types")]
-  public Dictionary<string, Literal24642464> Types { get; set; }
-
-}
-
-/// <summary>
-/// Literal value: True
-/// </summary>
-public enum Literal24642464
-{
-  /// <summary>
-  /// Literal value: True
-  /// </summary>
-  [FactorioRconDefinitionValue("True")]
-  True,
+  public Dictionary<string, Literal60260236> Types { get; set; }
 
 }
 

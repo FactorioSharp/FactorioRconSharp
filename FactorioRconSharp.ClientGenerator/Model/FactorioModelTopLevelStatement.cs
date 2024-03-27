@@ -8,4 +8,5 @@ public abstract class FactorioModelTopLevelStatement
     public string[] Attributes { get; set; } = Array.Empty<string>();
     public bool IsFactorioClass { get; set; }
     public bool IsFactorioConcept { get; set; }
+    public string[] RequireAdditionalUsing { get; set; } = Array.Empty<string>();
 }

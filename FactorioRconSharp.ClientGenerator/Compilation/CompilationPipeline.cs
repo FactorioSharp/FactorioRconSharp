@@ -9,11 +9,81 @@ static class CompilationPipeline
     {
         FactorioModelFileCompiler compiler = new(specification);
 
-        List<FactorioModelFile> files = [];
+        IEnumerable<FactorioRuntimeTypeSpecification> anonymousTypes = specification.Concepts.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes)
+            .Concat(specification.Classes.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes));
 
-        files.AddRange(specification.Defines.Select(d => compiler.CompileDefinitionFile(d.Name)));
-        files.AddRange(specification.Classes.Select(c => compiler.CompileClassFile(c.Name)));
-        files.AddRange(specification.Concepts.Select(c => compiler.CompileConceptFile(c.Name)));
+        List<FactorioModelTopLevelStatement> compiledAnonymousTypes = anonymousTypes.Select(compiler.CompileType).ToList();
+
+        List<FactorioModelFile> files =
+        [
+            new FactorioModelFile
+            {
+                Name = "AnonymousTypes",
+                Namespace = "FactorioRconSharp.Model.Anonymous",
+                Usings =
+                [
+                    "FactorioRconSharp.Model.Builtins",
+                    "FactorioRconSharp.Model.Definitions",
+                    "FactorioRconSharp.Model.Classes",
+                    "FactorioRconSharp.Model.Concepts"
+                ],
+                Statements = compiledAnonymousTypes.ToArray()
+            }
+        ];
+
+        files.AddRange(
+            specification.Defines.Select(d => compiler.CompileDefinitionFile(d.Name))
+                .Select(
+                    enums =>
+                    {
+                        FactorioModelEnum[] enumsArray = enums as FactorioModelEnum[] ?? enums.ToArray();
+                        return new FactorioModelFile
+                        {
+                            Name = enumsArray.First().Name,
+                            Namespace = "FactorioRconSharp.Model.Definitions",
+                            Statements = enumsArray.ToArray<FactorioModelTopLevelStatement>()
+                        };
+                    }
+                )
+        );
+
+        files.AddRange(
+            specification.Classes.Select(c => compiler.CompileClassFile(c.Name))
+                .Select(
+                    cls => new FactorioModelFile
+                    {
+                        Name = cls.Name,
+                        Namespace = "FactorioRconSharp.Model.Classes",
+                        Usings =
+                        [
+                            "FactorioRconSharp.Model.Builtins",
+                            "FactorioRconSharp.Model.Anonymous",
+                            "FactorioRconSharp.Model.Concepts",
+                            "FactorioRconSharp.Model.Definitions"
+                        ],
+                        Statements = [cls]
+                    }
+                )
+        );
+
+        files.AddRange(
+            specification.Concepts.Select(c => compiler.CompileConceptFile(c.Name))
+                .Select(
+                    concepts => new FactorioModelFile
+                    {
+                        Name = concepts.Name,
+                        Namespace = "FactorioRconSharp.Model.Concepts",
+                        Usings =
+                        [
+                            "FactorioRconSharp.Model.Builtins",
+                            "FactorioRconSharp.Model.Anonymous",
+                            "FactorioRconSharp.Model.Classes",
+                            "FactorioRconSharp.Model.Definitions"
+                        ],
+                        Statements = [concepts]
+                    }
+                )
+        );
 
         return files;
     }

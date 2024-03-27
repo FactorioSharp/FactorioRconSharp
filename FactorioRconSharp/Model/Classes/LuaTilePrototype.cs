@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -80,7 +80,7 @@ public abstract class LuaTilePrototype: LuaObject
   public bool NeedsCorrection { get; private set; }
 
   [FactorioRconAttribute("mineable_properties")]
-  public Table47372899 MineableProperties { get; private set; }
+  public Table26166196 MineableProperties { get; private set; }
 
   /// <summary>
   /// The next direction of this tile, if any. Used when a tile has multiple directions (such as hazard concrete)
@@ -129,34 +129,6 @@ public abstract class LuaTilePrototype: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-public abstract class Table47372899
-{
-  /// <summary>
-  /// Is this tile mineable at all?
-  /// </summary>
-  [FactorioRconAttribute("minable")]
-  public bool Minable { get; set; }
-
-  /// <summary>
-  /// Energy required to mine a tile.
-  /// </summary>
-  [FactorioRconAttribute("mining_time")]
-  public double MiningTime { get; set; }
-
-  /// <summary>
-  /// Prototype name of the particle produced when mining this tile. Will only be present if this tile produces any particle during mining.
-  /// </summary>
-  [FactorioRconAttribute("mining_particle")]
-  public string MiningParticle { get; set; }
-
-  /// <summary>
-  /// Products obtained by mining this tile.
-  /// </summary>
-  [FactorioRconAttribute("products")]
-  public List<Product> Products { get; set; }
 
 }
 

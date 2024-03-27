@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -41,97 +41,13 @@ public abstract class ArithmeticCombinatorParameters
   /// When not specified, defaults to `"*"`.
   /// </summary>
   [FactorioRconAttribute("operation")]
-  public Union51882681 Operation { get; set; }
+  public Union33592719 Operation { get; set; }
 
   /// <summary>
   /// Specifies the signal to output.
   /// </summary>
   [FactorioRconAttribute("output_signal")]
   public SignalID OutputSignal { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - *
-///   - /
-///   - +
-///   - -
-///   - %
-///   - ^
-///   - <<
-///   - >>
-///   - AND
-///   - OR
-///   - XOR
-/// </summary>
-public enum Union51882681
-{
-  /// <summary>
-  /// Literal value: *
-  /// </summary>
-  [FactorioRconDefinitionValue("*")]
-  *,
-
-  /// <summary>
-  /// Literal value: /
-  /// </summary>
-  [FactorioRconDefinitionValue("/")]
-  /,
-
-  /// <summary>
-  /// Literal value: +
-  /// </summary>
-  [FactorioRconDefinitionValue("+")]
-  +,
-
-  /// <summary>
-  /// Literal value: -
-  /// </summary>
-  [FactorioRconDefinitionValue("-")]
-  ,
-
-  /// <summary>
-  /// Literal value: %
-  /// </summary>
-  [FactorioRconDefinitionValue("%")]
-  %,
-
-  /// <summary>
-  /// Literal value: ^
-  /// </summary>
-  [FactorioRconDefinitionValue("^")]
-  ^,
-
-  /// <summary>
-  /// Literal value: <<
-  /// </summary>
-  [FactorioRconDefinitionValue("<<")]
-  <<,
-
-  /// <summary>
-  /// Literal value: >>
-  /// </summary>
-  [FactorioRconDefinitionValue(">>")]
-  >>,
-
-  /// <summary>
-  /// Literal value: AND
-  /// </summary>
-  [FactorioRconDefinitionValue("AND")]
-  AND,
-
-  /// <summary>
-  /// Literal value: OR
-  /// </summary>
-  [FactorioRconDefinitionValue("OR")]
-  OR,
-
-  /// <summary>
-  /// Literal value: XOR
-  /// </summary>
-  [FactorioRconDefinitionValue("XOR")]
-  XOR,
 
 }
 

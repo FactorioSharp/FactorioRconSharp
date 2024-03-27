@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -593,7 +593,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union2649323? printSettings = null);
+  public abstract void Print(LocalisedString message, Union44862066? printSettings = null);
 
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_trains")]
@@ -658,14 +658,14 @@ public abstract class LuaForce: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union20318803? name = null, SurfaceIdentification? surface = null);
+  public abstract List<LuaEntity> GetTrainStops(Union25187716? name = null, SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Gets if the given recipe is explicitly disabled from being hand crafted.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_hand_crafting_disabled_for_recipe")]
-  public abstract bool GetHandCraftingDisabledForRecipe(Union66540731 recipe);
+  public abstract bool GetHandCraftingDisabledForRecipe(Union18832629 recipe);
 
   /// <summary>
   /// Sets if the given recipe can be hand-crafted. This is used to explicitly disable hand crafting a recipe - it won't allow hand-crafting otherwise not hand-craftable recipes.
@@ -673,7 +673,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="handCraftingDisabled">Lua name: hand_crafting_disabled</param>
   [FactorioRconMethod("set_hand_crafting_disabled_for_recipe")]
-  public abstract void SetHandCraftingDisabledForRecipe(Union48360500 recipe, bool handCraftingDisabled);
+  public abstract void SetHandCraftingDisabledForRecipe(Union52648972 recipe, bool handCraftingDisabled);
 
   /// <summary>
   /// Add this technology to the back of the research queue if the queue is enabled. Otherwise, set this technology to be researched now.
@@ -716,25 +716,5 @@ public abstract class LuaForce: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union66540731: OneOfBase<string, LuaRecipe>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union20318803: OneOfBase<string, List<string>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union2649323: OneOfBase<Color, PrintSettings>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union48360500: OneOfBase<string, LuaRecipe>
-{
 }
 

@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -26,49 +26,7 @@ public abstract class HeatSetting
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union14966502 Mode { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - at-least
-///   - at-most
-///   - exactly
-///   - add
-///   - remove
-/// </summary>
-public enum Union14966502
-{
-  /// <summary>
-  /// Literal value: at-least
-  /// </summary>
-  [FactorioRconDefinitionValue("at-least")]
-  AtLeast,
-
-  /// <summary>
-  /// Literal value: at-most
-  /// </summary>
-  [FactorioRconDefinitionValue("at-most")]
-  AtMost,
-
-  /// <summary>
-  /// Literal value: exactly
-  /// </summary>
-  [FactorioRconDefinitionValue("exactly")]
-  Exactly,
-
-  /// <summary>
-  /// Literal value: add
-  /// </summary>
-  [FactorioRconDefinitionValue("add")]
-  Add,
-
-  /// <summary>
-  /// Literal value: remove
-  /// </summary>
-  [FactorioRconDefinitionValue("remove")]
-  Remove,
+  public Union26560916 Mode { get; set; }
 
 }
 

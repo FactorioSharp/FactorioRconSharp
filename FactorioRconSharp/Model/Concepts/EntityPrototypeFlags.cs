@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -16,20 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// By default, none of these flags are set.
 /// </summary>
 [FactorioRconConcept("EntityPrototypeFlags")]
-public abstract class EntityPrototypeFlags: Dictionary<EntityPrototypeFlag, Literal8587703>
+public abstract class EntityPrototypeFlags: Dictionary<EntityPrototypeFlag, Literal45491568>
 {
-}
-
-/// <summary>
-/// Literal value: True
-/// </summary>
-public enum Literal8587703
-{
-  /// <summary>
-  /// Literal value: True
-  /// </summary>
-  [FactorioRconDefinitionValue("True")]
-  True,
-
 }
 

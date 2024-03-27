@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -38,7 +38,7 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public Union64836814 ProductionType { get; private set; }
+  public Union39489761 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -99,41 +99,6 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - input
-///   - input-output
-///   - output
-///   - none
-/// </summary>
-public enum Union64836814
-{
-  /// <summary>
-  /// Literal value: input
-  /// </summary>
-  [FactorioRconDefinitionValue("input")]
-  Input,
-
-  /// <summary>
-  /// Literal value: input-output
-  /// </summary>
-  [FactorioRconDefinitionValue("input-output")]
-  InputOutput,
-
-  /// <summary>
-  /// Literal value: output
-  /// </summary>
-  [FactorioRconDefinitionValue("output")]
-  Output,
-
-  /// <summary>
-  /// Literal value: none
-  /// </summary>
-  [FactorioRconDefinitionValue("none")]
-  None,
 
 }
 

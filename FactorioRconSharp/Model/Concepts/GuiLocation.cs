@@ -2,10 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
+using FactorioRconSharp.Model.Utils;
 using OneOf;
 
 namespace FactorioRconSharp.Model.Concepts;
@@ -15,27 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("GuiLocation")]
-public abstract partial class GuiLocation: OneOfBase<Table1762274, Table37007761>
+public abstract partial class GuiLocation: OneOfBase<Table4809184, Table22343647>
 {
-}
-
-public abstract class Table1762274
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
-}
-
-public abstract class Table37007761
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
 }
 

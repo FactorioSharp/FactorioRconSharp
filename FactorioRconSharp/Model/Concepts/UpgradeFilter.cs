@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -14,34 +14,13 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class UpgradeFilter
 {
   [FactorioRconAttribute("type")]
-  public Union1217750 Type { get; set; }
+  public Union41610112 Type { get; set; }
 
   /// <summary>
   /// Name of the item, or entity.
   /// </summary>
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - item
-///   - entity
-/// </summary>
-public enum Union1217750
-{
-  /// <summary>
-  /// Literal value: item
-  /// </summary>
-  [FactorioRconDefinitionValue("item")]
-  Item,
-
-  /// <summary>
-  /// Literal value: entity
-  /// </summary>
-  [FactorioRconDefinitionValue("entity")]
-  Entity,
 
 }
 

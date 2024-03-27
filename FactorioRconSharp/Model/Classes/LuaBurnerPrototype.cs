@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -47,7 +47,7 @@ public abstract class LuaBurnerPrototype: LuaObject
   /// The light flicker definition for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("light_flicker")]
-  public Table41728762 LightFlicker { get; private set; }
+  public Table26787583 LightFlicker { get; private set; }
 
   [FactorioRconAttribute("fuel_categories")]
   public Dictionary<string, bool> FuelCategories { get; private set; }
@@ -69,34 +69,6 @@ public abstract class LuaBurnerPrototype: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-public abstract class Table41728762
-{
-  [FactorioRconAttribute("minimum_intensity")]
-  public float MinimumIntensity { get; set; }
-
-  [FactorioRconAttribute("maximum_intensity")]
-  public float MaximumIntensity { get; set; }
-
-  [FactorioRconAttribute("derivation_change_frequency")]
-  public float DerivationChangeFrequency { get; set; }
-
-  [FactorioRconAttribute("derivation_change_deviation")]
-  public float DerivationChangeDeviation { get; set; }
-
-  [FactorioRconAttribute("border_fix_speed")]
-  public float BorderFixSpeed { get; set; }
-
-  [FactorioRconAttribute("minimum_light_size")]
-  public float MinimumLightSize { get; set; }
-
-  [FactorioRconAttribute("light_intensity_to_size_coefficient")]
-  public float LightIntensityToSizeCoefficient { get; set; }
-
-  [FactorioRconAttribute("color")]
-  public Color Color { get; set; }
 
 }
 

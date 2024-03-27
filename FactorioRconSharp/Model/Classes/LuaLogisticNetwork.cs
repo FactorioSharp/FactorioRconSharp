@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -160,7 +160,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public abstract int GetItemCount(string? item = null, Union37901460? member = null);
+  public abstract int GetItemCount(string? item = null, Union41488936? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public abstract uint RemoveItem(ItemStackIdentification item, Union57733168? members = null);
+  public abstract uint RemoveItem(ItemStackIdentification item, Union29425774? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public abstract uint Insert(ItemStackIdentification item, Union4436986? members = null);
+  public abstract uint Insert(ItemStackIdentification item, Union46250790? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Union26067845? members = null);
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Union41687258? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Union10553853? members = null);
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Union33739877? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.
@@ -237,167 +237,6 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - storage
-///   - providers
-/// </summary>
-public enum Union37901460
-{
-  /// <summary>
-  /// Literal value: storage
-  /// </summary>
-  [FactorioRconDefinitionValue("storage")]
-  Storage,
-
-  /// <summary>
-  /// Literal value: providers
-  /// </summary>
-  [FactorioRconDefinitionValue("providers")]
-  Providers,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - storage
-///   - storage-empty
-///   - storage-empty-slot
-///   - requester
-/// </summary>
-public enum Union4436986
-{
-  /// <summary>
-  /// Literal value: storage
-  /// </summary>
-  [FactorioRconDefinitionValue("storage")]
-  Storage,
-
-  /// <summary>
-  /// Literal value: storage-empty
-  /// </summary>
-  [FactorioRconDefinitionValue("storage-empty")]
-  StorageEmpty,
-
-  /// <summary>
-  /// Literal value: storage-empty-slot
-  /// </summary>
-  [FactorioRconDefinitionValue("storage-empty-slot")]
-  StorageEmptySlot,
-
-  /// <summary>
-  /// Literal value: requester
-  /// </summary>
-  [FactorioRconDefinitionValue("requester")]
-  Requester,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - active-provider
-///   - passive-provider
-///   - buffer
-///   - storage
-/// </summary>
-public enum Union57733168
-{
-  /// <summary>
-  /// Literal value: active-provider
-  /// </summary>
-  [FactorioRconDefinitionValue("active-provider")]
-  ActiveProvider,
-
-  /// <summary>
-  /// Literal value: passive-provider
-  /// </summary>
-  [FactorioRconDefinitionValue("passive-provider")]
-  PassiveProvider,
-
-  /// <summary>
-  /// Literal value: buffer
-  /// </summary>
-  [FactorioRconDefinitionValue("buffer")]
-  Buffer,
-
-  /// <summary>
-  /// Literal value: storage
-  /// </summary>
-  [FactorioRconDefinitionValue("storage")]
-  Storage,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - storage
-///   - storage-empty
-///   - storage-empty-slot
-///   - requester
-/// </summary>
-public enum Union10553853
-{
-  /// <summary>
-  /// Literal value: storage
-  /// </summary>
-  [FactorioRconDefinitionValue("storage")]
-  Storage,
-
-  /// <summary>
-  /// Literal value: storage-empty
-  /// </summary>
-  [FactorioRconDefinitionValue("storage-empty")]
-  StorageEmpty,
-
-  /// <summary>
-  /// Literal value: storage-empty-slot
-  /// </summary>
-  [FactorioRconDefinitionValue("storage-empty-slot")]
-  StorageEmptySlot,
-
-  /// <summary>
-  /// Literal value: requester
-  /// </summary>
-  [FactorioRconDefinitionValue("requester")]
-  Requester,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - active-provider
-///   - passive-provider
-///   - buffer
-///   - storage
-/// </summary>
-public enum Union26067845
-{
-  /// <summary>
-  /// Literal value: active-provider
-  /// </summary>
-  [FactorioRconDefinitionValue("active-provider")]
-  ActiveProvider,
-
-  /// <summary>
-  /// Literal value: passive-provider
-  /// </summary>
-  [FactorioRconDefinitionValue("passive-provider")]
-  PassiveProvider,
-
-  /// <summary>
-  /// Literal value: buffer
-  /// </summary>
-  [FactorioRconDefinitionValue("buffer")]
-  Buffer,
-
-  /// <summary>
-  /// Literal value: storage
-  /// </summary>
-  [FactorioRconDefinitionValue("storage")]
-  Storage,
 
 }
 

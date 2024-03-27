@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -68,7 +68,7 @@ public abstract class LuaCustomInputPrototype: LuaObject
   /// The consuming type.
   /// </summary>
   [FactorioRconAttribute("consuming")]
-  public Union2174563 Consuming { get; private set; }
+  public Union39565849 Consuming { get; private set; }
 
   /// <summary>
   /// The action that happens when this custom input is triggered.
@@ -123,27 +123,6 @@ public abstract class LuaCustomInputPrototype: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - none
-///   - game-only
-/// </summary>
-public enum Union2174563
-{
-  /// <summary>
-  /// Literal value: none
-  /// </summary>
-  [FactorioRconDefinitionValue("none")]
-  None,
-
-  /// <summary>
-  /// Literal value: game-only
-  /// </summary>
-  [FactorioRconDefinitionValue("game-only")]
-  GameOnly,
 
 }
 

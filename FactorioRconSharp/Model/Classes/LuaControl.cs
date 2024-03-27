@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -64,7 +64,7 @@ public abstract class LuaControl: LuaObject
   /// This is the GUI that will asked to close (by firing the <see cref="OnGuiClosed)Event" /> when the `Esc` or `E` keys are pressed. If this attribute is not `nil`, and a new GUI is written to it, the existing one will be asked to close.
   /// </summary>
   [FactorioRconAttribute("opened")]
-  public Union41622463 Opened { get; set; }
+  public Union26478319 Opened { get; set; }
 
   /// <summary>
   /// Size of the crafting queue.
@@ -82,7 +82,7 @@ public abstract class LuaControl: LuaObject
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table31364015 WalkingState { get; set; }
+  public Table47444551 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public abstract class LuaControl: LuaObject
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table28379535 MiningState { get; set; }
+  public Table4570863 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table64109423 ShootingState { get; set; }
+  public Table467700 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public abstract class LuaControl: LuaObject
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table35236192 RepairState { get; set; }
+  public Table53595812 RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -397,7 +397,7 @@ public abstract class LuaControl: LuaObject
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_craftable_count")]
-  public abstract uint GetCraftableCount(Union21943666 recipe);
+  public abstract uint GetCraftableCount(Union136140 recipe);
 
   /// <summary>
   /// Begins crafting the given count of the given recipe.
@@ -406,7 +406,7 @@ public abstract class LuaControl: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="silent">Lua name: silent</param>
   [FactorioRconMethod("begin_crafting")]
-  public abstract uint BeginCrafting(uint count, Union53052340 recipe, bool? silent = null);
+  public abstract uint BeginCrafting(uint count, Union8503306 recipe, bool? silent = null);
 
   /// <summary>
   /// Cancels crafting the given count of the given crafting queue index.
@@ -511,84 +511,5 @@ public abstract class LuaControl: LuaObject
   [FactorioRconMethod("is_cursor_empty")]
   public abstract bool IsCursorEmpty();
 
-}
-
-public abstract class Table28379535
-{
-  /// <summary>
-  /// Whether the player is mining at all.
-  /// </summary>
-  [FactorioRconAttribute("mining")]
-  public bool Mining { get; set; }
-
-  /// <summary>
-  /// What location the player is mining. Only relevant if `mining` is `true`.
-  /// </summary>
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union41622463: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
-{
-}
-
-public abstract class Table35236192
-{
-  /// <summary>
-  /// The current state
-  /// </summary>
-  [FactorioRconAttribute("repairing")]
-  public bool Repairing { get; set; }
-
-  /// <summary>
-  /// The position being repaired
-  /// </summary>
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-}
-
-public abstract class Table64109423
-{
-  /// <summary>
-  /// The current state
-  /// </summary>
-  [FactorioRconAttribute("state")]
-  public ShootingEnum State { get; set; }
-
-  /// <summary>
-  /// The position being shot at
-  /// </summary>
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-}
-
-public abstract class Table31364015
-{
-  /// <summary>
-  /// If `false`, the player is currently not walking; otherwise it's going somewhere
-  /// </summary>
-  [FactorioRconAttribute("walking")]
-  public bool Walking { get; set; }
-
-  /// <summary>
-  /// Direction where the player is walking
-  /// </summary>
-  [FactorioRconAttribute("direction")]
-  public DirectionEnum Direction { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union53052340: OneOfBase<string, LuaRecipe>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union21943666: OneOfBase<string, LuaRecipe>
-{
 }
 

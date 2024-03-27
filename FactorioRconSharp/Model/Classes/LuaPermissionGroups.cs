@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -46,7 +46,7 @@ public abstract class LuaPermissionGroups: LuaObject
   /// </summary>
   /// <param name="group">Lua name: group</param>
   [FactorioRconMethod("get_group")]
-  public abstract LuaPermissionGroup? GetGroup(Union52116595 group);
+  public abstract LuaPermissionGroup? GetGroup(Union47428231 group);
 
   /// <summary>
   /// All methods and properties that this object supports.
@@ -54,10 +54,5 @@ public abstract class LuaPermissionGroups: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union52116595: OneOfBase<string, uint>
-{
 }
 

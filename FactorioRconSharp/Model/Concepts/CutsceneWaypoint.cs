@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -23,7 +23,7 @@ public abstract class CutsceneWaypoint
   /// Entity or unit group to pan the camera to.
   /// </summary>
   [FactorioRconAttribute("target")]
-  public Union40016800 Target { get; set; }
+  public Union23184054 Target { get; set; }
 
   /// <summary>
   /// How many ticks it will take to reach this waypoint from the previous one.
@@ -43,10 +43,5 @@ public abstract class CutsceneWaypoint
   [FactorioRconAttribute("zoom")]
   public double Zoom { get; set; }
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union40016800: OneOfBase<LuaEntity, LuaUnitGroup>
-{
 }
 

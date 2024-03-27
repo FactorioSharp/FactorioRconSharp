@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -128,7 +128,7 @@ public abstract class LuaItemStack: LuaObject
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public Union50492551 PrioritizeInsertionMode { get; set; }
+  public Union49311583 PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
@@ -546,7 +546,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_entity_filter")]
-  public abstract bool SetEntityFilter(uint index, Union53710617 filter);
+  public abstract bool SetEntityFilter(uint index, Union24254019 filter);
 
   /// <summary>
   /// Gets the tile filter at the given index for this deconstruction item.
@@ -561,7 +561,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_tile_filter")]
-  public abstract bool SetTileFilter(uint index, Union54181145 filter);
+  public abstract bool SetTileFilter(uint index, Union42609735 filter);
 
   /// <summary>
   /// Clears all settings/filters on this deconstruction item resetting it to default values.
@@ -581,7 +581,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public abstract UpgradeFilter GetMapper(uint index, Union64062224 type);
+  public abstract UpgradeFilter GetMapper(uint index, Union45274501 type);
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,7 +590,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public abstract void SetMapper(uint index, Union3129430 type, Union65718035 filter);
+  public abstract void SetMapper(uint index, Union55558525 type, Union66605263 filter);
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.
@@ -642,97 +642,5 @@ public abstract class LuaItemStack: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-}
-
-/// <summary>
-/// Union of literals:
-///   - default
-///   - never
-///   - always
-///   - when-manually-filtered
-/// </summary>
-public enum Union50492551
-{
-  /// <summary>
-  /// Literal value: default
-  /// </summary>
-  [FactorioRconDefinitionValue("default")]
-  Default,
-
-  /// <summary>
-  /// Literal value: never
-  /// </summary>
-  [FactorioRconDefinitionValue("never")]
-  Never,
-
-  /// <summary>
-  /// Literal value: always
-  /// </summary>
-  [FactorioRconDefinitionValue("always")]
-  Always,
-
-  /// <summary>
-  /// Literal value: when-manually-filtered
-  /// </summary>
-  [FactorioRconDefinitionValue("when-manually-filtered")]
-  WhenManuallyFiltered,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - from
-///   - to
-/// </summary>
-public enum Union64062224
-{
-  /// <summary>
-  /// Literal value: from
-  /// </summary>
-  [FactorioRconDefinitionValue("from")]
-  From,
-
-  /// <summary>
-  /// Literal value: to
-  /// </summary>
-  [FactorioRconDefinitionValue("to")]
-  To,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union53710617: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union65718035: OneOfBase<UpgradeFilter, LuaNil>
-{
-}
-
-/// <summary>
-/// Union of literals:
-///   - from
-///   - to
-/// </summary>
-public enum Union3129430
-{
-  /// <summary>
-  /// Literal value: from
-  /// </summary>
-  [FactorioRconDefinitionValue("from")]
-  From,
-
-  /// <summary>
-  /// Literal value: to
-  /// </summary>
-  [FactorioRconDefinitionValue("to")]
-  To,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union54181145: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
-{
 }
 

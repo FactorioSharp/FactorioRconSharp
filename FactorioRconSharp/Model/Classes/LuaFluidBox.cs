@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -62,7 +62,7 @@ public abstract class LuaFluidBox: LuaObject
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_prototype")]
-  public abstract Union803548 GetPrototype(uint index);
+  public abstract Union3650154 GetPrototype(uint index);
 
   /// <summary>
   /// The capacity of the given fluidbox index.
@@ -101,7 +101,7 @@ public abstract class LuaFluidBox: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public abstract bool SetFilter(uint index, Union26517107 filter);
+  public abstract bool SetFilter(uint index, Union5193697 filter);
 
   /// <summary>
   /// Flow through the fluidbox in the last tick. It is the larger of in-flow and out-flow.
@@ -148,15 +148,5 @@ public abstract class LuaFluidBox: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union803548: OneOfBase<LuaFluidBoxPrototype, List<LuaFluidBoxPrototype>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union26517107: OneOfBase<FluidBoxFilterSpec, LuaNil>
-{
 }
 

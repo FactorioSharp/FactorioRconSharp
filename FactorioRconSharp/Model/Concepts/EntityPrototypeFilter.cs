@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -26,7 +26,7 @@ public abstract class EntityPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union27867915 Mode { get; set; }
+  public Union36684380 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,76 +34,5 @@ public abstract class EntityPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-/// <summary>
-/// Union of literals:
-///   - or
-///   - and
-/// </summary>
-public enum Union27867915
-{
-  /// <summary>
-  /// Literal value: or
-  /// </summary>
-  [FactorioRconDefinitionValue("or")]
-  Or,
-
-  /// <summary>
-  /// Literal value: and
-  /// </summary>
-  [FactorioRconDefinitionValue("and")]
-  And,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union48355310: OneOfBase<CollisionMask, CollisionMaskWithFlags>
-{
-}
-
-/// <summary>
-/// Union of literals:
-///   - collides
-///   - layers-equals
-///   - contains-any
-///   - contains-all
-/// </summary>
-public enum Union8828568
-{
-  /// <summary>
-  /// Literal value: collides
-  /// </summary>
-  [FactorioRconDefinitionValue("collides")]
-  Collides,
-
-  /// <summary>
-  /// Literal value: layers-equals
-  /// </summary>
-  [FactorioRconDefinitionValue("layers-equals")]
-  LayersEquals,
-
-  /// <summary>
-  /// Literal value: contains-any
-  /// </summary>
-  [FactorioRconDefinitionValue("contains-any")]
-  ContainsAny,
-
-  /// <summary>
-  /// Literal value: contains-all
-  /// </summary>
-  [FactorioRconDefinitionValue("contains-all")]
-  ContainsAll,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union51182215: OneOfBase<string, List<string>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union1084693: OneOfBase<string, List<string>>
-{
 }
 

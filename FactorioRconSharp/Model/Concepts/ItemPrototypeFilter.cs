@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -26,7 +26,7 @@ public abstract class ItemPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union65357506 Mode { get; set; }
+  public Union22872386 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,36 +34,5 @@ public abstract class ItemPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-/// <summary>
-/// Union of literals:
-///   - or
-///   - and
-/// </summary>
-public enum Union65357506
-{
-  /// <summary>
-  /// Literal value: or
-  /// </summary>
-  [FactorioRconDefinitionValue("or")]
-  Or,
-
-  /// <summary>
-  /// Literal value: and
-  /// </summary>
-  [FactorioRconDefinitionValue("and")]
-  And,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union30330347: OneOfBase<string, List<string>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union32957531: OneOfBase<string, List<string>>
-{
 }
 

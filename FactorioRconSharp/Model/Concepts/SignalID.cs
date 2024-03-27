@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -14,41 +14,13 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class SignalID
 {
   [FactorioRconAttribute("type")]
-  public Union46941732 Type { get; set; }
+  public Union26199924 Type { get; set; }
 
   /// <summary>
   /// Name of the item, fluid or virtual signal.
   /// </summary>
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - item
-///   - fluid
-///   - virtual
-/// </summary>
-public enum Union46941732
-{
-  /// <summary>
-  /// Literal value: item
-  /// </summary>
-  [FactorioRconDefinitionValue("item")]
-  Item,
-
-  /// <summary>
-  /// Literal value: fluid
-  /// </summary>
-  [FactorioRconDefinitionValue("fluid")]
-  Fluid,
-
-  /// <summary>
-  /// Literal value: virtual
-  /// </summary>
-  [FactorioRconDefinitionValue("virtual")]
-  Virtual,
 
 }
 

@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -56,7 +56,7 @@ public abstract class LuaTrain: LuaObject
   /// Locomotives of the train.
   /// </summary>
   [FactorioRconAttribute("locomotives")]
-  public Table55306802 Locomotives { get; private set; }
+  public Table47365548 Locomotives { get; private set; }
 
   /// <summary>
   /// The cargo carriages the train contains.
@@ -283,22 +283,6 @@ public abstract class LuaTrain: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-public abstract class Table55306802
-{
-  /// <summary>
-  /// Array of locomotives.
-  /// </summary>
-  [FactorioRconAttribute("front_movers")]
-  public List<LuaEntity> FrontMovers { get; set; }
-
-  /// <summary>
-  /// Array of locomotives.
-  /// </summary>
-  [FactorioRconAttribute("back_movers")]
-  public List<LuaEntity> BackMovers { get; set; }
 
 }
 

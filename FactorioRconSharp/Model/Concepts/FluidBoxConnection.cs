@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class FluidBoxConnection
 {
   [FactorioRconAttribute("type")]
-  public Union40648905 Type { get; set; }
+  public Union37960539 Type { get; set; }
 
   /// <summary>
   /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.
@@ -30,34 +30,6 @@ public abstract class FluidBoxConnection
   /// </summary>
   [FactorioRconAttribute("max_underground_distance")]
   public uint MaxUndergroundDistance { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - input
-///   - output
-///   - input-output
-/// </summary>
-public enum Union40648905
-{
-  /// <summary>
-  /// Literal value: input
-  /// </summary>
-  [FactorioRconDefinitionValue("input")]
-  Input,
-
-  /// <summary>
-  /// Literal value: output
-  /// </summary>
-  [FactorioRconDefinitionValue("output")]
-  Output,
-
-  /// <summary>
-  /// Literal value: input-output
-  /// </summary>
-  [FactorioRconDefinitionValue("input-output")]
-  InputOutput,
 
 }
 

@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -24,41 +24,6 @@ public abstract class GuiArrowSpecification
   /// </summary>
   [FactorioRconAttribute("type")]
   public GuiArrowType Type { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - player
-///   - target
-///   - player-quickbar
-///   - player-equipment-bar
-/// </summary>
-public enum Union5141801
-{
-  /// <summary>
-  /// Literal value: player
-  /// </summary>
-  [FactorioRconDefinitionValue("player")]
-  Player,
-
-  /// <summary>
-  /// Literal value: target
-  /// </summary>
-  [FactorioRconDefinitionValue("target")]
-  Target,
-
-  /// <summary>
-  /// Literal value: player-quickbar
-  /// </summary>
-  [FactorioRconDefinitionValue("player-quickbar")]
-  PlayerQuickbar,
-
-  /// <summary>
-  /// Literal value: player-equipment-bar
-  /// </summary>
-  [FactorioRconDefinitionValue("player-equipment-bar")]
-  PlayerEquipmentBar,
 
 }
 

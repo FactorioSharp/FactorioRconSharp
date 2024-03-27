@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class Product
 {
   [FactorioRconAttribute("type")]
-  public Union54868387 Type { get; set; }
+  public Union6971538 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the result.
@@ -32,13 +32,13 @@ public abstract class Product
   /// Minimal amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_min")]
-  public Union11385445 AmountMin { get; set; }
+  public Union51634601 AmountMin { get; set; }
 
   /// <summary>
   /// Maximum amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_max")]
-  public Union37767765 AmountMax { get; set; }
+  public Union61196235 AmountMax { get; set; }
 
   /// <summary>
   /// A value in range [0, 1]. Item or fluid is only given with this probability; otherwise no product is produced.
@@ -50,43 +50,7 @@ public abstract class Product
   /// How much of this product is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union54925564 CatalystAmount { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union37767765: OneOfBase<uint, double>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union11385445: OneOfBase<uint, double>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union54925564: OneOfBase<uint, double>
-{
-}
-
-/// <summary>
-/// Union of literals:
-///   - item
-///   - fluid
-/// </summary>
-public enum Union54868387
-{
-  /// <summary>
-  /// Literal value: item
-  /// </summary>
-  [FactorioRconDefinitionValue("item")]
-  Item,
-
-  /// <summary>
-  /// Literal value: fluid
-  /// </summary>
-  [FactorioRconDefinitionValue("fluid")]
-  Fluid,
+  public Union32578907 CatalystAmount { get; set; }
 
 }
 

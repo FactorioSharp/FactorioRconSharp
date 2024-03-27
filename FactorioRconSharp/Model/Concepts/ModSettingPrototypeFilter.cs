@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -26,7 +26,7 @@ public abstract class ModSettingPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union55889342 Mode { get; set; }
+  public Union28974632 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,31 +34,5 @@ public abstract class ModSettingPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-/// <summary>
-/// Union of literals:
-///   - or
-///   - and
-/// </summary>
-public enum Union55889342
-{
-  /// <summary>
-  /// Literal value: or
-  /// </summary>
-  [FactorioRconDefinitionValue("or")]
-  Or,
-
-  /// <summary>
-  /// Literal value: and
-  /// </summary>
-  [FactorioRconDefinitionValue("and")]
-  And,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union32825514: OneOfBase<string, List<string>>
-{
 }
 

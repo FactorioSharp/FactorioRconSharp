@@ -40,6 +40,9 @@ if (Directory.Exists(outPath))
 
 Directory.CreateDirectory(outPath);
 
+string anonymousPath = Path.Join(outPath, "Anonymous");
+Directory.CreateDirectory(anonymousPath);
+
 string definitionsPath = Path.Join(outPath, "Definitions");
 Directory.CreateDirectory(definitionsPath);
 
@@ -55,9 +58,10 @@ foreach (FactorioModelFile file in files)
 {
     string outputDirectory = file.Namespace switch
     {
+        "FactorioRconSharp.Model.Anonymous" => anonymousPath,
+        "FactorioRconSharp.Model.Definitions" => definitionsPath,
         "FactorioRconSharp.Model.Classes" => classesPath,
         "FactorioRconSharp.Model.Concepts" => conceptsPath,
-        "FactorioRconSharp.Model.Definitions" => definitionsPath,
         _ => outPath
     };
 

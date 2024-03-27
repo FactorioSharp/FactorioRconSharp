@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -17,10 +17,10 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class PipeConnection
 {
   [FactorioRconAttribute("flow_direction")]
-  public Union25188253 FlowDirection { get; set; }
+  public Union9026409 FlowDirection { get; set; }
 
   [FactorioRconAttribute("connection_type")]
-  public Union59191269 ConnectionType { get; set; }
+  public Union10441537 ConnectionType { get; set; }
 
   /// <summary>
   /// The absolute position of this connection within the entity.
@@ -51,55 +51,6 @@ public abstract class PipeConnection
   /// </summary>
   [FactorioRconAttribute("target_pipe_connection_index")]
   public uint TargetPipeConnectionIndex { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - normal
-///   - underground
-/// </summary>
-public enum Union59191269
-{
-  /// <summary>
-  /// Literal value: normal
-  /// </summary>
-  [FactorioRconDefinitionValue("normal")]
-  Normal,
-
-  /// <summary>
-  /// Literal value: underground
-  /// </summary>
-  [FactorioRconDefinitionValue("underground")]
-  Underground,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - input
-///   - output
-///   - input-output
-/// </summary>
-public enum Union25188253
-{
-  /// <summary>
-  /// Literal value: input
-  /// </summary>
-  [FactorioRconDefinitionValue("input")]
-  Input,
-
-  /// <summary>
-  /// Literal value: output
-  /// </summary>
-  [FactorioRconDefinitionValue("output")]
-  Output,
-
-  /// <summary>
-  /// Literal value: input-output
-  /// </summary>
-  [FactorioRconDefinitionValue("input-output")]
-  InputOutput,
 
 }
 

@@ -8,13 +8,14 @@ namespace FactorioRconSharp.ClientGenerator.Compilation;
 public class FactorioModelFileCompiler
 {
     readonly FactorioRuntimeApiSpecification _specification;
+    readonly Dictionary<int, string> _anonymousTypeNames = new();
 
     public FactorioModelFileCompiler(FactorioRuntimeApiSpecification specification)
     {
         _specification = specification;
     }
 
-    public FactorioModelFile CompileClassFile(string clsName)
+    public FactorioModelClass CompileClassFile(string clsName)
     {
         FactorioRuntimeClassSpecification? cls = _specification.Classes.SingleOrDefault(c => c.Name == clsName);
         if (cls == null)
@@ -22,25 +23,10 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of class {clsName}");
         }
 
-        IEnumerable<FactorioRuntimeTypeSpecification> types = FactorioSpecificationTypeExtractor.ExtractTypes(cls);
-        IEnumerable<FactorioModelTopLevelStatement> statementsFromNestedTypes = types.SelectMany(CompileType);
-
-        return new FactorioModelFile
-        {
-            Name = cls.Name.ToPascalCase(),
-            Namespace = "FactorioRconSharp.Model.Classes",
-            Usings =
-            [
-                "FactorioRconSharp.Model.Builtins",
-                "FactorioRconSharp.Model.Concepts",
-                "FactorioRconSharp.Model.Definitions",
-                "OneOf"
-            ],
-            Statements = new[] { CompileClass(cls) }.Concat(statementsFromNestedTypes).ToArray()
-        };
+        return CompileClass(cls);
     }
 
-    public FactorioModelFile CompileConceptFile(string conceptName)
+    public FactorioModelTopLevelStatement CompileConceptFile(string conceptName)
     {
         FactorioRuntimeConceptSpecification? concept = _specification.Concepts.SingleOrDefault(c => c.Name == conceptName);
         if (concept == null)
@@ -48,25 +34,10 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of concept {conceptName}");
         }
 
-        IEnumerable<FactorioRuntimeTypeSpecification> types = FactorioSpecificationTypeExtractor.ExtractTypes(concept);
-        IEnumerable<FactorioModelTopLevelStatement> nestedSymbols = types.SelectMany(CompileType);
-
-        return new FactorioModelFile
-        {
-            Name = concept.Name.ToPascalCase(),
-            Namespace = "FactorioRconSharp.Model.Concepts",
-            Usings =
-            [
-                "FactorioRconSharp.Model.Builtins",
-                "FactorioRconSharp.Model.Classes",
-                "FactorioRconSharp.Model.Definitions",
-                "OneOf"
-            ],
-            Statements = new[] { CompileConcept(concept) }.Concat(nestedSymbols).ToArray()
-        };
+        return CompileConcept(concept);
     }
 
-    public FactorioModelFile CompileDefinitionFile(string definitionName)
+    public IEnumerable<FactorioModelEnum> CompileDefinitionFile(string definitionName)
     {
         FactorioRuntimeDefinitionSpecification? definition = _specification.Defines.SingleOrDefault(c => c.Name == definitionName);
         if (definition == null)
@@ -74,18 +45,7 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of definition {definitionName}");
         }
 
-        return new FactorioModelFile
-        {
-            Name = $"{definition.Name.ToPascalCase()}Enum",
-            Namespace = "FactorioRconSharp.Model.Definitions",
-            Usings =
-            [
-                "FactorioRconSharp.Model.Builtins",
-                "FactorioRconSharp.Model.Classes",
-                "FactorioRconSharp.Model.Concepts"
-            ],
-            Statements = CompileDefinition(definition).ToArray<FactorioModelTopLevelStatement>()
-        };
+        return CompileDefinition(definition);
     }
 
     FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls) =>
@@ -353,16 +313,16 @@ public class FactorioModelFileCompiler
                     "dictionary" => $"Dictionary<{BuildTypeName(keyValueType.Key)}, {BuildTypeName(keyValueType.Value)}>",
                     _ => $"{keyValueType.Name.ToPascalCase()}<{BuildTypeName(keyValueType.Key)}, {BuildTypeName(keyValueType.Value)}>"
                 };
-            case FactorioRuntimeLiteralTypeSpecification literalType:
-                return $"Literal{literalType.GetHashCode()}";
-            case FactorioRuntimeStructTypeSpecification structType:
-                return $"Struct{structType.GetHashCode()}";
-            case FactorioRuntimeTableTypeSpecification tableType:
-                return $"Table{tableType.GetHashCode()}";
-            case FactorioRuntimeTupleTypeSpecification tupleType:
-                return $"Tuple{tupleType.GetHashCode()}";
-            case FactorioRuntimeUnionTypeSpecification unionType:
-                return $"Union{unionType.GetHashCode()}";
+            case FactorioRuntimeLiteralTypeSpecification:
+            case FactorioRuntimeStructTypeSpecification:
+            case FactorioRuntimeTableTypeSpecification:
+            case FactorioRuntimeTupleTypeSpecification:
+            case FactorioRuntimeUnionTypeSpecification:
+                int typeId = type.GetHashCode();
+                return _anonymousTypeNames.GetValueOrDefault(typeId)
+                       ?? throw new InvalidOperationException(
+                           $"Could not find name of anonymous type {typeId}. Make sure you compile the anonymous types before compiling the symbols that use them."
+                       );
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
@@ -394,26 +354,50 @@ public class FactorioModelFileCompiler
         }
     }
 
-    IEnumerable<FactorioModelTopLevelStatement> CompileType(FactorioRuntimeTypeSpecification type)
+    public FactorioModelTopLevelStatement CompileType(FactorioRuntimeTypeSpecification type)
     {
+        FactorioModelTopLevelStatement result;
         switch (type)
         {
+            case FactorioRuntimeSimpleTypeSpecification:
+            case FactorioRuntimeArrayTypeSpecification:
+            case FactorioRuntimeFunctionTypeSpecification:
+            case FactorioRuntimeKeyValueTypeSpecification:
+                result = CompileSimpleType(type);
+                break;
             case FactorioRuntimeLiteralTypeSpecification literalType:
-                yield return CompileLiteralType(literalType);
+                result = CompileLiteralType(literalType);
                 break;
             case FactorioRuntimeStructTypeSpecification structType:
-                yield return CompileStructType(structType);
+                result = CompileStructType(structType);
                 break;
             case FactorioRuntimeTableTypeSpecification tableType:
-                yield return CompileTableType(tableType);
+                result = CompileTableType(tableType);
                 break;
             case FactorioRuntimeTupleTypeSpecification tupleType:
-                yield return CompileTupleType(tupleType);
+                result = CompileTupleType(tupleType);
                 break;
             case FactorioRuntimeUnionTypeSpecification unionType:
-                yield return CompileUnionType(unionType);
+                result = CompileUnionType(unionType);
                 break;
+            default:
+                throw new NotSupportedException($"Cannot compile type into top-level statement {type.GetType()}");
         }
+
+        _anonymousTypeNames[type.GetHashCode()] = result.Name;
+
+        return result;
+    }
+
+    FactorioModelClass CompileSimpleType(FactorioRuntimeTypeSpecification simpleType)
+    {
+        string name = $"Type{simpleType.GetHashCode()}";
+
+        return new FactorioModelClass
+        {
+            Name = name,
+            BaseClass = BuildTypeName(simpleType)
+        };
     }
 
     FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
@@ -484,7 +468,8 @@ public class FactorioModelFileCompiler
             Name = name,
             BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
             Attributes = ["GenerateOneOf"],
-            IsPartial = true
+            IsPartial = true,
+            RequireAdditionalUsing = ["OneOf"]
         };
     }
 }

@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -32,35 +32,7 @@ public abstract class DifficultySettings
   /// Changing this to `"always"` or `"after-victory"` does not automatically unlock the research queue. See <see cref="LuaForce.ResearchQueueEnabled" /> for that.
   /// </summary>
   [FactorioRconAttribute("research_queue_setting")]
-  public Union56774454 ResearchQueueSetting { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - after-victory
-///   - always
-///   - never
-/// </summary>
-public enum Union56774454
-{
-  /// <summary>
-  /// Literal value: after-victory
-  /// </summary>
-  [FactorioRconDefinitionValue("after-victory")]
-  AfterVictory,
-
-  /// <summary>
-  /// Literal value: always
-  /// </summary>
-  [FactorioRconDefinitionValue("always")]
-  Always,
-
-  /// <summary>
-  /// Literal value: never
-  /// </summary>
-  [FactorioRconDefinitionValue("never")]
-  Never,
+  public Union39321845 ResearchQueueSetting { get; set; }
 
 }
 

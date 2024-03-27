@@ -3,9 +3,6 @@
 
 using FactorioRconSharp.Core.Abstractions;
 using FactorioRconSharp.Model.Utils;
-using FactorioRconSharp.Model.Builtins;
-using FactorioRconSharp.Model.Classes;
-using FactorioRconSharp.Model.Concepts;
 
 namespace FactorioRconSharp.Model.Definitions;
 

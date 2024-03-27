@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -17,7 +17,7 @@ public abstract class AttackParameters
   /// The type of AttackParameter.
   /// </summary>
   [FactorioRconAttribute("type")]
-  public Union53153398 Type { get; set; }
+  public Union28840036 Type { get; set; }
 
   /// <summary>
   /// Maximum range of attack.
@@ -35,7 +35,7 @@ public abstract class AttackParameters
   /// Defines how the range is determined.
   /// </summary>
   [FactorioRconAttribute("range_mode")]
-  public Union42479535 RangeMode { get; set; }
+  public Union6196845 RangeMode { get; set; }
 
   /// <summary>
   /// When searching for the nearest enemy to attack, `fire_penalty` is added to the enemy's distance if they are on fire.
@@ -105,55 +105,6 @@ public abstract class AttackParameters
   /// </summary>
   [FactorioRconAttribute("ammo_categories")]
   public List<string> AmmoCategories { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - center-to-center
-///   - bounding-box-to-bounding-box
-/// </summary>
-public enum Union42479535
-{
-  /// <summary>
-  /// Literal value: center-to-center
-  /// </summary>
-  [FactorioRconDefinitionValue("center-to-center")]
-  CenterToCenter,
-
-  /// <summary>
-  /// Literal value: bounding-box-to-bounding-box
-  /// </summary>
-  [FactorioRconDefinitionValue("bounding-box-to-bounding-box")]
-  BoundingBoxToBoundingBox,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - projectile
-///   - stream
-///   - beam
-/// </summary>
-public enum Union53153398
-{
-  /// <summary>
-  /// Literal value: projectile
-  /// </summary>
-  [FactorioRconDefinitionValue("projectile")]
-  Projectile,
-
-  /// <summary>
-  /// Literal value: stream
-  /// </summary>
-  [FactorioRconDefinitionValue("stream")]
-  Stream,
-
-  /// <summary>
-  /// Literal value: beam
-  /// </summary>
-  [FactorioRconDefinitionValue("beam")]
-  Beam,
 
 }
 

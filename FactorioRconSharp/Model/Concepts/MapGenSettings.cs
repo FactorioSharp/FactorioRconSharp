@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -44,7 +44,7 @@ public abstract class MapGenSettings
   /// Each setting in this dictionary maps the string type to the settings for that type.
   /// </summary>
   [FactorioRconAttribute("autoplace_settings")]
-  public Dictionary<Union58373622, AutoplaceSettings> AutoplaceSettings { get; set; }
+  public Dictionary<Union21523519, AutoplaceSettings> AutoplaceSettings { get; set; }
 
   /// <summary>
   /// Map generation settings for entities of the type "cliff".
@@ -105,34 +105,6 @@ public abstract class MapGenSettings
   /// </summary>
   [FactorioRconAttribute("property_expression_names")]
   public Dictionary<string, string> PropertyExpressionNames { get; set; }
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - entity
-///   - tile
-///   - decorative
-/// </summary>
-public enum Union58373622
-{
-  /// <summary>
-  /// Literal value: entity
-  /// </summary>
-  [FactorioRconDefinitionValue("entity")]
-  Entity,
-
-  /// <summary>
-  /// Literal value: tile
-  /// </summary>
-  [FactorioRconDefinitionValue("tile")]
-  Tile,
-
-  /// <summary>
-  /// Literal value: decorative
-  /// </summary>
-  [FactorioRconDefinitionValue("decorative")]
-  Decorative,
 
 }
 

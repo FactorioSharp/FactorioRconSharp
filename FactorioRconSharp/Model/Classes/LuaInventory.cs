@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -185,7 +185,7 @@ public abstract class LuaInventory: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public abstract bool SetFilter(uint index, Union49924125 filter);
+  public abstract bool SetFilter(uint index, Union1698939 filter);
 
   /// <summary>
   /// Finds the first LuaItemStack in the inventory that matches the given item name.
@@ -253,10 +253,5 @@ public abstract class LuaInventory: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union49924125: OneOfBase<string, LuaNil>
-{
 }
 

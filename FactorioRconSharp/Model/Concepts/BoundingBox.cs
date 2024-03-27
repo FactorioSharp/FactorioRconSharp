@@ -2,10 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
+using FactorioRconSharp.Model.Utils;
 using OneOf;
 
 namespace FactorioRconSharp.Model.Concepts;
@@ -15,33 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("BoundingBox")]
-public abstract partial class BoundingBox: OneOfBase<Table45098773, Table7550150>
+public abstract partial class BoundingBox: OneOfBase<Table66167900, Table44869561>
 {
-}
-
-public abstract class Table45098773
-{
-  [FactorioRconAttribute("left_top")]
-  public MapPosition LeftTop { get; set; }
-
-  [FactorioRconAttribute("right_bottom")]
-  public MapPosition RightBottom { get; set; }
-
-  [FactorioRconAttribute("orientation")]
-  public RealOrientation Orientation { get; set; }
-
-}
-
-public abstract class Table7550150
-{
-  [FactorioRconAttribute("left_top")]
-  public MapPosition LeftTop { get; set; }
-
-  [FactorioRconAttribute("right_bottom")]
-  public MapPosition RightBottom { get; set; }
-
-  [FactorioRconAttribute("orientation")]
-  public RealOrientation Orientation { get; set; }
-
 }
 

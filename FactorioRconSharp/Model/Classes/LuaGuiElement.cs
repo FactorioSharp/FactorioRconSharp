@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -83,7 +83,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The style of this element. When read, this evaluates to a <see cref="LuaStyle).ForWriting,ItOnlyAcceptsAStringThatSpecifiesTheTextualIdentifier(PrototypeName" /> of the desired style.
   /// </summary>
   [FactorioRconAttribute("style")]
-  public Union48209832 Style { get; set; }
+  public Union40248113 Style { get; set; }
 
   /// <summary>
   /// Sets whether this GUI element is visible or completely hidden, taking no space in the layout.
@@ -275,7 +275,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The elem value of this choose-elem-button, if any.
   /// </summary>
   [FactorioRconAttribute("elem_value")]
-  public Union5773521 ElemValue { get; set; }
+  public Union35956298 ElemValue { get; set; }
 
   /// <summary>
   /// The elem filters of this choose-elem-button, if any. The compatible type of filter is determined by `elem_type`.
@@ -690,7 +690,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public abstract void ScrollToElement(LuaGuiElement element, Union54135081? scrollMode = null);
+  public abstract void ScrollToElement(LuaGuiElement element, Union40460830? scrollMode = null);
 
   /// <summary>
   /// Selects all the text in this textbox.
@@ -737,7 +737,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public abstract void ScrollToItem(int index, Union63094882? scrollMode = null);
+  public abstract void ScrollToItem(int index, Union38429528? scrollMode = null);
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.
@@ -759,58 +759,6 @@ public abstract class LuaGuiElement: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union5773521: OneOfBase<string, SignalID>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union48209832: OneOfBase<LuaStyle, string>
-{
-}
-
-/// <summary>
-/// Union of literals:
-///   - in-view
-///   - top-third
-/// </summary>
-public enum Union54135081
-{
-  /// <summary>
-  /// Literal value: in-view
-  /// </summary>
-  [FactorioRconDefinitionValue("in-view")]
-  InView,
-
-  /// <summary>
-  /// Literal value: top-third
-  /// </summary>
-  [FactorioRconDefinitionValue("top-third")]
-  TopThird,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - in-view
-///   - top-third
-/// </summary>
-public enum Union63094882
-{
-  /// <summary>
-  /// Literal value: in-view
-  /// </summary>
-  [FactorioRconDefinitionValue("in-view")]
-  InView,
-
-  /// <summary>
-  /// Literal value: top-third
-  /// </summary>
-  [FactorioRconDefinitionValue("top-third")]
-  TopThird,
 
 }
 

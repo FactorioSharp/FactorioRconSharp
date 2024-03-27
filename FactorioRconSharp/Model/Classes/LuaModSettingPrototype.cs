@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -53,25 +53,25 @@ public abstract class LuaModSettingPrototype: LuaObject
   /// The default value of this setting.
   /// </summary>
   [FactorioRconAttribute("default_value")]
-  public Union20304321 DefaultValue { get; private set; }
+  public Union66946506 DefaultValue { get; private set; }
 
   /// <summary>
   /// The minimum value for this setting. `nil` if this setting type doesn't support a minimum.
   /// </summary>
   [FactorioRconAttribute("minimum_value")]
-  public Union23737571 MinimumValue { get; private set; }
+  public Union9649940 MinimumValue { get; private set; }
 
   /// <summary>
   /// The maximum value for this setting. `nil` if this setting type doesn't support a maximum.
   /// </summary>
   [FactorioRconAttribute("maximum_value")]
-  public Union28726945 MaximumValue { get; private set; }
+  public Union49406151 MaximumValue { get; private set; }
 
   /// <summary>
   /// The allowed values for this setting. `nil` if this setting doesn't use the a fixed set of values.
   /// </summary>
   [FactorioRconAttribute("allowed_values")]
-  public Union66394946 AllowedValues { get; private set; }
+  public Union2500192 AllowedValues { get; private set; }
 
   /// <summary>
   /// Whether this string setting allows blank values. `nil` if not a string setting.
@@ -109,25 +109,5 @@ public abstract class LuaModSettingPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union66394946: OneOfBase<List<string>, List<int>, List<double>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union20304321: OneOfBase<bool, double, int, string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union28726945: OneOfBase<double, int>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union23737571: OneOfBase<double, int>
-{
 }
 

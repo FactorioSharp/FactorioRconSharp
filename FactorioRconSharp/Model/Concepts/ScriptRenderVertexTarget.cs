@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Classes;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Concepts;
 
@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class ScriptRenderVertexTarget
 {
   [FactorioRconAttribute("target")]
-  public Union14650281 Target { get; set; }
+  public Union56482788 Target { get; set; }
 
   /// <summary>
   /// Only used if `target` is a LuaEntity.
@@ -25,10 +25,5 @@ public abstract class ScriptRenderVertexTarget
   [FactorioRconAttribute("target_offset")]
   public Vector TargetOffset { get; set; }
 
-}
-
-[GenerateOneOf]
-public abstract partial class Union14650281: OneOfBase<MapPosition, LuaEntity>
-{
 }
 

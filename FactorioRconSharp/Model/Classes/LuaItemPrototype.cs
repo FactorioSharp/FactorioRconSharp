@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -214,13 +214,13 @@ public abstract class LuaItemPrototype: LuaObject
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public Union41773672 FilterMode { get; private set; }
+  public Union65419186 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public Union4831898 InsertionPriorityMode { get; private set; }
+  public Union49292684 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -546,111 +546,13 @@ public abstract class LuaItemPrototype: LuaObject
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public abstract AmmoType? GetAmmoType(Union34361009? ammoSourceType = null);
+  public abstract AmmoType? GetAmmoType(Union45777798? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - none
-///   - whitelist
-///   - blacklist
-/// </summary>
-public enum Union41773672
-{
-  /// <summary>
-  /// Literal value: none
-  /// </summary>
-  [FactorioRconDefinitionValue("none")]
-  None,
-
-  /// <summary>
-  /// Literal value: whitelist
-  /// </summary>
-  [FactorioRconDefinitionValue("whitelist")]
-  Whitelist,
-
-  /// <summary>
-  /// Literal value: blacklist
-  /// </summary>
-  [FactorioRconDefinitionValue("blacklist")]
-  Blacklist,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - default
-///   - never
-///   - always
-///   - when-manually-filtered
-/// </summary>
-public enum Union4831898
-{
-  /// <summary>
-  /// Literal value: default
-  /// </summary>
-  [FactorioRconDefinitionValue("default")]
-  Default,
-
-  /// <summary>
-  /// Literal value: never
-  /// </summary>
-  [FactorioRconDefinitionValue("never")]
-  Never,
-
-  /// <summary>
-  /// Literal value: always
-  /// </summary>
-  [FactorioRconDefinitionValue("always")]
-  Always,
-
-  /// <summary>
-  /// Literal value: when-manually-filtered
-  /// </summary>
-  [FactorioRconDefinitionValue("when-manually-filtered")]
-  WhenManuallyFiltered,
-
-}
-
-/// <summary>
-/// Union of literals:
-///   - default
-///   - player
-///   - turret
-///   - vehicle
-/// </summary>
-public enum Union34361009
-{
-  /// <summary>
-  /// Literal value: default
-  /// </summary>
-  [FactorioRconDefinitionValue("default")]
-  Default,
-
-  /// <summary>
-  /// Literal value: player
-  /// </summary>
-  [FactorioRconDefinitionValue("player")]
-  Player,
-
-  /// <summary>
-  /// Literal value: turret
-  /// </summary>
-  [FactorioRconDefinitionValue("turret")]
-  Turret,
-
-  /// <summary>
-  /// Literal value: vehicle
-  /// </summary>
-  [FactorioRconDefinitionValue("vehicle")]
-  Vehicle,
 
 }
 

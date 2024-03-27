@@ -2,11 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioRconSharp.Core.Abstractions;
-using FactorioRconSharp.Model.Utils;
+using FactorioRconSharp.Model.Anonymous;
 using FactorioRconSharp.Model.Builtins;
 using FactorioRconSharp.Model.Concepts;
 using FactorioRconSharp.Model.Definitions;
-using OneOf;
+using FactorioRconSharp.Model.Utils;
 
 namespace FactorioRconSharp.Model.Classes;
 
@@ -92,13 +92,13 @@ public abstract class LuaStyle: LuaObject
   /// Horizontal align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("horizontal_align")]
-  public Union22774183 HorizontalAlign { get; set; }
+  public Union25037078 HorizontalAlign { get; set; }
 
   /// <summary>
   /// Vertical align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("vertical_align")]
-  public Union13350567 VerticalAlign { get; set; }
+  public Union32458187 VerticalAlign { get; set; }
 
   [FactorioRconAttribute("font_color")]
   public Color FontColor { get; set; }
@@ -278,19 +278,19 @@ public abstract class LuaStyle: LuaObject
   /// Sets both width and height to the given value. Also accepts an array with two values, setting width to the first and height to the second one.
   /// </summary>
   [FactorioRconAttribute("size")]
-  public Union37915543 Size { private get; set; }
+  public Union11857057 Size { private get; set; }
 
   /// <summary>
   /// Sets top/right/bottom/left paddings to this value. An array with two values sets top/bottom padding to the first value and left/right padding to the second value. An array with four values sets top, right, bottom, left padding respectively.
   /// </summary>
   [FactorioRconAttribute("padding")]
-  public Union43253384 Padding { private get; set; }
+  public Union56386148 Padding { private get; set; }
 
   /// <summary>
   /// Sets top/right/bottom/left margins to this value. An array with two values sets top/bottom margin to the first value and left/right margin to the second value. An array with four values sets top, right, bottom, left margin respectively.
   /// </summary>
   [FactorioRconAttribute("margin")]
-  public Union18075529 Margin { private get; set; }
+  public Union18132661 Margin { private get; set; }
 
   /// <summary>
   /// Space between the table cell contents and border. Sets top/right/bottom/left cell paddings to this value.
@@ -302,13 +302,13 @@ public abstract class LuaStyle: LuaObject
   /// Sets `extra_top/right/bottom/left_padding_when_activated` to this value. An array with two values sets top/bottom padding to the first value and left/right padding to the second value. An array with four values sets top, right, bottom, left padding respectively.
   /// </summary>
   [FactorioRconAttribute("extra_padding_when_activated")]
-  public Union59621546 ExtraPaddingWhenActivated { private get; set; }
+  public Union28701660 ExtraPaddingWhenActivated { private get; set; }
 
   /// <summary>
   /// Sets `extra_top/right/bottom/left_margin_when_activated` to this value. An array with two values sets top/bottom margin to the first value and left/right margin to the second value. An array with four values sets top, right, bottom, left margin respectively.
   /// </summary>
   [FactorioRconAttribute("extra_margin_when_activated")]
-  public Union21353980 ExtraMarginWhenActivated { private get; set; }
+  public Union43911215 ExtraMarginWhenActivated { private get; set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -327,87 +327,6 @@ public abstract class LuaStyle: LuaObject
   /// </summary>
   [FactorioRconMethod("help")]
   public abstract string Help();
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union21353980: OneOfBase<int, List<int>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union59621546: OneOfBase<int, List<int>>
-{
-}
-
-/// <summary>
-/// Union of literals:
-///   - left
-///   - center
-///   - right
-/// </summary>
-public enum Union22774183
-{
-  /// <summary>
-  /// Literal value: left
-  /// </summary>
-  [FactorioRconDefinitionValue("left")]
-  Left,
-
-  /// <summary>
-  /// Literal value: center
-  /// </summary>
-  [FactorioRconDefinitionValue("center")]
-  Center,
-
-  /// <summary>
-  /// Literal value: right
-  /// </summary>
-  [FactorioRconDefinitionValue("right")]
-  Right,
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union18075529: OneOfBase<int, List<int>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union43253384: OneOfBase<int, List<int>>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union37915543: OneOfBase<int, List<int>>
-{
-}
-
-/// <summary>
-/// Union of literals:
-///   - top
-///   - center
-///   - bottom
-/// </summary>
-public enum Union13350567
-{
-  /// <summary>
-  /// Literal value: top
-  /// </summary>
-  [FactorioRconDefinitionValue("top")]
-  Top,
-
-  /// <summary>
-  /// Literal value: center
-  /// </summary>
-  [FactorioRconDefinitionValue("center")]
-  Center,
-
-  /// <summary>
-  /// Literal value: bottom
-  /// </summary>
-  [FactorioRconDefinitionValue("bottom")]
-  Bottom,
 
 }
 
