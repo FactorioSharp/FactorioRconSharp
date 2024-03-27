@@ -23,7 +23,7 @@ public abstract class DamageTypeFilters
   /// The damage types to filter for. The value in the dictionary is meaningless and exists just to allow for easy lookup.
   /// </summary>
   [FactorioRconAttribute("types")]
-  public Dictionary<string, Type1947253782> Types { get; set; }
+  public Dictionary<string, Literal_5f951419aa4441ac94c2837533b5a9a7> Types { get; set; }
 
 }
 

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class UpgradeFilter
 {
   [FactorioRconAttribute("type")]
-  public Type1947253782 Type { get; set; }
+  public Literals_ea751ba860af4958ad5d4f7db9c40b28 Type { get; set; }
 
   /// <summary>
   /// Name of the item, or entity.

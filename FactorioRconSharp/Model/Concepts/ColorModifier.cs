@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ColorModifier")]
-public abstract partial class ColorModifier: OneOfBase<Type1947253782, Type1947253782>
+public abstract partial class ColorModifier: OneOfBase<Table_096a3faa8e2e4f018c42df1414babba9, Table_f420f7d5bbb4456d9d1e016f088d29aa>
 {
 }
 

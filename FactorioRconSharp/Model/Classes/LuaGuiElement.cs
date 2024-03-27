@@ -83,7 +83,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The style of this element. When read, this evaluates to a <see cref="LuaStyle).ForWriting,ItOnlyAcceptsAStringThatSpecifiesTheTextualIdentifier(PrototypeName" /> of the desired style.
   /// </summary>
   [FactorioRconAttribute("style")]
-  public Type1947253782 Style { get; set; }
+  public Union_de6ec3e0beb44d9fbbea30fc3537ad26 Style { get; set; }
 
   /// <summary>
   /// Sets whether this GUI element is visible or completely hidden, taking no space in the layout.
@@ -275,7 +275,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The elem value of this choose-elem-button, if any.
   /// </summary>
   [FactorioRconAttribute("elem_value")]
-  public Type1947253782 ElemValue { get; set; }
+  public Union_7d4e842a2e174568a5c915047e95d661 ElemValue { get; set; }
 
   /// <summary>
   /// The elem filters of this choose-elem-button, if any. The compatible type of filter is determined by `elem_type`.
@@ -690,7 +690,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public abstract void ScrollToElement(LuaGuiElement element, Type1947253782? scrollMode = null);
+  public abstract void ScrollToElement(LuaGuiElement element, Literals_c46e8cec55494de882552bbc4089713d? scrollMode = null);
 
   /// <summary>
   /// Selects all the text in this textbox.
@@ -737,7 +737,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public abstract void ScrollToItem(int index, Type1947253782? scrollMode = null);
+  public abstract void ScrollToItem(int index, Literals_64b6337bb40740ca8cd4ef966b32f5e4? scrollMode = null);
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.

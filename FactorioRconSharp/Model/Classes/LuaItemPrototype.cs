@@ -214,13 +214,13 @@ public abstract class LuaItemPrototype: LuaObject
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public Type1947253782 FilterMode { get; private set; }
+  public Literals_7b7e130f642946eaa33991d4700e1e12 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public Type1947253782 InsertionPriorityMode { get; private set; }
+  public Literals_1ef57fbdb65843c68504558fb829b388 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -546,7 +546,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public abstract AmmoType? GetAmmoType(Type1947253782? ammoSourceType = null);
+  public abstract AmmoType? GetAmmoType(Literals_50eaf5159f134e6ea87f214e548223c5? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.

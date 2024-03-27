@@ -44,7 +44,7 @@ public abstract class MapGenSettings
   /// Each setting in this dictionary maps the string type to the settings for that type.
   /// </summary>
   [FactorioRconAttribute("autoplace_settings")]
-  public Dictionary<Type1947253782, AutoplaceSettings> AutoplaceSettings { get; set; }
+  public Dictionary<Literals_878e3f848e804a38845160655e05ea06, AutoplaceSettings> AutoplaceSettings { get; set; }
 
   /// <summary>
   /// Map generation settings for entities of the type "cliff".

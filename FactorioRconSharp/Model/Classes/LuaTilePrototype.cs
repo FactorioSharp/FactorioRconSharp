@@ -80,7 +80,7 @@ public abstract class LuaTilePrototype: LuaObject
   public bool NeedsCorrection { get; private set; }
 
   [FactorioRconAttribute("mineable_properties")]
-  public Type1947253782 MineableProperties { get; private set; }
+  public Table_dba74dfe98774f459ed0d4536031205c MineableProperties { get; private set; }
 
   /// <summary>
   /// The next direction of this tile, if any. Used when a tile has multiple directions (such as hazard concrete)

@@ -1,9 +1,7 @@
 ﻿using System.Text;
-using System.Text.Json;
 using CaseExtensions;
 using FactorioRconSharp.ClientGenerator.Model;
 using FactorioRconSharp.ClientGenerator.Specification;
-using FactorioRconSharp.ClientGenerator.Extensions;
 
 namespace FactorioRconSharp.ClientGenerator.Compilation;
 
@@ -415,7 +413,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileSimpleType(FactorioRuntimeTypeSpecification simpleType)
     {
-        string name = $"Type{GetTypeId(simpleType)}";
+        string name = GenerateUniqueTypeName("Type");
 
         return new FactorioModelClass
         {
@@ -426,7 +424,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
     {
-        string name = $"Literal{GetTypeId(literalType)}";
+        string name = GenerateUniqueTypeName("Literal");
 
         return new FactorioModelEnum
         {
@@ -448,7 +446,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
     {
-        string name = $"Struct{GetTypeId(structType)}";
+        string name = GenerateUniqueTypeName("Struct");
         return new FactorioModelClass
         {
             Name = name,
@@ -458,7 +456,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
     {
-        string name = $"Table{GetTypeId(tableType)}";
+        string name = GenerateUniqueTypeName("Table");
         return new FactorioModelClass
         {
             Name = name,
@@ -468,7 +466,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
     {
-        string name = $"Tuple{GetTypeId(tupleType)}";
+        string name = GenerateUniqueTypeName("Tuple");
         return new FactorioModelClass
         {
             Name = name,
@@ -478,12 +476,11 @@ public class FactorioModelFileCompiler
 
     FactorioModelTopLevelStatement CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType)
     {
-
         if (unionType.IsUnionOfLiterals(out FactorioRuntimeLiteralTypeSpecification[] literals))
         {
             return new FactorioModelEnum
             {
-                Name = $"Literals{GetTypeId(unionType)}",
+                Name = GenerateUniqueTypeName("Literals"),
                 Documentation = new FactorioModelDocumentation { Summary = $"Union of literals:{string.Join("", literals.Select(l => $"{Environment.NewLine}  - {l.Value}"))}" },
                 Values = literals.Select(CompileLiteralValue).ToArray()
             };
@@ -491,7 +488,7 @@ public class FactorioModelFileCompiler
 
         return new FactorioModelClass
         {
-            Name = $"Union{GetTypeId(unionType)}",
+            Name = GenerateUniqueTypeName("Union"),
             BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
             Attributes = ["GenerateOneOf"],
             IsPartial = true,
@@ -499,9 +496,7 @@ public class FactorioModelFileCompiler
         };
     }
 
-    static int GetTypeId(FactorioRuntimeTypeSpecification type)
-    {
-        string typeContent = JsonSerializer.Serialize(type);
-        return Math.Abs(typeContent.GetStableHashCode());
-    }
+    static int GetTypeId(FactorioRuntimeTypeSpecification type) => type.GetHashCode();
+
+    static string GenerateUniqueTypeName(string name) => $"{name}_{Guid.NewGuid():N}";
 }

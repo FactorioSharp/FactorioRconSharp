@@ -265,7 +265,7 @@ public abstract class LuaPlayer: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Type1947253782? printSettings = null);
+  public abstract void Print(LocalisedString message, Union_d7cfb3a9284c4843aec1b0547086e94f? printSettings = null);
 
   /// <summary>
   /// Clear the chat console.
@@ -418,7 +418,7 @@ public abstract class LuaPlayer: LuaObject
   /// <param name="icon">Lua name: icon</param>
   /// <param name="message">Lua name: message</param>
   [FactorioRconMethod("remove_alert")]
-  public abstract void RemoveAlert(LuaEntity? entity = null, Type1947253782? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null, SignalID? icon = null, LocalisedString? message = null);
+  public abstract void RemoveAlert(LuaEntity? entity = null, Union_104b2ee6377045cd9f27bde5be629bb3? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null, SignalID? icon = null, LocalisedString? message = null);
 
   /// <summary>
   /// Get all alerts matching the given filters, or all alerts if no filters are given.
@@ -478,7 +478,7 @@ public abstract class LuaPlayer: LuaObject
   /// </summary>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("pipette_entity")]
-  public abstract bool PipetteEntity(Type1947253782 entity);
+  public abstract bool PipetteEntity(Union_53e3902d90034156ab036eba6dfbd86e entity);
 
   /// <summary>
   /// Checks if this player can build the given entity at the given location on the surface the player is on.
@@ -592,7 +592,7 @@ public abstract class LuaPlayer: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_quick_bar_slot")]
-  public abstract void SetQuickBarSlot(uint index, Type1947253782 filter);
+  public abstract void SetQuickBarSlot(uint index, Union_6c3297ecbb834fca8ce2f2f19028a023 filter);
 
   /// <summary>
   /// Gets which quick bar page is being used for the given screen page or `nil` if not known.
@@ -728,7 +728,7 @@ public abstract class LuaPlayer: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_inventory_filter")]
-  public abstract void SetInfinityInventoryFilter(uint index, Type1947253782 filter);
+  public abstract void SetInfinityInventoryFilter(uint index, Union_6a59246041ed4349aa415510d829376c filter);
 
   /// <summary>
   /// Clears all recipe notifications for this player.

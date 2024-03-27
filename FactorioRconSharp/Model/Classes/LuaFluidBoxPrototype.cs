@@ -38,7 +38,7 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public Type1947253782 ProductionType { get; private set; }
+  public Literals_d0e4b0b2c95a475a9dc10cd4c24b47c9 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
