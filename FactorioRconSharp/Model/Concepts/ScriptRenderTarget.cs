@@ -24,16 +24,3 @@ public abstract class ScriptRenderTarget
 
 }
 
-public abstract class Table8023324
-{
-  [FactorioRconAttribute("entity")]
-  public LuaEntity Entity { get; set; }
-
-  [FactorioRconAttribute("entity_offset")]
-  public Vector EntityOffset { get; set; }
-
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-}
-

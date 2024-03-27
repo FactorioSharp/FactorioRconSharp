@@ -21,13 +21,3 @@ public abstract class SteeringMapSettings
 
 }
 
-public abstract class Table30477555
-{
-  [FactorioRconAttribute("default")]
-  public SteeringMapSetting Default { get; set; }
-
-  [FactorioRconAttribute("moving")]
-  public SteeringMapSetting Moving { get; set; }
-
-}
-

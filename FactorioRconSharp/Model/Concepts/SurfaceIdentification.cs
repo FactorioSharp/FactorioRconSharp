@@ -19,8 +19,3 @@ public abstract partial class SurfaceIdentification: OneOfBase<uint, string, Lua
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union11433865: OneOfBase<uint, string, LuaSurface>
-{
-}
-

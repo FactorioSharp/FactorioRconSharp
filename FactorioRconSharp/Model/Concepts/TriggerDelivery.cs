@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerDelivery
 {
   [FactorioRconAttribute("type")]
-  public Union23275074 Type { get; set; }
+  public Union61525340 Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
   public List<TriggerEffectItem> SourceEffects { get; set; }
@@ -22,30 +22,18 @@ public abstract class TriggerDelivery
   [FactorioRconAttribute("target_effects")]
   public List<TriggerEffectItem> TargetEffects { get; set; }
 
-}
-
-public abstract class Table26257675
-{
-  [FactorioRconAttribute("type")]
-  public Union23275074 Type { get; set; }
-
-  [FactorioRconAttribute("source_effects")]
-  public List<TriggerEffectItem> SourceEffects { get; set; }
-
-  [FactorioRconAttribute("target_effects")]
-  public List<TriggerEffectItem> TargetEffects { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union23275074: OneOfBase<Literal3888511, Literal45657968, Literal49012660, Literal12081011, Literal14805024, Literal26692523>
-{
 }
 
 /// <summary>
-/// Literal value: instant
+/// Union of literals:
+///   - instant
+///   - projectile
+///   - flame-thrower
+///   - beam
+///   - stream
+///   - artillery
 /// </summary>
-public enum Literal3888511
+public enum Union61525340
 {
   /// <summary>
   /// Literal value: instant
@@ -53,65 +41,30 @@ public enum Literal3888511
   [FactorioRconDefinitionValue("instant")]
   Instant,
 
-}
-
-/// <summary>
-/// Literal value: projectile
-/// </summary>
-public enum Literal45657968
-{
   /// <summary>
   /// Literal value: projectile
   /// </summary>
   [FactorioRconDefinitionValue("projectile")]
   Projectile,
 
-}
-
-/// <summary>
-/// Literal value: flame-thrower
-/// </summary>
-public enum Literal49012660
-{
   /// <summary>
   /// Literal value: flame-thrower
   /// </summary>
   [FactorioRconDefinitionValue("flame-thrower")]
   FlameThrower,
 
-}
-
-/// <summary>
-/// Literal value: beam
-/// </summary>
-public enum Literal12081011
-{
   /// <summary>
   /// Literal value: beam
   /// </summary>
   [FactorioRconDefinitionValue("beam")]
   Beam,
 
-}
-
-/// <summary>
-/// Literal value: stream
-/// </summary>
-public enum Literal14805024
-{
   /// <summary>
   /// Literal value: stream
   /// </summary>
   [FactorioRconDefinitionValue("stream")]
   Stream,
 
-}
-
-/// <summary>
-/// Literal value: artillery
-/// </summary>
-public enum Literal26692523
-{
   /// <summary>
   /// Literal value: artillery
   /// </summary>

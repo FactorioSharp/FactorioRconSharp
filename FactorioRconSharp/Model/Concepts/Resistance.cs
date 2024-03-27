@@ -27,19 +27,3 @@ public abstract class Resistance
 
 }
 
-public abstract class Table16125021
-{
-  /// <summary>
-  /// Absolute damage decrease
-  /// </summary>
-  [FactorioRconAttribute("decrease")]
-  public float Decrease { get; set; }
-
-  /// <summary>
-  /// Percentual damage decrease
-  /// </summary>
-  [FactorioRconAttribute("percent")]
-  public float Percent { get; set; }
-
-}
-

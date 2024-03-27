@@ -21,13 +21,3 @@ public abstract class RidingState
 
 }
 
-public abstract class Table3081139
-{
-  [FactorioRconAttribute("acceleration")]
-  public RidingAccelerationEnum Acceleration { get; set; }
-
-  [FactorioRconAttribute("direction")]
-  public RidingDirectionEnum Direction { get; set; }
-
-}
-

@@ -21,13 +21,3 @@ public abstract class HeatConnection
 
 }
 
-public abstract class Table41116594
-{
-  [FactorioRconAttribute("position")]
-  public Vector Position { get; set; }
-
-  [FactorioRconAttribute("direction")]
-  public DirectionEnum Direction { get; set; }
-
-}
-

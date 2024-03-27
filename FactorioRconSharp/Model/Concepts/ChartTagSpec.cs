@@ -27,19 +27,3 @@ public abstract class ChartTagSpec
 
 }
 
-public abstract class Table46222623
-{
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-  [FactorioRconAttribute("icon")]
-  public SignalID Icon { get; set; }
-
-  [FactorioRconAttribute("text")]
-  public string Text { get; set; }
-
-  [FactorioRconAttribute("last_user")]
-  public PlayerIdentification LastUser { get; set; }
-
-}
-

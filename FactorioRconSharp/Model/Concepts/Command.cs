@@ -24,13 +24,3 @@ public abstract class Command
 
 }
 
-public abstract class Table1207217
-{
-  /// <summary>
-  /// Type of command. The remaining fields depend on the value of this field.
-  /// </summary>
-  [FactorioRconAttribute("type")]
-  public CommandEnum Type { get; set; }
-
-}
-

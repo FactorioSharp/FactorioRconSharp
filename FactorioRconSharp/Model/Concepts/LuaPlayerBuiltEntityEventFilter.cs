@@ -26,7 +26,7 @@ public abstract class LuaPlayerBuiltEntityEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union15459782 Mode { get; set; }
+  public Union48204678 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class LuaPlayerBuiltEntityEventFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table51443268
-{
-  /// <summary>
-  /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`, `"force"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union15459782 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union15459782: OneOfBase<Literal45680498, Literal49666028>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal45680498
+public enum Union48204678
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal45680498
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal49666028
-{
   /// <summary>
   /// Literal value: and
   /// </summary>

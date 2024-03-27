@@ -26,7 +26,7 @@ public abstract class LuaPreGhostUpgradedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union65796371 Mode { get; set; }
+  public Union55615624 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class LuaPreGhostUpgradedEventFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table43922618
-{
-  /// <summary>
-  /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union65796371 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union65796371: OneOfBase<Literal29046591, Literal37044771>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal29046591
+public enum Union55615624
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal29046591
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal37044771
-{
   /// <summary>
   /// Literal value: and
   /// </summary>

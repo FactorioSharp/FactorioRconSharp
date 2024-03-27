@@ -26,7 +26,7 @@ public abstract class EntityPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union36601332 Mode { get; set; }
+  public Union27867915 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class EntityPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table26717201
-{
-  /// <summary>
-  /// The condition to filter on. One of `"flying-robot"`, `"robot-with-logistics-interface"`, `"rail"`, `"ghost"`, `"explosion"`, `"vehicle"`, `"crafting-machine"`, `"rolling-stock"`, `"turret"`, `"transport-belt-connectable"`, `"wall-connectable"`, `"buildable"`, `"placable-in-editor"`, `"clonable"`, `"selectable"`, `"hidden"`, `"entity-with-health"`, `"building"`, `"fast-replaceable"`, `"uses-direction"`, `"minable"`, `"circuit-connectable"`, `"autoplace"`, `"blueprintable"`, `"item-to-place"`, `"name"`, `"type"`, `"collision-mask"`, `"flag"`, `"build-base-evolution-requirement"`, `"selection-priority"`, `"emissions"`, `"crafting-category"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union36601332 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union36601332: OneOfBase<Literal54805688, Literal45861104>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal54805688
+public enum Union27867915
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal54805688
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal45861104
-{
   /// <summary>
   /// Literal value: and
   /// </summary>
@@ -90,19 +58,18 @@ public enum Literal45861104
 }
 
 [GenerateOneOf]
-public abstract partial class Union54903627: OneOfBase<CollisionMask, CollisionMaskWithFlags>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union48701316: OneOfBase<Literal3052046, Literal21400478, Literal16634104, Literal12626972>
+public abstract partial class Union48355310: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 
 /// <summary>
-/// Literal value: collides
+/// Union of literals:
+///   - collides
+///   - layers-equals
+///   - contains-any
+///   - contains-all
 /// </summary>
-public enum Literal3052046
+public enum Union8828568
 {
   /// <summary>
   /// Literal value: collides
@@ -110,39 +77,18 @@ public enum Literal3052046
   [FactorioRconDefinitionValue("collides")]
   Collides,
 
-}
-
-/// <summary>
-/// Literal value: layers-equals
-/// </summary>
-public enum Literal21400478
-{
   /// <summary>
   /// Literal value: layers-equals
   /// </summary>
   [FactorioRconDefinitionValue("layers-equals")]
   LayersEquals,
 
-}
-
-/// <summary>
-/// Literal value: contains-any
-/// </summary>
-public enum Literal16634104
-{
   /// <summary>
   /// Literal value: contains-any
   /// </summary>
   [FactorioRconDefinitionValue("contains-any")]
   ContainsAny,
 
-}
-
-/// <summary>
-/// Literal value: contains-all
-/// </summary>
-public enum Literal12626972
-{
   /// <summary>
   /// Literal value: contains-all
   /// </summary>
@@ -152,12 +98,12 @@ public enum Literal12626972
 }
 
 [GenerateOneOf]
-public abstract partial class Union30637870: OneOfBase<string, List<string>>
+public abstract partial class Union51182215: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union16083019: OneOfBase<string, List<string>>
+public abstract partial class Union1084693: OneOfBase<string, List<string>>
 {
 }
 

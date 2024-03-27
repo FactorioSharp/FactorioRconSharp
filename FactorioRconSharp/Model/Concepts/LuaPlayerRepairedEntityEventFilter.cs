@@ -26,7 +26,7 @@ public abstract class LuaPlayerRepairedEntityEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union44491257 Mode { get; set; }
+  public Union54147313 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class LuaPlayerRepairedEntityEventFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table61700749
-{
-  /// <summary>
-  /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union44491257 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union44491257: OneOfBase<Literal15178037, Literal37509902>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal15178037
+public enum Union54147313
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal15178037
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal37509902
-{
   /// <summary>
   /// Literal value: and
   /// </summary>

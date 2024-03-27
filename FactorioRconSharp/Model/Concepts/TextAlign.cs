@@ -15,21 +15,8 @@ namespace FactorioRconSharp.Model.Concepts;
 /// 
 /// For example, `"right"` aligned text means the right side of the text is at the target position. Or in other words, the target is on the right of the text.
 /// </summary>
-[GenerateOneOf]
-[FactorioRconConcept("TextAlign")]
-public abstract partial class TextAlign: OneOfBase<Literal2630851, Literal9185816, Literal65062096>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union62571385: OneOfBase<Literal2630851, Literal9185816, Literal65062096>
-{
-}
-
-/// <summary>
-/// Literal value: left
-/// </summary>
-public enum Literal2630851
+[FactorioRconDefinition("TextAlign")]
+public enum TextAlign
 {
   /// <summary>
   /// Literal value: left
@@ -37,26 +24,12 @@ public enum Literal2630851
   [FactorioRconDefinitionValue("left")]
   Left,
 
-}
-
-/// <summary>
-/// Literal value: right
-/// </summary>
-public enum Literal9185816
-{
   /// <summary>
   /// Literal value: right
   /// </summary>
   [FactorioRconDefinitionValue("right")]
   Right,
 
-}
-
-/// <summary>
-/// Literal value: center
-/// </summary>
-public enum Literal65062096
-{
   /// <summary>
   /// Literal value: center
   /// </summary>

@@ -24,16 +24,3 @@ public abstract class DecorativeResult
 
 }
 
-public abstract class Table54145554
-{
-  [FactorioRconAttribute("position")]
-  public TilePosition Position { get; set; }
-
-  [FactorioRconAttribute("decorative")]
-  public LuaDecorativePrototype Decorative { get; set; }
-
-  [FactorioRconAttribute("amount")]
-  public uint Amount { get; set; }
-
-}
-

@@ -42,31 +42,3 @@ public abstract class EnemyEvolutionMapSettings
 
 }
 
-public abstract class Table48085274
-{
-  /// <summary>
-  /// Whether enemy evolution is enabled at all.
-  /// </summary>
-  [FactorioRconAttribute("enabled")]
-  public bool Enabled { get; set; }
-
-  /// <summary>
-  /// The amount evolution naturally progresses by every second. Defaults to `0.000004`.
-  /// </summary>
-  [FactorioRconAttribute("time_factor")]
-  public double TimeFactor { get; set; }
-
-  /// <summary>
-  /// The amount evolution progresses for every destroyed spawner. Defaults to `0.002`.
-  /// </summary>
-  [FactorioRconAttribute("destroy_factor")]
-  public double DestroyFactor { get; set; }
-
-  /// <summary>
-  /// The amount evolution progresses for every unit of pollution. Defaults to `0.0000009`.
-  /// </summary>
-  [FactorioRconAttribute("pollution_factor")]
-  public double PollutionFactor { get; set; }
-
-}
-

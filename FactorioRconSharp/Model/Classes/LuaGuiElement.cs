@@ -83,7 +83,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The style of this element. When read, this evaluates to a <see cref="LuaStyle).ForWriting,ItOnlyAcceptsAStringThatSpecifiesTheTextualIdentifier(PrototypeName" /> of the desired style.
   /// </summary>
   [FactorioRconAttribute("style")]
-  public Union22367068 Style { get; set; }
+  public Union48209832 Style { get; set; }
 
   /// <summary>
   /// Sets whether this GUI element is visible or completely hidden, taking no space in the layout.
@@ -275,7 +275,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The elem value of this choose-elem-button, if any.
   /// </summary>
   [FactorioRconAttribute("elem_value")]
-  public Union44665200 ElemValue { get; set; }
+  public Union5773521 ElemValue { get; set; }
 
   /// <summary>
   /// The elem filters of this choose-elem-button, if any. The compatible type of filter is determined by `elem_type`.
@@ -690,7 +690,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public abstract void ScrollToElement(LuaGuiElement element, Union20222386? scrollMode = null);
+  public abstract void ScrollToElement(LuaGuiElement element, Union54135081? scrollMode = null);
 
   /// <summary>
   /// Selects all the text in this textbox.
@@ -737,7 +737,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public abstract void ScrollToItem(int index, Union49578303? scrollMode = null);
+  public abstract void ScrollToItem(int index, Union63094882? scrollMode = null);
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.
@@ -763,24 +763,21 @@ public abstract class LuaGuiElement: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union44665200: OneOfBase<string, SignalID>
+public abstract partial class Union5773521: OneOfBase<string, SignalID>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union22367068: OneOfBase<LuaStyle, string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union20222386: OneOfBase<Literal28484652, Literal20748542>
+public abstract partial class Union48209832: OneOfBase<LuaStyle, string>
 {
 }
 
 /// <summary>
-/// Literal value: in-view
+/// Union of literals:
+///   - in-view
+///   - top-third
 /// </summary>
-public enum Literal28484652
+public enum Union54135081
 {
   /// <summary>
   /// Literal value: in-view
@@ -788,13 +785,6 @@ public enum Literal28484652
   [FactorioRconDefinitionValue("in-view")]
   InView,
 
-}
-
-/// <summary>
-/// Literal value: top-third
-/// </summary>
-public enum Literal20748542
-{
   /// <summary>
   /// Literal value: top-third
   /// </summary>
@@ -803,15 +793,12 @@ public enum Literal20748542
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union49578303: OneOfBase<Literal64836814, Literal1219419>
-{
-}
-
 /// <summary>
-/// Literal value: in-view
+/// Union of literals:
+///   - in-view
+///   - top-third
 /// </summary>
-public enum Literal64836814
+public enum Union63094882
 {
   /// <summary>
   /// Literal value: in-view
@@ -819,13 +806,6 @@ public enum Literal64836814
   [FactorioRconDefinitionValue("in-view")]
   InView,
 
-}
-
-/// <summary>
-/// Literal value: top-third
-/// </summary>
-public enum Literal1219419
-{
   /// <summary>
   /// Literal value: top-third
   /// </summary>

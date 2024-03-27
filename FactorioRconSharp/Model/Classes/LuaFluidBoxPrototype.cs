@@ -38,7 +38,7 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public Union8462621 ProductionType { get; private set; }
+  public Union64836814 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -102,15 +102,14 @@ public abstract class LuaFluidBoxPrototype: LuaObject
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union8462621: OneOfBase<Literal44681534, Literal42604054, Literal32846161, Literal7348436>
-{
-}
-
 /// <summary>
-/// Literal value: input
+/// Union of literals:
+///   - input
+///   - input-output
+///   - output
+///   - none
 /// </summary>
-public enum Literal44681534
+public enum Union64836814
 {
   /// <summary>
   /// Literal value: input
@@ -118,39 +117,18 @@ public enum Literal44681534
   [FactorioRconDefinitionValue("input")]
   Input,
 
-}
-
-/// <summary>
-/// Literal value: input-output
-/// </summary>
-public enum Literal42604054
-{
   /// <summary>
   /// Literal value: input-output
   /// </summary>
   [FactorioRconDefinitionValue("input-output")]
   InputOutput,
 
-}
-
-/// <summary>
-/// Literal value: output
-/// </summary>
-public enum Literal32846161
-{
   /// <summary>
   /// Literal value: output
   /// </summary>
   [FactorioRconDefinitionValue("output")]
   Output,
 
-}
-
-/// <summary>
-/// Literal value: none
-/// </summary>
-public enum Literal7348436
-{
   /// <summary>
   /// Literal value: none
   /// </summary>

@@ -27,16 +27,3 @@ public abstract class ChunkPositionAndArea
 
 }
 
-public abstract class Table29422698
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
-  [FactorioRconAttribute("area")]
-  public BoundingBox Area { get; set; }
-
-}
-

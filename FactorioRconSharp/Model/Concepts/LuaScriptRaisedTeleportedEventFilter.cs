@@ -26,7 +26,7 @@ public abstract class LuaScriptRaisedTeleportedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union32812383 Mode { get; set; }
+  public Union16125021 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class LuaScriptRaisedTeleportedEventFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table19644251
-{
-  /// <summary>
-  /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union32812383 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union32812383: OneOfBase<Literal12035020, Literal13471275>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal12035020
+public enum Union16125021
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal12035020
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal13471275
-{
   /// <summary>
   /// Literal value: and
   /// </summary>

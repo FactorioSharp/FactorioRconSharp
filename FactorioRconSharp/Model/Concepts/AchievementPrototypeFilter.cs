@@ -26,7 +26,7 @@ public abstract class AchievementPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union5991177 Mode { get; set; }
+  public Union29782071 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class AchievementPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table51116765
-{
-  /// <summary>
-  /// The condition to filter on. One of `"allowed-without-fight"`, `"type"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union5991177 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union5991177: OneOfBase<Literal39526418, Literal5415451>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal39526418
+public enum Union29782071
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal39526418
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal5415451
-{
   /// <summary>
   /// Literal value: and
   /// </summary>
@@ -90,7 +58,7 @@ public enum Literal5415451
 }
 
 [GenerateOneOf]
-public abstract partial class Union22830370: OneOfBase<string, List<string>>
+public abstract partial class Union21443715: OneOfBase<string, List<string>>
 {
 }
 

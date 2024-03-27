@@ -24,16 +24,3 @@ public abstract class ProgrammableSpeakerParameters
 
 }
 
-public abstract class Table35866821
-{
-  [FactorioRconAttribute("playback_volume")]
-  public double PlaybackVolume { get; set; }
-
-  [FactorioRconAttribute("playback_globally")]
-  public bool PlaybackGlobally { get; set; }
-
-  [FactorioRconAttribute("allow_polyphony")]
-  public bool AllowPolyphony { get; set; }
-
-}
-

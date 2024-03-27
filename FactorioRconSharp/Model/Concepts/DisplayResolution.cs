@@ -21,13 +21,3 @@ public abstract class DisplayResolution
 
 }
 
-public abstract class Table57013419
-{
-  [FactorioRconAttribute("width")]
-  public uint Width { get; set; }
-
-  [FactorioRconAttribute("height")]
-  public uint Height { get; set; }
-
-}
-

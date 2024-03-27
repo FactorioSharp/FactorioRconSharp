@@ -36,25 +36,3 @@ public abstract class EventData
 
 }
 
-public abstract class Table29893828
-{
-  /// <summary>
-  /// The identifier of the event this handler was registered to.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public EventsEnum Name { get; set; }
-
-  /// <summary>
-  /// The tick during which the event happened.
-  /// </summary>
-  [FactorioRconAttribute("tick")]
-  public uint Tick { get; set; }
-
-  /// <summary>
-  /// The name of the mod that raised the event if it was raised using <see cref="LuaBootstrap.RaiseEvent" />.
-  /// </summary>
-  [FactorioRconAttribute("mod_name")]
-  public string ModName { get; set; }
-
-}
-

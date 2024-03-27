@@ -21,13 +21,3 @@ public abstract class RailEnd
 
 }
 
-public abstract class Table8587493
-{
-  [FactorioRconAttribute("rail")]
-  public LuaEntity Rail { get; set; }
-
-  [FactorioRconAttribute("direction")]
-  public RailDirectionEnum Direction { get; set; }
-
-}
-

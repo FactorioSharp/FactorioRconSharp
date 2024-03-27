@@ -27,19 +27,3 @@ public abstract class SpawnPointDefinition
 
 }
 
-public abstract class Table66825917
-{
-  /// <summary>
-  /// Evolution factor for which this weight applies.
-  /// </summary>
-  [FactorioRconAttribute("evolution_factor")]
-  public double EvolutionFactor { get; set; }
-
-  /// <summary>
-  /// Probability of spawning this unit at this evolution factor.
-  /// </summary>
-  [FactorioRconAttribute("weight")]
-  public double Weight { get; set; }
-
-}
-

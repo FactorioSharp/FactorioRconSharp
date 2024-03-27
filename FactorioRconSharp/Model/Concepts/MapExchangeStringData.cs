@@ -24,13 +24,3 @@ public abstract class MapExchangeStringData
 
 }
 
-public abstract class Table3908350
-{
-  [FactorioRconAttribute("map_settings")]
-  public MapAndDifficultySettings MapSettings { get; set; }
-
-  [FactorioRconAttribute("map_gen_settings")]
-  public MapGenSettings MapGenSettings { get; set; }
-
-}
-

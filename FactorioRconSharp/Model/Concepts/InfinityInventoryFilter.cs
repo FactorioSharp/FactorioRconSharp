@@ -32,7 +32,7 @@ public abstract class InfinityInventoryFilter
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union46124038 Mode { get; set; }
+  public Union23558896 Mode { get; set; }
 
   /// <summary>
   /// The index of this filter in the filters list. Not required when writing a filter.
@@ -40,45 +40,15 @@ public abstract class InfinityInventoryFilter
   [FactorioRconAttribute("index")]
   public uint Index { get; set; }
 
-}
-
-public abstract class Table8587703
-{
-  /// <summary>
-  /// Name of the item.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  /// <summary>
-  /// The count of the filter.
-  /// </summary>
-  [FactorioRconAttribute("count")]
-  public uint Count { get; set; }
-
-  /// <summary>
-  /// Defaults to `"at-least"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union46124038 Mode { get; set; }
-
-  /// <summary>
-  /// The index of this filter in the filters list. Not required when writing a filter.
-  /// </summary>
-  [FactorioRconAttribute("index")]
-  public uint Index { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union46124038: OneOfBase<Literal29080708, Literal6715097, Literal6799314>
-{
 }
 
 /// <summary>
-/// Literal value: at-least
+/// Union of literals:
+///   - at-least
+///   - at-most
+///   - exactly
 /// </summary>
-public enum Literal29080708
+public enum Union23558896
 {
   /// <summary>
   /// Literal value: at-least
@@ -86,26 +56,12 @@ public enum Literal29080708
   [FactorioRconDefinitionValue("at-least")]
   AtLeast,
 
-}
-
-/// <summary>
-/// Literal value: at-most
-/// </summary>
-public enum Literal6715097
-{
   /// <summary>
   /// Literal value: at-most
   /// </summary>
   [FactorioRconDefinitionValue("at-most")]
   AtMost,
 
-}
-
-/// <summary>
-/// Literal value: exactly
-/// </summary>
-public enum Literal6799314
-{
   /// <summary>
   /// Literal value: exactly
   /// </summary>

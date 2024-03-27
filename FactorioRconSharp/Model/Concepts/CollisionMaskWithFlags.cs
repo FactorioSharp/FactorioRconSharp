@@ -14,19 +14,19 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A <see cref="CollisionMask" /> which also includes any flags this mask has.
 /// </summary>
 [FactorioRconConcept("CollisionMaskWithFlags")]
-public abstract class CollisionMaskWithFlags: Dictionary<Union55898148, Literal10433556>
+public abstract class CollisionMaskWithFlags: Dictionary<Union40196552, Literal51417822>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union55898148: OneOfBase<CollisionMaskLayer, Literal34137681, Literal50468670, Literal54305305>
+public abstract partial class Union40196552: OneOfBase<CollisionMaskLayer, Literal19066549, Literal25216348, Literal26833123>
 {
 }
 
 /// <summary>
 /// Literal value: not-colliding-with-itself
 /// </summary>
-public enum Literal34137681
+public enum Literal19066549
 {
   /// <summary>
   /// Literal value: not-colliding-with-itself
@@ -39,7 +39,7 @@ public enum Literal34137681
 /// <summary>
 /// Literal value: consider-tile-transitions
 /// </summary>
-public enum Literal50468670
+public enum Literal25216348
 {
   /// <summary>
   /// Literal value: consider-tile-transitions
@@ -52,7 +52,7 @@ public enum Literal50468670
 /// <summary>
 /// Literal value: colliding-with-tiles-only
 /// </summary>
-public enum Literal54305305
+public enum Literal26833123
 {
   /// <summary>
   /// Literal value: colliding-with-tiles-only
@@ -65,7 +65,7 @@ public enum Literal54305305
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal10433556
+public enum Literal51417822
 {
   /// <summary>
   /// Literal value: True

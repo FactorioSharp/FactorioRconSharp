@@ -24,16 +24,3 @@ public abstract class CopperConnectionDefinition
 
 }
 
-public abstract class Table38486436
-{
-  [FactorioRconAttribute("source_wire_connector")]
-  public WireConnectionIdEnum SourceWireConnector { get; set; }
-
-  [FactorioRconAttribute("target_entity")]
-  public LuaEntity TargetEntity { get; set; }
-
-  [FactorioRconAttribute("target_wire_connector")]
-  public WireConnectionIdEnum TargetWireConnector { get; set; }
-
-}
-

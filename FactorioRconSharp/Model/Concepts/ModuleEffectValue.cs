@@ -21,13 +21,3 @@ public abstract class ModuleEffectValue
 
 }
 
-public abstract class Table18660595
-{
-  /// <summary>
-  /// The percentual increase of the attribute. A value of `0.6` means a 60% increase.
-  /// </summary>
-  [FactorioRconAttribute("bonus")]
-  public float Bonus { get; set; }
-
-}
-

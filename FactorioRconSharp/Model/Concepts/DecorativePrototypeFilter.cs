@@ -26,7 +26,7 @@ public abstract class DecorativePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union64982994 Mode { get; set; }
+  public Union52064999 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class DecorativePrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table20753582
-{
-  /// <summary>
-  /// The condition to filter on. One of `"decal"`, `"autoplace"`, `"collision-mask"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union64982994 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union64982994: OneOfBase<Literal5458650, Literal24083131>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal5458650
+public enum Union52064999
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal5458650
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal24083131
-{
   /// <summary>
   /// Literal value: and
   /// </summary>
@@ -90,7 +58,7 @@ public enum Literal24083131
 }
 
 [GenerateOneOf]
-public abstract partial class Union27322174: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union40423386: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 

@@ -36,28 +36,3 @@ public abstract class TriggerEffectItem
 
 }
 
-public abstract class Table35885672
-{
-  [FactorioRconAttribute("type")]
-  public TriggerEffectItemType Type { get; set; }
-
-  [FactorioRconAttribute("repeat_count")]
-  public ushort RepeatCount { get; set; }
-
-  [FactorioRconAttribute("repeat_count_deviation")]
-  public ushort RepeatCountDeviation { get; set; }
-
-  [FactorioRconAttribute("probability")]
-  public float Probability { get; set; }
-
-  [FactorioRconAttribute("affects_target")]
-  public bool AffectsTarget { get; set; }
-
-  [FactorioRconAttribute("show_in_tooltip")]
-  public bool ShowInTooltip { get; set; }
-
-  [FactorioRconAttribute("damage_type_filters")]
-  public DamageTypeFilters DamageTypeFilters { get; set; }
-
-}
-

@@ -27,19 +27,3 @@ public abstract class Decorative
 
 }
 
-public abstract class Table14600233
-{
-  /// <summary>
-  /// The name of the decorative prototype.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  [FactorioRconAttribute("position")]
-  public TilePosition Position { get; set; }
-
-  [FactorioRconAttribute("amount")]
-  public byte Amount { get; set; }
-
-}
-

@@ -27,19 +27,3 @@ public abstract class AdvancedMapGenSettings
 
 }
 
-public abstract class Table58100981
-{
-  [FactorioRconAttribute("pollution")]
-  public PollutionMapSettings Pollution { get; set; }
-
-  [FactorioRconAttribute("enemy_evolution")]
-  public EnemyEvolutionMapSettings EnemyEvolution { get; set; }
-
-  [FactorioRconAttribute("enemy_expansion")]
-  public EnemyExpansionMapSettings EnemyExpansion { get; set; }
-
-  [FactorioRconAttribute("difficulty_settings")]
-  public DifficultySettings DifficultySettings { get; set; }
-
-}
-

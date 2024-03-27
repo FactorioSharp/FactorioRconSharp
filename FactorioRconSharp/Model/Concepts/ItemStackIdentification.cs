@@ -19,8 +19,3 @@ public abstract partial class ItemStackIdentification: OneOfBase<SimpleItemStack
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union37880827: OneOfBase<SimpleItemStack, LuaItemStack>
-{
-}
-

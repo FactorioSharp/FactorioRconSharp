@@ -27,19 +27,3 @@ public abstract class AttackParameterFluid
 
 }
 
-public abstract class Table30673304
-{
-  /// <summary>
-  /// Name of the <see cref="LuaFluidPrototype" />.
-  /// </summary>
-  [FactorioRconAttribute("type")]
-  public string Type { get; set; }
-
-  /// <summary>
-  /// Multiplier applied to the damage of an attack.
-  /// </summary>
-  [FactorioRconAttribute("damage_modifier")]
-  public double DamageModifier { get; set; }
-
-}
-

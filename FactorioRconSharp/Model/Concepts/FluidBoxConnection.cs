@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class FluidBoxConnection
 {
   [FactorioRconAttribute("type")]
-  public Union18555401 Type { get; set; }
+  public Union40648905 Type { get; set; }
 
   /// <summary>
   /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.
@@ -31,36 +31,15 @@ public abstract class FluidBoxConnection
   [FactorioRconAttribute("max_underground_distance")]
   public uint MaxUndergroundDistance { get; set; }
 
-}
-
-public abstract class Table9896236
-{
-  [FactorioRconAttribute("type")]
-  public Union18555401 Type { get; set; }
-
-  /// <summary>
-  /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.
-  /// </summary>
-  [FactorioRconAttribute("positions")]
-  public List<Vector> Positions { get; set; }
-
-  /// <summary>
-  /// The maximum tile distance this underground connection can connect at if this is an underground pipe.
-  /// </summary>
-  [FactorioRconAttribute("max_underground_distance")]
-  public uint MaxUndergroundDistance { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union18555401: OneOfBase<Literal1235721, Literal35835924, Literal32608861>
-{
 }
 
 /// <summary>
-/// Literal value: input
+/// Union of literals:
+///   - input
+///   - output
+///   - input-output
 /// </summary>
-public enum Literal1235721
+public enum Union40648905
 {
   /// <summary>
   /// Literal value: input
@@ -68,26 +47,12 @@ public enum Literal1235721
   [FactorioRconDefinitionValue("input")]
   Input,
 
-}
-
-/// <summary>
-/// Literal value: output
-/// </summary>
-public enum Literal35835924
-{
   /// <summary>
   /// Literal value: output
   /// </summary>
   [FactorioRconDefinitionValue("output")]
   Output,
 
-}
-
-/// <summary>
-/// Literal value: input-output
-/// </summary>
-public enum Literal32608861
-{
   /// <summary>
   /// Literal value: input-output
   /// </summary>

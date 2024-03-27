@@ -214,13 +214,13 @@ public abstract class LuaItemPrototype: LuaObject
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public Union18898419 FilterMode { get; private set; }
+  public Union41773672 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public Union11183252 InsertionPriorityMode { get; private set; }
+  public Union4831898 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -546,7 +546,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public abstract AmmoType? GetAmmoType(Union55878869? ammoSourceType = null);
+  public abstract AmmoType? GetAmmoType(Union34361009? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
@@ -556,15 +556,13 @@ public abstract class LuaItemPrototype: LuaObject
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union18898419: OneOfBase<Literal9874484, Literal17924607, Literal50051574>
-{
-}
-
 /// <summary>
-/// Literal value: none
+/// Union of literals:
+///   - none
+///   - whitelist
+///   - blacklist
 /// </summary>
-public enum Literal9874484
+public enum Union41773672
 {
   /// <summary>
   /// Literal value: none
@@ -572,26 +570,12 @@ public enum Literal9874484
   [FactorioRconDefinitionValue("none")]
   None,
 
-}
-
-/// <summary>
-/// Literal value: whitelist
-/// </summary>
-public enum Literal17924607
-{
   /// <summary>
   /// Literal value: whitelist
   /// </summary>
   [FactorioRconDefinitionValue("whitelist")]
   Whitelist,
 
-}
-
-/// <summary>
-/// Literal value: blacklist
-/// </summary>
-public enum Literal50051574
-{
   /// <summary>
   /// Literal value: blacklist
   /// </summary>
@@ -600,15 +584,14 @@ public enum Literal50051574
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union11183252: OneOfBase<Literal42209503, Literal16116045, Literal64712146, Literal64712930>
-{
-}
-
 /// <summary>
-/// Literal value: default
+/// Union of literals:
+///   - default
+///   - never
+///   - always
+///   - when-manually-filtered
 /// </summary>
-public enum Literal42209503
+public enum Union4831898
 {
   /// <summary>
   /// Literal value: default
@@ -616,39 +599,18 @@ public enum Literal42209503
   [FactorioRconDefinitionValue("default")]
   Default,
 
-}
-
-/// <summary>
-/// Literal value: never
-/// </summary>
-public enum Literal16116045
-{
   /// <summary>
   /// Literal value: never
   /// </summary>
   [FactorioRconDefinitionValue("never")]
   Never,
 
-}
-
-/// <summary>
-/// Literal value: always
-/// </summary>
-public enum Literal64712146
-{
   /// <summary>
   /// Literal value: always
   /// </summary>
   [FactorioRconDefinitionValue("always")]
   Always,
 
-}
-
-/// <summary>
-/// Literal value: when-manually-filtered
-/// </summary>
-public enum Literal64712930
-{
   /// <summary>
   /// Literal value: when-manually-filtered
   /// </summary>
@@ -657,15 +619,14 @@ public enum Literal64712930
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union55878869: OneOfBase<Literal64735656, Literal65394697, Literal17398045, Literal34781257>
-{
-}
-
 /// <summary>
-/// Literal value: default
+/// Union of literals:
+///   - default
+///   - player
+///   - turret
+///   - vehicle
 /// </summary>
-public enum Literal64735656
+public enum Union34361009
 {
   /// <summary>
   /// Literal value: default
@@ -673,39 +634,18 @@ public enum Literal64735656
   [FactorioRconDefinitionValue("default")]
   Default,
 
-}
-
-/// <summary>
-/// Literal value: player
-/// </summary>
-public enum Literal65394697
-{
   /// <summary>
   /// Literal value: player
   /// </summary>
   [FactorioRconDefinitionValue("player")]
   Player,
 
-}
-
-/// <summary>
-/// Literal value: turret
-/// </summary>
-public enum Literal17398045
-{
   /// <summary>
   /// Literal value: turret
   /// </summary>
   [FactorioRconDefinitionValue("turret")]
   Turret,
 
-}
-
-/// <summary>
-/// Literal value: vehicle
-/// </summary>
-public enum Literal34781257
-{
   /// <summary>
   /// Literal value: vehicle
   /// </summary>

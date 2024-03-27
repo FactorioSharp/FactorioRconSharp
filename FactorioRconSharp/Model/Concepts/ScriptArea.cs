@@ -30,19 +30,3 @@ public abstract class ScriptArea
 
 }
 
-public abstract class Table16605191
-{
-  [FactorioRconAttribute("area")]
-  public BoundingBox Area { get; set; }
-
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  [FactorioRconAttribute("color")]
-  public Color Color { get; set; }
-
-  [FactorioRconAttribute("id")]
-  public uint Id { get; set; }
-
-}
-

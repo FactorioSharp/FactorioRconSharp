@@ -30,22 +30,3 @@ public abstract class DragTarget
 
 }
 
-public abstract class Table56431129
-{
-  [FactorioRconAttribute("target_entity")]
-  public LuaEntity TargetEntity { get; set; }
-
-  /// <summary>
-  /// If the wire being dragged is a circuit wire this is the connector id.
-  /// </summary>
-  [FactorioRconAttribute("target_circuit_id")]
-  public CircuitConnectorIdEnum TargetCircuitId { get; set; }
-
-  /// <summary>
-  /// If the wire being dragged is copper wire this is the wire id.
-  /// </summary>
-  [FactorioRconAttribute("target_wire_id")]
-  public WireConnectionIdEnum TargetWireId { get; set; }
-
-}
-

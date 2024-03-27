@@ -26,7 +26,7 @@ public abstract class ModSettingPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union23149339 Mode { get; set; }
+  public Union55889342 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class ModSettingPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table51708425
-{
-  /// <summary>
-  /// The condition to filter on. One of `"type"`, `"mod"`, `"setting-type"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union23149339 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union23149339: OneOfBase<Literal242197, Literal7023723>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal242197
+public enum Union55889342
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal242197
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal7023723
-{
   /// <summary>
   /// Literal value: and
   /// </summary>
@@ -90,7 +58,7 @@ public enum Literal7023723
 }
 
 [GenerateOneOf]
-public abstract partial class Union2361387: OneOfBase<string, List<string>>
+public abstract partial class Union32825514: OneOfBase<string, List<string>>
 {
 }
 

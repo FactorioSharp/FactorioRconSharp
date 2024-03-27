@@ -21,13 +21,3 @@ public abstract class TabAndContent
 
 }
 
-public abstract class Table593062
-{
-  [FactorioRconAttribute("tab")]
-  public LuaGuiElement Tab { get; set; }
-
-  [FactorioRconAttribute("content")]
-  public LuaGuiElement Content { get; set; }
-
-}
-

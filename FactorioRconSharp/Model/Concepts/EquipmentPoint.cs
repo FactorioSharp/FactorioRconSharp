@@ -24,13 +24,3 @@ public abstract class EquipmentPoint
 
 }
 
-public abstract class Table63785227
-{
-  [FactorioRconAttribute("x")]
-  public uint X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public uint Y { get; set; }
-
-}
-

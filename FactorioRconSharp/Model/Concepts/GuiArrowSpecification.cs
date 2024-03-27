@@ -27,28 +27,14 @@ public abstract class GuiArrowSpecification
 
 }
 
-public abstract class Table24038422
-{
-  [FactorioRconAttribute("margin")]
-  public uint Margin { get; set; }
-
-  /// <summary>
-  /// This determines which of the following fields will be required.
-  /// </summary>
-  [FactorioRconAttribute("type")]
-  public GuiArrowType Type { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union26025613: OneOfBase<Literal16545285, Literal10051224, Literal23050047, Literal64471607>
-{
-}
-
 /// <summary>
-/// Literal value: player
+/// Union of literals:
+///   - player
+///   - target
+///   - player-quickbar
+///   - player-equipment-bar
 /// </summary>
-public enum Literal16545285
+public enum Union5141801
 {
   /// <summary>
   /// Literal value: player
@@ -56,39 +42,18 @@ public enum Literal16545285
   [FactorioRconDefinitionValue("player")]
   Player,
 
-}
-
-/// <summary>
-/// Literal value: target
-/// </summary>
-public enum Literal10051224
-{
   /// <summary>
   /// Literal value: target
   /// </summary>
   [FactorioRconDefinitionValue("target")]
   Target,
 
-}
-
-/// <summary>
-/// Literal value: player-quickbar
-/// </summary>
-public enum Literal23050047
-{
   /// <summary>
   /// Literal value: player-quickbar
   /// </summary>
   [FactorioRconDefinitionValue("player-quickbar")]
   PlayerQuickbar,
 
-}
-
-/// <summary>
-/// Literal value: player-equipment-bar
-/// </summary>
-public enum Literal64471607
-{
   /// <summary>
   /// Literal value: player-equipment-bar
   /// </summary>

@@ -21,13 +21,3 @@ public abstract class ItemStackLocation
 
 }
 
-public abstract class Table24802162
-{
-  [FactorioRconAttribute("inventory")]
-  public InventoryEnum Inventory { get; set; }
-
-  [FactorioRconAttribute("slot")]
-  public uint Slot { get; set; }
-
-}
-

@@ -30,19 +30,3 @@ public abstract class ScriptPosition
 
 }
 
-public abstract class Table13164703
-{
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  [FactorioRconAttribute("color")]
-  public Color Color { get; set; }
-
-  [FactorioRconAttribute("id")]
-  public uint Id { get; set; }
-
-}
-

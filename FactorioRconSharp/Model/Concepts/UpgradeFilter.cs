@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class UpgradeFilter
 {
   [FactorioRconAttribute("type")]
-  public Union14653651 Type { get; set; }
+  public Union1217750 Type { get; set; }
 
   /// <summary>
   /// Name of the item, or entity.
@@ -22,30 +22,14 @@ public abstract class UpgradeFilter
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
 
-}
-
-public abstract class Table9761693
-{
-  [FactorioRconAttribute("type")]
-  public Union14653651 Type { get; set; }
-
-  /// <summary>
-  /// Name of the item, or entity.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union14653651: OneOfBase<Literal22302720, Literal42799128>
-{
 }
 
 /// <summary>
-/// Literal value: item
+/// Union of literals:
+///   - item
+///   - entity
 /// </summary>
-public enum Literal22302720
+public enum Union1217750
 {
   /// <summary>
   /// Literal value: item
@@ -53,13 +37,6 @@ public enum Literal22302720
   [FactorioRconDefinitionValue("item")]
   Item,
 
-}
-
-/// <summary>
-/// Literal value: entity
-/// </summary>
-public enum Literal42799128
-{
   /// <summary>
   /// Literal value: entity
   /// </summary>

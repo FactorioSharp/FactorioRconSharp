@@ -19,8 +19,3 @@ public abstract partial class ForceIdentification: OneOfBase<byte, string, LuaFo
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union30095983: OneOfBase<byte, string, LuaForce>
-{
-}
-

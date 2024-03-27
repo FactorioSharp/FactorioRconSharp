@@ -27,19 +27,3 @@ public abstract class PrototypeHistory
 
 }
 
-public abstract class Table21019525
-{
-  /// <summary>
-  /// The mod that created this prototype.
-  /// </summary>
-  [FactorioRconAttribute("created")]
-  public string Created { get; set; }
-
-  /// <summary>
-  /// The mods that changed this prototype in the order they changed it.
-  /// </summary>
-  [FactorioRconAttribute("changed")]
-  public List<string> Changed { get; set; }
-
-}
-

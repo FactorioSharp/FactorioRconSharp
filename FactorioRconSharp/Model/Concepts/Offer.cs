@@ -30,19 +30,3 @@ public abstract class Offer
 
 }
 
-public abstract class Table62354113
-{
-  /// <summary>
-  /// List of prices.
-  /// </summary>
-  [FactorioRconAttribute("price")]
-  public List<Ingredient> Price { get; set; }
-
-  /// <summary>
-  /// The action that will take place when a player accepts the offer. Usually a `"give-item"` modifier.
-  /// </summary>
-  [FactorioRconAttribute("offer")]
-  public TechnologyModifier Offer { get; set; }
-
-}
-

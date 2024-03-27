@@ -13,21 +13,8 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// Direction of a <see cref="LuaGuiElement.Direction" /> layout.
 /// </summary>
-[GenerateOneOf]
-[FactorioRconConcept("GuiDirection")]
-public abstract partial class GuiDirection: OneOfBase<Literal15794481, Literal63248657>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union51882681: OneOfBase<Literal15794481, Literal63248657>
-{
-}
-
-/// <summary>
-/// Literal value: horizontal
-/// </summary>
-public enum Literal15794481
+[FactorioRconDefinition("GuiDirection")]
+public enum GuiDirection
 {
   /// <summary>
   /// Literal value: horizontal
@@ -35,13 +22,6 @@ public enum Literal15794481
   [FactorioRconDefinitionValue("horizontal")]
   Horizontal,
 
-}
-
-/// <summary>
-/// Literal value: vertical
-/// </summary>
-public enum Literal63248657
-{
   /// <summary>
   /// Literal value: vertical
   /// </summary>

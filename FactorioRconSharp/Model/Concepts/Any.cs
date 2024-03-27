@@ -19,8 +19,3 @@ public abstract partial class Any: OneOfBase<string, bool, double, LuaTable, Lua
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union20304321: OneOfBase<string, bool, double, LuaTable, LuaObject>
-{
-}
-

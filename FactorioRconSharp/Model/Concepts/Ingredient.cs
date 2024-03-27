@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class Ingredient
 {
   [FactorioRconAttribute("type")]
-  public Union40648905 Type { get; set; }
+  public Union34257225 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the required item or fluid.
@@ -32,49 +32,21 @@ public abstract class Ingredient
   /// How much of this ingredient is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union48320655 CatalystAmount { get; set; }
-
-}
-
-public abstract class Table40283584
-{
-  [FactorioRconAttribute("type")]
-  public Union40648905 Type { get; set; }
-
-  /// <summary>
-  /// Prototype name of the required item or fluid.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  /// <summary>
-  /// Amount of the item or fluid.
-  /// </summary>
-  [FactorioRconAttribute("amount")]
-  public double Amount { get; set; }
-
-  /// <summary>
-  /// How much of this ingredient is a catalyst.
-  /// </summary>
-  [FactorioRconAttribute("catalyst_amount")]
-  public Union48320655 CatalystAmount { get; set; }
+  public Union48313086 CatalystAmount { get; set; }
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union48320655: OneOfBase<uint, double>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union40648905: OneOfBase<Literal8100796, Literal35898994>
+public abstract partial class Union48313086: OneOfBase<uint, double>
 {
 }
 
 /// <summary>
-/// Literal value: item
+/// Union of literals:
+///   - item
+///   - fluid
 /// </summary>
-public enum Literal8100796
+public enum Union34257225
 {
   /// <summary>
   /// Literal value: item
@@ -82,13 +54,6 @@ public enum Literal8100796
   [FactorioRconDefinitionValue("item")]
   Item,
 
-}
-
-/// <summary>
-/// Literal value: fluid
-/// </summary>
-public enum Literal35898994
-{
   /// <summary>
   /// Literal value: fluid
   /// </summary>

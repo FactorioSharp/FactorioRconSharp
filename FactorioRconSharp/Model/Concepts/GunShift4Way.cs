@@ -27,19 +27,3 @@ public abstract class GunShift4Way
 
 }
 
-public abstract class Table45385690
-{
-  [FactorioRconAttribute("north")]
-  public Vector North { get; set; }
-
-  [FactorioRconAttribute("east")]
-  public Vector East { get; set; }
-
-  [FactorioRconAttribute("south")]
-  public Vector South { get; set; }
-
-  [FactorioRconAttribute("west")]
-  public Vector West { get; set; }
-
-}
-

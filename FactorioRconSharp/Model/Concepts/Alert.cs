@@ -42,34 +42,3 @@ public abstract class Alert
 
 }
 
-public abstract class Table7206868
-{
-  /// <summary>
-  /// The tick this alert was created.
-  /// </summary>
-  [FactorioRconAttribute("tick")]
-  public uint Tick { get; set; }
-
-  [FactorioRconAttribute("target")]
-  public LuaEntity Target { get; set; }
-
-  [FactorioRconAttribute("prototype")]
-  public LuaEntityPrototype Prototype { get; set; }
-
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-  /// <summary>
-  /// The SignalID used for a custom alert. Only present for custom alerts.
-  /// </summary>
-  [FactorioRconAttribute("icon")]
-  public SignalID Icon { get; set; }
-
-  /// <summary>
-  /// The message for a custom alert. Only present for custom alerts.
-  /// </summary>
-  [FactorioRconAttribute("message")]
-  public LocalisedString Message { get; set; }
-
-}
-

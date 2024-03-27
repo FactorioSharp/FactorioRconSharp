@@ -17,19 +17,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapGenSize")]
-public abstract partial class MapGenSize: OneOfBase<float, Literal43902125, Literal65202077, Literal11812043, Literal7004948, Literal1816909, Literal52690363, Literal51625527, Literal20745280, Literal64742208, Literal65584704, Literal22908237, Literal60359114, Literal5583861, Literal27714268, Literal65516287, Literal20924132>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union66308631: OneOfBase<float, Literal43902125, Literal65202077, Literal11812043, Literal7004948, Literal1816909, Literal52690363, Literal51625527, Literal20745280, Literal64742208, Literal65584704, Literal22908237, Literal60359114, Literal5583861, Literal27714268, Literal65516287, Literal20924132>
+public abstract partial class MapGenSize: OneOfBase<float, Literal57463798, Literal17257154, Literal32615199, Literal2559773, Literal17363659, Literal36129849, Literal51434360, Literal19612312, Literal43226536, Literal17189561, Literal30384602, Literal63167771, Literal4161677, Literal3117632, Literal35772995, Literal39658150>
 {
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public enum Literal43902125
+public enum Literal57463798
 {
   /// <summary>
   /// Literal value: none
@@ -42,7 +37,7 @@ public enum Literal43902125
 /// <summary>
 /// Literal value: very-low
 /// </summary>
-public enum Literal65202077
+public enum Literal17257154
 {
   /// <summary>
   /// Literal value: very-low
@@ -55,7 +50,7 @@ public enum Literal65202077
 /// <summary>
 /// Literal value: very-small
 /// </summary>
-public enum Literal11812043
+public enum Literal32615199
 {
   /// <summary>
   /// Literal value: very-small
@@ -68,7 +63,7 @@ public enum Literal11812043
 /// <summary>
 /// Literal value: very-poor
 /// </summary>
-public enum Literal7004948
+public enum Literal2559773
 {
   /// <summary>
   /// Literal value: very-poor
@@ -81,7 +76,7 @@ public enum Literal7004948
 /// <summary>
 /// Literal value: low
 /// </summary>
-public enum Literal1816909
+public enum Literal17363659
 {
   /// <summary>
   /// Literal value: low
@@ -94,7 +89,7 @@ public enum Literal1816909
 /// <summary>
 /// Literal value: small
 /// </summary>
-public enum Literal52690363
+public enum Literal36129849
 {
   /// <summary>
   /// Literal value: small
@@ -107,7 +102,7 @@ public enum Literal52690363
 /// <summary>
 /// Literal value: poor
 /// </summary>
-public enum Literal51625527
+public enum Literal51434360
 {
   /// <summary>
   /// Literal value: poor
@@ -120,7 +115,7 @@ public enum Literal51625527
 /// <summary>
 /// Literal value: normal
 /// </summary>
-public enum Literal20745280
+public enum Literal19612312
 {
   /// <summary>
   /// Literal value: normal
@@ -133,7 +128,7 @@ public enum Literal20745280
 /// <summary>
 /// Literal value: medium
 /// </summary>
-public enum Literal64742208
+public enum Literal43226536
 {
   /// <summary>
   /// Literal value: medium
@@ -146,7 +141,7 @@ public enum Literal64742208
 /// <summary>
 /// Literal value: regular
 /// </summary>
-public enum Literal65584704
+public enum Literal17189561
 {
   /// <summary>
   /// Literal value: regular
@@ -159,7 +154,7 @@ public enum Literal65584704
 /// <summary>
 /// Literal value: high
 /// </summary>
-public enum Literal22908237
+public enum Literal30384602
 {
   /// <summary>
   /// Literal value: high
@@ -172,7 +167,7 @@ public enum Literal22908237
 /// <summary>
 /// Literal value: big
 /// </summary>
-public enum Literal60359114
+public enum Literal63167771
 {
   /// <summary>
   /// Literal value: big
@@ -185,7 +180,7 @@ public enum Literal60359114
 /// <summary>
 /// Literal value: good
 /// </summary>
-public enum Literal5583861
+public enum Literal4161677
 {
   /// <summary>
   /// Literal value: good
@@ -198,7 +193,7 @@ public enum Literal5583861
 /// <summary>
 /// Literal value: very-high
 /// </summary>
-public enum Literal27714268
+public enum Literal3117632
 {
   /// <summary>
   /// Literal value: very-high
@@ -211,7 +206,7 @@ public enum Literal27714268
 /// <summary>
 /// Literal value: very-big
 /// </summary>
-public enum Literal65516287
+public enum Literal35772995
 {
   /// <summary>
   /// Literal value: very-big
@@ -224,7 +219,7 @@ public enum Literal65516287
 /// <summary>
 /// Literal value: very-good
 /// </summary>
-public enum Literal20924132
+public enum Literal39658150
 {
   /// <summary>
   /// Literal value: very-good

@@ -27,19 +27,3 @@ public abstract class PlaceAsTileResult
 
 }
 
-public abstract class Table34257225
-{
-  /// <summary>
-  /// The tile prototype.
-  /// </summary>
-  [FactorioRconAttribute("result")]
-  public LuaTilePrototype Result { get; set; }
-
-  [FactorioRconAttribute("condition_size")]
-  public uint ConditionSize { get; set; }
-
-  [FactorioRconAttribute("condition")]
-  public CollisionMask Condition { get; set; }
-
-}
-

@@ -30,19 +30,3 @@ public abstract class Signal
 
 }
 
-public abstract class Table33504864
-{
-  /// <summary>
-  /// ID of the signal.
-  /// </summary>
-  [FactorioRconAttribute("signal")]
-  public SignalID Signal { get; set; }
-
-  /// <summary>
-  /// Value of the signal.
-  /// </summary>
-  [FactorioRconAttribute("count")]
-  public int Count { get; set; }
-
-}
-

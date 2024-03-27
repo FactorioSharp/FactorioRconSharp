@@ -28,8 +28,6 @@ public static class FactorioSpecificationTypeExtractor
 
     public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeConceptSpecification concept)
     {
-        yield return concept.Type;
-
         foreach (FactorioRuntimeTypeSpecification type in ExtractTypes(concept.Type))
         {
             yield return type;
@@ -167,6 +165,12 @@ public static class FactorioSpecificationTypeExtractor
 
                 break;
             case FactorioRuntimeUnionTypeSpecification unionType:
+                if (unionType.IsUnionOfLiterals(out _))
+                {
+                    // in this case, the inner literals should not be considered as individual types
+                    break;
+                }
+
                 foreach (FactorioRuntimeTypeSpecification option in unionType.Options)
                 {
                     yield return option;

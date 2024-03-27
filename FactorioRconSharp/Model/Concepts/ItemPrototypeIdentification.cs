@@ -19,8 +19,3 @@ public abstract partial class ItemPrototypeIdentification: OneOfBase<LuaItemStac
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union47523965: OneOfBase<LuaItemStack, LuaItemPrototype, string>
-{
-}
-

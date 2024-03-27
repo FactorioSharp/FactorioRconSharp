@@ -260,65 +260,6 @@ public class FactorioModelFileCompiler
             Optional = parameter.Optional
         };
 
-    FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
-    {
-        string name = $"Literal{literalType.GetHashCode()}";
-        string valueName = literalType.Value.ToString() ?? "value";
-
-        return new FactorioModelEnum
-        {
-            Name = name,
-            Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" },
-            Values = new[]
-            {
-                new FactorioModelEnumValue
-                    { Name = valueName.ToPascalCase(), LuaName = valueName, Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" } }
-            }
-        };
-    }
-
-    FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
-    {
-        string name = $"Struct{structType.GetHashCode()}";
-        return new FactorioModelClass
-        {
-            Name = name,
-            Properties = structType.Attributes.OrderBy(a => a.Order).Select(CompileProperty).ToArray()
-        };
-    }
-
-    FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
-    {
-        string name = $"Table{tableType.GetHashCode()}";
-        return new FactorioModelClass
-        {
-            Name = name,
-            Properties = tableType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
-        };
-    }
-
-    FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
-    {
-        string name = $"Tuple{tupleType.GetHashCode()}";
-        return new FactorioModelClass
-        {
-            Name = name,
-            Properties = tupleType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
-        };
-    }
-
-    FactorioModelClass CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType)
-    {
-        string name = $"Union{unionType.GetHashCode()}";
-        return new FactorioModelClass
-        {
-            Name = name,
-            BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
-            Attributes = ["GenerateOneOf"],
-            IsPartial = true
-        };
-    }
-
     static string? BuildExamples(string[] examples)
     {
         switch (examples.Length)
@@ -472,5 +413,77 @@ public class FactorioModelFileCompiler
                 yield return CompileUnionType(unionType);
                 break;
         }
+    }
+
+    FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
+    {
+        string name = $"Literal{literalType.GetHashCode()}";
+
+        return new FactorioModelEnum
+        {
+            Name = name,
+            Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" },
+            Values = [CompileLiteralValue(literalType)]
+        };
+    }
+
+    static FactorioModelEnumValue CompileLiteralValue(FactorioRuntimeLiteralTypeSpecification literalType)
+    {
+        string valueName = literalType.Value.ToString() ?? "value";
+        return new FactorioModelEnumValue
+            { Name = valueName.ToPascalCase(), LuaName = valueName, Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" } };
+    }
+
+    FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
+    {
+        string name = $"Struct{structType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            Properties = structType.Attributes.OrderBy(a => a.Order).Select(CompileProperty).ToArray()
+        };
+    }
+
+    FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
+    {
+        string name = $"Table{tableType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            Properties = tableType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
+        };
+    }
+
+    FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
+    {
+        string name = $"Tuple{tupleType.GetHashCode()}";
+        return new FactorioModelClass
+        {
+            Name = name,
+            Properties = tupleType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
+        };
+    }
+
+    FactorioModelTopLevelStatement CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType)
+    {
+        string name = $"Union{unionType.GetHashCode()}";
+
+        if (unionType.IsUnionOfLiterals(out FactorioRuntimeLiteralTypeSpecification[] literals))
+        {
+            return new FactorioModelEnum
+            {
+                Name = name,
+                Documentation = new FactorioModelDocumentation { Summary = $"Union of literals:{string.Join("", literals.Select(l => $"{Environment.NewLine}  - {l.Value}"))}" },
+                Values = literals.Select(CompileLiteralValue).ToArray()
+            };
+        }
+
+        return new FactorioModelClass
+        {
+            Name = name,
+            BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
+            Attributes = ["GenerateOneOf"],
+            IsPartial = true
+        };
     }
 }

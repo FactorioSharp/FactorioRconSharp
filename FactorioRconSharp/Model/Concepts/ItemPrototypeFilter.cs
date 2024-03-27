@@ -26,7 +26,7 @@ public abstract class ItemPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union51965572 Mode { get; set; }
+  public Union65357506 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class ItemPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table17990607
-{
-  /// <summary>
-  /// The condition to filter on. One of `"tool"`, `"mergeable"`, `"item-with-inventory"`, `"selection-tool"`, `"item-with-label"`, `"has-rocket-launch-products"`, `"fuel"`, `"place-result"`, `"burnt-result"`, `"place-as-tile"`, `"placed-as-equipment-result"`, `"name"`, `"type"`, `"flag"`, `"subgroup"`, `"fuel-category"`, `"stack-size"`, `"default-request-amount"`, `"wire-count"`, `"fuel-value"`, `"fuel-acceleration-multiplier"`, `"fuel-top-speed-multiplier"`, `"fuel-emissions-multiplier"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union51965572 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union51965572: OneOfBase<Literal30606599, Literal15176166>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal30606599
+public enum Union65357506
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal30606599
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal15176166
-{
   /// <summary>
   /// Literal value: and
   /// </summary>
@@ -90,12 +58,12 @@ public enum Literal15176166
 }
 
 [GenerateOneOf]
-public abstract partial class Union37455649: OneOfBase<string, List<string>>
+public abstract partial class Union30330347: OneOfBase<string, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union12471998: OneOfBase<string, List<string>>
+public abstract partial class Union32957531: OneOfBase<string, List<string>>
 {
 }
 

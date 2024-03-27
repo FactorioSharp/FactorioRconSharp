@@ -74,7 +74,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// Whether this entity is minable and what can be obtained by mining it.
   /// </summary>
   [FactorioRconAttribute("mineable_properties")]
-  public Table14333193 MineableProperties { get; private set; }
+  public Table5896758 MineableProperties { get; private set; }
 
   /// <summary>
   /// Items that when placed will produce this entity, if any. Construction bots will choose the first item in the list to build this entity.
@@ -263,7 +263,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The spawning cooldown for this enemy spawner prototype.
   /// </summary>
   [FactorioRconAttribute("spawn_cooldown")]
-  public Table13009416 SpawnCooldown { get; private set; }
+  public Table60375305 SpawnCooldown { get; private set; }
 
   /// <summary>
   /// The mining radius of this mining drill prototype.
@@ -281,7 +281,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The logistic mode of this logistic container.
   /// </summary>
   [FactorioRconAttribute("logistic_mode")]
-  public Union41728762 LogisticMode { get; private set; }
+  public Union46228029 LogisticMode { get; private set; }
 
   /// <summary>
   /// The max underground distance for underground belts and underground pipes.
@@ -323,7 +323,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The smoke trigger run when this entity is built, if any.
   /// </summary>
   [FactorioRconAttribute("created_smoke")]
-  public Table2174563 CreatedSmoke { get; private set; }
+  public Table49129953 CreatedSmoke { get; private set; }
 
   /// <summary>
   /// The trigger to run when this entity is created, if any.
@@ -635,7 +635,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The boiler operation mode of this boiler prototype.
   /// </summary>
   [FactorioRconAttribute("boiler_mode")]
-  public Union63062333 BoilerMode { get; private set; }
+  public Union10675717 BoilerMode { get; private set; }
 
   /// <summary>
   /// The fluid this offshore pump produces.
@@ -1254,7 +1254,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The logistic parameters for this roboport.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table16868352 LogisticParameters { get; private set; }
+  public Table16754362 LogisticParameters { get; private set; }
 
   /// <summary>
   /// The height of this spider vehicle prototype.
@@ -1445,15 +1445,12 @@ public abstract class LuaEntityPrototype: LuaObject
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union63062333: OneOfBase<Literal19420176, Literal26314214>
-{
-}
-
 /// <summary>
-/// Literal value: heat-water-inside
+/// Union of literals:
+///   - heat-water-inside
+///   - output-to-separate-pipe
 /// </summary>
-public enum Literal19420176
+public enum Union10675717
 {
   /// <summary>
   /// Literal value: heat-water-inside
@@ -1461,13 +1458,6 @@ public enum Literal19420176
   [FactorioRconDefinitionValue("heat-water-inside")]
   HeatWaterInside,
 
-}
-
-/// <summary>
-/// Literal value: output-to-separate-pipe
-/// </summary>
-public enum Literal26314214
-{
   /// <summary>
   /// Literal value: output-to-separate-pipe
   /// </summary>
@@ -1476,7 +1466,7 @@ public enum Literal26314214
 
 }
 
-public abstract class Table2174563
+public abstract class Table49129953
 {
   [FactorioRconAttribute("smoke_name")]
   public string SmokeName { get; set; }
@@ -1522,15 +1512,16 @@ public abstract class Table2174563
 
 }
 
-[GenerateOneOf]
-public abstract partial class Union41728762: OneOfBase<Literal24914721, Literal51438283, Literal15315213, Literal41488021, Literal62301924, Literal61925337>
-{
-}
-
 /// <summary>
-/// Literal value: requester
+/// Union of literals:
+///   - requester
+///   - active-provider
+///   - passive-provider
+///   - buffer
+///   - storage
+///   - none
 /// </summary>
-public enum Literal24914721
+public enum Union46228029
 {
   /// <summary>
   /// Literal value: requester
@@ -1538,65 +1529,30 @@ public enum Literal24914721
   [FactorioRconDefinitionValue("requester")]
   Requester,
 
-}
-
-/// <summary>
-/// Literal value: active-provider
-/// </summary>
-public enum Literal51438283
-{
   /// <summary>
   /// Literal value: active-provider
   /// </summary>
   [FactorioRconDefinitionValue("active-provider")]
   ActiveProvider,
 
-}
-
-/// <summary>
-/// Literal value: passive-provider
-/// </summary>
-public enum Literal15315213
-{
   /// <summary>
   /// Literal value: passive-provider
   /// </summary>
   [FactorioRconDefinitionValue("passive-provider")]
   PassiveProvider,
 
-}
-
-/// <summary>
-/// Literal value: buffer
-/// </summary>
-public enum Literal41488021
-{
   /// <summary>
   /// Literal value: buffer
   /// </summary>
   [FactorioRconDefinitionValue("buffer")]
   Buffer,
 
-}
-
-/// <summary>
-/// Literal value: storage
-/// </summary>
-public enum Literal62301924
-{
   /// <summary>
   /// Literal value: storage
   /// </summary>
   [FactorioRconDefinitionValue("storage")]
   Storage,
 
-}
-
-/// <summary>
-/// Literal value: none
-/// </summary>
-public enum Literal61925337
-{
   /// <summary>
   /// Literal value: none
   /// </summary>
@@ -1605,7 +1561,7 @@ public enum Literal61925337
 
 }
 
-public abstract class Table16868352
+public abstract class Table16754362
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -1654,7 +1610,7 @@ public abstract class Table16868352
 
 }
 
-public abstract class Table14333193
+public abstract class Table5896758
 {
   /// <summary>
   /// Is this entity mineable at all?
@@ -1700,7 +1656,7 @@ public abstract class Table14333193
 
 }
 
-public abstract class Table13009416
+public abstract class Table60375305
 {
   [FactorioRconAttribute("min")]
   public double Min { get; set; }

@@ -24,16 +24,3 @@ public abstract class ElemID
 
 }
 
-public abstract class Table44203036
-{
-  [FactorioRconAttribute("type")]
-  public ElemType Type { get; set; }
-
-  /// <summary>
-  /// Name of a prototype as defined by `type`.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-}
-

@@ -24,16 +24,3 @@ public abstract class ProgrammableSpeakerCircuitParameters
 
 }
 
-public abstract class Table45925640
-{
-  [FactorioRconAttribute("signal_value_is_pitch")]
-  public bool SignalValueIsPitch { get; set; }
-
-  [FactorioRconAttribute("instrument_id")]
-  public uint InstrumentId { get; set; }
-
-  [FactorioRconAttribute("note_id")]
-  public uint NoteId { get; set; }
-
-}
-

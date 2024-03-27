@@ -17,16 +17,11 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("Color")]
-public abstract partial class Color: OneOfBase<Table36734787, Table58675864>
+public abstract partial class Color: OneOfBase<Table28915924, Table14701405>
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union31350000: OneOfBase<Table36734787, Table58675864>
-{
-}
-
-public abstract class Table36734787
+public abstract class Table28915924
 {
   [FactorioRconAttribute("r")]
   public float R { get; set; }
@@ -42,7 +37,7 @@ public abstract class Table36734787
 
 }
 
-public abstract class Table58675864
+public abstract class Table14701405
 {
   [FactorioRconAttribute("r")]
   public float R { get; set; }

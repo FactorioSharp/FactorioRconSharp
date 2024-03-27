@@ -24,16 +24,3 @@ public abstract class CircuitConditionDefinition
 
 }
 
-public abstract class Table23399238
-{
-  [FactorioRconAttribute("condition")]
-  public CircuitCondition Condition { get; set; }
-
-  /// <summary>
-  /// Whether the condition is currently fulfilled
-  /// </summary>
-  [FactorioRconAttribute("fulfilled")]
-  public bool Fulfilled { get; set; }
-
-}
-

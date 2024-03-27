@@ -24,16 +24,3 @@ public abstract class TrainSchedule
 
 }
 
-public abstract class Table59256863
-{
-  /// <summary>
-  /// Index of the currently active record
-  /// </summary>
-  [FactorioRconAttribute("current")]
-  public uint Current { get; set; }
-
-  [FactorioRconAttribute("records")]
-  public List<TrainScheduleRecord> Records { get; set; }
-
-}
-

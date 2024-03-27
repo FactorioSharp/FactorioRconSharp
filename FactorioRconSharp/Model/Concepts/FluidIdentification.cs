@@ -19,8 +19,3 @@ public abstract partial class FluidIdentification: OneOfBase<string, LuaFluidPro
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union57482069: OneOfBase<string, LuaFluidPrototype, Fluid>
-{
-}
-

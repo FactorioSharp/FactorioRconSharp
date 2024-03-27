@@ -16,19 +16,23 @@ namespace FactorioRconSharp.Model.Concepts;
 /// To write to this, use an array<see cref="String" />] of the mouse buttons that should be possible to use with on button. The flag `"left-and-right"` can also be set, which will set `"left"` and `"right"` to `true`.
 /// </summary>
 [FactorioRconConcept("MouseButtonFlags")]
-public abstract class MouseButtonFlags: Dictionary<Union57195083, Literal48044684>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union57195083: OneOfBase<Literal51118573, Literal6043628, Literal41047511, Literal49527150, Literal27001207, Literal44837509, Literal25219370, Literal60273114, Literal3089856>
+public abstract class MouseButtonFlags: Dictionary<Union6843685, Literal9499668>
 {
 }
 
 /// <summary>
-/// Literal value: left
+/// Union of literals:
+///   - left
+///   - right
+///   - middle
+///   - button-4
+///   - button-5
+///   - button-6
+///   - button-7
+///   - button-8
+///   - button-9
 /// </summary>
-public enum Literal51118573
+public enum Union6843685
 {
   /// <summary>
   /// Literal value: left
@@ -36,104 +40,48 @@ public enum Literal51118573
   [FactorioRconDefinitionValue("left")]
   Left,
 
-}
-
-/// <summary>
-/// Literal value: right
-/// </summary>
-public enum Literal6043628
-{
   /// <summary>
   /// Literal value: right
   /// </summary>
   [FactorioRconDefinitionValue("right")]
   Right,
 
-}
-
-/// <summary>
-/// Literal value: middle
-/// </summary>
-public enum Literal41047511
-{
   /// <summary>
   /// Literal value: middle
   /// </summary>
   [FactorioRconDefinitionValue("middle")]
   Middle,
 
-}
-
-/// <summary>
-/// Literal value: button-4
-/// </summary>
-public enum Literal49527150
-{
   /// <summary>
   /// Literal value: button-4
   /// </summary>
   [FactorioRconDefinitionValue("button-4")]
   Button4,
 
-}
-
-/// <summary>
-/// Literal value: button-5
-/// </summary>
-public enum Literal27001207
-{
   /// <summary>
   /// Literal value: button-5
   /// </summary>
   [FactorioRconDefinitionValue("button-5")]
   Button5,
 
-}
-
-/// <summary>
-/// Literal value: button-6
-/// </summary>
-public enum Literal44837509
-{
   /// <summary>
   /// Literal value: button-6
   /// </summary>
   [FactorioRconDefinitionValue("button-6")]
   Button6,
 
-}
-
-/// <summary>
-/// Literal value: button-7
-/// </summary>
-public enum Literal25219370
-{
   /// <summary>
   /// Literal value: button-7
   /// </summary>
   [FactorioRconDefinitionValue("button-7")]
   Button7,
 
-}
-
-/// <summary>
-/// Literal value: button-8
-/// </summary>
-public enum Literal60273114
-{
   /// <summary>
   /// Literal value: button-8
   /// </summary>
   [FactorioRconDefinitionValue("button-8")]
   Button8,
 
-}
-
-/// <summary>
-/// Literal value: button-9
-/// </summary>
-public enum Literal3089856
-{
   /// <summary>
   /// Literal value: button-9
   /// </summary>
@@ -145,7 +93,7 @@ public enum Literal3089856
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal48044684
+public enum Literal9499668
 {
   /// <summary>
   /// Literal value: True

@@ -21,13 +21,3 @@ public abstract class RollingStockDrawData
 
 }
 
-public abstract class Table64703927
-{
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-  [FactorioRconAttribute("orientaton")]
-  public RealOrientation Orientaton { get; set; }
-
-}
-

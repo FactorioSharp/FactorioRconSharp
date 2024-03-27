@@ -27,19 +27,3 @@ public abstract class AutoplaceSpecificationRestriction
 
 }
 
-public abstract class Table21374126
-{
-  /// <summary>
-  /// Tile prototype name
-  /// </summary>
-  [FactorioRconAttribute("first")]
-  public string First { get; set; }
-
-  /// <summary>
-  /// Second prototype name
-  /// </summary>
-  [FactorioRconAttribute("second")]
-  public string Second { get; set; }
-
-}
-

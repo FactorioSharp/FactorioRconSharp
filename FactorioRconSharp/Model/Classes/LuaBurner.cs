@@ -20,7 +20,7 @@ public abstract class LuaBurner: LuaObject
   /// The owner of this burner energy source
   /// </summary>
   [FactorioRconAttribute("owner")]
-  public Union39449526 Owner { get; private set; }
+  public Union13009416 Owner { get; private set; }
 
   /// <summary>
   /// The fuel inventory.
@@ -85,7 +85,7 @@ public abstract class LuaBurner: LuaObject
 }
 
 [GenerateOneOf]
-public abstract partial class Union39449526: OneOfBase<LuaEntity, LuaEquipment>
+public abstract partial class Union13009416: OneOfBase<LuaEntity, LuaEquipment>
 {
 }
 

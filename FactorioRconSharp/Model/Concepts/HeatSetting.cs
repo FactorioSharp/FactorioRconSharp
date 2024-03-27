@@ -26,35 +26,19 @@ public abstract class HeatSetting
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union27867915 Mode { get; set; }
+  public Union14966502 Mode { get; set; }
 
-}
-
-public abstract class Table23696664
-{
-  /// <summary>
-  /// The target temperature. Defaults to the minimum temperature of the heat buffer.
-  /// </summary>
-  [FactorioRconAttribute("temperature")]
-  public double Temperature { get; set; }
-
-  /// <summary>
-  /// Defaults to `"at-least"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union27867915 Mode { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union27867915: OneOfBase<Literal48355310, Literal8828568, Literal51182215, Literal1084693, Literal22778559>
-{
 }
 
 /// <summary>
-/// Literal value: at-least
+/// Union of literals:
+///   - at-least
+///   - at-most
+///   - exactly
+///   - add
+///   - remove
 /// </summary>
-public enum Literal48355310
+public enum Union14966502
 {
   /// <summary>
   /// Literal value: at-least
@@ -62,52 +46,24 @@ public enum Literal48355310
   [FactorioRconDefinitionValue("at-least")]
   AtLeast,
 
-}
-
-/// <summary>
-/// Literal value: at-most
-/// </summary>
-public enum Literal8828568
-{
   /// <summary>
   /// Literal value: at-most
   /// </summary>
   [FactorioRconDefinitionValue("at-most")]
   AtMost,
 
-}
-
-/// <summary>
-/// Literal value: exactly
-/// </summary>
-public enum Literal51182215
-{
   /// <summary>
   /// Literal value: exactly
   /// </summary>
   [FactorioRconDefinitionValue("exactly")]
   Exactly,
 
-}
-
-/// <summary>
-/// Literal value: add
-/// </summary>
-public enum Literal1084693
-{
   /// <summary>
   /// Literal value: add
   /// </summary>
   [FactorioRconDefinitionValue("add")]
   Add,
 
-}
-
-/// <summary>
-/// Literal value: remove
-/// </summary>
-public enum Literal22778559
-{
   /// <summary>
   /// Literal value: remove
   /// </summary>

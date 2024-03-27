@@ -15,19 +15,14 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("RenderLayer")]
-public abstract partial class RenderLayer: OneOfBase<string, Literal21337957, Literal45443930, Literal14798442, Literal42331837, Literal16553355, Literal12076145, Literal52272470, Literal23980061, Literal33819242, Literal39115446, Literal16118003, Literal2933762, Literal61609009, Literal18720791, Literal57592306, Literal1478876, Literal31056402, Literal48204678, Literal5665281, Literal51862043, Literal15361084, Literal54147313, Literal63351761, Literal55318575, Literal20839390, Literal34974026, Literal63365906, Literal55615624, Literal27077418, Literal31754879, Literal62872692, Literal45258134, Literal10896719, Literal27504513, Literal40723880, Literal49895113, Literal41164413, Literal59146305, Literal34112860, Literal45281424, Literal11385827, Literal37775789, Literal55094081>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union23385714: OneOfBase<string, Literal21337957, Literal45443930, Literal14798442, Literal42331837, Literal16553355, Literal12076145, Literal52272470, Literal23980061, Literal33819242, Literal39115446, Literal16118003, Literal2933762, Literal61609009, Literal18720791, Literal57592306, Literal1478876, Literal31056402, Literal48204678, Literal5665281, Literal51862043, Literal15361084, Literal54147313, Literal63351761, Literal55318575, Literal20839390, Literal34974026, Literal63365906, Literal55615624, Literal27077418, Literal31754879, Literal62872692, Literal45258134, Literal10896719, Literal27504513, Literal40723880, Literal49895113, Literal41164413, Literal59146305, Literal34112860, Literal45281424, Literal11385827, Literal37775789, Literal55094081>
+public abstract partial class RenderLayer: OneOfBase<string, Literal39684383, Literal28065693, Literal52508642, Literal28939664, Literal3753187, Literal11708064, Literal44542752, Literal62982560, Literal47565351, Literal59348279, Literal38354326, Literal134492, Literal2824348, Literal59311316, Literal37578102, Literal50942646, Literal63162610, Literal51346406, Literal4532719, Literal28078236, Literal52772057, Literal34471389, Literal52810544, Literal35279616, Literal2674433, Literal56163113, Literal38574699, Literal4762320, Literal32899867, Literal19808570, Literal13326799, Literal11427325, Literal38647253, Literal6285952, Literal64896139, Literal20641656, Literal30821600, Literal43273835, Literal36335313, Literal24844079, Literal51963628, Literal17494379, Literal31837648>
 {
 }
 
 /// <summary>
 /// Literal value: water-tile
 /// </summary>
-public enum Literal21337957
+public enum Literal39684383
 {
   /// <summary>
   /// Literal value: water-tile
@@ -40,7 +35,7 @@ public enum Literal21337957
 /// <summary>
 /// Literal value: ground-tile
 /// </summary>
-public enum Literal45443930
+public enum Literal28065693
 {
   /// <summary>
   /// Literal value: ground-tile
@@ -53,7 +48,7 @@ public enum Literal45443930
 /// <summary>
 /// Literal value: tile-transition
 /// </summary>
-public enum Literal14798442
+public enum Literal52508642
 {
   /// <summary>
   /// Literal value: tile-transition
@@ -66,7 +61,7 @@ public enum Literal14798442
 /// <summary>
 /// Literal value: decals
 /// </summary>
-public enum Literal42331837
+public enum Literal28939664
 {
   /// <summary>
   /// Literal value: decals
@@ -79,7 +74,7 @@ public enum Literal42331837
 /// <summary>
 /// Literal value: lower-radius-visualization
 /// </summary>
-public enum Literal16553355
+public enum Literal3753187
 {
   /// <summary>
   /// Literal value: lower-radius-visualization
@@ -92,7 +87,7 @@ public enum Literal16553355
 /// <summary>
 /// Literal value: radius-visualization
 /// </summary>
-public enum Literal12076145
+public enum Literal11708064
 {
   /// <summary>
   /// Literal value: radius-visualization
@@ -105,7 +100,7 @@ public enum Literal12076145
 /// <summary>
 /// Literal value: transport-belt-integration
 /// </summary>
-public enum Literal52272470
+public enum Literal44542752
 {
   /// <summary>
   /// Literal value: transport-belt-integration
@@ -118,7 +113,7 @@ public enum Literal52272470
 /// <summary>
 /// Literal value: resource
 /// </summary>
-public enum Literal23980061
+public enum Literal62982560
 {
   /// <summary>
   /// Literal value: resource
@@ -131,7 +126,7 @@ public enum Literal23980061
 /// <summary>
 /// Literal value: building-smoke
 /// </summary>
-public enum Literal33819242
+public enum Literal47565351
 {
   /// <summary>
   /// Literal value: building-smoke
@@ -144,7 +139,7 @@ public enum Literal33819242
 /// <summary>
 /// Literal value: decorative
 /// </summary>
-public enum Literal39115446
+public enum Literal59348279
 {
   /// <summary>
   /// Literal value: decorative
@@ -157,7 +152,7 @@ public enum Literal39115446
 /// <summary>
 /// Literal value: ground-patch
 /// </summary>
-public enum Literal16118003
+public enum Literal38354326
 {
   /// <summary>
   /// Literal value: ground-patch
@@ -170,7 +165,7 @@ public enum Literal16118003
 /// <summary>
 /// Literal value: ground-patch-higher
 /// </summary>
-public enum Literal2933762
+public enum Literal134492
 {
   /// <summary>
   /// Literal value: ground-patch-higher
@@ -183,7 +178,7 @@ public enum Literal2933762
 /// <summary>
 /// Literal value: ground-patch-higher2
 /// </summary>
-public enum Literal61609009
+public enum Literal2824348
 {
   /// <summary>
   /// Literal value: ground-patch-higher2
@@ -196,7 +191,7 @@ public enum Literal61609009
 /// <summary>
 /// Literal value: remnants
 /// </summary>
-public enum Literal18720791
+public enum Literal59311316
 {
   /// <summary>
   /// Literal value: remnants
@@ -209,7 +204,7 @@ public enum Literal18720791
 /// <summary>
 /// Literal value: floor
 /// </summary>
-public enum Literal57592306
+public enum Literal37578102
 {
   /// <summary>
   /// Literal value: floor
@@ -222,7 +217,7 @@ public enum Literal57592306
 /// <summary>
 /// Literal value: transport-belt
 /// </summary>
-public enum Literal1478876
+public enum Literal50942646
 {
   /// <summary>
   /// Literal value: transport-belt
@@ -235,7 +230,7 @@ public enum Literal1478876
 /// <summary>
 /// Literal value: transport-belt-endings
 /// </summary>
-public enum Literal31056402
+public enum Literal63162610
 {
   /// <summary>
   /// Literal value: transport-belt-endings
@@ -248,7 +243,7 @@ public enum Literal31056402
 /// <summary>
 /// Literal value: floor-mechanics-under-corpse
 /// </summary>
-public enum Literal48204678
+public enum Literal51346406
 {
   /// <summary>
   /// Literal value: floor-mechanics-under-corpse
@@ -261,7 +256,7 @@ public enum Literal48204678
 /// <summary>
 /// Literal value: corpse
 /// </summary>
-public enum Literal5665281
+public enum Literal4532719
 {
   /// <summary>
   /// Literal value: corpse
@@ -274,7 +269,7 @@ public enum Literal5665281
 /// <summary>
 /// Literal value: floor-mechanics
 /// </summary>
-public enum Literal51862043
+public enum Literal28078236
 {
   /// <summary>
   /// Literal value: floor-mechanics
@@ -287,7 +282,7 @@ public enum Literal51862043
 /// <summary>
 /// Literal value: item
 /// </summary>
-public enum Literal15361084
+public enum Literal52772057
 {
   /// <summary>
   /// Literal value: item
@@ -300,7 +295,7 @@ public enum Literal15361084
 /// <summary>
 /// Literal value: lower-object
 /// </summary>
-public enum Literal54147313
+public enum Literal34471389
 {
   /// <summary>
   /// Literal value: lower-object
@@ -313,7 +308,7 @@ public enum Literal54147313
 /// <summary>
 /// Literal value: transport-belt-circuit-connector
 /// </summary>
-public enum Literal63351761
+public enum Literal52810544
 {
   /// <summary>
   /// Literal value: transport-belt-circuit-connector
@@ -326,7 +321,7 @@ public enum Literal63351761
 /// <summary>
 /// Literal value: lower-object-above-shadow
 /// </summary>
-public enum Literal55318575
+public enum Literal35279616
 {
   /// <summary>
   /// Literal value: lower-object-above-shadow
@@ -339,7 +334,7 @@ public enum Literal55318575
 /// <summary>
 /// Literal value: object
 /// </summary>
-public enum Literal20839390
+public enum Literal2674433
 {
   /// <summary>
   /// Literal value: object
@@ -352,7 +347,7 @@ public enum Literal20839390
 /// <summary>
 /// Literal value: higher-object-under
 /// </summary>
-public enum Literal34974026
+public enum Literal56163113
 {
   /// <summary>
   /// Literal value: higher-object-under
@@ -365,7 +360,7 @@ public enum Literal34974026
 /// <summary>
 /// Literal value: higher-object-above
 /// </summary>
-public enum Literal63365906
+public enum Literal38574699
 {
   /// <summary>
   /// Literal value: higher-object-above
@@ -378,7 +373,7 @@ public enum Literal63365906
 /// <summary>
 /// Literal value: item-in-inserter-hand
 /// </summary>
-public enum Literal55615624
+public enum Literal4762320
 {
   /// <summary>
   /// Literal value: item-in-inserter-hand
@@ -391,7 +386,7 @@ public enum Literal55615624
 /// <summary>
 /// Literal value: wires
 /// </summary>
-public enum Literal27077418
+public enum Literal32899867
 {
   /// <summary>
   /// Literal value: wires
@@ -404,7 +399,7 @@ public enum Literal27077418
 /// <summary>
 /// Literal value: wires-above
 /// </summary>
-public enum Literal31754879
+public enum Literal19808570
 {
   /// <summary>
   /// Literal value: wires-above
@@ -417,7 +412,7 @@ public enum Literal31754879
 /// <summary>
 /// Literal value: entity-info-icon
 /// </summary>
-public enum Literal62872692
+public enum Literal13326799
 {
   /// <summary>
   /// Literal value: entity-info-icon
@@ -430,7 +425,7 @@ public enum Literal62872692
 /// <summary>
 /// Literal value: entity-info-icon-above
 /// </summary>
-public enum Literal45258134
+public enum Literal11427325
 {
   /// <summary>
   /// Literal value: entity-info-icon-above
@@ -443,7 +438,7 @@ public enum Literal45258134
 /// <summary>
 /// Literal value: explosion
 /// </summary>
-public enum Literal10896719
+public enum Literal38647253
 {
   /// <summary>
   /// Literal value: explosion
@@ -456,7 +451,7 @@ public enum Literal10896719
 /// <summary>
 /// Literal value: projectile
 /// </summary>
-public enum Literal27504513
+public enum Literal6285952
 {
   /// <summary>
   /// Literal value: projectile
@@ -469,7 +464,7 @@ public enum Literal27504513
 /// <summary>
 /// Literal value: smoke
 /// </summary>
-public enum Literal40723880
+public enum Literal64896139
 {
   /// <summary>
   /// Literal value: smoke
@@ -482,7 +477,7 @@ public enum Literal40723880
 /// <summary>
 /// Literal value: air-object
 /// </summary>
-public enum Literal49895113
+public enum Literal20641656
 {
   /// <summary>
   /// Literal value: air-object
@@ -495,7 +490,7 @@ public enum Literal49895113
 /// <summary>
 /// Literal value: air-entity-info-icon
 /// </summary>
-public enum Literal41164413
+public enum Literal30821600
 {
   /// <summary>
   /// Literal value: air-entity-info-icon
@@ -508,7 +503,7 @@ public enum Literal41164413
 /// <summary>
 /// Literal value: light-effect
 /// </summary>
-public enum Literal59146305
+public enum Literal43273835
 {
   /// <summary>
   /// Literal value: light-effect
@@ -521,7 +516,7 @@ public enum Literal59146305
 /// <summary>
 /// Literal value: selection-box
 /// </summary>
-public enum Literal34112860
+public enum Literal36335313
 {
   /// <summary>
   /// Literal value: selection-box
@@ -534,7 +529,7 @@ public enum Literal34112860
 /// <summary>
 /// Literal value: higher-selection-box
 /// </summary>
-public enum Literal45281424
+public enum Literal24844079
 {
   /// <summary>
   /// Literal value: higher-selection-box
@@ -547,7 +542,7 @@ public enum Literal45281424
 /// <summary>
 /// Literal value: collision-selection-box
 /// </summary>
-public enum Literal11385827
+public enum Literal51963628
 {
   /// <summary>
   /// Literal value: collision-selection-box
@@ -560,7 +555,7 @@ public enum Literal11385827
 /// <summary>
 /// Literal value: arrow
 /// </summary>
-public enum Literal37775789
+public enum Literal17494379
 {
   /// <summary>
   /// Literal value: arrow
@@ -573,7 +568,7 @@ public enum Literal37775789
 /// <summary>
 /// Literal value: cursor
 /// </summary>
-public enum Literal55094081
+public enum Literal31837648
 {
   /// <summary>
   /// Literal value: cursor

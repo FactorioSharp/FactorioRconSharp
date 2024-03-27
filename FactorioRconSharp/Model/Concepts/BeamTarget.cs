@@ -27,19 +27,3 @@ public abstract class BeamTarget
 
 }
 
-public abstract class Table15869906
-{
-  /// <summary>
-  /// The target entity.
-  /// </summary>
-  [FactorioRconAttribute("entity")]
-  public LuaEntity Entity { get; set; }
-
-  /// <summary>
-  /// The target position.
-  /// </summary>
-  [FactorioRconAttribute("position")]
-  public MapPosition Position { get; set; }
-
-}
-

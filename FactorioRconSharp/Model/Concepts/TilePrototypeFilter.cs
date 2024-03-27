@@ -26,7 +26,7 @@ public abstract class TilePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union1102641 Mode { get; set; }
+  public Union23272881 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,39 +34,14 @@ public abstract class TilePrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-}
-
-public abstract class Table64832787
-{
-  /// <summary>
-  /// The condition to filter on. One of `"minable"`, `"autoplace"`, `"blueprintable"`, `"item-to-place"`, `"collision-mask"`, `"walking-speed-modifier"`, `"vehicle-friction-modifier"`, `"decorative-removal-probability"`, `"emissions"`.
-  /// </summary>
-  [FactorioRconAttribute("filter")]
-  public string Filter { get; set; }
-
-  /// <summary>
-  /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
-  /// </summary>
-  [FactorioRconAttribute("mode")]
-  public Union1102641 Mode { get; set; }
-
-  /// <summary>
-  /// Inverts the condition. Default is `false`.
-  /// </summary>
-  [FactorioRconAttribute("invert")]
-  public bool Invert { get; set; }
-
-}
-
-[GenerateOneOf]
-public abstract partial class Union1102641: OneOfBase<Literal31976601, Literal54906217>
-{
 }
 
 /// <summary>
-/// Literal value: or
+/// Union of literals:
+///   - or
+///   - and
 /// </summary>
-public enum Literal31976601
+public enum Union23272881
 {
   /// <summary>
   /// Literal value: or
@@ -74,13 +49,6 @@ public enum Literal31976601
   [FactorioRconDefinitionValue("or")]
   Or,
 
-}
-
-/// <summary>
-/// Literal value: and
-/// </summary>
-public enum Literal54906217
-{
   /// <summary>
   /// Literal value: and
   /// </summary>
@@ -90,7 +58,7 @@ public enum Literal54906217
 }
 
 [GenerateOneOf]
-public abstract partial class Union48776432: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union29807569: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 

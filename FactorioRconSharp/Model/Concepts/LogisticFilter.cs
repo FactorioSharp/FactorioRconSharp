@@ -33,25 +33,3 @@ public abstract class LogisticFilter
 
 }
 
-public abstract class Table54870941
-{
-  /// <summary>
-  /// The index this filter applies to.
-  /// </summary>
-  [FactorioRconAttribute("index")]
-  public uint Index { get; set; }
-
-  /// <summary>
-  /// The item name for this filter.
-  /// </summary>
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  /// <summary>
-  /// The count for this filter.
-  /// </summary>
-  [FactorioRconAttribute("count")]
-  public uint Count { get; set; }
-
-}
-

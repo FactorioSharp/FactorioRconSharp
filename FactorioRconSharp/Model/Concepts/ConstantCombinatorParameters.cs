@@ -33,25 +33,3 @@ public abstract class ConstantCombinatorParameters
 
 }
 
-public abstract class Table33724501
-{
-  /// <summary>
-  /// Signal to emit.
-  /// </summary>
-  [FactorioRconAttribute("signal")]
-  public SignalID Signal { get; set; }
-
-  /// <summary>
-  /// Value of the signal to emit.
-  /// </summary>
-  [FactorioRconAttribute("count")]
-  public int Count { get; set; }
-
-  /// <summary>
-  /// Index of the constant combinator's slot to set this signal to.
-  /// </summary>
-  [FactorioRconAttribute("index")]
-  public uint Index { get; set; }
-
-}
-

@@ -27,19 +27,3 @@ public abstract class ProgrammableSpeakerAlertParameters
 
 }
 
-public abstract class Table45551519
-{
-  [FactorioRconAttribute("show_alert")]
-  public bool ShowAlert { get; set; }
-
-  [FactorioRconAttribute("show_on_map")]
-  public bool ShowOnMap { get; set; }
-
-  [FactorioRconAttribute("icon_signal_id")]
-  public SignalID IconSignalId { get; set; }
-
-  [FactorioRconAttribute("alert_message")]
-  public string AlertMessage { get; set; }
-
-}
-

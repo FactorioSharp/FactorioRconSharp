@@ -13,21 +13,8 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// One of the following values:
 /// </summary>
-[GenerateOneOf]
-[FactorioRconConcept("PrototypeFilterMode")]
-public abstract partial class PrototypeFilterMode: OneOfBase<Literal65357506, Literal30330347, Literal32957531>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union12699242: OneOfBase<Literal65357506, Literal30330347, Literal32957531>
-{
-}
-
-/// <summary>
-/// Literal value: none
-/// </summary>
-public enum Literal65357506
+[FactorioRconDefinition("PrototypeFilterMode")]
+public enum PrototypeFilterMode
 {
   /// <summary>
   /// Literal value: none
@@ -35,26 +22,12 @@ public enum Literal65357506
   [FactorioRconDefinitionValue("none")]
   None,
 
-}
-
-/// <summary>
-/// Literal value: whitelist
-/// </summary>
-public enum Literal30330347
-{
   /// <summary>
   /// Literal value: whitelist
   /// </summary>
   [FactorioRconDefinitionValue("whitelist")]
   Whitelist,
 
-}
-
-/// <summary>
-/// Literal value: blacklist
-/// </summary>
-public enum Literal32957531
-{
   /// <summary>
   /// Literal value: blacklist
   /// </summary>

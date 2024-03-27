@@ -13,21 +13,8 @@ namespace FactorioRconSharp.Model.Concepts;
 /// <summary>
 /// State of a GUI <see cref="LuaGuiElement.SwitchState" />.
 /// </summary>
-[GenerateOneOf]
-[FactorioRconConcept("SwitchState")]
-public abstract partial class SwitchState: OneOfBase<Literal19313531, Literal23221489, Literal2334549>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union63146650: OneOfBase<Literal19313531, Literal23221489, Literal2334549>
-{
-}
-
-/// <summary>
-/// Literal value: left
-/// </summary>
-public enum Literal19313531
+[FactorioRconDefinition("SwitchState")]
+public enum SwitchState
 {
   /// <summary>
   /// Literal value: left
@@ -35,26 +22,12 @@ public enum Literal19313531
   [FactorioRconDefinitionValue("left")]
   Left,
 
-}
-
-/// <summary>
-/// Literal value: right
-/// </summary>
-public enum Literal23221489
-{
   /// <summary>
   /// Literal value: right
   /// </summary>
   [FactorioRconDefinitionValue("right")]
   Right,
 
-}
-
-/// <summary>
-/// Literal value: none
-/// </summary>
-public enum Literal2334549
-{
   /// <summary>
   /// Literal value: none
   /// </summary>

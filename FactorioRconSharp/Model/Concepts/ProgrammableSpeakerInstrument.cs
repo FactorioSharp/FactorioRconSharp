@@ -21,13 +21,3 @@ public abstract class ProgrammableSpeakerInstrument
 
 }
 
-public abstract class Table56775157
-{
-  [FactorioRconAttribute("name")]
-  public string Name { get; set; }
-
-  [FactorioRconAttribute("notes")]
-  public List<string> Notes { get; set; }
-
-}
-

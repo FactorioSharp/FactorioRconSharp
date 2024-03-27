@@ -19,8 +19,3 @@ public abstract partial class PlayerIdentification: OneOfBase<uint, string, LuaP
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union48313086: OneOfBase<uint, string, LuaPlayer>
-{
-}
-

@@ -27,19 +27,3 @@ public abstract class ModuleEffects
 
 }
 
-public abstract class Table4286343
-{
-  [FactorioRconAttribute("consumption")]
-  public ModuleEffectValue Consumption { get; set; }
-
-  [FactorioRconAttribute("speed")]
-  public ModuleEffectValue Speed { get; set; }
-
-  [FactorioRconAttribute("productivity")]
-  public ModuleEffectValue Productivity { get; set; }
-
-  [FactorioRconAttribute("pollution")]
-  public ModuleEffectValue Pollution { get; set; }
-
-}
-
