@@ -160,7 +160,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public abstract int GetItemCount(string? item = null, Type1421203362? member = null);
+  public abstract int GetItemCount(string? item = null, Type1947253782? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public abstract uint RemoveItem(ItemStackIdentification item, Type1421203362? members = null);
+  public abstract uint RemoveItem(ItemStackIdentification item, Type1947253782? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public abstract uint Insert(ItemStackIdentification item, Type1421203362? members = null);
+  public abstract uint Insert(ItemStackIdentification item, Type1947253782? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Type1421203362? members = null);
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Type1947253782? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Type1421203362? members = null);
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Type1947253782? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.

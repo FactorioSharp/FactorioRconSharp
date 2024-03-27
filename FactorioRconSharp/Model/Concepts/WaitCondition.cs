@@ -20,7 +20,7 @@ public abstract class WaitCondition
   /// Specifies how this condition is to be compared with the preceding conditions in the corresponding `wait_conditions` array.
   /// </summary>
   [FactorioRconAttribute("compare_type")]
-  public Type1421203362 CompareType { get; set; }
+  public Type1947253782 CompareType { get; set; }
 
   /// <summary>
   /// Number of ticks to wait when `type` is `"time"`, or number of ticks of inactivity when `type` is `"inactivity"`.

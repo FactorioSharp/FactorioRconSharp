@@ -3,6 +3,7 @@ using System.Text.Json;
 using CaseExtensions;
 using FactorioRconSharp.ClientGenerator.Model;
 using FactorioRconSharp.ClientGenerator.Specification;
+using FactorioRconSharp.ClientGenerator.Extensions;
 
 namespace FactorioRconSharp.ClientGenerator.Compilation;
 
@@ -501,6 +502,6 @@ public class FactorioModelFileCompiler
     static int GetTypeId(FactorioRuntimeTypeSpecification type)
     {
         string typeContent = JsonSerializer.Serialize(type);
-        return Math.Abs(typeContent.GetHashCode());
+        return Math.Abs(typeContent.GetStableHashCode());
     }
 }

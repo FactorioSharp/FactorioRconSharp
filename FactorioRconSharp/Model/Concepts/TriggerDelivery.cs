@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerDelivery
 {
   [FactorioRconAttribute("type")]
-  public Type1421203362 Type { get; set; }
+  public Type1947253782 Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
   public List<TriggerEffectItem> SourceEffects { get; set; }
