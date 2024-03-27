@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
+using FactorioRconSharp.ClientGenerator.Compilation;
 using FactorioRconSharp.ClientGenerator.Converters;
 using FactorioRconSharp.ClientGenerator.Model;
-using FactorioRconSharp.ClientGenerator.Model.Compilers;
 using FactorioRconSharp.ClientGenerator.Model.Writers;
 using FactorioRconSharp.ClientGenerator.Specification;
 

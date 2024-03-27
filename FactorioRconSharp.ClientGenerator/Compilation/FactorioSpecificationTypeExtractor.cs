@@ -1,6 +1,6 @@
 ﻿using FactorioRconSharp.ClientGenerator.Specification;
 
-namespace FactorioRconSharp.ClientGenerator.Model.Compilers;
+namespace FactorioRconSharp.ClientGenerator.Compilation;
 
 public static class FactorioSpecificationTypeExtractor
 {

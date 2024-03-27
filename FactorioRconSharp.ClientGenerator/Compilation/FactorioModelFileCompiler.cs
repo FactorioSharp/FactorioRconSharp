@@ -1,8 +1,9 @@
 ﻿using System.Text;
 using CaseExtensions;
+using FactorioRconSharp.ClientGenerator.Model;
 using FactorioRconSharp.ClientGenerator.Specification;
 
-namespace FactorioRconSharp.ClientGenerator.Model.Compilers;
+namespace FactorioRconSharp.ClientGenerator.Compilation;
 
 public class FactorioModelFileCompiler
 {
