@@ -26,85 +26,85 @@ public enum TriggerEffectItemType
   /// Literal value: create-entity
   /// </summary>
   [FactorioRconDefinitionValue("create-entity")]
-  CreateEntity,
+  Createsubtractentity,
 
   /// <summary>
   /// Literal value: create-explosion
   /// </summary>
   [FactorioRconDefinitionValue("create-explosion")]
-  CreateExplosion,
+  Createsubtractexplosion,
 
   /// <summary>
   /// Literal value: create-fire
   /// </summary>
   [FactorioRconDefinitionValue("create-fire")]
-  CreateFire,
+  Createsubtractfire,
 
   /// <summary>
   /// Literal value: create-smoke
   /// </summary>
   [FactorioRconDefinitionValue("create-smoke")]
-  CreateSmoke,
+  Createsubtractsmoke,
 
   /// <summary>
   /// Literal value: create-trivial-smoke
   /// </summary>
   [FactorioRconDefinitionValue("create-trivial-smoke")]
-  CreateTrivialSmoke,
+  Createsubtracttrivialsubtractsmoke,
 
   /// <summary>
   /// Literal value: create-particle
   /// </summary>
   [FactorioRconDefinitionValue("create-particle")]
-  CreateParticle,
+  Createsubtractparticle,
 
   /// <summary>
   /// Literal value: create-sticker
   /// </summary>
   [FactorioRconDefinitionValue("create-sticker")]
-  CreateSticker,
+  Createsubtractsticker,
 
   /// <summary>
   /// Literal value: create-decorative
   /// </summary>
   [FactorioRconDefinitionValue("create-decorative")]
-  CreateDecorative,
+  Createsubtractdecorative,
 
   /// <summary>
   /// Literal value: nested-result
   /// </summary>
   [FactorioRconDefinitionValue("nested-result")]
-  NestedResult,
+  Nestedsubtractresult,
 
   /// <summary>
   /// Literal value: play-sound
   /// </summary>
   [FactorioRconDefinitionValue("play-sound")]
-  PlaySound,
+  Playsubtractsound,
 
   /// <summary>
   /// Literal value: push-back
   /// </summary>
   [FactorioRconDefinitionValue("push-back")]
-  PushBack,
+  Pushsubtractback,
 
   /// <summary>
   /// Literal value: destroy-cliffs
   /// </summary>
   [FactorioRconDefinitionValue("destroy-cliffs")]
-  DestroyCliffs,
+  Destroysubtractcliffs,
 
   /// <summary>
   /// Literal value: show-explosion-on-chart
   /// </summary>
   [FactorioRconDefinitionValue("show-explosion-on-chart")]
-  ShowExplosionOnChart,
+  Showsubtractexplosionsubtractonsubtractchart,
 
   /// <summary>
   /// Literal value: insert-item
   /// </summary>
   [FactorioRconDefinitionValue("insert-item")]
-  InsertItem,
+  Insertsubtractitem,
 
   /// <summary>
   /// Literal value: script
@@ -116,25 +116,25 @@ public enum TriggerEffectItemType
   /// Literal value: set-tile
   /// </summary>
   [FactorioRconDefinitionValue("set-tile")]
-  SetTile,
+  Setsubtracttile,
 
   /// <summary>
   /// Literal value: invoke-tile-trigger
   /// </summary>
   [FactorioRconDefinitionValue("invoke-tile-trigger")]
-  InvokeTileTrigger,
+  Invokesubtracttilesubtracttrigger,
 
   /// <summary>
   /// Literal value: destroy-decoratives
   /// </summary>
   [FactorioRconDefinitionValue("destroy-decoratives")]
-  DestroyDecoratives,
+  Destroysubtractdecoratives,
 
   /// <summary>
   /// Literal value: camera-effect
   /// </summary>
   [FactorioRconDefinitionValue("camera-effect")]
-  CameraEffect,
+  Camerasubtracteffect,
 
 }
 

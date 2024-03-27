@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class FluidBoxConnection
 {
   [FactorioRconAttribute("type")]
-  public Type375078767 Type { get; set; }
+  public Type1421203362 Type { get; set; }
 
   /// <summary>
   /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.

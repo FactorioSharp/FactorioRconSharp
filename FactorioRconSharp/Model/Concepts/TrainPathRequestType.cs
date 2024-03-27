@@ -26,19 +26,19 @@ public enum TrainPathRequestType
   /// Literal value: any-goal-accessible
   /// </summary>
   [FactorioRconDefinitionValue("any-goal-accessible")]
-  AnyGoalAccessible,
+  Anysubtractgoalsubtractaccessible,
 
   /// <summary>
   /// Literal value: all-goals-accessible
   /// </summary>
   [FactorioRconDefinitionValue("all-goals-accessible")]
-  AllGoalsAccessible,
+  Allsubtractgoalssubtractaccessible,
 
   /// <summary>
   /// Literal value: all-goals-penalties
   /// </summary>
   [FactorioRconDefinitionValue("all-goals-penalties")]
-  AllGoalsPenalties,
+  Allsubtractgoalssubtractpenalties,
 
 }
 

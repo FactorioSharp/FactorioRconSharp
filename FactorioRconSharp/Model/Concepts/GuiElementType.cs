@@ -23,7 +23,7 @@ public enum GuiElementType
   /// Literal value: sprite-button
   /// </summary>
   [FactorioRconDefinitionValue("sprite-button")]
-  SpriteButton,
+  Spritesubtractbutton,
 
   /// <summary>
   /// Literal value: checkbox
@@ -89,19 +89,19 @@ public enum GuiElementType
   /// Literal value: scroll-pane
   /// </summary>
   [FactorioRconDefinitionValue("scroll-pane")]
-  ScrollPane,
+  Scrollsubtractpane,
 
   /// <summary>
   /// Literal value: drop-down
   /// </summary>
   [FactorioRconDefinitionValue("drop-down")]
-  DropDown,
+  Dropsubtractdown,
 
   /// <summary>
   /// Literal value: list-box
   /// </summary>
   [FactorioRconDefinitionValue("list-box")]
-  ListBox,
+  Listsubtractbox,
 
   /// <summary>
   /// Literal value: camera
@@ -113,13 +113,13 @@ public enum GuiElementType
   /// Literal value: choose-elem-button
   /// </summary>
   [FactorioRconDefinitionValue("choose-elem-button")]
-  ChooseElemButton,
+  Choosesubtractelemsubtractbutton,
 
   /// <summary>
   /// Literal value: text-box
   /// </summary>
   [FactorioRconDefinitionValue("text-box")]
-  TextBox,
+  Textsubtractbox,
 
   /// <summary>
   /// Literal value: slider
@@ -137,19 +137,19 @@ public enum GuiElementType
   /// Literal value: entity-preview
   /// </summary>
   [FactorioRconDefinitionValue("entity-preview")]
-  EntityPreview,
+  Entitysubtractpreview,
 
   /// <summary>
   /// Literal value: empty-widget
   /// </summary>
   [FactorioRconDefinitionValue("empty-widget")]
-  EmptyWidget,
+  Emptysubtractwidget,
 
   /// <summary>
   /// Literal value: tabbed-pane
   /// </summary>
   [FactorioRconDefinitionValue("tabbed-pane")]
-  TabbedPane,
+  Tabbedsubtractpane,
 
   /// <summary>
   /// Literal value: tab

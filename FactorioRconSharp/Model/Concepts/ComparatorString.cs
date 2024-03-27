@@ -20,55 +20,55 @@ public enum ComparatorString
   /// Literal value: =
   /// </summary>
   [FactorioRconDefinitionValue("=")]
-  =,
+  Eq,
 
   /// <summary>
   /// Literal value: >
   /// </summary>
   [FactorioRconDefinitionValue(">")]
-  >,
+  Gt,
 
   /// <summary>
   /// Literal value: <
   /// </summary>
   [FactorioRconDefinitionValue("<")]
-  <,
+  Lt,
 
   /// <summary>
   /// Literal value: ≥
   /// </summary>
   [FactorioRconDefinitionValue("≥")]
-  ≥,
+  Ge,
 
   /// <summary>
   /// Literal value: >=
   /// </summary>
   [FactorioRconDefinitionValue(">=")]
-  >=,
+  Ge,
 
   /// <summary>
   /// Literal value: ≤
   /// </summary>
   [FactorioRconDefinitionValue("≤")]
-  ≤,
+  Le,
 
   /// <summary>
   /// Literal value: <=
   /// </summary>
   [FactorioRconDefinitionValue("<=")]
-  <=,
+  Le,
 
   /// <summary>
   /// Literal value: ≠
   /// </summary>
   [FactorioRconDefinitionValue("≠")]
-  ≠,
+  Ne,
 
   /// <summary>
   /// Literal value: !=
   /// </summary>
   [FactorioRconDefinitionValue("!=")]
-  !=,
+  Ne,
 
 }
 

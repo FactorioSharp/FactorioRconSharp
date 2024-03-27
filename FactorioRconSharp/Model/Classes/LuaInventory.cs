@@ -185,7 +185,7 @@ public abstract class LuaInventory: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public abstract bool SetFilter(uint index, Type375078767 filter);
+  public abstract bool SetFilter(uint index, Type1421203362 filter);
 
   /// <summary>
   /// Finds the first LuaItemStack in the inventory that matches the given item name.

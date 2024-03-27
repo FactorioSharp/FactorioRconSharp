@@ -17,10 +17,10 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class PipeConnection
 {
   [FactorioRconAttribute("flow_direction")]
-  public Type375078767 FlowDirection { get; set; }
+  public Type1421203362 FlowDirection { get; set; }
 
   [FactorioRconAttribute("connection_type")]
-  public Type375078767 ConnectionType { get; set; }
+  public Type1421203362 ConnectionType { get; set; }
 
   /// <summary>
   /// The absolute position of this connection within the entity.

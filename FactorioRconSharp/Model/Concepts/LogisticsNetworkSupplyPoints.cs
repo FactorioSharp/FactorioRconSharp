@@ -17,13 +17,13 @@ public abstract class LogisticsNetworkSupplyPoints
   public List<LuaLogisticPoint> Storage { get; set; }
 
   [FactorioRconAttribute("passive-provider")]
-  public List<LuaLogisticPoint> PassiveProvider { get; set; }
+  public List<LuaLogisticPoint> Passivesubtractprovider { get; set; }
 
   [FactorioRconAttribute("buffer")]
   public List<LuaLogisticPoint> Buffer { get; set; }
 
   [FactorioRconAttribute("active-provider")]
-  public List<LuaLogisticPoint> ActiveProvider { get; set; }
+  public List<LuaLogisticPoint> Activesubtractprovider { get; set; }
 
 }
 

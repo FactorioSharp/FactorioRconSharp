@@ -17,28 +17,28 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class MapViewSettings
 {
   [FactorioRconAttribute("show-logistic-network")]
-  public bool ShowLogisticNetwork { get; set; }
+  public bool Showsubtractlogisticsubtractnetwork { get; set; }
 
   [FactorioRconAttribute("show-electric-network")]
-  public bool ShowElectricNetwork { get; set; }
+  public bool Showsubtractelectricsubtractnetwork { get; set; }
 
   [FactorioRconAttribute("show-turret-range")]
-  public bool ShowTurretRange { get; set; }
+  public bool Showsubtractturretsubtractrange { get; set; }
 
   [FactorioRconAttribute("show-pollution")]
-  public bool ShowPollution { get; set; }
+  public bool Showsubtractpollution { get; set; }
 
   [FactorioRconAttribute("show-train-station-names")]
-  public bool ShowTrainStationNames { get; set; }
+  public bool Showsubtracttrainsubtractstationsubtractnames { get; set; }
 
   [FactorioRconAttribute("show-player-names")]
-  public bool ShowPlayerNames { get; set; }
+  public bool Showsubtractplayersubtractnames { get; set; }
 
   [FactorioRconAttribute("show-networkless-logistic-members")]
-  public bool ShowNetworklessLogisticMembers { get; set; }
+  public bool Showsubtractnetworklesssubtractlogisticsubtractmembers { get; set; }
 
   [FactorioRconAttribute("show-non-standard-map-info")]
-  public bool ShowNonStandardMapInfo { get; set; }
+  public bool Showsubtractnonsubtractstandardsubtractmapsubtractinfo { get; set; }
 
 }
 

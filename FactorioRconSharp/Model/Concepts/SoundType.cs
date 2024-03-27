@@ -20,13 +20,13 @@ public enum SoundType
   /// Literal value: game-effect
   /// </summary>
   [FactorioRconDefinitionValue("game-effect")]
-  GameEffect,
+  Gamesubtracteffect,
 
   /// <summary>
   /// Literal value: gui-effect
   /// </summary>
   [FactorioRconDefinitionValue("gui-effect")]
-  GuiEffect,
+  Guisubtracteffect,
 
   /// <summary>
   /// Literal value: ambient

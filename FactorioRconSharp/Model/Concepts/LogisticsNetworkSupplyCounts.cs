@@ -23,7 +23,7 @@ public abstract class LogisticsNetworkSupplyCounts
   /// Number of available items in the passive provider members.
   /// </summary>
   [FactorioRconAttribute("passive-provider")]
-  public uint PassiveProvider { get; set; }
+  public uint Passivesubtractprovider { get; set; }
 
   /// <summary>
   /// Number of available items in the buffer members.
@@ -35,7 +35,7 @@ public abstract class LogisticsNetworkSupplyCounts
   /// Number of available items in the active provider members.
   /// </summary>
   [FactorioRconAttribute("active-provider")]
-  public uint ActiveProvider { get; set; }
+  public uint Activesubtractprovider { get; set; }
 
 }
 

@@ -17,121 +17,121 @@ public enum CliffOrientation
   /// Literal value: west-to-east
   /// </summary>
   [FactorioRconDefinitionValue("west-to-east")]
-  WestToEast,
+  Westsubtracttosubtracteast,
 
   /// <summary>
   /// Literal value: north-to-south
   /// </summary>
   [FactorioRconDefinitionValue("north-to-south")]
-  NorthToSouth,
+  Northsubtracttosubtractsouth,
 
   /// <summary>
   /// Literal value: east-to-west
   /// </summary>
   [FactorioRconDefinitionValue("east-to-west")]
-  EastToWest,
+  Eastsubtracttosubtractwest,
 
   /// <summary>
   /// Literal value: south-to-north
   /// </summary>
   [FactorioRconDefinitionValue("south-to-north")]
-  SouthToNorth,
+  Southsubtracttosubtractnorth,
 
   /// <summary>
   /// Literal value: west-to-north
   /// </summary>
   [FactorioRconDefinitionValue("west-to-north")]
-  WestToNorth,
+  Westsubtracttosubtractnorth,
 
   /// <summary>
   /// Literal value: north-to-east
   /// </summary>
   [FactorioRconDefinitionValue("north-to-east")]
-  NorthToEast,
+  Northsubtracttosubtracteast,
 
   /// <summary>
   /// Literal value: east-to-south
   /// </summary>
   [FactorioRconDefinitionValue("east-to-south")]
-  EastToSouth,
+  Eastsubtracttosubtractsouth,
 
   /// <summary>
   /// Literal value: south-to-west
   /// </summary>
   [FactorioRconDefinitionValue("south-to-west")]
-  SouthToWest,
+  Southsubtracttosubtractwest,
 
   /// <summary>
   /// Literal value: west-to-south
   /// </summary>
   [FactorioRconDefinitionValue("west-to-south")]
-  WestToSouth,
+  Westsubtracttosubtractsouth,
 
   /// <summary>
   /// Literal value: north-to-west
   /// </summary>
   [FactorioRconDefinitionValue("north-to-west")]
-  NorthToWest,
+  Northsubtracttosubtractwest,
 
   /// <summary>
   /// Literal value: east-to-north
   /// </summary>
   [FactorioRconDefinitionValue("east-to-north")]
-  EastToNorth,
+  Eastsubtracttosubtractnorth,
 
   /// <summary>
   /// Literal value: south-to-east
   /// </summary>
   [FactorioRconDefinitionValue("south-to-east")]
-  SouthToEast,
+  Southsubtracttosubtracteast,
 
   /// <summary>
   /// Literal value: west-to-none
   /// </summary>
   [FactorioRconDefinitionValue("west-to-none")]
-  WestToNone,
+  Westsubtracttosubtractnone,
 
   /// <summary>
   /// Literal value: none-to-east
   /// </summary>
   [FactorioRconDefinitionValue("none-to-east")]
-  NoneToEast,
+  Nonesubtracttosubtracteast,
 
   /// <summary>
   /// Literal value: east-to-none
   /// </summary>
   [FactorioRconDefinitionValue("east-to-none")]
-  EastToNone,
+  Eastsubtracttosubtractnone,
 
   /// <summary>
   /// Literal value: none-to-west
   /// </summary>
   [FactorioRconDefinitionValue("none-to-west")]
-  NoneToWest,
+  Nonesubtracttosubtractwest,
 
   /// <summary>
   /// Literal value: north-to-none
   /// </summary>
   [FactorioRconDefinitionValue("north-to-none")]
-  NorthToNone,
+  Northsubtracttosubtractnone,
 
   /// <summary>
   /// Literal value: none-to-south
   /// </summary>
   [FactorioRconDefinitionValue("none-to-south")]
-  NoneToSouth,
+  Nonesubtracttosubtractsouth,
 
   /// <summary>
   /// Literal value: south-to-none
   /// </summary>
   [FactorioRconDefinitionValue("south-to-none")]
-  SouthToNone,
+  Southsubtracttosubtractnone,
 
   /// <summary>
   /// Literal value: none-to-north
   /// </summary>
   [FactorioRconDefinitionValue("none-to-north")]
-  NoneToNorth,
+  Nonesubtracttosubtractnorth,
 
 }
 

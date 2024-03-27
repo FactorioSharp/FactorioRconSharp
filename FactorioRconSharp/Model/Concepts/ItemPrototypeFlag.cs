@@ -20,7 +20,7 @@ public enum ItemPrototypeFlag
   /// Literal value: draw-logistic-overlay
   /// </summary>
   [FactorioRconDefinitionValue("draw-logistic-overlay")]
-  DrawLogisticOverlay,
+  Drawsubtractlogisticsubtractoverlay,
 
   /// <summary>
   /// Literal value: hidden
@@ -32,49 +32,49 @@ public enum ItemPrototypeFlag
   /// Literal value: always-show
   /// </summary>
   [FactorioRconDefinitionValue("always-show")]
-  AlwaysShow,
+  Alwayssubtractshow,
 
   /// <summary>
   /// Literal value: hide-from-bonus-gui
   /// </summary>
   [FactorioRconDefinitionValue("hide-from-bonus-gui")]
-  HideFromBonusGui,
+  Hidesubtractfromsubtractbonussubtractgui,
 
   /// <summary>
   /// Literal value: hide-from-fuel-tooltip
   /// </summary>
   [FactorioRconDefinitionValue("hide-from-fuel-tooltip")]
-  HideFromFuelTooltip,
+  Hidesubtractfromsubtractfuelsubtracttooltip,
 
   /// <summary>
   /// Literal value: not-stackable
   /// </summary>
   [FactorioRconDefinitionValue("not-stackable")]
-  NotStackable,
+  Notsubtractstackable,
 
   /// <summary>
   /// Literal value: can-extend-inventory
   /// </summary>
   [FactorioRconDefinitionValue("can-extend-inventory")]
-  CanExtendInventory,
+  Cansubtractextendsubtractinventory,
 
   /// <summary>
   /// Literal value: primary-place-result
   /// </summary>
   [FactorioRconDefinitionValue("primary-place-result")]
-  PrimaryPlaceResult,
+  Primarysubtractplacesubtractresult,
 
   /// <summary>
   /// Literal value: mod-openable
   /// </summary>
   [FactorioRconDefinitionValue("mod-openable")]
-  ModOpenable,
+  Modsubtractopenable,
 
   /// <summary>
   /// Literal value: only-in-cursor
   /// </summary>
   [FactorioRconDefinitionValue("only-in-cursor")]
-  OnlyInCursor,
+  Onlysubtractinsubtractcursor,
 
   /// <summary>
   /// Literal value: spawnable

@@ -28,7 +28,9 @@ if (parsedSpecification == null)
 
 Console.WriteLine($"Parsed specification: {parsedSpecification.Application} v{parsedSpecification.ApplicationVersion}");
 Console.WriteLine($"\tApi v{parsedSpecification.ApiVersion} ({parsedSpecification.Stage})");
+Console.WriteLine($"\tDefinitions ({parsedSpecification.Defines.Length}): {string.Join(", ", parsedSpecification.Defines.Select(c => c.Name))}");
 Console.WriteLine($"\tClasses ({parsedSpecification.Classes.Length}): {string.Join(", ", parsedSpecification.Classes.Select(c => c.Name))}");
+Console.WriteLine($"\tConcepts ({parsedSpecification.Concepts.Length}): {string.Join(", ", parsedSpecification.Concepts.Select(c => c.Name))}");
 Console.WriteLine();
 
 const string outPath = "out";

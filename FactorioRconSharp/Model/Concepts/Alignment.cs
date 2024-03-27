@@ -20,13 +20,13 @@ public enum Alignment
   /// Literal value: top-left
   /// </summary>
   [FactorioRconDefinitionValue("top-left")]
-  TopLeft,
+  Topsubtractleft,
 
   /// <summary>
   /// Literal value: middle-left
   /// </summary>
   [FactorioRconDefinitionValue("middle-left")]
-  MiddleLeft,
+  Middlesubtractleft,
 
   /// <summary>
   /// Literal value: left
@@ -38,19 +38,19 @@ public enum Alignment
   /// Literal value: bottom-left
   /// </summary>
   [FactorioRconDefinitionValue("bottom-left")]
-  BottomLeft,
+  Bottomsubtractleft,
 
   /// <summary>
   /// Literal value: top-center
   /// </summary>
   [FactorioRconDefinitionValue("top-center")]
-  TopCenter,
+  Topsubtractcenter,
 
   /// <summary>
   /// Literal value: middle-center
   /// </summary>
   [FactorioRconDefinitionValue("middle-center")]
-  MiddleCenter,
+  Middlesubtractcenter,
 
   /// <summary>
   /// Literal value: center
@@ -62,13 +62,13 @@ public enum Alignment
   /// Literal value: bottom-center
   /// </summary>
   [FactorioRconDefinitionValue("bottom-center")]
-  BottomCenter,
+  Bottomsubtractcenter,
 
   /// <summary>
   /// Literal value: top-right
   /// </summary>
   [FactorioRconDefinitionValue("top-right")]
-  TopRight,
+  Topsubtractright,
 
   /// <summary>
   /// Literal value: right
@@ -80,7 +80,7 @@ public enum Alignment
   /// Literal value: bottom-right
   /// </summary>
   [FactorioRconDefinitionValue("bottom-right")]
-  BottomRight,
+  Bottomsubtractright,
 
 }
 

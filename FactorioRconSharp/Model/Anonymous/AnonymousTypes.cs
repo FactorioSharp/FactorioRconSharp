@@ -11,11 +11,11 @@ using OneOf;
 
 namespace FactorioRconSharp.Model.Anonymous;
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -24,7 +24,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -40,140 +40,140 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: DifficultySettings
+public abstract class Type1421203362: DifficultySettings
 {
 }
 
-public abstract class Type375078767: EnemyEvolutionMapSettings
+public abstract class Type1421203362: EnemyEvolutionMapSettings
 {
 }
 
-public abstract class Type375078767: EnemyExpansionMapSettings
+public abstract class Type1421203362: EnemyExpansionMapSettings
 {
 }
 
-public abstract class Type375078767: PollutionMapSettings
+public abstract class Type1421203362: PollutionMapSettings
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: TriggerItem
+public abstract class Type1421203362: TriggerItem
 {
 }
 
-public abstract class Type375078767: List<TriggerItem>
+public abstract class Type1421203362: List<TriggerItem>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: TargetType
+public abstract class Type1421203362: TargetType
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaTable
+public abstract class Type1421203362: LuaTable
 {
 }
 
-public abstract class Type375078767: LuaObject
+public abstract class Type1421203362: LuaObject
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaTable
+public abstract class Type1421203362: LuaTable
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
@@ -191,55 +191,55 @@ public abstract class Type375078767: SignalID
 ///   - OR
 ///   - XOR
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: *
   /// </summary>
   [FactorioRconDefinitionValue("*")]
-  *,
+  Multiply,
 
   /// <summary>
   /// Literal value: /
   /// </summary>
   [FactorioRconDefinitionValue("/")]
-  /,
+  Divide,
 
   /// <summary>
   /// Literal value: +
   /// </summary>
   [FactorioRconDefinitionValue("+")]
-  +,
+  Add,
 
   /// <summary>
   /// Literal value: -
   /// </summary>
   [FactorioRconDefinitionValue("-")]
-  ,
+  Subtract,
 
   /// <summary>
   /// Literal value: %
   /// </summary>
   [FactorioRconDefinitionValue("%")]
-  %,
+  Percent,
 
   /// <summary>
   /// Literal value: ^
   /// </summary>
   [FactorioRconDefinitionValue("^")]
-  ^,
+  Pow,
 
   /// <summary>
   /// Literal value: <<
   /// </summary>
   [FactorioRconDefinitionValue("<<")]
-  <<,
+  Lsl,
 
   /// <summary>
   /// Literal value: >>
   /// </summary>
   [FactorioRconDefinitionValue(">>")]
-  >>,
+  Lsr,
 
   /// <summary>
   /// Literal value: AND
@@ -261,75 +261,75 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: AmmoType
+public abstract class Type1421203362: AmmoType
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
@@ -338,27 +338,27 @@ public abstract class Type375078767: float
 ///   - center-to-center
 ///   - bounding-box-to-bounding-box
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: center-to-center
   /// </summary>
   [FactorioRconDefinitionValue("center-to-center")]
-  CenterToCenter,
+  Centersubtracttosubtractcenter,
 
   /// <summary>
   /// Literal value: bounding-box-to-bounding-box
   /// </summary>
   [FactorioRconDefinitionValue("bounding-box-to-bounding-box")]
-  BoundingBoxToBoundingBox,
+  Boundingsubtractboxsubtracttosubtractboundingsubtractbox,
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
@@ -368,7 +368,7 @@ public abstract class Type375078767: float
 ///   - stream
 ///   - beam
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: projectile
@@ -390,391 +390,391 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: CircularProjectileCreationSpecification
+public abstract class Type1421203362: CircularProjectileCreationSpecification
 {
 }
 
-public abstract class Type375078767: List<CircularProjectileCreationSpecification>
+public abstract class Type1421203362: List<CircularProjectileCreationSpecification>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: CircularParticleCreationSpecification
+public abstract class Type1421203362: CircularParticleCreationSpecification
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: AttackParameterFluid
+public abstract class Type1421203362: AttackParameterFluid
 {
 }
 
-public abstract class Type375078767: List<AttackParameterFluid>
+public abstract class Type1421203362: List<AttackParameterFluid>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: GunShift4Way
+public abstract class Type1421203362: GunShift4Way
 {
 }
 
-public abstract class Type375078767: CircularProjectileCreationSpecification
+public abstract class Type1421203362: CircularProjectileCreationSpecification
 {
 }
 
-public abstract class Type375078767: List<CircularProjectileCreationSpecification>
+public abstract class Type1421203362: List<CircularProjectileCreationSpecification>
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: MapGenSize
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: MapGenSize
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: MapGenSize
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AutoplaceControl
+public abstract class Type1421203362: AutoplaceControl
 {
 }
 
-public abstract class Type375078767: Dictionary<string, AutoplaceControl>
+public abstract class Type1421203362: Dictionary<string, AutoplaceControl>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AutoplaceSpecificationPeak
+public abstract class Type1421203362: AutoplaceSpecificationPeak
 {
 }
 
-public abstract class Type375078767: List<AutoplaceSpecificationPeak>
+public abstract class Type1421203362: List<AutoplaceSpecificationPeak>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: NoiseExpression
+public abstract class Type1421203362: NoiseExpression
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: NoiseExpression
+public abstract class Type1421203362: NoiseExpression
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: AutoplaceSpecificationRestriction
+public abstract class Type1421203362: AutoplaceSpecificationRestriction
 {
 }
 
-public abstract class Type375078767: List<AutoplaceSpecificationRestriction>
+public abstract class Type1421203362: List<AutoplaceSpecificationRestriction>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: BlueprintCircuitConnection
+public abstract class Type1421203362: BlueprintCircuitConnection
 {
 }
 
-public abstract class Type375078767: BlueprintControlBehavior
+public abstract class Type1421203362: BlueprintControlBehavior
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: TrainScheduleRecord
+public abstract class Type1421203362: TrainScheduleRecord
 {
 }
 
-public abstract class Type375078767: List<TrainScheduleRecord>
+public abstract class Type1421203362: List<TrainScheduleRecord>
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("left_top")]
   public MapPosition LeftTop { get; set; }
@@ -787,19 +787,19 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("left_top")]
   public MapPosition LeftTop { get; set; }
@@ -820,7 +820,7 @@ public abstract class Table375078767
 ///   - artillery-remote
 ///   - destroy-cliffs
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: throw
@@ -832,103 +832,85 @@ public enum Literals375078767
   /// Literal value: equipment-remote
   /// </summary>
   [FactorioRconDefinitionValue("equipment-remote")]
-  EquipmentRemote,
+  Equipmentsubtractremote,
 
   /// <summary>
   /// Literal value: use-on-self
   /// </summary>
   [FactorioRconDefinitionValue("use-on-self")]
-  UseOnSelf,
+  Usesubtractonsubtractself,
 
   /// <summary>
   /// Literal value: artillery-remote
   /// </summary>
   [FactorioRconDefinitionValue("artillery-remote")]
-  ArtilleryRemote,
+  Artillerysubtractremote,
 
   /// <summary>
   /// Literal value: destroy-cliffs
   /// </summary>
   [FactorioRconDefinitionValue("destroy-cliffs")]
-  DestroyCliffs,
+  Destroysubtractcliffs,
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AttackParameters
+public abstract class Type1421203362: AttackParameters
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AttackParameters
+public abstract class Type1421203362: AttackParameters
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: AttackParameters
+public abstract class Type1421203362: AttackParameters
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -938,150 +920,168 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
+}
+
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: CircuitCondition
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: CircuitCondition
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: WireTypeEnum
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: WireTypeEnum
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: CollisionMaskLayer
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapGenSize
+{
+}
+
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -1091,58 +1091,58 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: CollisionMaskLayer
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
 /// <summary>
 /// Literal value: not-colliding-with-itself
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: not-colliding-with-itself
   /// </summary>
   [FactorioRconDefinitionValue("not-colliding-with-itself")]
-  NotCollidingWithItself,
+  Notsubtractcollidingsubtractwithsubtractitself,
 
 }
 
 /// <summary>
 /// Literal value: consider-tile-transitions
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: consider-tile-transitions
   /// </summary>
   [FactorioRconDefinitionValue("consider-tile-transitions")]
-  ConsiderTileTransitions,
+  Considersubtracttilesubtracttransitions,
 
 }
 
 /// <summary>
 /// Literal value: colliding-with-tiles-only
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: colliding-with-tiles-only
   /// </summary>
   [FactorioRconDefinitionValue("colliding-with-tiles-only")]
-  CollidingWithTilesOnly,
+  Collidingsubtractwithsubtracttilessubtractonly,
 
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, Literal375078767, Literal375078767, Literal375078767>
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, Literal1421203362, Literal1421203362, Literal1421203362>
 {
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -1152,55 +1152,23 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("r")]
-  public float R { get; set; }
-
-  [FactorioRconAttribute("g")]
-  public float G { get; set; }
-
-  [FactorioRconAttribute("b")]
-  public float B { get; set; }
-
-  [FactorioRconAttribute("a")]
-  public float A { get; set; }
-
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("r")]
   public float R { get; set; }
@@ -1216,55 +1184,23 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("r")]
-  public float R { get; set; }
-
-  [FactorioRconAttribute("g")]
-  public float G { get; set; }
-
-  [FactorioRconAttribute("b")]
-  public float B { get; set; }
-
-  [FactorioRconAttribute("a")]
-  public float A { get; set; }
-
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("r")]
   public float R { get; set; }
@@ -1280,239 +1216,303 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: CommandEnum
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("r")]
+  public float R { get; set; }
+
+  [FactorioRconAttribute("g")]
+  public float G { get; set; }
+
+  [FactorioRconAttribute("b")]
+  public float B { get; set; }
+
+  [FactorioRconAttribute("a")]
+  public float A { get; set; }
+
+}
+
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("r")]
+  public float R { get; set; }
+
+  [FactorioRconAttribute("g")]
+  public float G { get; set; }
+
+  [FactorioRconAttribute("b")]
+  public float B { get; set; }
+
+  [FactorioRconAttribute("a")]
+  public float A { get; set; }
+
+}
+
+public abstract class Type1421203362: CommandEnum
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: List<Command>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: CompoundCommandEnum
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PathfinderFlags
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: List<Command>
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: CompoundCommandEnum
 {
 }
 
-public abstract class Type375078767: LuaUnitGroup
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: DistractionEnum
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: PathfinderFlags
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaUnitGroup
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ModChangeData
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: Dictionary<string, ModChangeData>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: DistractionEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: WireConnectionIdEnum
+public abstract class Type1421203362: ModChangeData
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: Dictionary<string, ModChangeData>
 {
 }
 
-public abstract class Type375078767: WireConnectionIdEnum
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: WireConnectionIdEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: WireConnectionIdEnum
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaUnitGroup
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: LuaUnitGroup
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, LuaUnitGroup>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, LuaUnitGroup>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -1522,55 +1522,55 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: Dictionary<string, Literal375078767>
+public abstract class Type1421203362: Dictionary<string, Literal1421203362>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -1579,7 +1579,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -1595,36 +1595,36 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union1421203362: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaDecorativePrototype
+public abstract class Type1421203362: LuaDecorativePrototype
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: DifficultySettingsRecipeDifficultyEnum
+public abstract class Type1421203362: DifficultySettingsRecipeDifficultyEnum
 {
 }
 
@@ -1634,13 +1634,13 @@ public abstract class Type375078767: DifficultySettingsRecipeDifficultyEnum
 ///   - always
 ///   - never
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: after-victory
   /// </summary>
   [FactorioRconDefinitionValue("after-victory")]
-  AfterVictory,
+  Aftersubtractvictory,
 
   /// <summary>
   /// Literal value: always
@@ -1656,115 +1656,115 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: DifficultySettingsTechnologyDifficultyEnum
+public abstract class Type1421203362: DifficultySettingsTechnologyDifficultyEnum
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: WireConnectionIdEnum
+public abstract class Type1421203362: WireConnectionIdEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ElemType
+public abstract class Type1421203362: ElemType
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -1773,7 +1773,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -1789,24 +1789,24 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union1421203362: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 
@@ -1817,7 +1817,7 @@ public abstract partial class Union375078767: OneOfBase<CollisionMask, Collision
 ///   - contains-any
 ///   - contains-all
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: collides
@@ -1829,88 +1829,88 @@ public enum Literals375078767
   /// Literal value: layers-equals
   /// </summary>
   [FactorioRconDefinitionValue("layers-equals")]
-  LayersEquals,
+  Layerssubtractequals,
 
   /// <summary>
   /// Literal value: contains-any
   /// </summary>
   [FactorioRconDefinitionValue("contains-any")]
-  ContainsAny,
+  Containssubtractany,
 
   /// <summary>
   /// Literal value: contains-all
   /// </summary>
   [FactorioRconDefinitionValue("contains-all")]
-  ContainsAll,
+  Containssubtractall,
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: EntityPrototypeFlag
+public abstract class Type1421203362: EntityPrototypeFlag
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
-{
-}
-
-public abstract class Type375078767: ComparatorString
-{
-}
-
-public abstract class Type375078767: byte
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: EntityPrototypeFlag
+public abstract class Type1421203362: ComparatorString
+{
+}
+
+public abstract class Type1421203362: byte
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: EntityPrototypeFlag
 {
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -1920,53 +1920,35 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -1976,11 +1958,29 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
 {
 }
 
@@ -1989,7 +1989,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -2005,145 +2005,145 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: EventsEnum
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaEntityClonedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaEntityDamagedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPlayerMinedEntityEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPreRobotMinedEntityEventFilter
-{
-}
-
-public abstract class Type375078767: LuaRobotBuiltEntityEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPostEntityDiedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaEntityDiedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaScriptRaisedReviveEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPrePlayerMinedEntityEventFilter
-{
-}
-
-public abstract class Type375078767: LuaEntityMarkedForDeconstructionEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPreGhostDeconstructedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPreGhostUpgradedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaEntityDeconstructionCancelledEventFilter
-{
-}
-
-public abstract class Type375078767: LuaEntityMarkedForUpgradeEventFilter
-{
-}
-
-public abstract class Type375078767: LuaSectorScannedEventFilter
-{
-}
-
-public abstract class Type375078767: LuaRobotMinedEntityEventFilter
-{
-}
-
-public abstract class Type375078767: LuaScriptRaisedDestroyEventFilter
-{
-}
-
-public abstract class Type375078767: LuaUpgradeCancelledEventFilter
-{
-}
-
-public abstract class Type375078767: LuaScriptRaisedBuiltEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPlayerBuiltEntityEventFilter
-{
-}
-
-public abstract class Type375078767: LuaPlayerRepairedEntityEventFilter
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntityClonedEventFilter, LuaEntityDamagedEventFilter, LuaPlayerMinedEntityEventFilter, LuaPreRobotMinedEntityEventFilter, LuaRobotBuiltEntityEventFilter, LuaPostEntityDiedEventFilter, LuaEntityDiedEventFilter, LuaScriptRaisedReviveEventFilter, LuaPrePlayerMinedEntityEventFilter, LuaEntityMarkedForDeconstructionEventFilter, LuaPreGhostDeconstructedEventFilter, LuaPreGhostUpgradedEventFilter, LuaEntityDeconstructionCancelledEventFilter, LuaEntityMarkedForUpgradeEventFilter, LuaSectorScannedEventFilter, LuaRobotMinedEntityEventFilter, LuaScriptRaisedDestroyEventFilter, LuaUpgradeCancelledEventFilter, LuaScriptRaisedBuiltEventFilter, LuaPlayerBuiltEntityEventFilter, LuaPlayerRepairedEntityEventFilter>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: EventsEnum
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntityClonedEventFilter
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: LuaEntityDamagedEventFilter
 {
 }
 
-public abstract class Type375078767: List<Vector>
+public abstract class Type1421203362: LuaPlayerMinedEntityEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPreRobotMinedEntityEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaRobotBuiltEntityEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPostEntityDiedEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaEntityDiedEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaScriptRaisedReviveEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPrePlayerMinedEntityEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaEntityMarkedForDeconstructionEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPreGhostDeconstructedEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPreGhostUpgradedEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaEntityDeconstructionCancelledEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaEntityMarkedForUpgradeEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaSectorScannedEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaRobotMinedEntityEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaScriptRaisedDestroyEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaUpgradeCancelledEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaScriptRaisedBuiltEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPlayerBuiltEntityEventFilter
+{
+}
+
+public abstract class Type1421203362: LuaPlayerRepairedEntityEventFilter
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<LuaEntityClonedEventFilter, LuaEntityDamagedEventFilter, LuaPlayerMinedEntityEventFilter, LuaPreRobotMinedEntityEventFilter, LuaRobotBuiltEntityEventFilter, LuaPostEntityDiedEventFilter, LuaEntityDiedEventFilter, LuaScriptRaisedReviveEventFilter, LuaPrePlayerMinedEntityEventFilter, LuaEntityMarkedForDeconstructionEventFilter, LuaPreGhostDeconstructedEventFilter, LuaPreGhostUpgradedEventFilter, LuaEntityDeconstructionCancelledEventFilter, LuaEntityMarkedForUpgradeEventFilter, LuaSectorScannedEventFilter, LuaRobotMinedEntityEventFilter, LuaScriptRaisedDestroyEventFilter, LuaUpgradeCancelledEventFilter, LuaScriptRaisedBuiltEventFilter, LuaPlayerBuiltEntityEventFilter, LuaPlayerRepairedEntityEventFilter>
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Vector
+{
+}
+
+public abstract class Type1421203362: List<Vector>
 {
 }
 
@@ -2153,7 +2153,7 @@ public abstract class Type375078767: List<Vector>
 ///   - output
 ///   - input-output
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: input
@@ -2171,55 +2171,55 @@ public enum Literals375078767
   /// Literal value: input-output
   /// </summary>
   [FactorioRconDefinitionValue("input-output")]
-  InputOutput,
+  Inputsubtractoutput,
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaFluidPrototype
+public abstract class Type1421203362: LuaFluidPrototype
 {
 }
 
-public abstract class Type375078767: Fluid
+public abstract class Type1421203362: Fluid
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -2228,7 +2228,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -2244,192 +2244,192 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: RelativeGuiTypeEnum
+public abstract class Type1421203362: RelativeGuiTypeEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: RelativeGuiPositionEnum
+public abstract class Type1421203362: RelativeGuiPositionEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: GuiArrowType
+public abstract class Type1421203362: GuiArrowType
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
@@ -2440,7 +2440,7 @@ public abstract class Type375078767: uint
 ///   - player-quickbar
 ///   - player-equipment-bar
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: player
@@ -2458,47 +2458,29 @@ public enum Literals375078767
   /// Literal value: player-quickbar
   /// </summary>
   [FactorioRconDefinitionValue("player-quickbar")]
-  PlayerQuickbar,
+  Playersubtractquickbar,
 
   /// <summary>
   /// Literal value: player-equipment-bar
   /// </summary>
   [FactorioRconDefinitionValue("player-equipment-bar")]
-  PlayerEquipmentBar,
+  Playersubtractequipmentsubtractbar,
 
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -2508,27 +2490,45 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
+}
+
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: Vector
 {
 }
 
@@ -2540,19 +2540,19 @@ public abstract class Type375078767: Vector
 ///   - add
 ///   - remove
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: at-least
   /// </summary>
   [FactorioRconDefinitionValue("at-least")]
-  AtLeast,
+  Atsubtractleast,
 
   /// <summary>
   /// Literal value: at-most
   /// </summary>
   [FactorioRconDefinitionValue("at-most")]
-  AtMost,
+  Atsubtractmost,
 
   /// <summary>
   /// Literal value: exactly
@@ -2574,15 +2574,15 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
@@ -2592,19 +2592,19 @@ public abstract class Type375078767: uint
 ///   - at-most
 ///   - exactly
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: at-least
   /// </summary>
   [FactorioRconDefinitionValue("at-least")]
-  AtLeast,
+  Atsubtractleast,
 
   /// <summary>
   /// Literal value: at-most
   /// </summary>
   [FactorioRconDefinitionValue("at-most")]
-  AtMost,
+  Atsubtractmost,
 
   /// <summary>
   /// Literal value: exactly
@@ -2614,7 +2614,7 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -2626,19 +2626,19 @@ public abstract class Type375078767: string
 ///   - add
 ///   - remove
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: at-least
   /// </summary>
   [FactorioRconDefinitionValue("at-least")]
-  AtLeast,
+  Atsubtractleast,
 
   /// <summary>
   /// Literal value: at-most
   /// </summary>
   [FactorioRconDefinitionValue("at-most")]
-  AtMost,
+  Atsubtractmost,
 
   /// <summary>
   /// Literal value: exactly
@@ -2660,36 +2660,36 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, double>
+public abstract partial class Union1421203362: OneOfBase<uint, double>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -2698,7 +2698,7 @@ public abstract class Type375078767: string
 ///   - item
 ///   - fluid
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: item
@@ -2714,35 +2714,35 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: CircuitCondition
+public abstract class Type1421203362: CircuitCondition
 {
 }
 
-public abstract class Type375078767: CircuitCondition
+public abstract class Type1421203362: CircuitCondition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -2751,7 +2751,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -2767,148 +2767,148 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ItemPrototypeFilter
+public abstract class Type1421203362: ItemPrototypeFilter
 {
 }
 
-public abstract class Type375078767: List<ItemPrototypeFilter>
+public abstract class Type1421203362: List<ItemPrototypeFilter>
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ItemPrototypeFlag
+public abstract class Type1421203362: ItemPrototypeFlag
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
-{
-}
-
-public abstract class Type375078767: TilePrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<TilePrototypeFilter>
-{
-}
-
-public abstract class Type375078767: EntityPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<EntityPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: EquipmentPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<EquipmentPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: ComparatorString
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: TilePrototypeFilter
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: List<TilePrototypeFilter>
 {
 }
 
-public abstract class Type375078767: ItemPrototypeFlag
+public abstract class Type1421203362: EntityPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<EntityPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: EquipmentPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<EquipmentPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: ComparatorString
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: ComparatorString
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: ItemPrototypeFlag
 {
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -2918,183 +2918,183 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: SimpleItemStack
+public abstract class Type1421203362: SimpleItemStack
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaObject
+public abstract class Type1421203362: LuaObject
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: List<LocalisedString>
+public abstract class Type1421203362: List<LocalisedString>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3103,7 +3103,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3119,27 +3119,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3148,7 +3148,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3164,55 +3164,55 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3221,7 +3221,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3237,27 +3237,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3266,7 +3266,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3282,27 +3282,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3311,7 +3311,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3327,27 +3327,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3356,7 +3356,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3372,27 +3372,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3401,7 +3401,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3417,31 +3417,31 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3450,7 +3450,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3466,27 +3466,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3495,7 +3495,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3511,27 +3511,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3540,7 +3540,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3556,15 +3556,15 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3573,7 +3573,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3589,27 +3589,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3618,7 +3618,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3634,27 +3634,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3663,7 +3663,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3679,27 +3679,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3708,7 +3708,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3724,27 +3724,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3753,7 +3753,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3769,31 +3769,31 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3802,7 +3802,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3818,27 +3818,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3847,7 +3847,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3863,27 +3863,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3892,7 +3892,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3908,27 +3908,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3937,7 +3937,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3953,27 +3953,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -3982,7 +3982,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -3998,27 +3998,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -4027,7 +4027,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -4043,27 +4043,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -4072,7 +4072,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -4088,55 +4088,55 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapDifficultySettings
+public abstract class Type1421203362: MapDifficultySettings
 {
 }
 
-public abstract class Type375078767: EnemyEvolutionMapSettings
+public abstract class Type1421203362: EnemyEvolutionMapSettings
 {
 }
 
-public abstract class Type375078767: EnemyExpansionMapSettings
+public abstract class Type1421203362: EnemyExpansionMapSettings
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: PathFinderMapSettings
+public abstract class Type1421203362: PathFinderMapSettings
 {
 }
 
-public abstract class Type375078767: PollutionMapSettings
+public abstract class Type1421203362: PollutionMapSettings
 {
 }
 
-public abstract class Type375078767: SteeringMapSettings
+public abstract class Type1421203362: SteeringMapSettings
 {
 }
 
-public abstract class Type375078767: UnitGroupMapSettings
+public abstract class Type1421203362: UnitGroupMapSettings
 {
 }
 
-public abstract class Type375078767: DifficultySettingsRecipeDifficultyEnum
+public abstract class Type1421203362: DifficultySettingsRecipeDifficultyEnum
 {
 }
 
@@ -4146,13 +4146,13 @@ public abstract class Type375078767: DifficultySettingsRecipeDifficultyEnum
 ///   - always
 ///   - never
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: after-victory
   /// </summary>
   [FactorioRconDefinitionValue("after-victory")]
-  AfterVictory,
+  Aftersubtractvictory,
 
   /// <summary>
   /// Literal value: always
@@ -4168,47 +4168,47 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: DifficultySettingsTechnologyDifficultyEnum
+public abstract class Type1421203362: DifficultySettingsTechnologyDifficultyEnum
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: MapGenSettings
+public abstract class Type1421203362: MapGenSettings
 {
 }
 
-public abstract class Type375078767: MapAndDifficultySettings
+public abstract class Type1421203362: MapAndDifficultySettings
 {
 }
 
-public abstract class Type375078767: AdvancedMapGenSettings
+public abstract class Type1421203362: AdvancedMapGenSettings
 {
 }
 
-public abstract class Type375078767: MapGenSettings
+public abstract class Type1421203362: MapGenSettings
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AutoplaceControl
+public abstract class Type1421203362: AutoplaceControl
 {
 }
 
-public abstract class Type375078767: Dictionary<string, AutoplaceControl>
+public abstract class Type1421203362: Dictionary<string, AutoplaceControl>
 {
 }
 
@@ -4218,7 +4218,7 @@ public abstract class Type375078767: Dictionary<string, AutoplaceControl>
 ///   - tile
 ///   - decorative
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: entity
@@ -4240,78 +4240,78 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: AutoplaceSettings
+public abstract class Type1421203362: AutoplaceSettings
 {
 }
 
-public abstract class Type375078767: Dictionary<Type375078767, AutoplaceSettings>
+public abstract class Type1421203362: Dictionary<Type1421203362, AutoplaceSettings>
 {
 }
 
-public abstract class Type375078767: CliffPlacementSettings
+public abstract class Type1421203362: CliffPlacementSettings
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Dictionary<string, string>
+public abstract class Type1421203362: Dictionary<string, string>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: MapGenSize
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: List<MapPosition>
+public abstract class Type1421203362: List<MapPosition>
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: MapGenSize
 {
 }
 
-public abstract class Type375078767: MapGenSize
+public abstract class Type1421203362: MapGenSize
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
 /// <summary>
 /// Literal value: none
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: none
@@ -4324,46 +4324,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: very-low
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: very-low
   /// </summary>
   [FactorioRconDefinitionValue("very-low")]
-  VeryLow,
+  Verysubtractlow,
 
 }
 
 /// <summary>
 /// Literal value: very-small
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: very-small
   /// </summary>
   [FactorioRconDefinitionValue("very-small")]
-  VerySmall,
+  Verysubtractsmall,
 
 }
 
 /// <summary>
 /// Literal value: very-poor
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: very-poor
   /// </summary>
   [FactorioRconDefinitionValue("very-poor")]
-  VeryPoor,
+  Verysubtractpoor,
 
 }
 
 /// <summary>
 /// Literal value: low
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: low
@@ -4376,7 +4376,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: small
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: small
@@ -4389,7 +4389,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: poor
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: poor
@@ -4402,7 +4402,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: normal
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: normal
@@ -4415,7 +4415,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: medium
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: medium
@@ -4428,7 +4428,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: regular
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: regular
@@ -4441,7 +4441,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: high
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: high
@@ -4454,7 +4454,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: big
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: big
@@ -4467,7 +4467,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: good
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: good
@@ -4480,69 +4480,51 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: very-high
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: very-high
   /// </summary>
   [FactorioRconDefinitionValue("very-high")]
-  VeryHigh,
+  Verysubtracthigh,
 
 }
 
 /// <summary>
 /// Literal value: very-big
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: very-big
   /// </summary>
   [FactorioRconDefinitionValue("very-big")]
-  VeryBig,
+  Verysubtractbig,
 
 }
 
 /// <summary>
 /// Literal value: very-good
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: very-good
   /// </summary>
   [FactorioRconDefinitionValue("very-good")]
-  VeryGood,
+  Verysubtractgood,
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("x")]
-  public double X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public double Y { get; set; }
-
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("x")]
   public double X { get; set; }
@@ -4552,104 +4534,122 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: EnemyEvolutionMapSettings
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: EnemyExpansionMapSettings
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("x")]
+  public double X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public double Y { get; set; }
+
+}
+
+public abstract class Type1421203362: EnemyEvolutionMapSettings
 {
 }
 
-public abstract class Type375078767: PathFinderMapSettings
+public abstract class Type1421203362: EnemyExpansionMapSettings
 {
 }
 
-public abstract class Type375078767: PollutionMapSettings
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: SteeringMapSetting
+public abstract class Type1421203362: PathFinderMapSettings
 {
 }
 
-public abstract class Type375078767: UnitGroupMapSettings
+public abstract class Type1421203362: PollutionMapSettings
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: SteeringMapSetting
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: UnitGroupMapSettings
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: Color
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<int, double, bool, string, Color>
+public abstract partial class Union1421203362: OneOfBase<int, double, bool, string, Color>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -4658,7 +4658,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -4674,48 +4674,48 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ModuleEffectValue
+public abstract class Type1421203362: ModuleEffectValue
 {
 }
 
-public abstract class Type375078767: ModuleEffectValue
+public abstract class Type1421203362: ModuleEffectValue
 {
 }
 
-public abstract class Type375078767: ModuleEffectValue
+public abstract class Type1421203362: ModuleEffectValue
 {
 }
 
-public abstract class Type375078767: ModuleEffectValue
+public abstract class Type1421203362: ModuleEffectValue
 {
 }
 
@@ -4731,7 +4731,7 @@ public abstract class Type375078767: ModuleEffectValue
 ///   - button-8
 ///   - button-9
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: left
@@ -4755,44 +4755,44 @@ public enum Literals375078767
   /// Literal value: button-4
   /// </summary>
   [FactorioRconDefinitionValue("button-4")]
-  Button4,
+  Buttonsubtract4,
 
   /// <summary>
   /// Literal value: button-5
   /// </summary>
   [FactorioRconDefinitionValue("button-5")]
-  Button5,
+  Buttonsubtract5,
 
   /// <summary>
   /// Literal value: button-6
   /// </summary>
   [FactorioRconDefinitionValue("button-6")]
-  Button6,
+  Buttonsubtract6,
 
   /// <summary>
   /// Literal value: button-7
   /// </summary>
   [FactorioRconDefinitionValue("button-7")]
-  Button7,
+  Buttonsubtract7,
 
   /// <summary>
   /// Literal value: button-8
   /// </summary>
   [FactorioRconDefinitionValue("button-8")]
-  Button8,
+  Buttonsubtract8,
 
   /// <summary>
   /// Literal value: button-9
   /// </summary>
   [FactorioRconDefinitionValue("button-9")]
-  Button9,
+  Buttonsubtract9,
 
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -4802,207 +4802,207 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: TechnologyModifier
+public abstract class Type1421203362: TechnologyModifier
 {
 }
 
-public abstract class Type375078767: Ingredient
+public abstract class Type1421203362: Ingredient
 {
 }
 
-public abstract class Type375078767: List<Ingredient>
+public abstract class Type1421203362: List<Ingredient>
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: List<uint>
+public abstract class Type1421203362: List<uint>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: List<double>
+public abstract class Type1421203362: List<double>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
@@ -5011,7 +5011,7 @@ public abstract class Type375078767: MapPosition
 ///   - normal
 ///   - underground
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: normal
@@ -5033,7 +5033,7 @@ public enum Literals375078767
 ///   - output
 ///   - input-output
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: input
@@ -5051,174 +5051,174 @@ public enum Literals375078767
   /// Literal value: input-output
   /// </summary>
   [FactorioRconDefinitionValue("input-output")]
-  InputOutput,
+  Inputsubtractoutput,
 
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaFluidBox
+public abstract class Type1421203362: LuaFluidBox
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PrintSkipEnum
+public abstract class Type1421203362: PrintSkipEnum
 {
 }
 
-public abstract class Type375078767: PrintSoundEnum
+public abstract class Type1421203362: PrintSoundEnum
 {
 }
 
-public abstract class Type375078767: SoundPath
+public abstract class Type1421203362: SoundPath
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, double>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, double>
+public abstract partial class Union1421203362: OneOfBase<uint, double>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, double>
+public abstract partial class Union1421203362: OneOfBase<uint, double>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<uint, double>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
 {
 }
 
@@ -5227,7 +5227,7 @@ public abstract class Type375078767: double
 ///   - item
 ///   - fluid
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: item
@@ -5243,144 +5243,144 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ItemPrototypeFilter
+public abstract class Type1421203362: ItemPrototypeFilter
 {
 }
 
-public abstract class Type375078767: TilePrototypeFilter
+public abstract class Type1421203362: TilePrototypeFilter
 {
 }
 
-public abstract class Type375078767: EntityPrototypeFilter
+public abstract class Type1421203362: EntityPrototypeFilter
 {
 }
 
-public abstract class Type375078767: FluidPrototypeFilter
+public abstract class Type1421203362: FluidPrototypeFilter
 {
 }
 
-public abstract class Type375078767: RecipePrototypeFilter
+public abstract class Type1421203362: RecipePrototypeFilter
 {
 }
 
-public abstract class Type375078767: DecorativePrototypeFilter
+public abstract class Type1421203362: DecorativePrototypeFilter
 {
 }
 
-public abstract class Type375078767: AchievementPrototypeFilter
+public abstract class Type1421203362: AchievementPrototypeFilter
 {
 }
 
-public abstract class Type375078767: EquipmentPrototypeFilter
+public abstract class Type1421203362: EquipmentPrototypeFilter
 {
 }
 
-public abstract class Type375078767: TechnologyPrototypeFilter
+public abstract class Type1421203362: TechnologyPrototypeFilter
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ItemPrototypeFilter, TilePrototypeFilter, EntityPrototypeFilter, FluidPrototypeFilter, RecipePrototypeFilter, DecorativePrototypeFilter, AchievementPrototypeFilter, EquipmentPrototypeFilter, TechnologyPrototypeFilter>
+public abstract partial class Union1421203362: OneOfBase<ItemPrototypeFilter, TilePrototypeFilter, EntityPrototypeFilter, FluidPrototypeFilter, RecipePrototypeFilter, DecorativePrototypeFilter, AchievementPrototypeFilter, EquipmentPrototypeFilter, TechnologyPrototypeFilter>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -5389,7 +5389,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -5405,125 +5405,125 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: FluidPrototypeFilter
+public abstract class Type1421203362: FluidPrototypeFilter
 {
 }
 
-public abstract class Type375078767: List<FluidPrototypeFilter>
+public abstract class Type1421203362: List<FluidPrototypeFilter>
 {
 }
 
-public abstract class Type375078767: ItemPrototypeFilter
+public abstract class Type1421203362: ItemPrototypeFilter
 {
 }
 
-public abstract class Type375078767: List<ItemPrototypeFilter>
+public abstract class Type1421203362: List<ItemPrototypeFilter>
 {
 }
 
-public abstract class Type375078767: FluidPrototypeFilter
+public abstract class Type1421203362: FluidPrototypeFilter
 {
 }
 
-public abstract class Type375078767: List<FluidPrototypeFilter>
+public abstract class Type1421203362: List<FluidPrototypeFilter>
 {
 }
 
-public abstract class Type375078767: ItemPrototypeFilter
+public abstract class Type1421203362: ItemPrototypeFilter
 {
 }
 
-public abstract class Type375078767: List<ItemPrototypeFilter>
+public abstract class Type1421203362: List<ItemPrototypeFilter>
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
 /// <summary>
 /// Literal value: water-tile
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: water-tile
   /// </summary>
   [FactorioRconDefinitionValue("water-tile")]
-  WaterTile,
+  Watersubtracttile,
 
 }
 
 /// <summary>
 /// Literal value: ground-tile
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: ground-tile
   /// </summary>
   [FactorioRconDefinitionValue("ground-tile")]
-  GroundTile,
+  Groundsubtracttile,
 
 }
 
 /// <summary>
 /// Literal value: tile-transition
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: tile-transition
   /// </summary>
   [FactorioRconDefinitionValue("tile-transition")]
-  TileTransition,
+  Tilesubtracttransition,
 
 }
 
 /// <summary>
 /// Literal value: decals
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: decals
@@ -5536,46 +5536,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: lower-radius-visualization
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: lower-radius-visualization
   /// </summary>
   [FactorioRconDefinitionValue("lower-radius-visualization")]
-  LowerRadiusVisualization,
+  Lowersubtractradiussubtractvisualization,
 
 }
 
 /// <summary>
 /// Literal value: radius-visualization
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: radius-visualization
   /// </summary>
   [FactorioRconDefinitionValue("radius-visualization")]
-  RadiusVisualization,
+  Radiussubtractvisualization,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt-integration
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: transport-belt-integration
   /// </summary>
   [FactorioRconDefinitionValue("transport-belt-integration")]
-  TransportBeltIntegration,
+  Transportsubtractbeltsubtractintegration,
 
 }
 
 /// <summary>
 /// Literal value: resource
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: resource
@@ -5588,20 +5588,20 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: building-smoke
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: building-smoke
   /// </summary>
   [FactorioRconDefinitionValue("building-smoke")]
-  BuildingSmoke,
+  Buildingsubtractsmoke,
 
 }
 
 /// <summary>
 /// Literal value: decorative
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: decorative
@@ -5614,46 +5614,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: ground-patch
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: ground-patch
   /// </summary>
   [FactorioRconDefinitionValue("ground-patch")]
-  GroundPatch,
+  Groundsubtractpatch,
 
 }
 
 /// <summary>
 /// Literal value: ground-patch-higher
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: ground-patch-higher
   /// </summary>
   [FactorioRconDefinitionValue("ground-patch-higher")]
-  GroundPatchHigher,
+  Groundsubtractpatchsubtracthigher,
 
 }
 
 /// <summary>
 /// Literal value: ground-patch-higher2
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: ground-patch-higher2
   /// </summary>
   [FactorioRconDefinitionValue("ground-patch-higher2")]
-  GroundPatchHigher2,
+  Groundsubtractpatchsubtracthigher2,
 
 }
 
 /// <summary>
 /// Literal value: remnants
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: remnants
@@ -5666,7 +5666,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: floor
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: floor
@@ -5679,46 +5679,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: transport-belt
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: transport-belt
   /// </summary>
   [FactorioRconDefinitionValue("transport-belt")]
-  TransportBelt,
+  Transportsubtractbelt,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt-endings
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: transport-belt-endings
   /// </summary>
   [FactorioRconDefinitionValue("transport-belt-endings")]
-  TransportBeltEndings,
+  Transportsubtractbeltsubtractendings,
 
 }
 
 /// <summary>
 /// Literal value: floor-mechanics-under-corpse
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: floor-mechanics-under-corpse
   /// </summary>
   [FactorioRconDefinitionValue("floor-mechanics-under-corpse")]
-  FloorMechanicsUnderCorpse,
+  Floorsubtractmechanicssubtractundersubtractcorpse,
 
 }
 
 /// <summary>
 /// Literal value: corpse
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: corpse
@@ -5731,20 +5731,20 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: floor-mechanics
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: floor-mechanics
   /// </summary>
   [FactorioRconDefinitionValue("floor-mechanics")]
-  FloorMechanics,
+  Floorsubtractmechanics,
 
 }
 
 /// <summary>
 /// Literal value: item
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: item
@@ -5757,46 +5757,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: lower-object
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: lower-object
   /// </summary>
   [FactorioRconDefinitionValue("lower-object")]
-  LowerObject,
+  Lowersubtractobject,
 
 }
 
 /// <summary>
 /// Literal value: transport-belt-circuit-connector
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: transport-belt-circuit-connector
   /// </summary>
   [FactorioRconDefinitionValue("transport-belt-circuit-connector")]
-  TransportBeltCircuitConnector,
+  Transportsubtractbeltsubtractcircuitsubtractconnector,
 
 }
 
 /// <summary>
 /// Literal value: lower-object-above-shadow
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: lower-object-above-shadow
   /// </summary>
   [FactorioRconDefinitionValue("lower-object-above-shadow")]
-  LowerObjectAboveShadow,
+  Lowersubtractobjectsubtractabovesubtractshadow,
 
 }
 
 /// <summary>
 /// Literal value: object
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: object
@@ -5809,46 +5809,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: higher-object-under
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: higher-object-under
   /// </summary>
   [FactorioRconDefinitionValue("higher-object-under")]
-  HigherObjectUnder,
+  Highersubtractobjectsubtractunder,
 
 }
 
 /// <summary>
 /// Literal value: higher-object-above
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: higher-object-above
   /// </summary>
   [FactorioRconDefinitionValue("higher-object-above")]
-  HigherObjectAbove,
+  Highersubtractobjectsubtractabove,
 
 }
 
 /// <summary>
 /// Literal value: item-in-inserter-hand
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: item-in-inserter-hand
   /// </summary>
   [FactorioRconDefinitionValue("item-in-inserter-hand")]
-  ItemInInserterHand,
+  Itemsubtractinsubtractinsertersubtracthand,
 
 }
 
 /// <summary>
 /// Literal value: wires
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: wires
@@ -5861,46 +5861,46 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: wires-above
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: wires-above
   /// </summary>
   [FactorioRconDefinitionValue("wires-above")]
-  WiresAbove,
+  Wiressubtractabove,
 
 }
 
 /// <summary>
 /// Literal value: entity-info-icon
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: entity-info-icon
   /// </summary>
   [FactorioRconDefinitionValue("entity-info-icon")]
-  EntityInfoIcon,
+  Entitysubtractinfosubtracticon,
 
 }
 
 /// <summary>
 /// Literal value: entity-info-icon-above
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: entity-info-icon-above
   /// </summary>
   [FactorioRconDefinitionValue("entity-info-icon-above")]
-  EntityInfoIconAbove,
+  Entitysubtractinfosubtracticonsubtractabove,
 
 }
 
 /// <summary>
 /// Literal value: explosion
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: explosion
@@ -5913,7 +5913,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: projectile
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: projectile
@@ -5926,7 +5926,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: smoke
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: smoke
@@ -5939,85 +5939,85 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: air-object
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: air-object
   /// </summary>
   [FactorioRconDefinitionValue("air-object")]
-  AirObject,
+  Airsubtractobject,
 
 }
 
 /// <summary>
 /// Literal value: air-entity-info-icon
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: air-entity-info-icon
   /// </summary>
   [FactorioRconDefinitionValue("air-entity-info-icon")]
-  AirEntityInfoIcon,
+  Airsubtractentitysubtractinfosubtracticon,
 
 }
 
 /// <summary>
 /// Literal value: light-effect
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: light-effect
   /// </summary>
   [FactorioRconDefinitionValue("light-effect")]
-  LightEffect,
+  Lightsubtracteffect,
 
 }
 
 /// <summary>
 /// Literal value: selection-box
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: selection-box
   /// </summary>
   [FactorioRconDefinitionValue("selection-box")]
-  SelectionBox,
+  Selectionsubtractbox,
 
 }
 
 /// <summary>
 /// Literal value: higher-selection-box
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: higher-selection-box
   /// </summary>
   [FactorioRconDefinitionValue("higher-selection-box")]
-  HigherSelectionBox,
+  Highersubtractselectionsubtractbox,
 
 }
 
 /// <summary>
 /// Literal value: collision-selection-box
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: collision-selection-box
   /// </summary>
   [FactorioRconDefinitionValue("collision-selection-box")]
-  CollisionSelectionBox,
+  Collisionsubtractselectionsubtractbox,
 
 }
 
 /// <summary>
 /// Literal value: arrow
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: arrow
@@ -6030,7 +6030,7 @@ public enum Literal375078767
 /// <summary>
 /// Literal value: cursor
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: cursor
@@ -6040,100 +6040,100 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: RidingAccelerationEnum
+public abstract class Type1421203362: RidingAccelerationEnum
 {
 }
 
-public abstract class Type375078767: RidingDirectionEnum
+public abstract class Type1421203362: RidingDirectionEnum
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -6164,7 +6164,7 @@ public abstract class Type375078767: string
 ///   - entity-ghost
 ///   - tile-ghost
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: blueprint
@@ -6182,7 +6182,7 @@ public enum Literals375078767
   /// Literal value: cancel-deconstruct
   /// </summary>
   [FactorioRconDefinitionValue("cancel-deconstruct")]
-  CancelDeconstruct,
+  Cancelsubtractdeconstruct,
 
   /// <summary>
   /// Literal value: items
@@ -6200,7 +6200,7 @@ public enum Literals375078767
   /// Literal value: buildable-type
   /// </summary>
   [FactorioRconDefinitionValue("buildable-type")]
-  BuildableType,
+  Buildablesubtracttype,
 
   /// <summary>
   /// Literal value: nothing
@@ -6212,31 +6212,31 @@ public enum Literals375078767
   /// Literal value: items-to-place
   /// </summary>
   [FactorioRconDefinitionValue("items-to-place")]
-  ItemsToPlace,
+  Itemssubtracttosubtractplace,
 
   /// <summary>
   /// Literal value: any-entity
   /// </summary>
   [FactorioRconDefinitionValue("any-entity")]
-  AnyEntity,
+  Anysubtractentity,
 
   /// <summary>
   /// Literal value: any-tile
   /// </summary>
   [FactorioRconDefinitionValue("any-tile")]
-  AnyTile,
+  Anysubtracttile,
 
   /// <summary>
   /// Literal value: same-force
   /// </summary>
   [FactorioRconDefinitionValue("same-force")]
-  SameForce,
+  Samesubtractforce,
 
   /// <summary>
   /// Literal value: not-same-force
   /// </summary>
   [FactorioRconDefinitionValue("not-same-force")]
-  NotSameForce,
+  Notsubtractsamesubtractforce,
 
   /// <summary>
   /// Literal value: friend
@@ -6260,7 +6260,7 @@ public enum Literals375078767
   /// Literal value: cancel-upgrade
   /// </summary>
   [FactorioRconDefinitionValue("cancel-upgrade")]
-  CancelUpgrade,
+  Cancelsubtractupgrade,
 
   /// <summary>
   /// Literal value: downgrade
@@ -6272,50 +6272,50 @@ public enum Literals375078767
   /// Literal value: entity-with-health
   /// </summary>
   [FactorioRconDefinitionValue("entity-with-health")]
-  EntityWithHealth,
+  Entitysubtractwithsubtracthealth,
 
   /// <summary>
   /// Literal value: entity-with-force
   /// </summary>
   [FactorioRconDefinitionValue("entity-with-force")]
-  EntityWithForce,
+  Entitysubtractwithsubtractforce,
 
   /// <summary>
   /// Literal value: is-military-target
   /// </summary>
   [FactorioRconDefinitionValue("is-military-target")]
-  IsMilitaryTarget,
+  Issubtractmilitarysubtracttarget,
 
   /// <summary>
   /// Literal value: entity-with-owner
   /// </summary>
   [FactorioRconDefinitionValue("entity-with-owner")]
-  EntityWithOwner,
+  Entitysubtractwithsubtractowner,
 
   /// <summary>
   /// Literal value: avoid-rolling-stock
   /// </summary>
   [FactorioRconDefinitionValue("avoid-rolling-stock")]
-  AvoidRollingStock,
+  Avoidsubtractrollingsubtractstock,
 
   /// <summary>
   /// Literal value: entity-ghost
   /// </summary>
   [FactorioRconDefinitionValue("entity-ghost")]
-  EntityGhost,
+  Entitysubtractghost,
 
   /// <summary>
   /// Literal value: tile-ghost
   /// </summary>
   [FactorioRconDefinitionValue("tile-ghost")]
-  TileGhost,
+  Tilesubtractghost,
 
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -6325,15 +6325,15 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -6343,7 +6343,7 @@ public abstract class Type375078767: string
 ///   - fluid
 ///   - virtual
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: item
@@ -6365,215 +6365,215 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ItemStackDefinition
+public abstract class Type1421203362: ItemStackDefinition
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ushort
+public abstract class Type1421203362: ushort
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ushort
+public abstract class Type1421203362: ushort
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: SteeringMapSetting
+public abstract class Type1421203362: SteeringMapSetting
 {
 }
 
-public abstract class Type375078767: SteeringMapSetting
+public abstract class Type1421203362: SteeringMapSetting
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AnyBasic
+public abstract class Type1421203362: AnyBasic
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTechnology
+public abstract class Type1421203362: LuaTechnology
 {
 }
 
-public abstract class Type375078767: LuaTechnologyPrototype
+public abstract class Type1421203362: LuaTechnologyPrototype
 {
 }
 
-public abstract class Type375078767: ModifierType
+public abstract class Type1421203362: ModifierType
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -6582,7 +6582,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -6598,73 +6598,55 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("x")]
-  public int X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public int Y { get; set; }
-
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -6674,11 +6656,29 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("x")]
+  public int X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public int Y { get; set; }
+
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
 {
 }
 
@@ -6687,7 +6687,7 @@ public abstract class Type375078767: bool
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: or
@@ -6703,180 +6703,180 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union1421203362: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ComparatorString
+public abstract class Type1421203362: ComparatorString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<bool>
+public abstract class Type1421203362: List<bool>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: List<double>
+public abstract class Type1421203362: List<double>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: TrainScheduleRecord
+public abstract class Type1421203362: TrainScheduleRecord
 {
 }
 
-public abstract class Type375078767: List<TrainScheduleRecord>
+public abstract class Type1421203362: List<TrainScheduleRecord>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: WaitCondition
+public abstract class Type1421203362: WaitCondition
 {
 }
 
-public abstract class Type375078767: List<WaitCondition>
+public abstract class Type1421203362: List<WaitCondition>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: TriggerEffectItem
+public abstract class Type1421203362: TriggerEffectItem
 {
 }
 
-public abstract class Type375078767: List<TriggerEffectItem>
+public abstract class Type1421203362: List<TriggerEffectItem>
 {
 }
 
-public abstract class Type375078767: TriggerEffectItem
+public abstract class Type1421203362: TriggerEffectItem
 {
 }
 
-public abstract class Type375078767: List<TriggerEffectItem>
+public abstract class Type1421203362: List<TriggerEffectItem>
 {
 }
 
@@ -6889,7 +6889,7 @@ public abstract class Type375078767: List<TriggerEffectItem>
 ///   - stream
 ///   - artillery
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: instant
@@ -6907,7 +6907,7 @@ public enum Literals375078767
   /// Literal value: flame-thrower
   /// </summary>
   [FactorioRconDefinitionValue("flame-thrower")]
-  FlameThrower,
+  Flamesubtractthrower,
 
   /// <summary>
   /// Literal value: beam
@@ -6929,67 +6929,67 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: DamageTypeFilters
+public abstract class Type1421203362: DamageTypeFilters
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ushort
+public abstract class Type1421203362: ushort
 {
 }
 
-public abstract class Type375078767: ushort
+public abstract class Type1421203362: ushort
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: TriggerEffectItemType
+public abstract class Type1421203362: TriggerEffectItemType
 {
 }
 
-public abstract class Type375078767: TriggerDelivery
+public abstract class Type1421203362: TriggerDelivery
 {
 }
 
-public abstract class Type375078767: List<TriggerDelivery>
+public abstract class Type1421203362: List<TriggerDelivery>
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: EntityPrototypeFlags
+public abstract class Type1421203362: EntityPrototypeFlags
 {
 }
 
-public abstract class Type375078767: ForceCondition
+public abstract class Type1421203362: ForceCondition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: TriggerTargetMask
+public abstract class Type1421203362: TriggerTargetMask
 {
 }
 
@@ -7000,7 +7000,7 @@ public abstract class Type375078767: TriggerTargetMask
 ///   - line
 ///   - cluster
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: direct
@@ -7028,79 +7028,79 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: SpawnPointDefinition
+public abstract class Type1421203362: SpawnPointDefinition
 {
 }
 
-public abstract class Type375078767: List<SpawnPointDefinition>
+public abstract class Type1421203362: List<SpawnPointDefinition>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -7109,7 +7109,7 @@ public abstract class Type375078767: string
 ///   - item
 ///   - entity
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: item
@@ -7125,33 +7125,15 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Table375078767
-{
-  [FactorioRconAttribute("x")]
-  public float X { get; set; }
-
-  [FactorioRconAttribute("y")]
-  public float Y { get; set; }
-
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("x")]
   public float X { get; set; }
@@ -7161,11 +7143,29 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Table1421203362
+{
+  [FactorioRconAttribute("x")]
+  public float X { get; set; }
+
+  [FactorioRconAttribute("y")]
+  public float Y { get; set; }
+
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
 {
 }
 
@@ -7174,7 +7174,7 @@ public abstract class Type375078767: bool
 ///   - and
 ///   - or
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: and
@@ -7190,247 +7190,247 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: CircuitCondition
+public abstract class Type1421203362: CircuitCondition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: WaitConditionType
+public abstract class Type1421203362: WaitConditionType
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: WireConnectionIdEnum
+public abstract class Type1421203362: WireConnectionIdEnum
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: WireConnectionIdEnum
+public abstract class Type1421203362: WireConnectionIdEnum
 {
 }
 
-public abstract class Type375078767: WireTypeEnum
+public abstract class Type1421203362: WireTypeEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: sbyte
+public abstract class Type1421203362: sbyte
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ArithmeticCombinatorParameters
+public abstract class Type1421203362: ArithmeticCombinatorParameters
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Dictionary<string, string>
+public abstract class Type1421203362: Dictionary<string, string>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Is this level a simulation? (The main menu and 'Tips and tricks' use simulations)
@@ -7464,436 +7464,436 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: EventFilter
+public abstract class Type1421203362: EventFilter
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: EventData
+public abstract class Type1421203362: EventData
 {
 }
 
-public abstract class Type375078767: Action<EventData>
+public abstract class Type1421203362: Action<EventData>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: PrototypeHistory
+public abstract class Type1421203362: PrototypeHistory
 {
 }
 
-public abstract class Type375078767: ConfigurationChangedData
+public abstract class Type1421203362: ConfigurationChangedData
 {
 }
 
-public abstract class Type375078767: Action<ConfigurationChangedData>
+public abstract class Type1421203362: Action<ConfigurationChangedData>
 {
 }
 
-public abstract class Type375078767: LuaNil
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
-{
-}
-
-public abstract class Type375078767: EventsEnum
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: EventsEnum
-{
-}
-
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<EventsEnum, string>
+public abstract partial class Union1421203362: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
 {
 }
 
-public abstract class Type375078767: List<Union375078767>
+public abstract class Type1421203362: EventsEnum
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<EventsEnum, string, List<Type375078767>>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: EventFilter
+public abstract class Type1421203362: EventsEnum
 {
 }
 
-public abstract class Type375078767: EventData
-{
-}
-
-public abstract class Type375078767: Action<EventData>
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Action<EventData>, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<EventsEnum, string>
 {
 }
 
-public abstract class Type375078767: Action
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: List<Union1421203362>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Action, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<EventsEnum, string, List<Type1421203362>>
 {
 }
 
-public abstract class Type375078767: Action
+public abstract class Type1421203362: EventFilter
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: EventData
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Action, LuaNil>
+public abstract class Type1421203362: Action<EventData>
 {
 }
 
-public abstract class Type375078767: NthTickEventData
-{
-}
-
-public abstract class Type375078767: Action<NthTickEventData>
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Action<NthTickEventData>, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<Action<EventData>, LuaNil>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: Action
 {
 }
 
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: List<uint>
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, List<uint>, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<Action, LuaNil>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: Action
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaTable
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaItemStack
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaRecipe
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: Tags
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Tile
-{
-}
-
-public abstract class Type375078767: List<Tile>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: byte
-{
-}
-
-public abstract class Type375078767: LuaTable
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: EventFilter
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: LuaItemPrototype
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: Dictionary<string, bool>
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, LuaEquipment>
+public abstract partial class Union1421203362: OneOfBase<Action, LuaNil>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: NthTickEventData
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Action<NthTickEventData>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: uint
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<Action<NthTickEventData>, LuaNil>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<uint>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<uint, List<uint>, LuaNil>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: LuaTable
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Table375078767
+public abstract class Type1421203362: LuaItemStack
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaRecipe
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: Tags
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Tile
+{
+}
+
+public abstract class Type1421203362: List<Tile>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: byte
+{
+}
+
+public abstract class Type1421203362: LuaTable
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: EventFilter
+{
+}
+
+public abstract class Type1421203362: LuaInventory
+{
+}
+
+public abstract class Type1421203362: LuaItemPrototype
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, bool>
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LuaInventory
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: LuaEquipment
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, LuaEquipment>
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, bool>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("minimum_intensity")]
   public float MinimumIntensity { get; set; }
@@ -7921,367 +7921,367 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SmokeSource
+public abstract class Type1421203362: SmokeSource
 {
 }
 
-public abstract class Type375078767: List<SmokeSource>
+public abstract class Type1421203362: List<SmokeSource>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Signal
+public abstract class Type1421203362: Signal
 {
 }
 
-public abstract class Type375078767: List<Signal>
+public abstract class Type1421203362: List<Signal>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: WireTypeEnum
+public abstract class Type1421203362: WireTypeEnum
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Signal
+public abstract class Type1421203362: Signal
 {
 }
 
-public abstract class Type375078767: List<Signal>
+public abstract class Type1421203362: List<Signal>
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LocalisedString>
+public abstract class Type1421203362: Dictionary<string, LocalisedString>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LocalisedString>
+public abstract class Type1421203362: Dictionary<string, LocalisedString>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: CustomCommandData
+public abstract class Type1421203362: CustomCommandData
 {
 }
 
-public abstract class Type375078767: Action<CustomCommandData>
+public abstract class Type1421203362: Action<CustomCommandData>
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ConstantCombinatorParameters
+public abstract class Type1421203362: ConstantCombinatorParameters
 {
 }
 
-public abstract class Type375078767: List<ConstantCombinatorParameters>
+public abstract class Type1421203362: List<ConstantCombinatorParameters>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Signal
+public abstract class Type1421203362: Signal
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Signal
+public abstract class Type1421203362: Signal
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: CraftingQueueItem
+public abstract class Type1421203362: CraftingQueueItem
 {
 }
 
-public abstract class Type375078767: List<CraftingQueueItem>
+public abstract class Type1421203362: List<CraftingQueueItem>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ItemPrototypeIdentification
+public abstract class Type1421203362: ItemPrototypeIdentification
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Whether the player is mining at all.
@@ -8297,72 +8297,72 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGrid
+public abstract class Type1421203362: LuaEquipmentGrid
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: LuaTechnology
+public abstract class Type1421203362: LuaTechnology
 {
 }
 
-public abstract class Type375078767: GuiTypeEnum
+public abstract class Type1421203362: GuiTypeEnum
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
 {
 }
 
-public abstract class Type375078767: GuiTypeEnum
+public abstract class Type1421203362: GuiTypeEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// The current state
@@ -8378,27 +8378,27 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: RidingState
+public abstract class Type1421203362: RidingState
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ShootingEnum
+public abstract class Type1421203362: ShootingEnum
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// The current state
@@ -8414,31 +8414,31 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// If `false`, the player is currently not walking; otherwise it's going somewhere
@@ -8454,305 +8454,305 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaRecipe
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaRecipe>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: ItemStackIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: BlueprintEntity
-{
-}
-
-public abstract class Type375078767: List<BlueprintEntity>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaRecipe
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaRecipe>
+public abstract partial class Union1421203362: OneOfBase<string, LuaRecipe>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LogisticParameters
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LogisticParameters
+public abstract class Type1421203362: BlueprintEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: List<BlueprintEntity>
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
-public abstract class Type375078767: bool
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, LuaRecipe>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: LuaTile
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: TechnologyIdentification
+public abstract class Type1421203362: LogisticParameters
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LogisticParameters
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: GuiArrowType
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LogisticParameters
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LogisticParameters
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: LuaTile
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: TechnologyIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: ControlBehaviorTypeEnum
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: WireTypeEnum
+public abstract class Type1421203362: GuiArrowType
 {
 }
 
-public abstract class Type375078767: LuaCircuitNetwork
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LogisticParameters
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LogisticParameters
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ControlBehaviorTypeEnum
+{
+}
+
+public abstract class Type1421203362: CircuitConnectorIdEnum
+{
+}
+
+public abstract class Type1421203362: WireTypeEnum
+{
+}
+
+public abstract class Type1421203362: LuaCircuitNetwork
+{
+}
+
+public abstract class Type1421203362: LuaForce
+{
+}
+
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: LuaPlayer
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaSurface
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
 {
 }
 
@@ -8761,7 +8761,7 @@ public abstract class Type375078767: string
 ///   - none
 ///   - game-only
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: none
@@ -8773,312 +8773,312 @@ public enum Literals375078767
   /// Literal value: game-only
   /// </summary>
   [FactorioRconDefinitionValue("game-only")]
-  GameOnly,
+  Gamesubtractonly,
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Any
+public abstract class Type1421203362: Any
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: DeciderCombinatorParameters
+public abstract class Type1421203362: DeciderCombinatorParameters
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AutoplaceSpecification
+public abstract class Type1421203362: AutoplaceSpecification
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaAISettings
+public abstract class Type1421203362: LuaAISettings
 {
 }
 
-public abstract class Type375078767: ProgrammableSpeakerAlertParameters
+public abstract class Type1421203362: ProgrammableSpeakerAlertParameters
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaPlayer, PlayerIdentification>
+public abstract partial class Union1421203362: OneOfBase<LuaPlayer, PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: List<MapPosition>
+public abstract class Type1421203362: List<MapPosition>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Array of transport belt connectable entities.
@@ -9100,7 +9100,7 @@ public abstract class Table375078767
 ///   - left
 ///   - right
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: straight
@@ -9127,7 +9127,7 @@ public enum Literals375078767
 ///   - input
 ///   - output
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: input
@@ -9143,55 +9143,55 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: LuaBurner
+public abstract class Type1421203362: LuaBurner
 {
 }
 
-public abstract class Type375078767: ChainSignalStateEnum
+public abstract class Type1421203362: ChainSignalStateEnum
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Entities connected via the red wire.
@@ -9207,252 +9207,252 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: CircuitConnectionDefinition
+public abstract class Type1421203362: CircuitConnectionDefinition
 {
 }
 
-public abstract class Type375078767: List<CircuitConnectionDefinition>
+public abstract class Type1421203362: List<CircuitConnectionDefinition>
 {
 }
 
-public abstract class Type375078767: CliffOrientation
+public abstract class Type1421203362: CliffOrientation
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: CopperConnectionDefinition
+public abstract class Type1421203362: CopperConnectionDefinition
 {
 }
 
-public abstract class Type375078767: List<CopperConnectionDefinition>
+public abstract class Type1421203362: List<CopperConnectionDefinition>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: RollingStockDrawData
+public abstract class Type1421203362: RollingStockDrawData
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ModuleEffects
+public abstract class Type1421203362: ModuleEffects
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaFlowStatistics
+public abstract class Type1421203362: LuaFlowStatistics
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaFluidBox
+public abstract class Type1421203362: LuaFluidBox
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntityPrototype, LuaTilePrototype>
+public abstract partial class Union1421203362: OneOfBase<LuaEntityPrototype, LuaTilePrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGrid
+public abstract class Type1421203362: LuaEquipmentGrid
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: CursorBoxRenderType
+public abstract class Type1421203362: CursorBoxRenderType
 {
 }
 
-public abstract class Type375078767: InfinityInventoryFilter
+public abstract class Type1421203362: InfinityInventoryFilter
 {
 }
 
-public abstract class Type375078767: List<InfinityInventoryFilter>
+public abstract class Type1421203362: List<InfinityInventoryFilter>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
@@ -9461,7 +9461,7 @@ public abstract class Type375078767: uint
 ///   - whitelist
 ///   - blacklist
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: whitelist
@@ -9477,68 +9477,68 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaPlayer, PlayerIdentification>
+public abstract partial class Union1421203362: OneOfBase<LuaPlayer, PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
@@ -9547,7 +9547,7 @@ public abstract class Type375078767: LuaEntity
 ///   - input
 ///   - output
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: input
@@ -9563,7 +9563,7 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
@@ -9572,7 +9572,7 @@ public abstract class Type375078767: LuaEntity
 ///   - input
 ///   - output
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: input
@@ -9588,253 +9588,253 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LuaLogisticCell
+public abstract class Type1421203362: LuaLogisticCell
 {
 }
 
-public abstract class Type375078767: LuaLogisticNetwork
+public abstract class Type1421203362: LuaLogisticNetwork
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, List<LuaEntity>>
+public abstract class Type1421203362: Dictionary<string, List<LuaEntity>>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: List<List<LuaEntity>>
+public abstract class Type1421203362: List<List<LuaEntity>>
 {
 }
 
-public abstract class Type375078767: LuaEntity
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Dictionary<string, List<LuaEntity>>, List<List<LuaEntity>>, LuaEntity>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RealOrientation
-{
-}
-
-public abstract class Type375078767: ProgrammableSpeakerParameters
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaPlayer
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LuaRecipe
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaEntityPrototype
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RealOrientation
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaPlayer
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaPlayer, PlayerIdentification>
+public abstract partial class Union1421203362: OneOfBase<Dictionary<string, List<LuaEntity>>, List<List<LuaEntity>>, LuaEntity>
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: ProgrammableSpeakerParameters
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: RocketSiloStatusEnum
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
-public abstract class Type375078767: SignalStateEnum
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: RealOrientation
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaPlayer
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<LuaPlayer, PlayerIdentification>
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: List<ForceIdentification>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: RocketSiloStatusEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: SignalStateEnum
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
@@ -9844,7 +9844,7 @@ public abstract class Type375078767: LuaItemPrototype
 ///   - none
 ///   - right
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: left
@@ -9872,7 +9872,7 @@ public enum Literals375078767
 ///   - none
 ///   - right
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: left
@@ -9894,27 +9894,27 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: EntityStatusEnum
+public abstract class Type1421203362: EntityStatusEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("speed_modifier")]
   public double SpeedModifier { get; set; }
@@ -9924,1296 +9924,1296 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: LuaTrain
+public abstract class Type1421203362: LuaTrain
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaUnitGroup
+public abstract class Type1421203362: LuaUnitGroup
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: VehicleAutomaticTargetingParameters
+public abstract class Type1421203362: VehicleAutomaticTargetingParameters
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: Offer
+public abstract class Type1421203362: Offer
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: WireConnectionDefinition
+public abstract class Type1421203362: WireConnectionDefinition
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, WireConnectionDefinition>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, WireConnectionDefinition>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: WireTypeEnum
+public abstract class Type1421203362: WireTypeEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: WireConnectionDefinition
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<WireTypeEnum, LuaEntity, WireConnectionDefinition>
-{
-}
-
-public abstract class Type375078767: RailDirectionEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: BeamTarget
-{
-}
-
-public abstract class Type375078767: BeamTarget
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: CircuitConnectorIdEnum
-{
-}
-
-public abstract class Type375078767: WireTypeEnum
-{
-}
-
-public abstract class Type375078767: LuaCircuitNetwork
-{
-}
-
-public abstract class Type375078767: RailConnectionDirectionEnum
-{
-}
-
-public abstract class Type375078767: RailDirectionEnum
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: RailDirectionEnum
-{
-}
-
-public abstract class Type375078767: RailConnectionDirectionEnum
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: RailDirectionEnum
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: RailDirectionEnum
-{
-}
-
-public abstract class Type375078767: LuaControlBehavior
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: WireConnectionDefinition
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, LuaPlayer>
+public abstract partial class Union1421203362: OneOfBase<WireTypeEnum, LuaEntity, WireConnectionDefinition>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, double>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: BeamTarget
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: BeamTarget
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: HeatSetting
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: WireTypeEnum
 {
 }
 
-public abstract class Type375078767: InfinityInventoryFilter
+public abstract class Type1421203362: LuaCircuitNetwork
 {
 }
 
-public abstract class Type375078767: InfinityPipeFilter
+public abstract class Type1421203362: RailConnectionDirectionEnum
 {
 }
 
-public abstract class Type375078767: LogisticMemberIndexEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LogisticMemberIndexEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: RailConnectionDirectionEnum
 {
 }
 
-public abstract class Type375078767: Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaLogisticPoint, Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: Offer
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: List<Offer>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
+public abstract class Type1421203362: LuaControlBehavior
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: CircuitConnectorIdEnum
-{
-}
-
-public abstract class Type375078767: Signal
-{
-}
-
-public abstract class Type375078767: List<Signal>
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: LuaControlBehavior
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, LuaPlayer>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, LuaPlayer>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: Dictionary<string, double>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: HeatSetting
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaRecipe
+public abstract class Type1421203362: InfinityInventoryFilter
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: InfinityPipeFilter
 {
 }
 
-public abstract class Type375078767: SimpleItemStack
+public abstract class Type1421203362: LogisticMemberIndexEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: LogisticMemberIndexEnum
 {
 }
 
-public abstract class Type375078767: LuaTrain
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: LuaTrain
-{
-}
-
-public abstract class Type375078767: List<LuaTrain>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaTransportLine
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: LuaEntityPrototype
-{
-}
-
-public abstract class Type375078767: EntityPrototypeFlag
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: EntityPrototypeFlag
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: Fluid
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: EntityPrototypeIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Dictionary<string, uint>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Dictionary<string, uint>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, MapPosition>
+public abstract partial class Union1421203362: OneOfBase<LuaLogisticPoint, Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: Offer
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: List<Offer>
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, MapPosition>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: CircuitConnectorIdEnum
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, PlayerIdentification>
+public abstract class Type1421203362: Signal
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<Signal>
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaNil>
+public abstract class Type1421203362: LuaControlBehavior
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: HeatSetting
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: InfinityInventoryFilter
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<InfinityInventoryFilter, LuaNil>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: InfinityPipeFilter
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<InfinityPipeFilter, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, LuaPlayer>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: RailDirectionEnum
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: RailDirectionEnum
+{
+}
+
+public abstract class Type1421203362: RailDirectionEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: RailDirectionEnum
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: LuaRecipe
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: SimpleItemStack
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: LuaTrain
+{
+}
+
+public abstract class Type1421203362: LuaTrain
+{
+}
+
+public abstract class Type1421203362: List<LuaTrain>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaTransportLine
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
+{
+}
+
+public abstract class Type1421203362: EntityPrototypeFlag
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: EntityPrototypeFlag
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: Fluid
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaInventory
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: EntityPrototypeIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, uint>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, uint>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: MapPosition
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, PlayerIdentification>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaRecipe
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: MapPosition
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaRecipe, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: uint
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: bool
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, LuaNil>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: HeatSetting
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: InfinityInventoryFilter
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: LuaEntity
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<InfinityInventoryFilter, LuaNil>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: InfinityPipeFilter
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: double
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<InfinityPipeFilter, LuaNil>
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntityPrototype>
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: BoundingBox
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: double
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, LuaRecipe, LuaNil>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: AttackParameters
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: TriggerItem
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: List<TriggerItem>
+public abstract class Type1421203362: List<LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: AutoplaceSpecification
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Vector
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, bool>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: AttackParameters
+{
+}
+
+public abstract class Type1421203362: TriggerItem
+{
+}
+
+public abstract class Type1421203362: List<TriggerItem>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: AutoplaceSpecification
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
 {
 }
 
@@ -11222,223 +11222,223 @@ public abstract class Type375078767: double
 ///   - heat-water-inside
 ///   - output-to-separate-pipe
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: heat-water-inside
   /// </summary>
   [FactorioRconDefinitionValue("heat-water-inside")]
-  HeatWaterInside,
+  Heatsubtractwatersubtractinside,
 
   /// <summary>
   /// Literal value: output-to-separate-pipe
   /// </summary>
   [FactorioRconDefinitionValue("output-to-separate-pipe")]
-  OutputToSeparatePipe,
+  Outputsubtracttosubtractseparatesubtractpipe,
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaBurnerPrototype
+public abstract class Type1421203362: LuaBurnerPrototype
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaEntityPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: Dictionary<string, bool>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: TriggerItem
+public abstract class Type1421203362: TriggerItem
 {
 }
 
-public abstract class Type375078767: List<TriggerItem>
+public abstract class Type1421203362: List<TriggerItem>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: List<Vector>
+public abstract class Type1421203362: List<Vector>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("smoke_name")]
   public string SmokeName { get; set; }
@@ -11484,315 +11484,315 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaElectricEnergySourcePrototype
+public abstract class Type1421203362: LuaElectricEnergySourcePrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: TriggerItem
+public abstract class Type1421203362: TriggerItem
 {
 }
 
-public abstract class Type375078767: List<TriggerItem>
+public abstract class Type1421203362: List<TriggerItem>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: EntityPrototypeFlags
+public abstract class Type1421203362: EntityPrototypeFlags
 {
 }
 
-public abstract class Type375078767: LuaFluidPrototype
+public abstract class Type1421203362: LuaFluidPrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaFluidEnergySourcePrototype
+public abstract class Type1421203362: LuaFluidEnergySourcePrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaFluidBoxPrototype
+public abstract class Type1421203362: LuaFluidBoxPrototype
 {
 }
 
-public abstract class Type375078767: List<LuaFluidBoxPrototype>
+public abstract class Type1421203362: List<LuaFluidBoxPrototype>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGridPrototype
+public abstract class Type1421203362: LuaEquipmentGridPrototype
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaItemPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaItemPrototype>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaHeatBufferPrototype
+public abstract class Type1421203362: LuaHeatBufferPrototype
 {
 }
 
-public abstract class Type375078767: LuaHeatEnergySourcePrototype
+public abstract class Type1421203362: LuaHeatEnergySourcePrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: List<LuaItemPrototype>
+public abstract class Type1421203362: List<LuaItemPrototype>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ProgrammableSpeakerInstrument
+public abstract class Type1421203362: ProgrammableSpeakerInstrument
 {
 }
 
-public abstract class Type375078767: List<ProgrammableSpeakerInstrument>
+public abstract class Type1421203362: List<ProgrammableSpeakerInstrument>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ItemStackDefinition
+public abstract class Type1421203362: ItemStackDefinition
 {
 }
 
-public abstract class Type375078767: List<ItemStackDefinition>
+public abstract class Type1421203362: List<ItemStackDefinition>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
@@ -11805,7 +11805,7 @@ public abstract class Type375078767: LocalisedString
 ///   - storage
 ///   - none
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: requester
@@ -11817,13 +11817,13 @@ public enum Literals375078767
   /// Literal value: active-provider
   /// </summary>
   [FactorioRconDefinitionValue("active-provider")]
-  ActiveProvider,
+  Activesubtractprovider,
 
   /// <summary>
   /// Literal value: passive-provider
   /// </summary>
   [FactorioRconDefinitionValue("passive-provider")]
-  PassiveProvider,
+  Passivesubtractprovider,
 
   /// <summary>
   /// Literal value: buffer
@@ -11845,67 +11845,67 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -11954,163 +11954,163 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Loot
+public abstract class Type1421203362: Loot
 {
 }
 
-public abstract class Type375078767: List<Loot>
+public abstract class Type1421203362: List<Loot>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: TriggerItem
+public abstract class Type1421203362: TriggerItem
 {
 }
 
-public abstract class Type375078767: List<TriggerItem>
+public abstract class Type1421203362: List<TriggerItem>
 {
 }
 
-public abstract class Type375078767: Product
+public abstract class Type1421203362: Product
 {
 }
 
-public abstract class Type375078767: List<Product>
+public abstract class Type1421203362: List<Product>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Is this entity mineable at all?
@@ -12156,203 +12156,203 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: RadiusVisualisationSpecification
+public abstract class Type1421203362: RadiusVisualisationSpecification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: List<LuaEntityPrototype>
+public abstract class Type1421203362: List<LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Resistance
+public abstract class Type1421203362: Resistance
 {
 }
 
-public abstract class Type375078767: Dictionary<string, Resistance>
+public abstract class Type1421203362: Dictionary<string, Resistance>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: Dictionary<string, bool>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: UnitSpawnDefinition
+public abstract class Type1421203362: UnitSpawnDefinition
 {
 }
 
-public abstract class Type375078767: List<UnitSpawnDefinition>
+public abstract class Type1421203362: List<UnitSpawnDefinition>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("min")]
   public double Min { get; set; }
@@ -12362,223 +12362,223 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: TriggerEffectItem
+public abstract class Type1421203362: TriggerEffectItem
 {
 }
 
-public abstract class Type375078767: List<TriggerEffectItem>
+public abstract class Type1421203362: List<TriggerEffectItem>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: byte
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaVoidEnergySourcePrototype
+public abstract class Type1421203362: LuaVoidEnergySourcePrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: EntityPrototypeFlag
+public abstract class Type1421203362: EntityPrototypeFlag
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaBurner
+public abstract class Type1421203362: LuaBurner
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: EquipmentPosition
+public abstract class Type1421203362: EquipmentPosition
 {
 }
 
-public abstract class Type375078767: LuaEquipmentPrototype
+public abstract class Type1421203362: LuaEquipmentPrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
@@ -12588,387 +12588,387 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: List<LuaEquipment>
+public abstract class Type1421203362: List<LuaEquipment>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGridPrototype
+public abstract class Type1421203362: LuaEquipmentGridPrototype
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: EquipmentPosition
+public abstract class Type1421203362: EquipmentPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: EquipmentPosition
+public abstract class Type1421203362: EquipmentPosition
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: EquipmentPosition
+public abstract class Type1421203362: EquipmentPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: EquipmentPosition
+public abstract class Type1421203362: EquipmentPosition
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: EquipmentPosition
+public abstract class Type1421203362: EquipmentPosition
 {
 }
 
-public abstract class Type375078767: SimpleItemStack
+public abstract class Type1421203362: SimpleItemStack
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AttackParameters
+public abstract class Type1421203362: AttackParameters
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: LuaBurnerPrototype
+public abstract class Type1421203362: LuaBurnerPrototype
 {
 }
 
-public abstract class Type375078767: LuaElectricEnergySourcePrototype
+public abstract class Type1421203362: LuaElectricEnergySourcePrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaElectricEnergySourcePrototype
+public abstract class Type1421203362: LuaElectricEnergySourcePrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -13017,39 +13017,39 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: EquipmentPoint
+public abstract class Type1421203362: EquipmentPoint
 {
 }
 
-public abstract class Type375078767: List<EquipmentPoint>
+public abstract class Type1421203362: List<EquipmentPoint>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
@@ -13065,391 +13065,391 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ulong, double>
-{
-}
-
-public abstract class Type375078767: Dictionary<string, Union375078767>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ulong, double>
+public abstract partial class Union1421203362: OneOfBase<ulong, double>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, Union375078767>
+public abstract class Type1421203362: Dictionary<string, Union1421203362>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: FlowPrecisionIndexEnum
-{
-}
-
-public abstract class Type375078767: ushort
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ulong, double>
+public abstract partial class Union1421203362: OneOfBase<ulong, double>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: Dictionary<string, Union1421203362>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ulong, double>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: FlowPrecisionIndexEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ushort
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ulong, double>
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ulong, double>
+public abstract partial class Union1421203362: OneOfBase<ulong, double>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: Fluid
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: FluidIdentification
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: Dictionary<string, float>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaFluidBox
-{
-}
-
-public abstract class Type375078767: List<LuaFluidBox>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: FluidBoxFilter
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Dictionary<string, uint>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: PipeConnection
-{
-}
-
-public abstract class Type375078767: List<PipeConnection>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaFluidBoxPrototype
-{
-}
-
-public abstract class Type375078767: LuaFluidBoxPrototype
-{
-}
-
-public abstract class Type375078767: List<LuaFluidBoxPrototype>
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaFluidBoxPrototype, List<LuaFluidBoxPrototype>>
+public abstract partial class Union1421203362: OneOfBase<ulong, double>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: FluidBoxFilterSpec
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<FluidBoxFilterSpec, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<ulong, double>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<ulong, double>
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaFluidPrototype
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Fluid
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: FluidIdentification
 {
 }
 
-public abstract class Type375078767: FluidBoxConnection
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: List<FluidBoxConnection>
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, float>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaFluidBox
+{
+}
+
+public abstract class Type1421203362: List<LuaFluidBox>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: FluidBoxFilter
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, uint>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: PipeConnection
+{
+}
+
+public abstract class Type1421203362: List<PipeConnection>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaFluidBoxPrototype
+{
+}
+
+public abstract class Type1421203362: LuaFluidBoxPrototype
+{
+}
+
+public abstract class Type1421203362: List<LuaFluidBoxPrototype>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<LuaFluidBoxPrototype, List<LuaFluidBoxPrototype>>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: FluidBoxFilterSpec
+{
+}
+
+public abstract class Type1421203362: LuaNil
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<FluidBoxFilterSpec, LuaNil>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
+{
+}
+
+public abstract class Type1421203362: LuaFluidPrototype
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: FluidBoxConnection
+{
+}
+
+public abstract class Type1421203362: List<FluidBoxConnection>
 {
 }
 
@@ -13460,7 +13460,7 @@ public abstract class Type375078767: List<FluidBoxConnection>
 ///   - output
 ///   - none
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: input
@@ -13472,7 +13472,7 @@ public enum Literals375078767
   /// Literal value: input-output
   /// </summary>
   [FactorioRconDefinitionValue("input-output")]
-  InputOutput,
+  Inputsubtractoutput,
 
   /// <summary>
   /// Literal value: output
@@ -13488,2092 +13488,2092 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: List<int>
+public abstract class Type1421203362: List<int>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaFluidBoxPrototype
+public abstract class Type1421203362: LuaFluidBoxPrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SmokeSource
+public abstract class Type1421203362: SmokeSource
 {
 }
 
-public abstract class Type375078767: List<SmokeSource>
+public abstract class Type1421203362: List<SmokeSource>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: List<LuaPlayer>
+public abstract class Type1421203362: List<LuaPlayer>
 {
 }
 
-public abstract class Type375078767: LuaTechnology
+public abstract class Type1421203362: LuaTechnology
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaFlowStatistics
+public abstract class Type1421203362: LuaFlowStatistics
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaFlowStatistics
+public abstract class Type1421203362: LuaFlowStatistics
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaFlowStatistics
+public abstract class Type1421203362: LuaFlowStatistics
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: LuaFlowStatistics
+public abstract class Type1421203362: LuaFlowStatistics
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaLogisticNetwork
+public abstract class Type1421203362: LuaLogisticNetwork
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticNetwork>
+public abstract class Type1421203362: List<LuaLogisticNetwork>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, List<LuaLogisticNetwork>>
+public abstract class Type1421203362: Dictionary<string, List<LuaLogisticNetwork>>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: List<LuaPlayer>
+public abstract class Type1421203362: List<LuaPlayer>
 {
 }
 
-public abstract class Type375078767: LuaTechnology
+public abstract class Type1421203362: LuaTechnology
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaRecipe
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaRecipe>
+public abstract class Type1421203362: LuaCustomTable<string, LuaRecipe>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: TechnologyIdentification
+public abstract class Type1421203362: TechnologyIdentification
 {
 }
 
-public abstract class Type375078767: List<TechnologyIdentification>
+public abstract class Type1421203362: List<TechnologyIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTechnology
+public abstract class Type1421203362: LuaTechnology
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaTechnology>
+public abstract class Type1421203362: LuaCustomTable<string, LuaTechnology>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: ChartTagSpec
+public abstract class Type1421203362: ChartTagSpec
 {
 }
 
-public abstract class Type375078767: LuaCustomChartTag
+public abstract class Type1421203362: LuaCustomChartTag
 {
 }
 
-public abstract class Type375078767: TechnologyIdentification
+public abstract class Type1421203362: TechnologyIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaCustomChartTag
+public abstract class Type1421203362: LuaCustomChartTag
 {
 }
 
-public abstract class Type375078767: List<LuaCustomChartTag>
+public abstract class Type1421203362: List<LuaCustomChartTag>
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaLogisticNetwork
+public abstract class Type1421203362: LuaLogisticNetwork
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaRecipe
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaRecipe>
+public abstract partial class Union1421203362: OneOfBase<string, LuaRecipe>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: EntityPrototypeIdentification
+public abstract class Type1421203362: EntityPrototypeIdentification
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: TechnologyIdentification
+public abstract class Type1421203362: TechnologyIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: LuaTrain
-{
-}
-
-public abstract class Type375078767: List<LuaTrain>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: SoundType
-{
-}
-
-public abstract class Type375078767: SoundPath
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: PrintSettings
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Color, PrintSettings>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaTrain
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: List<LuaTrain>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: ChunkPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaRecipe
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: SurfaceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: SurfaceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: SoundType
+{
+}
+
+public abstract class Type1421203362: SoundPath
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: PrintSettings
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaRecipe>
+public abstract partial class Union1421203362: OneOfBase<Color, PrintSettings>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: TechnologyIdentification
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ChunkPosition
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaAchievementPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaAchievementPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: Dictionary<string, string>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaAmmoCategoryPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaAmmoCategoryPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaAutoplaceControlPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaAutoplaceControlPrototype>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<uint, string>
-{
-}
-
-public abstract class Type375078767: LuaPlayer
-{
-}
-
-public abstract class Type375078767: List<LuaPlayer>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaCustomInputPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaCustomInputPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaDamagePrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaDamagePrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaDecorativePrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaDecorativePrototype>
-{
-}
-
-public abstract class Type375078767: MapGenSettings
-{
-}
-
-public abstract class Type375078767: DifficultyEnum
-{
-}
-
-public abstract class Type375078767: DifficultySettings
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEntityPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaEntityPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEquipmentCategoryPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaEquipmentCategoryPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEquipmentGridPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaEquipmentGridPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEquipmentPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaEquipmentPrototype>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaFluidPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaFluidPrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaFontPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaFontPrototype>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaRecipe
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, string>
+public abstract partial class Union1421203362: OneOfBase<string, LuaRecipe>
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<Type375078767, LuaForce>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaFuelCategoryPrototype
+public abstract class Type1421203362: TechnologyIdentification
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaFuelCategoryPrototype>
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaGroup>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ChunkPosition
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaItemPrototype>
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaGroup>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapGenPreset
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, MapGenPreset>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapSettings
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaAchievementPrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaCustomTable<string, LuaAchievementPrototype>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Dictionary<string, string>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaAmmoCategoryPrototype
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: LuaCustomTable<string, LuaAmmoCategoryPrototype>
 {
 }
 
-public abstract class Type375078767: byte
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaAutoplaceControlPrototype
 {
 }
 
-public abstract class Type375078767: LuaModSettingPrototype
+public abstract class Type1421203362: LuaCustomTable<string, LuaAutoplaceControlPrototype>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaModSettingPrototype>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaModuleCategoryPrototype
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaModuleCategoryPrototype>
+public abstract class Type1421203362: LuaCustomTable<uint, string>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: LuaNamedNoiseExpression
+public abstract class Type1421203362: List<LuaPlayer>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaNamedNoiseExpression>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaNoiseLayerPrototype
+public abstract class Type1421203362: LuaCustomInputPrototype
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaNoiseLayerPrototype>
+public abstract class Type1421203362: LuaCustomTable<string, LuaCustomInputPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaDamagePrototype
 {
 }
 
-public abstract class Type375078767: LuaParticlePrototype
+public abstract class Type1421203362: LuaCustomTable<string, LuaDamagePrototype>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaParticlePrototype>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaPermissionGroups
+public abstract class Type1421203362: LuaDecorativePrototype
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaCustomTable<string, LuaDecorativePrototype>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: MapGenSettings
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: DifficultyEnum
+{
+}
+
+public abstract class Type1421203362: DifficultySettings
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaEntityPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEquipmentCategoryPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaEquipmentCategoryPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEquipmentGridPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaEquipmentGridPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEquipmentPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaEquipmentPrototype>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaFluidPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaFluidPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaFontPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaFontPrototype>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, string>
+public abstract partial class Union1421203362: OneOfBase<uint, string>
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<Type375078767, LuaPlayer>
+public abstract class Type1421203362: LuaCustomTable<Type1421203362, LuaForce>
 {
 }
 
-public abstract class Type375078767: LuaFlowStatistics
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaFuelCategoryPrototype
 {
 }
 
-public abstract class Type375078767: LuaRecipeCategoryPrototype
+public abstract class Type1421203362: LuaCustomTable<string, LuaFuelCategoryPrototype>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaRecipeCategoryPrototype>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: LuaRecipePrototype
+public abstract class Type1421203362: LuaCustomTable<string, LuaGroup>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaRecipePrototype>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: LuaResourceCategoryPrototype
+public abstract class Type1421203362: LuaCustomTable<string, LuaItemPrototype>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaResourceCategoryPrototype>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: LuaShortcutPrototype
+public abstract class Type1421203362: LuaCustomTable<string, LuaGroup>
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaShortcutPrototype>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: MapGenPreset
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaCustomTable<string, MapGenPreset>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: MapSettings
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, string>
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: byte
+{
+}
+
+public abstract class Type1421203362: byte
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaModSettingPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaModSettingPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaModuleCategoryPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaModuleCategoryPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaNamedNoiseExpression
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaNamedNoiseExpression>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaNoiseLayerPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaNoiseLayerPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaParticlePrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaParticlePrototype>
+{
+}
+
+public abstract class Type1421203362: LuaPermissionGroups
+{
+}
+
+public abstract class Type1421203362: LuaPlayer
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, string>
+public abstract partial class Union1421203362: OneOfBase<uint, string>
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<Type375078767, LuaSurface>
+public abstract class Type1421203362: LuaCustomTable<Type1421203362, LuaPlayer>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaFlowStatistics
 {
 }
 
-public abstract class Type375078767: LuaTechnologyPrototype
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaTechnologyPrototype>
+public abstract class Type1421203362: LuaRecipeCategoryPrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaCustomTable<string, LuaRecipeCategoryPrototype>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaRecipePrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaCustomTable<string, LuaRecipePrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaResourceCategoryPrototype
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaTilePrototype>
+public abstract class Type1421203362: LuaCustomTable<string, LuaResourceCategoryPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTrivialSmokePrototype
+public abstract class Type1421203362: LuaShortcutPrototype
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaTrivialSmokePrototype>
+public abstract class Type1421203362: LuaCustomTable<string, LuaShortcutPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaVirtualSignalPrototype
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<string, LuaVirtualSignalPrototype>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaCustomTable<string, string>
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaForce
-{
-}
-
-public abstract class Type375078767: ushort
-{
-}
-
-public abstract class Type375078767: LuaInventory
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaProfiler
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaRandomGenerator
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapGenSettings
-{
-}
-
-public abstract class Type375078767: LuaSurface
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: Dictionary<string, double>
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: AchievementPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<AchievementPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaAchievementPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaAchievementPrototype>
-{
-}
-
-public abstract class Type375078767: DecorativePrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<DecorativePrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaDecorativePrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaDecorativePrototype>
-{
-}
-
-public abstract class Type375078767: EntityPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<EntityPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEntityPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaEntityPrototype>
-{
-}
-
-public abstract class Type375078767: EquipmentPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<EquipmentPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEquipmentPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaEquipmentPrototype>
-{
-}
-
-public abstract class Type375078767: FluidPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<FluidPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaFluidPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaFluidPrototype>
-{
-}
-
-public abstract class Type375078767: ItemPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<ItemPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaItemPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaItemPrototype>
-{
-}
-
-public abstract class Type375078767: ModSettingPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<ModSettingPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaModSettingPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaModSettingPrototype>
-{
-}
-
-public abstract class Type375078767: RecipePrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<RecipePrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaRecipePrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaRecipePrototype>
-{
-}
-
-public abstract class Type375078767: TechnologyPrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<TechnologyPrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaTechnologyPrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaTechnologyPrototype>
-{
-}
-
-public abstract class Type375078767: TilePrototypeFilter
-{
-}
-
-public abstract class Type375078767: List<TilePrototypeFilter>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaTilePrototype
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, LuaTilePrototype>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, string>
+public abstract partial class Union1421203362: OneOfBase<uint, string>
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaCustomTable<Type1421203362, LuaSurface>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: LuaTechnologyPrototype
 {
 }
 
-public abstract class Type375078767: List<LuaInventory>
+public abstract class Type1421203362: LuaCustomTable<string, LuaTechnologyPrototype>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, List<LuaInventory>>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaTilePrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaTilePrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaTrivialSmokePrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaTrivialSmokePrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaVirtualSignalPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaVirtualSignalPrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaForce
+{
+}
+
+public abstract class Type1421203362: ushort
+{
+}
+
+public abstract class Type1421203362: LuaInventory
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaProfiler
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaRandomGenerator
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapGenSettings
+{
+}
+
+public abstract class Type1421203362: LuaSurface
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: SurfaceIdentification
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, double>
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: SurfaceIdentification
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: AchievementPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<AchievementPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaAchievementPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaAchievementPrototype>
+{
+}
+
+public abstract class Type1421203362: DecorativePrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<DecorativePrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaDecorativePrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaDecorativePrototype>
+{
+}
+
+public abstract class Type1421203362: EntityPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<EntityPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaEntityPrototype>
+{
+}
+
+public abstract class Type1421203362: EquipmentPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<EquipmentPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEquipmentPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaEquipmentPrototype>
+{
+}
+
+public abstract class Type1421203362: FluidPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<FluidPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaFluidPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaFluidPrototype>
+{
+}
+
+public abstract class Type1421203362: ItemPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<ItemPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaItemPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaItemPrototype>
+{
+}
+
+public abstract class Type1421203362: ModSettingPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<ModSettingPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaModSettingPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaModSettingPrototype>
+{
+}
+
+public abstract class Type1421203362: RecipePrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<RecipePrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaRecipePrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaRecipePrototype>
+{
+}
+
+public abstract class Type1421203362: TechnologyPrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<TechnologyPrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaTechnologyPrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaTechnologyPrototype>
+{
+}
+
+public abstract class Type1421203362: TilePrototypeFilter
+{
+}
+
+public abstract class Type1421203362: List<TilePrototypeFilter>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaTilePrototype
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, LuaTilePrototype>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<uint, string>
+public abstract partial class Union1421203362: OneOfBase<uint, string>
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTrain
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<LuaInventory>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: Dictionary<string, List<LuaInventory>>
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: uint
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: SoundPath
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: SpritePath
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: AnyBasic
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapExchangeStringData
-{
-}
-
-public abstract class Type375078767: SoundType
-{
-}
-
-public abstract class Type375078767: SoundPath
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: PrintSettings
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Color, PrintSettings>
+public abstract partial class Union1421203362: OneOfBase<uint, string>
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaTrain
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<PlayerIdentification>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RailEnd
-{
-}
-
-public abstract class Type375078767: RailEnd
-{
-}
-
-public abstract class Type375078767: TrainStopGoal
-{
-}
-
-public abstract class Type375078767: RailEnd
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<TrainStopGoal, RailEnd>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: List<Union375078767>
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: SoundPath
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: SpritePath
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: AnyBasic
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapExchangeStringData
+{
+}
+
+public abstract class Type1421203362: SoundType
+{
+}
+
+public abstract class Type1421203362: SoundPath
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: PrintSettings
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<Color, PrintSettings>
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: List<PlayerIdentification>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: RailEnd
+{
+}
+
+public abstract class Type1421203362: RailEnd
+{
+}
+
+public abstract class Type1421203362: TrainStopGoal
+{
+}
+
+public abstract class Type1421203362: RailEnd
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<TrainStopGoal, RailEnd>
+{
+}
+
+public abstract class Type1421203362: List<Union1421203362>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
 {
 }
 
@@ -15582,810 +15582,810 @@ public abstract class Type375078767: bool
 ///   - respect-movement-direction
 ///   - any-direction-with-locomotives
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: respect-movement-direction
   /// </summary>
   [FactorioRconDefinitionValue("respect-movement-direction")]
-  RespectMovementDirection,
+  Respectsubtractmovementsubtractdirection,
 
   /// <summary>
   /// Literal value: any-direction-with-locomotives
   /// </summary>
   [FactorioRconDefinitionValue("any-direction-with-locomotives")]
-  AnyDirectionWithLocomotives,
+  Anysubtractdirectionsubtractwithsubtractlocomotives,
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaTrain
+public abstract class Type1421203362: LuaTrain
 {
 }
 
-public abstract class Type375078767: TrainPathRequestType
+public abstract class Type1421203362: TrainPathRequestType
 {
 }
 
-public abstract class Type375078767: TrainPathFinderPathResult
+public abstract class Type1421203362: TrainPathFinderPathResult
 {
 }
 
-public abstract class Type375078767: TrainPathAnyGoalResult
+public abstract class Type1421203362: TrainPathAnyGoalResult
 {
 }
 
-public abstract class Type375078767: TrainPathAllGoalsResult
+public abstract class Type1421203362: TrainPathAllGoalsResult
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
+public abstract partial class Union1421203362: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: GuiArrowSpecification
+public abstract class Type1421203362: GuiArrowSpecification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTable
+public abstract class Type1421203362: LuaTable
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: TechnologyIdentification
+public abstract class Type1421203362: TechnologyIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: CircuitConditionDefinition
+public abstract class Type1421203362: CircuitConditionDefinition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: CircuitConditionDefinition
+public abstract class Type1421203362: CircuitConditionDefinition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: List<LuaGroup>
+public abstract class Type1421203362: List<LuaGroup>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaGuiElement>
+public abstract class Type1421203362: Dictionary<string, LuaGuiElement>
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: SpritePath
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: GuiAnchor
+public abstract class Type1421203362: GuiAnchor
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: List<LuaGuiElement>
+public abstract class Type1421203362: List<LuaGuiElement>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: SpritePath
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: GuiDirection
+public abstract class Type1421203362: GuiDirection
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PrototypeFilter
+public abstract class Type1421203362: PrototypeFilter
 {
 }
 
-public abstract class Type375078767: ElemID
+public abstract class Type1421203362: ElemID
 {
 }
 
-public abstract class Type375078767: ElemType
+public abstract class Type1421203362: ElemType
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, SignalID>
+public abstract partial class Union1421203362: OneOfBase<string, SignalID>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: GameControllerInteractionEnum
+public abstract class Type1421203362: GameControllerInteractionEnum
 {
 }
 
-public abstract class Type375078767: LuaGui
+public abstract class Type1421203362: LuaGui
 {
 }
 
-public abstract class Type375078767: ScrollPolicy
+public abstract class Type1421203362: ScrollPolicy
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: SpritePath
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: List<LocalisedString>
+public abstract class Type1421203362: List<LocalisedString>
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: GuiLocation
+public abstract class Type1421203362: GuiLocation
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MouseButtonFlags
+public abstract class Type1421203362: MouseButtonFlags
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: SpritePath
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaStyle
+public abstract class Type1421203362: LuaStyle
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaStyle, string>
+public abstract partial class Union1421203362: OneOfBase<LuaStyle, string>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: SwitchState
+public abstract class Type1421203362: SwitchState
 {
 }
 
-public abstract class Type375078767: TabAndContent
+public abstract class Type1421203362: TabAndContent
 {
 }
 
-public abstract class Type375078767: List<TabAndContent>
+public abstract class Type1421203362: List<TabAndContent>
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ScrollPolicy
+public abstract class Type1421203362: ScrollPolicy
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: GuiAnchor
+public abstract class Type1421203362: GuiAnchor
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: ElemID
+public abstract class Type1421203362: ElemID
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: GameControllerInteractionEnum
+public abstract class Type1421203362: GameControllerInteractionEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: GuiElementType
+public abstract class Type1421203362: GuiElementType
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
-public abstract class Type375078767: LuaGuiElement
+public abstract class Type1421203362: LuaGuiElement
 {
 }
 
@@ -16394,23 +16394,23 @@ public abstract class Type375078767: LuaGuiElement
 ///   - in-view
 ///   - top-third
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: in-view
   /// </summary>
   [FactorioRconDefinitionValue("in-view")]
-  InView,
+  Insubtractview,
 
   /// <summary>
   /// Literal value: top-third
   /// </summary>
   [FactorioRconDefinitionValue("top-third")]
-  TopThird,
+  Topsubtractthird,
 
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
@@ -16419,608 +16419,608 @@ public abstract class Type375078767: int
 ///   - in-view
 ///   - top-third
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: in-view
   /// </summary>
   [FactorioRconDefinitionValue("in-view")]
-  InView,
+  Insubtractview,
 
   /// <summary>
   /// Literal value: top-third
   /// </summary>
   [FactorioRconDefinitionValue("top-third")]
-  TopThird,
+  Topsubtractthird,
 
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: HeatConnection
+public abstract class Type1421203362: HeatConnection
 {
 }
 
-public abstract class Type375078767: List<HeatConnection>
+public abstract class Type1421203362: List<HeatConnection>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: HeatConnection
+public abstract class Type1421203362: HeatConnection
 {
 }
 
-public abstract class Type375078767: List<HeatConnection>
+public abstract class Type1421203362: List<HeatConnection>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaHeatBufferPrototype
+public abstract class Type1421203362: LuaHeatBufferPrototype
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ControlBehaviorInserterHandReadModeEnum
+public abstract class Type1421203362: ControlBehaviorInserterHandReadModeEnum
 {
 }
 
-public abstract class Type375078767: ControlBehaviorInserterCircuitModeOfOperationEnum
+public abstract class Type1421203362: ControlBehaviorInserterCircuitModeOfOperationEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEquipment
+public abstract class Type1421203362: LuaEquipment
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ushort
+public abstract class Type1421203362: ushort
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<string, LuaNil>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaEntityPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: Dictionary<string, bool>
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaEntityPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: Dictionary<string, bool>
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: CursorBoxRenderType
+public abstract class Type1421203362: CursorBoxRenderType
 {
 }
 
-public abstract class Type375078767: SelectionModeFlags
+public abstract class Type1421203362: SelectionModeFlags
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTilePrototype>
+public abstract class Type1421203362: Dictionary<string, LuaTilePrototype>
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: CursorBoxRenderType
+public abstract class Type1421203362: CursorBoxRenderType
 {
 }
 
-public abstract class Type375078767: SelectionModeFlags
+public abstract class Type1421203362: SelectionModeFlags
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTilePrototype>
+public abstract class Type1421203362: Dictionary<string, LuaTilePrototype>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: AttackParameters
+public abstract class Type1421203362: AttackParameters
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: CapsuleAction
+public abstract class Type1421203362: CapsuleAction
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaEntityPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: Dictionary<string, bool>
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGridPrototype
+public abstract class Type1421203362: LuaEquipmentGridPrototype
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -17030,7 +17030,7 @@ public abstract class Type375078767: bool
 ///   - whitelist
 ///   - blacklist
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: none
@@ -17052,35 +17052,35 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ItemPrototypeFlags
+public abstract class Type1421203362: ItemPrototypeFlags
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -17091,7 +17091,7 @@ public abstract class Type375078767: bool
 ///   - always
 ///   - when-manually-filtered
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: default
@@ -17115,267 +17115,267 @@ public enum Literals375078767
   /// Literal value: when-manually-filtered
   /// </summary>
   [FactorioRconDefinitionValue("when-manually-filtered")]
-  WhenManuallyFiltered,
+  Whensubtractmanuallysubtractfiltered,
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaItemPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaItemPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaGroup>
+public abstract class Type1421203362: Dictionary<string, LuaGroup>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaGroup>
+public abstract class Type1421203362: Dictionary<string, LuaGroup>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ModuleEffects
+public abstract class Type1421203362: ModuleEffects
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEquipmentPrototype
+public abstract class Type1421203362: LuaEquipmentPrototype
 {
 }
 
-public abstract class Type375078767: PlaceAsTileResult
+public abstract class Type1421203362: PlaceAsTileResult
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: TriggerItem
+public abstract class Type1421203362: TriggerItem
 {
 }
 
-public abstract class Type375078767: List<TriggerItem>
+public abstract class Type1421203362: List<TriggerItem>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Resistance
+public abstract class Type1421203362: Resistance
 {
 }
 
-public abstract class Type375078767: Dictionary<string, Resistance>
+public abstract class Type1421203362: Dictionary<string, Resistance>
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaEntityPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Dictionary<string, bool>
+public abstract class Type1421203362: Dictionary<string, bool>
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: CursorBoxRenderType
+public abstract class Type1421203362: CursorBoxRenderType
 {
 }
 
-public abstract class Type375078767: SelectionModeFlags
+public abstract class Type1421203362: SelectionModeFlags
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTilePrototype>
+public abstract class Type1421203362: Dictionary<string, LuaTilePrototype>
 {
 }
 
-public abstract class Type375078767: Product
+public abstract class Type1421203362: Product
 {
 }
 
-public abstract class Type375078767: List<Product>
+public abstract class Type1421203362: List<Product>
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: CursorBoxRenderType
+public abstract class Type1421203362: CursorBoxRenderType
 {
 }
 
-public abstract class Type375078767: SelectionModeFlags
+public abstract class Type1421203362: SelectionModeFlags
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: PrototypeFilterMode
+public abstract class Type1421203362: PrototypeFilterMode
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTilePrototype>
+public abstract class Type1421203362: Dictionary<string, LuaTilePrototype>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
@@ -17386,7 +17386,7 @@ public abstract class Type375078767: uint
 ///   - turret
 ///   - vehicle
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: default
@@ -17414,199 +17414,199 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: AmmoType
+public abstract class Type1421203362: AmmoType
 {
 }
 
-public abstract class Type375078767: ItemPrototypeFlag
+public abstract class Type1421203362: ItemPrototypeFlag
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BlueprintSignalIcon
+public abstract class Type1421203362: BlueprintSignalIcon
 {
 }
 
-public abstract class Type375078767: List<BlueprintSignalIcon>
+public abstract class Type1421203362: List<BlueprintSignalIcon>
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: BlueprintSignalIcon
+public abstract class Type1421203362: BlueprintSignalIcon
 {
 }
 
-public abstract class Type375078767: List<BlueprintSignalIcon>
+public abstract class Type1421203362: List<BlueprintSignalIcon>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: DeconstructionItemEntityFilterModeEnum
+public abstract class Type1421203362: DeconstructionItemEntityFilterModeEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGrid
+public abstract class Type1421203362: LuaEquipmentGrid
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -17617,7 +17617,7 @@ public abstract class Type375078767: string
 ///   - always
 ///   - when-manually-filtered
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: default
@@ -17641,271 +17641,271 @@ public enum Literals375078767
   /// Literal value: when-manually-filtered
   /// </summary>
   [FactorioRconDefinitionValue("when-manually-filtered")]
-  WhenManuallyFiltered,
+  Whensubtractmanuallysubtractfiltered,
 
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: DeconstructionItemTileFilterModeEnum
+public abstract class Type1421203362: DeconstructionItemTileFilterModeEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: DeconstructionItemTileSelectionModeEnum
+public abstract class Type1421203362: DeconstructionItemTileSelectionModeEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: Dictionary<uint, LuaEntity>
+public abstract class Type1421203362: Dictionary<uint, LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEquipmentGrid
+public abstract class Type1421203362: LuaEquipmentGrid
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: BlueprintEntity
+public abstract class Type1421203362: BlueprintEntity
 {
 }
 
-public abstract class Type375078767: List<BlueprintEntity>
+public abstract class Type1421203362: List<BlueprintEntity>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AnyBasic
+public abstract class Type1421203362: AnyBasic
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: Tile
+public abstract class Type1421203362: Tile
 {
 }
 
-public abstract class Type375078767: List<Tile>
+public abstract class Type1421203362: List<Tile>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: InventoryEnum
+public abstract class Type1421203362: InventoryEnum
 {
 }
 
-public abstract class Type375078767: LuaInventory
+public abstract class Type1421203362: LuaInventory
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
@@ -17914,7 +17914,7 @@ public abstract class Type375078767: uint
 ///   - from
 ///   - to
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: from
@@ -17930,129 +17930,129 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: UpgradeFilter
+public abstract class Type1421203362: UpgradeFilter
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AnyBasic
+public abstract class Type1421203362: AnyBasic
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BlueprintEntity
+public abstract class Type1421203362: BlueprintEntity
 {
 }
 
-public abstract class Type375078767: List<BlueprintEntity>
+public abstract class Type1421203362: List<BlueprintEntity>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: AnyBasic
+public abstract class Type1421203362: AnyBasic
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Tags
+public abstract class Type1421203362: Tags
 {
 }
 
-public abstract class Type375078767: Tile
+public abstract class Type1421203362: Tile
 {
 }
 
-public abstract class Type375078767: List<Tile>
+public abstract class Type1421203362: List<Tile>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaNil
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: UpgradeFilter
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<UpgradeFilter, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: UpgradeFilter
+{
+}
+
+public abstract class Type1421203362: LuaNil
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<UpgradeFilter, LuaNil>
+{
+}
+
+public abstract class Type1421203362: uint
 {
 }
 
@@ -18061,7 +18061,7 @@ public abstract class Type375078767: uint
 ///   - from
 ///   - to
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: from
@@ -18077,432 +18077,432 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: AnyBasic
+public abstract class Type1421203362: AnyBasic
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: LuaTile
+public abstract class Type1421203362: LuaTile
 {
 }
 
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: LuaNil
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Any
+public abstract class Type1421203362: Any
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: LuaLogisticNetwork
+public abstract class Type1421203362: LuaLogisticNetwork
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaLogisticCell
+public abstract class Type1421203362: LuaLogisticCell
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticCell>
+public abstract class Type1421203362: List<LuaLogisticCell>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaLogisticCell
+public abstract class Type1421203362: LuaLogisticCell
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ControlBehaviorLogisticContainerCircuitModeOfOperationEnum
+public abstract class Type1421203362: ControlBehaviorLogisticContainerCircuitModeOfOperationEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaLogisticCell
+public abstract class Type1421203362: LuaLogisticCell
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticCell>
+public abstract class Type1421203362: List<LuaLogisticCell>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: List<LuaLogisticPoint>
+public abstract class Type1421203362: List<LuaLogisticPoint>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaLogisticCell
+public abstract class Type1421203362: LuaLogisticCell
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
@@ -18511,7 +18511,7 @@ public abstract class Type375078767: string
 ///   - storage
 ///   - providers
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: storage
@@ -18527,31 +18527,31 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LogisticsNetworkSupplyCounts
+public abstract class Type1421203362: LogisticsNetworkSupplyCounts
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LogisticsNetworkSupplyPoints
+public abstract class Type1421203362: LogisticsNetworkSupplyPoints
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
@@ -18562,7 +18562,7 @@ public abstract class Type375078767: ItemStackIdentification
 ///   - storage-empty-slot
 ///   - requester
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: storage
@@ -18574,13 +18574,13 @@ public enum Literals375078767
   /// Literal value: storage-empty
   /// </summary>
   [FactorioRconDefinitionValue("storage-empty")]
-  StorageEmpty,
+  Storagesubtractempty,
 
   /// <summary>
   /// Literal value: storage-empty-slot
   /// </summary>
   [FactorioRconDefinitionValue("storage-empty-slot")]
-  StorageEmptySlot,
+  Storagesubtractemptysubtractslot,
 
   /// <summary>
   /// Literal value: requester
@@ -18590,11 +18590,11 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
@@ -18605,19 +18605,19 @@ public abstract class Type375078767: ItemStackIdentification
 ///   - buffer
 ///   - storage
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: active-provider
   /// </summary>
   [FactorioRconDefinitionValue("active-provider")]
-  ActiveProvider,
+  Activesubtractprovider,
 
   /// <summary>
   /// Literal value: passive-provider
   /// </summary>
   [FactorioRconDefinitionValue("passive-provider")]
-  PassiveProvider,
+  Passivesubtractprovider,
 
   /// <summary>
   /// Literal value: buffer
@@ -18633,7 +18633,7 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
@@ -18644,7 +18644,7 @@ public abstract class Type375078767: uint
 ///   - storage-empty-slot
 ///   - requester
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: storage
@@ -18656,13 +18656,13 @@ public enum Literals375078767
   /// Literal value: storage-empty
   /// </summary>
   [FactorioRconDefinitionValue("storage-empty")]
-  StorageEmpty,
+  Storagesubtractempty,
 
   /// <summary>
   /// Literal value: storage-empty-slot
   /// </summary>
   [FactorioRconDefinitionValue("storage-empty-slot")]
-  StorageEmptySlot,
+  Storagesubtractemptysubtractslot,
 
   /// <summary>
   /// Literal value: requester
@@ -18672,15 +18672,15 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
@@ -18691,19 +18691,19 @@ public abstract class Type375078767: bool
 ///   - buffer
 ///   - storage
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: active-provider
   /// </summary>
   [FactorioRconDefinitionValue("active-provider")]
-  ActiveProvider,
+  Activesubtractprovider,
 
   /// <summary>
   /// Literal value: passive-provider
   /// </summary>
   [FactorioRconDefinitionValue("passive-provider")]
-  PassiveProvider,
+  Passivesubtractprovider,
 
   /// <summary>
   /// Literal value: buffer
@@ -18719,1680 +18719,1680 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaLogisticPoint
+public abstract class Type1421203362: LuaLogisticPoint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LogisticFilter
+public abstract class Type1421203362: LogisticFilter
 {
 }
 
-public abstract class Type375078767: List<LogisticFilter>
+public abstract class Type1421203362: List<LogisticFilter>
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaLogisticNetwork
+public abstract class Type1421203362: LuaLogisticNetwork
 {
 }
 
-public abstract class Type375078767: LogisticModeEnum
+public abstract class Type1421203362: LogisticModeEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ControlBehaviorMiningDrillResourceReadModeEnum
+public abstract class Type1421203362: ControlBehaviorMiningDrillResourceReadModeEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: List<int>
+public abstract class Type1421203362: List<int>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: List<double>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<List<string>, List<int>, List<double>>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<double>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<bool, double, int, string>
+public abstract partial class Union1421203362: OneOfBase<List<string>, List<int>, List<double>>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<double, int>
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: int
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<double, int>
+public abstract partial class Union1421203362: OneOfBase<bool, double, int, string>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: NoiseExpression
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: TriggerEffectItem
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: TriggerEffectItem
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: RenderLayer
-{
-}
-
-public abstract class Type375078767: RenderLayer
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaPlayer
-{
-}
-
-public abstract class Type375078767: List<LuaPlayer>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: InputActionEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: InputActionEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaPermissionGroup
-{
-}
-
-public abstract class Type375078767: List<LuaPermissionGroup>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaPermissionGroup
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
+public abstract class Type1421203362: int
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, uint>
+public abstract partial class Union1421203362: OneOfBase<double, int>
 {
 }
 
-public abstract class Type375078767: LuaPermissionGroup
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaItemStack
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ControllersEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: DisplayResolution
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: DragTarget
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: GameViewSettings
-{
-}
-
-public abstract class Type375078767: LuaGui
-{
-}
-
-public abstract class Type375078767: ItemStackLocation
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: InfinityInventoryFilter
-{
-}
-
-public abstract class Type375078767: List<InfinityInventoryFilter>
-{
-}
-
-public abstract class Type375078767: InputMethodEnum
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: MapViewSettings
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ModSetting
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, ModSetting>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaPermissionGroup
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RenderModeEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ControllersEnum
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: SignalID
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaItemStack
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: byte
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntityPrototype
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: Alert
-{
-}
-
-public abstract class Type375078767: List<Alert>
-{
-}
-
-public abstract class Type375078767: Dictionary<AlertTypeEnum, List<Alert>>
-{
-}
-
-public abstract class Type375078767: Dictionary<uint, Dictionary<AlertTypeEnum, List<Alert>>>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: InfinityInventoryFilter
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaItemPrototype
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: AlertTypeEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: int
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaEntity, LuaEntityPrototype>
+public abstract partial class Union1421203362: OneOfBase<double, int>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SoundType
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SoundPath
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: PrintSettings
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: NoiseExpression
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: TriggerEffectItem
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: TriggerEffectItem
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: RenderLayer
+{
+}
+
+public abstract class Type1421203362: RenderLayer
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaPlayer
+{
+}
+
+public abstract class Type1421203362: List<LuaPlayer>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: InputActionEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: InputActionEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaPermissionGroup
+{
+}
+
+public abstract class Type1421203362: List<LuaPermissionGroup>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaPermissionGroup
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Color, PrintSettings>
+public abstract partial class Union1421203362: OneOfBase<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaPermissionGroup
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: LuaEntityPrototype
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ControllersEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: DisplayResolution
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: DragTarget
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: GameViewSettings
+{
+}
+
+public abstract class Type1421203362: LuaGui
+{
+}
+
+public abstract class Type1421203362: ItemStackLocation
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: InfinityInventoryFilter
+{
+}
+
+public abstract class Type1421203362: List<InfinityInventoryFilter>
+{
+}
+
+public abstract class Type1421203362: InputMethodEnum
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: MapViewSettings
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ModSetting
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, ModSetting>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaPermissionGroup
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: RenderModeEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ControllersEnum
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaItemStack
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: DirectionEnum
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: byte
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
+{
+}
+
+public abstract class Type1421203362: SurfaceIdentification
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: Alert
+{
+}
+
+public abstract class Type1421203362: List<Alert>
+{
+}
+
+public abstract class Type1421203362: Dictionary<AlertTypeEnum, List<Alert>>
+{
+}
+
+public abstract class Type1421203362: Dictionary<uint, Dictionary<AlertTypeEnum, List<Alert>>>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: InfinityInventoryFilter
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: LuaItemPrototype
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: AlertTypeEnum
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntityPrototype, string>
+public abstract partial class Union1421203362: OneOfBase<string, LuaEntity, LuaEntityPrototype>
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: AlertTypeEnum
+public abstract class Type1421203362: SoundType
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: SoundPath
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: List<LocalisedString>
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: List<uint>
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ControllersEnum
-{
-}
-
-public abstract class Type375078767: CutsceneWaypoint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: InfinityInventoryFilter
-{
-}
-
-public abstract class Type375078767: LuaNil
+public abstract class Type1421203362: PrintSettings
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<InfinityInventoryFilter, LuaNil>
+public abstract partial class Union1421203362: OneOfBase<Color, PrintSettings>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntityPrototype
+{
+}
+
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaItemPrototype, LuaItemStack>
+public abstract partial class Union1421203362: OneOfBase<LuaEntityPrototype, string>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: AlertTypeEnum
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: List<LocalisedString>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<uint>
 {
 }
 
-public abstract class Type375078767: AlertTypeEnum
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ControllersEnum
 {
 }
 
-public abstract class Type375078767: LuaProfiler
+public abstract class Type1421203362: CutsceneWaypoint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: CircuitConditionDefinition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ProgrammableSpeakerCircuitParameters
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: InfinityInventoryFilter
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaNil
 {
 }
 
-public abstract class Type375078767: string
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<InfinityInventoryFilter, LuaNil>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: string
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, LuaItemPrototype, LuaItemStack>
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: AlertTypeEnum
 {
 }
 
-public abstract class Type375078767: LuaCustomTable<uint, LuaEntity>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: CircuitConditionDefinition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaProfiler
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: CircuitConditionDefinition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ProgrammableSpeakerCircuitParameters
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Ingredient
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<Ingredient>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LuaCustomTable<uint, LuaEntity>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Product
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<Product>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaRecipePrototype
+public abstract class Type1421203362: CircuitConditionDefinition
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Ingredient
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: List<Ingredient>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Ingredient
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<Ingredient>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: Product
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: List<Product>
 {
 }
 
-public abstract class Type375078767: Product
+public abstract class Type1421203362: LuaRecipePrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: Product
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: List<Product>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LuaGroup
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: Ingredient
+{
+}
+
+public abstract class Type1421203362: List<Ingredient>
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: Product
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Product
+{
+}
+
+public abstract class Type1421203362: List<Product>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaGroup
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
 {
 }
 
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: True
@@ -20402,1189 +20402,1189 @@ public enum Literal375078767
 
 }
 
-public abstract class Type375078767: Dictionary<string, Literal375078767>
+public abstract class Type1421203362: Dictionary<string, Literal1421203362>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, Dictionary<string, Type375078767>>
+public abstract class Type1421203362: Dictionary<string, Dictionary<string, Type1421203362>>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Action
+public abstract class Type1421203362: Action
 {
 }
 
-public abstract class Type375078767: Dictionary<string, Action>
+public abstract class Type1421203362: Dictionary<string, Action>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Any
+public abstract class Type1421203362: Any
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
-{
-}
-
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: List<PlayerIdentification>
-{
-}
-
-public abstract class Type375078767: RenderLayer
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: RenderLayer
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: List<PlayerIdentification>
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<PlayerIdentification>
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: bool
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RealOrientation
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: List<PlayerIdentification>
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: SpritePath
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: List<PlayerIdentification>
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: List<PlayerIdentification>
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SpritePath
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: MapPosition
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
-{
-}
-
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ScriptRenderVertexTarget
-{
-}
-
-public abstract class Type375078767: List<ScriptRenderVertexTarget>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<PlayerIdentification>
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: double
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RealOrientation
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<PlayerIdentification>
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: RenderLayer
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
-{
-}
-
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: TextAlign
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: RealOrientation
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: List<PlayerIdentification>
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: SurfaceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: VerticalTextAlign
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: TextAlign
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: List<ulong>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ulong
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: ScriptRenderVertexTarget
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<ScriptRenderVertexTarget>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: List<LuaForce>
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ulong
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: List<LuaPlayer>
+public abstract class Type1421203362: RenderLayer
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: SpritePath
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: RenderLayer
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ulong
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: TextAlign
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: SurfaceIdentification
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+public abstract class Type1421203362: Vector
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: VerticalTextAlign
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: TextAlign
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: List<ulong>
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: LuaForce
+{
+}
+
+public abstract class Type1421203362: List<LuaForce>
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderTarget
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderTarget
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: RealOrientation
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderTarget
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: Vector
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: LuaPlayer
+{
+}
+
+public abstract class Type1421203362: List<LuaPlayer>
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: RenderLayer
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderTarget
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: SpritePath
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: LuaSurface
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderTarget
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderTarget
+{
+}
+
+public abstract class Type1421203362: ulong
 {
 }
 
@@ -21600,7 +21600,7 @@ public abstract class Type375078767: ulong
 ///   - light
 ///   - animation
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: text
@@ -21658,901 +21658,901 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: VerticalTextAlign
+public abstract class Type1421203362: VerticalTextAlign
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ScriptRenderTarget
+public abstract class Type1421203362: ScriptRenderTarget
 {
 }
 
-public abstract class Type375078767: List<ScriptRenderTarget>
+public abstract class Type1421203362: List<ScriptRenderTarget>
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: TextAlign
+public abstract class Type1421203362: TextAlign
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
-{
-}
-
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: bool
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: RealOrientation
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: List<PlayerIdentification>
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: RenderLayer
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: SpritePath
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: ulong
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: VerticalTextAlign
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: List<PlayerIdentification>
 {
 }
 
-public abstract class Type375078767: ScriptRenderVertexTarget
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: List<ScriptRenderVertexTarget>
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: RenderLayer
 {
 }
 
-public abstract class Type375078767: ulong
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ulong
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: SignalID
-{
-}
-
-public abstract class Type375078767: SignalID
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: SignalID
-{
-}
-
-public abstract class Type375078767: SignalID
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ModSetting
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, ModSetting>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ModSetting
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, ModSetting>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ModSetting
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, ModSetting>
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: ModSetting
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<string, ModSetting>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaItemPrototype
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: LocalisedString
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaTechnologyPrototype
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Alignment
-{
-}
-
-public abstract class Type375078767: LuaCustomTable<uint, Alignment>
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: List<int>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<int, List<int>>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: List<int>
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: SpritePath
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<int, List<int>>
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: ulong
 {
 }
 
-public abstract class Type375078767: LuaGui
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<MapPosition, LuaEntity>
+{
+}
+
+public abstract class Type1421203362: Vector
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: VerticalTextAlign
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: ScriptRenderVertexTarget
+{
+}
+
+public abstract class Type1421203362: List<ScriptRenderVertexTarget>
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: float
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ulong
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: SignalID
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ModSetting
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, ModSetting>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ModSetting
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, ModSetting>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ModSetting
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, ModSetting>
+{
+}
+
+public abstract class Type1421203362: PlayerIdentification
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ModSetting
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<string, ModSetting>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaItemPrototype
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaTechnologyPrototype
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Alignment
+{
+}
+
+public abstract class Type1421203362: LuaCustomTable<uint, Alignment>
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: List<int>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<int, List<int>>
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: List<int>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<int, List<int>>
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: LuaGui
+{
+}
+
+public abstract class Type1421203362: int
 {
 }
 
@@ -22562,7 +22562,7 @@ public abstract class Type375078767: int
 ///   - center
 ///   - right
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: left
@@ -22584,182 +22584,182 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: List<int>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<int, List<int>>
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: List<int>
+public abstract class Type1421203362: List<int>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<int, List<int>>
+public abstract partial class Union1421203362: OneOfBase<int, List<int>>
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: RichTextSettingEnum
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: List<int>
+public abstract class Type1421203362: List<int>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<int, List<int>>
+public abstract partial class Union1421203362: OneOfBase<int, List<int>>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: RichTextSettingEnum
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: List<int>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<int, List<int>>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
 {
 }
 
@@ -22769,7 +22769,7 @@ public abstract class Type375078767: bool
 ///   - center
 ///   - bottom
 /// </summary>
-public enum Literals375078767
+public enum Literals1421203362
 {
   /// <summary>
   /// Literal value: top
@@ -22791,1925 +22791,1925 @@ public enum Literals375078767
 
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: int
+public abstract class Type1421203362: int
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ColorModifier
+public abstract class Type1421203362: ColorModifier
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapGenSettings
+public abstract class Type1421203362: MapGenSettings
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: RealOrientation
+public abstract class Type1421203362: RealOrientation
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ScriptArea
+public abstract class Type1421203362: ScriptArea
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ScriptPosition
+public abstract class Type1421203362: ScriptPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: List<MapPosition>
+public abstract class Type1421203362: List<MapPosition>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: List<double>
+public abstract class Type1421203362: List<double>
 {
 }
 
-public abstract class Type375078767: Dictionary<string, List<double>>
+public abstract class Type1421203362: Dictionary<string, List<double>>
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BuildCheckTypeEnum
+public abstract class Type1421203362: BuildCheckTypeEnum
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaForce, string>
+public abstract partial class Union1421203362: OneOfBase<LuaForce, string>
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: List<TilePosition>
+public abstract class Type1421203362: List<TilePosition>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: Vector
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: SurfaceIdentification
+public abstract class Type1421203362: SurfaceIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: CollisionMaskLayer
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: CollisionMaskLayer
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: List<CollisionMaskLayer>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: List<DirectionEnum>
+public abstract class Type1421203362: List<CollisionMaskLayer>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<DirectionEnum, List<DirectionEnum>>
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ForceIdentification, List<ForceIdentification>>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<DirectionEnum>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<DirectionEnum, List<DirectionEnum>>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: List<string>
-{
-}
-
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: List<CollisionMaskLayer>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: uint
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Decorative
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<Decorative>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: LuaItemStack
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, MapPosition>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<LuaEntity, MapPosition>
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: Vector
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: float
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaUnitGroup
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: LuaItemStack
-{
-}
-
-public abstract class Type375078767: PlayerIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: List<CollisionMaskLayer>
+public abstract class Type1421203362: List<CollisionMaskLayer>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
-{
-}
-
-public abstract class Type375078767: LuaDecorativePrototype
-{
-}
-
-public abstract class Type375078767: LuaDecorativePrototype
-{
-}
-
-public abstract class Type375078767: List<LuaDecorativePrototype>
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+public abstract partial class Union1421203362: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ScriptArea
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ScriptPosition
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: DirectionEnum
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: EntityPrototypeIdentification
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaLogisticNetwork
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: List<CollisionMaskLayer>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: Decorative
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<Decorative>
 {
 }
 
-public abstract class Type375078767: LuaDecorativePrototype
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaDecorativePrototype
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<LuaDecorativePrototype>
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: DecorativeResult
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<DecorativeResult>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: List<CollisionMaskLayer>
+public abstract class Type1421203362: MapPosition
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: DirectionEnum
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<DirectionEnum>
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<DirectionEnum, List<DirectionEnum>>
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: MapPosition
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract partial class Union1421203362: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: float
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract class Type1421203362: Vector
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: float
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaItemPrototype
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaUnitGroup
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ChunkPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaLogisticNetwork
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaLogisticNetwork
-{
-}
-
-public abstract class Type375078767: List<LuaLogisticNetwork>
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: CollisionMaskLayer
-{
-}
-
-public abstract class Type375078767: List<CollisionMaskLayer>
+public abstract class Type1421203362: List<CollisionMaskLayer>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: List<ForceIdentification>
+public abstract class Type1421203362: bool
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: LuaDecorativePrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaDecorativePrototype
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<LuaDecorativePrototype>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: ScriptArea
 {
 }
 
-public abstract class Type375078767: LuaTile
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: List<LuaTile>
+public abstract class Type1421203362: ScriptPosition
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: ForceCondition
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: EntityPrototypeIdentification
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaChunkIterator
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: LuaLogisticNetwork
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: TilePosition
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
-{
-}
-
-public abstract class Type375078767: TilePosition
-{
-}
-
-public abstract class Type375078767: List<TilePosition>
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: LuaEntity
-{
-}
-
-public abstract class Type375078767: List<LuaEntity>
-{
-}
-
-public abstract class Type375078767: TilePosition
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: Dictionary<string, uint>
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: uint
+public abstract class Type1421203362: List<CollisionMaskLayer>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, uint>
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
-public abstract class Type375078767: ScriptArea
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ScriptArea
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: List<ScriptArea>
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-[GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, uint>
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: ScriptPosition
+public abstract class Type1421203362: LuaDecorativePrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: LuaDecorativePrototype
 {
 }
 
-public abstract class Type375078767: ScriptPosition
-{
-}
-
-public abstract class Type375078767: List<ScriptPosition>
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: LuaTile
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: ForceIdentification
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<LuaDecorativePrototype>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: DecorativeResult
 {
 }
 
-public abstract class Type375078767: LuaTrain
+public abstract class Type1421203362: List<DecorativeResult>
 {
 }
 
-public abstract class Type375078767: List<LuaTrain>
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ChunkPosition
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: SoundType
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: SoundPath
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: Color
-{
-}
-
-public abstract class Type375078767: PrintSettings
+public abstract class Type1421203362: List<CollisionMaskLayer>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<Color, PrintSettings>
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
-public abstract class Type375078767: ChunkPosition
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: List<ChunkPosition>
+public abstract class Type1421203362: DirectionEnum
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<DirectionEnum>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<DirectionEnum, List<DirectionEnum>>
 {
 }
 
-public abstract class Type375078767: ChunkPosition
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: List<ChunkPosition>
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<ForceIdentification>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, List<string>>
+public abstract partial class Union1421203362: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: BoundingBox
-{
-}
-
-public abstract class Type375078767: bool
-{
-}
-
-public abstract class Type375078767: CollisionMaskWithFlags
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: List<string>
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<CollisionMaskWithFlags, List<string>>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: int
-{
-}
-
-public abstract class Type375078767: PathfinderFlags
-{
-}
-
-public abstract class Type375078767: double
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: MapPosition
-{
-}
-
-public abstract class Type375078767: uint
-{
-}
-
-public abstract class Type375078767: ChunkPosition
-{
-}
-
-public abstract class Type375078767: ChunkGeneratedStatusEnum
-{
-}
-
-public abstract class Type375078767: TilePosition
-{
-}
-
-public abstract class Type375078767: string
-{
-}
-
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: List<string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<string, LuaTilePrototype>
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: LuaItemPrototype
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: List<string>
 {
 }
 
-public abstract class Type375078767: bool
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaLogisticNetwork
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaLogisticNetwork
+{
+}
+
+public abstract class Type1421203362: List<LuaLogisticNetwork>
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: CollisionMaskLayer
+{
+}
+
+public abstract class Type1421203362: CollisionMaskLayer
+{
+}
+
+public abstract class Type1421203362: List<CollisionMaskLayer>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: List<ForceIdentification>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<ForceIdentification, List<ForceIdentification>>
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: LuaTile
+{
+}
+
+public abstract class Type1421203362: List<LuaTile>
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: ForceCondition
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: LuaChunkIterator
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: TilePosition
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+public abstract class Type1421203362: TilePosition
+{
+}
+
+public abstract class Type1421203362: List<TilePosition>
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: TilePosition
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: Dictionary<string, uint>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, uint>
+{
+}
+
+public abstract class Type1421203362: ScriptArea
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ScriptArea
+{
+}
+
+public abstract class Type1421203362: List<ScriptArea>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, uint>
+{
+}
+
+public abstract class Type1421203362: ScriptPosition
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ScriptPosition
+{
+}
+
+public abstract class Type1421203362: List<ScriptPosition>
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: LuaTile
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: List<LuaEntity>
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: LuaTrain
+{
+}
+
+public abstract class Type1421203362: List<LuaTrain>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: SoundType
+{
+}
+
+public abstract class Type1421203362: SoundPath
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: LocalisedString
+{
+}
+
+public abstract class Type1421203362: Color
+{
+}
+
+public abstract class Type1421203362: PrintSettings
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<Color, PrintSettings>
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: List<ChunkPosition>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: List<ChunkPosition>
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, List<string>>
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: BoundingBox
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: CollisionMaskWithFlags
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: List<string>
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<CollisionMaskWithFlags, List<string>>
+{
+}
+
+public abstract class Type1421203362: LuaEntity
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: int
+{
+}
+
+public abstract class Type1421203362: PathfinderFlags
+{
+}
+
+public abstract class Type1421203362: double
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: MapPosition
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: ChunkPosition
+{
+}
+
+public abstract class Type1421203362: ChunkGeneratedStatusEnum
+{
+}
+
+public abstract class Type1421203362: TilePosition
+{
+}
+
+public abstract class Type1421203362: string
+{
+}
+
+public abstract class Type1421203362: LuaTilePrototype
+{
+}
+
+[GenerateOneOf]
+public abstract partial class Union1421203362: OneOfBase<string, LuaTilePrototype>
+{
+}
+
+public abstract class Type1421203362: Command
+{
+}
+
+public abstract class Type1421203362: ForceIdentification
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: uint
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
+{
+}
+
+public abstract class Type1421203362: bool
 {
 }
 
 /// <summary>
 /// Literal value: abort_on_collision
 /// </summary>
-public enum Literal375078767
+public enum Literal1421203362
 {
   /// <summary>
   /// Literal value: abort_on_collision
@@ -24720,435 +24720,435 @@ public enum Literal375078767
 }
 
 [GenerateOneOf]
-public abstract partial class Union375078767: OneOfBase<bool, Literal375078767>
+public abstract partial class Union1421203362: OneOfBase<bool, Literal1421203362>
 {
 }
 
-public abstract class Type375078767: Tile
+public abstract class Type1421203362: Tile
 {
 }
 
-public abstract class Type375078767: List<Tile>
+public abstract class Type1421203362: List<Tile>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: BoundingBox
+public abstract class Type1421203362: BoundingBox
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: TechnologyModifier
+public abstract class Type1421203362: TechnologyModifier
 {
 }
 
-public abstract class Type375078767: List<TechnologyModifier>
+public abstract class Type1421203362: List<TechnologyModifier>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTechnology
+public abstract class Type1421203362: LuaTechnology
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTechnology>
+public abstract class Type1421203362: Dictionary<string, LuaTechnology>
 {
 }
 
-public abstract class Type375078767: LuaTechnologyPrototype
+public abstract class Type1421203362: LuaTechnologyPrototype
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Ingredient
+public abstract class Type1421203362: Ingredient
 {
 }
 
-public abstract class Type375078767: List<Ingredient>
+public abstract class Type1421203362: List<Ingredient>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: TechnologyModifier
+public abstract class Type1421203362: TechnologyModifier
 {
 }
 
-public abstract class Type375078767: List<TechnologyModifier>
+public abstract class Type1421203362: List<TechnologyModifier>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTechnologyPrototype
+public abstract class Type1421203362: LuaTechnologyPrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTechnologyPrototype>
+public abstract class Type1421203362: Dictionary<string, LuaTechnologyPrototype>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Ingredient
+public abstract class Type1421203362: Ingredient
 {
 }
 
-public abstract class Type375078767: List<Ingredient>
+public abstract class Type1421203362: List<Ingredient>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: TilePosition
+public abstract class Type1421203362: TilePosition
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: CollisionMaskLayer
+public abstract class Type1421203362: CollisionMaskLayer
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: LuaTile
+public abstract class Type1421203362: LuaTile
 {
 }
 
-public abstract class Type375078767: List<LuaTile>
+public abstract class Type1421203362: List<LuaTile>
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: PlayerIdentification
+public abstract class Type1421203362: PlayerIdentification
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: ForceIdentification
+public abstract class Type1421203362: ForceIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: Dictionary<string, LuaTilePrototype>
+public abstract class Type1421203362: Dictionary<string, LuaTilePrototype>
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: AutoplaceSpecification
+public abstract class Type1421203362: AutoplaceSpecification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: CollisionMask
+public abstract class Type1421203362: CollisionMask
 {
 }
 
-public abstract class Type375078767: CollisionMaskWithFlags
+public abstract class Type1421203362: CollisionMaskWithFlags
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ItemStackDefinition
+public abstract class Type1421203362: ItemStackDefinition
 {
 }
 
-public abstract class Type375078767: List<ItemStackDefinition>
+public abstract class Type1421203362: List<ItemStackDefinition>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Product
+public abstract class Type1421203362: Product
 {
 }
 
-public abstract class Type375078767: List<Product>
+public abstract class Type1421203362: List<Product>
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Is this tile mineable at all?
@@ -25176,123 +25176,123 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaTilePrototype
+public abstract class Type1421203362: LuaTilePrototype
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<uint, uint>
+public abstract class Type1421203362: Dictionary<uint, uint>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Table375078767
+public abstract class Table1421203362
 {
   /// <summary>
   /// Array of locomotives.
@@ -25308,587 +25308,587 @@ public abstract class Table375078767
 
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaPlayer
+public abstract class Type1421203362: LuaPlayer
 {
 }
 
-public abstract class Type375078767: List<LuaPlayer>
+public abstract class Type1421203362: List<LuaPlayer>
 {
 }
 
-public abstract class Type375078767: LuaRailPath
+public abstract class Type1421203362: LuaRailPath
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: RailDirectionEnum
+public abstract class Type1421203362: RailDirectionEnum
 {
 }
 
-public abstract class Type375078767: RidingState
+public abstract class Type1421203362: RidingState
 {
 }
 
-public abstract class Type375078767: TrainSchedule
+public abstract class Type1421203362: TrainSchedule
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: TrainStateEnum
+public abstract class Type1421203362: TrainStateEnum
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: Dictionary<string, double>
+public abstract class Type1421203362: Dictionary<string, double>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: Fluid
+public abstract class Type1421203362: Fluid
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Fluid
+public abstract class Type1421203362: Fluid
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ControlBehaviorTransportBeltContentReadModeEnum
+public abstract class Type1421203362: ControlBehaviorTransportBeltContentReadModeEnum
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTransportLine
+public abstract class Type1421203362: LuaTransportLine
 {
 }
 
-public abstract class Type375078767: List<LuaTransportLine>
+public abstract class Type1421203362: List<LuaTransportLine>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: LuaTransportLine
+public abstract class Type1421203362: LuaTransportLine
 {
 }
 
-public abstract class Type375078767: List<LuaTransportLine>
+public abstract class Type1421203362: List<LuaTransportLine>
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaItemStack
+public abstract class Type1421203362: LuaItemStack
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: Dictionary<string, uint>
+public abstract class Type1421203362: Dictionary<string, uint>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: float
+public abstract class Type1421203362: float
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaTransportLine
+public abstract class Type1421203362: LuaTransportLine
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: ItemStackIdentification
+public abstract class Type1421203362: ItemStackIdentification
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: Color
+public abstract class Type1421203362: Color
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: RenderLayer
+public abstract class Type1421203362: RenderLayer
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: LuaForce
+public abstract class Type1421203362: LuaForce
 {
 }
 
-public abstract class Type375078767: uint
+public abstract class Type1421203362: uint
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: List<LuaEntity>
+public abstract class Type1421203362: List<LuaEntity>
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: MapPosition
+public abstract class Type1421203362: MapPosition
 {
 }
 
-public abstract class Type375078767: GroupStateEnum
+public abstract class Type1421203362: GroupStateEnum
 {
 }
 
-public abstract class Type375078767: LuaSurface
+public abstract class Type1421203362: LuaSurface
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaEntity
+public abstract class Type1421203362: LuaEntity
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: Command
+public abstract class Type1421203362: Command
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: LocalisedString
+public abstract class Type1421203362: LocalisedString
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: LuaGroup
+public abstract class Type1421203362: LuaGroup
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: double
+public abstract class Type1421203362: double
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: CircuitConditionDefinition
+public abstract class Type1421203362: CircuitConditionDefinition
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: SignalID
+public abstract class Type1421203362: SignalID
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: bool
+public abstract class Type1421203362: bool
 {
 }
 
-public abstract class Type375078767: string
+public abstract class Type1421203362: string
 {
 }
 

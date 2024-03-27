@@ -38,7 +38,7 @@ public enum CursorBoxRenderType
   /// Literal value: not-allowed
   /// </summary>
   [FactorioRconDefinitionValue("not-allowed")]
-  NotAllowed,
+  Notsubtractallowed,
 
   /// <summary>
   /// Literal value: pair
@@ -56,13 +56,13 @@ public enum CursorBoxRenderType
   /// Literal value: train-visualization
   /// </summary>
   [FactorioRconDefinitionValue("train-visualization")]
-  TrainVisualization,
+  Trainsubtractvisualization,
 
   /// <summary>
   /// Literal value: blueprint-snap-rectangle
   /// </summary>
   [FactorioRconDefinitionValue("blueprint-snap-rectangle")]
-  BlueprintSnapRectangle,
+  Blueprintsubtractsnapsubtractrectangle,
 
 }
 

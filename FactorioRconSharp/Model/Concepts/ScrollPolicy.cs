@@ -26,7 +26,7 @@ public enum ScrollPolicy
   /// Literal value: dont-show-but-allow-scrolling
   /// </summary>
   [FactorioRconDefinitionValue("dont-show-but-allow-scrolling")]
-  DontShowButAllowScrolling,
+  Dontsubtractshowsubtractbutsubtractallowsubtractscrolling,
 
   /// <summary>
   /// Literal value: always
@@ -44,7 +44,7 @@ public enum ScrollPolicy
   /// Literal value: auto-and-reserve-space
   /// </summary>
   [FactorioRconDefinitionValue("auto-and-reserve-space")]
-  AutoAndReserveSpace,
+  Autosubtractandsubtractreservesubtractspace,
 
 }
 
