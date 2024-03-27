@@ -71,7 +71,7 @@ public class FactorioModelFileCompiler
         FactorioRuntimeDefinitionSpecification? definition = _specification.Defines.SingleOrDefault(c => c.Name == definitionName);
         if (definition == null)
         {
-            throw new InvalidOperationException($"Could not find specification of concept {definitionName}");
+            throw new InvalidOperationException($"Could not find specification of definition {definitionName}");
         }
 
         return new FactorioModelFile

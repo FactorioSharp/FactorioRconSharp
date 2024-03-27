@@ -49,33 +49,19 @@ Directory.CreateDirectory(classesPath);
 string conceptsPath = Path.Join(outPath, "Concepts");
 Directory.CreateDirectory(conceptsPath);
 
-FactorioModelFileCompiler compiler = new(parsedSpecification);
+IEnumerable<FactorioModelFile> files = CompilationPipeline.CompileSpecification(parsedSpecification);
 
-foreach (FactorioRuntimeDefinitionSpecification definition in parsedSpecification.Defines)
+foreach (FactorioModelFile file in files)
 {
-    FactorioModelFile file = compiler.CompileDefinitionFile(definition.Name);
+    string outputDirectory = file.Namespace switch
+    {
+        "FactorioRconSharp.Model.Classes" => classesPath,
+        "FactorioRconSharp.Model.Concepts" => conceptsPath,
+        "FactorioRconSharp.Model.Definitions" => definitionsPath,
+        _ => outPath
+    };
 
-    string path = Path.Join(definitionsPath, file.Name + ".cs");
-
-    await using StreamWriter writer = File.CreateText(path);
-    await FactorioModelWriter.WriteFile(writer, file);
-}
-
-foreach (FactorioRuntimeClassSpecification cls in parsedSpecification.Classes)
-{
-    FactorioModelFile file = compiler.CompileClassFile(cls.Name);
-
-    string path = Path.Join(classesPath, file.Name + ".cs");
-
-    await using StreamWriter writer = File.CreateText(path);
-    await FactorioModelWriter.WriteFile(writer, file);
-}
-
-foreach (FactorioRuntimeConceptSpecification concept in parsedSpecification.Concepts)
-{
-    FactorioModelFile file = compiler.CompileConceptFile(concept.Name);
-
-    string path = Path.Join(conceptsPath, file.Name + ".cs");
+    string path = Path.Join(outputDirectory, file.Name + ".cs");
 
     await using StreamWriter writer = File.CreateText(path);
     await FactorioModelWriter.WriteFile(writer, file);
