@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A <see cref="CollisionMask" /> which also includes any flags this mask has.
 /// </summary>
 [FactorioRconConcept("CollisionMaskWithFlags")]
-public abstract class CollisionMaskWithFlags: Dictionary<Union_97d5e462394544e9962c7559503b0c89, Literal_b36dbe3b10d14af8bea2ec781245305a>
+public abstract class CollisionMaskWithFlags: Dictionary<Union_ae2efb64c409418d823bf519910ae89f, Literal_4b540f4f67c7473bbb772e816a0021ee>
 {
 }
 

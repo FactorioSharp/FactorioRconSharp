@@ -26,7 +26,7 @@ public abstract class LuaRobotMinedEntityEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_38334fe65f514e7e9f90f9d5ea8d158d Mode { get; set; }
+  public Literals_c5740b89628a462b9bd0852f2f4fc132 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

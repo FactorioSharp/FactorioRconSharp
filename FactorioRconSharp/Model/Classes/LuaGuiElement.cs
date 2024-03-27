@@ -83,7 +83,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The style of this element. When read, this evaluates to a <see cref="LuaStyle).ForWriting,ItOnlyAcceptsAStringThatSpecifiesTheTextualIdentifier(PrototypeName" /> of the desired style.
   /// </summary>
   [FactorioRconAttribute("style")]
-  public Union_b94913f312df4eb49a6e6a5bdb9f607c Style { get; set; }
+  public Union_0dbb0f87b0b84fadb7b5778cb553594e Style { get; set; }
 
   /// <summary>
   /// Sets whether this GUI element is visible or completely hidden, taking no space in the layout.
@@ -275,7 +275,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The elem value of this choose-elem-button, if any.
   /// </summary>
   [FactorioRconAttribute("elem_value")]
-  public Union_3310add2f6d2469082c3a3c65388aa3b ElemValue { get; set; }
+  public Union_22df73005d794679a76709044270b997 ElemValue { get; set; }
 
   /// <summary>
   /// The elem filters of this choose-elem-button, if any. The compatible type of filter is determined by `elem_type`.
@@ -690,7 +690,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public abstract void ScrollToElement(LuaGuiElement element, Literals_c2294b8dd7ec49e9a913eb02bbfcba48? scrollMode = null);
+  public abstract void ScrollToElement(LuaGuiElement element, Literals_29fcda1f0e554553ab638952ade83c00? scrollMode = null);
 
   /// <summary>
   /// Selects all the text in this textbox.
@@ -737,7 +737,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public abstract void ScrollToItem(int index, Literals_80f1760b828c4b788baff9226784349f? scrollMode = null);
+  public abstract void ScrollToItem(int index, Literals_bc4e64134af2491c8fdd2a4b683976c5? scrollMode = null);
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.

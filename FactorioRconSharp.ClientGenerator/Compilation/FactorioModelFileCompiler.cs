@@ -124,7 +124,20 @@ public class FactorioModelFileCompiler
                 Name = $"{enumName}Enum",
                 LuaName = luaName,
                 Documentation = new FactorioModelDocumentation { Summary = definition.Description },
-                Values = definition.Values.OrderBy(v => v.Order).Select(CompileEnumValue).ToArray()
+                Values = definition.Values.OrderBy(v => v.Order)
+                    .Select(CompileEnumValue)
+                    .GroupBy(v => v.Name)
+                    .Select(
+                        g => g.Count() == 1
+                            ? g.First()
+                            : new FactorioModelEnumValue
+                            {
+                                Name = g.Key,
+                                LuaName = g.First().LuaName,
+                                Documentation = new FactorioModelDocumentation { Summary = string.Join(Environment.NewLine, g.Select(v => v.Documentation?.Summary)) }
+                            }
+                    )
+                    .ToArray()
             }
         }.Concat(definition.Subkeys.SelectMany(def => CompileDefinition(def, enumName, $"{luaName}.")));
     }
@@ -470,7 +483,19 @@ public class FactorioModelFileCompiler
             {
                 Name = GenerateUniqueTypeName("Literals"),
                 Documentation = new FactorioModelDocumentation { Summary = $"Union of literals:{string.Join("", literals.Select(l => $"{Environment.NewLine}  - {l.Value}"))}" },
-                Values = literals.Select(CompileLiteralValue).ToArray()
+                Values = literals.Select(CompileLiteralValue)
+                    .GroupBy(v => v.Name)
+                    .Select(
+                        g => g.Count() == 1
+                            ? g.First()
+                            : new FactorioModelEnumValue
+                            {
+                                Name = g.Key,
+                                LuaName = g.First().LuaName,
+                                Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {string.Join(", ", g.Select(v => v.LuaName))}" }
+                            }
+                    )
+                    .ToArray()
             };
         }
 

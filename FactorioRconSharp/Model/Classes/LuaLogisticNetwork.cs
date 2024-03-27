@@ -160,7 +160,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public abstract int GetItemCount(string? item = null, Literals_d279e98243514aeaaf68b93affb44abd? member = null);
+  public abstract int GetItemCount(string? item = null, Literals_9f1becf05f2d42d39eb14abc9d55d521? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public abstract uint RemoveItem(ItemStackIdentification item, Literals_95f88551c53a48e39c65870c819c6cb9? members = null);
+  public abstract uint RemoveItem(ItemStackIdentification item, Literals_939d51da55ea4245a3ecb0867aa50079? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public abstract uint Insert(ItemStackIdentification item, Literals_5edb2a41bb43419cb0ef3eebce63655b? members = null);
+  public abstract uint Insert(ItemStackIdentification item, Literals_edf9837d815f425db49121206ad80c9b? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Literals_5bb3b480c13c4bbc87651672150443de? members = null);
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Literals_f2027ee26be24e3da3b94bb58fd87418? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Literals_244fbc36e1ce4b609cfc87589d4622e5? members = null);
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Literals_2830711851bd4a078036b4c0b8ff3341? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.

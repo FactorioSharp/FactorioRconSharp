@@ -593,7 +593,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union_de62e3607ed34ac2af7d04457dc8863d? printSettings = null);
+  public abstract void Print(LocalisedString message, Union_edd565b708da43f1b33f84dcc346d9b4? printSettings = null);
 
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_trains")]
@@ -658,14 +658,14 @@ public abstract class LuaForce: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union_15322821de664c9f856201c8fe7bc9ac? name = null, SurfaceIdentification? surface = null);
+  public abstract List<LuaEntity> GetTrainStops(Union_62b4d42373bb4b819744e75b9e143004? name = null, SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Gets if the given recipe is explicitly disabled from being hand crafted.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_hand_crafting_disabled_for_recipe")]
-  public abstract bool GetHandCraftingDisabledForRecipe(Union_ba8a088706d04f2c801ab39746da3d72 recipe);
+  public abstract bool GetHandCraftingDisabledForRecipe(Union_37b243a5382942f9835263ece81791a7 recipe);
 
   /// <summary>
   /// Sets if the given recipe can be hand-crafted. This is used to explicitly disable hand crafting a recipe - it won't allow hand-crafting otherwise not hand-craftable recipes.
@@ -673,7 +673,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="handCraftingDisabled">Lua name: hand_crafting_disabled</param>
   [FactorioRconMethod("set_hand_crafting_disabled_for_recipe")]
-  public abstract void SetHandCraftingDisabledForRecipe(Union_ba8a088706d04f2c801ab39746da3d72 recipe, bool handCraftingDisabled);
+  public abstract void SetHandCraftingDisabledForRecipe(Union_37b243a5382942f9835263ece81791a7 recipe, bool handCraftingDisabled);
 
   /// <summary>
   /// Add this technology to the back of the research queue if the queue is enabled. Otherwise, set this technology to be researched now.

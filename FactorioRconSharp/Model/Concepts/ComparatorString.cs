@@ -35,39 +35,21 @@ public enum ComparatorString
   Lt,
 
   /// <summary>
-  /// Literal value: ≥
+  /// Literal value: ≥, >=
   /// </summary>
   [FactorioRconDefinitionValue("≥")]
   Ge,
 
   /// <summary>
-  /// Literal value: >=
-  /// </summary>
-  [FactorioRconDefinitionValue(">=")]
-  Ge,
-
-  /// <summary>
-  /// Literal value: ≤
+  /// Literal value: ≤, <=
   /// </summary>
   [FactorioRconDefinitionValue("≤")]
   Le,
 
   /// <summary>
-  /// Literal value: <=
-  /// </summary>
-  [FactorioRconDefinitionValue("<=")]
-  Le,
-
-  /// <summary>
-  /// Literal value: ≠
+  /// Literal value: ≠, !=
   /// </summary>
   [FactorioRconDefinitionValue("≠")]
-  Ne,
-
-  /// <summary>
-  /// Literal value: !=
-  /// </summary>
-  [FactorioRconDefinitionValue("!=")]
   Ne,
 
 }

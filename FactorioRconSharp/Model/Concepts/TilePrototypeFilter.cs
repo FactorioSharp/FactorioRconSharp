@@ -26,7 +26,7 @@ public abstract class TilePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_729e180430ad4298aadc094ca897e7cc Mode { get; set; }
+  public Literals_244266b47b6744ccb460d2baf27c3f55 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

@@ -26,7 +26,7 @@ public abstract class LuaUpgradeCancelledEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_599d91b0e44d4710bea577ab9c42c7fb Mode { get; set; }
+  public Literals_e18cc7c4a17047f2a7bfbcda38db232d Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

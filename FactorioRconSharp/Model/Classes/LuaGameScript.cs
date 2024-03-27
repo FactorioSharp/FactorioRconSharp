@@ -36,7 +36,7 @@ public abstract class LuaGameScript: LuaObject
   /// If only a single player is required, <see cref="LuaGameScript.GetPlayer" /> should be used instead, as it avoids the unnecessary overhead of passing the whole table to Lua.
   /// </summary>
   [FactorioRconAttribute("players")]
-  public LuaCustomTable<Union_10716f3da4214e889057084cf153ad1a, LuaPlayer> Players { get; private set; }
+  public LuaCustomTable<Union_412490f2c5744386aebdb9e1132bb1c9, LuaPlayer> Players { get; private set; }
 
   /// <summary>
   /// The currently active set of map settings. Even though this property is marked as read-only, the members of the dictionary that is returned can be modified mid-game.
@@ -60,7 +60,7 @@ public abstract class LuaGameScript: LuaObject
   /// Get a table of all the forces that currently exist. This sparse table allows you to find forces by indexing it with either their `name` or `index`. Iterating this table with `pairs()` will only iterate the hash part of the table. Iterating with `ipairs()` will not work at all.
   /// </summary>
   [FactorioRconAttribute("forces")]
-  public LuaCustomTable<Union_10716f3da4214e889057084cf153ad1a, LuaForce> Forces { get; private set; }
+  public LuaCustomTable<Union_412490f2c5744386aebdb9e1132bb1c9, LuaForce> Forces { get; private set; }
 
   /// <summary>
   /// A dictionary containing every LuaEntityPrototype indexed by `name`.
@@ -302,7 +302,7 @@ public abstract class LuaGameScript: LuaObject
   /// Get a table of all the surfaces that currently exist. This sparse table allows you to find surfaces by indexing it with either their `name` or `index`. Iterating this table with `pairs()` will only iterate the hash part of the table. Iterating with `ipairs()` will not work at all.
   /// </summary>
   [FactorioRconAttribute("surfaces")]
-  public LuaCustomTable<Union_10716f3da4214e889057084cf153ad1a, LuaSurface> Surfaces { get; private set; }
+  public LuaCustomTable<Union_412490f2c5744386aebdb9e1132bb1c9, LuaSurface> Surfaces { get; private set; }
 
   /// <summary>
   /// The active mods versions. The keys are mod names, the values are the versions.
@@ -474,7 +474,7 @@ public abstract class LuaGameScript: LuaObject
   /// </remarks>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("regenerate_entity")]
-  public abstract void RegenerateEntity(Union_15322821de664c9f856201c8fe7bc9ac entities);
+  public abstract void RegenerateEntity(Union_62b4d42373bb4b819744e75b9e143004 entities);
 
   /// <summary>
   /// Take a screenshot of the game and save it to the `script-output` folder, located in the game's [user data directory](https://wiki.factorio.com/User_data_directory). The name of the image file can be specified via the `path` parameter.
@@ -650,7 +650,7 @@ public abstract class LuaGameScript: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union_de62e3607ed34ac2af7d04457dc8863d? printSettings = null);
+  public abstract void Print(LocalisedString message, Union_edd565b708da43f1b33f84dcc346d9b4? printSettings = null);
 
   /// <summary>
   /// Creates a deterministic standalone random generator with the given seed or if a seed is not provided the initial map seed is used.
@@ -784,14 +784,14 @@ public abstract class LuaGameScript: LuaObject
   /// <param name="surface">Lua name: surface</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union_15322821de664c9f856201c8fe7bc9ac? name = null, SurfaceIdentification? surface = null, ForceIdentification? force = null);
+  public abstract List<LuaEntity> GetTrainStops(Union_62b4d42373bb4b819744e75b9e143004? name = null, SurfaceIdentification? surface = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the given player or returns `nil` if no player is found.
   /// </summary>
   /// <param name="player">Lua name: player</param>
   [FactorioRconMethod("get_player")]
-  public abstract LuaPlayer? GetPlayer(Union_10716f3da4214e889057084cf153ad1a player);
+  public abstract LuaPlayer? GetPlayer(Union_412490f2c5744386aebdb9e1132bb1c9 player);
 
   /// <summary>
   /// Gets the given surface or returns `nil` if no surface is found.
@@ -801,7 +801,7 @@ public abstract class LuaGameScript: LuaObject
   /// </remarks>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_surface")]
-  public abstract LuaSurface? GetSurface(Union_10716f3da4214e889057084cf153ad1a surface);
+  public abstract LuaSurface? GetSurface(Union_412490f2c5744386aebdb9e1132bb1c9 surface);
 
   /// <summary>
   /// Creates a <see cref="LuaProfiler" />, which is used for measuring script performance.
@@ -953,7 +953,7 @@ public abstract class LuaGameScript: LuaObject
   /// <param name="searchDirection">Lua name: search_direction</param>
   /// <param name="stepsLimit">Lua name: steps_limit</param>
   [FactorioRconMethod("request_train_path")]
-  public abstract Union_63d486ae180a40f5875e3b406202d9bf RequestTrainPath(List<Union_94ee260d15a14ec4bd71cb3df2c19e09> goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, Literals_8238433eb76447b49c8441af16eeab31? searchDirection = null, uint? stepsLimit = null);
+  public abstract Union_6f788da5509c4d44b592525b7132eec7 RequestTrainPath(List<Union_34e2c1dbf42d4d168ff69c6bef57642e> goals, bool? inChainSignalSection = null, LuaTrain? train = null, TrainPathRequestType? type = null, bool? returnPath = null, RailEnd? fromFront = null, bool? allowPathWithinSegmentFront = null, RailEnd? fromBack = null, bool? allowPathWithinSegmentBack = null, Literals_56370bb55a0d4a83b5ae5733012b5acb? searchDirection = null, uint? stepsLimit = null);
 
 }
 

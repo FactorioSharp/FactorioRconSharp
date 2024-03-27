@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerDelivery
 {
   [FactorioRconAttribute("type")]
-  public Literals_a1cef17fb1e14698907f4d8edb14a87d Type { get; set; }
+  public Literals_4da71100335d4209b74bf237263fbd5e Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
   public List<TriggerEffectItem> SourceEffects { get; set; }

@@ -26,7 +26,7 @@ public abstract class LuaScriptRaisedDestroyEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_8006e6008b4d4f3f9791936b374a2e2b Mode { get; set; }
+  public Literals_03376876cf5a4e8aa489c44817fe157a Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
