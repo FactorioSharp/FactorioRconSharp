@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class SignalID
 {
   [FactorioRconAttribute("type")]
-  public Literals1086945664 Type { get; set; }
+  public Literals1683304720 Type { get; set; }
 
   /// <summary>
   /// Name of the item, fluid or virtual signal.

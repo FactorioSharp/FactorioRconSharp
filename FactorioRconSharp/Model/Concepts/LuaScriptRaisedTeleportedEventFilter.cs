@@ -26,7 +26,7 @@ public abstract class LuaScriptRaisedTeleportedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1588844663 Mode { get; set; }
+  public Literals1585591844 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

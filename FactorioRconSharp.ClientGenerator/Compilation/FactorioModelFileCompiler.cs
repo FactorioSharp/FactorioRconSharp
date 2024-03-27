@@ -56,7 +56,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls)
     {
-        string name = ReplaceInvalidIdentifierCharacters(cls.Name.ToPascalCase());
+        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(cls.Name)).ToPascalCase();
 
         return new FactorioModelClass
         {
@@ -79,7 +79,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelTopLevelStatement CompileConcept(FactorioRuntimeConceptSpecification concept)
     {
-        string name = ReplaceInvalidIdentifierCharacters(concept.Name.ToPascalCase());
+        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(concept.Name)).ToPascalCase();
 
         FactorioModelTopLevelStatement symbol;
         switch (concept.Type)
@@ -126,7 +126,7 @@ public class FactorioModelFileCompiler
 
     IEnumerable<FactorioModelEnum> CompileDefinition(FactorioRuntimeDefinitionSpecification definition, string namePrefix = "", string luaNamePrefix = "")
     {
-        string enumName = $"{namePrefix}{ReplaceInvalidIdentifierCharacters(definition.Name.ToPascalCase())}";
+        string enumName = $"{namePrefix}{ReplaceInvalidIdentifierCharacters(ToPascalCase(definition.Name))}".ToPascalCase();
         string luaName = $"{luaNamePrefix}{definition.Name}";
 
         return new[]
@@ -157,14 +157,14 @@ public class FactorioModelFileCompiler
     FactorioModelEnumValue CompileEnumValue(FactorioRuntimeDefinitionValueSpecification definitionValue) =>
         new()
         {
-            Name = ReplaceInvalidIdentifierCharacters(definitionValue.Name.ToPascalCase()),
+            Name = ReplaceInvalidIdentifierCharacters(ToPascalCase(definitionValue.Name)).ToPascalCase(),
             LuaName = definitionValue.Name,
             Documentation = new FactorioModelDocumentation { Summary = definitionValue.Description }
         };
 
     FactorioModelClassProperty CompileProperty(FactorioRuntimeAttributeSpecification attribute, string className)
     {
-        string name = ReplaceInvalidIdentifierCharacters(attribute.Name.ToPascalCase());
+        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(attribute.Name)).ToPascalCase();
         if (name == className)
         {
             name = $"{name}Prop";
@@ -206,7 +206,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClassProperty CompileProperty(FactorioRuntimeParameterSpecification parameter, string className)
     {
-        string name = ReplaceInvalidIdentifierCharacters(parameter.Name.ToPascalCase());
+        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(parameter.Name)).ToPascalCase();
         if (name == className)
         {
             name = $"{name}Prop";
@@ -243,7 +243,7 @@ public class FactorioModelFileCompiler
     FactorioModelClassMethod CompileMethod(FactorioRuntimeMethodSpecification method) =>
         new()
         {
-            Name = ReplaceInvalidIdentifierCharacters(method.Name.ToPascalCase()),
+            Name = ReplaceInvalidIdentifierCharacters(ToPascalCase(method.Name)).ToPascalCase(),
             LuaName = method.Name,
             Documentation = new FactorioModelDocumentation
             {
@@ -342,7 +342,7 @@ public class FactorioModelFileCompiler
                             name = $"{name[8..]}Enum";
                         }
 
-                        return ReplaceInvalidIdentifierCharacters(name.Replace('.', '_').ToPascalCase());
+                        return ReplaceInvalidIdentifierCharacters(name.Replace('.', '_').ToPascalCase()).ToPascalCase();
                 }
             case FactorioRuntimeArrayTypeSpecification arrayType:
                 return $"List<{BuildTypeName(arrayType.Value)}>";
@@ -468,7 +468,7 @@ public class FactorioModelFileCompiler
         string valueName = literalType.Value.ToString() ?? "value";
         return new FactorioModelEnumValue
         {
-            Name = ReplaceInvalidIdentifierCharacters(valueName.ToPascalCase()), LuaName = valueName,
+            Name = ReplaceInvalidIdentifierCharacters(ToPascalCase(valueName)).ToPascalCase(), LuaName = valueName,
             Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" }
         };
     }
@@ -540,4 +540,11 @@ public class FactorioModelFileCompiler
     static int GetTypeId(FactorioRuntimeTypeSpecification type) => type.GetHashCode();
 
     string GenerateUniqueTypeName(string name, FactorioRuntimeTypeSpecification _) => $"{name}{Math.Abs(_random.Next(0, int.MaxValue))}";
+
+    static string ToPascalCase(string str) =>
+        str switch
+        {
+            "-" => "-",
+            _ => str.ToPascalCase()
+        };
 }
