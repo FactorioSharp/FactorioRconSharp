@@ -10,6 +10,12 @@ public class FactorioModelFileCompiler
     readonly FactorioRuntimeApiSpecification _specification;
     readonly Dictionary<int, string> _anonymousTypeNames = new();
 
+    /// <summary>
+    ///     Seeded random used to make anonymous type names uniques.
+    ///     It needs to be seeded to avoid changing the names every time the generator is executed
+    /// </summary>
+    readonly Random _random = new("Compilation FTW".GetHashCode());
+
     public FactorioModelFileCompiler(FactorioRuntimeApiSpecification specification)
     {
         _specification = specification;
@@ -533,5 +539,5 @@ public class FactorioModelFileCompiler
 
     static int GetTypeId(FactorioRuntimeTypeSpecification type) => type.GetHashCode();
 
-    static string GenerateUniqueTypeName(string name, FactorioRuntimeTypeSpecification type) => $"{name}{Math.Abs(type.GetHashCode())}";
+    string GenerateUniqueTypeName(string name, FactorioRuntimeTypeSpecification _) => $"{name}{Math.Abs(_random.Next(0, int.MaxValue))}";
 }

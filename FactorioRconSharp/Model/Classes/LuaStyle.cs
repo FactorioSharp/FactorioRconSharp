@@ -92,13 +92,13 @@ public abstract class LuaStyle: LuaObject
   /// Horizontal align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("horizontal_align")]
-  public Literals1874659799 HorizontalAlign { get; set; }
+  public Literals1206196179 HorizontalAlign { get; set; }
 
   /// <summary>
   /// Vertical align of the inner content of the widget, if any.
   /// </summary>
   [FactorioRconAttribute("vertical_align")]
-  public Literals1226499522 VerticalAlign { get; set; }
+  public Literals220104839 VerticalAlign { get; set; }
 
   [FactorioRconAttribute("font_color")]
   public Color FontColor { get; set; }
@@ -278,19 +278,19 @@ public abstract class LuaStyle: LuaObject
   /// Sets both width and height to the given value. Also accepts an array with two values, setting width to the first and height to the second one.
   /// </summary>
   [FactorioRconAttribute("size")]
-  public Union723334668 Size { private get; set; }
+  public Union1354196251 Size { private get; set; }
 
   /// <summary>
   /// Sets top/right/bottom/left paddings to this value. An array with two values sets top/bottom padding to the first value and left/right padding to the second value. An array with four values sets top, right, bottom, left padding respectively.
   /// </summary>
   [FactorioRconAttribute("padding")]
-  public Union723334668 Padding { private get; set; }
+  public Union1354196251 Padding { private get; set; }
 
   /// <summary>
   /// Sets top/right/bottom/left margins to this value. An array with two values sets top/bottom margin to the first value and left/right margin to the second value. An array with four values sets top, right, bottom, left margin respectively.
   /// </summary>
   [FactorioRconAttribute("margin")]
-  public Union723334668 Margin { private get; set; }
+  public Union1354196251 Margin { private get; set; }
 
   /// <summary>
   /// Space between the table cell contents and border. Sets top/right/bottom/left cell paddings to this value.
@@ -302,13 +302,13 @@ public abstract class LuaStyle: LuaObject
   /// Sets `extra_top/right/bottom/left_padding_when_activated` to this value. An array with two values sets top/bottom padding to the first value and left/right padding to the second value. An array with four values sets top, right, bottom, left padding respectively.
   /// </summary>
   [FactorioRconAttribute("extra_padding_when_activated")]
-  public Union723334668 ExtraPaddingWhenActivated { private get; set; }
+  public Union1354196251 ExtraPaddingWhenActivated { private get; set; }
 
   /// <summary>
   /// Sets `extra_top/right/bottom/left_margin_when_activated` to this value. An array with two values sets top/bottom margin to the first value and left/right margin to the second value. An array with four values sets top, right, bottom, left margin respectively.
   /// </summary>
   [FactorioRconAttribute("extra_margin_when_activated")]
-  public Union723334668 ExtraMarginWhenActivated { private get; set; }
+  public Union1354196251 ExtraMarginWhenActivated { private get; set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.

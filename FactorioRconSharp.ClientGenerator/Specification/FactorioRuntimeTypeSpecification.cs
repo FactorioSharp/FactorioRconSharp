@@ -4,7 +4,7 @@ public abstract class FactorioRuntimeTypeSpecification : IEquatable<FactorioRunt
 {
     public abstract bool Equals(FactorioRuntimeTypeSpecification? other);
 
-    public override bool Equals(object obj) => Equals(obj as FactorioRuntimeTypeSpecification);
+    public override bool Equals(object? obj) => Equals(obj as FactorioRuntimeTypeSpecification);
 
     public static bool operator ==(FactorioRuntimeTypeSpecification? left, FactorioRuntimeTypeSpecification? right) => Equals(left, right);
 

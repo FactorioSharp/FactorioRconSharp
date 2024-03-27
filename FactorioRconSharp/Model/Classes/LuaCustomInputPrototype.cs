@@ -68,7 +68,7 @@ public abstract class LuaCustomInputPrototype: LuaObject
   /// The consuming type.
   /// </summary>
   [FactorioRconAttribute("consuming")]
-  public Literals1202194540 Consuming { get; private set; }
+  public Literals1094129561 Consuming { get; private set; }
 
   /// <summary>
   /// The action that happens when this custom input is triggered.
