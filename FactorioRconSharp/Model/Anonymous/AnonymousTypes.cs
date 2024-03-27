@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Anonymous;
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_050af24f14294573aa43a2da5eef4fdb
+public enum Literals1963066509
 {
   /// <summary>
   /// Literal value: or
@@ -33,7 +33,7 @@ public enum Literals_050af24f14294573aa43a2da5eef4fdb
 }
 
 [GenerateOneOf]
-public abstract partial class Union_62b4d42373bb4b819744e75b9e143004: OneOfBase<string, List<string>>
+public abstract partial class Union192759991: OneOfBase<string, List<string>>
 {
 }
 
@@ -51,7 +51,7 @@ public abstract partial class Union_62b4d42373bb4b819744e75b9e143004: OneOfBase<
 ///   - OR
 ///   - XOR
 /// </summary>
-public enum Literals_14f663a7aa90443f91e4932994023833
+public enum Literals1232761054
 {
   /// <summary>
   /// Literal value: *
@@ -126,7 +126,7 @@ public enum Literals_14f663a7aa90443f91e4932994023833
 ///   - center-to-center
 ///   - bounding-box-to-bounding-box
 /// </summary>
-public enum Literals_0894aec7511742478f4cbced204bd5c0
+public enum Literals441386602
 {
   /// <summary>
   /// Literal value: center-to-center
@@ -148,7 +148,7 @@ public enum Literals_0894aec7511742478f4cbced204bd5c0
 ///   - stream
 ///   - beam
 /// </summary>
-public enum Literals_f91b5cb67185460daa2b80c7b9f2e9fe
+public enum Literals1235683434
 {
   /// <summary>
   /// Literal value: projectile
@@ -170,7 +170,7 @@ public enum Literals_f91b5cb67185460daa2b80c7b9f2e9fe
 
 }
 
-public abstract class Table_942be70db2a44649ab5666d238380c46
+public abstract class Table21549755
 {
   [FactorioRconAttribute("left_top")]
   public MapPosition LeftTop { get; set; }
@@ -183,7 +183,7 @@ public abstract class Table_942be70db2a44649ab5666d238380c46
 
 }
 
-public abstract class Tuple_8a579f39d4bb4eb8a8f1244f1a227868
+public abstract class Tuple15315213
 {
   [FactorioRconAttribute("left_top")]
   public MapPosition LeftTop { get; set; }
@@ -204,7 +204,7 @@ public abstract class Tuple_8a579f39d4bb4eb8a8f1244f1a227868
 ///   - artillery-remote
 ///   - destroy-cliffs
 /// </summary>
-public enum Literals_4c8639f91f544c8db1a09c2b38a3e100
+public enum Literals592678207
 {
   /// <summary>
   /// Literal value: throw
@@ -238,7 +238,7 @@ public enum Literals_4c8639f91f544c8db1a09c2b38a3e100
 
 }
 
-public abstract class Table_34a448b189464b11b795847ce8f32900
+public abstract class Table1847471439
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -248,7 +248,7 @@ public abstract class Table_34a448b189464b11b795847ce8f32900
 
 }
 
-public abstract class Tuple_c8ef66468fb54cd697f3ad9f01afcaa3
+public abstract class Tuple12070837
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -261,7 +261,7 @@ public abstract class Tuple_c8ef66468fb54cd697f3ad9f01afcaa3
 /// <summary>
 /// Literal value: True
 /// </summary>
-public enum Literal_4b540f4f67c7473bbb772e816a0021ee
+public enum Literal182831848
 {
   /// <summary>
   /// Literal value: True
@@ -274,7 +274,7 @@ public enum Literal_4b540f4f67c7473bbb772e816a0021ee
 /// <summary>
 /// Literal value: not-colliding-with-itself
 /// </summary>
-public enum Literal_6f2d568bde4f49d485dec0dff7542a80
+public enum Literal187437327
 {
   /// <summary>
   /// Literal value: not-colliding-with-itself
@@ -287,7 +287,7 @@ public enum Literal_6f2d568bde4f49d485dec0dff7542a80
 /// <summary>
 /// Literal value: consider-tile-transitions
 /// </summary>
-public enum Literal_43fc962cc3e74110bef60af37642c8db
+public enum Literal157415232
 {
   /// <summary>
   /// Literal value: consider-tile-transitions
@@ -300,7 +300,7 @@ public enum Literal_43fc962cc3e74110bef60af37642c8db
 /// <summary>
 /// Literal value: colliding-with-tiles-only
 /// </summary>
-public enum Literal_cdf3131b59a4453583f8bf60624e8367
+public enum Literal187144884
 {
   /// <summary>
   /// Literal value: colliding-with-tiles-only
@@ -311,27 +311,11 @@ public enum Literal_cdf3131b59a4453583f8bf60624e8367
 }
 
 [GenerateOneOf]
-public abstract partial class Union_ae2efb64c409418d823bf519910ae89f: OneOfBase<CollisionMaskLayer, Literal_6f2d568bde4f49d485dec0dff7542a80, Literal_43fc962cc3e74110bef60af37642c8db, Literal_cdf3131b59a4453583f8bf60624e8367>
+public abstract partial class Union520330934: OneOfBase<CollisionMaskLayer, Literal187437327, Literal157415232, Literal187144884>
 {
 }
 
-public abstract class Table_cd1f6465420a4cd09014336d8c9ebef5
-{
-  [FactorioRconAttribute("r")]
-  public float R { get; set; }
-
-  [FactorioRconAttribute("g")]
-  public float G { get; set; }
-
-  [FactorioRconAttribute("b")]
-  public float B { get; set; }
-
-  [FactorioRconAttribute("a")]
-  public float A { get; set; }
-
-}
-
-public abstract class Tuple_731a758830a847838d08aa276fc3a400
+public abstract class Table861610597
 {
   [FactorioRconAttribute("r")]
   public float R { get; set; }
@@ -347,7 +331,23 @@ public abstract class Tuple_731a758830a847838d08aa276fc3a400
 
 }
 
-public abstract class Tuple_cf6ec2ffd906414a967b565dd54f419d
+public abstract class Tuple8999294
+{
+  [FactorioRconAttribute("r")]
+  public float R { get; set; }
+
+  [FactorioRconAttribute("g")]
+  public float G { get; set; }
+
+  [FactorioRconAttribute("b")]
+  public float B { get; set; }
+
+  [FactorioRconAttribute("a")]
+  public float A { get; set; }
+
+}
+
+public abstract class Tuple59652943
 {
   [FactorioRconAttribute("r")]
   public float R { get; set; }
@@ -364,7 +364,7 @@ public abstract class Tuple_cf6ec2ffd906414a967b565dd54f419d
 }
 
 [GenerateOneOf]
-public abstract partial class Union_a49663851796444399e7ff28da77f848: OneOfBase<LuaEntity, LuaUnitGroup>
+public abstract partial class Union819306203: OneOfBase<LuaEntity, LuaUnitGroup>
 {
 }
 
@@ -373,7 +373,7 @@ public abstract partial class Union_a49663851796444399e7ff28da77f848: OneOfBase<
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_8970855f6acd447ca2eedd0a28e4fba1
+public enum Literals287011358
 {
   /// <summary>
   /// Literal value: or
@@ -390,7 +390,7 @@ public enum Literals_8970855f6acd447ca2eedd0a28e4fba1
 }
 
 [GenerateOneOf]
-public abstract partial class Union_a216fdf355884ed49978ff52f626b199: OneOfBase<CollisionMask, CollisionMaskWithFlags>
+public abstract partial class Union2103715931: OneOfBase<CollisionMask, CollisionMaskWithFlags>
 {
 }
 
@@ -400,7 +400,7 @@ public abstract partial class Union_a216fdf355884ed49978ff52f626b199: OneOfBase<
 ///   - always
 ///   - never
 /// </summary>
-public enum Literals_2ba76542c15c4d93ba847cb7005b7705
+public enum Literals688573468
 {
   /// <summary>
   /// Literal value: after-victory
@@ -427,7 +427,7 @@ public enum Literals_2ba76542c15c4d93ba847cb7005b7705
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_81f840f84f994d78a3e3c0e7906b2eb2
+public enum Literals201866942
 {
   /// <summary>
   /// Literal value: or
@@ -450,7 +450,7 @@ public enum Literals_81f840f84f994d78a3e3c0e7906b2eb2
 ///   - contains-any
 ///   - contains-all
 /// </summary>
-public enum Literals_b033116b49c24d06b0a8ec6c22ad0fdb
+public enum Literals903625190
 {
   /// <summary>
   /// Literal value: collides
@@ -478,7 +478,7 @@ public enum Literals_b033116b49c24d06b0a8ec6c22ad0fdb
 
 }
 
-public abstract class Tuple_e968521550ea4911bd679b86be46d822
+public abstract class Tuple44665200
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -493,7 +493,7 @@ public abstract class Tuple_e968521550ea4911bd679b86be46d822
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_208c75aa84fd4dd6818851f2d640091b
+public enum Literals2143437618
 {
   /// <summary>
   /// Literal value: or
@@ -510,7 +510,7 @@ public enum Literals_208c75aa84fd4dd6818851f2d640091b
 }
 
 [GenerateOneOf]
-public abstract partial class Union_c5dbae64c731463082587c789d0a3d82: OneOfBase<LuaEntityClonedEventFilter, LuaEntityDamagedEventFilter, LuaPlayerMinedEntityEventFilter, LuaPreRobotMinedEntityEventFilter, LuaRobotBuiltEntityEventFilter, LuaPostEntityDiedEventFilter, LuaEntityDiedEventFilter, LuaScriptRaisedReviveEventFilter, LuaPrePlayerMinedEntityEventFilter, LuaEntityMarkedForDeconstructionEventFilter, LuaPreGhostDeconstructedEventFilter, LuaPreGhostUpgradedEventFilter, LuaEntityDeconstructionCancelledEventFilter, LuaEntityMarkedForUpgradeEventFilter, LuaSectorScannedEventFilter, LuaRobotMinedEntityEventFilter, LuaScriptRaisedDestroyEventFilter, LuaUpgradeCancelledEventFilter, LuaScriptRaisedBuiltEventFilter, LuaPlayerBuiltEntityEventFilter, LuaPlayerRepairedEntityEventFilter>
+public abstract partial class Union1924511798: OneOfBase<LuaEntityClonedEventFilter, LuaEntityDamagedEventFilter, LuaPlayerMinedEntityEventFilter, LuaPreRobotMinedEntityEventFilter, LuaRobotBuiltEntityEventFilter, LuaPostEntityDiedEventFilter, LuaEntityDiedEventFilter, LuaScriptRaisedReviveEventFilter, LuaPrePlayerMinedEntityEventFilter, LuaEntityMarkedForDeconstructionEventFilter, LuaPreGhostDeconstructedEventFilter, LuaPreGhostUpgradedEventFilter, LuaEntityDeconstructionCancelledEventFilter, LuaEntityMarkedForUpgradeEventFilter, LuaSectorScannedEventFilter, LuaRobotMinedEntityEventFilter, LuaScriptRaisedDestroyEventFilter, LuaUpgradeCancelledEventFilter, LuaScriptRaisedBuiltEventFilter, LuaPlayerBuiltEntityEventFilter, LuaPlayerRepairedEntityEventFilter>
 {
 }
 
@@ -520,7 +520,7 @@ public abstract partial class Union_c5dbae64c731463082587c789d0a3d82: OneOfBase<
 ///   - output
 ///   - input-output
 /// </summary>
-public enum Literals_8c539b93e4964a63af09b363ce2558d9
+public enum Literals1518599809
 {
   /// <summary>
   /// Literal value: input
@@ -547,7 +547,7 @@ public enum Literals_8c539b93e4964a63af09b363ce2558d9
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_c349e67fc68c40fdad8b5fef05ae2b38
+public enum Literals1256564854
 {
   /// <summary>
   /// Literal value: or
@@ -570,7 +570,7 @@ public enum Literals_c349e67fc68c40fdad8b5fef05ae2b38
 ///   - player-quickbar
 ///   - player-equipment-bar
 /// </summary>
-public enum Literals_22ca2e07b3c34cbe81768e03950649f2
+public enum Literals963624181
 {
   /// <summary>
   /// Literal value: player
@@ -598,7 +598,7 @@ public enum Literals_22ca2e07b3c34cbe81768e03950649f2
 
 }
 
-public abstract class Tuple_3c6430b02763470ab4cf55055e142789
+public abstract class Tuple17924607
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -616,7 +616,7 @@ public abstract class Tuple_3c6430b02763470ab4cf55055e142789
 ///   - add
 ///   - remove
 /// </summary>
-public enum Literals_c4506573a4704cbb987bed4fa0039c9f
+public enum Literals710816272
 {
   /// <summary>
   /// Literal value: at-least
@@ -656,7 +656,7 @@ public enum Literals_c4506573a4704cbb987bed4fa0039c9f
 ///   - at-most
 ///   - exactly
 /// </summary>
-public enum Literals_15e29deadeb94ca699b4cdb146ca4ce6
+public enum Literals319035694
 {
   /// <summary>
   /// Literal value: at-least
@@ -686,7 +686,7 @@ public enum Literals_15e29deadeb94ca699b4cdb146ca4ce6
 ///   - add
 ///   - remove
 /// </summary>
-public enum Literals_a05f37cb6ebc4c6fa91f80872105012a
+public enum Literals1452731055
 {
   /// <summary>
   /// Literal value: at-least
@@ -721,7 +721,7 @@ public enum Literals_a05f37cb6ebc4c6fa91f80872105012a
 }
 
 [GenerateOneOf]
-public abstract partial class Union_daa813044b6c4683b39a27e063f1b65c: OneOfBase<uint, double>
+public abstract partial class Union1169259469: OneOfBase<uint, double>
 {
 }
 
@@ -730,7 +730,7 @@ public abstract partial class Union_daa813044b6c4683b39a27e063f1b65c: OneOfBase<
 ///   - item
 ///   - fluid
 /// </summary>
-public enum Literals_4d1f4ebaddbb4c60a04b88492ad152c8
+public enum Literals773311874
 {
   /// <summary>
   /// Literal value: item
@@ -751,7 +751,7 @@ public enum Literals_4d1f4ebaddbb4c60a04b88492ad152c8
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_946cd558285949a7967c3fbbead4b1ab
+public enum Literals1537925624
 {
   /// <summary>
   /// Literal value: or
@@ -772,7 +772,7 @@ public enum Literals_946cd558285949a7967c3fbbead4b1ab
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_83a53c0d24c54cadacf469ac171255c8
+public enum Literals1903423916
 {
   /// <summary>
   /// Literal value: or
@@ -793,7 +793,7 @@ public enum Literals_83a53c0d24c54cadacf469ac171255c8
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_a2f5d70e608b437cb3a2ef47020822d8
+public enum Literals359131186
 {
   /// <summary>
   /// Literal value: or
@@ -814,7 +814,7 @@ public enum Literals_a2f5d70e608b437cb3a2ef47020822d8
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_15ff3f6f64d6409b948d2f51145f0731
+public enum Literals862631582
 {
   /// <summary>
   /// Literal value: or
@@ -835,7 +835,7 @@ public enum Literals_15ff3f6f64d6409b948d2f51145f0731
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_6e66afe60777429b85bb1704fe18bbac
+public enum Literals1440823476
 {
   /// <summary>
   /// Literal value: or
@@ -856,7 +856,7 @@ public enum Literals_6e66afe60777429b85bb1704fe18bbac
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_3f8b23765f92450db9be33822e38fa4f
+public enum Literals558258392
 {
   /// <summary>
   /// Literal value: or
@@ -877,7 +877,7 @@ public enum Literals_3f8b23765f92450db9be33822e38fa4f
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_c2f37e69ea6f442a8070f338c3b118a9
+public enum Literals1168573696
 {
   /// <summary>
   /// Literal value: or
@@ -898,7 +898,7 @@ public enum Literals_c2f37e69ea6f442a8070f338c3b118a9
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_402cfe2ebb614c249cf5283d2a4748ae
+public enum Literals1420895688
 {
   /// <summary>
   /// Literal value: or
@@ -919,7 +919,7 @@ public enum Literals_402cfe2ebb614c249cf5283d2a4748ae
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_d06eb4457bc84c1c83deeec6892c42b4
+public enum Literals1288516737
 {
   /// <summary>
   /// Literal value: or
@@ -940,7 +940,7 @@ public enum Literals_d06eb4457bc84c1c83deeec6892c42b4
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_1026b561b3c54c61ab8df5202fddd918
+public enum Literals643467542
 {
   /// <summary>
   /// Literal value: or
@@ -961,7 +961,7 @@ public enum Literals_1026b561b3c54c61ab8df5202fddd918
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_567615ce4f0e4468878327c2ccb11893
+public enum Literals1896985655
 {
   /// <summary>
   /// Literal value: or
@@ -982,7 +982,7 @@ public enum Literals_567615ce4f0e4468878327c2ccb11893
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_8972cb19247549a3bf8b8bcc45651327
+public enum Literals525464291
 {
   /// <summary>
   /// Literal value: or
@@ -1003,7 +1003,7 @@ public enum Literals_8972cb19247549a3bf8b8bcc45651327
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_69ad8a6e55ec4e4489140f4dbe009034
+public enum Literals1811151019
 {
   /// <summary>
   /// Literal value: or
@@ -1024,7 +1024,7 @@ public enum Literals_69ad8a6e55ec4e4489140f4dbe009034
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_74627786bb254412901030abd287a25a
+public enum Literals697515237
 {
   /// <summary>
   /// Literal value: or
@@ -1045,7 +1045,7 @@ public enum Literals_74627786bb254412901030abd287a25a
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_33a63cabc1b6469c81077b46e889380e
+public enum Literals1449825892
 {
   /// <summary>
   /// Literal value: or
@@ -1066,7 +1066,7 @@ public enum Literals_33a63cabc1b6469c81077b46e889380e
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_d3b37fa1cbe54f9f8ee1f8d57a7f6f6f
+public enum Literals119750553
 {
   /// <summary>
   /// Literal value: or
@@ -1087,7 +1087,7 @@ public enum Literals_d3b37fa1cbe54f9f8ee1f8d57a7f6f6f
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_c5740b89628a462b9bd0852f2f4fc132
+public enum Literals424311883
 {
   /// <summary>
   /// Literal value: or
@@ -1108,7 +1108,7 @@ public enum Literals_c5740b89628a462b9bd0852f2f4fc132
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_824204dd843d4b6db29224b9e417f0ea
+public enum Literals1295393118
 {
   /// <summary>
   /// Literal value: or
@@ -1129,7 +1129,7 @@ public enum Literals_824204dd843d4b6db29224b9e417f0ea
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_03376876cf5a4e8aa489c44817fe157a
+public enum Literals586442763
 {
   /// <summary>
   /// Literal value: or
@@ -1150,7 +1150,7 @@ public enum Literals_03376876cf5a4e8aa489c44817fe157a
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_16d4cbfe16a144a1bb44835994496b3b
+public enum Literals1002366631
 {
   /// <summary>
   /// Literal value: or
@@ -1171,7 +1171,7 @@ public enum Literals_16d4cbfe16a144a1bb44835994496b3b
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_ae0b2ea479854368ad11c5ea7555b28e
+public enum Literals1070763223
 {
   /// <summary>
   /// Literal value: or
@@ -1192,7 +1192,7 @@ public enum Literals_ae0b2ea479854368ad11c5ea7555b28e
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_c0d6addcb67a4bedb3ace1f3f9513493
+public enum Literals1160875033
 {
   /// <summary>
   /// Literal value: or
@@ -1213,7 +1213,7 @@ public enum Literals_c0d6addcb67a4bedb3ace1f3f9513493
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_e18cc7c4a17047f2a7bfbcda38db232d
+public enum Literals818161207
 {
   /// <summary>
   /// Literal value: or
@@ -1235,7 +1235,7 @@ public enum Literals_e18cc7c4a17047f2a7bfbcda38db232d
 ///   - always
 ///   - never
 /// </summary>
-public enum Literals_4e45d141d7df4095a30bfb7f9cb1bd4c
+public enum Literals1441686957
 {
   /// <summary>
   /// Literal value: after-victory
@@ -1263,7 +1263,7 @@ public enum Literals_4e45d141d7df4095a30bfb7f9cb1bd4c
 ///   - tile
 ///   - decorative
 /// </summary>
-public enum Literals_db4935d4775245738e4251f71aa47e87
+public enum Literals434940688
 {
   /// <summary>
   /// Literal value: entity
@@ -1288,7 +1288,7 @@ public enum Literals_db4935d4775245738e4251f71aa47e87
 /// <summary>
 /// Literal value: none
 /// </summary>
-public enum Literal_e9929c90497d487ebc684fc282e5d70c
+public enum Literal162559183
 {
   /// <summary>
   /// Literal value: none
@@ -1301,7 +1301,7 @@ public enum Literal_e9929c90497d487ebc684fc282e5d70c
 /// <summary>
 /// Literal value: very-low
 /// </summary>
-public enum Literal_2a191aaf64c241bead95618d06337b55
+public enum Literal146278387
 {
   /// <summary>
   /// Literal value: very-low
@@ -1314,7 +1314,7 @@ public enum Literal_2a191aaf64c241bead95618d06337b55
 /// <summary>
 /// Literal value: very-small
 /// </summary>
-public enum Literal_636714bb197e41d494e5f367ea3dd314
+public enum Literal179043801
 {
   /// <summary>
   /// Literal value: very-small
@@ -1327,7 +1327,7 @@ public enum Literal_636714bb197e41d494e5f367ea3dd314
 /// <summary>
 /// Literal value: very-poor
 /// </summary>
-public enum Literal_d4bb5b9c00a74423bfb34ba231ef41d5
+public enum Literal176721426
 {
   /// <summary>
   /// Literal value: very-poor
@@ -1340,7 +1340,7 @@ public enum Literal_d4bb5b9c00a74423bfb34ba231ef41d5
 /// <summary>
 /// Literal value: low
 /// </summary>
-public enum Literal_6798e93c9e824006b19648ebcb87639e
+public enum Literal164408458
 {
   /// <summary>
   /// Literal value: low
@@ -1353,7 +1353,7 @@ public enum Literal_6798e93c9e824006b19648ebcb87639e
 /// <summary>
 /// Literal value: small
 /// </summary>
-public enum Literal_2533f537226a41718997d37ec2ea4991
+public enum Literal144479338
 {
   /// <summary>
   /// Literal value: small
@@ -1366,7 +1366,7 @@ public enum Literal_2533f537226a41718997d37ec2ea4991
 /// <summary>
 /// Literal value: poor
 /// </summary>
-public enum Literal_ab2b8a90ae154667bd788752663d9471
+public enum Literal178444960
 {
   /// <summary>
   /// Literal value: poor
@@ -1379,7 +1379,7 @@ public enum Literal_ab2b8a90ae154667bd788752663d9471
 /// <summary>
 /// Literal value: normal
 /// </summary>
-public enum Literal_ae11bf2472b84b2ebe45ee7bb805df21
+public enum Literal189218733
 {
   /// <summary>
   /// Literal value: normal
@@ -1392,7 +1392,7 @@ public enum Literal_ae11bf2472b84b2ebe45ee7bb805df21
 /// <summary>
 /// Literal value: medium
 /// </summary>
-public enum Literal_f49afaa62bec464a85810361bbc7b1da
+public enum Literal155913771
 {
   /// <summary>
   /// Literal value: medium
@@ -1405,7 +1405,7 @@ public enum Literal_f49afaa62bec464a85810361bbc7b1da
 /// <summary>
 /// Literal value: regular
 /// </summary>
-public enum Literal_9220240aab6b4a4d9427bbdd460557f2
+public enum Literal169946217
 {
   /// <summary>
   /// Literal value: regular
@@ -1418,7 +1418,7 @@ public enum Literal_9220240aab6b4a4d9427bbdd460557f2
 /// <summary>
 /// Literal value: high
 /// </summary>
-public enum Literal_371629012161408c85c034031cc6b76b
+public enum Literal148573547
 {
   /// <summary>
   /// Literal value: high
@@ -1431,7 +1431,7 @@ public enum Literal_371629012161408c85c034031cc6b76b
 /// <summary>
 /// Literal value: big
 /// </summary>
-public enum Literal_b85c793885be4f378b4cfec88d808a51
+public enum Literal166825875
 {
   /// <summary>
   /// Literal value: big
@@ -1444,7 +1444,7 @@ public enum Literal_b85c793885be4f378b4cfec88d808a51
 /// <summary>
 /// Literal value: good
 /// </summary>
-public enum Literal_085a6f20ed044abf9704c694d7cae693
+public enum Literal200302307
 {
   /// <summary>
   /// Literal value: good
@@ -1457,7 +1457,7 @@ public enum Literal_085a6f20ed044abf9704c694d7cae693
 /// <summary>
 /// Literal value: very-high
 /// </summary>
-public enum Literal_ba582ea63c5148f5b5977d540866b5a7
+public enum Literal167459338
 {
   /// <summary>
   /// Literal value: very-high
@@ -1470,7 +1470,7 @@ public enum Literal_ba582ea63c5148f5b5977d540866b5a7
 /// <summary>
 /// Literal value: very-big
 /// </summary>
-public enum Literal_0d9516a3afaf4422b6f9a7e350d1824e
+public enum Literal185632221
 {
   /// <summary>
   /// Literal value: very-big
@@ -1483,7 +1483,7 @@ public enum Literal_0d9516a3afaf4422b6f9a7e350d1824e
 /// <summary>
 /// Literal value: very-good
 /// </summary>
-public enum Literal_6067d49bef83424d9c88354358d7633f
+public enum Literal196359844
 {
   /// <summary>
   /// Literal value: very-good
@@ -1493,7 +1493,7 @@ public enum Literal_6067d49bef83424d9c88354358d7633f
 
 }
 
-public abstract class Table_b25b0ac0751e4d18b2cdf3dc575b4ac6
+public abstract class Table721847124
 {
   [FactorioRconAttribute("x")]
   public double X { get; set; }
@@ -1503,7 +1503,7 @@ public abstract class Table_b25b0ac0751e4d18b2cdf3dc575b4ac6
 
 }
 
-public abstract class Tuple_12abcb3349084f3fa16bec31b12ddfe6
+public abstract class Tuple15574864
 {
   [FactorioRconAttribute("x")]
   public double X { get; set; }
@@ -1514,7 +1514,7 @@ public abstract class Tuple_12abcb3349084f3fa16bec31b12ddfe6
 }
 
 [GenerateOneOf]
-public abstract partial class Union_78ca48ec41f546e1b1e2a62ad4ddf7ee: OneOfBase<int, double, bool, string, Color>
+public abstract partial class Union1375085303: OneOfBase<int, double, bool, string, Color>
 {
 }
 
@@ -1523,7 +1523,7 @@ public abstract partial class Union_78ca48ec41f546e1b1e2a62ad4ddf7ee: OneOfBase<
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_90f147e13c95491ab18ba5fc72ca5770
+public enum Literals529397140
 {
   /// <summary>
   /// Literal value: or
@@ -1551,7 +1551,7 @@ public enum Literals_90f147e13c95491ab18ba5fc72ca5770
 ///   - button-8
 ///   - button-9
 /// </summary>
-public enum Literals_f895380ef3de4866852d2a0acf932d5b
+public enum Literals387423518
 {
   /// <summary>
   /// Literal value: left
@@ -1614,7 +1614,7 @@ public enum Literals_f895380ef3de4866852d2a0acf932d5b
 ///   - normal
 ///   - underground
 /// </summary>
-public enum Literals_54e70034b6c34502a0659a5162d84fd9
+public enum Literals242308849
 {
   /// <summary>
   /// Literal value: normal
@@ -1636,7 +1636,7 @@ public enum Literals_54e70034b6c34502a0659a5162d84fd9
 ///   - output
 ///   - input-output
 /// </summary>
-public enum Literals_e5fa1ebfda3f4fccad4cb059cea7563c
+public enum Literals902968268
 {
   /// <summary>
   /// Literal value: input
@@ -1663,7 +1663,7 @@ public enum Literals_e5fa1ebfda3f4fccad4cb059cea7563c
 ///   - item
 ///   - fluid
 /// </summary>
-public enum Literals_7cd80bc895a74f9588f803ac48cc4d81
+public enum Literals1128044929
 {
   /// <summary>
   /// Literal value: item
@@ -1680,7 +1680,7 @@ public enum Literals_7cd80bc895a74f9588f803ac48cc4d81
 }
 
 [GenerateOneOf]
-public abstract partial class Union_751b2327c32d4625949efbbd60b76964: OneOfBase<ItemPrototypeFilter, TilePrototypeFilter, EntityPrototypeFilter, FluidPrototypeFilter, RecipePrototypeFilter, DecorativePrototypeFilter, AchievementPrototypeFilter, EquipmentPrototypeFilter, TechnologyPrototypeFilter>
+public abstract partial class Union968246131: OneOfBase<ItemPrototypeFilter, TilePrototypeFilter, EntityPrototypeFilter, FluidPrototypeFilter, RecipePrototypeFilter, DecorativePrototypeFilter, AchievementPrototypeFilter, EquipmentPrototypeFilter, TechnologyPrototypeFilter>
 {
 }
 
@@ -1689,7 +1689,7 @@ public abstract partial class Union_751b2327c32d4625949efbbd60b76964: OneOfBase<
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_9df5b7e351a945ab948c0f1154804260
+public enum Literals1788725629
 {
   /// <summary>
   /// Literal value: or
@@ -1708,7 +1708,7 @@ public enum Literals_9df5b7e351a945ab948c0f1154804260
 /// <summary>
 /// Literal value: water-tile
 /// </summary>
-public enum Literal_1c562ecce6fb4dc5aa9cfc371794af5b
+public enum Literal140891346
 {
   /// <summary>
   /// Literal value: water-tile
@@ -1721,7 +1721,7 @@ public enum Literal_1c562ecce6fb4dc5aa9cfc371794af5b
 /// <summary>
 /// Literal value: ground-tile
 /// </summary>
-public enum Literal_fd3f7d216ca1442fbd36f4b89c7abcd6
+public enum Literal179202654
 {
   /// <summary>
   /// Literal value: ground-tile
@@ -1734,7 +1734,7 @@ public enum Literal_fd3f7d216ca1442fbd36f4b89c7abcd6
 /// <summary>
 /// Literal value: tile-transition
 /// </summary>
-public enum Literal_36a65eb934414941986cd3f7ee3b5ab8
+public enum Literal187448689
 {
   /// <summary>
   /// Literal value: tile-transition
@@ -1747,7 +1747,7 @@ public enum Literal_36a65eb934414941986cd3f7ee3b5ab8
 /// <summary>
 /// Literal value: decals
 /// </summary>
-public enum Literal_bb9f5af784984b01b15c1afeb0cb3928
+public enum Literal158137644
 {
   /// <summary>
   /// Literal value: decals
@@ -1760,7 +1760,7 @@ public enum Literal_bb9f5af784984b01b15c1afeb0cb3928
 /// <summary>
 /// Literal value: lower-radius-visualization
 /// </summary>
-public enum Literal_ee64d133faa24e39b509d0cf7f514494
+public enum Literal179681224
 {
   /// <summary>
   /// Literal value: lower-radius-visualization
@@ -1773,7 +1773,7 @@ public enum Literal_ee64d133faa24e39b509d0cf7f514494
 /// <summary>
 /// Literal value: radius-visualization
 /// </summary>
-public enum Literal_7db984cabdef43bb85db903007ec5a9f
+public enum Literal163883608
 {
   /// <summary>
   /// Literal value: radius-visualization
@@ -1786,7 +1786,7 @@ public enum Literal_7db984cabdef43bb85db903007ec5a9f
 /// <summary>
 /// Literal value: transport-belt-integration
 /// </summary>
-public enum Literal_e44bfd08b5a040b68af3ef91db61525f
+public enum Literal162816687
 {
   /// <summary>
   /// Literal value: transport-belt-integration
@@ -1799,7 +1799,7 @@ public enum Literal_e44bfd08b5a040b68af3ef91db61525f
 /// <summary>
 /// Literal value: resource
 /// </summary>
-public enum Literal_bfdbd174bbb94bae90d8ed6867be3fe4
+public enum Literal147530108
 {
   /// <summary>
   /// Literal value: resource
@@ -1812,7 +1812,7 @@ public enum Literal_bfdbd174bbb94bae90d8ed6867be3fe4
 /// <summary>
 /// Literal value: building-smoke
 /// </summary>
-public enum Literal_a8a3489393664d2d932aed870438f39a
+public enum Literal195981506
 {
   /// <summary>
   /// Literal value: building-smoke
@@ -1825,7 +1825,7 @@ public enum Literal_a8a3489393664d2d932aed870438f39a
 /// <summary>
 /// Literal value: decorative
 /// </summary>
-public enum Literal_740889bcd8774d3698888db2a260496e
+public enum Literal137343370
 {
   /// <summary>
   /// Literal value: decorative
@@ -1838,7 +1838,7 @@ public enum Literal_740889bcd8774d3698888db2a260496e
 /// <summary>
 /// Literal value: ground-patch
 /// </summary>
-public enum Literal_195550fdfe32499f85c14d1405941a2b
+public enum Literal178709848
 {
   /// <summary>
   /// Literal value: ground-patch
@@ -1851,7 +1851,7 @@ public enum Literal_195550fdfe32499f85c14d1405941a2b
 /// <summary>
 /// Literal value: ground-patch-higher
 /// </summary>
-public enum Literal_bc682fb30c7c4f7391a9bec9c203443a
+public enum Literal198607284
 {
   /// <summary>
   /// Literal value: ground-patch-higher
@@ -1864,7 +1864,7 @@ public enum Literal_bc682fb30c7c4f7391a9bec9c203443a
 /// <summary>
 /// Literal value: ground-patch-higher2
 /// </summary>
-public enum Literal_9652374f62804ce7b3b1bfbba1424e63
+public enum Literal163823362
 {
   /// <summary>
   /// Literal value: ground-patch-higher2
@@ -1877,7 +1877,7 @@ public enum Literal_9652374f62804ce7b3b1bfbba1424e63
 /// <summary>
 /// Literal value: remnants
 /// </summary>
-public enum Literal_34887f9292c64666a1007bfac8e8e6a9
+public enum Literal155827127
 {
   /// <summary>
   /// Literal value: remnants
@@ -1890,7 +1890,7 @@ public enum Literal_34887f9292c64666a1007bfac8e8e6a9
 /// <summary>
 /// Literal value: floor
 /// </summary>
-public enum Literal_117ea08fd1ac4871a57210e547144322
+public enum Literal167196968
 {
   /// <summary>
   /// Literal value: floor
@@ -1903,7 +1903,7 @@ public enum Literal_117ea08fd1ac4871a57210e547144322
 /// <summary>
 /// Literal value: transport-belt
 /// </summary>
-public enum Literal_d6a7eb603aac4f59add805d18ea41f22
+public enum Literal146498374
 {
   /// <summary>
   /// Literal value: transport-belt
@@ -1916,7 +1916,7 @@ public enum Literal_d6a7eb603aac4f59add805d18ea41f22
 /// <summary>
 /// Literal value: transport-belt-endings
 /// </summary>
-public enum Literal_d9ab526a4d4d42a8965432e2ad6a87bc
+public enum Literal181859998
 {
   /// <summary>
   /// Literal value: transport-belt-endings
@@ -1929,7 +1929,7 @@ public enum Literal_d9ab526a4d4d42a8965432e2ad6a87bc
 /// <summary>
 /// Literal value: floor-mechanics-under-corpse
 /// </summary>
-public enum Literal_6889daad5e7e4943b8d8a3e049a4e89c
+public enum Literal154715315
 {
   /// <summary>
   /// Literal value: floor-mechanics-under-corpse
@@ -1942,7 +1942,7 @@ public enum Literal_6889daad5e7e4943b8d8a3e049a4e89c
 /// <summary>
 /// Literal value: corpse
 /// </summary>
-public enum Literal_5e427e5d41e34f4e938a1b15de0e8675
+public enum Literal154359727
 {
   /// <summary>
   /// Literal value: corpse
@@ -1955,7 +1955,7 @@ public enum Literal_5e427e5d41e34f4e938a1b15de0e8675
 /// <summary>
 /// Literal value: floor-mechanics
 /// </summary>
-public enum Literal_72dcbebcc3dc4e3ea487cc8b3638b9cb
+public enum Literal174311035
 {
   /// <summary>
   /// Literal value: floor-mechanics
@@ -1968,7 +1968,7 @@ public enum Literal_72dcbebcc3dc4e3ea487cc8b3638b9cb
 /// <summary>
 /// Literal value: item
 /// </summary>
-public enum Literal_c45230bb3b76447386667f56d888fa6e
+public enum Literal140741984
 {
   /// <summary>
   /// Literal value: item
@@ -1981,7 +1981,7 @@ public enum Literal_c45230bb3b76447386667f56d888fa6e
 /// <summary>
 /// Literal value: lower-object
 /// </summary>
-public enum Literal_37cc7032d52248b2a60db2ccb348316e
+public enum Literal174722921
 {
   /// <summary>
   /// Literal value: lower-object
@@ -1994,7 +1994,7 @@ public enum Literal_37cc7032d52248b2a60db2ccb348316e
 /// <summary>
 /// Literal value: transport-belt-circuit-connector
 /// </summary>
-public enum Literal_f67f397e72a94828a7cf933abdf114e0
+public enum Literal191164496
 {
   /// <summary>
   /// Literal value: transport-belt-circuit-connector
@@ -2007,7 +2007,7 @@ public enum Literal_f67f397e72a94828a7cf933abdf114e0
 /// <summary>
 /// Literal value: lower-object-above-shadow
 /// </summary>
-public enum Literal_8773e4f6a322412796487b8a97cdd0ed
+public enum Literal156115335
 {
   /// <summary>
   /// Literal value: lower-object-above-shadow
@@ -2020,7 +2020,7 @@ public enum Literal_8773e4f6a322412796487b8a97cdd0ed
 /// <summary>
 /// Literal value: object
 /// </summary>
-public enum Literal_c6b20f431a544cd790fde8dd6d8be245
+public enum Literal173365926
 {
   /// <summary>
   /// Literal value: object
@@ -2033,7 +2033,7 @@ public enum Literal_c6b20f431a544cd790fde8dd6d8be245
 /// <summary>
 /// Literal value: higher-object-under
 /// </summary>
-public enum Literal_d1f40f91e7fa49faa4b9610c0907e491
+public enum Literal172867191
 {
   /// <summary>
   /// Literal value: higher-object-under
@@ -2046,7 +2046,7 @@ public enum Literal_d1f40f91e7fa49faa4b9610c0907e491
 /// <summary>
 /// Literal value: higher-object-above
 /// </summary>
-public enum Literal_29d99453eecd43d6987b796acbe01342
+public enum Literal192645865
 {
   /// <summary>
   /// Literal value: higher-object-above
@@ -2059,7 +2059,7 @@ public enum Literal_29d99453eecd43d6987b796acbe01342
 /// <summary>
 /// Literal value: item-in-inserter-hand
 /// </summary>
-public enum Literal_c9d0a5a2daad4417af6a184d986e9465
+public enum Literal178508250
 {
   /// <summary>
   /// Literal value: item-in-inserter-hand
@@ -2072,7 +2072,7 @@ public enum Literal_c9d0a5a2daad4417af6a184d986e9465
 /// <summary>
 /// Literal value: wires
 /// </summary>
-public enum Literal_c4942b90387746b69f25faac157a522b
+public enum Literal195408466
 {
   /// <summary>
   /// Literal value: wires
@@ -2085,7 +2085,7 @@ public enum Literal_c4942b90387746b69f25faac157a522b
 /// <summary>
 /// Literal value: wires-above
 /// </summary>
-public enum Literal_676aa9d4a7514c2eac8cfd5891adad37
+public enum Literal150219740
 {
   /// <summary>
   /// Literal value: wires-above
@@ -2098,7 +2098,7 @@ public enum Literal_676aa9d4a7514c2eac8cfd5891adad37
 /// <summary>
 /// Literal value: entity-info-icon
 /// </summary>
-public enum Literal_df0d13b28afe4049a420c631e011fee5
+public enum Literal185855173
 {
   /// <summary>
   /// Literal value: entity-info-icon
@@ -2111,7 +2111,7 @@ public enum Literal_df0d13b28afe4049a420c631e011fee5
 /// <summary>
 /// Literal value: entity-info-icon-above
 /// </summary>
-public enum Literal_1f18c9bdb5294112ab1d4cdf99513911
+public enum Literal199154849
 {
   /// <summary>
   /// Literal value: entity-info-icon-above
@@ -2124,7 +2124,7 @@ public enum Literal_1f18c9bdb5294112ab1d4cdf99513911
 /// <summary>
 /// Literal value: explosion
 /// </summary>
-public enum Literal_6f944eafbda94dc7a53ed3eda54bbd65
+public enum Literal153242005
 {
   /// <summary>
   /// Literal value: explosion
@@ -2137,7 +2137,7 @@ public enum Literal_6f944eafbda94dc7a53ed3eda54bbd65
 /// <summary>
 /// Literal value: projectile
 /// </summary>
-public enum Literal_17c02b6a509f45d98587e1c4f9f40ed7
+public enum Literal137577271
 {
   /// <summary>
   /// Literal value: projectile
@@ -2150,7 +2150,7 @@ public enum Literal_17c02b6a509f45d98587e1c4f9f40ed7
 /// <summary>
 /// Literal value: smoke
 /// </summary>
-public enum Literal_2091d8c04c134ef0ba717b8b88dae43e
+public enum Literal157372564
 {
   /// <summary>
   /// Literal value: smoke
@@ -2163,7 +2163,7 @@ public enum Literal_2091d8c04c134ef0ba717b8b88dae43e
 /// <summary>
 /// Literal value: air-object
 /// </summary>
-public enum Literal_23c41045bff44a559b91ef6198c13fef
+public enum Literal185167446
 {
   /// <summary>
   /// Literal value: air-object
@@ -2176,7 +2176,7 @@ public enum Literal_23c41045bff44a559b91ef6198c13fef
 /// <summary>
 /// Literal value: air-entity-info-icon
 /// </summary>
-public enum Literal_29d080ecfe3a4d1aa641c19856b44eac
+public enum Literal144422504
 {
   /// <summary>
   /// Literal value: air-entity-info-icon
@@ -2189,7 +2189,7 @@ public enum Literal_29d080ecfe3a4d1aa641c19856b44eac
 /// <summary>
 /// Literal value: light-effect
 /// </summary>
-public enum Literal_c33c82f5e13a4c7d862f12af09ad0af8
+public enum Literal172145806
 {
   /// <summary>
   /// Literal value: light-effect
@@ -2202,7 +2202,7 @@ public enum Literal_c33c82f5e13a4c7d862f12af09ad0af8
 /// <summary>
 /// Literal value: selection-box
 /// </summary>
-public enum Literal_d3b3f70af6a645ad9a0927e95577f031
+public enum Literal200058090
 {
   /// <summary>
   /// Literal value: selection-box
@@ -2215,7 +2215,7 @@ public enum Literal_d3b3f70af6a645ad9a0927e95577f031
 /// <summary>
 /// Literal value: higher-selection-box
 /// </summary>
-public enum Literal_173a39a77dec47ea81e90e9d17f82c18
+public enum Literal188595006
 {
   /// <summary>
   /// Literal value: higher-selection-box
@@ -2228,7 +2228,7 @@ public enum Literal_173a39a77dec47ea81e90e9d17f82c18
 /// <summary>
 /// Literal value: collision-selection-box
 /// </summary>
-public enum Literal_35dab9ec8cac41ad8691e9ada6d1f5e3
+public enum Literal195767253
 {
   /// <summary>
   /// Literal value: collision-selection-box
@@ -2241,7 +2241,7 @@ public enum Literal_35dab9ec8cac41ad8691e9ada6d1f5e3
 /// <summary>
 /// Literal value: arrow
 /// </summary>
-public enum Literal_fc9e72c648344fbab46ded719d203777
+public enum Literal193916016
 {
   /// <summary>
   /// Literal value: arrow
@@ -2254,7 +2254,7 @@ public enum Literal_fc9e72c648344fbab46ded719d203777
 /// <summary>
 /// Literal value: cursor
 /// </summary>
-public enum Literal_8e264c5a776e4a08bcfcc07dcb9507c4
+public enum Literal194900047
 {
   /// <summary>
   /// Literal value: cursor
@@ -2265,7 +2265,7 @@ public enum Literal_8e264c5a776e4a08bcfcc07dcb9507c4
 }
 
 [GenerateOneOf]
-public abstract partial class Union_2570cd50128d4b35b85d8a174fdba3f6: OneOfBase<MapPosition, LuaEntity>
+public abstract partial class Union1519844625: OneOfBase<MapPosition, LuaEntity>
 {
 }
 
@@ -2296,7 +2296,7 @@ public abstract partial class Union_2570cd50128d4b35b85d8a174fdba3f6: OneOfBase<
 ///   - entity-ghost
 ///   - tile-ghost
 /// </summary>
-public enum Literals_d927a729968442dc864f0818485f1448
+public enum Literals997873523
 {
   /// <summary>
   /// Literal value: blueprint
@@ -2450,7 +2450,7 @@ public enum Literals_d927a729968442dc864f0818485f1448
 ///   - fluid
 ///   - virtual
 /// </summary>
-public enum Literals_118b30e5bea547bebd2d6dc99210fdb5
+public enum Literals1003234091
 {
   /// <summary>
   /// Literal value: item
@@ -2477,7 +2477,7 @@ public enum Literals_118b30e5bea547bebd2d6dc99210fdb5
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_c6778e3b567e4155be8eb53416a2da4e
+public enum Literals534121020
 {
   /// <summary>
   /// Literal value: or
@@ -2493,7 +2493,7 @@ public enum Literals_c6778e3b567e4155be8eb53416a2da4e
 
 }
 
-public abstract class Tuple_8db8a8e14a2d4e108d30c7aac7c809a7
+public abstract class Tuple55341663
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }
@@ -2508,7 +2508,7 @@ public abstract class Tuple_8db8a8e14a2d4e108d30c7aac7c809a7
 ///   - or
 ///   - and
 /// </summary>
-public enum Literals_244266b47b6744ccb460d2baf27c3f55
+public enum Literals1813090272
 {
   /// <summary>
   /// Literal value: or
@@ -2533,7 +2533,7 @@ public enum Literals_244266b47b6744ccb460d2baf27c3f55
 ///   - stream
 ///   - artillery
 /// </summary>
-public enum Literals_4da71100335d4209b74bf237263fbd5e
+public enum Literals2116331603
 {
   /// <summary>
   /// Literal value: instant
@@ -2580,7 +2580,7 @@ public enum Literals_4da71100335d4209b74bf237263fbd5e
 ///   - line
 ///   - cluster
 /// </summary>
-public enum Literals_4037cc05be5940df8e6aed8340388bd6
+public enum Literals1040721811
 {
   /// <summary>
   /// Literal value: direct
@@ -2613,7 +2613,7 @@ public enum Literals_4037cc05be5940df8e6aed8340388bd6
 ///   - item
 ///   - entity
 /// </summary>
-public enum Literals_7aa5822617ec4df9ad980099663933aa
+public enum Literals1022763971
 {
   /// <summary>
   /// Literal value: item
@@ -2629,7 +2629,7 @@ public enum Literals_7aa5822617ec4df9ad980099663933aa
 
 }
 
-public abstract class Table_ae7c74efa1744aaabe50751cc1d02c3d
+public abstract class Table1185198081
 {
   [FactorioRconAttribute("x")]
   public float X { get; set; }
@@ -2639,7 +2639,7 @@ public abstract class Table_ae7c74efa1744aaabe50751cc1d02c3d
 
 }
 
-public abstract class Tuple_787d79267c5447e59cc4ae7bd22d05af
+public abstract class Tuple31350000
 {
   [FactorioRconAttribute("x")]
   public float X { get; set; }
@@ -2654,7 +2654,7 @@ public abstract class Tuple_787d79267c5447e59cc4ae7bd22d05af
 ///   - and
 ///   - or
 /// </summary>
-public enum Literals_b5151f7570bb42668a35f1ac96350b30
+public enum Literals1563695405
 {
   /// <summary>
   /// Literal value: and
@@ -2670,7 +2670,7 @@ public enum Literals_b5151f7570bb42668a35f1ac96350b30
 
 }
 
-public abstract class Table_d09931ef453c443797e5d8dfd3b9030c
+public abstract class Table680137220
 {
   /// <summary>
   /// Is this level a simulation? (The main menu and 'Tips and tricks' use simulations)
@@ -2705,46 +2705,46 @@ public abstract class Table_d09931ef453c443797e5d8dfd3b9030c
 }
 
 [GenerateOneOf]
-public abstract partial class Union_4e17f928a4e4482bb83638d03fbcdc8f: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
+public abstract partial class Union1692210938: OneOfBase<Action<ConfigurationChangedData>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_aa09c194e9dc4eff891ec735d9ad25c8: OneOfBase<EventsEnum, string>
+public abstract partial class Union710937482: OneOfBase<EventsEnum, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_4470318d2679472ba969104eb1979e13: OneOfBase<EventsEnum, string, List<Union_aa09c194e9dc4eff891ec735d9ad25c8>>
+public abstract partial class Union2129604531: OneOfBase<EventsEnum, string, List<Union710937482>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_b6ad7dcdb5524a18b8a4e3a418e18492: OneOfBase<Action<EventData>, LuaNil>
+public abstract partial class Union315007645: OneOfBase<Action<EventData>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_8306cafc48a54ab1b7c97c91dae280e2: OneOfBase<Action, LuaNil>
+public abstract partial class Union1752619659: OneOfBase<Action, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_db2ef7751a16478bb49e57310524b1b2: OneOfBase<Action<NthTickEventData>, LuaNil>
+public abstract partial class Union1634923196: OneOfBase<Action<NthTickEventData>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_7c97928f054541bbafd4cdc69ec2e568: OneOfBase<uint, List<uint>, LuaNil>
+public abstract partial class Union1101381113: OneOfBase<uint, List<uint>, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_da0ed1bbbc3b4921ab55709fed269140: OneOfBase<LuaEntity, LuaEquipment>
+public abstract partial class Union743135003: OneOfBase<LuaEntity, LuaEquipment>
 {
 }
 
-public abstract class Table_9d31ed9aaa514d3690d47dbc1192fc4c
+public abstract class Table1569856552
 {
   [FactorioRconAttribute("minimum_intensity")]
   public float MinimumIntensity { get; set; }
@@ -2772,7 +2772,7 @@ public abstract class Table_9d31ed9aaa514d3690d47dbc1192fc4c
 
 }
 
-public abstract class Table_47c62baab2ab43be8e9d1a27b9757db9
+public abstract class Table488190010
 {
   /// <summary>
   /// Whether the player is mining at all.
@@ -2789,11 +2789,11 @@ public abstract class Table_47c62baab2ab43be8e9d1a27b9757db9
 }
 
 [GenerateOneOf]
-public abstract partial class Union_d028cf848a3e41399bee2f6283413b41: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
+public abstract partial class Union556307651: OneOfBase<LuaEntity, LuaItemStack, LuaEquipment, LuaEquipmentGrid, LuaPlayer, LuaGuiElement, LuaInventory, LuaTechnology, GuiTypeEnum>
 {
 }
 
-public abstract class Table_4d9e9aaaad804af2b7dc4feca020bae9
+public abstract class Table355616930
 {
   /// <summary>
   /// The current state
@@ -2809,7 +2809,7 @@ public abstract class Table_4d9e9aaaad804af2b7dc4feca020bae9
 
 }
 
-public abstract class Table_bb3fedceb6cd49c28050f58073e9bd18
+public abstract class Table1470394202
 {
   /// <summary>
   /// The current state
@@ -2825,7 +2825,7 @@ public abstract class Table_bb3fedceb6cd49c28050f58073e9bd18
 
 }
 
-public abstract class Table_5ed4534feedd48d9ba81579bad029faf
+public abstract class Table21597213
 {
   /// <summary>
   /// If `false`, the player is currently not walking; otherwise it's going somewhere
@@ -2842,7 +2842,7 @@ public abstract class Table_5ed4534feedd48d9ba81579bad029faf
 }
 
 [GenerateOneOf]
-public abstract partial class Union_37b243a5382942f9835263ece81791a7: OneOfBase<string, LuaRecipe>
+public abstract partial class Union1820209198: OneOfBase<string, LuaRecipe>
 {
 }
 
@@ -2851,7 +2851,7 @@ public abstract partial class Union_37b243a5382942f9835263ece81791a7: OneOfBase<
 ///   - none
 ///   - game-only
 /// </summary>
-public enum Literals_1862a146595243b69805bee796e074b7
+public enum Literals1771935813
 {
   /// <summary>
   /// Literal value: none
@@ -2868,11 +2868,11 @@ public enum Literals_1862a146595243b69805bee796e074b7
 }
 
 [GenerateOneOf]
-public abstract partial class Union_d1756ed7bbb94f24b81c9c60d5875291: OneOfBase<LuaPlayer, PlayerIdentification>
+public abstract partial class Union1438944914: OneOfBase<LuaPlayer, PlayerIdentification>
 {
 }
 
-public abstract class Table_076f09cdf4b3410cb3446dc6f930aac5
+public abstract class Table353604294
 {
   /// <summary>
   /// Array of transport belt connectable entities.
@@ -2894,7 +2894,7 @@ public abstract class Table_076f09cdf4b3410cb3446dc6f930aac5
 ///   - left
 ///   - right
 /// </summary>
-public enum Literals_d21bb27c2a8d45469a288ccdaf32379a
+public enum Literals1220673936
 {
   /// <summary>
   /// Literal value: straight
@@ -2921,7 +2921,7 @@ public enum Literals_d21bb27c2a8d45469a288ccdaf32379a
 ///   - input
 ///   - output
 /// </summary>
-public enum Literals_3d318e70fd8d4f78b03e538f408c5535
+public enum Literals1001297844
 {
   /// <summary>
   /// Literal value: input
@@ -2937,7 +2937,7 @@ public enum Literals_3d318e70fd8d4f78b03e538f408c5535
 
 }
 
-public abstract class Table_4b99b2d7615847229f94112e03df2e78
+public abstract class Table1731990791
 {
   /// <summary>
   /// Entities connected via the red wire.
@@ -2954,7 +2954,7 @@ public abstract class Table_4b99b2d7615847229f94112e03df2e78
 }
 
 [GenerateOneOf]
-public abstract partial class Union_e7a56ebe64354beab1e0ddf2ee1ccc03: OneOfBase<LuaEntityPrototype, LuaTilePrototype>
+public abstract partial class Union2102631962: OneOfBase<LuaEntityPrototype, LuaTilePrototype>
 {
 }
 
@@ -2963,7 +2963,7 @@ public abstract partial class Union_e7a56ebe64354beab1e0ddf2ee1ccc03: OneOfBase<
 ///   - whitelist
 ///   - blacklist
 /// </summary>
-public enum Literals_4110168194d245fab62f04519ae0eb1f
+public enum Literals1273902071
 {
   /// <summary>
   /// Literal value: whitelist
@@ -2984,7 +2984,7 @@ public enum Literals_4110168194d245fab62f04519ae0eb1f
 ///   - input
 ///   - output
 /// </summary>
-public enum Literals_c0ec478fb4c845deb79bce170718baba
+public enum Literals655238774
 {
   /// <summary>
   /// Literal value: input
@@ -3005,7 +3005,7 @@ public enum Literals_c0ec478fb4c845deb79bce170718baba
 ///   - input
 ///   - output
 /// </summary>
-public enum Literals_3e278a5f24a54c8dbf39e8b3b5ef9207
+public enum Literals433719210
 {
   /// <summary>
   /// Literal value: input
@@ -3022,7 +3022,7 @@ public enum Literals_3e278a5f24a54c8dbf39e8b3b5ef9207
 }
 
 [GenerateOneOf]
-public abstract partial class Union_d3519403db13421aac1e515a32d6f12f: OneOfBase<Dictionary<string, List<LuaEntity>>, List<List<LuaEntity>>, LuaEntity>
+public abstract partial class Union858048606: OneOfBase<Dictionary<string, List<LuaEntity>>, List<List<LuaEntity>>, LuaEntity>
 {
 }
 
@@ -3032,7 +3032,7 @@ public abstract partial class Union_d3519403db13421aac1e515a32d6f12f: OneOfBase<
 ///   - none
 ///   - right
 /// </summary>
-public enum Literals_113d00e8aa3a4447ba5bbf354884c491
+public enum Literals1830087994
 {
   /// <summary>
   /// Literal value: left
@@ -3060,7 +3060,7 @@ public enum Literals_113d00e8aa3a4447ba5bbf354884c491
 ///   - none
 ///   - right
 /// </summary>
-public enum Literals_31133a341aea43cebe425769e06cee7e
+public enum Literals1611495367
 {
   /// <summary>
   /// Literal value: left
@@ -3082,7 +3082,7 @@ public enum Literals_31133a341aea43cebe425769e06cee7e
 
 }
 
-public abstract class Table_d18749969ffe4700a32cc5b94c53a5a9
+public abstract class Table2111281640
 {
   [FactorioRconAttribute("speed_modifier")]
   public double SpeedModifier { get; set; }
@@ -3093,52 +3093,52 @@ public abstract class Table_d18749969ffe4700a32cc5b94c53a5a9
 }
 
 [GenerateOneOf]
-public abstract partial class Union_8a50d343c7164149b70ea0646883c088: OneOfBase<LuaEntity, WireConnectionDefinition>
+public abstract partial class Union1965907406: OneOfBase<LuaEntity, WireConnectionDefinition>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_c8da3173acfc432da7664e136c9acf09: OneOfBase<WireTypeEnum, LuaEntity, WireConnectionDefinition>
+public abstract partial class Union1472241118: OneOfBase<WireTypeEnum, LuaEntity, WireConnectionDefinition>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_83fc5900f8fb4d6297b736b235eb6df1: OneOfBase<LuaEntity, LuaPlayer>
+public abstract partial class Union2071282107: OneOfBase<LuaEntity, LuaPlayer>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_f3495b397e884cdf91406db6fd8805fa: OneOfBase<LuaLogisticPoint, Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>>
+public abstract partial class Union1054017618: OneOfBase<LuaLogisticPoint, Dictionary<LogisticMemberIndexEnum, LuaLogisticPoint>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_44fc3faba1b34763a24dca98fb64695b: OneOfBase<LuaEntity, MapPosition>
+public abstract partial class Union1255685706: OneOfBase<LuaEntity, MapPosition>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_fcb6edfa59764045a7a4f2b2e624d5eb: OneOfBase<LuaEntity, PlayerIdentification>
+public abstract partial class Union625685220: OneOfBase<LuaEntity, PlayerIdentification>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_11593840fc074f5181a4e7e97b4b19f2: OneOfBase<string, LuaNil>
+public abstract partial class Union1482032058: OneOfBase<string, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_6d48cd2804bc4ddab1f9992a7df73403: OneOfBase<InfinityInventoryFilter, LuaNil>
+public abstract partial class Union1469139965: OneOfBase<InfinityInventoryFilter, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_2d66a1b0efd5444bb35438967502e377: OneOfBase<InfinityPipeFilter, LuaNil>
+public abstract partial class Union1839542234: OneOfBase<InfinityPipeFilter, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_fbfcb788a7cb48f9ae3068383a32edf8: OneOfBase<string, LuaRecipe, LuaNil>
+public abstract partial class Union1905065866: OneOfBase<string, LuaRecipe, LuaNil>
 {
 }
 
@@ -3147,7 +3147,7 @@ public abstract partial class Union_fbfcb788a7cb48f9ae3068383a32edf8: OneOfBase<
 ///   - heat-water-inside
 ///   - output-to-separate-pipe
 /// </summary>
-public enum Literals_cc6aff98ed0148b7946bc040e232247f
+public enum Literals492296285
 {
   /// <summary>
   /// Literal value: heat-water-inside
@@ -3163,7 +3163,7 @@ public enum Literals_cc6aff98ed0148b7946bc040e232247f
 
 }
 
-public abstract class Table_d36ecafef742466e97c1c21990c58dee
+public abstract class Table1704064688
 {
   [FactorioRconAttribute("smoke_name")]
   public string SmokeName { get; set; }
@@ -3218,7 +3218,7 @@ public abstract class Table_d36ecafef742466e97c1c21990c58dee
 ///   - storage
 ///   - none
 /// </summary>
-public enum Literals_66d63c3db29e4474b577eefcd3246800
+public enum Literals1301859714
 {
   /// <summary>
   /// Literal value: requester
@@ -3258,7 +3258,7 @@ public enum Literals_66d63c3db29e4474b577eefcd3246800
 
 }
 
-public abstract class Table_b7ffa245791a40faa9f2ef050d63ec14
+public abstract class Table757434801
 {
   [FactorioRconAttribute("spawn_and_station_height")]
   public float SpawnAndStationHeight { get; set; }
@@ -3307,7 +3307,7 @@ public abstract class Table_b7ffa245791a40faa9f2ef050d63ec14
 
 }
 
-public abstract class Table_f0e765da70e344e5afbd491d69c5b6fd
+public abstract class Table1302124881
 {
   /// <summary>
   /// Is this entity mineable at all?
@@ -3353,7 +3353,7 @@ public abstract class Table_f0e765da70e344e5afbd491d69c5b6fd
 
 }
 
-public abstract class Table_fb9c59a837994b6f94ae21aa227314f3
+public abstract class Table1284530444
 {
   [FactorioRconAttribute("min")]
   public double Min { get; set; }
@@ -3363,7 +3363,7 @@ public abstract class Table_fb9c59a837994b6f94ae21aa227314f3
 
 }
 
-public abstract class Table_571c574d63714236bb03db5c485d1966
+public abstract class Table1578690530
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
@@ -3373,7 +3373,7 @@ public abstract class Table_571c574d63714236bb03db5c485d1966
 
 }
 
-public abstract class Table_5a376f09d5974df986f40907def76b9e
+public abstract class Table763290999
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
@@ -3390,17 +3390,17 @@ public abstract class Table_5a376f09d5974df986f40907def76b9e
 }
 
 [GenerateOneOf]
-public abstract partial class Union_05bde578e2be4158b08a55fdd8a36084: OneOfBase<ulong, double>
+public abstract partial class Union146196962: OneOfBase<ulong, double>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_8851b6c39888458b865a0fccc865515e: OneOfBase<LuaFluidBoxPrototype, List<LuaFluidBoxPrototype>>
+public abstract partial class Union540022411: OneOfBase<LuaFluidBoxPrototype, List<LuaFluidBoxPrototype>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_f9add580ba07483384b3c67ee8f7666d: OneOfBase<FluidBoxFilterSpec, LuaNil>
+public abstract partial class Union1935002760: OneOfBase<FluidBoxFilterSpec, LuaNil>
 {
 }
 
@@ -3411,7 +3411,7 @@ public abstract partial class Union_f9add580ba07483384b3c67ee8f7666d: OneOfBase<
 ///   - output
 ///   - none
 /// </summary>
-public enum Literals_eabe730238444b4cb89694efe84c8e13
+public enum Literals1554780852
 {
   /// <summary>
   /// Literal value: input
@@ -3440,17 +3440,17 @@ public enum Literals_eabe730238444b4cb89694efe84c8e13
 }
 
 [GenerateOneOf]
-public abstract partial class Union_edd565b708da43f1b33f84dcc346d9b4: OneOfBase<Color, PrintSettings>
+public abstract partial class Union450350245: OneOfBase<Color, PrintSettings>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_412490f2c5744386aebdb9e1132bb1c9: OneOfBase<uint, string>
+public abstract partial class Union1753546597: OneOfBase<uint, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_34e2c1dbf42d4d168ff69c6bef57642e: OneOfBase<TrainStopGoal, RailEnd>
+public abstract partial class Union1008940798: OneOfBase<TrainStopGoal, RailEnd>
 {
 }
 
@@ -3459,7 +3459,7 @@ public abstract partial class Union_34e2c1dbf42d4d168ff69c6bef57642e: OneOfBase<
 ///   - respect-movement-direction
 ///   - any-direction-with-locomotives
 /// </summary>
-public enum Literals_56370bb55a0d4a83b5ae5733012b5acb
+public enum Literals1227008541
 {
   /// <summary>
   /// Literal value: respect-movement-direction
@@ -3476,17 +3476,17 @@ public enum Literals_56370bb55a0d4a83b5ae5733012b5acb
 }
 
 [GenerateOneOf]
-public abstract partial class Union_6f788da5509c4d44b592525b7132eec7: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
+public abstract partial class Union688587078: OneOfBase<TrainPathFinderPathResult, TrainPathAnyGoalResult, TrainPathAllGoalsResult>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_22df73005d794679a76709044270b997: OneOfBase<string, SignalID>
+public abstract partial class Union717714782: OneOfBase<string, SignalID>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_0dbb0f87b0b84fadb7b5778cb553594e: OneOfBase<LuaStyle, string>
+public abstract partial class Union635822706: OneOfBase<LuaStyle, string>
 {
 }
 
@@ -3495,7 +3495,7 @@ public abstract partial class Union_0dbb0f87b0b84fadb7b5778cb553594e: OneOfBase<
 ///   - in-view
 ///   - top-third
 /// </summary>
-public enum Literals_29fcda1f0e554553ab638952ade83c00
+public enum Literals2036261553
 {
   /// <summary>
   /// Literal value: in-view
@@ -3516,7 +3516,7 @@ public enum Literals_29fcda1f0e554553ab638952ade83c00
 ///   - in-view
 ///   - top-third
 /// </summary>
-public enum Literals_bc4e64134af2491c8fdd2a4b683976c5
+public enum Literals341429044
 {
   /// <summary>
   /// Literal value: in-view
@@ -3538,7 +3538,7 @@ public enum Literals_bc4e64134af2491c8fdd2a4b683976c5
 ///   - whitelist
 ///   - blacklist
 /// </summary>
-public enum Literals_775638f40f604ce58b49f0bbf51bc11c
+public enum Literals653127471
 {
   /// <summary>
   /// Literal value: none
@@ -3567,7 +3567,7 @@ public enum Literals_775638f40f604ce58b49f0bbf51bc11c
 ///   - always
 ///   - when-manually-filtered
 /// </summary>
-public enum Literals_645aa0901acb438e9e700bc1745febb5
+public enum Literals567807919
 {
   /// <summary>
   /// Literal value: default
@@ -3602,7 +3602,7 @@ public enum Literals_645aa0901acb438e9e700bc1745febb5
 ///   - turret
 ///   - vehicle
 /// </summary>
-public enum Literals_e0e01151d09542929b97e8ee65f678e2
+public enum Literals563990670
 {
   /// <summary>
   /// Literal value: default
@@ -3637,7 +3637,7 @@ public enum Literals_e0e01151d09542929b97e8ee65f678e2
 ///   - always
 ///   - when-manually-filtered
 /// </summary>
-public enum Literals_b6323f66b53d45c69d713dd05cb008e7
+public enum Literals407331131
 {
   /// <summary>
   /// Literal value: default
@@ -3670,7 +3670,7 @@ public enum Literals_b6323f66b53d45c69d713dd05cb008e7
 ///   - from
 ///   - to
 /// </summary>
-public enum Literals_50d2f06a21244b6aa9ea77a5cb1bcb1d
+public enum Literals413646903
 {
   /// <summary>
   /// Literal value: from
@@ -3687,12 +3687,12 @@ public enum Literals_50d2f06a21244b6aa9ea77a5cb1bcb1d
 }
 
 [GenerateOneOf]
-public abstract partial class Union_9efc1f6a1562494eb3cac3a25d5e19e7: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
+public abstract partial class Union1179171291: OneOfBase<string, LuaEntityPrototype, LuaEntity, LuaNil>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_9ab2202a29f34d2c945625d3c6845fcd: OneOfBase<UpgradeFilter, LuaNil>
+public abstract partial class Union1531392355: OneOfBase<UpgradeFilter, LuaNil>
 {
 }
 
@@ -3701,7 +3701,7 @@ public abstract partial class Union_9ab2202a29f34d2c945625d3c6845fcd: OneOfBase<
 ///   - from
 ///   - to
 /// </summary>
-public enum Literals_5eb0a1cfae7c4bb7b8a1658bac40d5c4
+public enum Literals1959053592
 {
   /// <summary>
   /// Literal value: from
@@ -3718,7 +3718,7 @@ public enum Literals_5eb0a1cfae7c4bb7b8a1658bac40d5c4
 }
 
 [GenerateOneOf]
-public abstract partial class Union_3cc410bfd5db4140b475de746c9729a2: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
+public abstract partial class Union1417124724: OneOfBase<string, LuaTilePrototype, LuaTile, LuaNil>
 {
 }
 
@@ -3727,7 +3727,7 @@ public abstract partial class Union_3cc410bfd5db4140b475de746c9729a2: OneOfBase<
 ///   - storage
 ///   - providers
 /// </summary>
-public enum Literals_9f1becf05f2d42d39eb14abc9d55d521
+public enum Literals1931705229
 {
   /// <summary>
   /// Literal value: storage
@@ -3750,7 +3750,7 @@ public enum Literals_9f1becf05f2d42d39eb14abc9d55d521
 ///   - storage-empty-slot
 ///   - requester
 /// </summary>
-public enum Literals_edf9837d815f425db49121206ad80c9b
+public enum Literals1669006228
 {
   /// <summary>
   /// Literal value: storage
@@ -3785,7 +3785,7 @@ public enum Literals_edf9837d815f425db49121206ad80c9b
 ///   - buffer
 ///   - storage
 /// </summary>
-public enum Literals_939d51da55ea4245a3ecb0867aa50079
+public enum Literals327689276
 {
   /// <summary>
   /// Literal value: active-provider
@@ -3820,7 +3820,7 @@ public enum Literals_939d51da55ea4245a3ecb0867aa50079
 ///   - storage-empty-slot
 ///   - requester
 /// </summary>
-public enum Literals_2830711851bd4a078036b4c0b8ff3341
+public enum Literals1563562784
 {
   /// <summary>
   /// Literal value: storage
@@ -3855,7 +3855,7 @@ public enum Literals_2830711851bd4a078036b4c0b8ff3341
 ///   - buffer
 ///   - storage
 /// </summary>
-public enum Literals_f2027ee26be24e3da3b94bb58fd87418
+public enum Literals1312067510
 {
   /// <summary>
   /// Literal value: active-provider
@@ -3884,37 +3884,37 @@ public enum Literals_f2027ee26be24e3da3b94bb58fd87418
 }
 
 [GenerateOneOf]
-public abstract partial class Union_38deb8f16fc84bfc9d0ab31cb63f2bf3: OneOfBase<List<string>, List<int>, List<double>>
+public abstract partial class Union274698021: OneOfBase<List<string>, List<int>, List<double>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_dbf9bf5a5cd34b82a3c81210b7fa4471: OneOfBase<bool, double, int, string>
+public abstract partial class Union1679387884: OneOfBase<bool, double, int, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_adc134b8d7a04ab98d454599c744aa14: OneOfBase<double, int>
+public abstract partial class Union1858138576: OneOfBase<double, int>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_2ca2a1b7257c41fdbdb085b9c6516f56: OneOfBase<string, uint>
+public abstract partial class Union644139618: OneOfBase<string, uint>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_d36869b73b3e4cbc92cbf5d0af54be06: OneOfBase<string, LuaEntity, LuaEntityPrototype>
+public abstract partial class Union1006022479: OneOfBase<string, LuaEntity, LuaEntityPrototype>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_30152a93cf904d9eaf23d0fcf7791f76: OneOfBase<LuaEntityPrototype, string>
+public abstract partial class Union1302721929: OneOfBase<LuaEntityPrototype, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_92ffa47184d947ac8b4c9c209da80889: OneOfBase<string, LuaItemPrototype, LuaItemStack>
+public abstract partial class Union704096941: OneOfBase<string, LuaItemPrototype, LuaItemStack>
 {
 }
 
@@ -3930,7 +3930,7 @@ public abstract partial class Union_92ffa47184d947ac8b4c9c209da80889: OneOfBase<
 ///   - light
 ///   - animation
 /// </summary>
-public enum Literals_27954f9a214341bea197921d1cb53339
+public enum Literals1960518891
 {
   /// <summary>
   /// Literal value: text
@@ -3989,7 +3989,7 @@ public enum Literals_27954f9a214341bea197921d1cb53339
 }
 
 [GenerateOneOf]
-public abstract partial class Union_4c790a45e9e6460e86c00161c9eb7934: OneOfBase<int, List<int>>
+public abstract partial class Union121104292: OneOfBase<int, List<int>>
 {
 }
 
@@ -3999,7 +3999,7 @@ public abstract partial class Union_4c790a45e9e6460e86c00161c9eb7934: OneOfBase<
 ///   - center
 ///   - right
 /// </summary>
-public enum Literals_eca34a2ba2c24993bee507338874056c
+public enum Literals187107674
 {
   /// <summary>
   /// Literal value: left
@@ -4027,7 +4027,7 @@ public enum Literals_eca34a2ba2c24993bee507338874056c
 ///   - center
 ///   - bottom
 /// </summary>
-public enum Literals_278c78d92ca444bc917eb1487a7cfc67
+public enum Literals337303394
 {
   /// <summary>
   /// Literal value: top
@@ -4050,44 +4050,44 @@ public enum Literals_278c78d92ca444bc917eb1487a7cfc67
 }
 
 [GenerateOneOf]
-public abstract partial class Union_21690fdd97ce41789c7fdc8018f5d180: OneOfBase<LuaForce, string>
+public abstract partial class Union823761782: OneOfBase<LuaForce, string>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_bd48e0568a184bf38262ccf1d6fa1416: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
+public abstract partial class Union1855745007: OneOfBase<CollisionMaskLayer, List<CollisionMaskLayer>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_c874a165234a4726a1a4fe73db72d5da: OneOfBase<DirectionEnum, List<DirectionEnum>>
+public abstract partial class Union760682426: OneOfBase<DirectionEnum, List<DirectionEnum>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_25b19bc2cf594e9aa676a73dead4d952: OneOfBase<ForceIdentification, List<ForceIdentification>>
+public abstract partial class Union1882028352: OneOfBase<ForceIdentification, List<ForceIdentification>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_29be08a5ea8c4b648c32e623ed4405fe: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
+public abstract partial class Union517768072: OneOfBase<string, List<string>, LuaDecorativePrototype, List<LuaDecorativePrototype>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_3c6cb1a644c54d8da1e7a14cd8c8ac85: OneOfBase<CollisionMaskWithFlags, List<string>>
+public abstract partial class Union806029378: OneOfBase<CollisionMaskWithFlags, List<string>>
 {
 }
 
 [GenerateOneOf]
-public abstract partial class Union_f624c0318fcb470da8d4c0fe44db04d3: OneOfBase<string, LuaTilePrototype>
+public abstract partial class Union841622382: OneOfBase<string, LuaTilePrototype>
 {
 }
 
 /// <summary>
 /// Literal value: abort_on_collision
 /// </summary>
-public enum Literal_7ceb2527af8b4cc58162f398a3ed6219
+public enum Literal200313270
 {
   /// <summary>
   /// Literal value: abort_on_collision
@@ -4098,11 +4098,11 @@ public enum Literal_7ceb2527af8b4cc58162f398a3ed6219
 }
 
 [GenerateOneOf]
-public abstract partial class Union_30148163e33345a0963a773335e3a771: OneOfBase<bool, Literal_7ceb2527af8b4cc58162f398a3ed6219>
+public abstract partial class Union668880997: OneOfBase<bool, Literal200313270>
 {
 }
 
-public abstract class Table_3c9dda599e4f447780ce267b44a4f1f5
+public abstract class Table1384551241
 {
   /// <summary>
   /// Is this tile mineable at all?
@@ -4130,7 +4130,7 @@ public abstract class Table_3c9dda599e4f447780ce267b44a4f1f5
 
 }
 
-public abstract class Table_32755f10ea844e01a3f5507de2d4f902
+public abstract class Table788586655
 {
   /// <summary>
   /// Array of locomotives.

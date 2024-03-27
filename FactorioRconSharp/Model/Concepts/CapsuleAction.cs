@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class CapsuleAction
 {
   [FactorioRconAttribute("type")]
-  public Literals_4c8639f91f544c8db1a09c2b38a3e100 Type { get; set; }
+  public Literals592678207 Type { get; set; }
 
 }
 

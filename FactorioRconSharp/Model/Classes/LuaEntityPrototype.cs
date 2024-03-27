@@ -74,7 +74,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// Whether this entity is minable and what can be obtained by mining it.
   /// </summary>
   [FactorioRconAttribute("mineable_properties")]
-  public Table_f0e765da70e344e5afbd491d69c5b6fd MineableProperties { get; private set; }
+  public Table1302124881 MineableProperties { get; private set; }
 
   /// <summary>
   /// Items that when placed will produce this entity, if any. Construction bots will choose the first item in the list to build this entity.
@@ -263,7 +263,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The spawning cooldown for this enemy spawner prototype.
   /// </summary>
   [FactorioRconAttribute("spawn_cooldown")]
-  public Table_fb9c59a837994b6f94ae21aa227314f3 SpawnCooldown { get; private set; }
+  public Table1284530444 SpawnCooldown { get; private set; }
 
   /// <summary>
   /// The mining radius of this mining drill prototype.
@@ -281,7 +281,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The logistic mode of this logistic container.
   /// </summary>
   [FactorioRconAttribute("logistic_mode")]
-  public Literals_66d63c3db29e4474b577eefcd3246800 LogisticMode { get; private set; }
+  public Literals1301859714 LogisticMode { get; private set; }
 
   /// <summary>
   /// The max underground distance for underground belts and underground pipes.
@@ -323,7 +323,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The smoke trigger run when this entity is built, if any.
   /// </summary>
   [FactorioRconAttribute("created_smoke")]
-  public Table_d36ecafef742466e97c1c21990c58dee CreatedSmoke { get; private set; }
+  public Table1704064688 CreatedSmoke { get; private set; }
 
   /// <summary>
   /// The trigger to run when this entity is created, if any.
@@ -635,7 +635,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The boiler operation mode of this boiler prototype.
   /// </summary>
   [FactorioRconAttribute("boiler_mode")]
-  public Literals_cc6aff98ed0148b7946bc040e232247f BoilerMode { get; private set; }
+  public Literals492296285 BoilerMode { get; private set; }
 
   /// <summary>
   /// The fluid this offshore pump produces.
@@ -1254,7 +1254,7 @@ public abstract class LuaEntityPrototype: LuaObject
   /// The logistic parameters for this roboport.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table_b7ffa245791a40faa9f2ef050d63ec14 LogisticParameters { get; private set; }
+  public Table757434801 LogisticParameters { get; private set; }
 
   /// <summary>
   /// The height of this spider vehicle prototype.

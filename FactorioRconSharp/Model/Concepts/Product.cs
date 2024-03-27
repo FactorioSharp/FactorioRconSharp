@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class Product
 {
   [FactorioRconAttribute("type")]
-  public Literals_7cd80bc895a74f9588f803ac48cc4d81 Type { get; set; }
+  public Literals1128044929 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the result.
@@ -32,13 +32,13 @@ public abstract class Product
   /// Minimal amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_min")]
-  public Union_daa813044b6c4683b39a27e063f1b65c AmountMin { get; set; }
+  public Union1169259469 AmountMin { get; set; }
 
   /// <summary>
   /// Maximum amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_max")]
-  public Union_daa813044b6c4683b39a27e063f1b65c AmountMax { get; set; }
+  public Union1169259469 AmountMax { get; set; }
 
   /// <summary>
   /// A value in range [0, 1]. Item or fluid is only given with this probability; otherwise no product is produced.
@@ -50,7 +50,7 @@ public abstract class Product
   /// How much of this product is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union_daa813044b6c4683b39a27e063f1b65c CatalystAmount { get; set; }
+  public Union1169259469 CatalystAmount { get; set; }
 
 }
 

@@ -53,25 +53,25 @@ public abstract class LuaModSettingPrototype: LuaObject
   /// The default value of this setting.
   /// </summary>
   [FactorioRconAttribute("default_value")]
-  public Union_dbf9bf5a5cd34b82a3c81210b7fa4471 DefaultValue { get; private set; }
+  public Union1679387884 DefaultValue { get; private set; }
 
   /// <summary>
   /// The minimum value for this setting. `nil` if this setting type doesn't support a minimum.
   /// </summary>
   [FactorioRconAttribute("minimum_value")]
-  public Union_adc134b8d7a04ab98d454599c744aa14 MinimumValue { get; private set; }
+  public Union1858138576 MinimumValue { get; private set; }
 
   /// <summary>
   /// The maximum value for this setting. `nil` if this setting type doesn't support a maximum.
   /// </summary>
   [FactorioRconAttribute("maximum_value")]
-  public Union_adc134b8d7a04ab98d454599c744aa14 MaximumValue { get; private set; }
+  public Union1858138576 MaximumValue { get; private set; }
 
   /// <summary>
   /// The allowed values for this setting. `nil` if this setting doesn't use the a fixed set of values.
   /// </summary>
   [FactorioRconAttribute("allowed_values")]
-  public Union_38deb8f16fc84bfc9d0ab31cb63f2bf3 AllowedValues { get; private set; }
+  public Union274698021 AllowedValues { get; private set; }
 
   /// <summary>
   /// Whether this string setting allows blank values. `nil` if not a string setting.

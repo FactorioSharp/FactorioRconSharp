@@ -26,7 +26,7 @@ public abstract class LuaScriptRaisedBuiltEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_824204dd843d4b6db29224b9e417f0ea Mode { get; set; }
+  public Literals1295393118 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

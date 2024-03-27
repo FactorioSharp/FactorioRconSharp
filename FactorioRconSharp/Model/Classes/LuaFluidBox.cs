@@ -62,7 +62,7 @@ public abstract class LuaFluidBox: LuaObject
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_prototype")]
-  public abstract Union_8851b6c39888458b865a0fccc865515e GetPrototype(uint index);
+  public abstract Union540022411 GetPrototype(uint index);
 
   /// <summary>
   /// The capacity of the given fluidbox index.
@@ -101,7 +101,7 @@ public abstract class LuaFluidBox: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public abstract bool SetFilter(uint index, Union_f9add580ba07483384b3c67ee8f7666d filter);
+  public abstract bool SetFilter(uint index, Union1935002760 filter);
 
   /// <summary>
   /// Flow through the fluidbox in the last tick. It is the larger of in-flow and out-flow.

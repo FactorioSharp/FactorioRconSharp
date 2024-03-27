@@ -198,7 +198,7 @@ public abstract class LuaEntity: LuaObject
   /// The prototype of the entity or tile contained in this ghost.
   /// </summary>
   [FactorioRconAttribute("ghost_prototype")]
-  public Union_e7a56ebe64354beab1e0ddf2ee1ccc03 GhostPrototype { get; private set; }
+  public Union2102631962 GhostPrototype { get; private set; }
 
   /// <summary>
   /// Position where the entity puts its stuff.
@@ -276,13 +276,13 @@ public abstract class LuaEntity: LuaObject
   /// - When called on a cliff entity, this is a dictionary of all connections indexed by the connection direction "north", "south", "east", and "west".
   /// </summary>
   [FactorioRconAttribute("neighbours")]
-  public Union_d3519403db13421aac1e515a32d6f12f Neighbours { get; private set; }
+  public Union858048606 Neighbours { get; private set; }
 
   /// <summary>
   /// The belt connectable neighbours of this belt connectable entity. Only entities that input to or are outputs of this entity. Does not contain the other end of an underground belt, see <see cref="LuaEntity.Neighbours" /> for that.
   /// </summary>
   [FactorioRconAttribute("belt_neighbours")]
-  public Table_076f09cdf4b3410cb3446dc6f930aac5 BeltNeighbours { get; private set; }
+  public Table353604294 BeltNeighbours { get; private set; }
 
   /// <summary>
   /// Fluidboxes of this entity.
@@ -387,13 +387,13 @@ public abstract class LuaEntity: LuaObject
   /// Whether this underground belt goes into or out of the ground.
   /// </summary>
   [FactorioRconAttribute("belt_to_ground_type")]
-  public Literals_3d318e70fd8d4f78b03e538f408c5535 BeltToGroundType { get; private set; }
+  public Literals1001297844 BeltToGroundType { get; private set; }
 
   /// <summary>
   /// Whether this loader gets items from or puts item into a container.
   /// </summary>
   [FactorioRconAttribute("loader_type")]
-  public Literals_3e278a5f24a54c8dbf39e8b3b5ef9207 LoaderType { get; set; }
+  public Literals433719210 LoaderType { get; set; }
 
   /// <summary>
   /// Number of rocket parts in the silo.
@@ -449,7 +449,7 @@ public abstract class LuaEntity: LuaObject
   /// Reading this property will return a <see cref="PlayerIdentification" /> can be used when writing.
   /// </summary>
   [FactorioRconAttribute("last_user")]
-  public Union_d1756ed7bbb94f24b81c9c60d5875291 LastUser { get; set; }
+  public Union1438944914 LastUser { get; set; }
 
   /// <summary>
   /// The buffer size for the electric energy source. `nil` if the entity doesn't have an electric energy source.
@@ -553,7 +553,7 @@ public abstract class LuaEntity: LuaObject
   /// Entities that are directly connected to this entity via the circuit network. `nil` if this entity can't be connected to the circuit network.
   /// </summary>
   [FactorioRconAttribute("circuit_connected_entities")]
-  public Table_4b99b2d7615847229f94112e03df2e78 CircuitConnectedEntities { get; private set; }
+  public Table1731990791 CircuitConnectedEntities { get; private set; }
 
   /// <summary>
   /// The connection definition for entities that are directly connected to this entity via the circuit network. `nil` if this entity can't be connected to the circuit network.
@@ -667,7 +667,7 @@ public abstract class LuaEntity: LuaObject
   /// The vehicle modifiers applied to this entity through the attached stickers.
   /// </summary>
   [FactorioRconAttribute("sticker_vehicle_modifiers")]
-  public Table_d18749969ffe4700a32cc5b94c53a5a9 StickerVehicleModifiers { get; private set; }
+  public Table2111281640 StickerVehicleModifiers { get; private set; }
 
   [FactorioRconAttribute("parameters")]
   public ProgrammableSpeakerParameters Parameters { get; set; }
@@ -776,7 +776,7 @@ public abstract class LuaEntity: LuaObject
   /// Reading this property will return a <see cref="PlayerIdentification" /> can be used when writing.
   /// </summary>
   [FactorioRconAttribute("associated_player")]
-  public Union_d1756ed7bbb94f24b81c9c60d5875291 AssociatedPlayer { get; set; }
+  public Union1438944914 AssociatedPlayer { get; set; }
 
   /// <summary>
   /// The last tick this character entity was attacked.
@@ -800,19 +800,19 @@ public abstract class LuaEntity: LuaObject
   /// The filter mode for this filter inserter. `nil` if this inserter doesn't use filters.
   /// </summary>
   [FactorioRconAttribute("inserter_filter_mode")]
-  public Literals_4110168194d245fab62f04519ae0eb1f InserterFilterMode { get; set; }
+  public Literals1273902071 InserterFilterMode { get; set; }
 
   /// <summary>
   /// The input priority for this splitter.
   /// </summary>
   [FactorioRconAttribute("splitter_input_priority")]
-  public Literals_113d00e8aa3a4447ba5bbf354884c491 SplitterInputPriority { get; set; }
+  public Literals1830087994 SplitterInputPriority { get; set; }
 
   /// <summary>
   /// The output priority for this splitter.
   /// </summary>
   [FactorioRconAttribute("splitter_output_priority")]
-  public Literals_31133a341aea43cebe425769e06cee7e SplitterOutputPriority { get; set; }
+  public Literals1611495367 SplitterOutputPriority { get; set; }
 
   /// <summary>
   /// Whether this land mine is armed.
@@ -892,7 +892,7 @@ public abstract class LuaEntity: LuaObject
   /// Reading this property will return a <see cref="PlayerIdentification" /> can be used when writing.
   /// </summary>
   [FactorioRconAttribute("render_player")]
-  public Union_d1756ed7bbb94f24b81c9c60d5875291 RenderPlayer { get; set; }
+  public Union1438944914 RenderPlayer { get; set; }
 
   /// <summary>
   /// The forces that this `simple-entity-with-owner`, `simple-entity-with-force`, or `flying-text` is visible to. `nil` or an empty array when this entity is rendered for all forces.
@@ -1060,7 +1060,7 @@ public abstract class LuaEntity: LuaObject
   /// Type of linked belt. Changing type will also flip direction so the belt is out of the same side.
   /// </summary>
   [FactorioRconAttribute("linked_belt_type")]
-  public Literals_c0ec478fb4c845deb79bce170718baba LinkedBeltType { get; set; }
+  public Literals655238774 LinkedBeltType { get; set; }
 
   /// <summary>
   /// Neighbour to which this linked belt is connected to, if any.
@@ -1108,7 +1108,7 @@ public abstract class LuaEntity: LuaObject
   /// Gives what is the current shape of a transport-belt.
   /// </summary>
   [FactorioRconAttribute("belt_shape")]
-  public Literals_d21bb27c2a8d45469a288ccdaf32379a BeltShape { get; private set; }
+  public Literals1220673936 BeltShape { get; private set; }
 
   /// <summary>
   /// Returns a <see cref="LuaGameScript.Print" /> it will ping the location of the entity.
@@ -1263,7 +1263,7 @@ public abstract class LuaEntity: LuaObject
   /// </summary>
   /// <param name="target">Lua name: target</param>
   [FactorioRconMethod("connect_neighbour")]
-  public abstract bool ConnectNeighbour(Union_8a50d343c7164149b70ea0646883c088 target);
+  public abstract bool ConnectNeighbour(Union1965907406 target);
 
   /// <summary>
   /// Disconnect circuit wires or copper cables between devices. Depending on which type of connection should be cut, there are different procedures:
@@ -1275,7 +1275,7 @@ public abstract class LuaEntity: LuaObject
   /// </summary>
   /// <param name="target">Lua name: target</param>
   [FactorioRconMethod("disconnect_neighbour")]
-  public abstract void DisconnectNeighbour(Union_c8da3173acfc432da7664e136c9acf09? target = null);
+  public abstract void DisconnectNeighbour(Union1472241118? target = null);
 
   /// <summary>
   /// Sets the entity to be deconstructed by construction robots.
@@ -1530,7 +1530,7 @@ public abstract class LuaEntity: LuaObject
   /// <param name="slotIndex">Lua name: slot_index</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("set_filter")]
-  public abstract void SetFilter(uint slotIndex, Union_11593840fc074f5181a4e7e97b4b19f2 item);
+  public abstract void SetFilter(uint slotIndex, Union1482032058 item);
 
   /// <summary>
   /// Gets the filter for this infinity container at the given index, or `nil` if the filter index doesn't exist or is empty.
@@ -1545,7 +1545,7 @@ public abstract class LuaEntity: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_container_filter")]
-  public abstract void SetInfinityContainerFilter(uint index, Union_6d48cd2804bc4ddab1f9992a7df73403 filter);
+  public abstract void SetInfinityContainerFilter(uint index, Union1469139965 filter);
 
   /// <summary>
   /// Gets the filter for this infinity pipe, or `nil` if the filter is empty.
@@ -1558,7 +1558,7 @@ public abstract class LuaEntity: LuaObject
   /// </summary>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_pipe_filter")]
-  public abstract void SetInfinityPipeFilter(Union_2d66a1b0efd5444bb35438967502e377 filter);
+  public abstract void SetInfinityPipeFilter(Union1839542234 filter);
 
   /// <summary>
   /// Gets the heat setting for this heat interface.
@@ -1627,7 +1627,7 @@ public abstract class LuaEntity: LuaObject
   /// </remarks>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_logistic_point")]
-  public abstract Union_f3495b397e884cdf91406db6fd8805fa? GetLogisticPoint(LogisticMemberIndexEnum? index = null);
+  public abstract Union1054017618? GetLogisticPoint(LogisticMemberIndexEnum? index = null);
 
   /// <summary>
   /// Plays a note with the given instrument and note.
@@ -1668,7 +1668,7 @@ public abstract class LuaEntity: LuaObject
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("set_recipe")]
-  public abstract Dictionary<string, uint> SetRecipe(Union_fbfcb788a7cb48f9ae3068383a32edf8 recipe);
+  public abstract Dictionary<string, uint> SetRecipe(Union1905065866 recipe);
 
   /// <summary>
   /// Rotates this entity as if the player rotated it.
@@ -1685,7 +1685,7 @@ public abstract class LuaEntity: LuaObject
   /// Gets the driver of this vehicle if any.
   /// </summary>
   [FactorioRconMethod("get_driver")]
-  public abstract Union_83fc5900f8fb4d6297b736b235eb6df1? GetDriver();
+  public abstract Union2071282107? GetDriver();
 
   /// <summary>
   /// Sets the driver of this vehicle.
@@ -1695,7 +1695,7 @@ public abstract class LuaEntity: LuaObject
   /// </remarks>
   /// <param name="driver">Lua name: driver</param>
   [FactorioRconMethod("set_driver")]
-  public abstract void SetDriver(Union_fcb6edfa59764045a7a4f2b2e624d5eb? driver = null);
+  public abstract void SetDriver(Union625685220? driver = null);
 
   /// <summary>
   /// Gets the passenger of this car or spidertron if any.
@@ -1704,7 +1704,7 @@ public abstract class LuaEntity: LuaObject
   /// This differs over <see cref="LuaEntity.GetDriver" /> in that the passenger can't drive the car.
   /// </remarks>
   [FactorioRconMethod("get_passenger")]
-  public abstract Union_83fc5900f8fb4d6297b736b235eb6df1? GetPassenger();
+  public abstract Union2071282107? GetPassenger();
 
   /// <summary>
   /// Sets the passenger of this car or spidertron.
@@ -1714,7 +1714,7 @@ public abstract class LuaEntity: LuaObject
   /// </remarks>
   /// <param name="passenger">Lua name: passenger</param>
   [FactorioRconMethod("set_passenger")]
-  public abstract void SetPassenger(Union_fcb6edfa59764045a7a4f2b2e624d5eb? passenger = null);
+  public abstract void SetPassenger(Union625685220? passenger = null);
 
   /// <summary>
   /// Returns `true` if this entity produces or consumes electricity and is connected to an electric network that has at least one entity that can produce power.
@@ -1801,7 +1801,7 @@ public abstract class LuaEntity: LuaObject
   /// </summary>
   /// <param name="source">Lua name: source</param>
   [FactorioRconMethod("set_beam_source")]
-  public abstract void SetBeamSource(Union_44fc3faba1b34763a24dca98fb64695b source);
+  public abstract void SetBeamSource(Union1255685706 source);
 
   /// <summary>
   /// Get the target of this beam.
@@ -1814,7 +1814,7 @@ public abstract class LuaEntity: LuaObject
   /// </summary>
   /// <param name="target">Lua name: target</param>
   [FactorioRconMethod("set_beam_target")]
-  public abstract void SetBeamTarget(Union_44fc3faba1b34763a24dca98fb64695b target);
+  public abstract void SetBeamTarget(Union1255685706 target);
 
   /// <summary>
   /// The radius of this entity.

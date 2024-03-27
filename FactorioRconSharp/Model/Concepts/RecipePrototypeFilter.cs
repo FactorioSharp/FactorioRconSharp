@@ -26,7 +26,7 @@ public abstract class RecipePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_9df5b7e351a945ab948c0f1154804260 Mode { get; set; }
+  public Literals1788725629 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

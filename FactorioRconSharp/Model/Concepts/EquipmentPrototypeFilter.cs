@@ -26,7 +26,7 @@ public abstract class EquipmentPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_208c75aa84fd4dd6818851f2d640091b Mode { get; set; }
+  public Literals2143437618 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

@@ -425,7 +425,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
     {
-        string name = GenerateUniqueTypeName("Literal");
+        string name = GenerateUniqueTypeName("Literal", literalType);
 
         return new FactorioModelEnum
         {
@@ -447,7 +447,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
     {
-        string name = GenerateUniqueTypeName("Struct");
+        string name = GenerateUniqueTypeName("Struct", structType);
         return new FactorioModelClass
         {
             Name = name,
@@ -457,7 +457,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
     {
-        string name = GenerateUniqueTypeName("Table");
+        string name = GenerateUniqueTypeName("Table", tableType);
         return new FactorioModelClass
         {
             Name = name,
@@ -467,7 +467,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
     {
-        string name = GenerateUniqueTypeName("Tuple");
+        string name = GenerateUniqueTypeName("Tuple", tupleType);
         return new FactorioModelClass
         {
             Name = name,
@@ -481,7 +481,7 @@ public class FactorioModelFileCompiler
         {
             return new FactorioModelEnum
             {
-                Name = GenerateUniqueTypeName("Literals"),
+                Name = GenerateUniqueTypeName("Literals", unionType),
                 Documentation = new FactorioModelDocumentation { Summary = $"Union of literals:{string.Join("", literals.Select(l => $"{Environment.NewLine}  - {l.Value}"))}" },
                 Values = literals.Select(CompileLiteralValue)
                     .GroupBy(v => v.Name)
@@ -501,7 +501,7 @@ public class FactorioModelFileCompiler
 
         return new FactorioModelClass
         {
-            Name = GenerateUniqueTypeName("Union"),
+            Name = GenerateUniqueTypeName("Union", unionType),
             BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
             Attributes = ["GenerateOneOf"],
             IsPartial = true,
@@ -511,5 +511,5 @@ public class FactorioModelFileCompiler
 
     static int GetTypeId(FactorioRuntimeTypeSpecification type) => type.GetHashCode();
 
-    static string GenerateUniqueTypeName(string name) => $"{name}_{Guid.NewGuid():N}";
+    static string GenerateUniqueTypeName(string name, FactorioRuntimeTypeSpecification type) => $"{name}{Math.Abs(type.GetHashCode())}";
 }
