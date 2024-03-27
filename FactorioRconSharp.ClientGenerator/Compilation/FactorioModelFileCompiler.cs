@@ -48,10 +48,13 @@ public class FactorioModelFileCompiler
         return CompileDefinition(definition);
     }
 
-    FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls) =>
-        new()
+    FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls)
+    {
+        string name = ReplaceInvalidIdentifierCharacters(cls.Name).ToPascalCase();
+
+        return new FactorioModelClass
         {
-            Name = ReplaceInvalidIdentifierCharacters(cls.Name).ToPascalCase(),
+            Name = name,
             LuaName = cls.Name,
             Documentation = new FactorioModelDocumentation
             {
@@ -60,15 +63,18 @@ public class FactorioModelFileCompiler
             BaseClass = "LuaObject",
             IsFactorioClass = true,
             Properties = cls.Attributes.OrderBy(a => a.Order)
-                .Select(CompileProperty)
+                .Select(a => CompileProperty(a, name))
                 .Concat(cls.Operators.Where(o => o.Name != FactorioRuntimeOperatorName.Index).Select(CompileProperty))
                 .ToArray(),
             Operators = cls.Operators.OrderBy(o => o.Order).Where(o => o.Name == FactorioRuntimeOperatorName.Index).Select(CompileOperator).ToArray(),
             Methods = cls.Methods.OrderBy(m => m.Order).Select(CompileMethod).ToArray()
         };
+    }
 
     FactorioModelTopLevelStatement CompileConcept(FactorioRuntimeConceptSpecification concept)
     {
+        string name = ReplaceInvalidIdentifierCharacters(concept.Name).ToPascalCase();
+
         FactorioModelTopLevelStatement symbol;
         switch (concept.Type)
         {
@@ -78,30 +84,30 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeKeyValueTypeSpecification:
                 symbol = new FactorioModelClass
                 {
-                    Name = "",
+                    Name = name,
                     BaseClass = BuildTypeName(concept.Type)
                 };
                 break;
             case FactorioRuntimeLiteralTypeSpecification literalType:
-                symbol = CompileLiteralType(literalType);
+                symbol = CompileLiteralType(literalType, name);
                 break;
             case FactorioRuntimeStructTypeSpecification structType:
-                symbol = CompileStructType(structType);
+                symbol = CompileStructType(structType, name);
                 break;
             case FactorioRuntimeTableTypeSpecification tableType:
-                symbol = CompileTableType(tableType);
+                symbol = CompileTableType(tableType, name);
                 break;
             case FactorioRuntimeTupleTypeSpecification tupleType:
-                symbol = CompileTupleType(tupleType);
+                symbol = CompileTupleType(tupleType, name);
                 break;
             case FactorioRuntimeUnionTypeSpecification unionType:
-                symbol = CompileUnionType(unionType);
+                symbol = CompileUnionType(unionType, name);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
 
-        symbol.Name = ReplaceInvalidIdentifierCharacters(concept.Name).ToPascalCase();
+        symbol.Name = name;
         symbol.LuaName = concept.Name;
         symbol.Documentation = new FactorioModelDocumentation
         {
@@ -150,10 +156,17 @@ public class FactorioModelFileCompiler
             Documentation = new FactorioModelDocumentation { Summary = definitionValue.Description }
         };
 
-    FactorioModelClassProperty CompileProperty(FactorioRuntimeAttributeSpecification attribute) =>
-        new()
+    FactorioModelClassProperty CompileProperty(FactorioRuntimeAttributeSpecification attribute, string className)
+    {
+        string name = ReplaceInvalidIdentifierCharacters(attribute.Name).ToPascalCase();
+        if (name == className)
         {
-            Name = ReplaceInvalidIdentifierCharacters(attribute.Name).ToPascalCase(),
+            name = $"{name}Prop";
+        }
+
+        return new FactorioModelClassProperty
+        {
+            Name = name,
             LuaName = attribute.Name,
             Documentation = new FactorioModelDocumentation { Summary = attribute.Description },
             Type = BuildTypeName(attribute.Type),
@@ -161,6 +174,7 @@ public class FactorioModelFileCompiler
             Read = attribute.Read,
             Write = attribute.Write
         };
+    }
 
     FactorioModelClassProperty CompileProperty(FactorioRuntimeOperatorSpecification op) =>
         new()
@@ -184,10 +198,17 @@ public class FactorioModelFileCompiler
             Write = op.Write
         };
 
-    FactorioModelClassProperty CompileProperty(FactorioRuntimeParameterSpecification parameter) =>
-        new()
+    FactorioModelClassProperty CompileProperty(FactorioRuntimeParameterSpecification parameter, string className)
+    {
+        string name = ReplaceInvalidIdentifierCharacters(parameter.Name).ToPascalCase();
+        if (name == className)
         {
-            Name = ReplaceInvalidIdentifierCharacters(parameter.Name).ToPascalCase(),
+            name = $"{name}Prop";
+        }
+
+        return new FactorioModelClassProperty
+        {
+            Name = name,
             LuaName = parameter.Name,
             Documentation = new FactorioModelDocumentation { Summary = parameter.Description },
             Type = BuildTypeName(parameter.Type),
@@ -195,6 +216,7 @@ public class FactorioModelFileCompiler
             Read = true,
             Write = true
         };
+    }
 
     FactorioModelClassOperator CompileOperator(FactorioRuntimeOperatorSpecification op) =>
         new()
@@ -423,9 +445,9 @@ public class FactorioModelFileCompiler
         return result;
     }
 
-    FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
+    FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType, string? className = null)
     {
-        string name = GenerateUniqueTypeName("Literal", literalType);
+        string name = className ?? GenerateUniqueTypeName("Literal", literalType);
 
         return new FactorioModelEnum
         {
@@ -445,43 +467,43 @@ public class FactorioModelFileCompiler
         };
     }
 
-    FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
+    FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType, string? className = null)
     {
-        string name = GenerateUniqueTypeName("Struct", structType);
+        string name = className ?? GenerateUniqueTypeName("Struct", structType);
         return new FactorioModelClass
         {
             Name = name,
-            Properties = structType.Attributes.OrderBy(a => a.Order).Select(CompileProperty).ToArray()
+            Properties = structType.Attributes.OrderBy(a => a.Order).Select(a => CompileProperty(a, name)).ToArray()
         };
     }
 
-    FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
+    FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType, string? className = null)
     {
-        string name = GenerateUniqueTypeName("Table", tableType);
+        string name = className ?? GenerateUniqueTypeName("Table", tableType);
         return new FactorioModelClass
         {
             Name = name,
-            Properties = tableType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
+            Properties = tableType.Parameters.OrderBy(p => p.Order).Select(p => CompileProperty(p, name)).ToArray()
         };
     }
 
-    FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
+    FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType, string? className = null)
     {
-        string name = GenerateUniqueTypeName("Tuple", tupleType);
+        string name = className ?? GenerateUniqueTypeName("Tuple", tupleType);
         return new FactorioModelClass
         {
             Name = name,
-            Properties = tupleType.Parameters.OrderBy(p => p.Order).Select(CompileProperty).ToArray()
+            Properties = tupleType.Parameters.OrderBy(p => p.Order).Select(p => CompileProperty(p, name)).ToArray()
         };
     }
 
-    FactorioModelTopLevelStatement CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType)
+    FactorioModelTopLevelStatement CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType, string? className = null)
     {
         if (unionType.IsUnionOfLiterals(out FactorioRuntimeLiteralTypeSpecification[] literals))
         {
             return new FactorioModelEnum
             {
-                Name = GenerateUniqueTypeName("Literals", unionType),
+                Name = className ?? GenerateUniqueTypeName("Literals", unionType),
                 Documentation = new FactorioModelDocumentation { Summary = $"Union of literals:{string.Join("", literals.Select(l => $"{Environment.NewLine}  - {l.Value}"))}" },
                 Values = literals.Select(CompileLiteralValue)
                     .GroupBy(v => v.Name)

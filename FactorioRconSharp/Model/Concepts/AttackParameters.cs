@@ -17,7 +17,7 @@ public abstract class AttackParameters
   /// The type of AttackParameter.
   /// </summary>
   [FactorioRconAttribute("type")]
-  public Literals1235683434 Type { get; set; }
+  public Literals1868712475 Type { get; set; }
 
   /// <summary>
   /// Maximum range of attack.
@@ -35,7 +35,7 @@ public abstract class AttackParameters
   /// Defines how the range is determined.
   /// </summary>
   [FactorioRconAttribute("range_mode")]
-  public Literals441386602 RangeMode { get; set; }
+  public Literals120419355 RangeMode { get; set; }
 
   /// <summary>
   /// When searching for the nearest enemy to attack, `fire_penalty` is added to the enemy's distance if they are on fire.

@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ChunkPosition")]
-public abstract partial class ChunkPosition: OneOfBase<Table1847471439, Tuple12070837>
+public abstract partial class ChunkPosition: OneOfBase<Table1763649070, Tuple28529661>
 {
 }
 

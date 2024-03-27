@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("TilePosition")]
-public abstract partial class TilePosition: OneOfBase<Table1847471439, Tuple55341663>
+public abstract partial class TilePosition: OneOfBase<Table1763649070, Tuple49587106>
 {
 }
 

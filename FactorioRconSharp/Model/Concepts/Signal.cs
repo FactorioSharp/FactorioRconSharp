@@ -20,7 +20,7 @@ public abstract class Signal
   /// ID of the signal.
   /// </summary>
   [FactorioRconAttribute("signal")]
-  public SignalID Signal { get; set; }
+  public SignalID SignalProp { get; set; }
 
   /// <summary>
   /// Value of the signal.

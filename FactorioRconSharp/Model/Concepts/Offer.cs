@@ -26,7 +26,7 @@ public abstract class Offer
   /// The action that will take place when a player accepts the offer. Usually a `"give-item"` modifier.
   /// </summary>
   [FactorioRconAttribute("offer")]
-  public TechnologyModifier Offer { get; set; }
+  public TechnologyModifier OfferProp { get; set; }
 
 }
 
