@@ -29,7 +29,7 @@ public abstract class MapDifficultySettings
   /// Changing this to `"always"` or `"after-victory"` does not automatically unlock the research queue. See <see cref="LuaForce.ResearchQueueEnabled" /> for that.
   /// </summary>
   [FactorioRconAttribute("research_queue_setting")]
-  public Literals_569f88425cc64efba2968dda0198df13 ResearchQueueSetting { get; set; }
+  public Literals_7bdee30315f54d55b10f88e6f04c4028 ResearchQueueSetting { get; set; }
 
 }
 

@@ -151,7 +151,7 @@ public class FactorioRuntimeTypeSpecificationConverter : JsonConverter<FactorioR
                         return new FactorioRuntimeTableTypeSpecification
                             { Parameters = parameters.ToArray(), VariantParameterGroups = tableParameterGroups, VariantParameterDescription = tableParameterDescription };
                     case "tuple":
-                        return new FactorioRuntimeTableTypeSpecification { Parameters = parameters.ToArray() };
+                        return new FactorioRuntimeTupleTypeSpecification { Parameters = parameters.ToArray() };
                     case "literal":
                         if (literalValue == null)
                         {

@@ -32,7 +32,7 @@ public abstract class InfinityInventoryFilter
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_1cec9eaa54324c379cd053ae1e607fe7 Mode { get; set; }
+  public Literals_41a0587ec54049c79aa58727823e2b1d Mode { get; set; }
 
   /// <summary>
   /// The index of this filter in the filters list. Not required when writing a filter.

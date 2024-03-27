@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class TriggerItem
 {
   [FactorioRconAttribute("type")]
-  public Literals_afbcfa74606342c6848e28b7fd37cdc6 Type { get; set; }
+  public Literals_c5cfe80416384a8f9d54e4ff6404d837 Type { get; set; }
 
   [FactorioRconAttribute("action_delivery")]
   public List<TriggerDelivery> ActionDelivery { get; set; }

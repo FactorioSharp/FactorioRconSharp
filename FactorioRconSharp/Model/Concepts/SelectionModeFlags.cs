@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A set of flags on a selection tool that define how entities and tiles are selected. Active flags are in the dictionary as `true`, while inactive flags aren't present at all.
 /// </summary>
 [FactorioRconConcept("SelectionModeFlags")]
-public abstract class SelectionModeFlags: Dictionary<Literals_d5ef5bb9181343d58bc0dcdcde5b0027, Literal_f6960d22c0b44f97ac3cf344c0ba0f83>
+public abstract class SelectionModeFlags: Dictionary<Literals_4ec1a5399dd247a195b8640cc51dd70b, Literal_b36dbe3b10d14af8bea2ec781245305a>
 {
 }
 

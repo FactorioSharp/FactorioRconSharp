@@ -64,7 +64,7 @@ public abstract class LuaControl: LuaObject
   /// This is the GUI that will asked to close (by firing the <see cref="OnGuiClosed)Event" /> when the `Esc` or `E` keys are pressed. If this attribute is not `nil`, and a new GUI is written to it, the existing one will be asked to close.
   /// </summary>
   [FactorioRconAttribute("opened")]
-  public Union_552c3a3b36ff40ad9296c23cc9126d72 Opened { get; set; }
+  public Union_23c7b0e272a54c1e9401ee6b36bb5fcb Opened { get; set; }
 
   /// <summary>
   /// Size of the crafting queue.
@@ -82,7 +82,7 @@ public abstract class LuaControl: LuaObject
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table_18065982f36f4cfb976a275fd2df409d WalkingState { get; set; }
+  public Table_0180da38d3c343908cda62b219256a06 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public abstract class LuaControl: LuaObject
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table_ce673fef899945c1bc60003e7c3d7bd7 MiningState { get; set; }
+  public Table_8035ad6316664134bde522d7e6d300d9 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table_542e3bc776aa4b9a86502c7d408e8a34 ShootingState { get; set; }
+  public Table_8c94d586d251454eb19b84f329f90101 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public abstract class LuaControl: LuaObject
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table_3db650697a804652ab01647b33cadbb6 RepairState { get; set; }
+  public Table_06b1d5b4b38c4b55957212777f1470eb RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -397,7 +397,7 @@ public abstract class LuaControl: LuaObject
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_craftable_count")]
-  public abstract uint GetCraftableCount(Union_8a185aea1f7246c0ab504f5bc6d4ec3c recipe);
+  public abstract uint GetCraftableCount(Union_ba8a088706d04f2c801ab39746da3d72 recipe);
 
   /// <summary>
   /// Begins crafting the given count of the given recipe.
@@ -406,7 +406,7 @@ public abstract class LuaControl: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="silent">Lua name: silent</param>
   [FactorioRconMethod("begin_crafting")]
-  public abstract uint BeginCrafting(uint count, Union_04469ceb014746c7aa6313455e286380 recipe, bool? silent = null);
+  public abstract uint BeginCrafting(uint count, Union_ba8a088706d04f2c801ab39746da3d72 recipe, bool? silent = null);
 
   /// <summary>
   /// Cancels crafting the given count of the given crafting queue index.

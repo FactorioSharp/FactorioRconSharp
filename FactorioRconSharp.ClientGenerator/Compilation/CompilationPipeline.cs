@@ -12,7 +12,8 @@ static class CompilationPipeline
         IEnumerable<FactorioRuntimeTypeSpecification> anonymousTypes = specification.Concepts.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes)
             .Concat(specification.Classes.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes));
 
-        List<FactorioModelTopLevelStatement> compiledAnonymousTypes = anonymousTypes.Select(compiler.CompileType).ToList();
+        List<FactorioModelTopLevelStatement> compiledAnonymousTypes =
+            anonymousTypes.Distinct().Select(compiler.CompileType).Where(stmt => stmt != null).Cast<FactorioModelTopLevelStatement>().ToList();
 
         List<FactorioModelFile> files =
         [

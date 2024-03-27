@@ -26,7 +26,7 @@ public abstract class LuaSectorScannedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals_049ee2231ed24eb48dde867119e56856 Mode { get; set; }
+  public Literals_0ebcff9dab9b40789b3171d45e95c9b6 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

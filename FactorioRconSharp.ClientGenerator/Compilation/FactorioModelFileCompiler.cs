@@ -376,7 +376,7 @@ public class FactorioModelFileCompiler
             .Replace("[1]", "first")
             .Replace("[2]", "second");
 
-    public FactorioModelTopLevelStatement CompileType(FactorioRuntimeTypeSpecification type)
+    public FactorioModelTopLevelStatement? CompileType(FactorioRuntimeTypeSpecification type)
     {
         FactorioModelTopLevelStatement result;
         switch (type)
@@ -385,8 +385,7 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeArrayTypeSpecification:
             case FactorioRuntimeFunctionTypeSpecification:
             case FactorioRuntimeKeyValueTypeSpecification:
-                result = CompileSimpleType(type);
-                break;
+                return null;
             case FactorioRuntimeLiteralTypeSpecification literalType:
                 result = CompileLiteralType(literalType);
                 break;
@@ -409,17 +408,6 @@ public class FactorioModelFileCompiler
         _anonymousTypeNames[GetTypeId(type)] = result.Name;
 
         return result;
-    }
-
-    FactorioModelClass CompileSimpleType(FactorioRuntimeTypeSpecification simpleType)
-    {
-        string name = GenerateUniqueTypeName("Type");
-
-        return new FactorioModelClass
-        {
-            Name = name,
-            BaseClass = BuildTypeName(simpleType)
-        };
     }
 
     FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)

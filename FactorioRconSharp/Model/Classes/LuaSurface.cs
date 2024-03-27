@@ -235,7 +235,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="hasItemInside">Lua name: has_item_inside</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_entities_filtered")]
-  public abstract List<LuaEntity> FindEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_0c0d7f7adee94cbc94341e3090e7ce25? name = null, Union_a41d1fbcb0e44f49949fee1046b0b490? type = null, Union_bffc52de44c84b8896890858e54ef0f2? ghostName = null, Union_1423a30a02d14835a25eeeb5a1aab40a? ghostType = null, Union_ce7dbe70c28445f3a6fb23ce8178c748? direction = null, Union_4e62b0ab4740439d8f787065e9253ede? collisionMask = null, Union_5743d69b92c14b8fbc6947f54c853bed? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, LuaItemPrototype? hasItemInside = null, bool? invert = null);
+  public abstract List<LuaEntity> FindEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_15322821de664c9f856201c8fe7bc9ac? name = null, Union_15322821de664c9f856201c8fe7bc9ac? type = null, Union_15322821de664c9f856201c8fe7bc9ac? ghostName = null, Union_15322821de664c9f856201c8fe7bc9ac? ghostType = null, Union_cfbf631eb6b147b499bf1943559bb09e? direction = null, Union_30798fb4c60f41099a5dfb86f0236085? collisionMask = null, Union_0fadef4dded44e92b9ebd4a99705a71e? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, LuaItemPrototype? hasItemInside = null, bool? invert = null);
 
   /// <summary>
   /// Find all tiles of the given name in the given area.
@@ -256,7 +256,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="collisionMask">Lua name: collision_mask</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_tiles_filtered")]
-  public abstract List<LuaTile> FindTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_22561d21e7064505bad66d3cf2026ecd? name = null, Union_314827fca5b24d9ea2b012472e48fec1? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union_b98b801fd352457cbf2759d0b4ace50a? collisionMask = null, bool? invert = null);
+  public abstract List<LuaTile> FindTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_15322821de664c9f856201c8fe7bc9ac? name = null, Union_0fadef4dded44e92b9ebd4a99705a71e? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union_30798fb4c60f41099a5dfb86f0236085? collisionMask = null, bool? invert = null);
 
   /// <summary>
   /// Count entities of given type or name in a given area. Works just like <see cref="LuaSurface.FindEntitiesFiltered" />, except this only returns the count. As it doesn't construct all the wrapper objects, this is more efficient if one is only interested in the number of entities.
@@ -279,7 +279,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="isMilitaryTarget">Lua name: is_military_target</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("count_entities_filtered")]
-  public abstract uint CountEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_97335a1f8d4a4a31a1d0bb68ef91edc2? name = null, Union_ed0a951de2eb444b9691e3fafda78a65? type = null, Union_a92891771b1c4e52ae4e634224d021e6? ghostName = null, Union_767de5805b644b33855d7dea7c007c43? ghostType = null, Union_1e069c985b134ea8a3161e28a5af1773? direction = null, Union_cd7f598e7d644ce3b98bee1c1e109d54? collisionMask = null, Union_8971b7e83fe747bd9df760c05f53372c? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, bool? invert = null);
+  public abstract uint CountEntitiesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_15322821de664c9f856201c8fe7bc9ac? name = null, Union_15322821de664c9f856201c8fe7bc9ac? type = null, Union_15322821de664c9f856201c8fe7bc9ac? ghostName = null, Union_15322821de664c9f856201c8fe7bc9ac? ghostType = null, Union_cfbf631eb6b147b499bf1943559bb09e? direction = null, Union_30798fb4c60f41099a5dfb86f0236085? collisionMask = null, Union_0fadef4dded44e92b9ebd4a99705a71e? force = null, bool? toBeDeconstructed = null, bool? toBeUpgraded = null, uint? limit = null, bool? isMilitaryTarget = null, bool? invert = null);
 
   /// <summary>
   /// Count tiles of a given name in a given area. Works just like <see cref="LuaSurface.FindTilesFiltered" />, except this only returns the count. As it doesn't construct all the wrapper objects, this is more efficient if one is only interested in the number of tiles.
@@ -298,7 +298,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="collisionMask">Lua name: collision_mask</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("count_tiles_filtered")]
-  public abstract uint CountTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_e85895ba3f1f4e39a927a6aba090da6f? name = null, Union_89379b2b556f4ba9a2fc0488a8be4561? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union_862279ff6ae14e929815c7cb7af1b569? collisionMask = null, bool? invert = null);
+  public abstract uint CountTilesFiltered(BoundingBox? area = null, MapPosition? position = null, double? radius = null, Union_15322821de664c9f856201c8fe7bc9ac? name = null, Union_0fadef4dded44e92b9ebd4a99705a71e? force = null, uint? limit = null, bool? hasHiddenTile = null, bool? hasTileGhost = null, bool? toBeDeconstructed = null, Union_30798fb4c60f41099a5dfb86f0236085? collisionMask = null, bool? invert = null);
 
   /// <summary>
   /// Find a non-colliding position within a given radius.
@@ -406,7 +406,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="moveStuckPlayers">Lua name: move_stuck_players</param>
   /// <param name="item">Lua name: item</param>
   [FactorioRconMethod("create_entity")]
-  public abstract LuaEntity? CreateEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, Union_66995bce6cbf4b02b457df1d37f2bc5e? target = null, Union_4ffbf61acc19486a9e239aef52293e4c? source = null, bool? fastReplace = null, PlayerIdentification? player = null, LuaEntity? character = null, bool? spill = null, bool? raiseBuilt = null, bool? createBuildEffectSmoke = null, bool? spawnDecorations = null, bool? moveStuckPlayers = null, LuaItemStack? item = null);
+  public abstract LuaEntity? CreateEntity(string name, MapPosition position, DirectionEnum? direction = null, ForceIdentification? force = null, Union_b6bad84bf3fc4d879c74444c5149e108? target = null, Union_b6bad84bf3fc4d879c74444c5149e108? source = null, bool? fastReplace = null, PlayerIdentification? player = null, LuaEntity? character = null, bool? spill = null, bool? raiseBuilt = null, bool? createBuildEffectSmoke = null, bool? spawnDecorations = null, bool? moveStuckPlayers = null, LuaItemStack? item = null);
 
   /// <param name="name">Lua name: name</param>
   /// <param name="position">Lua name: position</param>
@@ -470,7 +470,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="removeCollidingDecoratives">Lua name: remove_colliding_decoratives</param>
   /// <param name="raiseEvent">Lua name: raise_event</param>
   [FactorioRconMethod("set_tiles")]
-  public abstract void SetTiles(List<Tile> tiles, bool? correctTiles = null, Union_fc9d5ccd5ea843f5b18638aee16c6ee6? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null);
+  public abstract void SetTiles(List<Tile> tiles, bool? correctTiles = null, Union_f11bef743b594e4cbfb12c7fb1f026e1? removeCollidingEntities = null, bool? removeCollidingDecoratives = null, bool? raiseEvent = null);
 
   /// <summary>
   /// Spawn pollution at the given position.
@@ -596,7 +596,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="position">Lua name: position</param>
   /// <param name="tile">Lua name: tile</param>
   [FactorioRconMethod("set_hidden_tile")]
-  public abstract void SetHiddenTile(TilePosition position, Union_841da1c936df407eab335c7b6b831314 tile);
+  public abstract void SetHiddenTile(TilePosition position, Union_cacbc34dbb144cb69e9f166498549a87 tile);
 
   /// <summary>
   /// Gets all tiles of the given types that are connected horizontally or vertically to the given tile position including the given tile position.
@@ -624,7 +624,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="entities">Lua name: entities</param>
   /// <param name="chunks">Lua name: chunks</param>
   [FactorioRconMethod("regenerate_entity")]
-  public abstract void RegenerateEntity(Union_9649468751704cf3b6cfa58614ec28c5? entities = null, List<ChunkPosition>? chunks = null);
+  public abstract void RegenerateEntity(Union_15322821de664c9f856201c8fe7bc9ac? entities = null, List<ChunkPosition>? chunks = null);
 
   /// <summary>
   /// Regenerate autoplacement of some decoratives on this surface. This can be used to autoplace newly-added decoratives.
@@ -635,7 +635,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="decoratives">Lua name: decoratives</param>
   /// <param name="chunks">Lua name: chunks</param>
   [FactorioRconMethod("regenerate_decorative")]
-  public abstract void RegenerateDecorative(Union_0712eb0324374e6898748d085f78c30c? decoratives = null, List<ChunkPosition>? chunks = null);
+  public abstract void RegenerateDecorative(Union_15322821de664c9f856201c8fe7bc9ac? decoratives = null, List<ChunkPosition>? chunks = null);
 
   /// <summary>
   /// Print text to the chat console of all players on this surface.
@@ -646,7 +646,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union_246e70737a21401c82dbf247e114f71a? printSettings = null);
+  public abstract void Print(LocalisedString message, Union_de62e3607ed34ac2af7d04457dc8863d? printSettings = null);
 
   /// <summary>
   /// Removes all decoratives from the given area. If no area and no position are given, then the entire surface is searched.
@@ -661,7 +661,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="limit">Lua name: limit</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("destroy_decoratives")]
-  public abstract void DestroyDecoratives(BoundingBox? area = null, TilePosition? position = null, Union_0df51e1736014cdba63f9b5c96451129? name = null, Union_bbb5b94ef9e146fe8258496721df669f? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
+  public abstract void DestroyDecoratives(BoundingBox? area = null, TilePosition? position = null, Union_4ff6071e8f3e4276856b9c51b3edce34? name = null, Union_30798fb4c60f41099a5dfb86f0236085? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
 
   /// <summary>
   /// Adds the given decoratives to the surface.
@@ -689,7 +689,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="limit">Lua name: limit</param>
   /// <param name="invert">Lua name: invert</param>
   [FactorioRconMethod("find_decoratives_filtered")]
-  public abstract List<DecorativeResult> FindDecorativesFiltered(BoundingBox? area = null, TilePosition? position = null, Union_527f333eb300494f9b393e65de231267? name = null, Union_d0a9cabe0a5c4ea096086179fb0473f0? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
+  public abstract List<DecorativeResult> FindDecorativesFiltered(BoundingBox? area = null, TilePosition? position = null, Union_4ff6071e8f3e4276856b9c51b3edce34? name = null, Union_30798fb4c60f41099a5dfb86f0236085? collisionMask = null, string? fromLayer = null, string? toLayer = null, bool? excludeSoft = null, uint? limit = null, bool? invert = null);
 
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_trains")]
@@ -767,7 +767,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="manualCollisionMode">Lua name: manual_collision_mode</param>
   /// <param name="createBuildEffectSmoke">Lua name: create_build_effect_smoke</param>
   [FactorioRconMethod("clone_brush")]
-  public abstract void CloneBrush(TilePosition sourceOffset, TilePosition destinationOffset, List<TilePosition> sourcePositions, SurfaceIdentification? destinationSurface = null, Union_db81f03de8a9421093cb93a0f557bfcd? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? manualCollisionMode = null, bool? createBuildEffectSmoke = null);
+  public abstract void CloneBrush(TilePosition sourceOffset, TilePosition destinationOffset, List<TilePosition> sourcePositions, SurfaceIdentification? destinationSurface = null, Union_6033961958ea44b39bafd970d1a1d589? destinationForce = null, bool? cloneTiles = null, bool? cloneEntities = null, bool? cloneDecoratives = null, bool? clearDestinationEntities = null, bool? clearDestinationDecoratives = null, bool? expandMap = null, bool? manualCollisionMode = null, bool? createBuildEffectSmoke = null);
 
   /// <summary>
   /// Clones the given entities.
@@ -807,7 +807,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="pathResolutionModifier">Lua name: path_resolution_modifier</param>
   /// <param name="entityToIgnore">Lua name: entity_to_ignore</param>
   [FactorioRconMethod("request_path")]
-  public abstract uint RequestPath(BoundingBox boundingBox, Union_05e5038b834642848f4015903b1a5b0d collisionMask, MapPosition start, MapPosition goal, ForceIdentification force, double? radius = null, PathfinderFlags? pathfindFlags = null, bool? canOpenGates = null, int? pathResolutionModifier = null, LuaEntity? entityToIgnore = null);
+  public abstract uint RequestPath(BoundingBox boundingBox, Union_aa0ed1a7efaa45478f1afb89c6274b6e collisionMask, MapPosition start, MapPosition goal, ForceIdentification force, double? radius = null, PathfinderFlags? pathfindFlags = null, bool? canOpenGates = null, int? pathResolutionModifier = null, LuaEntity? entityToIgnore = null);
 
   /// <summary>
   /// Gets the script areas that match the given name or if no name is given all areas are returned.
@@ -821,7 +821,7 @@ public abstract class LuaSurface: LuaObject
   /// </summary>
   /// <param name="key">Lua name: key</param>
   [FactorioRconMethod("get_script_area")]
-  public abstract ScriptArea? GetScriptArea(Union_a4d2b5ab6a214796be1e031c746a7f56? key = null);
+  public abstract ScriptArea? GetScriptArea(Union_fd1d181ed7cf4a3fa2c7156a44866516? key = null);
 
   /// <summary>
   /// Sets the given script area to the new values.
@@ -857,7 +857,7 @@ public abstract class LuaSurface: LuaObject
   /// </summary>
   /// <param name="key">Lua name: key</param>
   [FactorioRconMethod("get_script_position")]
-  public abstract ScriptPosition? GetScriptPosition(Union_685235746a264b3f99585ccf278ca081? key = null);
+  public abstract ScriptPosition? GetScriptPosition(Union_fd1d181ed7cf4a3fa2c7156a44866516? key = null);
 
   /// <summary>
   /// Sets the given script position to the new values.
@@ -907,7 +907,7 @@ public abstract class LuaSurface: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union_74eaeb7af90448029b7fdbdca879fa3f? name = null, ForceIdentification? force = null);
+  public abstract List<LuaEntity> GetTrainStops(Union_15322821de664c9f856201c8fe7bc9ac? name = null, ForceIdentification? force = null);
 
   /// <summary>
   /// Gets the total amount of pollution on the surface by iterating over all of the chunks containing pollution.

@@ -18,7 +18,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("Color")]
-public abstract partial class Color: OneOfBase<Table_ff9525e1833c47b09758f16b409af3b1, Table_948a475b21a843d5a98b159754b71aac>
+public abstract partial class Color: OneOfBase<Table_79691af683294a1da82299c9a7395b8e, Tuple_0a00738154b34ddbbc6c8e6413922b4f>
 {
 }
 

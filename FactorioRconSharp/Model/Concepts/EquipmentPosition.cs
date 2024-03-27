@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("EquipmentPosition")]
-public abstract partial class EquipmentPosition: OneOfBase<Table_00e4a96940cb4356a7391fc9a07736a9, Table_69a3f2c3725c4b04b5d961d8b10f14e6>
+public abstract partial class EquipmentPosition: OneOfBase<Table_dfee8b0052fa4341a5161a408caf1ab5, Tuple_ceb4707b717c4723a2387d73c66f45c4>
 {
 }
 
