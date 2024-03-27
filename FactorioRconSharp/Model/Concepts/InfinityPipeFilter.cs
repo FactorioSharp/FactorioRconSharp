@@ -38,7 +38,7 @@ public abstract class InfinityPipeFilter
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union3609060 Mode { get; set; }
+  public Type375078767 Mode { get; set; }
 
 }
 

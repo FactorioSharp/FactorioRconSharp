@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Used to filter out irrelevant event callbacks in a performant way.
 /// </summary>
 [FactorioRconConcept("EventFilter")]
-public abstract class EventFilter: List<Union31539197>
+public abstract class EventFilter: List<Type375078767>
 {
 }
 

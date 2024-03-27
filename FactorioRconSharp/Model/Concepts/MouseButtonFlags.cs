@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// To write to this, use an array<see cref="String" />] of the mouse buttons that should be possible to use with on button. The flag `"left-and-right"` can also be set, which will set `"left"` and `"right"` to `true`.
 /// </summary>
 [FactorioRconConcept("MouseButtonFlags")]
-public abstract class MouseButtonFlags: Dictionary<Union3295337, Literal41637271>
+public abstract class MouseButtonFlags: Dictionary<Type375078767, Type375078767>
 {
 }
 

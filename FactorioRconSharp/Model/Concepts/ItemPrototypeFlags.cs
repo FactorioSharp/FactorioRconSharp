@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// By default, none of these flags are set.
 /// </summary>
 [FactorioRconConcept("ItemPrototypeFlags")]
-public abstract class ItemPrototypeFlags: Dictionary<ItemPrototypeFlag, Literal51952701>
+public abstract class ItemPrototypeFlags: Dictionary<ItemPrototypeFlag, Type375078767>
 {
 }
 

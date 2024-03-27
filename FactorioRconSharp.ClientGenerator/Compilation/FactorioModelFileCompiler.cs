@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.Json;
 using CaseExtensions;
 using FactorioRconSharp.ClientGenerator.Model;
 using FactorioRconSharp.ClientGenerator.Specification;
@@ -318,7 +319,7 @@ public class FactorioModelFileCompiler
             case FactorioRuntimeTableTypeSpecification:
             case FactorioRuntimeTupleTypeSpecification:
             case FactorioRuntimeUnionTypeSpecification:
-                int typeId = type.GetHashCode();
+                int typeId = GetTypeId(type);
                 return _anonymousTypeNames.GetValueOrDefault(typeId)
                        ?? throw new InvalidOperationException(
                            $"Could not find name of anonymous type {typeId}. Make sure you compile the anonymous types before compiling the symbols that use them."
@@ -384,14 +385,14 @@ public class FactorioModelFileCompiler
                 throw new NotSupportedException($"Cannot compile type into top-level statement {type.GetType()}");
         }
 
-        _anonymousTypeNames[type.GetHashCode()] = result.Name;
+        _anonymousTypeNames[GetTypeId(type)] = result.Name;
 
         return result;
     }
 
     FactorioModelClass CompileSimpleType(FactorioRuntimeTypeSpecification simpleType)
     {
-        string name = $"Type{simpleType.GetHashCode()}";
+        string name = $"Type{GetTypeId(simpleType)}";
 
         return new FactorioModelClass
         {
@@ -400,9 +401,9 @@ public class FactorioModelFileCompiler
         };
     }
 
-    FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
+    static FactorioModelEnum CompileLiteralType(FactorioRuntimeLiteralTypeSpecification literalType)
     {
-        string name = $"Literal{literalType.GetHashCode()}";
+        string name = $"Literal{GetTypeId(literalType)}";
 
         return new FactorioModelEnum
         {
@@ -421,7 +422,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileStructType(FactorioRuntimeStructTypeSpecification structType)
     {
-        string name = $"Struct{structType.GetHashCode()}";
+        string name = $"Struct{GetTypeId(structType)}";
         return new FactorioModelClass
         {
             Name = name,
@@ -431,7 +432,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileTableType(FactorioRuntimeTableTypeSpecification tableType)
     {
-        string name = $"Table{tableType.GetHashCode()}";
+        string name = $"Table{GetTypeId(tableType)}";
         return new FactorioModelClass
         {
             Name = name,
@@ -441,7 +442,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClass CompileTupleType(FactorioRuntimeTupleTypeSpecification tupleType)
     {
-        string name = $"Tuple{tupleType.GetHashCode()}";
+        string name = $"Tuple{GetTypeId(tupleType)}";
         return new FactorioModelClass
         {
             Name = name,
@@ -451,13 +452,12 @@ public class FactorioModelFileCompiler
 
     FactorioModelTopLevelStatement CompileUnionType(FactorioRuntimeUnionTypeSpecification unionType)
     {
-        string name = $"Union{unionType.GetHashCode()}";
 
         if (unionType.IsUnionOfLiterals(out FactorioRuntimeLiteralTypeSpecification[] literals))
         {
             return new FactorioModelEnum
             {
-                Name = name,
+                Name = $"Literals{GetTypeId(unionType)}",
                 Documentation = new FactorioModelDocumentation { Summary = $"Union of literals:{string.Join("", literals.Select(l => $"{Environment.NewLine}  - {l.Value}"))}" },
                 Values = literals.Select(CompileLiteralValue).ToArray()
             };
@@ -465,11 +465,17 @@ public class FactorioModelFileCompiler
 
         return new FactorioModelClass
         {
-            Name = name,
+            Name = $"Union{GetTypeId(unionType)}",
             BaseClass = $"OneOfBase<{string.Join(", ", unionType.Options.Select(BuildTypeName))}>",
             Attributes = ["GenerateOneOf"],
             IsPartial = true,
             RequireAdditionalUsing = ["OneOf"]
         };
+    }
+
+    static int GetTypeId(FactorioRuntimeTypeSpecification type)
+    {
+        string typeContent = JsonSerializer.Serialize(type);
+        return Math.Abs(typeContent.GetHashCode());
     }
 }

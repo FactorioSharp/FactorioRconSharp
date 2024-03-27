@@ -18,7 +18,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapPosition")]
-public abstract partial class MapPosition: OneOfBase<Table18503465, Table44407879>
+public abstract partial class MapPosition: OneOfBase<Type375078767, Type375078767>
 {
 }
 

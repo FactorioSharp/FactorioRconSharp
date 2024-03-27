@@ -26,7 +26,7 @@ public abstract class HeatSetting
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Union26560916 Mode { get; set; }
+  public Type375078767 Mode { get; set; }
 
 }
 
