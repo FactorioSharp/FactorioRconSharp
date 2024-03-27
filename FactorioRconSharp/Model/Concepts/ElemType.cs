@@ -56,7 +56,7 @@ public enum ElemType
   /// Literal value: item-group
   /// </summary>
   [FactorioRconDefinitionValue("item-group")]
-  Itemsubtractgroup,
+  ItemGroup,
 
   /// <summary>
   /// Literal value: recipe

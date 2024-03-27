@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class Ingredient
 {
   [FactorioRconAttribute("type")]
-  public Literals798860944 Type { get; set; }
+  public Literals502199114 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the required item or fluid.
@@ -32,7 +32,7 @@ public abstract class Ingredient
   /// How much of this ingredient is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union910918531 CatalystAmount { get; set; }
+  public Union133952807 CatalystAmount { get; set; }
 
 }
 

@@ -18,7 +18,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapGenSize")]
-public abstract partial class MapGenSize: OneOfBase<float, Literal1771553408, Literal802381061, Literal1690829292, Literal1647582181, Literal461409392, Literal524340519, Literal904342661, Literal1977030503, Literal556367418, Literal569303103, Literal781644632, Literal550076988, Literal1440535386, Literal333205278, Literal356120826, Literal1463884403>
+public abstract partial class MapGenSize: OneOfBase<float, Literal2075929482, Literal761934121, Literal471614227, Literal633973891, Literal73863859, Literal1602364651, Literal484586903, Literal7371080, Literal863968728, Literal827067433, Literal2122085989, Literal1265129825, Literal186992326, Literal498156250, Literal371348497, Literal489538083>
 {
 }
 

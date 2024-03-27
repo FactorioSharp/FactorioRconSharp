@@ -22,79 +22,79 @@ public enum CollisionMaskLayer
   /// Literal value: ground-tile
   /// </summary>
   [FactorioRconDefinitionValue("ground-tile")]
-  Groundsubtracttile,
+  GroundTile,
 
   /// <summary>
   /// Literal value: water-tile
   /// </summary>
   [FactorioRconDefinitionValue("water-tile")]
-  Watersubtracttile,
+  WaterTile,
 
   /// <summary>
   /// Literal value: resource-layer
   /// </summary>
   [FactorioRconDefinitionValue("resource-layer")]
-  Resourcesubtractlayer,
+  ResourceLayer,
 
   /// <summary>
   /// Literal value: doodad-layer
   /// </summary>
   [FactorioRconDefinitionValue("doodad-layer")]
-  Doodadsubtractlayer,
+  DoodadLayer,
 
   /// <summary>
   /// Literal value: floor-layer
   /// </summary>
   [FactorioRconDefinitionValue("floor-layer")]
-  Floorsubtractlayer,
+  FloorLayer,
 
   /// <summary>
   /// Literal value: item-layer
   /// </summary>
   [FactorioRconDefinitionValue("item-layer")]
-  Itemsubtractlayer,
+  ItemLayer,
 
   /// <summary>
   /// Literal value: ghost-layer
   /// </summary>
   [FactorioRconDefinitionValue("ghost-layer")]
-  Ghostsubtractlayer,
+  GhostLayer,
 
   /// <summary>
   /// Literal value: object-layer
   /// </summary>
   [FactorioRconDefinitionValue("object-layer")]
-  Objectsubtractlayer,
+  ObjectLayer,
 
   /// <summary>
   /// Literal value: player-layer
   /// </summary>
   [FactorioRconDefinitionValue("player-layer")]
-  Playersubtractlayer,
+  PlayerLayer,
 
   /// <summary>
   /// Literal value: train-layer
   /// </summary>
   [FactorioRconDefinitionValue("train-layer")]
-  Trainsubtractlayer,
+  TrainLayer,
 
   /// <summary>
   /// Literal value: rail-layer
   /// </summary>
   [FactorioRconDefinitionValue("rail-layer")]
-  Railsubtractlayer,
+  RailLayer,
 
   /// <summary>
   /// Literal value: transport-belt-layer
   /// </summary>
   [FactorioRconDefinitionValue("transport-belt-layer")]
-  Transportsubtractbeltsubtractlayer,
+  TransportBeltLayer,
 
   /// <summary>
   /// Literal value: not-setup
   /// </summary>
   [FactorioRconDefinitionValue("not-setup")]
-  Notsubtractsetup,
+  NotSetup,
 
 }
 

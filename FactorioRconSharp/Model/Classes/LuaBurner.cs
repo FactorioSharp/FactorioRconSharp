@@ -20,7 +20,7 @@ public abstract class LuaBurner: LuaObject
   /// The owner of this burner energy source
   /// </summary>
   [FactorioRconAttribute("owner")]
-  public Union814983696 Owner { get; private set; }
+  public Union335904414 Owner { get; private set; }
 
   /// <summary>
   /// The fuel inventory.

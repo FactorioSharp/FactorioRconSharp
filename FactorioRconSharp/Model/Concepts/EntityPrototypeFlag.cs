@@ -20,85 +20,85 @@ public enum EntityPrototypeFlag
   /// Literal value: not-rotatable
   /// </summary>
   [FactorioRconDefinitionValue("not-rotatable")]
-  Notsubtractrotatable,
+  NotRotatable,
 
   /// <summary>
   /// Literal value: placeable-neutral
   /// </summary>
   [FactorioRconDefinitionValue("placeable-neutral")]
-  Placeablesubtractneutral,
+  PlaceableNeutral,
 
   /// <summary>
   /// Literal value: placeable-player
   /// </summary>
   [FactorioRconDefinitionValue("placeable-player")]
-  Placeablesubtractplayer,
+  PlaceablePlayer,
 
   /// <summary>
   /// Literal value: placeable-enemy
   /// </summary>
   [FactorioRconDefinitionValue("placeable-enemy")]
-  Placeablesubtractenemy,
+  PlaceableEnemy,
 
   /// <summary>
   /// Literal value: placeable-off-grid
   /// </summary>
   [FactorioRconDefinitionValue("placeable-off-grid")]
-  Placeablesubtractoffsubtractgrid,
+  PlaceableOffGrid,
 
   /// <summary>
   /// Literal value: player-creation
   /// </summary>
   [FactorioRconDefinitionValue("player-creation")]
-  Playersubtractcreation,
+  PlayerCreation,
 
   /// <summary>
   /// Literal value: building-direction-8-way
   /// </summary>
   [FactorioRconDefinitionValue("building-direction-8-way")]
-  Buildingsubtractdirectionsubtract8subtractway,
+  BuildingDirection8Way,
 
   /// <summary>
   /// Literal value: filter-directions
   /// </summary>
   [FactorioRconDefinitionValue("filter-directions")]
-  Filtersubtractdirections,
+  FilterDirections,
 
   /// <summary>
   /// Literal value: fast-replaceable-no-build-while-moving
   /// </summary>
   [FactorioRconDefinitionValue("fast-replaceable-no-build-while-moving")]
-  Fastsubtractreplaceablesubtractnosubtractbuildsubtractwhilesubtractmoving,
+  FastReplaceableNoBuildWhileMoving,
 
   /// <summary>
   /// Literal value: breaths-air
   /// </summary>
   [FactorioRconDefinitionValue("breaths-air")]
-  Breathssubtractair,
+  BreathsAir,
 
   /// <summary>
   /// Literal value: not-repairable
   /// </summary>
   [FactorioRconDefinitionValue("not-repairable")]
-  Notsubtractrepairable,
+  NotRepairable,
 
   /// <summary>
   /// Literal value: not-on-map
   /// </summary>
   [FactorioRconDefinitionValue("not-on-map")]
-  Notsubtractonsubtractmap,
+  NotOnMap,
 
   /// <summary>
   /// Literal value: not-deconstructable
   /// </summary>
   [FactorioRconDefinitionValue("not-deconstructable")]
-  Notsubtractdeconstructable,
+  NotDeconstructable,
 
   /// <summary>
   /// Literal value: not-blueprintable
   /// </summary>
   [FactorioRconDefinitionValue("not-blueprintable")]
-  Notsubtractblueprintable,
+  NotBlueprintable,
 
   /// <summary>
   /// Literal value: hidden
@@ -110,67 +110,67 @@ public enum EntityPrototypeFlag
   /// Literal value: hide-alt-info
   /// </summary>
   [FactorioRconDefinitionValue("hide-alt-info")]
-  Hidesubtractaltsubtractinfo,
+  HideAltInfo,
 
   /// <summary>
   /// Literal value: fast-replaceable-no-cross-type-while-moving
   /// </summary>
   [FactorioRconDefinitionValue("fast-replaceable-no-cross-type-while-moving")]
-  Fastsubtractreplaceablesubtractnosubtractcrosssubtracttypesubtractwhilesubtractmoving,
+  FastReplaceableNoCrossTypeWhileMoving,
 
   /// <summary>
   /// Literal value: no-gap-fill-while-building
   /// </summary>
   [FactorioRconDefinitionValue("no-gap-fill-while-building")]
-  Nosubtractgapsubtractfillsubtractwhilesubtractbuilding,
+  NoGapFillWhileBuilding,
 
   /// <summary>
   /// Literal value: not-flammable
   /// </summary>
   [FactorioRconDefinitionValue("not-flammable")]
-  Notsubtractflammable,
+  NotFlammable,
 
   /// <summary>
   /// Literal value: no-automated-item-removal
   /// </summary>
   [FactorioRconDefinitionValue("no-automated-item-removal")]
-  Nosubtractautomatedsubtractitemsubtractremoval,
+  NoAutomatedItemRemoval,
 
   /// <summary>
   /// Literal value: no-automated-item-insertion
   /// </summary>
   [FactorioRconDefinitionValue("no-automated-item-insertion")]
-  Nosubtractautomatedsubtractitemsubtractinsertion,
+  NoAutomatedItemInsertion,
 
   /// <summary>
   /// Literal value: no-copy-paste
   /// </summary>
   [FactorioRconDefinitionValue("no-copy-paste")]
-  Nosubtractcopysubtractpaste,
+  NoCopyPaste,
 
   /// <summary>
   /// Literal value: not-selectable-in-game
   /// </summary>
   [FactorioRconDefinitionValue("not-selectable-in-game")]
-  Notsubtractselectablesubtractinsubtractgame,
+  NotSelectableInGame,
 
   /// <summary>
   /// Literal value: not-upgradable
   /// </summary>
   [FactorioRconDefinitionValue("not-upgradable")]
-  Notsubtractupgradable,
+  NotUpgradable,
 
   /// <summary>
   /// Literal value: not-in-kill-statistics
   /// </summary>
   [FactorioRconDefinitionValue("not-in-kill-statistics")]
-  Notsubtractinsubtractkillsubtractstatistics,
+  NotInKillStatistics,
 
   /// <summary>
   /// Literal value: not-in-made-in
   /// </summary>
   [FactorioRconDefinitionValue("not-in-made-in")]
-  Notsubtractinsubtractmadesubtractin,
+  NotInMadeIn,
 
 }
 

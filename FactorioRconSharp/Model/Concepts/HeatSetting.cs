@@ -26,7 +26,7 @@ public abstract class HeatSetting
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals271460979 Mode { get; set; }
+  public Literals624821315 Mode { get; set; }
 
 }
 

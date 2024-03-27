@@ -14,10 +14,10 @@ namespace FactorioRconSharp.Model.Concepts;
 public abstract class CircularProjectileCreationSpecification
 {
   [FactorioRconAttribute("[1]")]
-  public RealOrientation First { get; set; }
+  public RealOrientation first { get; set; }
 
   [FactorioRconAttribute("[2]")]
-  public Vector Second { get; set; }
+  public Vector second { get; set; }
 
 }
 

@@ -23,7 +23,7 @@ public abstract class CutsceneWaypoint
   /// Entity or unit group to pan the camera to.
   /// </summary>
   [FactorioRconAttribute("target")]
-  public Union1510226432 Target { get; set; }
+  public Union1239227820 Target { get; set; }
 
   /// <summary>
   /// How many ticks it will take to reach this waypoint from the previous one.

@@ -20,235 +20,235 @@ public enum ModifierType
   /// Literal value: inserter-stack-size-bonus
   /// </summary>
   [FactorioRconDefinitionValue("inserter-stack-size-bonus")]
-  Insertersubtractstacksubtractsizesubtractbonus,
+  InserterStackSizeBonus,
 
   /// <summary>
   /// Literal value: stack-inserter-capacity-bonus
   /// </summary>
   [FactorioRconDefinitionValue("stack-inserter-capacity-bonus")]
-  Stacksubtractinsertersubtractcapacitysubtractbonus,
+  StackInserterCapacityBonus,
 
   /// <summary>
   /// Literal value: laboratory-speed
   /// </summary>
   [FactorioRconDefinitionValue("laboratory-speed")]
-  Laboratorysubtractspeed,
+  LaboratorySpeed,
 
   /// <summary>
   /// Literal value: character-logistic-trash-slots
   /// </summary>
   [FactorioRconDefinitionValue("character-logistic-trash-slots")]
-  Charactersubtractlogisticsubtracttrashsubtractslots,
+  CharacterLogisticTrashSlots,
 
   /// <summary>
   /// Literal value: maximum-following-robots-count
   /// </summary>
   [FactorioRconDefinitionValue("maximum-following-robots-count")]
-  Maximumsubtractfollowingsubtractrobotssubtractcount,
+  MaximumFollowingRobotsCount,
 
   /// <summary>
   /// Literal value: worker-robot-speed
   /// </summary>
   [FactorioRconDefinitionValue("worker-robot-speed")]
-  Workersubtractrobotsubtractspeed,
+  WorkerRobotSpeed,
 
   /// <summary>
   /// Literal value: worker-robot-storage
   /// </summary>
   [FactorioRconDefinitionValue("worker-robot-storage")]
-  Workersubtractrobotsubtractstorage,
+  WorkerRobotStorage,
 
   /// <summary>
   /// Literal value: ghost-time-to-live
   /// </summary>
   [FactorioRconDefinitionValue("ghost-time-to-live")]
-  Ghostsubtracttimesubtracttosubtractlive,
+  GhostTimeToLive,
 
   /// <summary>
   /// Literal value: turret-attack
   /// </summary>
   [FactorioRconDefinitionValue("turret-attack")]
-  Turretsubtractattack,
+  TurretAttack,
 
   /// <summary>
   /// Literal value: ammo-damage
   /// </summary>
   [FactorioRconDefinitionValue("ammo-damage")]
-  Ammosubtractdamage,
+  AmmoDamage,
 
   /// <summary>
   /// Literal value: give-item
   /// </summary>
   [FactorioRconDefinitionValue("give-item")]
-  Givesubtractitem,
+  GiveItem,
 
   /// <summary>
   /// Literal value: gun-speed
   /// </summary>
   [FactorioRconDefinitionValue("gun-speed")]
-  Gunsubtractspeed,
+  GunSpeed,
 
   /// <summary>
   /// Literal value: unlock-recipe
   /// </summary>
   [FactorioRconDefinitionValue("unlock-recipe")]
-  Unlocksubtractrecipe,
+  UnlockRecipe,
 
   /// <summary>
   /// Literal value: character-crafting-speed
   /// </summary>
   [FactorioRconDefinitionValue("character-crafting-speed")]
-  Charactersubtractcraftingsubtractspeed,
+  CharacterCraftingSpeed,
 
   /// <summary>
   /// Literal value: character-mining-speed
   /// </summary>
   [FactorioRconDefinitionValue("character-mining-speed")]
-  Charactersubtractminingsubtractspeed,
+  CharacterMiningSpeed,
 
   /// <summary>
   /// Literal value: character-running-speed
   /// </summary>
   [FactorioRconDefinitionValue("character-running-speed")]
-  Charactersubtractrunningsubtractspeed,
+  CharacterRunningSpeed,
 
   /// <summary>
   /// Literal value: character-build-distance
   /// </summary>
   [FactorioRconDefinitionValue("character-build-distance")]
-  Charactersubtractbuildsubtractdistance,
+  CharacterBuildDistance,
 
   /// <summary>
   /// Literal value: character-item-drop-distance
   /// </summary>
   [FactorioRconDefinitionValue("character-item-drop-distance")]
-  Charactersubtractitemsubtractdropsubtractdistance,
+  CharacterItemDropDistance,
 
   /// <summary>
   /// Literal value: character-reach-distance
   /// </summary>
   [FactorioRconDefinitionValue("character-reach-distance")]
-  Charactersubtractreachsubtractdistance,
+  CharacterReachDistance,
 
   /// <summary>
   /// Literal value: character-resource-reach-distance
   /// </summary>
   [FactorioRconDefinitionValue("character-resource-reach-distance")]
-  Charactersubtractresourcesubtractreachsubtractdistance,
+  CharacterResourceReachDistance,
 
   /// <summary>
   /// Literal value: character-item-pickup-distance
   /// </summary>
   [FactorioRconDefinitionValue("character-item-pickup-distance")]
-  Charactersubtractitemsubtractpickupsubtractdistance,
+  CharacterItemPickupDistance,
 
   /// <summary>
   /// Literal value: character-loot-pickup-distance
   /// </summary>
   [FactorioRconDefinitionValue("character-loot-pickup-distance")]
-  Charactersubtractlootsubtractpickupsubtractdistance,
+  CharacterLootPickupDistance,
 
   /// <summary>
   /// Literal value: character-inventory-slots-bonus
   /// </summary>
   [FactorioRconDefinitionValue("character-inventory-slots-bonus")]
-  Charactersubtractinventorysubtractslotssubtractbonus,
+  CharacterInventorySlotsBonus,
 
   /// <summary>
   /// Literal value: deconstruction-time-to-live
   /// </summary>
   [FactorioRconDefinitionValue("deconstruction-time-to-live")]
-  Deconstructionsubtracttimesubtracttosubtractlive,
+  DeconstructionTimeToLive,
 
   /// <summary>
   /// Literal value: max-failed-attempts-per-tick-per-construction-queue
   /// </summary>
   [FactorioRconDefinitionValue("max-failed-attempts-per-tick-per-construction-queue")]
-  Maxsubtractfailedsubtractattemptssubtractpersubtractticksubtractpersubtractconstructionsubtractqueue,
+  MaxFailedAttemptsPerTickPerConstructionQueue,
 
   /// <summary>
   /// Literal value: max-successful-attempts-per-tick-per-construction-queue
   /// </summary>
   [FactorioRconDefinitionValue("max-successful-attempts-per-tick-per-construction-queue")]
-  Maxsubtractsuccessfulsubtractattemptssubtractpersubtractticksubtractpersubtractconstructionsubtractqueue,
+  MaxSuccessfulAttemptsPerTickPerConstructionQueue,
 
   /// <summary>
   /// Literal value: character-health-bonus
   /// </summary>
   [FactorioRconDefinitionValue("character-health-bonus")]
-  Charactersubtracthealthsubtractbonus,
+  CharacterHealthBonus,
 
   /// <summary>
   /// Literal value: mining-drill-productivity-bonus
   /// </summary>
   [FactorioRconDefinitionValue("mining-drill-productivity-bonus")]
-  Miningsubtractdrillsubtractproductivitysubtractbonus,
+  MiningDrillProductivityBonus,
 
   /// <summary>
   /// Literal value: train-braking-force-bonus
   /// </summary>
   [FactorioRconDefinitionValue("train-braking-force-bonus")]
-  Trainsubtractbrakingsubtractforcesubtractbonus,
+  TrainBrakingForceBonus,
 
   /// <summary>
   /// Literal value: zoom-to-world-enabled
   /// </summary>
   [FactorioRconDefinitionValue("zoom-to-world-enabled")]
-  Zoomsubtracttosubtractworldsubtractenabled,
+  ZoomToWorldEnabled,
 
   /// <summary>
   /// Literal value: zoom-to-world-ghost-building-enabled
   /// </summary>
   [FactorioRconDefinitionValue("zoom-to-world-ghost-building-enabled")]
-  Zoomsubtracttosubtractworldsubtractghostsubtractbuildingsubtractenabled,
+  ZoomToWorldGhostBuildingEnabled,
 
   /// <summary>
   /// Literal value: zoom-to-world-blueprint-enabled
   /// </summary>
   [FactorioRconDefinitionValue("zoom-to-world-blueprint-enabled")]
-  Zoomsubtracttosubtractworldsubtractblueprintsubtractenabled,
+  ZoomToWorldBlueprintEnabled,
 
   /// <summary>
   /// Literal value: zoom-to-world-deconstruction-planner-enabled
   /// </summary>
   [FactorioRconDefinitionValue("zoom-to-world-deconstruction-planner-enabled")]
-  Zoomsubtracttosubtractworldsubtractdeconstructionsubtractplannersubtractenabled,
+  ZoomToWorldDeconstructionPlannerEnabled,
 
   /// <summary>
   /// Literal value: zoom-to-world-upgrade-planner-enabled
   /// </summary>
   [FactorioRconDefinitionValue("zoom-to-world-upgrade-planner-enabled")]
-  Zoomsubtracttosubtractworldsubtractupgradesubtractplannersubtractenabled,
+  ZoomToWorldUpgradePlannerEnabled,
 
   /// <summary>
   /// Literal value: zoom-to-world-selection-tool-enabled
   /// </summary>
   [FactorioRconDefinitionValue("zoom-to-world-selection-tool-enabled")]
-  Zoomsubtracttosubtractworldsubtractselectionsubtracttoolsubtractenabled,
+  ZoomToWorldSelectionToolEnabled,
 
   /// <summary>
   /// Literal value: worker-robot-battery
   /// </summary>
   [FactorioRconDefinitionValue("worker-robot-battery")]
-  Workersubtractrobotsubtractbattery,
+  WorkerRobotBattery,
 
   /// <summary>
   /// Literal value: laboratory-productivity
   /// </summary>
   [FactorioRconDefinitionValue("laboratory-productivity")]
-  Laboratorysubtractproductivity,
+  LaboratoryProductivity,
 
   /// <summary>
   /// Literal value: follower-robot-lifetime
   /// </summary>
   [FactorioRconDefinitionValue("follower-robot-lifetime")]
-  Followersubtractrobotsubtractlifetime,
+  FollowerRobotLifetime,
 
   /// <summary>
   /// Literal value: artillery-range
   /// </summary>
   [FactorioRconDefinitionValue("artillery-range")]
-  Artillerysubtractrange,
+  ArtilleryRange,
 
   /// <summary>
   /// Literal value: nothing
@@ -260,7 +260,7 @@ public enum ModifierType
   /// Literal value: character-logistic-requests
   /// </summary>
   [FactorioRconDefinitionValue("character-logistic-requests")]
-  Charactersubtractlogisticsubtractrequests,
+  CharacterLogisticRequests,
 
 }
 

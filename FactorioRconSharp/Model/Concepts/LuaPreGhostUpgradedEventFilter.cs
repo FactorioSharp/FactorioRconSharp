@@ -26,7 +26,7 @@ public abstract class LuaPreGhostUpgradedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals685874751 Mode { get; set; }
+  public Literals1874670950 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

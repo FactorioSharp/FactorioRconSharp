@@ -56,7 +56,7 @@ public abstract class LuaTrain: LuaObject
   /// Locomotives of the train.
   /// </summary>
   [FactorioRconAttribute("locomotives")]
-  public Table963122954 Locomotives { get; private set; }
+  public Table983647817 Locomotives { get; private set; }
 
   /// <summary>
   /// The cargo carriages the train contains.

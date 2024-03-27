@@ -41,7 +41,7 @@ public enum ForceCondition
   /// Literal value: not-friend
   /// </summary>
   [FactorioRconDefinitionValue("not-friend")]
-  Notsubtractfriend,
+  NotFriend,
 
   /// <summary>
   /// Literal value: same
@@ -53,7 +53,7 @@ public enum ForceCondition
   /// Literal value: not-same
   /// </summary>
   [FactorioRconDefinitionValue("not-same")]
-  Notsubtractsame,
+  NotSame,
 
 }
 
