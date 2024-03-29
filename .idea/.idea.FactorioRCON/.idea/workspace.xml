@@ -7,16 +7,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="configure actions">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRCON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet-releaser.toml" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet-releaser.toml" afterDir="false" />
-    </list>
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="develop" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Ismail Bennani &lt;lahkim.bennani.ismail@gmail.com&gt;" />
@@ -28,8 +38,30 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/556582d964cc21b82a88d7154e915076f6f9008e/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/MemberBinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/ExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/LambdaExpression.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Linq.Expressions/src/System/Linq/Expressions/MemberExpression.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/42/c8539dfb/SwitchCase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/94/9e49aa94/ElementInit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/a7/24c877cd/ExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/b8/a3efa33d/MemberMemberBinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/c9/12c86353/LabelTarget.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df9756242e5b4cb9b71108d56f0c1632f188/fd/68572dac/CatchBlock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1806c8e3e414a8ba2b6257e790ea1974e00/d3/91371e36/RconClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Resource/FactorioRconModelBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/Resource/LuaCustomTable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/bin/Debug/net8.0/out/FactorioRconGameScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/bin/Debug/net8.0/out/FactorioRconModelBase_v1_1_104.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,17 +71,20 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2e84KUYgy5W2XUFQP3gdB9JWPK7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.Client Generator.executor": "Run",
     ".NET Project.FactorioRCON.TestApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,11 +103,29 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="FactorioRCON.TestApplication" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+  <component name="RunManager" selected=".NET Project.Client Generator">
+    <configuration name="Client Generator" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/bin/Debug/net8.0/FactorioRconSharp.ClientGenerator.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/FactorioRconSharp.ClientGenerator/FactorioRconSharp.ClientGenerator.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Test Application" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/FactorioRconSharp.TestApplication/bin/Debug/net8.0/FactorioRconSharp.TestApplication.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FactorioRconSharp.TestApplication/bin/Debug/net8.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -82,11 +135,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net8.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.Test Application" />
+      <item itemvalue=".NET Project.Client Generator" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711272812299</updated>
-      <workItem from="1711272813339" duration="4211000" />
+      <workItem from="1711272813339" duration="43917000" />
     </task>
     <task id="LOCAL-00001" summary="implement factorio low level RCON client">
       <option name="closed" value="true" />
@@ -130,7 +187,95 @@
       <option name="project" value="LOCAL" />
       <updated>1711277283495</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix user name">
+      <option name="closed" value="true" />
+      <created>1711277413844</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711277413844</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bump version">
+      <option name="closed" value="true" />
+      <created>1711277512670</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711277512670</updated>
+    </task>
+    <task id="LOCAL-00007" summary="rename Close method to Disconnect">
+      <option name="closed" value="true" />
+      <created>1711277668784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711277668784</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add simple properties of LuaGameScript global instance">
+      <option name="closed" value="true" />
+      <created>1711283307242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711283307242</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add parameterless methods of LuaGameScript with simple return types">
+      <option name="closed" value="true" />
+      <created>1711285353171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711285353171</updated>
+    </task>
+    <task id="LOCAL-00010" summary="use visitor pattern to allow nested expressions">
+      <option name="closed" value="true" />
+      <created>1711293906990</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711293906990</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add parameterless methods">
+      <option name="closed" value="true" />
+      <created>1711294256599</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711294256599</updated>
+    </task>
+    <task id="LOCAL-00012" summary="handle method parameters">
+      <option name="closed" value="true" />
+      <created>1711296867709</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711296867709</updated>
+    </task>
+    <task id="LOCAL-00013" summary="handle arrays properly">
+      <option name="closed" value="true" />
+      <created>1711297374860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711297374860</updated>
+    </task>
+    <task id="LOCAL-00014" summary="start parsing factorio runtime api specification">
+      <option name="closed" value="true" />
+      <created>1711309945514</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711309945514</updated>
+    </task>
+    <task id="LOCAL-00015" summary="generate classes from lua classes">
+      <option name="closed" value="true" />
+      <created>1711324286849</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711324286849</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +293,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
@@ -165,6 +310,24 @@
     <MESSAGE value="implement factorio low level RCON client" />
     <MESSAGE value="rename project" />
     <MESSAGE value="configure actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="configure actions" />
+    <MESSAGE value="fix user name" />
+    <MESSAGE value="bump version" />
+    <MESSAGE value="rename Close method to Disconnect" />
+    <MESSAGE value="add simple properties of LuaGameScript global instance" />
+    <MESSAGE value="add parameterless methods of LuaGameScript with simple return types" />
+    <MESSAGE value="use visitor pattern to allow nested expressions" />
+    <MESSAGE value="add parameterless methods" />
+    <MESSAGE value="handle method parameters" />
+    <MESSAGE value="handle arrays properly" />
+    <MESSAGE value="start parsing factorio runtime api specification" />
+    <MESSAGE value="generate classes from lua classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate classes from lua classes" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="%reader._nextPosition" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

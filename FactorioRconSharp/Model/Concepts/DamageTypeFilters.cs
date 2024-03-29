@@ -1,0 +1,29 @@
+#pragma warning disable CS8618
+// ReSharper disable UnassignedGetOnlyAutoProperty
+
+using FactorioRconSharp.Core.Abstractions;
+using FactorioRconSharp.Model.Anonymous;
+using FactorioRconSharp.Model.Builtins;
+using FactorioRconSharp.Model.Classes;
+using FactorioRconSharp.Model.Definitions;
+using FactorioRconSharp.Model.Utils;
+
+namespace FactorioRconSharp.Model.Concepts;
+
+[FactorioRconConcept("DamageTypeFilters")]
+public class DamageTypeFilters
+{
+  /// <summary>
+  /// Whether this is a whitelist or a blacklist of damage types. `true` means whitelist.
+  /// </summary>
+  [FactorioRconAttribute("whitelist")]
+  public bool Whitelist { get; set; }
+
+  /// <summary>
+  /// The damage types to filter for. The value in the dictionary is meaningless and exists just to allow for easy lookup.
+  /// </summary>
+  [FactorioRconAttribute("types")]
+  public Dictionary<string, Literal534330233> Types { get; set; }
+
+}
+

@@ -26,6 +26,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="OneOf" Version="3.0.263" />
+      <PackageReference Include="OneOf.SourceGenerator" Version="3.0.263" />
       <PackageReference Include="RconSharp" Version="2.0.1" />
     </ItemGroup>
 

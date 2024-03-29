@@ -1,0 +1,32 @@
+#pragma warning disable CS8618
+// ReSharper disable UnassignedGetOnlyAutoProperty
+
+using FactorioRconSharp.Core.Abstractions;
+using FactorioRconSharp.Model.Anonymous;
+using FactorioRconSharp.Model.Builtins;
+using FactorioRconSharp.Model.Classes;
+using FactorioRconSharp.Model.Definitions;
+using FactorioRconSharp.Model.Utils;
+
+namespace FactorioRconSharp.Model.Concepts;
+
+/// <summary>
+/// The settings used by a heat-interface type entity.
+/// </summary>
+[FactorioRconConcept("HeatSetting")]
+public class HeatSetting
+{
+  /// <summary>
+  /// The target temperature. Defaults to the minimum temperature of the heat buffer.
+  /// </summary>
+  [FactorioRconAttribute("temperature")]
+  public double Temperature { get; set; }
+
+  /// <summary>
+  /// Defaults to `"at-least"`.
+  /// </summary>
+  [FactorioRconAttribute("mode")]
+  public Literals1396005403 Mode { get; set; }
+
+}
+
