@@ -128,7 +128,7 @@ public abstract class LuaItemStack: LuaObject
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public Literals1534788641 PrioritizeInsertionMode { get; set; }
+  public Literals2012425039 PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
@@ -546,7 +546,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_entity_filter")]
-  public abstract bool SetEntityFilter(uint index, Union2132425568 filter);
+  public abstract bool SetEntityFilter(uint index, Union1641951594 filter);
 
   /// <summary>
   /// Gets the tile filter at the given index for this deconstruction item.
@@ -561,7 +561,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_tile_filter")]
-  public abstract bool SetTileFilter(uint index, Union1803452027 filter);
+  public abstract bool SetTileFilter(uint index, Union1444717342 filter);
 
   /// <summary>
   /// Clears all settings/filters on this deconstruction item resetting it to default values.
@@ -581,7 +581,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public abstract UpgradeFilter GetMapper(uint index, Literals1527149823 type);
+  public abstract UpgradeFilter GetMapper(uint index, Literals1744116963 type);
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,7 +590,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public abstract void SetMapper(uint index, Literals1790745597 type, Union224283623 filter);
+  public abstract void SetMapper(uint index, Literals137692570 type, Union2036427321 filter);
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.

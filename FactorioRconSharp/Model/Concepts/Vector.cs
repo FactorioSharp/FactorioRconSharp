@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("Vector")]
-public partial class Vector: OneOfBase<Table1325519395, Tuple1445075225>
+public partial class Vector: OneOfBase<Table261089931, Tuple2075155401>
 {
 }
 

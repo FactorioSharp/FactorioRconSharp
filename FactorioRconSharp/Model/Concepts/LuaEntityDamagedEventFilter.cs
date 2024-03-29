@@ -26,7 +26,7 @@ public class LuaEntityDamagedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1210013836 Mode { get; set; }
+  public Literals104470220 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

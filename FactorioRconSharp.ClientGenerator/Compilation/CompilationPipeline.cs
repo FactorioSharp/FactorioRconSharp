@@ -10,7 +10,9 @@ static class CompilationPipeline
         FactorioModelFileCompiler compiler = new(specification);
 
         IEnumerable<FactorioRuntimeTypeSpecification> anonymousTypes = specification.Concepts.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes)
-            .Concat(specification.Classes.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes));
+            .Concat(specification.Classes.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes))
+            .Concat(specification.GlobalObjects.Select(o => o.Type).SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes))
+            .Concat(specification.GlobalFunctions.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes));
 
         List<FactorioModelTopLevelStatement> compiledAnonymousTypes = anonymousTypes.Distinct().SelectMany(compiler.CompileType).ToList();
 
@@ -87,6 +89,24 @@ static class CompilationPipeline
                         };
                     }
                 )
+        );
+
+        FactorioModelTopLevelStatement globalStatement = compiler.CompileGlobals();
+        files.Add(
+            new FactorioModelFile
+            {
+                Name = globalStatement.Name,
+                Namespace = "FactorioRconSharp.Model",
+                Usings =
+                [
+                    "FactorioRconSharp.Model.Builtins",
+                    "FactorioRconSharp.Model.Anonymous",
+                    "FactorioRconSharp.Model.Classes",
+                    "FactorioRconSharp.Model.Concepts",
+                    "FactorioRconSharp.Model.Definitions"
+                ],
+                Statements = [globalStatement]
+            }
         );
 
         return files;

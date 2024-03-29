@@ -49,7 +49,7 @@ public static class FactorioSpecificationTypeExtractor
         yield return op.Type;
     }
 
-    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodSpecification method) =>
+    public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeMethodSpecification method) =>
         method.Parameters.SelectMany(ExtractTypes).Concat(method.ReturnValues.SelectMany(ExtractTypes));
 
     static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeParameterSpecification parameter)
@@ -82,7 +82,7 @@ public static class FactorioSpecificationTypeExtractor
         yield return attribute.Type;
     }
 
-    static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeTypeSpecification type)
+    public static IEnumerable<FactorioRuntimeTypeSpecification> ExtractTypes(FactorioRuntimeTypeSpecification type)
     {
         switch (type)
         {

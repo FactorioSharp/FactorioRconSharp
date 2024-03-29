@@ -17,7 +17,7 @@ namespace FactorioRconSharp.Model.Concepts;
 public class ScriptRenderVertexTarget
 {
   [FactorioRconAttribute("target")]
-  public Union792319657 Target { get; set; }
+  public Union5349442 Target { get; set; }
 
   /// <summary>
   /// Only used if `target` is a LuaEntity.

@@ -54,9 +54,31 @@ public class FactorioModelFileCompiler
         return CompileDefinition(definition);
     }
 
+    public FactorioModelTopLevelStatement CompileGlobals() =>
+        new FactorioModelClass
+        {
+            Name = "FactorioRconGlobals",
+            Documentation = new FactorioModelDocumentation { Summary = "Objects and methods available globally in the Factorio console" },
+            Properties = _specification.GlobalObjects.Select(
+                    o => new FactorioModelClassProperty
+                    {
+                        Name = SanitizeLuaName(o.Name),
+                        LuaName = o.Name,
+                        Documentation = new FactorioModelDocumentation { Summary = o.Description },
+                        IsStatic = false,
+                        Type = BuildTypeName(o.Type),
+                        Optional = false,
+                        Read = true,
+                        Write = false
+                    }
+                )
+                .ToArray(),
+            Methods = _specification.GlobalFunctions.Select(CompileMethod).ToArray()
+        };
+
     FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls)
     {
-        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(cls.Name)).ToPascalCase();
+        string name = SanitizeLuaName(cls.Name);
 
         return new FactorioModelClass
         {
@@ -79,7 +101,7 @@ public class FactorioModelFileCompiler
 
     (FactorioModelTopLevelStatement CompiledConcept, IEnumerable<FactorioModelTopLevelStatement> AuxiliaryTypes) CompileConcept(FactorioRuntimeConceptSpecification concept)
     {
-        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(concept.Name)).ToPascalCase();
+        string name = SanitizeLuaName(concept.Name);
 
         FactorioModelTopLevelStatement compiledConcept;
         IEnumerable<FactorioModelTopLevelStatement> auxiliaryTypes = Array.Empty<FactorioModelTopLevelStatement>();
@@ -127,7 +149,7 @@ public class FactorioModelFileCompiler
 
     IEnumerable<FactorioModelEnum> CompileDefinition(FactorioRuntimeDefinitionSpecification definition, string namePrefix = "", string luaNamePrefix = "")
     {
-        string enumName = $"{namePrefix}{ReplaceInvalidIdentifierCharacters(ToPascalCase(definition.Name))}".ToPascalCase();
+        string enumName = $"{namePrefix}{SanitizeLuaName(definition.Name)}";
         string luaName = $"{luaNamePrefix}{definition.Name}";
 
         return new[]
@@ -158,14 +180,14 @@ public class FactorioModelFileCompiler
     FactorioModelEnumValue CompileEnumValue(FactorioRuntimeDefinitionValueSpecification definitionValue) =>
         new()
         {
-            Name = ReplaceInvalidIdentifierCharacters(ToPascalCase(definitionValue.Name)).ToPascalCase(),
+            Name = SanitizeLuaName(definitionValue.Name),
             LuaName = definitionValue.Name,
             Documentation = new FactorioModelDocumentation { Summary = definitionValue.Description }
         };
 
     FactorioModelClassProperty CompileProperty(FactorioRuntimeAttributeSpecification attribute, string className)
     {
-        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(attribute.Name)).ToPascalCase();
+        string name = SanitizeLuaName(attribute.Name);
         if (name == className)
         {
             name = $"{name}Prop";
@@ -207,7 +229,7 @@ public class FactorioModelFileCompiler
 
     FactorioModelClassProperty CompileProperty(FactorioRuntimeParameterSpecification parameter, string className)
     {
-        string name = ReplaceInvalidIdentifierCharacters(ToPascalCase(parameter.Name)).ToPascalCase();
+        string name = SanitizeLuaName(parameter.Name);
         if (name == className)
         {
             name = $"{name}Prop";
@@ -244,7 +266,7 @@ public class FactorioModelFileCompiler
     FactorioModelClassMethod CompileMethod(FactorioRuntimeMethodSpecification method) =>
         new()
         {
-            Name = ReplaceInvalidIdentifierCharacters(ToPascalCase(method.Name)).ToPascalCase(),
+            Name = SanitizeLuaName(method.Name),
             LuaName = method.Name,
             Documentation = new FactorioModelDocumentation
             {
@@ -343,7 +365,7 @@ public class FactorioModelFileCompiler
                             name = $"{name[8..]}Enum";
                         }
 
-                        return ReplaceInvalidIdentifierCharacters(name.Replace('.', '_').ToPascalCase()).ToPascalCase();
+                        return ReplaceInvalidSharpIdentifierCharacters(name.Replace('.', '_').ToPascalCase()).ToPascalCase();
                 }
             case FactorioRuntimeArrayTypeSpecification arrayType:
                 return $"List<{BuildTypeName(arrayType.Value)}>";
@@ -382,41 +404,6 @@ public class FactorioModelFileCompiler
                 return $"({string.Join(", ", returnValues.Select(p => BuildTypeName(p.Type, p.Optional)))})";
         }
     }
-
-    string EscapeSharpKeyword(string symbol)
-    {
-        switch (symbol)
-        {
-            case "event":
-            case "string":
-            case "interface":
-                return $"@{symbol}";
-            default:
-                return symbol;
-        }
-    }
-
-    string ReplaceInvalidIdentifierCharacters(string str) =>
-        str.Replace("+", "add")
-            .Replace("-", "subtract")
-            .Replace("*", "multiply")
-            .Replace("/", "divide")
-            .Replace(">=", "ge")
-            .Replace("≥", "ge")
-            .Replace(">>", "lsr")
-            .Replace(">", "gt")
-            .Replace("<=", "le")
-            .Replace("≤", "le")
-            .Replace("<<", "lsl")
-            .Replace("<", "lt")
-            .Replace("!=", "ne")
-            .Replace("≠", "ne")
-            .Replace("==", "eqeq")
-            .Replace("=", "eq")
-            .Replace("%", "percent")
-            .Replace("^", "pow")
-            .Replace("[1]", "first")
-            .Replace("[2]", "second");
 
     public IEnumerable<FactorioModelTopLevelStatement> CompileType(FactorioRuntimeTypeSpecification type)
     {
@@ -470,7 +457,7 @@ public class FactorioModelFileCompiler
         string valueName = literalType.Value.ToString() ?? "value";
         return new FactorioModelEnumValue
         {
-            Name = ReplaceInvalidIdentifierCharacters(ToPascalCase(valueName)).ToPascalCase(), LuaName = valueName,
+            Name = SanitizeLuaName(valueName), LuaName = valueName,
             Documentation = new FactorioModelDocumentation { Summary = $"Literal value: {literalType.Value}" }
         };
     }
@@ -581,4 +568,41 @@ public class FactorioModelFileCompiler
             "-" => "-",
             _ => str.ToPascalCase()
         };
+
+    static string EscapeSharpKeyword(string symbol)
+    {
+        switch (symbol)
+        {
+            case "event":
+            case "string":
+            case "interface":
+                return $"@{symbol}";
+            default:
+                return symbol;
+        }
+    }
+
+    static string ReplaceInvalidSharpIdentifierCharacters(string str) =>
+        str.Replace("+", "add")
+            .Replace("-", "subtract")
+            .Replace("*", "multiply")
+            .Replace("/", "divide")
+            .Replace(">=", "ge")
+            .Replace("≥", "ge")
+            .Replace(">>", "lsr")
+            .Replace(">", "gt")
+            .Replace("<=", "le")
+            .Replace("≤", "le")
+            .Replace("<<", "lsl")
+            .Replace("<", "lt")
+            .Replace("!=", "ne")
+            .Replace("≠", "ne")
+            .Replace("==", "eqeq")
+            .Replace("=", "eq")
+            .Replace("%", "percent")
+            .Replace("^", "pow")
+            .Replace("[1]", "first")
+            .Replace("[2]", "second");
+
+    static string SanitizeLuaName(string name) => ReplaceInvalidSharpIdentifierCharacters(ToPascalCase(name)).ToPascalCase();
 }

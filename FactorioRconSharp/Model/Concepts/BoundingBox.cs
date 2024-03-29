@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("BoundingBox")]
-public partial class BoundingBox: OneOfBase<Table1420197355, Tuple1560870927>
+public partial class BoundingBox: OneOfBase<Table236166204, Tuple1974522505>
 {
 }
 
