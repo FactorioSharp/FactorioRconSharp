@@ -9,4 +9,6 @@ public class FactorioRuntimeApiSpecification
     public FactorioRuntimeClassSpecification[] Classes { get; set; } = Array.Empty<FactorioRuntimeClassSpecification>();
     public FactorioRuntimeConceptSpecification[] Concepts { get; set; } = Array.Empty<FactorioRuntimeConceptSpecification>();
     public FactorioRuntimeDefinitionSpecification[] Defines { get; set; } = Array.Empty<FactorioRuntimeDefinitionSpecification>();
+    public FactorioRuntimeGlobalObjectSpecification[] GlobalObjects { get; set; } = Array.Empty<FactorioRuntimeGlobalObjectSpecification>();
+    public FactorioRuntimeMethodSpecification[] GlobalFunctions { get; set; } = Array.Empty<FactorioRuntimeMethodSpecification>();
 }

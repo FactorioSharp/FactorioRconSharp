@@ -26,7 +26,7 @@ public class AchievementPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals140652070 Mode { get; set; }
+  public Literals2103753580 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

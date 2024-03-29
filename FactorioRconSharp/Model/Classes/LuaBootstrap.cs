@@ -26,7 +26,7 @@ public abstract class LuaBootstrap: LuaObject
   /// Information about the currently running scenario/campaign/tutorial.
   /// </summary>
   [FactorioRconAttribute("level")]
-  public Table156134055 Level { get; private set; }
+  public Table400975002 Level { get; private set; }
 
   /// <summary>
   /// A dictionary listing the names of all currently active mods and mapping them to their version.
@@ -48,7 +48,7 @@ public abstract class LuaBootstrap: LuaObject
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_init")]
-  public abstract void OnInit(Union23778505 handler);
+  public abstract void OnInit(Union1432207897 handler);
 
   /// <summary>
   /// Register a function to be run on save load. This is only called for mods that have been part of the save previously, or for players connecting to a running multiplayer session.
@@ -67,7 +67,7 @@ public abstract class LuaBootstrap: LuaObject
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_load")]
-  public abstract void OnLoad(Union23778505 handler);
+  public abstract void OnLoad(Union1432207897 handler);
 
   /// <summary>
   /// Register a function to be run when mod configuration changes. This is called when the game version or any mod version changed, when any mod was added or removed, when a startup setting has changed, when any prototypes have been added or removed, or when a migration was applied. It allows the mod to make any changes it deems appropriate to both the data structures in its <see cref="LuaGameScript" />.
@@ -77,7 +77,7 @@ public abstract class LuaBootstrap: LuaObject
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_configuration_changed")]
-  public abstract void OnConfigurationChanged(Union907948867 handler);
+  public abstract void OnConfigurationChanged(Union2085576092 handler);
 
   /// <summary>
   /// Register a handler to run on the specified event(s). Each mod can only register once for every event, as any additional registration will overwrite the previous one. This holds true even if different filters are used for subsequent registrations.
@@ -86,7 +86,7 @@ public abstract class LuaBootstrap: LuaObject
   /// <param name="handler">Lua name: handler</param>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("on_event")]
-  public abstract void OnEvent(Union943060138 @event, Union661358171 handler, EventFilter? filters = null);
+  public abstract void OnEvent(Union496402827 @event, Union1127727384 handler, EventFilter? filters = null);
 
   /// <summary>
   /// Register a handler to run every nth-tick(s). When the game is on tick 0 it will trigger all registered handlers.
@@ -94,7 +94,7 @@ public abstract class LuaBootstrap: LuaObject
   /// <param name="tick">Lua name: tick</param>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_nth_tick")]
-  public abstract void OnNthTick(Union2129637234 tick, Union1168834541 handler);
+  public abstract void OnNthTick(Union887350996 tick, Union1119418186 handler);
 
   /// <summary>
   /// Registers an entity so that after it's destroyed, <see cref="OnEntityDestroyed" /> will receive the event when it is destroyed. Registering the same entity multiple times will still only fire the destruction event once, and will return the same registration number.

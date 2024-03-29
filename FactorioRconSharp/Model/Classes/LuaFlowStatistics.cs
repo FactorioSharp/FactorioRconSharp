@@ -25,13 +25,13 @@ public abstract class LuaFlowStatistics: LuaObject
   /// List of input counts indexed by prototype name. Represents the data that is shown on the left side of the GUI for the given statistics.
   /// </summary>
   [FactorioRconAttribute("input_counts")]
-  public Dictionary<string, Union1864319149> InputCounts { get; private set; }
+  public Dictionary<string, Union1887875776> InputCounts { get; private set; }
 
   /// <summary>
   /// List of output counts indexed by prototype name. Represents the data that is shown on the right side of the GUI for the given statistics.
   /// </summary>
   [FactorioRconAttribute("output_counts")]
-  public Dictionary<string, Union1864319149> OutputCounts { get; private set; }
+  public Dictionary<string, Union1887875776> OutputCounts { get; private set; }
 
   /// <summary>
   /// The force these statistics belong to. `nil` for pollution statistics.
@@ -56,7 +56,7 @@ public abstract class LuaFlowStatistics: LuaObject
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_input_count")]
-  public abstract Union1864319149 GetInputCount(string name);
+  public abstract Union1887875776 GetInputCount(string name);
 
   /// <summary>
   /// Sets the total input count for a given prototype.
@@ -64,14 +64,14 @@ public abstract class LuaFlowStatistics: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("set_input_count")]
-  public abstract void SetInputCount(string name, Union1864319149 count);
+  public abstract void SetInputCount(string name, Union1887875776 count);
 
   /// <summary>
   /// Gets the total output count for a given prototype.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_output_count")]
-  public abstract Union1864319149 GetOutputCount(string name);
+  public abstract Union1887875776 GetOutputCount(string name);
 
   /// <summary>
   /// Sets the total output count for a given prototype.
@@ -79,7 +79,7 @@ public abstract class LuaFlowStatistics: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("set_output_count")]
-  public abstract void SetOutputCount(string name, Union1864319149 count);
+  public abstract void SetOutputCount(string name, Union1887875776 count);
 
   /// <summary>
   /// Gets the flow count value for the given time frame. If `sample_index` is not provided, then the value returned is the average across the provided precision time period. These are the values shown in the bottom section of the statistics GUIs.
