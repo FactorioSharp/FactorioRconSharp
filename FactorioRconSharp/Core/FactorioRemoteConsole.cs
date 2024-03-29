@@ -2,12 +2,12 @@
 
 namespace FactorioRconSharp.Core;
 
-public class FactorioLowLevelRconClient : IDisposable
+public class FactorioRemoteConsole : IDisposable
 {
     readonly RconClient _rconClient;
     public bool Connected { get; private set; }
 
-    public FactorioLowLevelRconClient(string ipAddress, int port)
+    public FactorioRemoteConsole(string ipAddress, int port)
     {
         _rconClient = RconClient.Create(ipAddress, port);
     }

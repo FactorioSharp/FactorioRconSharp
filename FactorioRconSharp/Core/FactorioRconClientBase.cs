@@ -7,13 +7,13 @@ namespace FactorioRconSharp.Core;
 
 public abstract class FactorioRconClientBase : IDisposable
 {
-    readonly FactorioLowLevelRconClient _lowLevelClient;
+    readonly FactorioRemoteConsole _lowLevelClient;
 
     public bool Connected => _lowLevelClient.Connected;
 
     public FactorioRconClientBase(string ipAddress, int port)
     {
-        _lowLevelClient = new FactorioLowLevelRconClient(ipAddress, port);
+        _lowLevelClient = new FactorioRemoteConsole(ipAddress, port);
     }
 
     public async Task<bool> ConnectAsync(string password) => await _lowLevelClient.ConnectAsync(password);
