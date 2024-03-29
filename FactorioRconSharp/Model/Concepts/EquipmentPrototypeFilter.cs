@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("EquipmentPrototypeFilter")]
-public abstract class EquipmentPrototypeFilter
+public class EquipmentPrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"item-to-place"`, `"type"`.
@@ -26,7 +26,7 @@ public abstract class EquipmentPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1786677598 Mode { get; set; }
+  public Literals1429969633 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

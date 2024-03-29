@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CustomCommandData")]
-public abstract class CustomCommandData
+public class CustomCommandData
 {
   /// <summary>
   /// The name of the command.

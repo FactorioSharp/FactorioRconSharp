@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CircuitConnectionDefinition")]
-public abstract class CircuitConnectionDefinition
+public class CircuitConnectionDefinition
 {
   /// <summary>
   /// Wire color, either <see cref="Defines.WireType.Green" />.

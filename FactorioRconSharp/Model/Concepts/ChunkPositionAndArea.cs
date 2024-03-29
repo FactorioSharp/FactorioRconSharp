@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A <see cref="ChunkPosition" /> with an added bounding box for the area of the chunk.
 /// </summary>
 [FactorioRconConcept("ChunkPositionAndArea")]
-public abstract class ChunkPositionAndArea
+public class ChunkPositionAndArea
 {
   [FactorioRconAttribute("x")]
   public int X { get; set; }

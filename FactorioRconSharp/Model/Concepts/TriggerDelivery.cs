@@ -11,10 +11,10 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TriggerDelivery")]
-public abstract class TriggerDelivery
+public class TriggerDelivery
 {
   [FactorioRconAttribute("type")]
-  public Literals1209507604 Type { get; set; }
+  public Literals39518168 Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
   public List<TriggerEffectItem> SourceEffects { get; set; }

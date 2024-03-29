@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DisplayResolution")]
-public abstract class DisplayResolution
+public class DisplayResolution
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }

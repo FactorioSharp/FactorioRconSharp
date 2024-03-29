@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TrainSchedule")]
-public abstract class TrainSchedule
+public class TrainSchedule
 {
   /// <summary>
   /// Index of the currently active record

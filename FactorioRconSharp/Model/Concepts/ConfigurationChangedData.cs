@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ConfigurationChangedData")]
-public abstract class ConfigurationChangedData
+public class ConfigurationChangedData
 {
   /// <summary>
   /// Old version of the map. Present only when loading map version other than the current version.

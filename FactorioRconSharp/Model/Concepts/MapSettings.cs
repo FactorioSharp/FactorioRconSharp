@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Various game-related settings. Updating any of the attributes will immediately take effect in the game engine.
 /// </summary>
 [FactorioRconConcept("MapSettings")]
-public abstract class MapSettings
+public class MapSettings
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }

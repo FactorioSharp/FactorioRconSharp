@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("PrototypeHistory")]
-public abstract class PrototypeHistory
+public class PrototypeHistory
 {
   /// <summary>
   /// The mod that created this prototype.

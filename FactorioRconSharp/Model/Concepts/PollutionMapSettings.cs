@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// These values are for the time frame of one second (60 ticks).
 /// </summary>
 [FactorioRconConcept("PollutionMapSettings")]
-public abstract class PollutionMapSettings
+public class PollutionMapSettings
 {
   /// <summary>
   /// Whether pollution is enabled at all.

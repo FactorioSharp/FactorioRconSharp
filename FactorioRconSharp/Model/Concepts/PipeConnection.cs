@@ -14,13 +14,13 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A single pipe connection for a given fluidbox.
 /// </summary>
 [FactorioRconConcept("PipeConnection")]
-public abstract class PipeConnection
+public class PipeConnection
 {
   [FactorioRconAttribute("flow_direction")]
-  public Literals523421081 FlowDirection { get; set; }
+  public Literals1113646209 FlowDirection { get; set; }
 
   [FactorioRconAttribute("connection_type")]
-  public Literals361865678 ConnectionType { get; set; }
+  public Literals1818196025 ConnectionType { get; set; }
 
   /// <summary>
   /// The absolute position of this connection within the entity.

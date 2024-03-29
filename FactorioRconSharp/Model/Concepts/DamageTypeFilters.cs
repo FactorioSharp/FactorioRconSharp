@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DamageTypeFilters")]
-public abstract class DamageTypeFilters
+public class DamageTypeFilters
 {
   /// <summary>
   /// Whether this is a whitelist or a blacklist of damage types. `true` means whitelist.
@@ -23,7 +23,7 @@ public abstract class DamageTypeFilters
   /// The damage types to filter for. The value in the dictionary is meaningless and exists just to allow for easy lookup.
   /// </summary>
   [FactorioRconAttribute("types")]
-  public Dictionary<string, Literal1447807750> Types { get; set; }
+  public Dictionary<string, Literal534330233> Types { get; set; }
 
 }
 

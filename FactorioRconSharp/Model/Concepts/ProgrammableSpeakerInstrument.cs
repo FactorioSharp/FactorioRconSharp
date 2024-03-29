@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerInstrument")]
-public abstract class ProgrammableSpeakerInstrument
+public class ProgrammableSpeakerInstrument
 {
   [FactorioRconAttribute("name")]
   public string Name { get; set; }

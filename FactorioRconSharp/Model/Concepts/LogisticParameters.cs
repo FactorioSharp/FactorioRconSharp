@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("LogisticParameters")]
-public abstract class LogisticParameters
+public class LogisticParameters
 {
   /// <summary>
   /// The item. `nil` clears the filter.

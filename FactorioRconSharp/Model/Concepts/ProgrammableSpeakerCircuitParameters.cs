@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerCircuitParameters")]
-public abstract class ProgrammableSpeakerCircuitParameters
+public class ProgrammableSpeakerCircuitParameters
 {
   [FactorioRconAttribute("signal_value_is_pitch")]
   public bool SignalValueIsPitch { get; set; }

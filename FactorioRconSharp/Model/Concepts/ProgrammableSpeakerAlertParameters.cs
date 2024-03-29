@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerAlertParameters")]
-public abstract class ProgrammableSpeakerAlertParameters
+public class ProgrammableSpeakerAlertParameters
 {
   [FactorioRconAttribute("show_alert")]
   public bool ShowAlert { get; set; }

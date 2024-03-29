@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("DecorativePrototypeFilter")]
-public abstract class DecorativePrototypeFilter
+public class DecorativePrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"decal"`, `"autoplace"`, `"collision-mask"`.
@@ -26,7 +26,7 @@ public abstract class DecorativePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1024742378 Mode { get; set; }
+  public Literals1140515969 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

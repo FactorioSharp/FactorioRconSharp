@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("TilePrototypeFilter")]
-public abstract class TilePrototypeFilter
+public class TilePrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"minable"`, `"autoplace"`, `"blueprintable"`, `"item-to-place"`, `"collision-mask"`, `"walking-speed-modifier"`, `"vehicle-friction-modifier"`, `"decorative-removal-probability"`, `"emissions"`.
@@ -26,7 +26,7 @@ public abstract class TilePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1752828518 Mode { get; set; }
+  public Literals1359552380 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

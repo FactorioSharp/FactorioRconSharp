@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ForceIdentification")]
-public abstract partial class ForceIdentification: OneOfBase<byte, string, LuaForce>
+public partial class ForceIdentification: OneOfBase<byte, string, LuaForce>
 {
 }
 

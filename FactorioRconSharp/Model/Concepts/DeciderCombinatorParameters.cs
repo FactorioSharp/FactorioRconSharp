@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DeciderCombinatorParameters")]
-public abstract class DeciderCombinatorParameters
+public class DeciderCombinatorParameters
 {
   /// <summary>
   /// Defaults to blank.

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("LogisticsNetworkSupplyPoints")]
-public abstract class LogisticsNetworkSupplyPoints
+public class LogisticsNetworkSupplyPoints
 {
   [FactorioRconAttribute("storage")]
   public List<LuaLogisticPoint> Storage { get; set; }

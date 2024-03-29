@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("SurfaceIdentification")]
-public abstract partial class SurfaceIdentification: OneOfBase<uint, string, LuaSurface>
+public partial class SurfaceIdentification: OneOfBase<uint, string, LuaSurface>
 {
 }
 

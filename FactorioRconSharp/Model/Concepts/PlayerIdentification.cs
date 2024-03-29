@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("PlayerIdentification")]
-public abstract partial class PlayerIdentification: OneOfBase<uint, string, LuaPlayer>
+public partial class PlayerIdentification: OneOfBase<uint, string, LuaPlayer>
 {
 }
 

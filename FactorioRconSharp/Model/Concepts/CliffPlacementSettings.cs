@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CliffPlacementSettings")]
-public abstract class CliffPlacementSettings
+public class CliffPlacementSettings
 {
   /// <summary>
   /// Name of the cliff prototype.

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("GuiAnchor")]
-public abstract class GuiAnchor
+public class GuiAnchor
 {
   [FactorioRconAttribute("gui")]
   public RelativeGuiTypeEnum Gui { get; set; }

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ItemStackLocation")]
-public abstract class ItemStackLocation
+public class ItemStackLocation
 {
   [FactorioRconAttribute("inventory")]
   public InventoryEnum Inventory { get; set; }

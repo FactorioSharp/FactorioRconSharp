@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("VehicleAutomaticTargetingParameters")]
-public abstract class VehicleAutomaticTargetingParameters
+public class VehicleAutomaticTargetingParameters
 {
   [FactorioRconAttribute("auto_target_without_gunner")]
   public bool AutoTargetWithoutGunner { get; set; }

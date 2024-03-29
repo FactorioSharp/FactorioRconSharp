@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("RecipePrototypeFilter")]
-public abstract class RecipePrototypeFilter
+public class RecipePrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"enabled"`, `"hidden"`, `"hidden-from-flow-stats"`, `"hidden-from-player-crafting"`, `"allow-as-intermediate"`, `"allow-intermediates"`, `"allow-decomposition"`, `"always-show-made-in"`, `"always-show-products"`, `"show-amount-in-title"`, `"has-ingredients"`, `"has-products"`, `"has-ingredient-item"`, `"has-ingredient-fluid"`, `"has-product-item"`, `"has-product-fluid"`, `"subgroup"`, `"category"`, `"energy"`, `"emissions-multiplier"`, `"request-paste-multiplier"`, `"overload-multiplier"`.
@@ -26,7 +26,7 @@ public abstract class RecipePrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals322441129 Mode { get; set; }
+  public Literals1323880096 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

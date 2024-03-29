@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerParameters")]
-public abstract class ProgrammableSpeakerParameters
+public class ProgrammableSpeakerParameters
 {
   [FactorioRconAttribute("playback_volume")]
   public double PlaybackVolume { get; set; }

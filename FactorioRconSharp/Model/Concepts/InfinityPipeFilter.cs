@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A single filter used by an infinity-pipe type entity.
 /// </summary>
 [FactorioRconConcept("InfinityPipeFilter")]
-public abstract class InfinityPipeFilter
+public class InfinityPipeFilter
 {
   /// <summary>
   /// Name of the fluid.
@@ -38,7 +38,7 @@ public abstract class InfinityPipeFilter
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1570027940 Mode { get; set; }
+  public Literals345820148 Mode { get; set; }
 
 }
 

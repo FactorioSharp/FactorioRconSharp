@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ModChangeData")]
-public abstract class ModChangeData
+public class ModChangeData
 {
   /// <summary>
   /// Old version of the mod. May be `nil` if the mod wasn't previously present (i.e. it was just added).

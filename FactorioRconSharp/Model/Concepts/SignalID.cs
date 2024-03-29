@@ -11,10 +11,10 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("SignalID")]
-public abstract class SignalID
+public class SignalID
 {
   [FactorioRconAttribute("type")]
-  public Literals1683304720 Type { get; set; }
+  public Literals2044602293 Type { get; set; }
 
   /// <summary>
   /// Name of the item, fluid or virtual signal.

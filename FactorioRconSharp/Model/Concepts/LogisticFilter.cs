@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("LogisticFilter")]
-public abstract class LogisticFilter
+public class LogisticFilter
 {
   /// <summary>
   /// The index this filter applies to.

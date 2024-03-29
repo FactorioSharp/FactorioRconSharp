@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ChartTagSpec")]
-public abstract class ChartTagSpec
+public class ChartTagSpec
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }

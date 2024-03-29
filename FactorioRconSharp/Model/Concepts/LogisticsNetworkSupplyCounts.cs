@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("LogisticsNetworkSupplyCounts")]
-public abstract class LogisticsNetworkSupplyCounts
+public class LogisticsNetworkSupplyCounts
 {
   /// <summary>
   /// Number of available items in the storage members.

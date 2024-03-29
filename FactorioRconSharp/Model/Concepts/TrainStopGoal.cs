@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TrainStopGoal")]
-public abstract class TrainStopGoal
+public class TrainStopGoal
 {
   /// <summary>
   /// Train stop target. Must be connected to rail (<see cref="LuaEntity.ConnectedRail)ReturnsValidLuaEntity" />.

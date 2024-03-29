@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("RailEnd")]
-public abstract class RailEnd
+public class RailEnd
 {
   [FactorioRconAttribute("rail")]
   public LuaEntity Rail { get; set; }

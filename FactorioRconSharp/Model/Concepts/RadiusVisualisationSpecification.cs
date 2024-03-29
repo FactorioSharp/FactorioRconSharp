@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("RadiusVisualisationSpecification")]
-public abstract class RadiusVisualisationSpecification
+public class RadiusVisualisationSpecification
 {
   [FactorioRconAttribute("distance")]
   public double Distance { get; set; }

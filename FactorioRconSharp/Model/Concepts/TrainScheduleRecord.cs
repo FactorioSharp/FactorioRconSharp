@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TrainScheduleRecord")]
-public abstract class TrainScheduleRecord
+public class TrainScheduleRecord
 {
   /// <summary>
   /// Name of the station.

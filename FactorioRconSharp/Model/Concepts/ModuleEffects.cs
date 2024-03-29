@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ModuleEffects")]
-public abstract class ModuleEffects
+public class ModuleEffects
 {
   [FactorioRconAttribute("consumption")]
   public ModuleEffectValue Consumption { get; set; }

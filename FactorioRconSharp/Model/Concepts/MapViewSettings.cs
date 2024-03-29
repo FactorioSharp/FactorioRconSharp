@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// What is shown in the map view. If a field is not given, that setting will not be changed.
 /// </summary>
 [FactorioRconConcept("MapViewSettings")]
-public abstract class MapViewSettings
+public class MapViewSettings
 {
   [FactorioRconAttribute("show-logistic-network")]
   public bool ShowLogisticNetwork { get; set; }

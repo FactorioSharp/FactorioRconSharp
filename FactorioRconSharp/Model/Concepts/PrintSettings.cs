@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("PrintSettings")]
-public abstract class PrintSettings
+public class PrintSettings
 {
   /// <summary>
   /// Color of the message to print. Defaults to white.

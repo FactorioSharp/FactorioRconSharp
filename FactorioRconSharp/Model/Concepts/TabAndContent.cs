@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TabAndContent")]
-public abstract class TabAndContent
+public class TabAndContent
 {
   [FactorioRconAttribute("tab")]
   public LuaGuiElement Tab { get; set; }

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("InventoryFilter")]
-public abstract class InventoryFilter
+public class InventoryFilter
 {
   /// <summary>
   /// Position of the corresponding filter slot.

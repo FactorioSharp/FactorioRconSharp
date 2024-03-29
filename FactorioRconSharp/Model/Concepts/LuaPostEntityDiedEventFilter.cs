@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("LuaPostEntityDiedEventFilter")]
-public abstract class LuaPostEntityDiedEventFilter
+public class LuaPostEntityDiedEventFilter
 {
   /// <summary>
   /// The condition to filter on. Can only be `"type"`.
@@ -26,7 +26,7 @@ public abstract class LuaPostEntityDiedEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals994587346 Mode { get; set; }
+  public Literals1975453951 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

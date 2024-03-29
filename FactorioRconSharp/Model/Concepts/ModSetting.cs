@@ -11,13 +11,13 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ModSetting")]
-public abstract class ModSetting
+public class ModSetting
 {
   /// <summary>
   /// The value of the mod setting. The type depends on the kind of setting.
   /// </summary>
   [FactorioRconAttribute("value")]
-  public Union670163264 Value { get; set; }
+  public Union1108742616 Value { get; set; }
 
 }
 

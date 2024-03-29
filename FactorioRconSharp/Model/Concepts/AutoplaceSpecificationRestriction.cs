@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSpecificationRestriction")]
-public abstract class AutoplaceSpecificationRestriction
+public class AutoplaceSpecificationRestriction
 {
   /// <summary>
   /// Tile prototype name

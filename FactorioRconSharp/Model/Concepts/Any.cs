@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("Any")]
-public abstract partial class Any: OneOfBase<string, bool, double, LuaTable, LuaObject>
+public partial class Any: OneOfBase<string, bool, double, LuaTable, LuaObject>
 {
 }
 

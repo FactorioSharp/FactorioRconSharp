@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("RollingStockDrawData")]
-public abstract class RollingStockDrawData
+public class RollingStockDrawData
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }

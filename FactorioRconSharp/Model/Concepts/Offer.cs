@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A single offer on a market entity.
 /// </summary>
 [FactorioRconConcept("Offer")]
-public abstract class Offer
+public class Offer
 {
   /// <summary>
   /// List of prices.

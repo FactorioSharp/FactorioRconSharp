@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ElemID")]
-public abstract class ElemID
+public class ElemID
 {
   [FactorioRconAttribute("type")]
   public ElemType Type { get; set; }

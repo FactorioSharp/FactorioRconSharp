@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("NthTickEventData")]
-public abstract class NthTickEventData
+public class NthTickEventData
 {
   /// <summary>
   /// The tick during which the event happened.

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Resistance")]
-public abstract class Resistance
+public class Resistance
 {
   /// <summary>
   /// Absolute damage decrease

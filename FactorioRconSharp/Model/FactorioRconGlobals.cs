@@ -6,5 +6,5 @@ namespace FactorioRconSharp.Model;
 public class FactorioRconGlobals
 {
     [FactorioRconAttribute("game")]
-    public LuaGameScript Game { get; } = new();
+    public LuaGameScript Game { get; }
 }

@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("EntityPrototypeIdentification")]
-public abstract partial class EntityPrototypeIdentification: OneOfBase<LuaEntity, LuaEntityPrototype, string>
+public partial class EntityPrototypeIdentification: OneOfBase<LuaEntity, LuaEntityPrototype, string>
 {
 }
 

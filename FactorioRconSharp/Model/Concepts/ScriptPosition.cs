@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// A position defined using the map editor.
 /// </summary>
 [FactorioRconConcept("ScriptPosition")]
-public abstract class ScriptPosition
+public class ScriptPosition
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }

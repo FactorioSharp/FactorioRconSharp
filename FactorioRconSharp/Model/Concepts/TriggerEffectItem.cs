@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TriggerEffectItem")]
-public abstract class TriggerEffectItem
+public class TriggerEffectItem
 {
   [FactorioRconAttribute("type")]
   public TriggerEffectItemType Type { get; set; }

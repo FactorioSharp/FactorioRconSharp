@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AttackParameterFluid")]
-public abstract class AttackParameterFluid
+public class AttackParameterFluid
 {
   /// <summary>
   /// Name of the <see cref="LuaFluidPrototype" />.

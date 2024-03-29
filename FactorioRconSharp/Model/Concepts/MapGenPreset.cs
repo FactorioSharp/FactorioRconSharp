@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("MapGenPreset")]
-public abstract class MapGenPreset
+public class MapGenPreset
 {
   /// <summary>
   /// The string used to alphabetically sort the presets. It is a simple string that has no additional semantic meaning.

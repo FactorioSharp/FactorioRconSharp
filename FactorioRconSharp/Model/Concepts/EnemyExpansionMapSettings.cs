@@ -32,7 +32,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// ```
 /// </summary>
 [FactorioRconConcept("EnemyExpansionMapSettings")]
-public abstract class EnemyExpansionMapSettings
+public class EnemyExpansionMapSettings
 {
   /// <summary>
   /// Whether enemy expansion is enabled at all.

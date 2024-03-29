@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("RidingState")]
-public abstract class RidingState
+public class RidingState
 {
   [FactorioRconAttribute("acceleration")]
   public RidingAccelerationEnum Acceleration { get; set; }

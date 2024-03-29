@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("UnitGroupMapSettings")]
-public abstract class UnitGroupMapSettings
+public class UnitGroupMapSettings
 {
   /// <summary>
   /// The minimum amount of time in ticks a group will spend gathering before setting off. The actual time is a random time between the minimum and maximum times. Defaults to `3 600` ticks.

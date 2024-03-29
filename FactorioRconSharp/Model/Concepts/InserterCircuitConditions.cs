@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("InserterCircuitConditions")]
-public abstract class InserterCircuitConditions
+public class InserterCircuitConditions
 {
   [FactorioRconAttribute("circuit")]
   public CircuitCondition Circuit { get; set; }

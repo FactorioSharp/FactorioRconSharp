@@ -14,10 +14,10 @@ namespace FactorioRconSharp.Model.Concepts;
 /// One vertex of a ScriptRenderPolygon.
 /// </summary>
 [FactorioRconConcept("ScriptRenderVertexTarget")]
-public abstract class ScriptRenderVertexTarget
+public class ScriptRenderVertexTarget
 {
   [FactorioRconAttribute("target")]
-  public Union263924331 Target { get; set; }
+  public Union792319657 Target { get; set; }
 
   /// <summary>
   /// Only used if `target` is a LuaEntity.

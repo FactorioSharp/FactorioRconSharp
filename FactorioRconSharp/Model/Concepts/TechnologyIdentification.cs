@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("TechnologyIdentification")]
-public abstract partial class TechnologyIdentification: OneOfBase<string, LuaTechnology, LuaTechnologyPrototype>
+public partial class TechnologyIdentification: OneOfBase<string, LuaTechnology, LuaTechnologyPrototype>
 {
 }
 

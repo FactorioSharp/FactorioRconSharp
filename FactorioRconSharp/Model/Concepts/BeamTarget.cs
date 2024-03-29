@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("BeamTarget")]
-public abstract class BeamTarget
+public class BeamTarget
 {
   /// <summary>
   /// The target entity.

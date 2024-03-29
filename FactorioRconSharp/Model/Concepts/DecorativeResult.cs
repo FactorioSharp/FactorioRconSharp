@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DecorativeResult")]
-public abstract class DecorativeResult
+public class DecorativeResult
 {
   [FactorioRconAttribute("position")]
   public TilePosition Position { get; set; }

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("UnitSpawnDefinition")]
-public abstract class UnitSpawnDefinition
+public class UnitSpawnDefinition
 {
   /// <summary>
   /// Prototype name of the unit that would be spawned.

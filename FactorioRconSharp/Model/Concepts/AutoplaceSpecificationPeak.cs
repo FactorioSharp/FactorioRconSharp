@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSpecificationPeak")]
-public abstract class AutoplaceSpecificationPeak
+public class AutoplaceSpecificationPeak
 {
   [FactorioRconAttribute("influence")]
   public double Influence { get; set; }

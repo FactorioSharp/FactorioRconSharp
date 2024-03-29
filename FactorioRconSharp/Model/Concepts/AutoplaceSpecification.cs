@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Specifies how probability and richness are calculated when placing something on the map. Can be specified either using `probability_expression` and `richness_expression` or by using all the other fields.
 /// </summary>
 [FactorioRconConcept("AutoplaceSpecification")]
-public abstract class AutoplaceSpecification
+public class AutoplaceSpecification
 {
   [FactorioRconAttribute("probability_expression")]
   public NoiseExpression ProbabilityExpression { get; set; }

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("FluidBoxFilterSpec")]
-public abstract class FluidBoxFilterSpec
+public class FluidBoxFilterSpec
 {
   /// <summary>
   /// Fluid prototype name of the filtered fluid.

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("SteeringMapSettings")]
-public abstract class SteeringMapSettings
+public class SteeringMapSettings
 {
   [FactorioRconAttribute("default")]
   public SteeringMapSetting Default { get; set; }

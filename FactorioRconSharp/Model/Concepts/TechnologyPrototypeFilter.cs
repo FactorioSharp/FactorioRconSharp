@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("TechnologyPrototypeFilter")]
-public abstract class TechnologyPrototypeFilter
+public class TechnologyPrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"enabled"`, `"hidden"`, `"upgrade"`, `"visible-when-disabled"`, `"has-effects"`, `"has-prerequisites"`, `"research-unit-ingredient"`, `"unlocks-recipe"`, `"level"`, `"max-level"`, `"time"`.
@@ -26,7 +26,7 @@ public abstract class TechnologyPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1452006423 Mode { get; set; }
+  public Literals1655538647 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

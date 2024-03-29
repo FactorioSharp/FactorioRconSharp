@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("HeatConnection")]
-public abstract class HeatConnection
+public class HeatConnection
 {
   [FactorioRconAttribute("position")]
   public Vector Position { get; set; }

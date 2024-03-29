@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("PathfinderWaypoint")]
-public abstract class PathfinderWaypoint
+public class PathfinderWaypoint
 {
   /// <summary>
   /// The position of the waypoint on its surface.

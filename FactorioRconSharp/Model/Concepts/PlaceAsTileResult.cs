@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("PlaceAsTileResult")]
-public abstract class PlaceAsTileResult
+public class PlaceAsTileResult
 {
   /// <summary>
   /// The tile prototype.

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AmmoType")]
-public abstract class AmmoType
+public class AmmoType
 {
   [FactorioRconAttribute("action")]
   public List<TriggerItem> Action { get; set; }

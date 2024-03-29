@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("GunShift4Way")]
-public abstract class GunShift4Way
+public class GunShift4Way
 {
   [FactorioRconAttribute("north")]
   public Vector North { get; set; }

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Parameters that affect the look and control of the game. Updating any of the member attributes here will immediately take effect in the game engine.
 /// </summary>
 [FactorioRconConcept("GameViewSettings")]
-public abstract class GameViewSettings
+public class GameViewSettings
 {
   /// <summary>
   /// Show the controller GUI elements. This includes the toolbar, the selected tool slot, the armour slot, and the gun and ammunition slots.

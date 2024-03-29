@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Tile")]
-public abstract class Tile
+public class Tile
 {
   /// <summary>
   /// The position of the tile.

@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("LuaScriptRaisedReviveEventFilter")]
-public abstract class LuaScriptRaisedReviveEventFilter
+public class LuaScriptRaisedReviveEventFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`.
@@ -26,7 +26,7 @@ public abstract class LuaScriptRaisedReviveEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals26575416 Mode { get; set; }
+  public Literals728697341 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

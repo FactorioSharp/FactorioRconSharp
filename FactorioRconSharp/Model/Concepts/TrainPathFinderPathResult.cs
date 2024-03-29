@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TrainPathFinderPathResult")]
-public abstract class TrainPathFinderPathResult
+public class TrainPathFinderPathResult
 {
   /// <summary>
   /// True if found path.

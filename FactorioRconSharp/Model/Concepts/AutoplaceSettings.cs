@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSettings")]
-public abstract class AutoplaceSettings
+public class AutoplaceSettings
 {
   /// <summary>
   /// Whether missing autoplace names for this type should be default enabled.

@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CutsceneWaypoint")]
-public abstract class CutsceneWaypoint
+public class CutsceneWaypoint
 {
   /// <summary>
   /// Position to pan the camera to.
@@ -23,7 +23,7 @@ public abstract class CutsceneWaypoint
   /// Entity or unit group to pan the camera to.
   /// </summary>
   [FactorioRconAttribute("target")]
-  public Union2063683450 Target { get; set; }
+  public Union1248193644 Target { get; set; }
 
   /// <summary>
   /// How many ticks it will take to reach this waypoint from the previous one.

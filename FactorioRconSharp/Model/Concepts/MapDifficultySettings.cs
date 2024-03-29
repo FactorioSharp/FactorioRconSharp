@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("MapDifficultySettings")]
-public abstract class MapDifficultySettings
+public class MapDifficultySettings
 {
   [FactorioRconAttribute("recipe_difficulty")]
   public DifficultySettingsRecipeDifficultyEnum RecipeDifficulty { get; set; }
@@ -29,7 +29,7 @@ public abstract class MapDifficultySettings
   /// Changing this to `"always"` or `"after-victory"` does not automatically unlock the research queue. See <see cref="LuaForce.ResearchQueueEnabled" /> for that.
   /// </summary>
   [FactorioRconAttribute("research_queue_setting")]
-  public Literals719962462 ResearchQueueSetting { get; set; }
+  public Literals821589312 ResearchQueueSetting { get; set; }
 
 }
 

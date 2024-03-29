@@ -12,8 +12,7 @@ static class CompilationPipeline
         IEnumerable<FactorioRuntimeTypeSpecification> anonymousTypes = specification.Concepts.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes)
             .Concat(specification.Classes.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes));
 
-        List<FactorioModelTopLevelStatement> compiledAnonymousTypes =
-            anonymousTypes.Distinct().Select(compiler.CompileType).Where(stmt => stmt != null).Cast<FactorioModelTopLevelStatement>().ToList();
+        List<FactorioModelTopLevelStatement> compiledAnonymousTypes = anonymousTypes.Distinct().SelectMany(compiler.CompileType).ToList();
 
         List<FactorioModelFile> files =
         [
@@ -70,18 +69,22 @@ static class CompilationPipeline
         files.AddRange(
             specification.Concepts.Select(c => compiler.CompileConceptFile(c.Name))
                 .Select(
-                    concepts => new FactorioModelFile
+                    statements =>
                     {
-                        Name = concepts.Name,
-                        Namespace = "FactorioRconSharp.Model.Concepts",
-                        Usings =
-                        [
-                            "FactorioRconSharp.Model.Builtins",
-                            "FactorioRconSharp.Model.Anonymous",
-                            "FactorioRconSharp.Model.Classes",
-                            "FactorioRconSharp.Model.Definitions"
-                        ],
-                        Statements = [concepts]
+                        (FactorioModelTopLevelStatement compiledConcept, IEnumerable<FactorioModelTopLevelStatement> auxiliaryTypes) = statements;
+                        return new FactorioModelFile
+                        {
+                            Name = compiledConcept.Name,
+                            Namespace = "FactorioRconSharp.Model.Concepts",
+                            Usings =
+                            [
+                                "FactorioRconSharp.Model.Builtins",
+                                "FactorioRconSharp.Model.Anonymous",
+                                "FactorioRconSharp.Model.Classes",
+                                "FactorioRconSharp.Model.Definitions"
+                            ],
+                            Statements = new[] { compiledConcept }.Concat(auxiliaryTypes).ToArray()
+                        };
                     }
                 )
         );

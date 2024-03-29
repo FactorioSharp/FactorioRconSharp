@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("FluidPrototypeFilter")]
-public abstract class FluidPrototypeFilter
+public class FluidPrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"hidden"`, `"name"`, `"subgroup"`, `"default-temperature"`, `"max-temperature"`, `"heat-capacity"`, `"fuel-value"`, `"emissions-multiplier"`, `"gas-temperature"`.
@@ -26,7 +26,7 @@ public abstract class FluidPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1818399951 Mode { get; set; }
+  public Literals1169355704 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

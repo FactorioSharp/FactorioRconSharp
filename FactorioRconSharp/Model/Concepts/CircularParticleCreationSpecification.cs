@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CircularParticleCreationSpecification")]
-public abstract class CircularParticleCreationSpecification
+public class CircularParticleCreationSpecification
 {
   /// <summary>
   /// Name of the <see cref="LuaEntityPrototype" />.

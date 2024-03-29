@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// An area defined using the map editor.
 /// </summary>
 [FactorioRconConcept("ScriptArea")]
-public abstract class ScriptArea
+public class ScriptArea
 {
   [FactorioRconAttribute("area")]
   public BoundingBox Area { get; set; }

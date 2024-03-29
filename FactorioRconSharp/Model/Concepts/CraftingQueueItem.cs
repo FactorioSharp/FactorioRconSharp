@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CraftingQueueItem")]
-public abstract class CraftingQueueItem
+public class CraftingQueueItem
 {
   /// <summary>
   /// The index of the item in the crafting queue.

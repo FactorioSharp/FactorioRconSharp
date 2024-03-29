@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CircuitCondition")]
-public abstract class CircuitCondition
+public class CircuitCondition
 {
   /// <summary>
   /// Specifies how the inputs should be compared. If not specified, defaults to `"<"`.

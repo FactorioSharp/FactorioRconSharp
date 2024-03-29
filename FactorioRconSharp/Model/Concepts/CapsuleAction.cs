@@ -11,10 +11,10 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CapsuleAction")]
-public abstract class CapsuleAction
+public class CapsuleAction
 {
   [FactorioRconAttribute("type")]
-  public Literals1730886009 Type { get; set; }
+  public Literals1985803600 Type { get; set; }
 
 }
 

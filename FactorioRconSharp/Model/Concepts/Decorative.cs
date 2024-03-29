@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Decorative")]
-public abstract class Decorative
+public class Decorative
 {
   /// <summary>
   /// The name of the decorative prototype.

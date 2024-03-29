@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("BlueprintSignalIcon")]
-public abstract class BlueprintSignalIcon
+public class BlueprintSignalIcon
 {
   /// <summary>
   /// The icon to use. It can be any item icon as well as any virtual signal icon.

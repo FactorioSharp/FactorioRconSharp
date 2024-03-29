@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ScriptRenderTarget")]
-public abstract class ScriptRenderTarget
+public class ScriptRenderTarget
 {
   [FactorioRconAttribute("entity")]
   public LuaEntity Entity { get; set; }

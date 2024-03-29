@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("WireConnectionDefinition")]
-public abstract class WireConnectionDefinition
+public class WireConnectionDefinition
 {
   /// <summary>
   /// The type of wire used.

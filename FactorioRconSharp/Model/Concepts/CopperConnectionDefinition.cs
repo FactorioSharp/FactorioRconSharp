@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("CopperConnectionDefinition")]
-public abstract class CopperConnectionDefinition
+public class CopperConnectionDefinition
 {
   [FactorioRconAttribute("source_wire_connector")]
   public WireConnectionIdEnum SourceWireConnector { get; set; }

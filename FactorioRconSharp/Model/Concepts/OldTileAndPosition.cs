@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("OldTileAndPosition")]
-public abstract class OldTileAndPosition
+public class OldTileAndPosition
 {
   [FactorioRconAttribute("old_tile")]
   public LuaTilePrototype OldTile { get; set; }

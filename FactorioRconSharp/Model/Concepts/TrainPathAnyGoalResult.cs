@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("TrainPathAnyGoalResult")]
-public abstract class TrainPathAnyGoalResult
+public class TrainPathAnyGoalResult
 {
   /// <summary>
   /// True if any goal was accessible.

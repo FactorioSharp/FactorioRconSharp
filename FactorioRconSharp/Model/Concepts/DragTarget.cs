@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("DragTarget")]
-public abstract class DragTarget
+public class DragTarget
 {
   [FactorioRconAttribute("target_entity")]
   public LuaEntity TargetEntity { get; set; }

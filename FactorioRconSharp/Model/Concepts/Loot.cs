@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Loot")]
-public abstract class Loot
+public class Loot
 {
   /// <summary>
   /// Item prototype name of the result.

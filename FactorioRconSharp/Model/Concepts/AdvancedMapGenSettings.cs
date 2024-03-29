@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("AdvancedMapGenSettings")]
-public abstract class AdvancedMapGenSettings
+public class AdvancedMapGenSettings
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }

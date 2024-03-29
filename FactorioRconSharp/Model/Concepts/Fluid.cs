@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Fluid")]
-public abstract class Fluid
+public class Fluid
 {
   /// <summary>
   /// Fluid prototype name of the fluid.

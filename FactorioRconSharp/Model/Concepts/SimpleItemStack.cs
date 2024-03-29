@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("SimpleItemStack")]
-public abstract partial class SimpleItemStack: OneOfBase<string, ItemStackDefinition>
+public partial class SimpleItemStack: OneOfBase<string, ItemStackDefinition>
 {
 }
 

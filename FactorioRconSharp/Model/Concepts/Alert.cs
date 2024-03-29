@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("Alert")]
-public abstract class Alert
+public class Alert
 {
   /// <summary>
   /// The tick this alert was created.

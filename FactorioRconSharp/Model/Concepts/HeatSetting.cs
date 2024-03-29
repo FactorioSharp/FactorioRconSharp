@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// The settings used by a heat-interface type entity.
 /// </summary>
 [FactorioRconConcept("HeatSetting")]
-public abstract class HeatSetting
+public class HeatSetting
 {
   /// <summary>
   /// The target temperature. Defaults to the minimum temperature of the heat buffer.
@@ -26,7 +26,7 @@ public abstract class HeatSetting
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals554835741 Mode { get; set; }
+  public Literals1396005403 Mode { get; set; }
 
 }
 

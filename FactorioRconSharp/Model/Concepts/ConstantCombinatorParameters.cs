@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ConstantCombinatorParameters")]
-public abstract class ConstantCombinatorParameters
+public class ConstantCombinatorParameters
 {
   /// <summary>
   /// Signal to emit.

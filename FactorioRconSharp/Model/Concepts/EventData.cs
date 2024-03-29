@@ -14,7 +14,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// Information about the event that has been raised. The table can also contain other fields depending on the type of event. See <see cref="Events" /> for more information on these.
 /// </summary>
 [FactorioRconConcept("EventData")]
-public abstract class EventData
+public class EventData
 {
   /// <summary>
   /// The identifier of the event this handler was registered to.

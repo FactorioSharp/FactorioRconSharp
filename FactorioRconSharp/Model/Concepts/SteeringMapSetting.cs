@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("SteeringMapSetting")]
-public abstract class SteeringMapSetting
+public class SteeringMapSetting
 {
   /// <summary>
   /// Does not include the radius of the unit.

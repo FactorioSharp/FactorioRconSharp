@@ -16,7 +16,7 @@ namespace FactorioRconSharp.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("FluidIdentification")]
-public abstract partial class FluidIdentification: OneOfBase<string, LuaFluidPrototype, Fluid>
+public partial class FluidIdentification: OneOfBase<string, LuaFluidPrototype, Fluid>
 {
 }
 

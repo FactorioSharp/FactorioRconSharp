@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("ItemStackDefinition")]
-public abstract class ItemStackDefinition
+public class ItemStackDefinition
 {
   /// <summary>
   /// Prototype name of the item the stack holds.

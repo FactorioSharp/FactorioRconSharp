@@ -11,7 +11,7 @@ using FactorioRconSharp.Model.Utils;
 namespace FactorioRconSharp.Model.Concepts;
 
 [FactorioRconConcept("SmokeSource")]
-public abstract class SmokeSource
+public class SmokeSource
 {
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
