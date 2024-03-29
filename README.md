@@ -1,6 +1,6 @@
 # Factorio RCON
 
-Provide an RCON client for Factorio in C#.
+Provide an RCON client for Factorio in .NET Standard 2.1.
 This library provides two clients:
 - `FactorioRemoteConsole`: a low-level client that provides direct access to the factorio console, it allows to execute any string in the Factorio console through the RCON connection.
 - `FactorioRconClient`: a high-level client that exposes the runtime API model as C# symbols to help explore and type check the commands being executed
@@ -42,7 +42,7 @@ Info RemoteCommandProcessor.cpp:252: New RCON connection from IP ADDR:({127.0.0.
 
 ### Using the client
 
-The client compiles the C# expressions that it is given into Lua commands that are executed through the console:
+The client compiles the C# expressions that it receives into Lua commands that are executed through the console:
 
 ```
 using FactorioRconSharp;
