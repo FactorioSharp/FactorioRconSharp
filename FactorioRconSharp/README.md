@@ -56,3 +56,6 @@ string mapString = await client.ReadAsync(g => g.Game.GetMapExchangeString());
 
 Console.WriteLine($"Map string: {mapString}");
 ```
+
+The specification used to generate the model is that of [Factorio v1.1.104](https://lua-api.factorio.com/1.1.104/runtime-api.json).
+The compiler is available in the `FactorioRconSharp.ClientGenerator` project.
