@@ -15,14 +15,14 @@
         <RepositoryUrl>https://github.com/FactorioSharp/FactorioRconSharp</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReadmeFile>../README.md</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <RepositoryType>git</RepositoryType>
         <PackageTags>factorio, rcon, client</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="../README.md" Pack="true" PackagePath=""/>
+        <None Include="../README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>
