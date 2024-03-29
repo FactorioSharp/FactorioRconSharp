@@ -133,21 +133,33 @@ public class FactorioRconTranslator : ExpressionVisitor
 
     protected override Expression VisitMember(MemberExpression node)
     {
-        FactorioRconAttributeAttribute? attribute = node.Member.GetCustomAttribute<FactorioRconAttributeAttribute>();
-        if (attribute == null)
+        FactorioRconAttributeAttribute? attributeAttribute = node.Member.GetCustomAttribute<FactorioRconAttributeAttribute>();
+        if (attributeAttribute != null)
         {
-            throw new InvalidOperationException($"The member {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconAttribute] attribute");
+            if (node.Expression is not ParameterExpression)
+            {
+                Visit(node.Expression);
+                _acc.Append('.');
+            }
+
+            _acc.Append(attributeAttribute.Name);
+            return node;
         }
 
-        if (node.Expression is not ParameterExpression)
+        FactorioRconLengthOperatorAttribute? lengthAttribute = node.Member.GetCustomAttribute<FactorioRconLengthOperatorAttribute>();
+        if (lengthAttribute != null)
         {
-            Visit(node.Expression);
-            _acc.Append('.');
+            _acc.Append("#");
+
+            if (node.Expression is not ParameterExpression)
+            {
+                Visit(node.Expression);
+            }
+
+            return node;
         }
 
-        _acc.Append(attribute.Name);
-
-        return node;
+        throw new InvalidOperationException($"The member {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconAttribute] attribute");
     }
 
     protected override Expression VisitMethodCall(MethodCallExpression node)
