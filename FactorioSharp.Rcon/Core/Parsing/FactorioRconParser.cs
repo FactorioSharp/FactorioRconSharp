@@ -25,6 +25,11 @@ static class FactorioRconParser
             return ParseTableType(stringValue, type);
         }
 
+        if (type.IsLuaCustomTable())
+        {
+            return ParseLuaCustomTable(stringValue, type);
+        }
+
         if (type.IsArray)
         {
             return ParseArray(stringValue, type);
@@ -120,6 +125,12 @@ static class FactorioRconParser
     }
 
     static object? ParseTableType(string stringValue, Type type) => JsonSerializer.Deserialize(stringValue, type, JsonSerializerOptions);
+
+    static object? ParseLuaCustomTable(string stringValue, Type type)
+    {
+        MethodInfo? factoryMethod = type.GetMethod("Create", BindingFlags.Static | BindingFlags.Public);
+        return factoryMethod?.Invoke(null, [stringValue]);
+    }
 
     static object ParseArray(string stringValue, Type type)
     {

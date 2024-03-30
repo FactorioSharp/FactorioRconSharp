@@ -1,7 +1,9 @@
 ﻿#pragma warning disable CS8618
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
+using System.Text.Json;
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Core.Converters;
 using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Builtins;
@@ -14,13 +16,32 @@ namespace FactorioSharp.Rcon.Model.Builtins;
 ///     Another key difference is that custom tables cannot be serialised into a game save file -- if saving the game would require serialisation of a custom table, an error will be
 ///     displayed and the game will not be saved.
 /// </summary>
-public class LuaCustomTable<TKey, TValue>
+public class LuaCustomTable<TKey, TValue> : ILuaCustomTable
 {
+    static readonly JsonSerializerOptions JsonSerializerOptions = new(JsonSerializerDefaults.General)
+    {
+        Converters =
+        {
+            new OneOfJsonConverterFactory()
+        }
+    };
+
+    readonly Dictionary<TKey, TValue> _values = new();
+
+    public LuaCustomTable()
+    {
+    }
+
+    public LuaCustomTable(Dictionary<TKey, TValue> values)
+    {
+        _values = values;
+    }
+
     /// <summary>
     ///     The class name of this object. Available even when `valid` is false. For LuaStruct objects it may also be suffixed with a dotted path to a member of the struct.
     /// </summary>
     [FactorioRconAttribute("object_name")]
-    public string ObjectName { get; }
+    public string ObjectName => "";
 
     /// <summary>
     ///     Is this object valid? This Lua object holds a reference to an object within the game engine.
@@ -29,22 +50,41 @@ public class LuaCustomTable<TKey, TValue>
     ///     Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
     /// </summary>
     [FactorioRconAttribute("valid")]
-    public bool Valid { get; }
+    public bool Valid => true;
 
     /// <summary>
     ///     Number of elements in this table.
     /// </summary>
     [FactorioRconLengthOperator]
-    public uint Length { get; }
+    public uint Length => (uint)_values.Count;
+
+    public IEnumerable<TKey> Keys => _values.Keys;
+
+    public IEnumerable<TValue> Values => _values.Values;
 
     /// <summary>
     ///     Access an element of this custom table.
     /// </summary>
-    public TValue this[TKey key] { get => throw FactorioModelUtils.UseClientReadAsyncMethod(); set => throw FactorioModelUtils.UseClientExecuteAsyncMethod(); }
+    public TValue this[TKey key] { get => _values[key]; set => _values[key] = value; }
 
     /// <summary>
     ///     All methods and properties that this object supports.
     /// </summary>
     [FactorioRconMethod("help")]
     public string Help() => throw FactorioModelUtils.UseClientReadAsyncMethod();
+
+    public static LuaCustomTable<TKey, TValue> Create(string value)
+    {
+        Dictionary<TKey, TValue>? dict = JsonSerializer.Deserialize<Dictionary<TKey, TValue>>(value, JsonSerializerOptions);
+        if (dict == null)
+        {
+            throw new InvalidOperationException($"Could not read custom table with key {typeof(TKey)} and value {typeof(TValue)} from JSON value: {value}");
+        }
+
+        return new LuaCustomTable<TKey, TValue>(dict);
+    }
+}
+
+public interface ILuaCustomTable
+{
 }
