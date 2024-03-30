@@ -5,6 +5,9 @@ namespace FactorioSharp.Rcon.Core;
 public class FactorioRemoteConsole : IDisposable
 {
     readonly RconClient _rconClient;
+
+    public bool Silent { get; set; } = true;
+
     public bool Connected { get; private set; }
 
     public FactorioRemoteConsole(string ipAddress, int port)
@@ -30,7 +33,9 @@ public class FactorioRemoteConsole : IDisposable
     public async Task<string> ExecuteAsync(string command)
     {
         AssertConnected();
-        return await _rconClient.ExecuteCommandAsync($"/c {command}");
+
+        string verb = Silent ? "sc" : "c";
+        return await _rconClient.ExecuteCommandAsync($"/{verb} {command}");
     }
 
     public async Task<string> ReadAsync(string expression) => await ExecuteAsync($"rcon.print({expression})");
