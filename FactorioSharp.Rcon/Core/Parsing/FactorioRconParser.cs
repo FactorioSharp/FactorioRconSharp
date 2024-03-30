@@ -1,12 +1,14 @@
-﻿using FactorioSharp.Rcon.Core.Abstractions;
+﻿using System.Reflection;
+using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Builtins;
 
 namespace FactorioSharp.Rcon.Core.Parsing;
 
 public static class FactorioRconParser
 {
-    public static TFactorioRconModel Parse<TFactorioRconModel>(string stringValue) => (TFactorioRconModel)Parse(stringValue, typeof(TFactorioRconModel));
+    public static TFactorioRconModel Parse<TFactorioRconModel>(string stringValue) => (TFactorioRconModel)Parse(stringValue, typeof(TFactorioRconModel))!;
 
-    static object Parse(string stringValue, Type type)
+    static object? Parse(string stringValue, Type type)
     {
         if (typeof(IFactorioRconModel).IsAssignableFrom(type))
         {
@@ -18,14 +20,75 @@ public static class FactorioRconParser
             return ParseArray(stringValue, type);
         }
 
-        if (type == typeof(uint))
+        if (type.IsEnum)
         {
-            return uint.TryParse(stringValue, out uint value) ? value : 0;
+            if (int.TryParse(stringValue, out int enumIndex))
+            {
+                return Enum.GetValues(type).GetValue(enumIndex);
+            }
+
+            var valuesWithLuaName = Enum.GetValues(type)
+                .OfType<object>()
+                .Select(
+                    v =>
+                    {
+                        MemberInfo? valueMember = type.GetMember(v.ToString()).FirstOrDefault(m => m.DeclaringType == type);
+                        FactorioRconDefinitionValueAttribute? attribute = valueMember?.GetCustomAttribute<FactorioRconDefinitionValueAttribute>();
+                        return new { Value = v, LuaName = attribute?.Name };
+                    }
+                );
+            return valuesWithLuaName.SingleOrDefault(v => v.LuaName == stringValue)?.Value
+                   ?? throw new InvalidOperationException($"Invalid value {stringValue} for enum type {type}");
+        }
+
+        if (type == typeof(LuaNil))
+        {
+            return null;
+        }
+
+        if (type == typeof(sbyte))
+        {
+            return sbyte.TryParse(stringValue, out sbyte value) ? value : 0;
+        }
+
+        if (type == typeof(short))
+        {
+            return short.TryParse(stringValue, out short value) ? value : 0;
+        }
+
+        if (type == typeof(int))
+        {
+            return int.TryParse(stringValue, out int value) ? value : 0;
         }
 
         if (type == typeof(long))
         {
             return long.TryParse(stringValue, out long value) ? value : 0;
+        }
+
+        if (type == typeof(byte))
+        {
+            return byte.TryParse(stringValue, out byte value) ? value : 0;
+        }
+
+        if (type == typeof(ushort))
+        {
+            return ushort.TryParse(stringValue, out ushort value) ? value : 0;
+        }
+
+        if (type == typeof(uint))
+        {
+            return uint.TryParse(stringValue, out uint value) ? value : 0;
+        }
+
+        if (type == typeof(ulong))
+        {
+            return ulong.TryParse(stringValue, out ulong value) ? value : 0;
+        }
+
+        if (type == typeof(float))
+        {
+            return float.TryParse(stringValue, out float value) ? value : 0;
         }
 
         if (type == typeof(double))
