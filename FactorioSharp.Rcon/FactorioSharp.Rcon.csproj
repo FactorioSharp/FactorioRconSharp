@@ -5,14 +5,14 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>12</LangVersion>
-        <Version>0.3.0</Version>
+        <Version>0.3.1</Version>
         <Title>Factorio RCON client (C#)</Title>
         <Authors>Ismail Bennani</Authors>
         <Description>Factorio RCON client written in C# for .NET Standard 2.1 </Description>
         <NeutralLanguage>en</NeutralLanguage>
         <Copyright>Ismail Bennani</Copyright>
-        <PackageProjectUrl>https://github.com/FactorioSharp/FactorioRconSharp</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/FactorioSharp/FactorioRconSharp</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/FactorioSharp/FactorioSharp.Rcon</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/FactorioSharp/FactorioSharp.Rcon</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
