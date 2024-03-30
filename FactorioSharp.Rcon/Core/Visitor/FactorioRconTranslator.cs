@@ -165,32 +165,54 @@ public class FactorioRconTranslator : ExpressionVisitor
     protected override Expression VisitMethodCall(MethodCallExpression node)
     {
         FactorioRconMethodAttribute? attribute = node.Method.GetCustomAttribute<FactorioRconMethodAttribute>();
-        if (attribute == null)
+        if (attribute != null)
         {
-            throw new InvalidOperationException($"The method {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconMethod] attribute");
-        }
+            Visit(node.Object);
 
-        Visit(node.Object);
+            _acc.Append('.');
 
-        _acc.Append('.');
+            _acc.Append(attribute.Name);
 
-        _acc.Append(attribute.Name);
+            _acc.Append('(');
 
-        _acc.Append('(');
-
-        for (int index = 0; index < node.Arguments.Count; index++)
-        {
-            if (index > 0)
+            for (int index = 0; index < node.Arguments.Count; index++)
             {
-                _acc.Append(", ");
+                if (index > 0)
+                {
+                    _acc.Append(", ");
+                }
+
+                Visit(node.Arguments[index]);
             }
 
-            Visit(node.Arguments[index]);
+            _acc.Append(')');
+
+            return node;
         }
 
-        _acc.Append(')');
+        string? indexerName = node.Object?.Type.GetCustomAttribute<DefaultMemberAttribute>()?.MemberName;
+        if (indexerName != null && node.Method.Name == $"get_{indexerName}")
+        {
+            Visit(node.Object);
 
-        return node;
+            _acc.Append('[');
+
+            for (int index = 0; index < node.Arguments.Count; index++)
+            {
+                if (index > 0)
+                {
+                    _acc.Append(", ");
+                }
+
+                Visit(node.Arguments[index]);
+            }
+
+            _acc.Append(']');
+
+            return node;
+        }
+
+        throw new InvalidOperationException($"The method {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconMethod] attribute");
     }
 
     protected override Expression VisitNewArray(NewArrayExpression node)
