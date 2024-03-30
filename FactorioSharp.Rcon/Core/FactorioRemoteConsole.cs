@@ -7,7 +7,6 @@ public class FactorioRemoteConsole : IDisposable
     readonly RconClient _rconClient;
 
     public bool Silent { get; set; } = true;
-
     public bool Connected { get; private set; }
 
     public FactorioRemoteConsole(string ipAddress, int port)
@@ -19,6 +18,7 @@ public class FactorioRemoteConsole : IDisposable
     {
         AssertNotConnected();
 
+        _rconClient.ConnectionClosed += OnConnectionClosed;
         await _rconClient.ConnectAsync();
 
         if (!await _rconClient.AuthenticateAsync(password))
@@ -44,6 +44,8 @@ public class FactorioRemoteConsole : IDisposable
     {
         AssertConnected();
         _rconClient.Disconnect();
+
+        OnConnectionClosed();
     }
 
     public void Dispose()
@@ -54,6 +56,12 @@ public class FactorioRemoteConsole : IDisposable
         }
 
         GC.SuppressFinalize(this);
+    }
+
+    void OnConnectionClosed()
+    {
+        Connected = false;
+        _rconClient.ConnectionClosed -= OnConnectionClosed;
     }
 
     void AssertNotConnected()
