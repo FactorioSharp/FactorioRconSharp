@@ -30,13 +30,21 @@ public class FactorioRconClient : IDisposable
     public async Task<T> ReadAsync<T>(Expression<Func<FactorioRconGlobals, T>> func)
     {
         string expression = new FactorioRconTranslator().BuildExpression(func);
+        string strResult;
 
-        if (typeof(T).IsTableType())
+        Type type = typeof(T);
+        if (type.IsTableType())
         {
-            expression = $"game.table_to_json({expression})";
+            strResult = await _lowLevelClient.ReadAsync($"game.table_to_json({expression})");
         }
-
-        string strResult = await _lowLevelClient.ReadAsync(expression);
+        else if (type.IsLuaCustomTable())
+        {
+            strResult = await _lowLevelClient.ExecuteAsync($"result = {{}}; for k, v in pairs({expression}) do result[k] = v; end; rcon.print(game.table_to_json(result))");
+        }
+        else
+        {
+            strResult = await _lowLevelClient.ReadAsync(expression);
+        }
 
         return FactorioRconParser.Parse<T>(strResult);
     }
