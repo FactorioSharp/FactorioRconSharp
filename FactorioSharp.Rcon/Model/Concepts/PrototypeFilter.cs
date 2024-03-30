@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Types `"signal"` and `"item-group"` do not support filters.
 /// </summary>
 [FactorioRconConcept("PrototypeFilter")]
-public class PrototypeFilter: Alias<List<Union895098113>>
+public class PrototypeFilter: Alias<List<Union876886945>>
 {
 }
 

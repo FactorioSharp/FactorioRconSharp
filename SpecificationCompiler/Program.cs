@@ -70,7 +70,7 @@ foreach (FactorioModelFile file in files)
     string path = Path.Join(outputDirectory, file.Name + ".cs");
 
     await using StreamWriter writer = File.CreateText(path);
-    await FactorioModelWriter.WriteFile(writer, file);
+    await FactorioModelWriter.WriteFileAsync(writer, file);
 }
 
 return 0;

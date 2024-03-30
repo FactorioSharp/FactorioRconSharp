@@ -18,7 +18,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapPosition")]
-public partial class MapPosition: OneOfBase<Table1076208232, Tuple1904068903>
+public partial class MapPosition: OneOfBase<Table1659653406, Tuple207163656>
 {
 }
 

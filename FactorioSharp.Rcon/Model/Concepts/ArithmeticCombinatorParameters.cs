@@ -41,7 +41,7 @@ public class ArithmeticCombinatorParameters
   /// When not specified, defaults to `"*"`.
   /// </summary>
   [FactorioRconAttribute("operation")]
-  public Literals1029589659 Operation { get; set; }
+  public Literals200805015 Operation { get; set; }
 
   /// <summary>
   /// Specifies the signal to output.

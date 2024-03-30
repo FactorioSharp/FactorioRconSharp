@@ -1,9 +1,6 @@
-﻿using System.Text.RegularExpressions;
-using CaseExtensions;
+﻿namespace SpecificationCompiler.Model.Writers;
 
-namespace SpecificationCompiler.Model.Writers;
-
-public static partial class FactorioModelWriter
+static partial class FactorioModelWriter
 {
     const string ClassAttribute = "FactorioRconClass";
     const string ConceptAttribute = "FactorioRconConcept";
@@ -12,7 +9,7 @@ public static partial class FactorioModelWriter
     const string AttributeAttribute = "FactorioRconAttribute";
     const string MethodAttribute = "FactorioRconMethod";
 
-    public static async Task WriteFile(TextWriter writer, FactorioModelFile file)
+    public static async Task WriteFileAsync(TextWriter writer, FactorioModelFile file)
     {
         await writer.WriteLineAsync("#pragma warning disable CS8618");
         await writer.WriteLineAsync("// ReSharper disable UnassignedGetOnlyAutoProperty");
@@ -40,10 +37,10 @@ public static partial class FactorioModelWriter
             switch (statement)
             {
                 case FactorioModelClass cls:
-                    await WriteClass(writer, cls);
+                    await WriteClassAsync(writer, cls);
                     break;
                 case FactorioModelEnum enm:
-                    await WriteEnum(writer, enm);
+                    await WriteEnumAsync(writer, enm);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(statement));
@@ -53,28 +50,28 @@ public static partial class FactorioModelWriter
         }
     }
 
-    static async Task WriteClass(TextWriter writer, FactorioModelClass cls, int indentLevel = 0)
+    static async Task WriteClassAsync(TextWriter writer, FactorioModelClass cls, int indentLevel = 0)
     {
         if (cls.Documentation != null)
         {
-            await WriteDocumentation(writer, cls.Documentation, indentLevel);
+            await cls.Documentation.WriteAsync(writer, indentLevel);
         }
 
         foreach (string attribute in cls.Attributes)
         {
-            await WriteLineAsync(writer, $"[{attribute}]", indentLevel);
+            await writer.WriteLineAsync($"[{attribute}]", indentLevel);
         }
 
         if (!string.IsNullOrWhiteSpace(cls.LuaName))
         {
             if (cls.IsFactorioClass)
             {
-                await WriteLineAsync(writer, $"[{ClassAttribute}(\"{cls.LuaName}\")]", indentLevel);
+                await writer.WriteLineAsync($"[{ClassAttribute}(\"{cls.LuaName}\")]", indentLevel);
             }
 
             if (cls.IsFactorioConcept)
             {
-                await WriteLineAsync(writer, $"[{ConceptAttribute}(\"{cls.LuaName}\")]", indentLevel);
+                await writer.WriteLineAsync($"[{ConceptAttribute}(\"{cls.LuaName}\")]", indentLevel);
             }
         }
 
@@ -82,81 +79,81 @@ public static partial class FactorioModelWriter
 
         if (string.IsNullOrWhiteSpace(cls.BaseClass))
         {
-            await WriteLineAsync(writer, classDeclaration, indentLevel);
+            await writer.WriteLineAsync(classDeclaration, indentLevel);
         }
         else
         {
-            await WriteLineAsync(writer, $"{classDeclaration}: {cls.BaseClass}", indentLevel);
+            await writer.WriteLineAsync($"{classDeclaration}: {cls.BaseClass}", indentLevel);
         }
 
-        await WriteLineAsync(writer, "{", indentLevel);
+        await writer.WriteLineAsync("{", indentLevel);
 
         foreach (FactorioModelClassProperty property in cls.Properties)
         {
-            await WriteProperty(writer, property, indentLevel + 1);
+            await WritePropertyAsync(writer, property, indentLevel + 1);
             await writer.WriteLineAsync();
         }
 
         foreach (FactorioModelClassOperator op in cls.Operators)
         {
-            await WriteOperator(writer, op, indentLevel + 1);
+            await WriteOperatorAsync(writer, op, indentLevel + 1);
             await writer.WriteLineAsync();
         }
 
         foreach (FactorioModelClassMethod method in cls.Methods)
         {
-            await WriteMethod(writer, method, indentLevel + 1);
+            await WriteMethodAsync(writer, method, indentLevel + 1);
             await writer.WriteLineAsync();
         }
 
-        await WriteLineAsync(writer, "}", indentLevel);
+        await writer.WriteLineAsync("}", indentLevel);
     }
 
-    static async Task WriteEnum(TextWriter writer, FactorioModelEnum enm, int indentLevel = 0)
+    static async Task WriteEnumAsync(TextWriter writer, FactorioModelEnum enm, int indentLevel = 0)
     {
         if (enm.Documentation != null)
         {
-            await WriteDocumentation(writer, enm.Documentation, indentLevel);
+            await enm.Documentation.WriteAsync(writer, indentLevel);
         }
 
         if (!string.IsNullOrWhiteSpace(enm.LuaName))
         {
-            await WriteLineAsync(writer, $"[{DefinitionAttribute}(\"{enm.LuaName}\")]", indentLevel);
+            await writer.WriteLineAsync($"[{DefinitionAttribute}(\"{enm.LuaName}\")]", indentLevel);
         }
 
-        await WriteLineAsync(writer, $"public enum {enm.Name}", indentLevel);
-        await WriteLineAsync(writer, "{", indentLevel);
+        await writer.WriteLineAsync($"public enum {enm.Name}", indentLevel);
+        await writer.WriteLineAsync("{", indentLevel);
 
         foreach (FactorioModelEnumValue value in enm.Values)
         {
             if (value.Documentation != null)
             {
-                await WriteDocumentation(writer, value.Documentation, indentLevel + 1);
+                await value.Documentation.WriteAsync(writer, indentLevel + 1);
             }
 
             if (!string.IsNullOrWhiteSpace(value.LuaName))
             {
-                await WriteLineAsync(writer, $"[{DefinitionValueAttribute}(\"{value.LuaName}\")]", indentLevel + 1);
+                await writer.WriteLineAsync($"[{DefinitionValueAttribute}(\"{value.LuaName}\")]", indentLevel + 1);
             }
 
-            await WriteLineAsync(writer, $"{value.Name},", indentLevel + 1);
+            await writer.WriteLineAsync($"{value.Name},", indentLevel + 1);
             await writer.WriteLineAsync();
         }
 
-        await WriteLineAsync(writer, "}", indentLevel);
+        await writer.WriteLineAsync("}", indentLevel);
     }
 
-    static async Task WriteProperty(TextWriter writer, FactorioModelClassProperty property, int indentLevel = 0)
+    static async Task WritePropertyAsync(TextWriter writer, FactorioModelClassProperty property, int indentLevel = 0)
     {
         if (property is { Read: false, Write: false })
         {
-            await WriteCommentLineAsync(writer, $"Attribute {property.Name} skipped because both getter and setter are inaccessible", indentLevel);
+            await writer.WriteCommentLineAsync($"Attribute {property.Name} skipped because both getter and setter are inaccessible", indentLevel);
             return;
         }
 
         if (property.Documentation != null)
         {
-            await WriteDocumentation(writer, property.Documentation, indentLevel);
+            await property.Documentation.WriteAsync(writer, indentLevel);
         }
 
         string getter = property.Read ? "get;" : "private get;";
@@ -164,89 +161,65 @@ public static partial class FactorioModelWriter
 
         if (property.LuaName != null)
         {
-            await WriteLineAsync(writer, $"[{AttributeAttribute}(\"{property.LuaName}\")]", indentLevel);
+            await writer.WriteLineAsync($"[{AttributeAttribute}(\"{property.LuaName}\")]", indentLevel);
         }
 
-        await WriteLineAsync(writer, $"public {(property.IsStatic ? "static " : "")}{property.Type} {property.Name} {{ {getter} {setter} }}", indentLevel);
+        await writer.WriteLineAsync($"public {(property.IsStatic ? "static " : "")}{property.Type} {property.Name} {{ {getter} {setter} }}", indentLevel);
     }
 
-    static async Task WriteOperator(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
+    static async Task WriteOperatorAsync(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
     {
         if (op is { Read: false, Write: false })
         {
-            await WriteCommentLineAsync(writer, $"Operator {op.OperatorType} skipped because both getter and setter are inaccessible", indentLevel);
+            await writer.WriteCommentLineAsync($"Operator {op.OperatorType} skipped because both getter and setter are inaccessible", indentLevel);
             return;
         }
 
         switch (op.OperatorType)
         {
             case FactorioModelClassOperatorType.Indexer:
-                await WriteIndexer(writer, op, indentLevel);
+                await WriteIndexerAsync(writer, op, indentLevel);
                 break;
         }
     }
 
-    static async Task WriteMethod(TextWriter writer, FactorioModelClassMethod method, int indentLevel = 0)
+    static async Task WriteMethodAsync(TextWriter writer, FactorioModelClassMethod method, int indentLevel = 0)
     {
         if (method.Documentation != null)
         {
-            await WriteDocumentation(writer, method.Documentation, indentLevel);
+            await method.Documentation.WriteAsync(writer, indentLevel);
         }
 
         foreach (FactorioModelClassMethodParameter parameter in method.Parameters)
         {
             if (string.IsNullOrEmpty(parameter.LuaName))
             {
-                await WriteDocumentationLineAsync(writer, $"<param name=\"{parameter.Name}\"></param>", indentLevel);
+                await writer.WriteDocumentationLineAsync($"<param name=\"{parameter.Name}\"></param>", indentLevel);
             }
             else
             {
-                await WriteDocumentationLineAsync(writer, $"<param name=\"{parameter.Name}\">Lua name: {parameter.LuaName}</param>", indentLevel);
+                await writer.WriteDocumentationLineAsync($"<param name=\"{parameter.Name}\">Lua name: {parameter.LuaName}</param>", indentLevel);
             }
         }
 
         IEnumerable<string> parameters = method.Parameters.OrderBy(p => p.Optional ? 1 : 0).Select(ComputeParameter);
 
-        await WriteLineAsync(writer, $"[{MethodAttribute}(\"{method.LuaName}\")]", indentLevel);
-        await WriteLineAsync(writer, $"public abstract {method.ReturnType ?? "void"} {method.Name}({string.Join(", ", parameters)});", indentLevel);
+        await writer.WriteLineAsync($"[{MethodAttribute}(\"{method.LuaName}\")]", indentLevel);
+        await writer.WriteLineAsync($"public abstract {method.ReturnType ?? "void"} {method.Name}({string.Join(", ", parameters)});", indentLevel);
     }
 
-    static async Task WriteIndexer(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
+    static async Task WriteIndexerAsync(TextWriter writer, FactorioModelClassOperator op, int indentLevel = 0)
     {
         if (op.Documentation != null)
         {
-            await WriteDocumentation(writer, op.Documentation, indentLevel);
+            await op.Documentation.WriteAsync(writer, indentLevel);
         }
 
         string returnType = op.Optional ? $"{op.ReturnType}?" : op.ReturnType;
         string getter = op.Read ? "get; " : "";
         string setter = op.Write ? "set; " : "";
 
-        await WriteLineAsync(writer, $"public abstract {returnType} this[{op.KeyType} key] {{ {getter}{setter}}}", indentLevel);
-    }
-
-    static async Task WriteDocumentation(TextWriter writer, FactorioModelDocumentation documentation, int indentLevel = 0)
-    {
-        if (!string.IsNullOrWhiteSpace(documentation.Summary))
-        {
-            await WriteDocumentationLineAsync(writer, "<summary>", indentLevel);
-            await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Summary)}", indentLevel);
-            await WriteDocumentationLineAsync(writer, "</summary>", indentLevel);
-        }
-
-        if (!string.IsNullOrWhiteSpace(documentation.Remarks))
-        {
-            await WriteDocumentationLineAsync(writer, "<remarks>", indentLevel);
-            await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Remarks)}", indentLevel);
-            await WriteDocumentationLineAsync(writer, "</remarks>", indentLevel);
-        }
-
-        if (!string.IsNullOrWhiteSpace(documentation.Examples))
-        {
-            await WriteDocumentationLineAsync(writer, "<examples>", indentLevel);
-            await WriteDocumentationLineAsync(writer, $"{ReplaceDocumentationLinks(documentation.Examples)}", indentLevel);
-            await WriteDocumentationLineAsync(writer, "</examples>", indentLevel);
-        }
+        await writer.WriteLineAsync($"public abstract {returnType} this[{op.KeyType} key] {{ {getter}{setter}}}", indentLevel);
     }
 
     static string ComputeParameter(FactorioModelClassMethodParameter parameter)
@@ -263,70 +236,4 @@ public static partial class FactorioModelWriter
 
         return $"{parameter.Type} {parameter.Name}";
     }
-
-    static string ReplaceDocumentationLinks(string documentation)
-    {
-        Regex linkRegex = DocumentationLinkRegex();
-
-        MatchCollection matches = linkRegex.Matches(documentation);
-        foreach (Match match in matches.ToArray())
-        {
-            string symbol = match.Groups["symbol"].Value;
-            string sharpSymbol = string.Join(".", symbol.Split("::").Select(s => s.ToPascalCase()));
-            documentation = documentation.Replace(match.Value, $"<see cref=\"{sharpSymbol}\" />");
-        }
-
-        return documentation;
-    }
-
-    #region Indent
-
-    static async Task WriteLineAsync(TextWriter writer, string content, int indentLevel)
-    {
-        string indent = GetIndent(indentLevel);
-        await WriteLineAsync(writer, content, indent);
-    }
-
-    static async Task WriteCommentLineAsync(TextWriter writer, string content, int indentLevel)
-    {
-        string indent = GetIndent(indentLevel);
-        await WriteLineAsync(writer, content, $"{indent}// ");
-    }
-
-    static async Task WriteDocumentationLineAsync(TextWriter writer, string content, int indentLevel)
-    {
-        string indent = GetIndent(indentLevel);
-        await WriteLineAsync(writer, content, $"{indent}/// ");
-    }
-
-    static async Task WriteLineAsync(TextWriter writer, string? content, string? prefix)
-    {
-        string[] lines = content?.Split([Environment.NewLine, "\n", "\r"], StringSplitOptions.None) ?? [""];
-        foreach (string line in lines)
-        {
-            await writer.WriteLineAsync($"{prefix}{line}");
-        }
-    }
-
-    static readonly Dictionary<int, string> IndentCache = new();
-
-    static string GetIndent(int indentLevel)
-    {
-        const int indentSize = 2;
-
-        if (IndentCache.TryGetValue(indentLevel, out string? indent))
-        {
-            return indent;
-        }
-
-        indent = new string(' ', indentLevel * indentSize);
-        IndentCache[indentLevel] = indent;
-
-        return indent;
-    }
-
-    #endregion
-
-    [GeneratedRegex(@"\[.*\]\(runtime:(?<symbol>.*)\)", RegexOptions.Multiline | RegexOptions.Compiled)]
-    private static partial Regex DocumentationLinkRegex();
 }

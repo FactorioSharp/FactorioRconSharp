@@ -16,32 +16,32 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("RenderLayer")]
-public partial class RenderLayer: OneOfBase<Union661167950_0, Union661167950_1, Union661167950_2, Union661167950_3, Union661167950_4>
+public partial class RenderLayer: OneOfBase<Union638830327_0, Union638830327_1, Union638830327_2, Union638830327_3, Union638830327_4>
 {
 }
 
 [GenerateOneOf]
-public partial class Union661167950_0: OneOfBase<string, Literal414700809, Literal668216515, Literal489097366, Literal39617829, Literal2055788555, Literal1761222738, Literal58610471, Literal752359185>
+public partial class Union638830327_0: OneOfBase<string, Literal2053549129, Literal1540034001, Literal1102248446, Literal2010215296, Literal1458777078, Literal673746839, Literal1296591758, Literal1842345359>
 {
 }
 
 [GenerateOneOf]
-public partial class Union661167950_1: OneOfBase<Literal811325174, Literal134974244, Literal764195536, Literal282354808, Literal1792309517, Literal1507026321, Literal2089840598, Literal1028211361, Literal736937334>
+public partial class Union638830327_1: OneOfBase<Literal13925337, Literal281865761, Literal680750582, Literal756357730, Literal397062830, Literal341467938, Literal288994453, Literal1776671115, Literal160612193>
 {
 }
 
 [GenerateOneOf]
-public partial class Union661167950_2: OneOfBase<Literal1086409466, Literal511700903, Literal1359640333, Literal853309070, Literal799235092, Literal1175363736, Literal484233192, Literal849807437, Literal776082575>
+public partial class Union638830327_2: OneOfBase<Literal401102142, Literal1605735839, Literal813100313, Literal775887229, Literal1068463236, Literal65244356, Literal1054217749, Literal505982321, Literal1519768649>
 {
 }
 
 [GenerateOneOf]
-public partial class Union661167950_3: OneOfBase<Literal170709323, Literal157787379, Literal118575484, Literal1430549630, Literal1496177911, Literal1717504663, Literal1485125349, Literal243174832, Literal774841213>
+public partial class Union638830327_3: OneOfBase<Literal1509186546, Literal1326619191, Literal835849398, Literal1614252387, Literal537192782, Literal1263655565, Literal1605896322, Literal411152254, Literal2020792767>
 {
 }
 
 [GenerateOneOf]
-public partial class Union661167950_4: OneOfBase<Literal624942818, Literal675492792, Literal1649793853, Literal2041851728, Literal8546033, Literal2069016308, Literal1313519210, Literal836290718>
+public partial class Union638830327_4: OneOfBase<Literal1649137212, Literal1721949904, Literal513519426, Literal1696402987, Literal936552253, Literal816005672, Literal171552650, Literal1144723239>
 {
 }
 

@@ -30,6 +30,12 @@ public class FactorioRconClient : IDisposable
     public async Task<T> ReadAsync<T>(Expression<Func<FactorioRconGlobals, T>> func)
     {
         string expression = new FactorioRconTranslator().BuildExpression(func);
+
+        if (typeof(T).IsTableType())
+        {
+            expression = $"game.table_to_json({expression})";
+        }
+
         string strResult = await _lowLevelClient.ReadAsync(expression);
 
         return FactorioRconParser.Parse<T>(strResult);

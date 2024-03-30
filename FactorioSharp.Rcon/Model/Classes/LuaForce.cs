@@ -593,7 +593,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union419671075? printSettings = null);
+  public abstract void Print(LocalisedString message, Union1408027017? printSettings = null);
 
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_trains")]
@@ -658,14 +658,14 @@ public abstract class LuaForce: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union1369834877? name = null, SurfaceIdentification? surface = null);
+  public abstract List<LuaEntity> GetTrainStops(Union621979189? name = null, SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Gets if the given recipe is explicitly disabled from being hand crafted.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_hand_crafting_disabled_for_recipe")]
-  public abstract bool GetHandCraftingDisabledForRecipe(Union352718569 recipe);
+  public abstract bool GetHandCraftingDisabledForRecipe(Union54721211 recipe);
 
   /// <summary>
   /// Sets if the given recipe can be hand-crafted. This is used to explicitly disable hand crafting a recipe - it won't allow hand-crafting otherwise not hand-craftable recipes.
@@ -673,7 +673,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="handCraftingDisabled">Lua name: hand_crafting_disabled</param>
   [FactorioRconMethod("set_hand_crafting_disabled_for_recipe")]
-  public abstract void SetHandCraftingDisabledForRecipe(Union352718569 recipe, bool handCraftingDisabled);
+  public abstract void SetHandCraftingDisabledForRecipe(Union54721211 recipe, bool handCraftingDisabled);
 
   /// <summary>
   /// Add this technology to the back of the research queue if the queue is enabled. Otherwise, set this technology to be researched now.

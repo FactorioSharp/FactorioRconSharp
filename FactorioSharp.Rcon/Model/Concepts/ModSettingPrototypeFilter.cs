@@ -26,7 +26,7 @@ public class ModSettingPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1571664444 Mode { get; set; }
+  public Literals661262659 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.

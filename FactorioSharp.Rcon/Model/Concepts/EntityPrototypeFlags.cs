@@ -16,7 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// By default, none of these flags are set.
 /// </summary>
 [FactorioRconConcept("EntityPrototypeFlags")]
-public class EntityPrototypeFlags: Alias<Dictionary<EntityPrototypeFlag, Literal572066743>>
+public class EntityPrototypeFlags: Alias<Dictionary<EntityPrototypeFlag, Literal265409079>>
 {
 }
 

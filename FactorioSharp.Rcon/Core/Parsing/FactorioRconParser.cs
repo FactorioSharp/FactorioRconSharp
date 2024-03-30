@@ -1,18 +1,28 @@
 ﻿using System.Reflection;
+using System.Text.Json;
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Core.Converters;
 using FactorioSharp.Rcon.Model.Builtins;
 
 namespace FactorioSharp.Rcon.Core.Parsing;
 
-public static class FactorioRconParser
+static class FactorioRconParser
 {
+    static readonly JsonSerializerOptions JsonSerializerOptions = new(JsonSerializerDefaults.General)
+    {
+        Converters =
+        {
+            new OneOfJsonConverterFactory()
+        }
+    };
+
     public static TFactorioRconModel Parse<TFactorioRconModel>(string stringValue) => (TFactorioRconModel)Parse(stringValue, typeof(TFactorioRconModel))!;
 
     static object? Parse(string stringValue, Type type)
     {
-        if (typeof(IFactorioRconModel).IsAssignableFrom(type))
+        if (type.IsTableType())
         {
-            return ParseFactorioRconModel(stringValue, type);
+            return ParseTableType(stringValue, type);
         }
 
         if (type.IsArray)
@@ -109,19 +119,7 @@ public static class FactorioRconParser
         throw new InvalidOperationException($"Unknown value type {type}");
     }
 
-    static object ParseFactorioRconModel(string stringValue, Type type)
-    {
-
-        object? result = Activator.CreateInstance(type);
-        if (result == null)
-        {
-            throw new InvalidOperationException($"Could not activate instance of type {type}");
-        }
-
-        ((IFactorioRconModel)result).Load(stringValue);
-
-        return result;
-    }
+    static object? ParseTableType(string stringValue, Type type) => JsonSerializer.Deserialize(stringValue, type, JsonSerializerOptions);
 
     static object ParseArray(string stringValue, Type type)
     {
