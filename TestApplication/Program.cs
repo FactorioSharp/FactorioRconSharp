@@ -13,3 +13,5 @@ DifficultyEnum difficulty = await client.ReadAsync(g => g.Game.Difficulty);
 Console.WriteLine($"Map string: {mapString}");
 Console.WriteLine($"Player count: {playerCount}");
 Console.WriteLine($"Difficulty: {difficulty}");
+
+client.Disconnect();
