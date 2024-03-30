@@ -2,18 +2,25 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CircuitConditionDefinition")]
 public class CircuitConditionDefinition
 {
-    [FactorioRconAttribute("condition")]
-    public CircuitCondition Condition { get; set; }
+  [FactorioRconAttribute("condition")]
+  public CircuitCondition Condition { get; set; }
 
-    /// <summary>
-    ///     Whether the condition is currently fulfilled
-    /// </summary>
-    [FactorioRconAttribute("fulfilled")]
-    public bool Fulfilled { get; set; }
+  /// <summary>
+  /// Whether the condition is currently fulfilled
+  /// </summary>
+  [FactorioRconAttribute("fulfilled")]
+  public bool Fulfilled { get; set; }
+
 }
+

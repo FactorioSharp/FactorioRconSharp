@@ -4,14 +4,19 @@
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
 using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     A set of flags. Active flags are in the dictionary as `true`, while inactive flags aren't present at all.
-///     By default, none of these flags are set.
+/// A set of flags. Active flags are in the dictionary as `true`, while inactive flags aren't present at all.
+/// 
+/// By default, none of these flags are set.
 /// </summary>
 [FactorioRconConcept("EntityPrototypeFlags")]
-public class EntityPrototypeFlags : Alias<Dictionary<EntityPrototypeFlag, Literal666164478>>
+public class EntityPrototypeFlags: Alias<Dictionary<EntityPrototypeFlag, Literal572066743>>
 {
 }
+

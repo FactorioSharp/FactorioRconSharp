@@ -2,24 +2,27 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 /// <summary>
-///     State of a chain signal.
+/// State of a chain signal.
 /// </summary>
 [FactorioRconDefinition("chain_signal_state")]
 public enum ChainSignalStateEnum
 {
-    [FactorioRconDefinitionValue("none")]
-    None,
+  [FactorioRconDefinitionValue("none")]
+  None,
 
-    [FactorioRconDefinitionValue("all_open")]
-    AllOpen,
+  [FactorioRconDefinitionValue("all_open")]
+  AllOpen,
 
-    [FactorioRconDefinitionValue("partially_open")]
-    PartiallyOpen,
+  [FactorioRconDefinitionValue("partially_open")]
+  PartiallyOpen,
 
-    [FactorioRconDefinitionValue("none_open")]
-    NoneOpen
+  [FactorioRconDefinitionValue("none_open")]
+  NoneOpen,
+
 }
+

@@ -2,69 +2,72 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("gui_type")]
 public enum GuiTypeEnum
 {
-    [FactorioRconDefinitionValue("none")]
-    None,
+  [FactorioRconDefinitionValue("none")]
+  None,
 
-    [FactorioRconDefinitionValue("entity")]
-    Entity,
+  [FactorioRconDefinitionValue("entity")]
+  Entity,
 
-    [FactorioRconDefinitionValue("research")]
-    Research,
+  [FactorioRconDefinitionValue("research")]
+  Research,
 
-    [FactorioRconDefinitionValue("controller")]
-    Controller,
+  [FactorioRconDefinitionValue("controller")]
+  Controller,
 
-    [FactorioRconDefinitionValue("production")]
-    Production,
+  [FactorioRconDefinitionValue("production")]
+  Production,
 
-    [FactorioRconDefinitionValue("item")]
-    Item,
+  [FactorioRconDefinitionValue("item")]
+  Item,
 
-    [FactorioRconDefinitionValue("bonus")]
-    Bonus,
+  [FactorioRconDefinitionValue("bonus")]
+  Bonus,
 
-    [FactorioRconDefinitionValue("trains")]
-    Trains,
+  [FactorioRconDefinitionValue("trains")]
+  Trains,
 
-    [FactorioRconDefinitionValue("achievement")]
-    Achievement,
+  [FactorioRconDefinitionValue("achievement")]
+  Achievement,
 
-    [FactorioRconDefinitionValue("blueprint_library")]
-    BlueprintLibrary,
+  [FactorioRconDefinitionValue("blueprint_library")]
+  BlueprintLibrary,
 
-    [FactorioRconDefinitionValue("equipment")]
-    Equipment,
+  [FactorioRconDefinitionValue("equipment")]
+  Equipment,
 
-    [FactorioRconDefinitionValue("logistic")]
-    Logistic,
+  [FactorioRconDefinitionValue("logistic")]
+  Logistic,
 
-    [FactorioRconDefinitionValue("other_player")]
-    OtherPlayer,
+  [FactorioRconDefinitionValue("other_player")]
+  OtherPlayer,
 
-    [FactorioRconDefinitionValue("permissions")]
-    Permissions,
+  [FactorioRconDefinitionValue("permissions")]
+  Permissions,
 
-    [FactorioRconDefinitionValue("tutorials")]
-    Tutorials,
+  [FactorioRconDefinitionValue("tutorials")]
+  Tutorials,
 
-    [FactorioRconDefinitionValue("custom")]
-    Custom,
+  [FactorioRconDefinitionValue("custom")]
+  Custom,
 
-    [FactorioRconDefinitionValue("server_management")]
-    ServerManagement,
+  [FactorioRconDefinitionValue("server_management")]
+  ServerManagement,
 
-    [FactorioRconDefinitionValue("player_management")]
-    PlayerManagement,
+  [FactorioRconDefinitionValue("player_management")]
+  PlayerManagement,
 
-    [FactorioRconDefinitionValue("tile")]
-    Tile,
+  [FactorioRconDefinitionValue("tile")]
+  Tile,
 
-    [FactorioRconDefinitionValue("script_inventory")]
-    ScriptInventory
+  [FactorioRconDefinitionValue("script_inventory")]
+  ScriptInventory,
+
 }
+

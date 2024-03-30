@@ -2,201 +2,204 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("relative_gui_type")]
 public enum RelativeGuiTypeEnum
 {
-    [FactorioRconDefinitionValue("accumulator_gui")]
-    AccumulatorGui,
+  [FactorioRconDefinitionValue("accumulator_gui")]
+  AccumulatorGui,
 
-    [FactorioRconDefinitionValue("achievement_gui")]
-    AchievementGui,
+  [FactorioRconDefinitionValue("achievement_gui")]
+  AchievementGui,
 
-    [FactorioRconDefinitionValue("additional_entity_info_gui")]
-    AdditionalEntityInfoGui,
+  [FactorioRconDefinitionValue("additional_entity_info_gui")]
+  AdditionalEntityInfoGui,
 
-    [FactorioRconDefinitionValue("admin_gui")]
-    AdminGui,
+  [FactorioRconDefinitionValue("admin_gui")]
+  AdminGui,
 
-    [FactorioRconDefinitionValue("arithmetic_combinator_gui")]
-    ArithmeticCombinatorGui,
+  [FactorioRconDefinitionValue("arithmetic_combinator_gui")]
+  ArithmeticCombinatorGui,
 
-    [FactorioRconDefinitionValue("armor_gui")]
-    ArmorGui,
+  [FactorioRconDefinitionValue("armor_gui")]
+  ArmorGui,
 
-    [FactorioRconDefinitionValue("assembling_machine_gui")]
-    AssemblingMachineGui,
+  [FactorioRconDefinitionValue("assembling_machine_gui")]
+  AssemblingMachineGui,
 
-    [FactorioRconDefinitionValue("assembling_machine_select_recipe_gui")]
-    AssemblingMachineSelectRecipeGui,
+  [FactorioRconDefinitionValue("assembling_machine_select_recipe_gui")]
+  AssemblingMachineSelectRecipeGui,
 
-    [FactorioRconDefinitionValue("beacon_gui")]
-    BeaconGui,
+  [FactorioRconDefinitionValue("beacon_gui")]
+  BeaconGui,
 
-    [FactorioRconDefinitionValue("blueprint_book_gui")]
-    BlueprintBookGui,
+  [FactorioRconDefinitionValue("blueprint_book_gui")]
+  BlueprintBookGui,
 
-    [FactorioRconDefinitionValue("blueprint_library_gui")]
-    BlueprintLibraryGui,
+  [FactorioRconDefinitionValue("blueprint_library_gui")]
+  BlueprintLibraryGui,
 
-    [FactorioRconDefinitionValue("blueprint_setup_gui")]
-    BlueprintSetupGui,
+  [FactorioRconDefinitionValue("blueprint_setup_gui")]
+  BlueprintSetupGui,
 
-    [FactorioRconDefinitionValue("bonus_gui")]
-    BonusGui,
+  [FactorioRconDefinitionValue("bonus_gui")]
+  BonusGui,
 
-    [FactorioRconDefinitionValue("burner_equipment_gui")]
-    BurnerEquipmentGui,
+  [FactorioRconDefinitionValue("burner_equipment_gui")]
+  BurnerEquipmentGui,
 
-    [FactorioRconDefinitionValue("car_gui")]
-    CarGui,
+  [FactorioRconDefinitionValue("car_gui")]
+  CarGui,
 
-    [FactorioRconDefinitionValue("constant_combinator_gui")]
-    ConstantCombinatorGui,
+  [FactorioRconDefinitionValue("constant_combinator_gui")]
+  ConstantCombinatorGui,
 
-    [FactorioRconDefinitionValue("container_gui")]
-    ContainerGui,
+  [FactorioRconDefinitionValue("container_gui")]
+  ContainerGui,
 
-    [FactorioRconDefinitionValue("controller_gui")]
-    ControllerGui,
+  [FactorioRconDefinitionValue("controller_gui")]
+  ControllerGui,
 
-    [FactorioRconDefinitionValue("decider_combinator_gui")]
-    DeciderCombinatorGui,
+  [FactorioRconDefinitionValue("decider_combinator_gui")]
+  DeciderCombinatorGui,
 
-    [FactorioRconDefinitionValue("deconstruction_item_gui")]
-    DeconstructionItemGui,
+  [FactorioRconDefinitionValue("deconstruction_item_gui")]
+  DeconstructionItemGui,
 
-    [FactorioRconDefinitionValue("electric_energy_interface_gui")]
-    ElectricEnergyInterfaceGui,
+  [FactorioRconDefinitionValue("electric_energy_interface_gui")]
+  ElectricEnergyInterfaceGui,
 
-    [FactorioRconDefinitionValue("electric_network_gui")]
-    ElectricNetworkGui,
+  [FactorioRconDefinitionValue("electric_network_gui")]
+  ElectricNetworkGui,
 
-    [FactorioRconDefinitionValue("entity_variations_gui")]
-    EntityVariationsGui,
+  [FactorioRconDefinitionValue("entity_variations_gui")]
+  EntityVariationsGui,
 
-    [FactorioRconDefinitionValue("entity_with_energy_source_gui")]
-    EntityWithEnergySourceGui,
+  [FactorioRconDefinitionValue("entity_with_energy_source_gui")]
+  EntityWithEnergySourceGui,
 
-    [FactorioRconDefinitionValue("equipment_grid_gui")]
-    EquipmentGridGui,
+  [FactorioRconDefinitionValue("equipment_grid_gui")]
+  EquipmentGridGui,
 
-    [FactorioRconDefinitionValue("furnace_gui")]
-    FurnaceGui,
+  [FactorioRconDefinitionValue("furnace_gui")]
+  FurnaceGui,
 
-    [FactorioRconDefinitionValue("generic_on_off_entity_gui")]
-    GenericOnOffEntityGui,
+  [FactorioRconDefinitionValue("generic_on_off_entity_gui")]
+  GenericOnOffEntityGui,
 
-    [FactorioRconDefinitionValue("heat_interface_gui")]
-    HeatInterfaceGui,
+  [FactorioRconDefinitionValue("heat_interface_gui")]
+  HeatInterfaceGui,
 
-    [FactorioRconDefinitionValue("infinity_pipe_gui")]
-    InfinityPipeGui,
+  [FactorioRconDefinitionValue("infinity_pipe_gui")]
+  InfinityPipeGui,
 
-    [FactorioRconDefinitionValue("inserter_gui")]
-    InserterGui,
+  [FactorioRconDefinitionValue("inserter_gui")]
+  InserterGui,
 
-    [FactorioRconDefinitionValue("item_with_inventory_gui")]
-    ItemWithInventoryGui,
+  [FactorioRconDefinitionValue("item_with_inventory_gui")]
+  ItemWithInventoryGui,
 
-    [FactorioRconDefinitionValue("lab_gui")]
-    LabGui,
+  [FactorioRconDefinitionValue("lab_gui")]
+  LabGui,
 
-    [FactorioRconDefinitionValue("lamp_gui")]
-    LampGui,
+  [FactorioRconDefinitionValue("lamp_gui")]
+  LampGui,
 
-    [FactorioRconDefinitionValue("linked_container_gui")]
-    LinkedContainerGui,
+  [FactorioRconDefinitionValue("linked_container_gui")]
+  LinkedContainerGui,
 
-    [FactorioRconDefinitionValue("loader_gui")]
-    LoaderGui,
+  [FactorioRconDefinitionValue("loader_gui")]
+  LoaderGui,
 
-    [FactorioRconDefinitionValue("logistic_gui")]
-    LogisticGui,
+  [FactorioRconDefinitionValue("logistic_gui")]
+  LogisticGui,
 
-    [FactorioRconDefinitionValue("market_gui")]
-    MarketGui,
+  [FactorioRconDefinitionValue("market_gui")]
+  MarketGui,
 
-    [FactorioRconDefinitionValue("mining_drill_gui")]
-    MiningDrillGui,
+  [FactorioRconDefinitionValue("mining_drill_gui")]
+  MiningDrillGui,
 
-    [FactorioRconDefinitionValue("other_player_gui")]
-    OtherPlayerGui,
+  [FactorioRconDefinitionValue("other_player_gui")]
+  OtherPlayerGui,
 
-    [FactorioRconDefinitionValue("permissions_gui")]
-    PermissionsGui,
+  [FactorioRconDefinitionValue("permissions_gui")]
+  PermissionsGui,
 
-    [FactorioRconDefinitionValue("pipe_gui")]
-    PipeGui,
+  [FactorioRconDefinitionValue("pipe_gui")]
+  PipeGui,
 
-    [FactorioRconDefinitionValue("power_switch_gui")]
-    PowerSwitchGui,
+  [FactorioRconDefinitionValue("power_switch_gui")]
+  PowerSwitchGui,
 
-    [FactorioRconDefinitionValue("production_gui")]
-    ProductionGui,
+  [FactorioRconDefinitionValue("production_gui")]
+  ProductionGui,
 
-    [FactorioRconDefinitionValue("programmable_speaker_gui")]
-    ProgrammableSpeakerGui,
+  [FactorioRconDefinitionValue("programmable_speaker_gui")]
+  ProgrammableSpeakerGui,
 
-    [FactorioRconDefinitionValue("rail_chain_signal_gui")]
-    RailChainSignalGui,
+  [FactorioRconDefinitionValue("rail_chain_signal_gui")]
+  RailChainSignalGui,
 
-    [FactorioRconDefinitionValue("rail_signal_gui")]
-    RailSignalGui,
+  [FactorioRconDefinitionValue("rail_signal_gui")]
+  RailSignalGui,
 
-    [FactorioRconDefinitionValue("reactor_gui")]
-    ReactorGui,
+  [FactorioRconDefinitionValue("reactor_gui")]
+  ReactorGui,
 
-    [FactorioRconDefinitionValue("rename_stop_gui")]
-    RenameStopGui,
+  [FactorioRconDefinitionValue("rename_stop_gui")]
+  RenameStopGui,
 
-    [FactorioRconDefinitionValue("resource_entity_gui")]
-    ResourceEntityGui,
+  [FactorioRconDefinitionValue("resource_entity_gui")]
+  ResourceEntityGui,
 
-    [FactorioRconDefinitionValue("roboport_gui")]
-    RoboportGui,
+  [FactorioRconDefinitionValue("roboport_gui")]
+  RoboportGui,
 
-    [FactorioRconDefinitionValue("rocket_silo_gui")]
-    RocketSiloGui,
+  [FactorioRconDefinitionValue("rocket_silo_gui")]
+  RocketSiloGui,
 
-    [FactorioRconDefinitionValue("script_inventory_gui")]
-    ScriptInventoryGui,
+  [FactorioRconDefinitionValue("script_inventory_gui")]
+  ScriptInventoryGui,
 
-    [FactorioRconDefinitionValue("server_config_gui")]
-    ServerConfigGui,
+  [FactorioRconDefinitionValue("server_config_gui")]
+  ServerConfigGui,
 
-    [FactorioRconDefinitionValue("spider_vehicle_gui")]
-    SpiderVehicleGui,
+  [FactorioRconDefinitionValue("spider_vehicle_gui")]
+  SpiderVehicleGui,
 
-    [FactorioRconDefinitionValue("splitter_gui")]
-    SplitterGui,
+  [FactorioRconDefinitionValue("splitter_gui")]
+  SplitterGui,
 
-    [FactorioRconDefinitionValue("standalone_character_gui")]
-    StandaloneCharacterGui,
+  [FactorioRconDefinitionValue("standalone_character_gui")]
+  StandaloneCharacterGui,
 
-    [FactorioRconDefinitionValue("storage_tank_gui")]
-    StorageTankGui,
+  [FactorioRconDefinitionValue("storage_tank_gui")]
+  StorageTankGui,
 
-    [FactorioRconDefinitionValue("tile_variations_gui")]
-    TileVariationsGui,
+  [FactorioRconDefinitionValue("tile_variations_gui")]
+  TileVariationsGui,
 
-    [FactorioRconDefinitionValue("train_gui")]
-    TrainGui,
+  [FactorioRconDefinitionValue("train_gui")]
+  TrainGui,
 
-    [FactorioRconDefinitionValue("train_stop_gui")]
-    TrainStopGui,
+  [FactorioRconDefinitionValue("train_stop_gui")]
+  TrainStopGui,
 
-    [FactorioRconDefinitionValue("trains_gui")]
-    TrainsGui,
+  [FactorioRconDefinitionValue("trains_gui")]
+  TrainsGui,
 
-    [FactorioRconDefinitionValue("transport_belt_gui")]
-    TransportBeltGui,
+  [FactorioRconDefinitionValue("transport_belt_gui")]
+  TransportBeltGui,
 
-    [FactorioRconDefinitionValue("upgrade_item_gui")]
-    UpgradeItemGui,
+  [FactorioRconDefinitionValue("upgrade_item_gui")]
+  UpgradeItemGui,
 
-    [FactorioRconDefinitionValue("wall_gui")]
-    WallGui
+  [FactorioRconDefinitionValue("wall_gui")]
+  WallGui,
+
 }
+

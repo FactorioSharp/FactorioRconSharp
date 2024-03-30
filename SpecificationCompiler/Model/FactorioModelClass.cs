@@ -7,6 +7,7 @@ public class FactorioModelClass : FactorioModelTopLevelStatement
 {
     public string? BaseClass { get; set; }
 
+    public bool IsAbstract { get; set; }
     public bool IsPartial { get; set; }
 
     public FactorioModelClassProperty[] Properties { get; set; } = Array.Empty<FactorioModelClassProperty>();

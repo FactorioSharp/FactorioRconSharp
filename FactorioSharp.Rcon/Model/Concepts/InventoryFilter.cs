@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class InventoryFilter
 {
   /// <summary>
-  ///     Position of the corresponding filter slot.
+  /// Position of the corresponding filter slot.
   /// </summary>
   [FactorioRconAttribute("index")]
-    public uint Index { get; set; }
+  public uint Index { get; set; }
 
   /// <summary>
-  ///     Item prototype name of the item to filter.
+  /// Item prototype name of the item to filter.
   /// </summary>
   [FactorioRconAttribute("name")]
-    public string Name { get; set; }
+  public string Name { get; set; }
+
 }
+

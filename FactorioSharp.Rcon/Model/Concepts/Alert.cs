@@ -2,7 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -10,29 +14,31 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class Alert
 {
   /// <summary>
-  ///     The tick this alert was created.
+  /// The tick this alert was created.
   /// </summary>
   [FactorioRconAttribute("tick")]
-    public uint Tick { get; set; }
+  public uint Tick { get; set; }
 
-    [FactorioRconAttribute("target")]
-    public LuaEntity Target { get; set; }
+  [FactorioRconAttribute("target")]
+  public LuaEntity Target { get; set; }
 
-    [FactorioRconAttribute("prototype")]
-    public LuaEntityPrototype Prototype { get; set; }
+  [FactorioRconAttribute("prototype")]
+  public LuaEntityPrototype Prototype { get; set; }
 
-    [FactorioRconAttribute("position")]
-    public MapPosition Position { get; set; }
+  [FactorioRconAttribute("position")]
+  public MapPosition Position { get; set; }
 
-    /// <summary>
-    ///     The SignalID used for a custom alert. Only present for custom alerts.
-    /// </summary>
-    [FactorioRconAttribute("icon")]
-    public SignalID Icon { get; set; }
+  /// <summary>
+  /// The SignalID used for a custom alert. Only present for custom alerts.
+  /// </summary>
+  [FactorioRconAttribute("icon")]
+  public SignalID Icon { get; set; }
 
-    /// <summary>
-    ///     The message for a custom alert. Only present for custom alerts.
-    /// </summary>
-    [FactorioRconAttribute("message")]
-    public LocalisedString Message { get; set; }
+  /// <summary>
+  /// The message for a custom alert. Only present for custom alerts.
+  /// </summary>
+  [FactorioRconAttribute("message")]
+  public LocalisedString Message { get; set; }
+
 }
+

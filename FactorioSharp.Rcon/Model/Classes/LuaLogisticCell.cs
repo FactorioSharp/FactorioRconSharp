@@ -2,148 +2,148 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
 using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Concepts;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Classes;
 
 /// <summary>
-///     Logistic cell of a particular
-///     <see cref="LuaEntity).A" LogisticCell"IsTheGivenNameForSettingsAndPropertiesUsedByWhatWouldNormallyBeSeenAsA"
-///         Roboport".ALogisticCellHoweverDoesn'THaveToBeAttachedToTheRoboportEntity(TheCharacterHasOneForThePersonalRoboport" />
-///     .
+/// Logistic cell of a particular <see cref="LuaEntity).A"LogisticCell"IsTheGivenNameForSettingsAndPropertiesUsedByWhatWouldNormallyBeSeenAsA"Roboport".ALogisticCellHoweverDoesn'THaveToBeAttachedToTheRoboportEntity(TheCharacterHasOneForThePersonalRoboport" />.
 /// </summary>
 [FactorioRconClass("LuaLogisticCell")]
-public abstract class LuaLogisticCell : LuaObject
+public abstract class LuaLogisticCell: LuaObject
 {
   /// <summary>
-  ///     Logistic radius of this cell.
+  /// Logistic radius of this cell.
   /// </summary>
   [FactorioRconAttribute("logistic_radius")]
-    public float LogisticRadius { get; private set; }
+  public float LogisticRadius { get; private set; }
 
   /// <summary>
-  ///     Logistic connection distance of this cell.
+  /// Logistic connection distance of this cell.
   /// </summary>
   [FactorioRconAttribute("logistics_connection_distance")]
-    public float LogisticsConnectionDistance { get; private set; }
+  public float LogisticsConnectionDistance { get; private set; }
 
   /// <summary>
-  ///     Construction radius of this cell.
+  /// Construction radius of this cell.
   /// </summary>
   [FactorioRconAttribute("construction_radius")]
-    public float ConstructionRadius { get; private set; }
+  public float ConstructionRadius { get; private set; }
 
   /// <summary>
-  ///     Number of stationed logistic robots in this cell.
+  /// Number of stationed logistic robots in this cell.
   /// </summary>
   [FactorioRconAttribute("stationed_logistic_robot_count")]
-    public uint StationedLogisticRobotCount { get; private set; }
+  public uint StationedLogisticRobotCount { get; private set; }
 
   /// <summary>
-  ///     Number of stationed construction robots in this cell.
+  /// Number of stationed construction robots in this cell.
   /// </summary>
   [FactorioRconAttribute("stationed_construction_robot_count")]
-    public uint StationedConstructionRobotCount { get; private set; }
+  public uint StationedConstructionRobotCount { get; private set; }
 
   /// <summary>
-  ///     `true` if this is a mobile cell. In vanilla, only the logistic cell created by a character's personal roboport is mobile.
+  /// `true` if this is a mobile cell. In vanilla, only the logistic cell created by a character's personal roboport is mobile.
   /// </summary>
   [FactorioRconAttribute("mobile")]
-    public bool Mobile { get; private set; }
+  public bool Mobile { get; private set; }
 
   /// <summary>
-  ///     `true` if this cell is active.
+  /// `true` if this cell is active.
   /// </summary>
   [FactorioRconAttribute("transmitting")]
-    public bool Transmitting { get; private set; }
+  public bool Transmitting { get; private set; }
 
   /// <summary>
-  ///     Radius at which the robots hover when waiting to be charged.
+  /// Radius at which the robots hover when waiting to be charged.
   /// </summary>
   [FactorioRconAttribute("charge_approach_distance")]
-    public float ChargeApproachDistance { get; private set; }
+  public float ChargeApproachDistance { get; private set; }
 
   /// <summary>
-  ///     Number of robots currently charging.
+  /// Number of robots currently charging.
   /// </summary>
   [FactorioRconAttribute("charging_robot_count")]
-    public uint ChargingRobotCount { get; private set; }
+  public uint ChargingRobotCount { get; private set; }
 
   /// <summary>
-  ///     Number of robots waiting to charge.
+  /// Number of robots waiting to charge.
   /// </summary>
   [FactorioRconAttribute("to_charge_robot_count")]
-    public uint ToChargeRobotCount { get; private set; }
+  public uint ToChargeRobotCount { get; private set; }
 
   /// <summary>
-  ///     This cell's owner.
+  /// This cell's owner.
   /// </summary>
   [FactorioRconAttribute("owner")]
-    public LuaEntity Owner { get; private set; }
+  public LuaEntity Owner { get; private set; }
 
   /// <summary>
-  ///     The network that owns this cell, if any.
+  /// The network that owns this cell, if any.
   /// </summary>
   [FactorioRconAttribute("logistic_network")]
-    public LuaLogisticNetwork LogisticNetwork { get; private set; }
+  public LuaLogisticNetwork LogisticNetwork { get; private set; }
 
   /// <summary>
-  ///     Neighbouring cells.
+  /// Neighbouring cells.
   /// </summary>
   [FactorioRconAttribute("neighbours")]
-    public List<LuaLogisticCell> Neighbours { get; private set; }
+  public List<LuaLogisticCell> Neighbours { get; private set; }
 
   /// <summary>
-  ///     Robots currently being charged.
+  /// Robots currently being charged.
   /// </summary>
   [FactorioRconAttribute("charging_robots")]
-    public List<LuaEntity> ChargingRobots { get; private set; }
+  public List<LuaEntity> ChargingRobots { get; private set; }
 
   /// <summary>
-  ///     Robots waiting to charge.
+  /// Robots waiting to charge.
   /// </summary>
   [FactorioRconAttribute("to_charge_robots")]
-    public List<LuaEntity> ToChargeRobots { get; private set; }
+  public List<LuaEntity> ToChargeRobots { get; private set; }
 
   /// <summary>
-  ///     Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the
-  ///     corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the
-  ///     game state might have occurred between the creation of the Lua object and its access.
+  /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
   /// </summary>
   [FactorioRconAttribute("valid")]
-    public bool Valid { get; private set; }
+  public bool Valid { get; private set; }
 
   /// <summary>
-  ///     The class name of this object. Available even when `valid` is false. For LuaStruct objects it may also be suffixed with a dotted path to a member of the struct.
+  /// The class name of this object. Available even when `valid` is false. For LuaStruct objects it may also be suffixed with a dotted path to a member of the struct.
   /// </summary>
   [FactorioRconAttribute("object_name")]
-    public string ObjectName { get; private set; }
+  public string ObjectName { get; private set; }
 
   /// <summary>
-  ///     Is a given position within the logistic range of this cell?
+  /// Is a given position within the logistic range of this cell?
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("is_in_logistic_range")]
-    public abstract bool IsInLogisticRange(MapPosition position);
+  public abstract bool IsInLogisticRange(MapPosition position);
 
   /// <summary>
-  ///     Is a given position within the construction range of this cell?
+  /// Is a given position within the construction range of this cell?
   /// </summary>
   /// <param name="position">Lua name: position</param>
   [FactorioRconMethod("is_in_construction_range")]
-    public abstract bool IsInConstructionRange(MapPosition position);
+  public abstract bool IsInConstructionRange(MapPosition position);
 
   /// <summary>
-  ///     Are two cells neighbours?
+  /// Are two cells neighbours?
   /// </summary>
   /// <param name="other">Lua name: other</param>
   [FactorioRconMethod("is_neighbour_with")]
-    public abstract bool IsNeighbourWith(LuaLogisticCell other);
+  public abstract bool IsNeighbourWith(LuaLogisticCell other);
 
   /// <summary>
-  ///     All methods and properties that this object supports.
+  /// All methods and properties that this object supports.
   /// </summary>
   [FactorioRconMethod("help")]
-    public abstract string Help();
+  public abstract string Help();
+
 }
+

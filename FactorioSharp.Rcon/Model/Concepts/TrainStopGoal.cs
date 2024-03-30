@@ -2,7 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -10,8 +14,10 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class TrainStopGoal
 {
   /// <summary>
-  ///     Train stop target. Must be connected to rail (<see cref="LuaEntity.ConnectedRail)ReturnsValidLuaEntity" />.
+  /// Train stop target. Must be connected to rail (<see cref="LuaEntity.ConnectedRail)ReturnsValidLuaEntity" />.
   /// </summary>
   [FactorioRconAttribute("train_stop")]
-    public LuaEntity TrainStop { get; set; }
+  public LuaEntity TrainStop { get; set; }
+
 }
+

@@ -2,6 +2,7 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
@@ -13,28 +14,31 @@ public enum RidingEnum
 [FactorioRconDefinition("riding.acceleration")]
 public enum RidingAccelerationEnum
 {
-    [FactorioRconDefinitionValue("nothing")]
-    Nothing,
+  [FactorioRconDefinitionValue("nothing")]
+  Nothing,
 
-    [FactorioRconDefinitionValue("accelerating")]
-    Accelerating,
+  [FactorioRconDefinitionValue("accelerating")]
+  Accelerating,
 
-    [FactorioRconDefinitionValue("braking")]
-    Braking,
+  [FactorioRconDefinitionValue("braking")]
+  Braking,
 
-    [FactorioRconDefinitionValue("reversing")]
-    Reversing
+  [FactorioRconDefinitionValue("reversing")]
+  Reversing,
+
 }
 
 [FactorioRconDefinition("riding.direction")]
 public enum RidingDirectionEnum
 {
-    [FactorioRconDefinitionValue("left")]
-    Left,
+  [FactorioRconDefinitionValue("left")]
+  Left,
 
-    [FactorioRconDefinitionValue("straight")]
-    Straight,
+  [FactorioRconDefinitionValue("straight")]
+  Straight,
 
-    [FactorioRconDefinitionValue("right")]
-    Right
+  [FactorioRconDefinitionValue("right")]
+  Right,
+
 }
+

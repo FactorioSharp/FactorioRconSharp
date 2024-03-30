@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class SpawnPointDefinition
 {
   /// <summary>
-  ///     Evolution factor for which this weight applies.
+  /// Evolution factor for which this weight applies.
   /// </summary>
   [FactorioRconAttribute("evolution_factor")]
-    public double EvolutionFactor { get; set; }
+  public double EvolutionFactor { get; set; }
 
   /// <summary>
-  ///     Probability of spawning this unit at this evolution factor.
+  /// Probability of spawning this unit at this evolution factor.
   /// </summary>
   [FactorioRconAttribute("weight")]
-    public double Weight { get; set; }
+  public double Weight { get; set; }
+
 }
+

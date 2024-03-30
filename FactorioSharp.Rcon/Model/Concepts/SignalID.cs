@@ -3,18 +3,24 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("SignalID")]
 public class SignalID
 {
-    [FactorioRconAttribute("type")]
-    public Literals342557859 Type { get; set; }
+  [FactorioRconAttribute("type")]
+  public Literals793853424 Type { get; set; }
 
-    /// <summary>
-    ///     Name of the item, fluid or virtual signal.
-    /// </summary>
-    [FactorioRconAttribute("name")]
-    public string Name { get; set; }
+  /// <summary>
+  /// Name of the item, fluid or virtual signal.
+  /// </summary>
+  [FactorioRconAttribute("name")]
+  public string Name { get; set; }
+
 }
+

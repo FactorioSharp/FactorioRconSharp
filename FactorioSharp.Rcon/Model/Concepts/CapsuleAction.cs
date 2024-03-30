@@ -3,12 +3,18 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CapsuleAction")]
 public class CapsuleAction
 {
-    [FactorioRconAttribute("type")]
-    public Literals830635357 Type { get; set; }
+  [FactorioRconAttribute("type")]
+  public Literals1547766468 Type { get; set; }
+
 }
+

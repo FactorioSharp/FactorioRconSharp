@@ -2,72 +2,79 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Type of a <see cref="WaitCondition" />.
+/// Type of a <see cref="WaitCondition" />.
 /// </summary>
 [FactorioRconDefinition("WaitConditionType")]
 public enum WaitConditionType
 {
   /// <summary>
-  ///     Literal value: time
+  /// Literal value: time
   /// </summary>
   [FactorioRconDefinitionValue("time")]
-    Time,
+  Time,
 
   /// <summary>
-  ///     Literal value: full
+  /// Literal value: full
   /// </summary>
   [FactorioRconDefinitionValue("full")]
-    Full,
+  Full,
 
   /// <summary>
-  ///     Literal value: empty
+  /// Literal value: empty
   /// </summary>
   [FactorioRconDefinitionValue("empty")]
-    Empty,
+  Empty,
 
   /// <summary>
-  ///     Literal value: item_count
+  /// Literal value: item_count
   /// </summary>
   [FactorioRconDefinitionValue("item_count")]
-    ItemCount,
+  ItemCount,
 
   /// <summary>
-  ///     Literal value: circuit
+  /// Literal value: circuit
   /// </summary>
   [FactorioRconDefinitionValue("circuit")]
-    Circuit,
+  Circuit,
 
   /// <summary>
-  ///     Literal value: inactivity
+  /// Literal value: inactivity
   /// </summary>
   [FactorioRconDefinitionValue("inactivity")]
-    Inactivity,
+  Inactivity,
 
   /// <summary>
-  ///     Literal value: robots_inactive
+  /// Literal value: robots_inactive
   /// </summary>
   [FactorioRconDefinitionValue("robots_inactive")]
-    RobotsInactive,
+  RobotsInactive,
 
   /// <summary>
-  ///     Literal value: fluid_count
+  /// Literal value: fluid_count
   /// </summary>
   [FactorioRconDefinitionValue("fluid_count")]
-    FluidCount,
+  FluidCount,
 
   /// <summary>
-  ///     Literal value: passenger_present
+  /// Literal value: passenger_present
   /// </summary>
   [FactorioRconDefinitionValue("passenger_present")]
-    PassengerPresent,
+  PassengerPresent,
 
   /// <summary>
-  ///     Literal value: passenger_not_present
+  /// Literal value: passenger_not_present
   /// </summary>
   [FactorioRconDefinitionValue("passenger_not_present")]
-    PassengerNotPresent
+  PassengerNotPresent,
+
 }
+

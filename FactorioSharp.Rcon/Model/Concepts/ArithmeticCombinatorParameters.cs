@@ -3,6 +3,10 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -10,38 +14,40 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class ArithmeticCombinatorParameters
 {
   /// <summary>
-  ///     First signal to use in an operation. If not specified, the second argument will be the value of `first_constant`.
+  /// First signal to use in an operation. If not specified, the second argument will be the value of `first_constant`.
   /// </summary>
   [FactorioRconAttribute("first_signal")]
-    public SignalID FirstSignal { get; set; }
+  public SignalID FirstSignal { get; set; }
 
   /// <summary>
-  ///     Second signal to use in an operation. If not specified, the second argument will be the value of `second_constant`.
+  /// Second signal to use in an operation. If not specified, the second argument will be the value of `second_constant`.
   /// </summary>
   [FactorioRconAttribute("second_signal")]
-    public SignalID SecondSignal { get; set; }
+  public SignalID SecondSignal { get; set; }
 
   /// <summary>
-  ///     Constant to use as the first argument of the operation. Has no effect when `first_signal` is set. Defaults to `0`.
+  /// Constant to use as the first argument of the operation. Has no effect when `first_signal` is set. Defaults to `0`.
   /// </summary>
   [FactorioRconAttribute("first_constant")]
-    public int FirstConstant { get; set; }
+  public int FirstConstant { get; set; }
 
   /// <summary>
-  ///     Constant to use as the second argument of the operation. Has no effect when `second_signal` is set. Defaults to `0`.
+  /// Constant to use as the second argument of the operation. Has no effect when `second_signal` is set. Defaults to `0`.
   /// </summary>
   [FactorioRconAttribute("second_constant")]
-    public int SecondConstant { get; set; }
+  public int SecondConstant { get; set; }
 
   /// <summary>
-  ///     When not specified, defaults to `"*"`.
+  /// When not specified, defaults to `"*"`.
   /// </summary>
   [FactorioRconAttribute("operation")]
-    public Literals719457675 Operation { get; set; }
+  public Literals1029589659 Operation { get; set; }
 
   /// <summary>
-  ///     Specifies the signal to output.
+  /// Specifies the signal to output.
   /// </summary>
   [FactorioRconAttribute("output_signal")]
-    public SignalID OutputSignal { get; set; }
+  public SignalID OutputSignal { get; set; }
+
 }
+

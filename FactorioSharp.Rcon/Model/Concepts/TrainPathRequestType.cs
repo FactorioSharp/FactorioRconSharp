@@ -2,37 +2,43 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     A <see cref="LuaGameScript.RequestTrainPath" />.
+/// A <see cref="LuaGameScript.RequestTrainPath" />.
 /// </summary>
 [FactorioRconDefinition("TrainPathRequestType")]
 public enum TrainPathRequestType
 {
   /// <summary>
-  ///     Literal value: path
+  /// Literal value: path
   /// </summary>
   [FactorioRconDefinitionValue("path")]
-    Path,
+  Path,
 
   /// <summary>
-  ///     Literal value: any-goal-accessible
+  /// Literal value: any-goal-accessible
   /// </summary>
   [FactorioRconDefinitionValue("any-goal-accessible")]
-    AnyGoalAccessible,
+  AnyGoalAccessible,
 
   /// <summary>
-  ///     Literal value: all-goals-accessible
+  /// Literal value: all-goals-accessible
   /// </summary>
   [FactorioRconDefinitionValue("all-goals-accessible")]
-    AllGoalsAccessible,
+  AllGoalsAccessible,
 
   /// <summary>
-  ///     Literal value: all-goals-penalties
+  /// Literal value: all-goals-penalties
   /// </summary>
   [FactorioRconDefinitionValue("all-goals-penalties")]
-    AllGoalsPenalties
+  AllGoalsPenalties,
+
 }
+

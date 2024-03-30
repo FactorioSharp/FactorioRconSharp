@@ -2,60 +2,67 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     One of the following values:
+/// One of the following values:
 /// </summary>
 [FactorioRconDefinition("CursorBoxRenderType")]
 public enum CursorBoxRenderType
 {
   /// <summary>
-  ///     Literal value: entity
+  /// Literal value: entity
   /// </summary>
   [FactorioRconDefinitionValue("entity")]
-    Entity,
+  Entity,
 
   /// <summary>
-  ///     Literal value: electricity
+  /// Literal value: electricity
   /// </summary>
   [FactorioRconDefinitionValue("electricity")]
-    Electricity,
+  Electricity,
 
   /// <summary>
-  ///     Literal value: copy
+  /// Literal value: copy
   /// </summary>
   [FactorioRconDefinitionValue("copy")]
-    Copy,
+  Copy,
 
   /// <summary>
-  ///     Literal value: not-allowed
+  /// Literal value: not-allowed
   /// </summary>
   [FactorioRconDefinitionValue("not-allowed")]
-    NotAllowed,
+  NotAllowed,
 
   /// <summary>
-  ///     Literal value: pair
+  /// Literal value: pair
   /// </summary>
   [FactorioRconDefinitionValue("pair")]
-    Pair,
+  Pair,
 
   /// <summary>
-  ///     Literal value: logistics
+  /// Literal value: logistics
   /// </summary>
   [FactorioRconDefinitionValue("logistics")]
-    Logistics,
+  Logistics,
 
   /// <summary>
-  ///     Literal value: train-visualization
+  /// Literal value: train-visualization
   /// </summary>
   [FactorioRconDefinitionValue("train-visualization")]
-    TrainVisualization,
+  TrainVisualization,
 
   /// <summary>
-  ///     Literal value: blueprint-snap-rectangle
+  /// Literal value: blueprint-snap-rectangle
   /// </summary>
   [FactorioRconDefinitionValue("blueprint-snap-rectangle")]
-    BlueprintSnapRectangle
+  BlueprintSnapRectangle,
+
 }
+

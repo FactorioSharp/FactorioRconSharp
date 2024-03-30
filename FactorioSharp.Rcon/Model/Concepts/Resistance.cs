@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class Resistance
 {
   /// <summary>
-  ///     Absolute damage decrease
+  /// Absolute damage decrease
   /// </summary>
   [FactorioRconAttribute("decrease")]
-    public float Decrease { get; set; }
+  public float Decrease { get; set; }
 
   /// <summary>
-  ///     Percentual damage decrease
+  /// Percentual damage decrease
   /// </summary>
   [FactorioRconAttribute("percent")]
-    public float Percent { get; set; }
+  public float Percent { get; set; }
+
 }
+

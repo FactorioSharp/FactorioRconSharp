@@ -3,15 +3,20 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 using OneOf;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Coordinates of a chunk in a <see cref="MapPosition" /> can be translated to a ChunkPosition by dividing the `x`/`y` values by 32.
+/// Coordinates of a chunk in a <see cref="MapPosition" /> can be translated to a ChunkPosition by dividing the `x`/`y` values by 32.
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ChunkPosition")]
-public partial class ChunkPosition : OneOfBase<Table912949041, Tuple1160236180>
+public partial class ChunkPosition: OneOfBase<Table425577092, Tuple320137747>
 {
 }
+

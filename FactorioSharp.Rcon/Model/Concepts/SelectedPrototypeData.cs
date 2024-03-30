@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,20 +14,22 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class SelectedPrototypeData
 {
   /// <summary>
-  ///     E.g. `"entity"`.
+  /// E.g. `"entity"`.
   /// </summary>
   [FactorioRconAttribute("base_type")]
-    public string BaseType { get; set; }
+  public string BaseType { get; set; }
 
   /// <summary>
-  ///     The `type` of the prototype. E.g. `"tree"`.
+  /// The `type` of the prototype. E.g. `"tree"`.
   /// </summary>
   [FactorioRconAttribute("derived_type")]
-    public string DerivedType { get; set; }
+  public string DerivedType { get; set; }
 
   /// <summary>
-  ///     The `name` of the prototype. E.g. `"tree-05"`.
+  /// The `name` of the prototype. E.g. `"tree-05"`.
   /// </summary>
   [FactorioRconAttribute("name")]
-    public string Name { get; set; }
+  public string Name { get; set; }
+
 }
+

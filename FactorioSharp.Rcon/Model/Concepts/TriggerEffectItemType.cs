@@ -2,132 +2,139 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Used by <see cref="TriggerEffectItem" />.
+/// Used by <see cref="TriggerEffectItem" />.
 /// </summary>
 [FactorioRconDefinition("TriggerEffectItemType")]
 public enum TriggerEffectItemType
 {
   /// <summary>
-  ///     Literal value: damage
+  /// Literal value: damage
   /// </summary>
   [FactorioRconDefinitionValue("damage")]
-    Damage,
+  Damage,
 
   /// <summary>
-  ///     Literal value: create-entity
+  /// Literal value: create-entity
   /// </summary>
   [FactorioRconDefinitionValue("create-entity")]
-    CreateEntity,
+  CreateEntity,
 
   /// <summary>
-  ///     Literal value: create-explosion
+  /// Literal value: create-explosion
   /// </summary>
   [FactorioRconDefinitionValue("create-explosion")]
-    CreateExplosion,
+  CreateExplosion,
 
   /// <summary>
-  ///     Literal value: create-fire
+  /// Literal value: create-fire
   /// </summary>
   [FactorioRconDefinitionValue("create-fire")]
-    CreateFire,
+  CreateFire,
 
   /// <summary>
-  ///     Literal value: create-smoke
+  /// Literal value: create-smoke
   /// </summary>
   [FactorioRconDefinitionValue("create-smoke")]
-    CreateSmoke,
+  CreateSmoke,
 
   /// <summary>
-  ///     Literal value: create-trivial-smoke
+  /// Literal value: create-trivial-smoke
   /// </summary>
   [FactorioRconDefinitionValue("create-trivial-smoke")]
-    CreateTrivialSmoke,
+  CreateTrivialSmoke,
 
   /// <summary>
-  ///     Literal value: create-particle
+  /// Literal value: create-particle
   /// </summary>
   [FactorioRconDefinitionValue("create-particle")]
-    CreateParticle,
+  CreateParticle,
 
   /// <summary>
-  ///     Literal value: create-sticker
+  /// Literal value: create-sticker
   /// </summary>
   [FactorioRconDefinitionValue("create-sticker")]
-    CreateSticker,
+  CreateSticker,
 
   /// <summary>
-  ///     Literal value: create-decorative
+  /// Literal value: create-decorative
   /// </summary>
   [FactorioRconDefinitionValue("create-decorative")]
-    CreateDecorative,
+  CreateDecorative,
 
   /// <summary>
-  ///     Literal value: nested-result
+  /// Literal value: nested-result
   /// </summary>
   [FactorioRconDefinitionValue("nested-result")]
-    NestedResult,
+  NestedResult,
 
   /// <summary>
-  ///     Literal value: play-sound
+  /// Literal value: play-sound
   /// </summary>
   [FactorioRconDefinitionValue("play-sound")]
-    PlaySound,
+  PlaySound,
 
   /// <summary>
-  ///     Literal value: push-back
+  /// Literal value: push-back
   /// </summary>
   [FactorioRconDefinitionValue("push-back")]
-    PushBack,
+  PushBack,
 
   /// <summary>
-  ///     Literal value: destroy-cliffs
+  /// Literal value: destroy-cliffs
   /// </summary>
   [FactorioRconDefinitionValue("destroy-cliffs")]
-    DestroyCliffs,
+  DestroyCliffs,
 
   /// <summary>
-  ///     Literal value: show-explosion-on-chart
+  /// Literal value: show-explosion-on-chart
   /// </summary>
   [FactorioRconDefinitionValue("show-explosion-on-chart")]
-    ShowExplosionOnChart,
+  ShowExplosionOnChart,
 
   /// <summary>
-  ///     Literal value: insert-item
+  /// Literal value: insert-item
   /// </summary>
   [FactorioRconDefinitionValue("insert-item")]
-    InsertItem,
+  InsertItem,
 
   /// <summary>
-  ///     Literal value: script
+  /// Literal value: script
   /// </summary>
   [FactorioRconDefinitionValue("script")]
-    Script,
+  Script,
 
   /// <summary>
-  ///     Literal value: set-tile
+  /// Literal value: set-tile
   /// </summary>
   [FactorioRconDefinitionValue("set-tile")]
-    SetTile,
+  SetTile,
 
   /// <summary>
-  ///     Literal value: invoke-tile-trigger
+  /// Literal value: invoke-tile-trigger
   /// </summary>
   [FactorioRconDefinitionValue("invoke-tile-trigger")]
-    InvokeTileTrigger,
+  InvokeTileTrigger,
 
   /// <summary>
-  ///     Literal value: destroy-decoratives
+  /// Literal value: destroy-decoratives
   /// </summary>
   [FactorioRconDefinitionValue("destroy-decoratives")]
-    DestroyDecoratives,
+  DestroyDecoratives,
 
   /// <summary>
-  ///     Literal value: camera-effect
+  /// Literal value: camera-effect
   /// </summary>
   [FactorioRconDefinitionValue("camera-effect")]
-    CameraEffect
+  CameraEffect,
+
 }
+

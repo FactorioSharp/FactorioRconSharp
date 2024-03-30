@@ -2,48 +2,55 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     A string that specifies how the inputs should be compared
+/// A string that specifies how the inputs should be compared
 /// </summary>
 [FactorioRconDefinition("ComparatorString")]
 public enum ComparatorString
 {
   /// <summary>
-  ///     Literal value: =
+  /// Literal value: =
   /// </summary>
   [FactorioRconDefinitionValue("=")]
-    Eq,
+  Eq,
 
   /// <summary>
-  ///     Literal value: >
+  /// Literal value: >
   /// </summary>
   [FactorioRconDefinitionValue(">")]
-    Gt,
+  Gt,
 
   /// <summary>
-  ///     Literal value: <
+  /// Literal value: <
   /// </summary>
   [FactorioRconDefinitionValue("<")]
-    Lt,
+  Lt,
 
   /// <summary>
-  ///     Literal value: ≥, >=
+  /// Literal value: ≥, >=
   /// </summary>
   [FactorioRconDefinitionValue("≥")]
-    Ge,
+  Ge,
 
   /// <summary>
-  ///     Literal value: ≤, <=
+  /// Literal value: ≤, <=
   /// </summary>
   [FactorioRconDefinitionValue("≤")]
-    Le,
+  Le,
 
   /// <summary>
-  ///     Literal value: ≠, !=
+  /// Literal value: ≠, !=
   /// </summary>
   [FactorioRconDefinitionValue("≠")]
-    Ne
+  Ne,
+
 }
+

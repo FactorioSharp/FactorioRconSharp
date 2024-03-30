@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class Tile
 {
   /// <summary>
-  ///     The position of the tile.
+  /// The position of the tile.
   /// </summary>
   [FactorioRconAttribute("position")]
-    public TilePosition Position { get; set; }
+  public TilePosition Position { get; set; }
 
   /// <summary>
-  ///     The prototype name of the tile.
+  /// The prototype name of the tile.
   /// </summary>
   [FactorioRconAttribute("name")]
-    public string Name { get; set; }
+  public string Name { get; set; }
+
 }
+

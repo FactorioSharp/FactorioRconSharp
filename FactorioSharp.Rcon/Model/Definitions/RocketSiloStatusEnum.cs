@@ -2,102 +2,105 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 /// <summary>
-///     The various parts of the launch sequence of the rocket silo.
+/// The various parts of the launch sequence of the rocket silo.
 /// </summary>
 [FactorioRconDefinition("rocket_silo_status")]
 public enum RocketSiloStatusEnum
 {
   /// <summary>
-  ///     The rocket silo is crafting rocket parts. When there are enough rocket parts, the silo will switch into the `create_rocket` state.
+  /// The rocket silo is crafting rocket parts. When there are enough rocket parts, the silo will switch into the `create_rocket` state.
   /// </summary>
   [FactorioRconDefinitionValue("building_rocket")]
-    BuildingRocket,
+  BuildingRocket,
 
   /// <summary>
-  ///     The next state is `lights_blinking_open`. The rocket silo rocket entity gets created.
+  /// The next state is `lights_blinking_open`. The rocket silo rocket entity gets created.
   /// </summary>
   [FactorioRconDefinitionValue("create_rocket")]
-    CreateRocket,
+  CreateRocket,
 
   /// <summary>
-  ///     The next state is `doors_opening`. The rocket is getting prepared for launch.
+  /// The next state is `doors_opening`. The rocket is getting prepared for launch.
   /// </summary>
   [FactorioRconDefinitionValue("lights_blinking_open")]
-    LightsBlinkingOpen,
+  LightsBlinkingOpen,
 
   /// <summary>
-  ///     The next state is `doors_opened`. The rocket is getting prepared for launch.
+  /// The next state is `doors_opened`. The rocket is getting prepared for launch.
   /// </summary>
   [FactorioRconDefinitionValue("doors_opening")]
-    DoorsOpening,
+  DoorsOpening,
 
   /// <summary>
-  ///     The next state is `rocket_rising` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting prepared for launch.
+  /// The next state is `rocket_rising` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting prepared for launch.
   /// </summary>
   [FactorioRconDefinitionValue("doors_opened")]
-    DoorsOpened,
+  DoorsOpened,
 
   /// <summary>
-  ///     The next state is `arms_advance` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting prepared for launch.
+  /// The next state is `arms_advance` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting prepared for launch.
   /// </summary>
   [FactorioRconDefinitionValue("rocket_rising")]
-    RocketRising,
+  RocketRising,
 
   /// <summary>
-  ///     The next state is `rocket_ready` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting prepared for launch.
+  /// The next state is `rocket_ready` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting prepared for launch.
   /// </summary>
   [FactorioRconDefinitionValue("arms_advance")]
-    ArmsAdvance,
+  ArmsAdvance,
 
   /// <summary>
-  ///     The rocket launch can be started by the player. When the launch is started, the silo switches into the `launch_starting` state.
+  /// The rocket launch can be started by the player. When the launch is started, the silo switches into the `launch_starting` state.
   /// </summary>
   [FactorioRconDefinitionValue("rocket_ready")]
-    RocketReady,
+  RocketReady,
 
   /// <summary>
-  ///     The next state is `launch_started`.
+  /// The next state is `launch_started`.
   /// </summary>
   [FactorioRconDefinitionValue("launch_starting")]
-    LaunchStarting,
+  LaunchStarting,
 
   /// <summary>
-  ///     The next state is `arms_retract` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting launched.
+  /// The next state is `arms_retract` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting launched.
   /// </summary>
   [FactorioRconDefinitionValue("engine_starting")]
-    EngineStarting,
+  EngineStarting,
 
   /// <summary>
-  ///     The next state is `rocket_flying` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting launched.
+  /// The next state is `rocket_flying` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting launched.
   /// </summary>
   [FactorioRconDefinitionValue("arms_retract")]
-    ArmsRetract,
+  ArmsRetract,
 
   /// <summary>
-  ///     The next state is `lights_blinking_close`. The rocket is getting launched.
+  /// The next state is `lights_blinking_close`. The rocket is getting launched.
   /// </summary>
   [FactorioRconDefinitionValue("rocket_flying")]
-    RocketFlying,
+  RocketFlying,
 
   /// <summary>
-  ///     The next state is `doors_closing`.
+  /// The next state is `doors_closing`.
   /// </summary>
   [FactorioRconDefinitionValue("lights_blinking_close")]
-    LightsBlinkingClose,
+  LightsBlinkingClose,
 
   /// <summary>
-  ///     The next state is `building_rocket`.
+  /// The next state is `building_rocket`.
   /// </summary>
   [FactorioRconDefinitionValue("doors_closing")]
-    DoorsClosing,
+  DoorsClosing,
 
   /// <summary>
-  ///     The next state is `engine_starting` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting launched.
+  /// The next state is `engine_starting` or if the rocket is destroyed in this state then the next state will be `lights_blinking_close`. The rocket is getting launched.
   /// </summary>
   [FactorioRconDefinitionValue("launch_started")]
-    LaunchStarted
+  LaunchStarted,
+
 }
+

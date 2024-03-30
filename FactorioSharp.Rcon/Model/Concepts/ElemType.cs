@@ -2,79 +2,85 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     A <see cref="LuaGuiElement.ElemTooltip" />.
+/// A <see cref="LuaGuiElement.ElemTooltip" />.
 /// </summary>
 [FactorioRconDefinition("ElemType")]
 public enum ElemType
 {
   /// <summary>
-  ///     Literal value: achievement
+  /// Literal value: achievement
   /// </summary>
   [FactorioRconDefinitionValue("achievement")]
-    Achievement,
+  Achievement,
 
   /// <summary>
-  ///     Literal value: decorative
+  /// Literal value: decorative
   /// </summary>
   [FactorioRconDefinitionValue("decorative")]
-    Decorative,
+  Decorative,
 
   /// <summary>
-  ///     Literal value: entity
+  /// Literal value: entity
   /// </summary>
   [FactorioRconDefinitionValue("entity")]
-    Entity,
+  Entity,
 
   /// <summary>
-  ///     Literal value: equipment
+  /// Literal value: equipment
   /// </summary>
   [FactorioRconDefinitionValue("equipment")]
-    Equipment,
+  Equipment,
 
   /// <summary>
-  ///     Literal value: fluid
+  /// Literal value: fluid
   /// </summary>
   [FactorioRconDefinitionValue("fluid")]
-    Fluid,
+  Fluid,
 
   /// <summary>
-  ///     Literal value: item
+  /// Literal value: item
   /// </summary>
   [FactorioRconDefinitionValue("item")]
-    Item,
+  Item,
 
   /// <summary>
-  ///     Literal value: item-group
+  /// Literal value: item-group
   /// </summary>
   [FactorioRconDefinitionValue("item-group")]
-    ItemGroup,
+  ItemGroup,
 
   /// <summary>
-  ///     Literal value: recipe
+  /// Literal value: recipe
   /// </summary>
   [FactorioRconDefinitionValue("recipe")]
-    Recipe,
+  Recipe,
 
   /// <summary>
-  ///     Literal value: signal
+  /// Literal value: signal
   /// </summary>
   [FactorioRconDefinitionValue("signal")]
-    Signal,
+  Signal,
 
   /// <summary>
-  ///     Literal value: technology
+  /// Literal value: technology
   /// </summary>
   [FactorioRconDefinitionValue("technology")]
-    Technology,
+  Technology,
 
   /// <summary>
-  ///     Literal value: tile
+  /// Literal value: tile
   /// </summary>
   [FactorioRconDefinitionValue("tile")]
-    Tile
+  Tile,
+
 }
+

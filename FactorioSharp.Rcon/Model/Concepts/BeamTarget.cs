@@ -2,7 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -10,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class BeamTarget
 {
   /// <summary>
-  ///     The target entity.
+  /// The target entity.
   /// </summary>
   [FactorioRconAttribute("entity")]
-    public LuaEntity Entity { get; set; }
+  public LuaEntity Entity { get; set; }
 
   /// <summary>
-  ///     The target position.
+  /// The target position.
   /// </summary>
   [FactorioRconAttribute("position")]
-    public MapPosition Position { get; set; }
+  public MapPosition Position { get; set; }
+
 }
+

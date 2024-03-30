@@ -2,18 +2,21 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("shooting")]
 public enum ShootingEnum
 {
-    [FactorioRconDefinitionValue("not_shooting")]
-    NotShooting,
+  [FactorioRconDefinitionValue("not_shooting")]
+  NotShooting,
 
-    [FactorioRconDefinitionValue("shooting_enemies")]
-    ShootingEnemies,
+  [FactorioRconDefinitionValue("shooting_enemies")]
+  ShootingEnemies,
 
-    [FactorioRconDefinitionValue("shooting_selected")]
-    ShootingSelected
+  [FactorioRconDefinitionValue("shooting_selected")]
+  ShootingSelected,
+
 }
+
