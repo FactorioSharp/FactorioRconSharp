@@ -1,8 +1,11 @@
 ﻿using System.Text.Json;
 using FactorioSharp.Rcon;
+using FactorioSharp.Rcon.Core.Converters;
 using FactorioSharp.Rcon.Model.Anonymous;
 using FactorioSharp.Rcon.Model.Classes;
 using FactorioSharp.Rcon.Model.Definitions;
+
+JsonSerializerOptions jsonSerializerOptions = new() { Converters = { new OneOfJsonConverterFactory() } };
 
 using FactorioRconClient client = new("127.0.0.1", 27015);
 bool connected = await client.ConnectAsync("password");
@@ -17,6 +20,6 @@ Dictionary<string, Union1834264937> inputCount = await client.ReadAsync(g => ((L
 Console.WriteLine($"Map string: {mapString}");
 Console.WriteLine($"Player count: {playerCount}");
 Console.WriteLine($"Difficulty: {difficulty}");
-Console.WriteLine($"Item stats: {JsonSerializer.Serialize(inputCount)}");
+Console.WriteLine($"Item stats: {JsonSerializer.Serialize(inputCount, jsonSerializerOptions)}");
 
 client.Disconnect();

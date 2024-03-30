@@ -60,7 +60,7 @@ class OneOfJsonConverterFactory : JsonConverterFactory
         }
 
 
-        public override void Write(Utf8JsonWriter writer, IOneOf value, JsonSerializerOptions options) => throw new NotImplementedException();
+        public override void Write(Utf8JsonWriter writer, IOneOf value, JsonSerializerOptions options) => JsonSerializer.Serialize(writer, value.Value, options);
     }
 
     static Type[] FindPossibleUnionTypes(Type typeToConvert)
