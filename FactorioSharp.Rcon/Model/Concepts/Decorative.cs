@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Decorative")]
-public class Decorative
+public class Decorative: IFactorioRconModel
 {
   /// <summary>
   /// The name of the decorative prototype.
@@ -25,5 +25,6 @@ public class Decorative
   [FactorioRconAttribute("amount")]
   public byte Amount { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

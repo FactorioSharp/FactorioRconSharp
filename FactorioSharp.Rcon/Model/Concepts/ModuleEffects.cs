@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ModuleEffects")]
-public class ModuleEffects
+public class ModuleEffects: IFactorioRconModel
 {
   [FactorioRconAttribute("consumption")]
   public ModuleEffectValue Consumption { get; set; }
@@ -25,5 +25,6 @@ public class ModuleEffects
   [FactorioRconAttribute("pollution")]
   public ModuleEffectValue Pollution { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

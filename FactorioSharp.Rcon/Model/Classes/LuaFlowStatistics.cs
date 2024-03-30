@@ -19,19 +19,19 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// - The electric network GUI shows "power consumption" on the left side, so in this case `input` describes the power consumption numbers.
 /// </summary>
 [FactorioRconClass("LuaFlowStatistics")]
-public abstract class LuaFlowStatistics: LuaObject
+public abstract class LuaFlowStatistics: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// List of input counts indexed by prototype name. Represents the data that is shown on the left side of the GUI for the given statistics.
   /// </summary>
   [FactorioRconAttribute("input_counts")]
-  public Dictionary<string, Union164409713> InputCounts { get; private set; }
+  public Dictionary<string, Union1834264937> InputCounts { get; private set; }
 
   /// <summary>
   /// List of output counts indexed by prototype name. Represents the data that is shown on the right side of the GUI for the given statistics.
   /// </summary>
   [FactorioRconAttribute("output_counts")]
-  public Dictionary<string, Union164409713> OutputCounts { get; private set; }
+  public Dictionary<string, Union1834264937> OutputCounts { get; private set; }
 
   /// <summary>
   /// The force these statistics belong to. `nil` for pollution statistics.
@@ -56,7 +56,7 @@ public abstract class LuaFlowStatistics: LuaObject
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_input_count")]
-  public abstract Union164409713 GetInputCount(string name);
+  public abstract Union1834264937 GetInputCount(string name);
 
   /// <summary>
   /// Sets the total input count for a given prototype.
@@ -64,14 +64,14 @@ public abstract class LuaFlowStatistics: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("set_input_count")]
-  public abstract void SetInputCount(string name, Union164409713 count);
+  public abstract void SetInputCount(string name, Union1834264937 count);
 
   /// <summary>
   /// Gets the total output count for a given prototype.
   /// </summary>
   /// <param name="name">Lua name: name</param>
   [FactorioRconMethod("get_output_count")]
-  public abstract Union164409713 GetOutputCount(string name);
+  public abstract Union1834264937 GetOutputCount(string name);
 
   /// <summary>
   /// Sets the total output count for a given prototype.
@@ -79,7 +79,7 @@ public abstract class LuaFlowStatistics: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="count">Lua name: count</param>
   [FactorioRconMethod("set_output_count")]
-  public abstract void SetOutputCount(string name, Union164409713 count);
+  public abstract void SetOutputCount(string name, Union1834264937 count);
 
   /// <summary>
   /// Gets the flow count value for the given time frame. If `sample_index` is not provided, then the value returned is the average across the provided precision time period. These are the values shown in the bottom section of the statistics GUIs.
@@ -116,5 +116,6 @@ public abstract class LuaFlowStatistics: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

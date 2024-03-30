@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// The root of the GUI. This type houses the root elements, `top`, `left`, `center`, `goal`, and `screen`, to which other elements can be added to be displayed on screen.
 /// </summary>
 [FactorioRconClass("LuaGui")]
-public abstract class LuaGui: LuaObject
+public abstract class LuaGui: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The player who owns this gui.
@@ -91,5 +91,6 @@ public abstract class LuaGui: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

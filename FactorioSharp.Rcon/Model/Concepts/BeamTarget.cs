@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("BeamTarget")]
-public class BeamTarget
+public class BeamTarget: IFactorioRconModel
 {
   /// <summary>
   /// The target entity.
@@ -25,5 +25,6 @@ public class BeamTarget
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

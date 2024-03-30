@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a custom input.
 /// </summary>
 [FactorioRconClass("LuaCustomInputPrototype")]
-public abstract class LuaCustomInputPrototype: LuaObject
+public abstract class LuaCustomInputPrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -68,7 +68,7 @@ public abstract class LuaCustomInputPrototype: LuaObject
   /// The consuming type.
   /// </summary>
   [FactorioRconAttribute("consuming")]
-  public Literals1234627128 Consuming { get; private set; }
+  public Literals423690338 Consuming { get; private set; }
 
   /// <summary>
   /// The action that happens when this custom input is triggered.
@@ -124,5 +124,6 @@ public abstract class LuaCustomInputPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

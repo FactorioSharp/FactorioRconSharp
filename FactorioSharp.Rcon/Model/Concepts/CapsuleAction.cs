@@ -11,10 +11,11 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CapsuleAction")]
-public class CapsuleAction
+public class CapsuleAction: IFactorioRconModel
 {
   [FactorioRconAttribute("type")]
-  public Literals1547766468 Type { get; set; }
+  public Literals1768409758 Type { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

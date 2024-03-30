@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// One research item.
 /// </summary>
 [FactorioRconClass("LuaTechnology")]
-public abstract class LuaTechnology: LuaObject
+public abstract class LuaTechnology: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The force this technology belongs to.
@@ -139,5 +139,6 @@ public abstract class LuaTechnology: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

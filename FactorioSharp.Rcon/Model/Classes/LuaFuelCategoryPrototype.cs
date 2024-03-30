@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a fuel category.
 /// </summary>
 [FactorioRconClass("LuaFuelCategoryPrototype")]
-public abstract class LuaFuelCategoryPrototype: LuaObject
+public abstract class LuaFuelCategoryPrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -52,5 +52,6 @@ public abstract class LuaFuelCategoryPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

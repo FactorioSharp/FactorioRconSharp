@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("LogisticParameters")]
-public class LogisticParameters
+public class LogisticParameters: IFactorioRconModel
 {
   /// <summary>
   /// The item. `nil` clears the filter.
@@ -31,5 +31,6 @@ public class LogisticParameters
   [FactorioRconAttribute("max")]
   public uint Max { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("SmokeSource")]
-public class SmokeSource
+public class SmokeSource: IFactorioRconModel
 {
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
@@ -70,5 +70,6 @@ public class SmokeSource
   [FactorioRconAttribute("vertical_speed_slowdown")]
   public float VerticalSpeedSlowdown { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

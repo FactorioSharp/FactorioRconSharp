@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a trivial smoke.
 /// </summary>
 [FactorioRconClass("LuaTrivialSmokePrototype")]
-public abstract class LuaTrivialSmokePrototype: LuaObject
+public abstract class LuaTrivialSmokePrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -94,5 +94,6 @@ public abstract class LuaTrivialSmokePrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

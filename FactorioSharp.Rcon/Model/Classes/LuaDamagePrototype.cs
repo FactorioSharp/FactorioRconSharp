@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a damage.
 /// </summary>
 [FactorioRconClass("LuaDamagePrototype")]
-public abstract class LuaDamagePrototype: LuaObject
+public abstract class LuaDamagePrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -58,5 +58,6 @@ public abstract class LuaDamagePrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

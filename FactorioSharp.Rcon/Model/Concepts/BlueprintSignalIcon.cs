@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("BlueprintSignalIcon")]
-public class BlueprintSignalIcon
+public class BlueprintSignalIcon: IFactorioRconModel
 {
   /// <summary>
   /// The icon to use. It can be any item icon as well as any virtual signal icon.
@@ -25,5 +25,6 @@ public class BlueprintSignalIcon
   [FactorioRconAttribute("index")]
   public uint Index { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

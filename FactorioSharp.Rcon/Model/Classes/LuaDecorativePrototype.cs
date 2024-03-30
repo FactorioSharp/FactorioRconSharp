@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of an optimized decorative.
 /// </summary>
 [FactorioRconClass("LuaDecorativePrototype")]
-public abstract class LuaDecorativePrototype: LuaObject
+public abstract class LuaDecorativePrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -73,5 +73,6 @@ public abstract class LuaDecorativePrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

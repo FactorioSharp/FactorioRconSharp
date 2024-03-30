@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("PrintSettings")]
-public class PrintSettings
+public class PrintSettings: IFactorioRconModel
 {
   /// <summary>
   /// Color of the message to print. Defaults to white.
@@ -49,5 +49,6 @@ public class PrintSettings
   [FactorioRconAttribute("game_state")]
   public bool GameState { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

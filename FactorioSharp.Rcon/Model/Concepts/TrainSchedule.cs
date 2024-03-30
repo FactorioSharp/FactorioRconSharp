@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TrainSchedule")]
-public class TrainSchedule
+public class TrainSchedule: IFactorioRconModel
 {
   /// <summary>
   /// Index of the currently active record
@@ -22,5 +22,6 @@ public class TrainSchedule
   [FactorioRconAttribute("records")]
   public List<TrainScheduleRecord> Records { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

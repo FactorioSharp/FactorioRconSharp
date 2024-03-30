@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CircuitConnectionDefinition")]
-public class CircuitConnectionDefinition
+public class CircuitConnectionDefinition: IFactorioRconModel
 {
   /// <summary>
   /// Wire color, either <see cref="Defines.WireType.Green" />.
@@ -28,5 +28,6 @@ public class CircuitConnectionDefinition
   [FactorioRconAttribute("target_circuit_id")]
   public CircuitConnectorIdEnum TargetCircuitId { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

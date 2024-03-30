@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TabAndContent")]
-public class TabAndContent
+public class TabAndContent: IFactorioRconModel
 {
   [FactorioRconAttribute("tab")]
   public LuaGuiElement Tab { get; set; }
@@ -19,5 +19,6 @@ public class TabAndContent
   [FactorioRconAttribute("content")]
   public LuaGuiElement Content { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AmmoType")]
-public class AmmoType
+public class AmmoType: IFactorioRconModel
 {
   [FactorioRconAttribute("action")]
   public List<TriggerItem> Action { get; set; }
@@ -46,5 +46,6 @@ public class AmmoType
   [FactorioRconAttribute("consumption_modifier")]
   public double ConsumptionModifier { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

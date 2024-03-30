@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// One line on a transport belt.
 /// </summary>
 [FactorioRconClass("LuaTransportLine")]
-public abstract class LuaTransportLine: LuaObject
+public abstract class LuaTransportLine: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The entity this transport line belongs to.
@@ -127,5 +127,6 @@ public abstract class LuaTransportLine: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

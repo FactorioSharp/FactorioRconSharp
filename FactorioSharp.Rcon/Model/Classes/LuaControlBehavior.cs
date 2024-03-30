@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// The control behavior for an entity. Inserters have logistic network and circuit network behavior logic, lamps have circuit logic and so on. This is an abstract base class that concrete control behaviors inherit.
 /// </summary>
 [FactorioRconClass("LuaControlBehavior")]
-public abstract class LuaControlBehavior: LuaObject
+public abstract class LuaControlBehavior: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The concrete type of this control behavior.
@@ -33,5 +33,6 @@ public abstract class LuaControlBehavior: LuaObject
   [FactorioRconMethod("get_circuit_network")]
   public abstract LuaCircuitNetwork GetCircuitNetwork(WireTypeEnum wire, CircuitConnectorIdEnum? circuitConnector = null);
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

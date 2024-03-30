@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CustomCommandData")]
-public class CustomCommandData
+public class CustomCommandData: IFactorioRconModel
 {
   /// <summary>
   /// The name of the command.
@@ -37,5 +37,6 @@ public class CustomCommandData
   [FactorioRconAttribute("parameter")]
   public string Parameter { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

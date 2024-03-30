@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A storage of item stacks.
 /// </summary>
 [FactorioRconClass("LuaInventory")]
-public abstract class LuaInventory: LuaObject
+public abstract class LuaInventory: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The inventory index this inventory uses, if any.
@@ -185,7 +185,7 @@ public abstract class LuaInventory: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public abstract bool SetFilter(uint index, Union670628618 filter);
+  public abstract bool SetFilter(uint index, Union1664355689 filter);
 
   /// <summary>
   /// Finds the first LuaItemStack in the inventory that matches the given item name.
@@ -253,5 +253,6 @@ public abstract class LuaInventory: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

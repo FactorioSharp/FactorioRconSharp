@@ -32,7 +32,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// ```
 /// </summary>
 [FactorioRconConcept("EnemyExpansionMapSettings")]
-public class EnemyExpansionMapSettings
+public class EnemyExpansionMapSettings: IFactorioRconModel
 {
   /// <summary>
   /// Whether enemy expansion is enabled at all.
@@ -112,5 +112,6 @@ public class EnemyExpansionMapSettings
   [FactorioRconAttribute("max_expansion_cooldown")]
   public uint MaxExpansionCooldown { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

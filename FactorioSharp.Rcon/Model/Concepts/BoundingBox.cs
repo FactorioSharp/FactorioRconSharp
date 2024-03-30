@@ -16,7 +16,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("BoundingBox")]
-public partial class BoundingBox: OneOfBase<Table1259533650, Tuple1398160569>
+public partial class BoundingBox: OneOfBase<Table818761522, Tuple197504396>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

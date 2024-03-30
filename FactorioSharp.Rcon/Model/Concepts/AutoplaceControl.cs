@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceControl")]
-public class AutoplaceControl
+public class AutoplaceControl: IFactorioRconModel
 {
   /// <summary>
   /// For things that are placed as spots such as ores and enemy bases, frequency is generally proportional to number of spots placed per unit area. For continuous features such as forests, frequency is how compressed the probability function is over distance, i.e. the inverse of 'scale' (similar to terrain_segmentation). When the <see cref="LuaAutoplaceControlPrototype" /> is of the category `"terrain"`, then scale is shown in the map generator GUI instead of frequency.
@@ -31,5 +31,6 @@ public class AutoplaceControl
   [FactorioRconAttribute("richness")]
   public MapGenSize Richness { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

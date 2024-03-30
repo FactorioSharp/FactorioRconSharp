@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CliffPlacementSettings")]
-public class CliffPlacementSettings
+public class CliffPlacementSettings: IFactorioRconModel
 {
   /// <summary>
   /// Name of the cliff prototype.
@@ -37,5 +37,6 @@ public class CliffPlacementSettings
   [FactorioRconAttribute("richness")]
   public MapGenSize Richness { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("LogisticsNetworkSupplyPoints")]
-public class LogisticsNetworkSupplyPoints
+public class LogisticsNetworkSupplyPoints: IFactorioRconModel
 {
   [FactorioRconAttribute("storage")]
   public List<LuaLogisticPoint> Storage { get; set; }
@@ -25,5 +25,6 @@ public class LogisticsNetworkSupplyPoints
   [FactorioRconAttribute("active-provider")]
   public List<LuaLogisticPoint> ActiveProvider { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ModChangeData")]
-public class ModChangeData
+public class ModChangeData: IFactorioRconModel
 {
   /// <summary>
   /// Old version of the mod. May be `nil` if the mod wasn't previously present (i.e. it was just added).
@@ -25,5 +25,6 @@ public class ModChangeData
   [FactorioRconAttribute("new_version")]
   public string NewVersion { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

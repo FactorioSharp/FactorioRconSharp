@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// The representation of an entity inside of a blueprint. It has at least these fields, but can contain additional ones depending on the kind of entity.
 /// </summary>
 [FactorioRconConcept("BlueprintEntity")]
-public class BlueprintEntity
+public class BlueprintEntity: IFactorioRconModel
 {
   /// <summary>
   /// The entity's unique identifier in the blueprint.
@@ -70,5 +70,6 @@ public class BlueprintEntity
   [FactorioRconAttribute("schedule")]
   public List<TrainScheduleRecord> Schedule { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

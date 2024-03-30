@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Parameters that affect the look and control of the game. Updating any of the member attributes here will immediately take effect in the game engine.
 /// </summary>
 [FactorioRconConcept("GameViewSettings")]
-public class GameViewSettings
+public class GameViewSettings: IFactorioRconModel
 {
   /// <summary>
   /// Show the controller GUI elements. This includes the toolbar, the selected tool slot, the armour slot, and the gun and ammunition slots.
@@ -106,5 +106,6 @@ public class GameViewSettings
   [FactorioRconAttribute("show_hotkey_suggestions")]
   public bool ShowHotkeySuggestions { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

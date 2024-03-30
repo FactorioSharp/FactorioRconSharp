@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for rail signals.
 /// </summary>
 [FactorioRconClass("LuaRailSignalControlBehavior")]
-public abstract class LuaRailSignalControlBehavior: LuaControlBehavior
+public abstract class LuaRailSignalControlBehavior: LuaControlBehavior, IFactorioRconModel
 {
   [FactorioRconAttribute("red_signal")]
   public SignalID RedSignal { get; set; }
@@ -61,5 +61,6 @@ public abstract class LuaRailSignalControlBehavior: LuaControlBehavior
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

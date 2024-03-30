@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("PlaceAsTileResult")]
-public class PlaceAsTileResult
+public class PlaceAsTileResult: IFactorioRconModel
 {
   /// <summary>
   /// The tile prototype.
@@ -25,5 +25,6 @@ public class PlaceAsTileResult
   [FactorioRconAttribute("condition")]
   public CollisionMask Condition { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

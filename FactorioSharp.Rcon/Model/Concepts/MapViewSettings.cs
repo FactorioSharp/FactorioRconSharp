@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// What is shown in the map view. If a field is not given, that setting will not be changed.
 /// </summary>
 [FactorioRconConcept("MapViewSettings")]
-public class MapViewSettings
+public class MapViewSettings: IFactorioRconModel
 {
   [FactorioRconAttribute("show-logistic-network")]
   public bool ShowLogisticNetwork { get; set; }
@@ -40,5 +40,6 @@ public class MapViewSettings
   [FactorioRconAttribute("show-non-standard-map-info")]
   public bool ShowNonStandardMapInfo { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

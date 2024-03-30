@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("OldTileAndPosition")]
-public class OldTileAndPosition
+public class OldTileAndPosition: IFactorioRconModel
 {
   [FactorioRconAttribute("old_tile")]
   public LuaTilePrototype OldTile { get; set; }
@@ -19,5 +19,6 @@ public class OldTileAndPosition
   [FactorioRconAttribute("position")]
   public TilePosition Position { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

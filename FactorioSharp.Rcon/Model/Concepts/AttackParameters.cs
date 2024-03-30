@@ -11,13 +11,13 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AttackParameters")]
-public class AttackParameters
+public class AttackParameters: IFactorioRconModel
 {
   /// <summary>
   /// The type of AttackParameter.
   /// </summary>
   [FactorioRconAttribute("type")]
-  public Literals241665257 Type { get; set; }
+  public Literals861596547 Type { get; set; }
 
   /// <summary>
   /// Maximum range of attack.
@@ -35,7 +35,7 @@ public class AttackParameters
   /// Defines how the range is determined.
   /// </summary>
   [FactorioRconAttribute("range_mode")]
-  public Literals1689153340 RangeMode { get; set; }
+  public Literals782654280 RangeMode { get; set; }
 
   /// <summary>
   /// When searching for the nearest enemy to attack, `fire_penalty` is added to the enemy's distance if they are on fire.
@@ -106,5 +106,6 @@ public class AttackParameters
   [FactorioRconAttribute("ammo_categories")]
   public List<string> AmmoCategories { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

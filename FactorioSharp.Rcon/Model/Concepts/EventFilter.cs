@@ -14,7 +14,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Used to filter out irrelevant event callbacks in a performant way.
 /// </summary>
 [FactorioRconConcept("EventFilter")]
-public class EventFilter: Alias<List<Union593138019>>
+public class EventFilter: Alias<List<Union1787956259>>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

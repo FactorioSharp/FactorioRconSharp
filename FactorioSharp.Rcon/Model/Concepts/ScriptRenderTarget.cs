@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ScriptRenderTarget")]
-public class ScriptRenderTarget
+public class ScriptRenderTarget: IFactorioRconModel
 {
   [FactorioRconAttribute("entity")]
   public LuaEntity Entity { get; set; }
@@ -22,5 +22,6 @@ public class ScriptRenderTarget
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

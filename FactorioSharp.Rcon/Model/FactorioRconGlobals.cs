@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model;
 /// <summary>
 /// Objects and methods available globally in the Factorio console
 /// </summary>
-public abstract class FactorioRconGlobals
+public abstract class FactorioRconGlobals: IFactorioRconModel
 {
   /// <summary>
   /// Allows registration of custom commands for the in-game console.
@@ -91,5 +91,6 @@ public abstract class FactorioRconGlobals
   [FactorioRconMethod("table_size")]
   public abstract uint TableSize(LuaTable table);
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

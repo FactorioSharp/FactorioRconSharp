@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ModuleEffectValue")]
-public class ModuleEffectValue
+public class ModuleEffectValue: IFactorioRconModel
 {
   /// <summary>
   /// The percentual increase of the attribute. A value of `0.6` means a 60% increase.
@@ -19,5 +19,6 @@ public class ModuleEffectValue
   [FactorioRconAttribute("bonus")]
   public float Bonus { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

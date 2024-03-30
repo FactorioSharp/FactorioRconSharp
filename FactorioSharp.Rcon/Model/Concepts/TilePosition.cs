@@ -16,7 +16,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("TilePosition")]
-public partial class TilePosition: OneOfBase<Table425577092, Tuple51395163>
+public partial class TilePosition: OneOfBase<Table1811133318, Tuple843047349>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

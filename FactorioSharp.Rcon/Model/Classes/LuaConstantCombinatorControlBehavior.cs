@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for constant combinators.
 /// </summary>
 [FactorioRconClass("LuaConstantCombinatorControlBehavior")]
-public abstract class LuaConstantCombinatorControlBehavior: LuaControlBehavior
+public abstract class LuaConstantCombinatorControlBehavior: LuaControlBehavior, IFactorioRconModel
 {
   /// <summary>
   /// This constant combinator's parameters. `nil` if the <see cref="LuaEntityPrototype.ItemSlotCount" /> of the combinator's prototype is `0`.
@@ -69,5 +69,6 @@ public abstract class LuaConstantCombinatorControlBehavior: LuaControlBehavior
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

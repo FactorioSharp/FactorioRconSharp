@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AdvancedMapGenSettings")]
-public class AdvancedMapGenSettings
+public class AdvancedMapGenSettings: IFactorioRconModel
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }
@@ -25,5 +25,6 @@ public class AdvancedMapGenSettings
   [FactorioRconAttribute("difficulty_settings")]
   public DifficultySettings DifficultySettings { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

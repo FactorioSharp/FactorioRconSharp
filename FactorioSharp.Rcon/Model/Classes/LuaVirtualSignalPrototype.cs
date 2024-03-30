@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a virtual signal.
 /// </summary>
 [FactorioRconClass("LuaVirtualSignalPrototype")]
-public abstract class LuaVirtualSignalPrototype: LuaObject
+public abstract class LuaVirtualSignalPrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -61,5 +61,6 @@ public abstract class LuaVirtualSignalPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

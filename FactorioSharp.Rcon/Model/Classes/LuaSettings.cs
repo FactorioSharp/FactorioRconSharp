@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Object containing mod settings of three distinct types: `startup`, `global`, and `player`. An instance of LuaSettings is available through the global object named `settings`.
 /// </summary>
 [FactorioRconClass("LuaSettings")]
-public abstract class LuaSettings: LuaObject
+public abstract class LuaSettings: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The startup mod settings, indexed by prototype name.
@@ -53,5 +53,6 @@ public abstract class LuaSettings: LuaObject
   [FactorioRconMethod("get_player_settings")]
   public abstract LuaCustomTable<string, ModSetting> GetPlayerSettings(PlayerIdentification player);
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

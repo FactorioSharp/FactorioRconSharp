@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for roboports.
 /// </summary>
 [FactorioRconClass("LuaRoboportControlBehavior")]
-public abstract class LuaRoboportControlBehavior: LuaControlBehavior
+public abstract class LuaRoboportControlBehavior: LuaControlBehavior, IFactorioRconModel
 {
   /// <summary>
   /// `true` if the roboport should report the logistics network content to the circuit network.
@@ -58,5 +58,6 @@ public abstract class LuaRoboportControlBehavior: LuaControlBehavior
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

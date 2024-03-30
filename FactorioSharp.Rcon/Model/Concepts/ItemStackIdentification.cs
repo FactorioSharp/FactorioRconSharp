@@ -16,7 +16,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ItemStackIdentification")]
-public partial class ItemStackIdentification: OneOfBase<SimpleItemStack, LuaItemStack>
+public partial class ItemStackIdentification: OneOfBase<SimpleItemStack, LuaItemStack>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

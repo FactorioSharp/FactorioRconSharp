@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("SteeringMapSettings")]
-public class SteeringMapSettings
+public class SteeringMapSettings: IFactorioRconModel
 {
   [FactorioRconAttribute("default")]
   public SteeringMapSetting Default { get; set; }
@@ -19,5 +19,6 @@ public class SteeringMapSettings
   [FactorioRconAttribute("moving")]
   public SteeringMapSetting Moving { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

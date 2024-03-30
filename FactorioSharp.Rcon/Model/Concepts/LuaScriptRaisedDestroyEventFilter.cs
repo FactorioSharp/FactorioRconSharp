@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("LuaScriptRaisedDestroyEventFilter")]
-public class LuaScriptRaisedDestroyEventFilter
+public class LuaScriptRaisedDestroyEventFilter: IFactorioRconModel
 {
   /// <summary>
   /// The condition to filter on. One of `"ghost"`, `"rail"`, `"rail-signal"`, `"rolling-stock"`, `"robot-with-logistics-interface"`, `"vehicle"`, `"turret"`, `"crafting-machine"`, `"wall-connectable"`, `"transport-belt-connectable"`, `"circuit-network-connectable"`, `"type"`, `"name"`, `"ghost_type"`, `"ghost_name"`.
@@ -26,7 +26,7 @@ public class LuaScriptRaisedDestroyEventFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1794577928 Mode { get; set; }
+  public Literals1516458059 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,5 +34,6 @@ public class LuaScriptRaisedDestroyEventFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

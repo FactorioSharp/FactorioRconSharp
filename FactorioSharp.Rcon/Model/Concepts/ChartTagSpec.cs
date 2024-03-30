@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ChartTagSpec")]
-public class ChartTagSpec
+public class ChartTagSpec: IFactorioRconModel
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }
@@ -25,5 +25,6 @@ public class ChartTagSpec
   [FactorioRconAttribute("last_user")]
   public PlayerIdentification LastUser { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

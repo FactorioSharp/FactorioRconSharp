@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerCircuitParameters")]
-public class ProgrammableSpeakerCircuitParameters
+public class ProgrammableSpeakerCircuitParameters: IFactorioRconModel
 {
   [FactorioRconAttribute("signal_value_is_pitch")]
   public bool SignalValueIsPitch { get; set; }
@@ -22,5 +22,6 @@ public class ProgrammableSpeakerCircuitParameters
   [FactorioRconAttribute("note_id")]
   public uint NoteId { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

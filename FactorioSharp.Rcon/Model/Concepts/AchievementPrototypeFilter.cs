@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("AchievementPrototypeFilter")]
-public class AchievementPrototypeFilter
+public class AchievementPrototypeFilter: IFactorioRconModel
 {
   /// <summary>
   /// The condition to filter on. One of `"allowed-without-fight"`, `"type"`.
@@ -26,7 +26,7 @@ public class AchievementPrototypeFilter
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1819385128 Mode { get; set; }
+  public Literals864851044 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,5 +34,6 @@ public class AchievementPrototypeFilter
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

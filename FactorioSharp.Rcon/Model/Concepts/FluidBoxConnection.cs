@@ -14,10 +14,10 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A definition of a fluidbox connection point.
 /// </summary>
 [FactorioRconConcept("FluidBoxConnection")]
-public class FluidBoxConnection
+public class FluidBoxConnection: IFactorioRconModel
 {
   [FactorioRconAttribute("type")]
-  public Literals123238154 Type { get; set; }
+  public Literals303658915 Type { get; set; }
 
   /// <summary>
   /// The 4 cardinal direction connection points for this pipe. This vector is a table with `x` and `y` keys instead of an array.
@@ -31,5 +31,6 @@ public class FluidBoxConnection
   [FactorioRconAttribute("max_underground_distance")]
   public uint MaxUndergroundDistance { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

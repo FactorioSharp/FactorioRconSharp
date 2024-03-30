@@ -16,7 +16,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("PlayerIdentification")]
-public partial class PlayerIdentification: OneOfBase<uint, string, LuaPlayer>
+public partial class PlayerIdentification: OneOfBase<uint, string, LuaPlayer>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

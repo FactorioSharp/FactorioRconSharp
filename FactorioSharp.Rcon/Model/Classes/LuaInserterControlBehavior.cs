@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for inserters.
 /// </summary>
 [FactorioRconClass("LuaInserterControlBehavior")]
-public abstract class LuaInserterControlBehavior: LuaGenericOnOffControlBehavior
+public abstract class LuaInserterControlBehavior: LuaGenericOnOffControlBehavior, IFactorioRconModel
 {
   /// <summary>
   /// `true` if the contents of the inserter hand should be sent to the circuit network
@@ -46,5 +46,6 @@ public abstract class LuaInserterControlBehavior: LuaGenericOnOffControlBehavior
   [FactorioRconAttribute("circuit_stack_control_signal")]
   public SignalID CircuitStackControlSignal { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

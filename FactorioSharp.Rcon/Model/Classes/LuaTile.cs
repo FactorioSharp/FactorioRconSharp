@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A single "square" on the map.
 /// </summary>
 [FactorioRconClass("LuaTile")]
-public abstract class LuaTile: LuaObject
+public abstract class LuaTile: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Prototype name of this tile. E.g. `"sand-3"` or `"grass-2"`.
@@ -105,5 +105,6 @@ public abstract class LuaTile: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

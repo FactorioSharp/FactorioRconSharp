@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A single offer on a market entity.
 /// </summary>
 [FactorioRconConcept("Offer")]
-public class Offer
+public class Offer: IFactorioRconModel
 {
   /// <summary>
   /// List of prices.
@@ -28,5 +28,6 @@ public class Offer
   [FactorioRconAttribute("offer")]
   public TechnologyModifier OfferProp { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

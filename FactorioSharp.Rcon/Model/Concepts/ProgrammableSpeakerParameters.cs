@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerParameters")]
-public class ProgrammableSpeakerParameters
+public class ProgrammableSpeakerParameters: IFactorioRconModel
 {
   [FactorioRconAttribute("playback_volume")]
   public double PlaybackVolume { get; set; }
@@ -22,5 +22,6 @@ public class ProgrammableSpeakerParameters
   [FactorioRconAttribute("allow_polyphony")]
   public bool AllowPolyphony { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

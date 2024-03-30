@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Resistance")]
-public class Resistance
+public class Resistance: IFactorioRconModel
 {
   /// <summary>
   /// Absolute damage decrease
@@ -25,5 +25,6 @@ public class Resistance
   [FactorioRconAttribute("percent")]
   public float Percent { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

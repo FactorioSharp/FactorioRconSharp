@@ -6,5 +6,4 @@
 public interface IFactorioRconModel
 {
     void Load(string value);
-    string Dump();
 }

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ConstantCombinatorParameters")]
-public class ConstantCombinatorParameters
+public class ConstantCombinatorParameters: IFactorioRconModel
 {
   /// <summary>
   /// Signal to emit.
@@ -31,5 +31,6 @@ public class ConstantCombinatorParameters
   [FactorioRconAttribute("index")]
   public uint Index { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

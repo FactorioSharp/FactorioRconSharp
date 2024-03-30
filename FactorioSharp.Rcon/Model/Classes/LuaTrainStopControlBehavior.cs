@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for train stops.
 /// </summary>
 [FactorioRconClass("LuaTrainStopControlBehavior")]
-public abstract class LuaTrainStopControlBehavior: LuaGenericOnOffControlBehavior
+public abstract class LuaTrainStopControlBehavior: LuaGenericOnOffControlBehavior, IFactorioRconModel
 {
   /// <summary>
   /// `true` if the train stop should send the circuit network contents to the train to use.
@@ -70,5 +70,6 @@ public abstract class LuaTrainStopControlBehavior: LuaGenericOnOffControlBehavio
   [FactorioRconAttribute("trains_limit_signal")]
   public SignalID TrainsLimitSignal { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

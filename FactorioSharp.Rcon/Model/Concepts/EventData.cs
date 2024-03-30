@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Information about the event that has been raised. The table can also contain other fields depending on the type of event. See <see cref="Events" /> for more information on these.
 /// </summary>
 [FactorioRconConcept("EventData")]
-public class EventData
+public class EventData: IFactorioRconModel
 {
   /// <summary>
   /// The identifier of the event this handler was registered to.
@@ -34,5 +34,6 @@ public class EventData
   [FactorioRconAttribute("mod_name")]
   public string ModName { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

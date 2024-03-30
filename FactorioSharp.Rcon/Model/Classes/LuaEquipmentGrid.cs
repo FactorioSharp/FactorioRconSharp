@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// An equipment grid is for example the inside of a power armor.
 /// </summary>
 [FactorioRconClass("LuaEquipmentGrid")]
-public abstract class LuaEquipmentGrid: LuaObject
+public abstract class LuaEquipmentGrid: LuaObject, IFactorioRconModel
 {
   [FactorioRconAttribute("prototype")]
   public LuaEquipmentGridPrototype Prototype { get; private set; }
@@ -178,5 +178,6 @@ public abstract class LuaEquipmentGrid: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

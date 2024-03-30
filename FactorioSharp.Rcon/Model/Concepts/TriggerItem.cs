@@ -11,10 +11,10 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TriggerItem")]
-public class TriggerItem
+public class TriggerItem: IFactorioRconModel
 {
   [FactorioRconAttribute("type")]
-  public Literals1254919098 Type { get; set; }
+  public Literals575912094 Type { get; set; }
 
   [FactorioRconAttribute("action_delivery")]
   public List<TriggerDelivery> ActionDelivery { get; set; }
@@ -49,5 +49,6 @@ public class TriggerItem
   [FactorioRconAttribute("probability")]
   public float Probability { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A prototype of a fluidbox owned by some <see cref="LuaEntityPrototype" />.
 /// </summary>
 [FactorioRconClass("LuaFluidBoxPrototype")]
-public abstract class LuaFluidBoxPrototype: LuaObject
+public abstract class LuaFluidBoxPrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The entity that this belongs to.
@@ -38,7 +38,7 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public Literals1597769494 ProductionType { get; private set; }
+  public Literals1983825503 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -100,5 +100,6 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

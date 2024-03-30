@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ArithmeticCombinatorParameters")]
-public class ArithmeticCombinatorParameters
+public class ArithmeticCombinatorParameters: IFactorioRconModel
 {
   /// <summary>
   /// First signal to use in an operation. If not specified, the second argument will be the value of `first_constant`.
@@ -41,7 +41,7 @@ public class ArithmeticCombinatorParameters
   /// When not specified, defaults to `"*"`.
   /// </summary>
   [FactorioRconAttribute("operation")]
-  public Literals1029589659 Operation { get; set; }
+  public Literals739939466 Operation { get; set; }
 
   /// <summary>
   /// Specifies the signal to output.
@@ -49,5 +49,6 @@ public class ArithmeticCombinatorParameters
   [FactorioRconAttribute("output_signal")]
   public SignalID OutputSignal { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("GunShift4Way")]
-public class GunShift4Way
+public class GunShift4Way: IFactorioRconModel
 {
   [FactorioRconAttribute("north")]
   public Vector North { get; set; }
@@ -25,5 +25,6 @@ public class GunShift4Way
   [FactorioRconAttribute("west")]
   public Vector West { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

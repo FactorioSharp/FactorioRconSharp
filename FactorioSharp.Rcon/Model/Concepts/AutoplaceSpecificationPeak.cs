@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSpecificationPeak")]
-public class AutoplaceSpecificationPeak
+public class AutoplaceSpecificationPeak: IFactorioRconModel
 {
   [FactorioRconAttribute("influence")]
   public double Influence { get; set; }
@@ -121,5 +121,6 @@ public class AutoplaceSpecificationPeak
   [FactorioRconAttribute("aux_top_property_limit")]
   public double AuxTopPropertyLimit { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

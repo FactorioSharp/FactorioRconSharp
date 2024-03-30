@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// These values are for the time frame of one second (60 ticks).
 /// </summary>
 [FactorioRconConcept("PollutionMapSettings")]
-public class PollutionMapSettings
+public class PollutionMapSettings: IFactorioRconModel
 {
   /// <summary>
   /// Whether pollution is enabled at all.
@@ -88,5 +88,6 @@ public class PollutionMapSettings
   [FactorioRconAttribute("enemy_attack_pollution_consumption_modifier")]
   public double EnemyAttackPollutionConsumptionModifier { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

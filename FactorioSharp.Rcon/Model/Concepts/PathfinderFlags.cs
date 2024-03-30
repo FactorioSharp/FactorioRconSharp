@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("PathfinderFlags")]
-public class PathfinderFlags
+public class PathfinderFlags: IFactorioRconModel
 {
   /// <summary>
   /// Allows pathing through friendly entities. Defaults to `false`.
@@ -49,5 +49,6 @@ public class PathfinderFlags
   [FactorioRconAttribute("no_break")]
   public bool NoBreak { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

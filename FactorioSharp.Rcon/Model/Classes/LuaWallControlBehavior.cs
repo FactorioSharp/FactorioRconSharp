@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for walls.
 /// </summary>
 [FactorioRconClass("LuaWallControlBehavior")]
-public abstract class LuaWallControlBehavior: LuaControlBehavior
+public abstract class LuaWallControlBehavior: LuaControlBehavior, IFactorioRconModel
 {
   /// <summary>
   /// The circuit condition.
@@ -49,5 +49,6 @@ public abstract class LuaWallControlBehavior: LuaControlBehavior
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

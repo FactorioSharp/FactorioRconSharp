@@ -14,7 +14,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A set of trigger target masks.
 /// </summary>
 [FactorioRconConcept("TriggerTargetMask")]
-public class TriggerTargetMask: Alias<Dictionary<string, bool>>
+public class TriggerTargetMask: Alias<Dictionary<string, bool>>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

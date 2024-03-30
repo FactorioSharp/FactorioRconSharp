@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a mod setting.
 /// </summary>
 [FactorioRconClass("LuaModSettingPrototype")]
-public abstract class LuaModSettingPrototype: LuaObject
+public abstract class LuaModSettingPrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Type of this prototype.
@@ -53,25 +53,25 @@ public abstract class LuaModSettingPrototype: LuaObject
   /// The default value of this setting.
   /// </summary>
   [FactorioRconAttribute("default_value")]
-  public Union654912847 DefaultValue { get; private set; }
+  public Union677166072 DefaultValue { get; private set; }
 
   /// <summary>
   /// The minimum value for this setting. `nil` if this setting type doesn't support a minimum.
   /// </summary>
   [FactorioRconAttribute("minimum_value")]
-  public Union993163820 MinimumValue { get; private set; }
+  public Union843289777 MinimumValue { get; private set; }
 
   /// <summary>
   /// The maximum value for this setting. `nil` if this setting type doesn't support a maximum.
   /// </summary>
   [FactorioRconAttribute("maximum_value")]
-  public Union993163820 MaximumValue { get; private set; }
+  public Union843289777 MaximumValue { get; private set; }
 
   /// <summary>
   /// The allowed values for this setting. `nil` if this setting doesn't use the a fixed set of values.
   /// </summary>
   [FactorioRconAttribute("allowed_values")]
-  public Union1007537998 AllowedValues { get; private set; }
+  public Union1041985530 AllowedValues { get; private set; }
 
   /// <summary>
   /// Whether this string setting allows blank values. `nil` if not a string setting.
@@ -109,5 +109,6 @@ public abstract class LuaModSettingPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Collection of settings for overriding default ai behavior.
 /// </summary>
 [FactorioRconClass("LuaAISettings")]
-public abstract class LuaAISettings: LuaObject
+public abstract class LuaAISettings: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// If enabled, units that repeatedly fail to succeed at commands will be destroyed.
@@ -58,5 +58,6 @@ public abstract class LuaAISettings: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

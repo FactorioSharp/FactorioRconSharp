@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("UnitSpawnDefinition")]
-public class UnitSpawnDefinition
+public class UnitSpawnDefinition: IFactorioRconModel
 {
   /// <summary>
   /// Prototype name of the unit that would be spawned.
@@ -25,5 +25,6 @@ public class UnitSpawnDefinition
   [FactorioRconAttribute("spawn_points")]
   public List<SpawnPointDefinition> SpawnPoints { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

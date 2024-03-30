@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A position defined using the map editor.
 /// </summary>
 [FactorioRconConcept("ScriptPosition")]
-public class ScriptPosition
+public class ScriptPosition: IFactorioRconModel
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }
@@ -28,5 +28,6 @@ public class ScriptPosition
   [FactorioRconAttribute("id")]
   public uint Id { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

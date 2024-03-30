@@ -16,7 +16,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("Vector")]
-public partial class Vector: OneOfBase<Table922825945, Tuple1682941427>
+public partial class Vector: OneOfBase<Table1741279905, Tuple186628443>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

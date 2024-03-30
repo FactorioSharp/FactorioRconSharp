@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A reference to an item and count owned by some external entity.
 /// </summary>
 [FactorioRconClass("LuaItemStack")]
-public abstract class LuaItemStack: LuaObject
+public abstract class LuaItemStack: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Is this valid for reading? Differs from the usual `valid` in that `valid` will be `true` even if the item stack is blank but the entity that holds it is still valid.
@@ -128,7 +128,7 @@ public abstract class LuaItemStack: LuaObject
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public Literals2079912948 PrioritizeInsertionMode { get; set; }
+  public Literals1002481351 PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
@@ -546,7 +546,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_entity_filter")]
-  public abstract bool SetEntityFilter(uint index, Union1142529184 filter);
+  public abstract bool SetEntityFilter(uint index, Union1771017870 filter);
 
   /// <summary>
   /// Gets the tile filter at the given index for this deconstruction item.
@@ -561,7 +561,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_tile_filter")]
-  public abstract bool SetTileFilter(uint index, Union332807741 filter);
+  public abstract bool SetTileFilter(uint index, Union1304234849 filter);
 
   /// <summary>
   /// Clears all settings/filters on this deconstruction item resetting it to default values.
@@ -581,7 +581,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public abstract UpgradeFilter GetMapper(uint index, Literals399495802 type);
+  public abstract UpgradeFilter GetMapper(uint index, Literals723735284 type);
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,7 +590,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public abstract void SetMapper(uint index, Literals1720293259 type, Union1304986653 filter);
+  public abstract void SetMapper(uint index, Literals1313743527 type, Union436273047 filter);
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.
@@ -642,5 +642,6 @@ public abstract class LuaItemStack: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

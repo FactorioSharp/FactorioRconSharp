@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a fluid energy source.
 /// </summary>
 [FactorioRconClass("LuaFluidEnergySourcePrototype")]
-public abstract class LuaFluidEnergySourcePrototype: LuaObject
+public abstract class LuaFluidEnergySourcePrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -76,5 +76,6 @@ public abstract class LuaFluidEnergySourcePrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

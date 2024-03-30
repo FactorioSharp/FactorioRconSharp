@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Technology and recipe difficulty settings. Updating any of the attributes will immediately take effect in the game engine.
 /// </summary>
 [FactorioRconConcept("DifficultySettings")]
-public class DifficultySettings
+public class DifficultySettings: IFactorioRconModel
 {
   [FactorioRconAttribute("recipe_difficulty")]
   public DifficultySettingsRecipeDifficultyEnum RecipeDifficulty { get; set; }
@@ -32,7 +32,8 @@ public class DifficultySettings
   /// Changing this to `"always"` or `"after-victory"` does not automatically unlock the research queue. See <see cref="LuaForce.ResearchQueueEnabled" /> for that.
   /// </summary>
   [FactorioRconAttribute("research_queue_setting")]
-  public Literals1551947668 ResearchQueueSetting { get; set; }
+  public Literals1520514335 ResearchQueueSetting { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

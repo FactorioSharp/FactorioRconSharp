@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for container entities.
 /// </summary>
 [FactorioRconClass("LuaContainerControlBehavior")]
-public abstract class LuaContainerControlBehavior: LuaControlBehavior
+public abstract class LuaContainerControlBehavior: LuaControlBehavior, IFactorioRconModel
 {
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -34,5 +34,6 @@ public abstract class LuaContainerControlBehavior: LuaControlBehavior
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

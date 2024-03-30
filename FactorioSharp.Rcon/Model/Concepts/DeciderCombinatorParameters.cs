@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("DeciderCombinatorParameters")]
-public class DeciderCombinatorParameters
+public class DeciderCombinatorParameters: IFactorioRconModel
 {
   /// <summary>
   /// Defaults to blank.
@@ -49,5 +49,6 @@ public class DeciderCombinatorParameters
   [FactorioRconAttribute("copy_count_from_input")]
   public bool CopyCountFromInput { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

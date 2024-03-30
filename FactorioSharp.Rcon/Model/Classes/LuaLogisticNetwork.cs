@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A single logistic network of a given force on a given surface.
 /// </summary>
 [FactorioRconClass("LuaLogisticNetwork")]
-public abstract class LuaLogisticNetwork: LuaObject
+public abstract class LuaLogisticNetwork: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The force this logistic network belongs to.
@@ -160,7 +160,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public abstract int GetItemCount(string? item = null, Literals1829573598? member = null);
+  public abstract int GetItemCount(string? item = null, Literals242998744? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public abstract uint RemoveItem(ItemStackIdentification item, Literals429895637? members = null);
+  public abstract uint RemoveItem(ItemStackIdentification item, Literals1968421117? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public abstract uint Insert(ItemStackIdentification item, Literals922127314? members = null);
+  public abstract uint Insert(ItemStackIdentification item, Literals1394933955? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Literals1417398104? members = null);
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Literals1676863419? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Literals2085122252? members = null);
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Literals533552678? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.
@@ -238,5 +238,6 @@ public abstract class LuaLogisticNetwork: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("RollingStockDrawData")]
-public class RollingStockDrawData
+public class RollingStockDrawData: IFactorioRconModel
 {
   [FactorioRconAttribute("position")]
   public MapPosition Position { get; set; }
@@ -19,5 +19,6 @@ public class RollingStockDrawData
   [FactorioRconAttribute("orientaton")]
   public RealOrientation Orientaton { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

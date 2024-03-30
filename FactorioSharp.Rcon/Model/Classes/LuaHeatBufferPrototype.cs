@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a heat buffer.
 /// </summary>
 [FactorioRconClass("LuaHeatBufferPrototype")]
-public abstract class LuaHeatBufferPrototype: LuaObject
+public abstract class LuaHeatBufferPrototype: LuaObject, IFactorioRconModel
 {
   [FactorioRconAttribute("max_temperature")]
   public double MaxTemperature { get; private set; }
@@ -58,5 +58,6 @@ public abstract class LuaHeatBufferPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("PathfinderWaypoint")]
-public class PathfinderWaypoint
+public class PathfinderWaypoint: IFactorioRconModel
 {
   /// <summary>
   /// The position of the waypoint on its surface.
@@ -25,5 +25,6 @@ public class PathfinderWaypoint
   [FactorioRconAttribute("needs_destroy_to_reach")]
   public bool NeedsDestroyToReach { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

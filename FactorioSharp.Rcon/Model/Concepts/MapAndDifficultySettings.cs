@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A standard table containing all <see cref="DifficultySettings" /> properties.
 /// </summary>
 [FactorioRconConcept("MapAndDifficultySettings")]
-public class MapAndDifficultySettings
+public class MapAndDifficultySettings: IFactorioRconModel
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }
@@ -43,5 +43,6 @@ public class MapAndDifficultySettings
   [FactorioRconAttribute("difficulty_settings")]
   public MapDifficultySettings DifficultySettings { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

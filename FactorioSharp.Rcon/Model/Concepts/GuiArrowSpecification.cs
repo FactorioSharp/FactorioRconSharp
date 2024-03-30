@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Used for specifying where a GUI arrow should point to.
 /// </summary>
 [FactorioRconConcept("GuiArrowSpecification")]
-public class GuiArrowSpecification
+public class GuiArrowSpecification: IFactorioRconModel
 {
   [FactorioRconAttribute("margin")]
   public uint Margin { get; set; }
@@ -25,5 +25,6 @@ public class GuiArrowSpecification
   [FactorioRconAttribute("type")]
   public GuiArrowType Type { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

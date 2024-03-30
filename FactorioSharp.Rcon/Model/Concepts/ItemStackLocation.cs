@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ItemStackLocation")]
-public class ItemStackLocation
+public class ItemStackLocation: IFactorioRconModel
 {
   [FactorioRconAttribute("inventory")]
   public InventoryEnum Inventory { get; set; }
@@ -19,5 +19,6 @@ public class ItemStackLocation
   [FactorioRconAttribute("slot")]
   public uint Slot { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

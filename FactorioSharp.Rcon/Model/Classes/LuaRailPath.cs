@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A rail path.
 /// </summary>
 [FactorioRconClass("LuaRailPath")]
-public abstract class LuaRailPath: LuaObject
+public abstract class LuaRailPath: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// The total number of rails in this path.
@@ -70,5 +70,6 @@ public abstract class LuaRailPath: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

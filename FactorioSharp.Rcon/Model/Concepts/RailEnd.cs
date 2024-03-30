@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("RailEnd")]
-public class RailEnd
+public class RailEnd: IFactorioRconModel
 {
   [FactorioRconAttribute("rail")]
   public LuaEntity Rail { get; set; }
@@ -19,5 +19,6 @@ public class RailEnd
   [FactorioRconAttribute("direction")]
   public RailDirectionEnum Direction { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("DecorativeResult")]
-public class DecorativeResult
+public class DecorativeResult: IFactorioRconModel
 {
   [FactorioRconAttribute("position")]
   public TilePosition Position { get; set; }
@@ -22,5 +22,6 @@ public class DecorativeResult
   [FactorioRconAttribute("amount")]
   public uint Amount { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

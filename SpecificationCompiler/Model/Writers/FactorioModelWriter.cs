@@ -79,11 +79,11 @@ static partial class FactorioModelWriter
 
         if (string.IsNullOrWhiteSpace(cls.BaseClass))
         {
-            await writer.WriteLineAsync(classDeclaration, indentLevel);
+            await writer.WriteLineAsync($"{classDeclaration}: IFactorioRconModel", indentLevel);
         }
         else
         {
-            await writer.WriteLineAsync($"{classDeclaration}: {cls.BaseClass}", indentLevel);
+            await writer.WriteLineAsync($"{classDeclaration}: {cls.BaseClass}, IFactorioRconModel", indentLevel);
         }
 
         await writer.WriteLineAsync("{", indentLevel);

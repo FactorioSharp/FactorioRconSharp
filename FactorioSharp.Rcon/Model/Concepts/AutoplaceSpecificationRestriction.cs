@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSpecificationRestriction")]
-public class AutoplaceSpecificationRestriction
+public class AutoplaceSpecificationRestriction: IFactorioRconModel
 {
   /// <summary>
   /// Tile prototype name
@@ -25,5 +25,6 @@ public class AutoplaceSpecificationRestriction
   [FactorioRconAttribute("second")]
   public string Second { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

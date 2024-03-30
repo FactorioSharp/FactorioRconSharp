@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AttackParameterFluid")]
-public class AttackParameterFluid
+public class AttackParameterFluid: IFactorioRconModel
 {
   /// <summary>
   /// Name of the <see cref="LuaFluidPrototype" />.
@@ -25,5 +25,6 @@ public class AttackParameterFluid
   [FactorioRconAttribute("damage_modifier")]
   public double DamageModifier { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

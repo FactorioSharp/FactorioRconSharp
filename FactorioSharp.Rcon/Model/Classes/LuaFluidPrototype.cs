@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a fluid.
 /// </summary>
 [FactorioRconClass("LuaFluidPrototype")]
-public abstract class LuaFluidPrototype: LuaObject
+public abstract class LuaFluidPrototype: LuaObject, IFactorioRconModel
 {
   /// <summary>
   /// Name of this prototype.
@@ -112,5 +112,6 @@ public abstract class LuaFluidPrototype: LuaObject
   [FactorioRconMethod("help")]
   public abstract string Help();
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 

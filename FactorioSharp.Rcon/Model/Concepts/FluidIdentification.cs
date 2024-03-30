@@ -16,7 +16,8 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("FluidIdentification")]
-public partial class FluidIdentification: OneOfBase<string, LuaFluidPrototype, Fluid>
+public partial class FluidIdentification: OneOfBase<string, LuaFluidPrototype, Fluid>, IFactorioRconModel
 {
+  public void Load(string str) => throw new NotImplementedException();
 }
 

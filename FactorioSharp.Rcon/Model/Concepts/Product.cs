@@ -11,10 +11,10 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Product")]
-public class Product
+public class Product: IFactorioRconModel
 {
   [FactorioRconAttribute("type")]
-  public Literals1434526848 Type { get; set; }
+  public Literals1886205927 Type { get; set; }
 
   /// <summary>
   /// Prototype name of the result.
@@ -32,13 +32,13 @@ public class Product
   /// Minimal amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_min")]
-  public Union756534826 AmountMin { get; set; }
+  public Union2037116456 AmountMin { get; set; }
 
   /// <summary>
   /// Maximum amount of the item or fluid to give. Has no effect when `amount` is specified.
   /// </summary>
   [FactorioRconAttribute("amount_max")]
-  public Union756534826 AmountMax { get; set; }
+  public Union2037116456 AmountMax { get; set; }
 
   /// <summary>
   /// A value in range [0, 1]. Item or fluid is only given with this probability; otherwise no product is produced.
@@ -50,7 +50,8 @@ public class Product
   /// How much of this product is a catalyst.
   /// </summary>
   [FactorioRconAttribute("catalyst_amount")]
-  public Union756534826 CatalystAmount { get; set; }
+  public Union2037116456 CatalystAmount { get; set; }
 
+  public void Load(string str) => throw new NotImplementedException();
 }
 
