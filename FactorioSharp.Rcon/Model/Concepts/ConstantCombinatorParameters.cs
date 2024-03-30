@@ -1,0 +1,28 @@
+#pragma warning disable CS8618
+// ReSharper disable UnassignedGetOnlyAutoProperty
+
+using FactorioSharp.Rcon.Core.Abstractions;
+
+namespace FactorioSharp.Rcon.Model.Concepts;
+
+[FactorioRconConcept("ConstantCombinatorParameters")]
+public class ConstantCombinatorParameters
+{
+  /// <summary>
+  ///     Signal to emit.
+  /// </summary>
+  [FactorioRconAttribute("signal")]
+    public SignalID Signal { get; set; }
+
+  /// <summary>
+  ///     Value of the signal to emit.
+  /// </summary>
+  [FactorioRconAttribute("count")]
+    public int Count { get; set; }
+
+  /// <summary>
+  ///     Index of the constant combinator's slot to set this signal to.
+  /// </summary>
+  [FactorioRconAttribute("index")]
+    public uint Index { get; set; }
+}

@@ -1,0 +1,22 @@
+#pragma warning disable CS8618
+// ReSharper disable UnassignedGetOnlyAutoProperty
+
+using FactorioSharp.Rcon.Core.Abstractions;
+
+namespace FactorioSharp.Rcon.Model.Concepts;
+
+[FactorioRconConcept("ModuleEffects")]
+public class ModuleEffects
+{
+    [FactorioRconAttribute("consumption")]
+    public ModuleEffectValue Consumption { get; set; }
+
+    [FactorioRconAttribute("speed")]
+    public ModuleEffectValue Speed { get; set; }
+
+    [FactorioRconAttribute("productivity")]
+    public ModuleEffectValue Productivity { get; set; }
+
+    [FactorioRconAttribute("pollution")]
+    public ModuleEffectValue Pollution { get; set; }
+}
