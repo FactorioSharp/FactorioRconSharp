@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a noise layer.
 /// </summary>
 [FactorioRconClass("LuaNoiseLayerPrototype")]
-public abstract class LuaNoiseLayerPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaNoiseLayerPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -52,6 +52,5 @@ public abstract class LuaNoiseLayerPrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

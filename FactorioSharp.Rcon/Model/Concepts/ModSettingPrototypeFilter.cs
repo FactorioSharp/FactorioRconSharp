@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("ModSettingPrototypeFilter")]
-public class ModSettingPrototypeFilter: IFactorioRconModel
+public class ModSettingPrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"type"`, `"mod"`, `"setting-type"`.
@@ -26,7 +26,7 @@ public class ModSettingPrototypeFilter: IFactorioRconModel
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1231410872 Mode { get; set; }
+  public Literals661262659 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,6 +34,5 @@ public class ModSettingPrototypeFilter: IFactorioRconModel
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

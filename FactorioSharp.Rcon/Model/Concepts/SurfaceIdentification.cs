@@ -16,8 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("SurfaceIdentification")]
-public partial class SurfaceIdentification: OneOfBase<uint, string, LuaSurface>, IFactorioRconModel
+public partial class SurfaceIdentification: OneOfBase<uint, string, LuaSurface>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

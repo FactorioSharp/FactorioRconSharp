@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("FluidPrototypeFilter")]
-public class FluidPrototypeFilter: IFactorioRconModel
+public class FluidPrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"hidden"`, `"name"`, `"subgroup"`, `"default-temperature"`, `"max-temperature"`, `"heat-capacity"`, `"fuel-value"`, `"emissions-multiplier"`, `"gas-temperature"`.
@@ -26,7 +26,7 @@ public class FluidPrototypeFilter: IFactorioRconModel
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals1704806655 Mode { get; set; }
+  public Literals510247540 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,6 +34,5 @@ public class FluidPrototypeFilter: IFactorioRconModel
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -16,8 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ChunkPosition")]
-public partial class ChunkPosition: OneOfBase<Table1811133318, Tuple1825429612>, IFactorioRconModel
+public partial class ChunkPosition: OneOfBase<Table1108165145, Tuple1990400661>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

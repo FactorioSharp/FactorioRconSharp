@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A circuit network associated with a given entity, connector, and wire type.
 /// </summary>
 [FactorioRconClass("LuaCircuitNetwork")]
-public abstract class LuaCircuitNetwork: LuaObject, IFactorioRconModel
+public abstract class LuaCircuitNetwork: LuaObject
 {
   /// <summary>
   /// The entity this circuit network reference is associated with.
@@ -74,6 +74,5 @@ public abstract class LuaCircuitNetwork: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

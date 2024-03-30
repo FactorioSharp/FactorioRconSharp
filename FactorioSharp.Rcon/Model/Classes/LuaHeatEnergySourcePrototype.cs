@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a heat energy source.
 /// </summary>
 [FactorioRconClass("LuaHeatEnergySourcePrototype")]
-public abstract class LuaHeatEnergySourcePrototype: LuaObject, IFactorioRconModel
+public abstract class LuaHeatEnergySourcePrototype: LuaObject
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -73,6 +73,5 @@ public abstract class LuaHeatEnergySourcePrototype: LuaObject, IFactorioRconMode
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

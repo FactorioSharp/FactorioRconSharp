@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Allows for the registration of custom console commands through the global object named `commands`. Similarly to <see cref="LuaBootstrap.OnEvent" />, these don't persist through a save-and-load cycle.
 /// </summary>
 [FactorioRconClass("LuaCommandProcessor")]
-public abstract class LuaCommandProcessor: LuaObject, IFactorioRconModel
+public abstract class LuaCommandProcessor: LuaObject
 {
   /// <summary>
   /// Lists the custom commands registered by scripts through `LuaCommandProcessor`.
@@ -53,6 +53,5 @@ public abstract class LuaCommandProcessor: LuaObject, IFactorioRconModel
   [FactorioRconMethod("remove_command")]
   public abstract bool RemoveCommand(string name);
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

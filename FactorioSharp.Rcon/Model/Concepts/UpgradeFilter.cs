@@ -11,10 +11,10 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("UpgradeFilter")]
-public class UpgradeFilter: IFactorioRconModel
+public class UpgradeFilter
 {
   [FactorioRconAttribute("type")]
-  public Literals832130999 Type { get; set; }
+  public Literals847830485 Type { get; set; }
 
   /// <summary>
   /// Name of the item, or entity.
@@ -22,6 +22,5 @@ public class UpgradeFilter: IFactorioRconModel
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

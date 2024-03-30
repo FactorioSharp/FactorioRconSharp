@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ItemStackDefinition")]
-public class ItemStackDefinition: IFactorioRconModel
+public class ItemStackDefinition
 {
   /// <summary>
   /// Prototype name of the item the stack holds.
@@ -49,6 +49,5 @@ public class ItemStackDefinition: IFactorioRconModel
   [FactorioRconAttribute("tags")]
   public List<string> Tags { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

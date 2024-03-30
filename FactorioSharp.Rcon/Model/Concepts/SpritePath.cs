@@ -30,8 +30,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// - `"utility"` - sprite defined in the utility-sprites object, these are the pictures used by the game internally for the UI.
 /// </summary>
 [FactorioRconConcept("SpritePath")]
-public class SpritePath: Alias<string>, IFactorioRconModel
+public class SpritePath: Alias<string>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

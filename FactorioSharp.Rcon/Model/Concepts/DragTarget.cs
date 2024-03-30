@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("DragTarget")]
-public class DragTarget: IFactorioRconModel
+public class DragTarget
 {
   [FactorioRconAttribute("target_entity")]
   public LuaEntity TargetEntity { get; set; }
@@ -28,6 +28,5 @@ public class DragTarget: IFactorioRconModel
   [FactorioRconAttribute("target_wire_id")]
   public WireConnectionIdEnum TargetWireId { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

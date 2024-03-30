@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a burner energy source.
 /// </summary>
 [FactorioRconClass("LuaBurnerPrototype")]
-public abstract class LuaBurnerPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaBurnerPrototype: LuaObject
 {
   /// <summary>
   /// The emissions of this energy source in `pollution/Joule`. Multiplying it by energy consumption in `Watt` gives `pollution/second`.
@@ -47,7 +47,7 @@ public abstract class LuaBurnerPrototype: LuaObject, IFactorioRconModel
   /// The light flicker definition for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("light_flicker")]
-  public Table1396035478 LightFlicker { get; private set; }
+  public Table1892156626 LightFlicker { get; private set; }
 
   [FactorioRconAttribute("fuel_categories")]
   public Dictionary<string, bool> FuelCategories { get; private set; }
@@ -70,6 +70,5 @@ public abstract class LuaBurnerPrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

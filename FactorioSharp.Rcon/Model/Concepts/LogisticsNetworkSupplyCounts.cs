@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("LogisticsNetworkSupplyCounts")]
-public class LogisticsNetworkSupplyCounts: IFactorioRconModel
+public class LogisticsNetworkSupplyCounts
 {
   /// <summary>
   /// Number of available items in the storage members.
@@ -37,6 +37,5 @@ public class LogisticsNetworkSupplyCounts: IFactorioRconModel
   [FactorioRconAttribute("active-provider")]
   public uint ActiveProvider { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

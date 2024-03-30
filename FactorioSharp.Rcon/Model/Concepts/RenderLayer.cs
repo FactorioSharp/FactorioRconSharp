@@ -16,38 +16,32 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("RenderLayer")]
-public partial class RenderLayer: OneOfBase<Union1570381151_0, Union1570381151_1, Union1570381151_2, Union1570381151_3, Union1570381151_4>, IFactorioRconModel
+public partial class RenderLayer: OneOfBase<Union638830327_0, Union638830327_1, Union638830327_2, Union638830327_3, Union638830327_4>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1570381151_0: OneOfBase<string, Literal1190531420, Literal992523301, Literal545296100, Literal1738126300, Literal1408652924, Literal544816229, Literal1308947436, Literal2020293635>, IFactorioRconModel
+public partial class Union638830327_0: OneOfBase<string, Literal2053549129, Literal1540034001, Literal1102248446, Literal2010215296, Literal1458777078, Literal673746839, Literal1296591758, Literal1842345359>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1570381151_1: OneOfBase<Literal1314456949, Literal474236957, Literal1774563933, Literal1283434295, Literal1425772202, Literal785189810, Literal755660705, Literal1236359711, Literal186931502>, IFactorioRconModel
+public partial class Union638830327_1: OneOfBase<Literal13925337, Literal281865761, Literal680750582, Literal756357730, Literal397062830, Literal341467938, Literal288994453, Literal1776671115, Literal160612193>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1570381151_2: OneOfBase<Literal153270625, Literal144926022, Literal1503446078, Literal1355326679, Literal291935877, Literal510565501, Literal733162864, Literal1003641519, Literal1278539468>, IFactorioRconModel
+public partial class Union638830327_2: OneOfBase<Literal401102142, Literal1605735839, Literal813100313, Literal775887229, Literal1068463236, Literal65244356, Literal1054217749, Literal505982321, Literal1519768649>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1570381151_3: OneOfBase<Literal1807888760, Literal978866263, Literal500993740, Literal1278485532, Literal1225685126, Literal1396054277, Literal1997006081, Literal217973907, Literal185020913>, IFactorioRconModel
+public partial class Union638830327_3: OneOfBase<Literal1509186546, Literal1326619191, Literal835849398, Literal1614252387, Literal537192782, Literal1263655565, Literal1605896322, Literal411152254, Literal2020792767>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1570381151_4: OneOfBase<Literal2114175475, Literal1476488925, Literal1910724811, Literal1304965129, Literal247892230, Literal78331916, Literal916320522, Literal1972854258>, IFactorioRconModel
+public partial class Union638830327_4: OneOfBase<Literal1649137212, Literal1721949904, Literal513519426, Literal1696402987, Literal936552253, Literal816005672, Literal171552650, Literal1144723239>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

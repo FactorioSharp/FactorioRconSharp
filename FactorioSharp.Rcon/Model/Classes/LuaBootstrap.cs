@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Entry point for registering event handlers. It is accessible through the global object named `script`.
 /// </summary>
 [FactorioRconClass("LuaBootstrap")]
-public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
+public abstract class LuaBootstrap: LuaObject
 {
   /// <summary>
   /// The name of the mod from the environment this is used in.
@@ -26,7 +26,7 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   /// Information about the currently running scenario/campaign/tutorial.
   /// </summary>
   [FactorioRconAttribute("level")]
-  public Table898595543 Level { get; private set; }
+  public Table985085893 Level { get; private set; }
 
   /// <summary>
   /// A dictionary listing the names of all currently active mods and mapping them to their version.
@@ -48,7 +48,7 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_init")]
-  public abstract void OnInit(Union884411116 handler);
+  public abstract void OnInit(Union1312043940 handler);
 
   /// <summary>
   /// Register a function to be run on save load. This is only called for mods that have been part of the save previously, or for players connecting to a running multiplayer session.
@@ -67,7 +67,7 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_load")]
-  public abstract void OnLoad(Union884411116 handler);
+  public abstract void OnLoad(Union1312043940 handler);
 
   /// <summary>
   /// Register a function to be run when mod configuration changes. This is called when the game version or any mod version changed, when any mod was added or removed, when a startup setting has changed, when any prototypes have been added or removed, or when a migration was applied. It allows the mod to make any changes it deems appropriate to both the data structures in its <see cref="LuaGameScript" />.
@@ -77,7 +77,7 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   /// </remarks>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_configuration_changed")]
-  public abstract void OnConfigurationChanged(Union481957800 handler);
+  public abstract void OnConfigurationChanged(Union1474789645 handler);
 
   /// <summary>
   /// Register a handler to run on the specified event(s). Each mod can only register once for every event, as any additional registration will overwrite the previous one. This holds true even if different filters are used for subsequent registrations.
@@ -86,7 +86,7 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   /// <param name="handler">Lua name: handler</param>
   /// <param name="filters">Lua name: filters</param>
   [FactorioRconMethod("on_event")]
-  public abstract void OnEvent(Union734484781 @event, Union130113456 handler, EventFilter? filters = null);
+  public abstract void OnEvent(Union1504232975 @event, Union2086492076 handler, EventFilter? filters = null);
 
   /// <summary>
   /// Register a handler to run every nth-tick(s). When the game is on tick 0 it will trigger all registered handlers.
@@ -94,7 +94,7 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   /// <param name="tick">Lua name: tick</param>
   /// <param name="handler">Lua name: handler</param>
   [FactorioRconMethod("on_nth_tick")]
-  public abstract void OnNthTick(Union1519299895 tick, Union330081173 handler);
+  public abstract void OnNthTick(Union1006495961 tick, Union2117456214 handler);
 
   /// <summary>
   /// Registers an entity so that after it's destroyed, <see cref="OnEntityDestroyed" /> will receive the event when it is destroyed. Registering the same entity multiple times will still only fire the destruction event once, and will return the same registration number.
@@ -231,6 +231,5 @@ public abstract class LuaBootstrap: LuaObject, IFactorioRconModel
   [FactorioRconMethod("raise_script_set_tiles")]
   public abstract void RaiseScriptSetTiles(uint surfaceIndex, List<Tile> tiles);
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

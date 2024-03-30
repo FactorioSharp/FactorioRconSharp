@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("NthTickEventData")]
-public class NthTickEventData: IFactorioRconModel
+public class NthTickEventData
 {
   /// <summary>
   /// The tick during which the event happened.
@@ -25,6 +25,5 @@ public class NthTickEventData: IFactorioRconModel
   [FactorioRconAttribute("nth_tick")]
   public uint NthTick { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a modular equipment.
 /// </summary>
 [FactorioRconClass("LuaEquipmentPrototype")]
-public abstract class LuaEquipmentPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaEquipmentPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -44,7 +44,7 @@ public abstract class LuaEquipmentPrototype: LuaObject, IFactorioRconModel
   /// Shape of this equipment prototype.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table242878452 Shape { get; private set; }
+  public Table1724313209 Shape { get; private set; }
 
   /// <summary>
   /// The result item when taking this equipment out of an equipment grid, if any.
@@ -74,7 +74,7 @@ public abstract class LuaEquipmentPrototype: LuaObject, IFactorioRconModel
   /// The logistic parameters for this roboport equipment.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table1283103770 LogisticParameters { get; private set; }
+  public Table1146391364 LogisticParameters { get; private set; }
 
   [FactorioRconAttribute("energy_consumption")]
   public double EnergyConsumption { get; private set; }
@@ -142,6 +142,5 @@ public abstract class LuaEquipmentPrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

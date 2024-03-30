@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a tile.
 /// </summary>
 [FactorioRconClass("LuaTilePrototype")]
-public abstract class LuaTilePrototype: LuaObject, IFactorioRconModel
+public abstract class LuaTilePrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -80,7 +80,7 @@ public abstract class LuaTilePrototype: LuaObject, IFactorioRconModel
   public bool NeedsCorrection { get; private set; }
 
   [FactorioRconAttribute("mineable_properties")]
-  public Table2068769313 MineableProperties { get; private set; }
+  public Table1830411523 MineableProperties { get; private set; }
 
   /// <summary>
   /// The next direction of this tile, if any. Used when a tile has multiple directions (such as hazard concrete)
@@ -130,6 +130,5 @@ public abstract class LuaTilePrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

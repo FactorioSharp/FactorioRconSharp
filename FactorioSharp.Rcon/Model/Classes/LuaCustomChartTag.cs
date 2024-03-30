@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A custom tag that shows on the map view.
 /// </summary>
 [FactorioRconClass("LuaCustomChartTag")]
-public abstract class LuaCustomChartTag: LuaObject, IFactorioRconModel
+public abstract class LuaCustomChartTag: LuaObject
 {
   /// <summary>
   /// This tag's icon, if it has one. Writing `nil` removes it.
@@ -79,6 +79,5 @@ public abstract class LuaCustomChartTag: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

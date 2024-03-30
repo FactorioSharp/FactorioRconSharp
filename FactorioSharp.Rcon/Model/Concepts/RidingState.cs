@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("RidingState")]
-public class RidingState: IFactorioRconModel
+public class RidingState
 {
   [FactorioRconAttribute("acceleration")]
   public RidingAccelerationEnum Acceleration { get; set; }
@@ -19,6 +19,5 @@ public class RidingState: IFactorioRconModel
   [FactorioRconAttribute("direction")]
   public RidingDirectionEnum Direction { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

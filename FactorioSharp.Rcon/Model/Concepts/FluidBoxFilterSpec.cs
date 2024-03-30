@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("FluidBoxFilterSpec")]
-public class FluidBoxFilterSpec: IFactorioRconModel
+public class FluidBoxFilterSpec
 {
   /// <summary>
   /// Fluid prototype name of the filtered fluid.
@@ -37,6 +37,5 @@ public class FluidBoxFilterSpec: IFactorioRconModel
   [FactorioRconAttribute("force")]
   public bool Force { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

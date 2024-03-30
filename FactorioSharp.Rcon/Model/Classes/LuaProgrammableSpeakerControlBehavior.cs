@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for programmable speakers.
 /// </summary>
 [FactorioRconClass("LuaProgrammableSpeakerControlBehavior")]
-public abstract class LuaProgrammableSpeakerControlBehavior: LuaControlBehavior, IFactorioRconModel
+public abstract class LuaProgrammableSpeakerControlBehavior: LuaControlBehavior
 {
   [FactorioRconAttribute("circuit_parameters")]
   public ProgrammableSpeakerCircuitParameters CircuitParameters { get; set; }
@@ -40,6 +40,5 @@ public abstract class LuaProgrammableSpeakerControlBehavior: LuaControlBehavior,
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

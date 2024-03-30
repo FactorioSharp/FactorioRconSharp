@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TrainPathAnyGoalResult")]
-public class TrainPathAnyGoalResult: IFactorioRconModel
+public class TrainPathAnyGoalResult
 {
   /// <summary>
   /// True if any goal was accessible.
@@ -37,6 +37,5 @@ public class TrainPathAnyGoalResult: IFactorioRconModel
   [FactorioRconAttribute("steps_count")]
   public uint StepsCount { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

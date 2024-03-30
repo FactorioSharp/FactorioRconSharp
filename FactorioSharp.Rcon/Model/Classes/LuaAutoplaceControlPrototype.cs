@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of an autoplace control.
 /// </summary>
 [FactorioRconClass("LuaAutoplaceControlPrototype")]
-public abstract class LuaAutoplaceControlPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaAutoplaceControlPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -67,6 +67,5 @@ public abstract class LuaAutoplaceControlPrototype: LuaObject, IFactorioRconMode
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

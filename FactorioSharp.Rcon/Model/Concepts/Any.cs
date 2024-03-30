@@ -16,8 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("Any")]
-public partial class Any: OneOfBase<string, bool, double, LuaTable, LuaObject>, IFactorioRconModel
+public partial class Any: OneOfBase<string, bool, double, LuaTable, LuaObject>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

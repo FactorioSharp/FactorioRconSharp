@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for arithmetic combinators.
 /// </summary>
 [FactorioRconClass("LuaArithmeticCombinatorControlBehavior")]
-public abstract class LuaArithmeticCombinatorControlBehavior: LuaCombinatorControlBehavior, IFactorioRconModel
+public abstract class LuaArithmeticCombinatorControlBehavior: LuaCombinatorControlBehavior
 {
   /// <summary>
   /// This arithmetic combinator's parameters.
@@ -40,6 +40,5 @@ public abstract class LuaArithmeticCombinatorControlBehavior: LuaCombinatorContr
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("FluidBoxFilter")]
-public class FluidBoxFilter: IFactorioRconModel
+public class FluidBoxFilter
 {
   /// <summary>
   /// Fluid prototype name of the filtered fluid.
@@ -31,6 +31,5 @@ public class FluidBoxFilter: IFactorioRconModel
   [FactorioRconAttribute("maximum_temperature")]
   public double MaximumTemperature { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("PathFinderMapSettings")]
-public class PathFinderMapSettings: IFactorioRconModel
+public class PathFinderMapSettings
 {
   /// <summary>
   /// The pathfinder performs a step of the backward search every `fwd2bwd_ratio`'th step. The minimum allowed value is `2`, which means symmetric search. The default value is `5`.
@@ -211,6 +211,5 @@ public class PathFinderMapSettings: IFactorioRconModel
   [FactorioRconAttribute("negative_path_cache_delay_interval")]
   public uint NegativePathCacheDelayInterval { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

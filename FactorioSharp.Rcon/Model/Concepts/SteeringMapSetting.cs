@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("SteeringMapSetting")]
-public class SteeringMapSetting: IFactorioRconModel
+public class SteeringMapSetting
 {
   /// <summary>
   /// Does not include the radius of the unit.
@@ -31,6 +31,5 @@ public class SteeringMapSetting: IFactorioRconModel
   [FactorioRconAttribute("force_unit_fuzzy_goto_behavior")]
   public bool ForceUnitFuzzyGotoBehavior { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

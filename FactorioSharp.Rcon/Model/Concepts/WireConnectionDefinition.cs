@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("WireConnectionDefinition")]
-public class WireConnectionDefinition: IFactorioRconModel
+public class WireConnectionDefinition
 {
   /// <summary>
   /// The type of wire used.
@@ -49,6 +49,5 @@ public class WireConnectionDefinition: IFactorioRconModel
   [FactorioRconAttribute("target_wire_id")]
   public WireConnectionIdEnum TargetWireId { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

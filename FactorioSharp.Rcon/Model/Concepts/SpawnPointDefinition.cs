@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("SpawnPointDefinition")]
-public class SpawnPointDefinition: IFactorioRconModel
+public class SpawnPointDefinition
 {
   /// <summary>
   /// Evolution factor for which this weight applies.
@@ -25,6 +25,5 @@ public class SpawnPointDefinition: IFactorioRconModel
   [FactorioRconAttribute("weight")]
   public double Weight { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

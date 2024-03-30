@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("LogisticFilter")]
-public class LogisticFilter: IFactorioRconModel
+public class LogisticFilter
 {
   /// <summary>
   /// The index this filter applies to.
@@ -31,6 +31,5 @@ public class LogisticFilter: IFactorioRconModel
   [FactorioRconAttribute("count")]
   public uint Count { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

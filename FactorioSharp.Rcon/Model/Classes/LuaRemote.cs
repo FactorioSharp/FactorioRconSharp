@@ -25,7 +25,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// ```
 /// </examples>
 [FactorioRconClass("LuaRemote")]
-public abstract class LuaRemote: LuaObject, IFactorioRconModel
+public abstract class LuaRemote: LuaObject
 {
   /// <summary>
   /// This object's name.
@@ -37,7 +37,7 @@ public abstract class LuaRemote: LuaObject, IFactorioRconModel
   /// List of all registered interfaces. For each interface name, `remote.interfaces[name]` is a dictionary mapping the interface's registered functions to `true`.
   /// </summary>
   [FactorioRconAttribute("interfaces")]
-  public Dictionary<string, Dictionary<string, Literal1818498125>> Interfaces { get; private set; }
+  public Dictionary<string, Dictionary<string, Literal265409079>> Interfaces { get; private set; }
 
   /// <summary>
   /// Add a remote interface.
@@ -62,6 +62,5 @@ public abstract class LuaRemote: LuaObject, IFactorioRconModel
   [FactorioRconMethod("call")]
   public abstract Any? Call(string @interface, string function);
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

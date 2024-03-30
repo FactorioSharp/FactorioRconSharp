@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("WaitCondition")]
-public class WaitCondition: IFactorioRconModel
+public class WaitCondition
 {
   [FactorioRconAttribute("type")]
   public WaitConditionType Type { get; set; }
@@ -20,7 +20,7 @@ public class WaitCondition: IFactorioRconModel
   /// Specifies how this condition is to be compared with the preceding conditions in the corresponding `wait_conditions` array.
   /// </summary>
   [FactorioRconAttribute("compare_type")]
-  public Literals1593932306 CompareType { get; set; }
+  public Literals977574035 CompareType { get; set; }
 
   /// <summary>
   /// Number of ticks to wait when `type` is `"time"`, or number of ticks of inactivity when `type` is `"inactivity"`.
@@ -34,6 +34,5 @@ public class WaitCondition: IFactorioRconModel
   [FactorioRconAttribute("condition")]
   public CircuitCondition Condition { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

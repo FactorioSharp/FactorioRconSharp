@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Depending on the value of `filter`, the table may take additional fields. `filter` may be one of the following:
 /// </summary>
 [FactorioRconConcept("ItemPrototypeFilter")]
-public class ItemPrototypeFilter: IFactorioRconModel
+public class ItemPrototypeFilter
 {
   /// <summary>
   /// The condition to filter on. One of `"tool"`, `"mergeable"`, `"item-with-inventory"`, `"selection-tool"`, `"item-with-label"`, `"has-rocket-launch-products"`, `"fuel"`, `"place-result"`, `"burnt-result"`, `"place-as-tile"`, `"placed-as-equipment-result"`, `"name"`, `"type"`, `"flag"`, `"subgroup"`, `"fuel-category"`, `"stack-size"`, `"default-request-amount"`, `"wire-count"`, `"fuel-value"`, `"fuel-acceleration-multiplier"`, `"fuel-top-speed-multiplier"`, `"fuel-emissions-multiplier"`.
@@ -26,7 +26,7 @@ public class ItemPrototypeFilter: IFactorioRconModel
   /// How to combine this with the previous filter. Defaults to `"or"`. When evaluating the filters, `"and"` has higher precedence than `"or"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals121389844 Mode { get; set; }
+  public Literals1038225736 Mode { get; set; }
 
   /// <summary>
   /// Inverts the condition. Default is `false`.
@@ -34,6 +34,5 @@ public class ItemPrototypeFilter: IFactorioRconModel
   [FactorioRconAttribute("invert")]
   public bool Invert { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

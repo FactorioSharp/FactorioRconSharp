@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// This is an abstract base class containing the common functionality between <see cref="LuaEntity" />, it must refer to a character entity.
 /// </summary>
 [FactorioRconClass("LuaControl")]
-public abstract class LuaControl: LuaObject, IFactorioRconModel
+public abstract class LuaControl: LuaObject
 {
   /// <summary>
   /// The surface this entity is currently on.
@@ -64,7 +64,7 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   /// This is the GUI that will asked to close (by firing the <see cref="OnGuiClosed)Event" /> when the `Esc` or `E` keys are pressed. If this attribute is not `nil`, and a new GUI is written to it, the existing one will be asked to close.
   /// </summary>
   [FactorioRconAttribute("opened")]
-  public Union1433911861 Opened { get; set; }
+  public Union1297945055 Opened { get; set; }
 
   /// <summary>
   /// Size of the crafting queue.
@@ -82,7 +82,7 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table788968877 WalkingState { get; set; }
+  public Table787340888 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table378509656 MiningState { get; set; }
+  public Table1564578664 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table600168897 ShootingState { get; set; }
+  public Table468158818 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table1207798295 RepairState { get; set; }
+  public Table2133394223 RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -397,7 +397,7 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_craftable_count")]
-  public abstract uint GetCraftableCount(Union1907354433 recipe);
+  public abstract uint GetCraftableCount(Union54721211 recipe);
 
   /// <summary>
   /// Begins crafting the given count of the given recipe.
@@ -406,7 +406,7 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="silent">Lua name: silent</param>
   [FactorioRconMethod("begin_crafting")]
-  public abstract uint BeginCrafting(uint count, Union1907354433 recipe, bool? silent = null);
+  public abstract uint BeginCrafting(uint count, Union54721211 recipe, bool? silent = null);
 
   /// <summary>
   /// Cancels crafting the given count of the given crafting queue index.
@@ -511,6 +511,5 @@ public abstract class LuaControl: LuaObject, IFactorioRconModel
   [FactorioRconMethod("is_cursor_empty")]
   public abstract bool IsCursorEmpty();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

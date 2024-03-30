@@ -16,8 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// For example then, a value of `0.625` would indicate "south-west", and a value of `0.875` would indicate "north-west".
 /// </summary>
 [FactorioRconConcept("RealOrientation")]
-public class RealOrientation: Alias<float>, IFactorioRconModel
+public class RealOrientation: Alias<float>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

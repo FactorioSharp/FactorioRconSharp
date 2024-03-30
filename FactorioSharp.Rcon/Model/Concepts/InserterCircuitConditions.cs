@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("InserterCircuitConditions")]
-public class InserterCircuitConditions: IFactorioRconModel
+public class InserterCircuitConditions
 {
   [FactorioRconAttribute("circuit")]
   public CircuitCondition Circuit { get; set; }
@@ -19,6 +19,5 @@ public class InserterCircuitConditions: IFactorioRconModel
   [FactorioRconAttribute("logistics")]
   public CircuitCondition Logistics { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

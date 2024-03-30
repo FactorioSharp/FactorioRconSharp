@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TrainScheduleRecord")]
-public class TrainScheduleRecord: IFactorioRconModel
+public class TrainScheduleRecord
 {
   /// <summary>
   /// Name of the station.
@@ -40,6 +40,5 @@ public class TrainScheduleRecord: IFactorioRconModel
   [FactorioRconAttribute("temporary")]
   public bool Temporary { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

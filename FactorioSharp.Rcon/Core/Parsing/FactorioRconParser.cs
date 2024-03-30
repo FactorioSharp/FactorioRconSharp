@@ -25,11 +25,6 @@ static class FactorioRconParser
             return ParseTableType(stringValue, type);
         }
 
-        if (type.IsFactorioRconModel())
-        {
-            return ParseFactorioRconModel(stringValue, type);
-        }
-
         if (type.IsArray)
         {
             return ParseArray(stringValue, type);
@@ -125,20 +120,6 @@ static class FactorioRconParser
     }
 
     static object? ParseTableType(string stringValue, Type type) => JsonSerializer.Deserialize(stringValue, type, JsonSerializerOptions);
-
-    static object ParseFactorioRconModel(string stringValue, Type type)
-    {
-
-        object? result = Activator.CreateInstance(type);
-        if (result == null)
-        {
-            throw new InvalidOperationException($"Could not activate instance of type {type}");
-        }
-
-        ((IFactorioRconModel)result).Load(stringValue);
-
-        return result;
-    }
 
     static object ParseArray(string stringValue, Type type)
     {

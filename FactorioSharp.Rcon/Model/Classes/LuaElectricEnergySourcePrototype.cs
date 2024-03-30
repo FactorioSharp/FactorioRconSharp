@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of an electric energy source.
 /// </summary>
 [FactorioRconClass("LuaElectricEnergySourcePrototype")]
-public abstract class LuaElectricEnergySourcePrototype: LuaObject, IFactorioRconModel
+public abstract class LuaElectricEnergySourcePrototype: LuaObject
 {
   [FactorioRconAttribute("buffer_capacity")]
   public double BufferCapacity { get; private set; }
@@ -61,6 +61,5 @@ public abstract class LuaElectricEnergySourcePrototype: LuaObject, IFactorioRcon
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

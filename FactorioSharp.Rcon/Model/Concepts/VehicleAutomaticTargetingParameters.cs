@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("VehicleAutomaticTargetingParameters")]
-public class VehicleAutomaticTargetingParameters: IFactorioRconModel
+public class VehicleAutomaticTargetingParameters
 {
   [FactorioRconAttribute("auto_target_without_gunner")]
   public bool AutoTargetWithoutGunner { get; set; }
@@ -19,6 +19,5 @@ public class VehicleAutomaticTargetingParameters: IFactorioRconModel
   [FactorioRconAttribute("auto_target_with_gunner")]
   public bool AutoTargetWithGunner { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

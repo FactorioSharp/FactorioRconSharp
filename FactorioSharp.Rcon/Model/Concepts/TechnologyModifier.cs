@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// The effect that is applied when a technology is researched. It is a table that contains at least the field `type`.
 /// </summary>
 [FactorioRconConcept("TechnologyModifier")]
-public class TechnologyModifier: IFactorioRconModel
+public class TechnologyModifier
 {
   /// <summary>
   /// Modifier type. Specifies which of the other fields will be available.
@@ -22,6 +22,5 @@ public class TechnologyModifier: IFactorioRconModel
   [FactorioRconAttribute("type")]
   public ModifierType Type { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

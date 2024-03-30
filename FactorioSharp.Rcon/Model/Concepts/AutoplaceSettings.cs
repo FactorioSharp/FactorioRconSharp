@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("AutoplaceSettings")]
-public class AutoplaceSettings: IFactorioRconModel
+public class AutoplaceSettings
 {
   /// <summary>
   /// Whether missing autoplace names for this type should be default enabled.
@@ -22,6 +22,5 @@ public class AutoplaceSettings: IFactorioRconModel
   [FactorioRconAttribute("settings")]
   public Dictionary<string, AutoplaceControl> Settings { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

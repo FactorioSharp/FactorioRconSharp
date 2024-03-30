@@ -24,7 +24,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// ```
 /// </examples>
 [FactorioRconClass("LuaFluidBox")]
-public abstract class LuaFluidBox: LuaObject, IFactorioRconModel
+public abstract class LuaFluidBox: LuaObject
 {
   /// <summary>
   /// The entity that owns this fluidbox.
@@ -62,7 +62,7 @@ public abstract class LuaFluidBox: LuaObject, IFactorioRconModel
   /// </summary>
   /// <param name="index">Lua name: index</param>
   [FactorioRconMethod("get_prototype")]
-  public abstract Union1828548320 GetPrototype(uint index);
+  public abstract Union1376827728 GetPrototype(uint index);
 
   /// <summary>
   /// The capacity of the given fluidbox index.
@@ -101,7 +101,7 @@ public abstract class LuaFluidBox: LuaObject, IFactorioRconModel
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_filter")]
-  public abstract bool SetFilter(uint index, Union152221756 filter);
+  public abstract bool SetFilter(uint index, Union1658366564 filter);
 
   /// <summary>
   /// Flow through the fluidbox in the last tick. It is the larger of in-flow and out-flow.
@@ -148,6 +148,5 @@ public abstract class LuaFluidBox: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,13 +14,13 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A reference to the burner energy source owned by a specific <see cref="LuaEquipment" />.
 /// </summary>
 [FactorioRconClass("LuaBurner")]
-public abstract class LuaBurner: LuaObject, IFactorioRconModel
+public abstract class LuaBurner: LuaObject
 {
   /// <summary>
   /// The owner of this burner energy source
   /// </summary>
   [FactorioRconAttribute("owner")]
-  public Union35971417 Owner { get; private set; }
+  public Union547156597 Owner { get; private set; }
 
   /// <summary>
   /// The fuel inventory.
@@ -82,6 +82,5 @@ public abstract class LuaBurner: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

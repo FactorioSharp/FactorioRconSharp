@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Loot")]
-public class Loot: IFactorioRconModel
+public class Loot
 {
   /// <summary>
   /// Item prototype name of the result.
@@ -37,6 +37,5 @@ public class Loot: IFactorioRconModel
   [FactorioRconAttribute("count_max")]
   public double CountMax { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

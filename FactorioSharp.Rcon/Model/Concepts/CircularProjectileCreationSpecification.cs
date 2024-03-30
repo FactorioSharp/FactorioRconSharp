@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CircularProjectileCreationSpecification")]
-public class CircularProjectileCreationSpecification: IFactorioRconModel
+public class CircularProjectileCreationSpecification
 {
   [FactorioRconAttribute("[1]")]
   public RealOrientation First { get; set; }
@@ -19,6 +19,5 @@ public class CircularProjectileCreationSpecification: IFactorioRconModel
   [FactorioRconAttribute("[2]")]
   public Vector Second { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

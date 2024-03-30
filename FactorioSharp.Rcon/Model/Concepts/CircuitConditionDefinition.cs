@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CircuitConditionDefinition")]
-public class CircuitConditionDefinition: IFactorioRconModel
+public class CircuitConditionDefinition
 {
   [FactorioRconAttribute("condition")]
   public CircuitCondition Condition { get; set; }
@@ -22,6 +22,5 @@ public class CircuitConditionDefinition: IFactorioRconModel
   [FactorioRconAttribute("fulfilled")]
   public bool Fulfilled { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

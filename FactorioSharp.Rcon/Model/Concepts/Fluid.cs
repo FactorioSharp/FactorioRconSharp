@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Fluid")]
-public class Fluid: IFactorioRconModel
+public class Fluid
 {
   /// <summary>
   /// Fluid prototype name of the fluid.
@@ -31,6 +31,5 @@ public class Fluid: IFactorioRconModel
   [FactorioRconAttribute("temperature")]
   public double Temperature { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

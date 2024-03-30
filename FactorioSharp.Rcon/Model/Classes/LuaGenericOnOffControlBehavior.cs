@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// An abstract base class for behaviors that support switching the entity on or off based on some condition.
 /// </summary>
 [FactorioRconClass("LuaGenericOnOffControlBehavior")]
-public abstract class LuaGenericOnOffControlBehavior: LuaControlBehavior, IFactorioRconModel
+public abstract class LuaGenericOnOffControlBehavior: LuaControlBehavior
 {
   /// <summary>
   /// If the entity is currently disabled because of the control behavior.
@@ -58,6 +58,5 @@ public abstract class LuaGenericOnOffControlBehavior: LuaControlBehavior, IFacto
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("HeatConnection")]
-public class HeatConnection: IFactorioRconModel
+public class HeatConnection
 {
   [FactorioRconAttribute("position")]
   public Vector Position { get; set; }
@@ -19,6 +19,5 @@ public class HeatConnection: IFactorioRconModel
   [FactorioRconAttribute("direction")]
   public DirectionEnum Direction { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -16,8 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ForceIdentification")]
-public partial class ForceIdentification: OneOfBase<byte, string, LuaForce>, IFactorioRconModel
+public partial class ForceIdentification: OneOfBase<byte, string, LuaForce>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

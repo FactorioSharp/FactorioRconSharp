@@ -18,20 +18,17 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapGenSize")]
-public partial class MapGenSize: OneOfBase<Union1807241770_0, Union1807241770_1>, IFactorioRconModel
+public partial class MapGenSize: OneOfBase<Union2125337336_0, Union2125337336_1>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1807241770_0: OneOfBase<float, Literal2041329128, Literal63603103, Literal1134776557, Literal1539596955, Literal1019749245, Literal1375552333, Literal959215129, Literal2021785025>, IFactorioRconModel
+public partial class Union2125337336_0: OneOfBase<float, Literal932840264, Literal1786125409, Literal651634713, Literal335299620, Literal17129871, Literal1926858249, Literal1041687566, Literal676714703>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 
 [GenerateOneOf]
-public partial class Union1807241770_1: OneOfBase<Literal1501367464, Literal566134406, Literal792708459, Literal1387279352, Literal789130510, Literal1139827560, Literal1005892558, Literal758657492>, IFactorioRconModel
+public partial class Union2125337336_1: OneOfBase<Literal376251075, Literal1007696418, Literal1610299092, Literal2112597430, Literal2013898009, Literal1158648576, Literal1172930104, Literal1732649855>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

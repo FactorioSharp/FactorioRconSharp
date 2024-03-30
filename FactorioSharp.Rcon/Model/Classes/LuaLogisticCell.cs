@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Logistic cell of a particular <see cref="LuaEntity).A"LogisticCell"IsTheGivenNameForSettingsAndPropertiesUsedByWhatWouldNormallyBeSeenAsA"Roboport".ALogisticCellHoweverDoesn'THaveToBeAttachedToTheRoboportEntity(TheCharacterHasOneForThePersonalRoboport" />.
 /// </summary>
 [FactorioRconClass("LuaLogisticCell")]
-public abstract class LuaLogisticCell: LuaObject, IFactorioRconModel
+public abstract class LuaLogisticCell: LuaObject
 {
   /// <summary>
   /// Logistic radius of this cell.
@@ -145,6 +145,5 @@ public abstract class LuaLogisticCell: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

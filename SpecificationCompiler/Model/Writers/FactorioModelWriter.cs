@@ -79,11 +79,11 @@ static partial class FactorioModelWriter
 
         if (string.IsNullOrWhiteSpace(cls.BaseClass))
         {
-            await writer.WriteLineAsync($"{classDeclaration}: IFactorioRconModel", indentLevel);
+            await writer.WriteLineAsync(classDeclaration, indentLevel);
         }
         else
         {
-            await writer.WriteLineAsync($"{classDeclaration}: {cls.BaseClass}, IFactorioRconModel", indentLevel);
+            await writer.WriteLineAsync($"{classDeclaration}: {cls.BaseClass}", indentLevel);
         }
 
         await writer.WriteLineAsync("{", indentLevel);
@@ -105,8 +105,6 @@ static partial class FactorioModelWriter
             await WriteMethodAsync(writer, method, indentLevel + 1);
             await writer.WriteLineAsync();
         }
-
-        await FactorioModelParserWriter.WriteStaticParserMethodAsync(writer, cls, indentLevel + 1);
 
         await writer.WriteLineAsync("}", indentLevel);
     }

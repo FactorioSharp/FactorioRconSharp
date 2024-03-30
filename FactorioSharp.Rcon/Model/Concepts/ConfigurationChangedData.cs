@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ConfigurationChangedData")]
-public class ConfigurationChangedData: IFactorioRconModel
+public class ConfigurationChangedData
 {
   /// <summary>
   /// Old version of the map. Present only when loading map version other than the current version.
@@ -43,6 +43,5 @@ public class ConfigurationChangedData: IFactorioRconModel
   [FactorioRconAttribute("migration_applied")]
   public bool MigrationApplied { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

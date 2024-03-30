@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("DisplayResolution")]
-public class DisplayResolution: IFactorioRconModel
+public class DisplayResolution
 {
   [FactorioRconAttribute("width")]
   public uint Width { get; set; }
@@ -19,6 +19,5 @@ public class DisplayResolution: IFactorioRconModel
   [FactorioRconAttribute("height")]
   public uint Height { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

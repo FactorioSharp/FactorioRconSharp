@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ProgrammableSpeakerInstrument")]
-public class ProgrammableSpeakerInstrument: IFactorioRconModel
+public class ProgrammableSpeakerInstrument
 {
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
@@ -19,6 +19,5 @@ public class ProgrammableSpeakerInstrument: IFactorioRconModel
   [FactorioRconAttribute("notes")]
   public List<string> Notes { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

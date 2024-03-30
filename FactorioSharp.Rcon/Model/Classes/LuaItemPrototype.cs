@@ -19,7 +19,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// ```
 /// </examples>
 [FactorioRconClass("LuaItemPrototype")]
-public abstract class LuaItemPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaItemPrototype: LuaObject
 {
   /// <summary>
   /// Type of this prototype. E.g. `"gun"` or `"mining-tool"`.
@@ -214,13 +214,13 @@ public abstract class LuaItemPrototype: LuaObject, IFactorioRconModel
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public Literals1974448724 FilterMode { get; private set; }
+  public Literals1163105229 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public Literals459241614 InsertionPriorityMode { get; private set; }
+  public Literals1602195502 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -546,7 +546,7 @@ public abstract class LuaItemPrototype: LuaObject, IFactorioRconModel
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public abstract AmmoType? GetAmmoType(Literals1480881626? ammoSourceType = null);
+  public abstract AmmoType? GetAmmoType(Literals238363541? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.
@@ -554,6 +554,5 @@ public abstract class LuaItemPrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

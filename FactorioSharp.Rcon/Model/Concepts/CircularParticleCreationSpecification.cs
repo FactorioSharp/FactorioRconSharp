@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CircularParticleCreationSpecification")]
-public class CircularParticleCreationSpecification: IFactorioRconModel
+public class CircularParticleCreationSpecification
 {
   /// <summary>
   /// Name of the <see cref="LuaEntityPrototype" />.
@@ -64,6 +64,5 @@ public class CircularParticleCreationSpecification: IFactorioRconModel
   [FactorioRconAttribute("use_source_position")]
   public bool UseSourcePosition { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

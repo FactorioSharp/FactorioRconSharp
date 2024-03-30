@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TrainPathFinderPathResult")]
-public class TrainPathFinderPathResult: IFactorioRconModel
+public class TrainPathFinderPathResult
 {
   /// <summary>
   /// True if found path.
@@ -55,6 +55,5 @@ public class TrainPathFinderPathResult: IFactorioRconModel
   [FactorioRconAttribute("steps_count")]
   public uint StepsCount { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

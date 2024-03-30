@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for lamps.
 /// </summary>
 [FactorioRconClass("LuaLampControlBehavior")]
-public abstract class LuaLampControlBehavior: LuaGenericOnOffControlBehavior, IFactorioRconModel
+public abstract class LuaLampControlBehavior: LuaGenericOnOffControlBehavior
 {
   /// <summary>
   /// `true` if the lamp should set the color from the circuit network signals.
@@ -28,6 +28,5 @@ public abstract class LuaLampControlBehavior: LuaGenericOnOffControlBehavior, IF
   [FactorioRconAttribute("color")]
   public Color Color { get; private set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

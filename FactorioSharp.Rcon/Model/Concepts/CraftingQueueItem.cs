@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("CraftingQueueItem")]
-public class CraftingQueueItem: IFactorioRconModel
+public class CraftingQueueItem
 {
   /// <summary>
   /// The index of the item in the crafting queue.
@@ -37,6 +37,5 @@ public class CraftingQueueItem: IFactorioRconModel
   [FactorioRconAttribute("prerequisite")]
   public bool Prerequisite { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

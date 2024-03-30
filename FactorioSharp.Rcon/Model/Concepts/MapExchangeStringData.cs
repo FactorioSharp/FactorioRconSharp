@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// The data that can be extracted from a map exchange string, as a plain table.
 /// </summary>
 [FactorioRconConcept("MapExchangeStringData")]
-public class MapExchangeStringData: IFactorioRconModel
+public class MapExchangeStringData
 {
   [FactorioRconAttribute("map_settings")]
   public MapAndDifficultySettings MapSettings { get; set; }
@@ -22,6 +22,5 @@ public class MapExchangeStringData: IFactorioRconModel
   [FactorioRconAttribute("map_gen_settings")]
   public MapGenSettings MapGenSettings { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

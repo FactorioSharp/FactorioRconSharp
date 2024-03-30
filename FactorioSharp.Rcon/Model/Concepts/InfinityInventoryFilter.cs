@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A single filter used by an infinity-filters instance.
 /// </summary>
 [FactorioRconConcept("InfinityInventoryFilter")]
-public class InfinityInventoryFilter: IFactorioRconModel
+public class InfinityInventoryFilter
 {
   /// <summary>
   /// Name of the item.
@@ -32,7 +32,7 @@ public class InfinityInventoryFilter: IFactorioRconModel
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals474811210 Mode { get; set; }
+  public Literals2133177294 Mode { get; set; }
 
   /// <summary>
   /// The index of this filter in the filters list. Not required when writing a filter.
@@ -40,6 +40,5 @@ public class InfinityInventoryFilter: IFactorioRconModel
   [FactorioRconAttribute("index")]
   public uint Index { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

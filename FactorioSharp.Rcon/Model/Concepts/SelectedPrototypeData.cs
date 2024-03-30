@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("SelectedPrototypeData")]
-public class SelectedPrototypeData: IFactorioRconModel
+public class SelectedPrototypeData
 {
   /// <summary>
   /// E.g. `"entity"`.
@@ -31,6 +31,5 @@ public class SelectedPrototypeData: IFactorioRconModel
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Alert")]
-public class Alert: IFactorioRconModel
+public class Alert
 {
   /// <summary>
   /// The tick this alert was created.
@@ -40,6 +40,5 @@ public class Alert: IFactorioRconModel
   [FactorioRconAttribute("message")]
   public LocalisedString Message { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

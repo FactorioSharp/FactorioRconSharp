@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("GuiAnchor")]
-public class GuiAnchor: IFactorioRconModel
+public class GuiAnchor
 {
   [FactorioRconAttribute("gui")]
   public RelativeGuiTypeEnum Gui { get; set; }
@@ -37,6 +37,5 @@ public class GuiAnchor: IFactorioRconModel
   [FactorioRconAttribute("names")]
   public List<string> Names { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

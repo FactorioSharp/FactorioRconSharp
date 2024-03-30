@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// Various game-related settings. Updating any of the attributes will immediately take effect in the game engine.
 /// </summary>
 [FactorioRconConcept("MapSettings")]
-public class MapSettings: IFactorioRconModel
+public class MapSettings
 {
   [FactorioRconAttribute("pollution")]
   public PollutionMapSettings Pollution { get; set; }
@@ -40,6 +40,5 @@ public class MapSettings: IFactorioRconModel
   [FactorioRconAttribute("max_failed_behavior_count")]
   public uint MaxFailedBehaviorCount { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

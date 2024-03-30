@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A train. Trains are a sequence of connected rolling stocks -- locomotives and wagons.
 /// </summary>
 [FactorioRconClass("LuaTrain")]
-public abstract class LuaTrain: LuaObject, IFactorioRconModel
+public abstract class LuaTrain: LuaObject
 {
   /// <summary>
   /// When `true`, the train is explicitly controlled by the player or script. When `false`, the train moves autonomously according to its schedule.
@@ -56,7 +56,7 @@ public abstract class LuaTrain: LuaObject, IFactorioRconModel
   /// Locomotives of the train.
   /// </summary>
   [FactorioRconAttribute("locomotives")]
-  public Table1085262660 Locomotives { get; private set; }
+  public Table1857828481 Locomotives { get; private set; }
 
   /// <summary>
   /// The cargo carriages the train contains.
@@ -284,6 +284,5 @@ public abstract class LuaTrain: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

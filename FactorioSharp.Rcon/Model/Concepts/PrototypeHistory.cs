@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("PrototypeHistory")]
-public class PrototypeHistory: IFactorioRconModel
+public class PrototypeHistory
 {
   /// <summary>
   /// The mod that created this prototype.
@@ -25,6 +25,5 @@ public class PrototypeHistory: IFactorioRconModel
   [FactorioRconAttribute("changed")]
   public List<string> Changed { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

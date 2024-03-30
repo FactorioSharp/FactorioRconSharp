@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of a font.
 /// </summary>
 [FactorioRconClass("LuaFontPrototype")]
-public abstract class LuaFontPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaFontPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -61,6 +61,5 @@ public abstract class LuaFontPrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

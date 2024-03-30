@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of an equipment grid.
 /// </summary>
 [FactorioRconClass("LuaEquipmentGridPrototype")]
-public abstract class LuaEquipmentGridPrototype: LuaObject, IFactorioRconModel
+public abstract class LuaEquipmentGridPrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -70,6 +70,5 @@ public abstract class LuaEquipmentGridPrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

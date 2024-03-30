@@ -15,7 +15,7 @@ Console.WriteLine("Connected: " + connected);
 string mapString = await client.ReadAsync(g => g.Game.GetMapExchangeString());
 int playerCount = await client.ReadAsync(g => (int)g.Game.Players.Length);
 DifficultyEnum difficulty = await client.ReadAsync(g => g.Game.Difficulty);
-Dictionary<string, Union1834264937> inputCount = await client.ReadAsync(g => ((LuaForce)g.Game.Players[1].Force).ItemProductionStatistics.InputCounts);
+Dictionary<string, Union1732410965> inputCount = await client.ReadAsync(g => ((LuaForce)g.Game.Players[1].Force).ItemProductionStatistics.InputCounts);
 
 Console.WriteLine($"Map string: {mapString}");
 Console.WriteLine($"Player count: {playerCount}");

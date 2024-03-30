@@ -25,8 +25,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("LocalisedString")]
-public partial class LocalisedString: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>, IFactorioRconModel
+public partial class LocalisedString: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

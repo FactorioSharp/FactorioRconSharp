@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// The 'map type' dropdown in the map generation GUI is actually a selector for elevation generator. The base game sets `property_expression_names.elevation` to `"0_16-elevation"` to reproduce terrain from 0.16 or to `"0_17-island"` for the island preset. If generators are available for other properties, the 'map type' dropdown in the GUI will be renamed to 'elevation' and shown along with selectors for the other selectable properties.
 /// </summary>
 [FactorioRconConcept("MapGenSettings")]
-public class MapGenSettings: IFactorioRconModel
+public class MapGenSettings
 {
   /// <summary>
   /// The inverse of 'water scale' in the map generator GUI. Lower `terrain_segmentation` increases the scale of elevation features (lakes, continents, etc). This behavior can be overridden with alternate elevation generators (see `property_expression_names`, below).
@@ -44,7 +44,7 @@ public class MapGenSettings: IFactorioRconModel
   /// Each setting in this dictionary maps the string type to the settings for that type.
   /// </summary>
   [FactorioRconAttribute("autoplace_settings")]
-  public Dictionary<Literals1178288910, AutoplaceSettings> AutoplaceSettings { get; set; }
+  public Dictionary<Literals1896585805, AutoplaceSettings> AutoplaceSettings { get; set; }
 
   /// <summary>
   /// Map generation settings for entities of the type "cliff".
@@ -106,6 +106,5 @@ public class MapGenSettings: IFactorioRconModel
   [FactorioRconAttribute("property_expression_names")]
   public Dictionary<string, string> PropertyExpressionNames { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

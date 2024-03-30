@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A crafting recipe. Recipes belong to forces (see <see cref="LuaForce)" /> because some recipes are unlocked by research, and researches are per-force.
 /// </summary>
 [FactorioRconClass("LuaRecipe")]
-public abstract class LuaRecipe: LuaObject, IFactorioRconModel
+public abstract class LuaRecipe: LuaObject
 {
   /// <summary>
   /// Name of the recipe. This can be different than the name of the result items as there could be more recipes to make the same item.
@@ -127,6 +127,5 @@ public abstract class LuaRecipe: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

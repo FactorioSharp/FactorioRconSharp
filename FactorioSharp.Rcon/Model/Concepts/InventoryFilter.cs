@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("InventoryFilter")]
-public class InventoryFilter: IFactorioRconModel
+public class InventoryFilter
 {
   /// <summary>
   /// Position of the corresponding filter slot.
@@ -25,6 +25,5 @@ public class InventoryFilter: IFactorioRconModel
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

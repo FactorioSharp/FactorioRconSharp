@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A permission group that defines what players in this group are allowed to do.
 /// </summary>
 [FactorioRconClass("LuaPermissionGroup")]
-public abstract class LuaPermissionGroup: LuaObject, IFactorioRconModel
+public abstract class LuaPermissionGroup: LuaObject
 {
   /// <summary>
   /// The name of this group.
@@ -87,6 +87,5 @@ public abstract class LuaPermissionGroup: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

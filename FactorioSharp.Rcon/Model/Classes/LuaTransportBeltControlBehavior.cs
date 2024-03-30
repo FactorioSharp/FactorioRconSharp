@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for transport belts.
 /// </summary>
 [FactorioRconClass("LuaTransportBeltControlBehavior")]
-public abstract class LuaTransportBeltControlBehavior: LuaGenericOnOffControlBehavior, IFactorioRconModel
+public abstract class LuaTransportBeltControlBehavior: LuaGenericOnOffControlBehavior
 {
   /// <summary>
   /// If the belt will be enabled/disabled based off the circuit network.
@@ -34,6 +34,5 @@ public abstract class LuaTransportBeltControlBehavior: LuaGenericOnOffControlBeh
   [FactorioRconAttribute("read_contents_mode")]
   public ControlBehaviorTransportBeltContentReadModeEnum ReadContentsMode { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

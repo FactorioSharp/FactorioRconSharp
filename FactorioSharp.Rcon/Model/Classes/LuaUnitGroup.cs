@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A collection of units moving and attacking together. The engine creates autonomous unit groups to attack polluted areas. The script can create and control such groups as well. Groups can accept commands in the same manner as regular units.
 /// </summary>
 [FactorioRconClass("LuaUnitGroup")]
-public abstract class LuaUnitGroup: LuaObject, IFactorioRconModel
+public abstract class LuaUnitGroup: LuaObject
 {
   /// <summary>
   /// Members of this group.
@@ -130,6 +130,5 @@ public abstract class LuaUnitGroup: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

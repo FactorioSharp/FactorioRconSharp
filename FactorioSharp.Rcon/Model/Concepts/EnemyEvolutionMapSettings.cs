@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// These values represent a percentual increase in evolution. This means a value of `0.1` would increase evolution by 10%.
 /// </summary>
 [FactorioRconConcept("EnemyEvolutionMapSettings")]
-public class EnemyEvolutionMapSettings: IFactorioRconModel
+public class EnemyEvolutionMapSettings
 {
   /// <summary>
   /// Whether enemy evolution is enabled at all.
@@ -40,6 +40,5 @@ public class EnemyEvolutionMapSettings: IFactorioRconModel
   [FactorioRconAttribute("pollution_factor")]
   public double PollutionFactor { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for accumulators.
 /// </summary>
 [FactorioRconClass("LuaAccumulatorControlBehavior")]
-public abstract class LuaAccumulatorControlBehavior: LuaControlBehavior, IFactorioRconModel
+public abstract class LuaAccumulatorControlBehavior: LuaControlBehavior
 {
   [FactorioRconAttribute("output_signal")]
   public SignalID OutputSignal { get; set; }
@@ -37,6 +37,5 @@ public abstract class LuaAccumulatorControlBehavior: LuaControlBehavior, IFactor
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("ElemID")]
-public class ElemID: IFactorioRconModel
+public class ElemID
 {
   [FactorioRconAttribute("type")]
   public ElemType Type { get; set; }
@@ -22,6 +22,5 @@ public class ElemID: IFactorioRconModel
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

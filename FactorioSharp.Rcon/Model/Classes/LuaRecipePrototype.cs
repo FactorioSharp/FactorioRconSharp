@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// A crafting recipe prototype.
 /// </summary>
 [FactorioRconClass("LuaRecipePrototype")]
-public abstract class LuaRecipePrototype: LuaObject, IFactorioRconModel
+public abstract class LuaRecipePrototype: LuaObject
 {
   /// <summary>
   /// If this recipe prototype is enabled by default (enabled at the beginning of a game).
@@ -187,6 +187,5 @@ public abstract class LuaRecipePrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

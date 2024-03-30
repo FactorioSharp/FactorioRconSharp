@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Classes;
 
 [FactorioRconClass("LuaCombinatorControlBehavior")]
-public abstract class LuaCombinatorControlBehavior: LuaControlBehavior, IFactorioRconModel
+public abstract class LuaCombinatorControlBehavior: LuaControlBehavior
 {
   /// <summary>
   /// The circuit network signals sent by this combinator last tick.
@@ -26,6 +26,5 @@ public abstract class LuaCombinatorControlBehavior: LuaControlBehavior, IFactori
   [FactorioRconMethod("get_signal_last_tick")]
   public abstract int? GetSignalLastTick(SignalID signal);
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// An actual signal transmitted by the network.
 /// </summary>
 [FactorioRconConcept("Signal")]
-public class Signal: IFactorioRconModel
+public class Signal
 {
   /// <summary>
   /// ID of the signal.
@@ -28,6 +28,5 @@ public class Signal: IFactorioRconModel
   [FactorioRconAttribute("count")]
   public int Count { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

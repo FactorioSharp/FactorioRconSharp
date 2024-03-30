@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("Tile")]
-public class Tile: IFactorioRconModel
+public class Tile
 {
   /// <summary>
   /// The position of the tile.
@@ -25,6 +25,5 @@ public class Tile: IFactorioRconModel
   [FactorioRconAttribute("name")]
   public string Name { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

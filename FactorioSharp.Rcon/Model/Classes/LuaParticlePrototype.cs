@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Prototype of an optimized particle.
 /// </summary>
 [FactorioRconClass("LuaParticlePrototype")]
-public abstract class LuaParticlePrototype: LuaObject, IFactorioRconModel
+public abstract class LuaParticlePrototype: LuaObject
 {
   /// <summary>
   /// Name of this prototype.
@@ -79,6 +79,5 @@ public abstract class LuaParticlePrototype: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

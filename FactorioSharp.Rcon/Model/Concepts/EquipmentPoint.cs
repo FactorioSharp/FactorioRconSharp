@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A table used to define a manual shape for a piece of equipment.
 /// </summary>
 [FactorioRconConcept("EquipmentPoint")]
-public class EquipmentPoint: IFactorioRconModel
+public class EquipmentPoint
 {
   [FactorioRconAttribute("x")]
   public uint X { get; set; }
@@ -22,6 +22,5 @@ public class EquipmentPoint: IFactorioRconModel
   [FactorioRconAttribute("y")]
   public uint Y { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

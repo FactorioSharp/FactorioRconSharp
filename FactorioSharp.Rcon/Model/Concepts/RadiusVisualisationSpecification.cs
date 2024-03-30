@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("RadiusVisualisationSpecification")]
-public class RadiusVisualisationSpecification: IFactorioRconModel
+public class RadiusVisualisationSpecification
 {
   [FactorioRconAttribute("distance")]
   public double Distance { get; set; }
@@ -25,6 +25,5 @@ public class RadiusVisualisationSpecification: IFactorioRconModel
   [FactorioRconAttribute("draw_on_selection")]
   public bool DrawOnSelection { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

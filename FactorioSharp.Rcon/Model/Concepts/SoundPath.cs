@@ -38,8 +38,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// - `"entity-close"` - Uses [Entity::close_sound](prototype:EntityPrototype::close_sound)
 /// </summary>
 [FactorioRconConcept("SoundPath")]
-public class SoundPath: Alias<string>, IFactorioRconModel
+public class SoundPath: Alias<string>
 {
-  public void Load(string str) => throw new NotImplementedException();
 }
 

@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Item group or subgroup.
 /// </summary>
 [FactorioRconClass("LuaGroup")]
-public abstract class LuaGroup: LuaObject, IFactorioRconModel
+public abstract class LuaGroup: LuaObject
 {
   [FactorioRconAttribute("name")]
   public string Name { get; private set; }
@@ -70,6 +70,5 @@ public abstract class LuaGroup: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

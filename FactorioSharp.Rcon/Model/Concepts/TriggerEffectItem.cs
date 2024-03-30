@@ -11,7 +11,7 @@ using FactorioSharp.Rcon.Model.Utils;
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 [FactorioRconConcept("TriggerEffectItem")]
-public class TriggerEffectItem: IFactorioRconModel
+public class TriggerEffectItem
 {
   [FactorioRconAttribute("type")]
   public TriggerEffectItemType Type { get; set; }
@@ -34,6 +34,5 @@ public class TriggerEffectItem: IFactorioRconModel
   [FactorioRconAttribute("damage_type_filters")]
   public DamageTypeFilters DamageTypeFilters { get; set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

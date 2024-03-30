@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for mining drills.
 /// </summary>
 [FactorioRconClass("LuaMiningDrillControlBehavior")]
-public abstract class LuaMiningDrillControlBehavior: LuaGenericOnOffControlBehavior, IFactorioRconModel
+public abstract class LuaMiningDrillControlBehavior: LuaGenericOnOffControlBehavior
 {
   /// <summary>
   /// `true` if this drill is enabled or disabled using the logistics or circuit condition.
@@ -40,6 +40,5 @@ public abstract class LuaMiningDrillControlBehavior: LuaGenericOnOffControlBehav
   [FactorioRconAttribute("resource_read_targets")]
   public List<LuaEntity> ResourceReadTargets { get; private set; }
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

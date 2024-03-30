@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Logistic point of a particular <see cref="LuaEntity" />. A "Logistic point" is the name given for settings and properties used by requester, provider, and storage points in a given logistic network. These "points" don't have to be a logistic container but often are. One other entity that can own several points is the "character" character type entity.
 /// </summary>
 [FactorioRconClass("LuaLogisticPoint")]
-public abstract class LuaLogisticPoint: LuaObject, IFactorioRconModel
+public abstract class LuaLogisticPoint: LuaObject
 {
   /// <summary>
   /// The <see cref="LuaLogisticPoint" />.
@@ -85,6 +85,5 @@ public abstract class LuaLogisticPoint: LuaObject, IFactorioRconModel
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 

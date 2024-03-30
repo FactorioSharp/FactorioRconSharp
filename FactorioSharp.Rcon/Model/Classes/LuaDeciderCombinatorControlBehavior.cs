@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Classes;
 /// Control behavior for decider combinators.
 /// </summary>
 [FactorioRconClass("LuaDeciderCombinatorControlBehavior")]
-public abstract class LuaDeciderCombinatorControlBehavior: LuaCombinatorControlBehavior, IFactorioRconModel
+public abstract class LuaDeciderCombinatorControlBehavior: LuaCombinatorControlBehavior
 {
   /// <summary>
   /// This decider combinator's parameters.
@@ -40,6 +40,5 @@ public abstract class LuaDeciderCombinatorControlBehavior: LuaCombinatorControlB
   [FactorioRconMethod("help")]
   public abstract string Help();
 
-  public void Load(string str) => throw new NotImplementedException();
 }
 
