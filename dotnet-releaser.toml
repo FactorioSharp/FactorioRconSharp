@@ -1,9 +1,9 @@
 profile = "default"
 
 [msbuild]
-project = ["./FactorioRconSharp/FactorioRconSharp.csproj"]
+project = ["./FactorioSharp.Rcon/FactorioSharp.Rcon.csproj"]
 
 [github]
 user = "FactorioSharp"
-repo = "FactorioRconSharp"
+repo = "FactorioSharp.Rcon"
 version_prefix = "v"

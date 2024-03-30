@@ -26,7 +26,7 @@ Info RemoteCommandProcessor.cpp:133: Starting RCON interface at IP ADDR:({0.0.0.
 Once the server is running with RCON enabled, we can attach a client:
 
 ```
-using FactorioRconSharp.Core;
+using FactorioSharp.Rcon.Core;
 
 using FactorioRemoteConsole console = new("127.0.0.1", 27015);
 bool connected = await console.ConnectAsync("password");
@@ -45,7 +45,7 @@ Info RemoteCommandProcessor.cpp:252: New RCON connection from IP ADDR:({127.0.0.
 The client compiles the C# expressions that it receives into Lua commands that are executed through the console:
 
 ```
-using FactorioRconSharp;
+using FactorioSharp.Rcon;
 
 using FactorioRconClient client = new("127.0.0.1", 27015);
 bool connected = await client.ConnectAsync("password");
@@ -58,4 +58,4 @@ Console.WriteLine($"Map string: {mapString}");
 ```
 
 The specification used to generate the model is that of [Factorio v1.1.104](https://lua-api.factorio.com/1.1.104/runtime-api.json).
-The compiler is available in the `FactorioRconSharp.ClientGenerator` project.
+The compiler is available in the `SpecificationCompiler` project.
