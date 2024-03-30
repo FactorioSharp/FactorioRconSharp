@@ -1,17 +1,19 @@
 ﻿using System.Linq.Expressions;
+using FactorioSharp.Rcon.Core;
 using FactorioSharp.Rcon.Core.Parsing;
 using FactorioSharp.Rcon.Core.Visitor;
 using FactorioSharp.Rcon.Model;
 
-namespace FactorioSharp.Rcon.Core;
+namespace FactorioSharp.Rcon;
 
-public abstract class FactorioRconClientBase : IDisposable
+public class FactorioRconClient : IDisposable
 {
     readonly FactorioRemoteConsole _lowLevelClient;
 
+    public bool Silent { get => _lowLevelClient.Silent; set => _lowLevelClient.Silent = value; }
     public bool Connected => _lowLevelClient.Connected;
 
-    public FactorioRconClientBase(string ipAddress, int port)
+    public FactorioRconClient(string ipAddress, int port)
     {
         _lowLevelClient = new FactorioRemoteConsole(ipAddress, port);
     }
