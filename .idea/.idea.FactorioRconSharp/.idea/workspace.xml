@@ -4,12 +4,14 @@
     <projectFile>FactorioRCON.TestApplication/FactorioRCON.TestApplication.csproj</projectFile>
     <projectFile>FactorioRconSharp.ClientGenerator/FactorioRconSharp.ClientGenerator.csproj</projectFile>
     <projectFile>FactorioRconSharp.TestApplication/FactorioRconSharp.TestApplication.csproj</projectFile>
+    <projectFile>SpecificationCompiler/SpecificationCompiler.csproj</projectFile>
+    <projectFile>TestApplication/TestApplication.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="">
+    <list default="true" id="606a5e1e-5b5c-4f46-b61a-babda6b1866e" name="Changes" comment="fix dotnet-releaser">
       <change afterPath="$PROJECT_DIR$/.idea/.idea.FactorioRconSharp/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FactorioSharp.Rcon/Core/Abstractions/FactorioRconAttributeAttribute.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FactorioSharp.Rcon/Core/Abstractions/FactorioRconCallOperatorAttribute.cs" afterDir="false" />
@@ -860,14 +862,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92d32e9d6ef444a2b72c8f8bea97566618c00/af/905a1a14/OneOf`9.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a9575277601d491ba340aa03208d61ba1c00/b4/8a239223/StringExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/source/repos/FactorioRCON/FactorioRconSharp/Core/Visitor/FactorioRconTranslator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FactorioRconSharp/Model/Anonymous/AnonymousTypes.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FactorioRconSharp/Model/Builtins/LuaCustomTable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FactorioRconSharp/Model/Utils/FactorioModelUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioSharp.Rcon/Core/FactorioRconClientBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioSharp.Rcon/Core/Visitor/FactorioRconTranslator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioSharp.Rcon/FactorioRconClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioSharp.Rcon/Model/Classes/LuaEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioSharp.Rcon/Model/Classes/LuaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FactorioSharp.Rcon/Model/FactorioRconGlobals.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApplication/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -879,34 +888,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.FactorioRCON.TestApplication.executor": "Run",
-    ".NET Project.FactorioRconSharp.ClientGenerator.executor": "Run",
-    ".NET Project.FactorioRconSharp.TestApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.code.cleanup.on.save": "true",
-    "rider.code.cleanup.on.save.profile": "Reformat",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vcs.patch.to.clipboard": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.FactorioRCON.TestApplication.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.FactorioRconSharp.ClientGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.FactorioRconSharp.TestApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;rider.code.cleanup.on.save.profile&quot;: &quot;Reformat&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vcs.patch.to.clipboard&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\lahki\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\lahki\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\lahki\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\lahki\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\lahki\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\lahki\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.FactorioRconSharp.TestApplication">
     <configuration name="FactorioRCON.TestApplication" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
