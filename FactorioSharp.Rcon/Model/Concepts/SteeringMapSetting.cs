@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,20 +14,22 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class SteeringMapSetting
 {
   /// <summary>
-  ///     Does not include the radius of the unit.
+  /// Does not include the radius of the unit.
   /// </summary>
   [FactorioRconAttribute("radius")]
-    public double Radius { get; set; }
+  public double Radius { get; set; }
 
-    [FactorioRconAttribute("separation_factor")]
-    public double SeparationFactor { get; set; }
+  [FactorioRconAttribute("separation_factor")]
+  public double SeparationFactor { get; set; }
 
-    [FactorioRconAttribute("separation_force")]
-    public double SeparationForce { get; set; }
+  [FactorioRconAttribute("separation_force")]
+  public double SeparationForce { get; set; }
 
-    /// <summary>
-    ///     Used to make steering look better for aesthetic purposes.
-    /// </summary>
-    [FactorioRconAttribute("force_unit_fuzzy_goto_behavior")]
-    public bool ForceUnitFuzzyGotoBehavior { get; set; }
+  /// <summary>
+  /// Used to make steering look better for aesthetic purposes.
+  /// </summary>
+  [FactorioRconAttribute("force_unit_fuzzy_goto_behavior")]
+  public bool ForceUnitFuzzyGotoBehavior { get; set; }
+
 }
+

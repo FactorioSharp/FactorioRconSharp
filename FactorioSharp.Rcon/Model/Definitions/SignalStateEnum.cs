@@ -2,36 +2,39 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 /// <summary>
-///     State of an ordinary rail signal.
+/// State of an ordinary rail signal.
 /// </summary>
 [FactorioRconDefinition("signal_state")]
 public enum SignalStateEnum
 {
   /// <summary>
-  ///     Green.
+  /// Green.
   /// </summary>
   [FactorioRconDefinitionValue("open")]
-    Open,
+  Open,
 
   /// <summary>
-  ///     Red.
+  /// Red.
   /// </summary>
   [FactorioRconDefinitionValue("closed")]
-    Closed,
+  Closed,
 
   /// <summary>
-  ///     Orange.
+  /// Orange.
   /// </summary>
   [FactorioRconDefinitionValue("reserved")]
-    Reserved,
+  Reserved,
 
   /// <summary>
-  ///     Red - From circuit network.
+  /// Red - From circuit network.
   /// </summary>
   [FactorioRconDefinitionValue("reserved_by_circuit_network")]
-    ReservedByCircuitNetwork
+  ReservedByCircuitNetwork,
+
 }
+

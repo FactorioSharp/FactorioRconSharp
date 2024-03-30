@@ -2,92 +2,99 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     A <see cref="String" /> specifying a collision mask layer.
-///     In addition to the listed layers, there is `"layer-13"` through `"layer-55"`. These layers are currently unused by the game but may change. If a mod is going to use one of the
-///     unused layers it's recommended to start at the higher layers because the base game will take from the lower ones.
+/// A <see cref="String" /> specifying a collision mask layer.
+/// 
+/// In addition to the listed layers, there is `"layer-13"` through `"layer-55"`. These layers are currently unused by the game but may change. If a mod is going to use one of the unused layers it's recommended to start at the higher layers because the base game will take from the lower ones.
 /// </summary>
 [FactorioRconDefinition("CollisionMaskLayer")]
 public enum CollisionMaskLayer
 {
   /// <summary>
-  ///     Literal value: ground-tile
+  /// Literal value: ground-tile
   /// </summary>
   [FactorioRconDefinitionValue("ground-tile")]
-    GroundTile,
+  GroundTile,
 
   /// <summary>
-  ///     Literal value: water-tile
+  /// Literal value: water-tile
   /// </summary>
   [FactorioRconDefinitionValue("water-tile")]
-    WaterTile,
+  WaterTile,
 
   /// <summary>
-  ///     Literal value: resource-layer
+  /// Literal value: resource-layer
   /// </summary>
   [FactorioRconDefinitionValue("resource-layer")]
-    ResourceLayer,
+  ResourceLayer,
 
   /// <summary>
-  ///     Literal value: doodad-layer
+  /// Literal value: doodad-layer
   /// </summary>
   [FactorioRconDefinitionValue("doodad-layer")]
-    DoodadLayer,
+  DoodadLayer,
 
   /// <summary>
-  ///     Literal value: floor-layer
+  /// Literal value: floor-layer
   /// </summary>
   [FactorioRconDefinitionValue("floor-layer")]
-    FloorLayer,
+  FloorLayer,
 
   /// <summary>
-  ///     Literal value: item-layer
+  /// Literal value: item-layer
   /// </summary>
   [FactorioRconDefinitionValue("item-layer")]
-    ItemLayer,
+  ItemLayer,
 
   /// <summary>
-  ///     Literal value: ghost-layer
+  /// Literal value: ghost-layer
   /// </summary>
   [FactorioRconDefinitionValue("ghost-layer")]
-    GhostLayer,
+  GhostLayer,
 
   /// <summary>
-  ///     Literal value: object-layer
+  /// Literal value: object-layer
   /// </summary>
   [FactorioRconDefinitionValue("object-layer")]
-    ObjectLayer,
+  ObjectLayer,
 
   /// <summary>
-  ///     Literal value: player-layer
+  /// Literal value: player-layer
   /// </summary>
   [FactorioRconDefinitionValue("player-layer")]
-    PlayerLayer,
+  PlayerLayer,
 
   /// <summary>
-  ///     Literal value: train-layer
+  /// Literal value: train-layer
   /// </summary>
   [FactorioRconDefinitionValue("train-layer")]
-    TrainLayer,
+  TrainLayer,
 
   /// <summary>
-  ///     Literal value: rail-layer
+  /// Literal value: rail-layer
   /// </summary>
   [FactorioRconDefinitionValue("rail-layer")]
-    RailLayer,
+  RailLayer,
 
   /// <summary>
-  ///     Literal value: transport-belt-layer
+  /// Literal value: transport-belt-layer
   /// </summary>
   [FactorioRconDefinitionValue("transport-belt-layer")]
-    TransportBeltLayer,
+  TransportBeltLayer,
 
   /// <summary>
-  ///     Literal value: not-setup
+  /// Literal value: not-setup
   /// </summary>
   [FactorioRconDefinitionValue("not-setup")]
-    NotSetup
+  NotSetup,
+
 }
+

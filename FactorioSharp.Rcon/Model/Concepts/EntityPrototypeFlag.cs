@@ -2,168 +2,175 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     A <see cref="String" /> specifying an entity prototype flag.
+/// A <see cref="String" /> specifying an entity prototype flag.
 /// </summary>
 [FactorioRconDefinition("EntityPrototypeFlag")]
 public enum EntityPrototypeFlag
 {
   /// <summary>
-  ///     Literal value: not-rotatable
+  /// Literal value: not-rotatable
   /// </summary>
   [FactorioRconDefinitionValue("not-rotatable")]
-    NotRotatable,
+  NotRotatable,
 
   /// <summary>
-  ///     Literal value: placeable-neutral
+  /// Literal value: placeable-neutral
   /// </summary>
   [FactorioRconDefinitionValue("placeable-neutral")]
-    PlaceableNeutral,
+  PlaceableNeutral,
 
   /// <summary>
-  ///     Literal value: placeable-player
+  /// Literal value: placeable-player
   /// </summary>
   [FactorioRconDefinitionValue("placeable-player")]
-    PlaceablePlayer,
+  PlaceablePlayer,
 
   /// <summary>
-  ///     Literal value: placeable-enemy
+  /// Literal value: placeable-enemy
   /// </summary>
   [FactorioRconDefinitionValue("placeable-enemy")]
-    PlaceableEnemy,
+  PlaceableEnemy,
 
   /// <summary>
-  ///     Literal value: placeable-off-grid
+  /// Literal value: placeable-off-grid
   /// </summary>
   [FactorioRconDefinitionValue("placeable-off-grid")]
-    PlaceableOffGrid,
+  PlaceableOffGrid,
 
   /// <summary>
-  ///     Literal value: player-creation
+  /// Literal value: player-creation
   /// </summary>
   [FactorioRconDefinitionValue("player-creation")]
-    PlayerCreation,
+  PlayerCreation,
 
   /// <summary>
-  ///     Literal value: building-direction-8-way
+  /// Literal value: building-direction-8-way
   /// </summary>
   [FactorioRconDefinitionValue("building-direction-8-way")]
-    BuildingDirection8Way,
+  BuildingDirection8Way,
 
   /// <summary>
-  ///     Literal value: filter-directions
+  /// Literal value: filter-directions
   /// </summary>
   [FactorioRconDefinitionValue("filter-directions")]
-    FilterDirections,
+  FilterDirections,
 
   /// <summary>
-  ///     Literal value: fast-replaceable-no-build-while-moving
+  /// Literal value: fast-replaceable-no-build-while-moving
   /// </summary>
   [FactorioRconDefinitionValue("fast-replaceable-no-build-while-moving")]
-    FastReplaceableNoBuildWhileMoving,
+  FastReplaceableNoBuildWhileMoving,
 
   /// <summary>
-  ///     Literal value: breaths-air
+  /// Literal value: breaths-air
   /// </summary>
   [FactorioRconDefinitionValue("breaths-air")]
-    BreathsAir,
+  BreathsAir,
 
   /// <summary>
-  ///     Literal value: not-repairable
+  /// Literal value: not-repairable
   /// </summary>
   [FactorioRconDefinitionValue("not-repairable")]
-    NotRepairable,
+  NotRepairable,
 
   /// <summary>
-  ///     Literal value: not-on-map
+  /// Literal value: not-on-map
   /// </summary>
   [FactorioRconDefinitionValue("not-on-map")]
-    NotOnMap,
+  NotOnMap,
 
   /// <summary>
-  ///     Literal value: not-deconstructable
+  /// Literal value: not-deconstructable
   /// </summary>
   [FactorioRconDefinitionValue("not-deconstructable")]
-    NotDeconstructable,
+  NotDeconstructable,
 
   /// <summary>
-  ///     Literal value: not-blueprintable
+  /// Literal value: not-blueprintable
   /// </summary>
   [FactorioRconDefinitionValue("not-blueprintable")]
-    NotBlueprintable,
+  NotBlueprintable,
 
   /// <summary>
-  ///     Literal value: hidden
+  /// Literal value: hidden
   /// </summary>
   [FactorioRconDefinitionValue("hidden")]
-    Hidden,
+  Hidden,
 
   /// <summary>
-  ///     Literal value: hide-alt-info
+  /// Literal value: hide-alt-info
   /// </summary>
   [FactorioRconDefinitionValue("hide-alt-info")]
-    HideAltInfo,
+  HideAltInfo,
 
   /// <summary>
-  ///     Literal value: fast-replaceable-no-cross-type-while-moving
+  /// Literal value: fast-replaceable-no-cross-type-while-moving
   /// </summary>
   [FactorioRconDefinitionValue("fast-replaceable-no-cross-type-while-moving")]
-    FastReplaceableNoCrossTypeWhileMoving,
+  FastReplaceableNoCrossTypeWhileMoving,
 
   /// <summary>
-  ///     Literal value: no-gap-fill-while-building
+  /// Literal value: no-gap-fill-while-building
   /// </summary>
   [FactorioRconDefinitionValue("no-gap-fill-while-building")]
-    NoGapFillWhileBuilding,
+  NoGapFillWhileBuilding,
 
   /// <summary>
-  ///     Literal value: not-flammable
+  /// Literal value: not-flammable
   /// </summary>
   [FactorioRconDefinitionValue("not-flammable")]
-    NotFlammable,
+  NotFlammable,
 
   /// <summary>
-  ///     Literal value: no-automated-item-removal
+  /// Literal value: no-automated-item-removal
   /// </summary>
   [FactorioRconDefinitionValue("no-automated-item-removal")]
-    NoAutomatedItemRemoval,
+  NoAutomatedItemRemoval,
 
   /// <summary>
-  ///     Literal value: no-automated-item-insertion
+  /// Literal value: no-automated-item-insertion
   /// </summary>
   [FactorioRconDefinitionValue("no-automated-item-insertion")]
-    NoAutomatedItemInsertion,
+  NoAutomatedItemInsertion,
 
   /// <summary>
-  ///     Literal value: no-copy-paste
+  /// Literal value: no-copy-paste
   /// </summary>
   [FactorioRconDefinitionValue("no-copy-paste")]
-    NoCopyPaste,
+  NoCopyPaste,
 
   /// <summary>
-  ///     Literal value: not-selectable-in-game
+  /// Literal value: not-selectable-in-game
   /// </summary>
   [FactorioRconDefinitionValue("not-selectable-in-game")]
-    NotSelectableInGame,
+  NotSelectableInGame,
 
   /// <summary>
-  ///     Literal value: not-upgradable
+  /// Literal value: not-upgradable
   /// </summary>
   [FactorioRconDefinitionValue("not-upgradable")]
-    NotUpgradable,
+  NotUpgradable,
 
   /// <summary>
-  ///     Literal value: not-in-kill-statistics
+  /// Literal value: not-in-kill-statistics
   /// </summary>
   [FactorioRconDefinitionValue("not-in-kill-statistics")]
-    NotInKillStatistics,
+  NotInKillStatistics,
 
   /// <summary>
-  ///     Literal value: not-in-made-in
+  /// Literal value: not-in-made-in
   /// </summary>
   [FactorioRconDefinitionValue("not-in-made-in")]
-    NotInMadeIn
+  NotInMadeIn,
+
 }
+

@@ -2,18 +2,21 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("wire_connection_id")]
 public enum WireConnectionIdEnum
 {
-    [FactorioRconDefinitionValue("electric_pole")]
-    ElectricPole,
+  [FactorioRconDefinitionValue("electric_pole")]
+  ElectricPole,
 
-    [FactorioRconDefinitionValue("power_switch_left")]
-    PowerSwitchLeft,
+  [FactorioRconDefinitionValue("power_switch_left")]
+  PowerSwitchLeft,
 
-    [FactorioRconDefinitionValue("power_switch_right")]
-    PowerSwitchRight
+  [FactorioRconDefinitionValue("power_switch_right")]
+  PowerSwitchRight,
+
 }
+

@@ -7,6 +7,11 @@ static class CompilationPipeline
 {
     public static IEnumerable<FactorioModelFile> CompileSpecification(FactorioRuntimeApiSpecification specification)
     {
+        // Classes of the specification are enumerated and compiled one by one. However some might get compiled ahead of time because they are the base class 
+        // of a another one that is before them in the enumeration. This cache will store the compiled classes so that 1) they are only compiled once and 2) they are easily
+        // accessible by looking up their name instead of going through the whole list of already compiled classes
+        Dictionary<string, FactorioModelClass> _compiledClassesCache = new();
+
         FactorioModelFileCompiler compiler = new(specification);
 
         IEnumerable<FactorioRuntimeTypeSpecification> anonymousTypes = specification.Concepts.SelectMany(FactorioSpecificationTypeExtractor.ExtractTypes)
@@ -49,24 +54,26 @@ static class CompilationPipeline
                 )
         );
 
-        files.AddRange(
-            specification.Classes.Select(c => compiler.CompileClassFile(c.Name))
-                .Select(
-                    cls => new FactorioModelFile
-                    {
-                        Name = cls.Name,
-                        Namespace = "FactorioSharp.Rcon.Model.Classes",
-                        Usings =
-                        [
-                            "FactorioSharp.Rcon.Model.Builtins",
-                            "FactorioSharp.Rcon.Model.Anonymous",
-                            "FactorioSharp.Rcon.Model.Concepts",
-                            "FactorioSharp.Rcon.Model.Definitions"
-                        ],
-                        Statements = [cls]
-                    }
-                )
-        );
+        foreach (FactorioRuntimeClassSpecification cls in specification.Classes)
+        {
+            FactorioModelClass compiledClass = CompileClass(specification, compiler, cls, _compiledClassesCache);
+
+            files.Add(
+                new FactorioModelFile
+                {
+                    Name = cls.Name,
+                    Namespace = "FactorioSharp.Rcon.Model.Classes",
+                    Usings =
+                    [
+                        "FactorioSharp.Rcon.Model.Builtins",
+                        "FactorioSharp.Rcon.Model.Anonymous",
+                        "FactorioSharp.Rcon.Model.Concepts",
+                        "FactorioSharp.Rcon.Model.Definitions"
+                    ],
+                    Statements = [compiledClass]
+                }
+            );
+        }
 
         files.AddRange(
             specification.Concepts.Select(c => compiler.CompileConceptFile(c.Name))
@@ -110,5 +117,31 @@ static class CompilationPipeline
         );
 
         return files;
+    }
+
+    static FactorioModelClass CompileClass(
+        FactorioRuntimeApiSpecification specification,
+        FactorioModelFileCompiler compiler,
+        FactorioRuntimeClassSpecification cls,
+        IDictionary<string, FactorioModelClass> compiledClassesCache
+    )
+    {
+        if (compiledClassesCache.TryGetValue(cls.Name, out FactorioModelClass? compiledClass))
+        {
+            return compiledClass;
+        }
+
+        FactorioModelClass[] baseClasses = cls.BaseClasses.Select(
+                name =>
+                {
+                    FactorioRuntimeClassSpecification baseCls = specification.Classes.First(c => c.Name == name);
+                    return CompileClass(specification, compiler, baseCls, compiledClassesCache);
+                }
+            )
+            .ToArray();
+
+        compiledClass = compiler.CompileClassFile(cls.Name, baseClasses);
+        compiledClassesCache[cls.Name] = compiledClass;
+        return compiledClass;
     }
 }

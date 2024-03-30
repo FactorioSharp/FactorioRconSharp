@@ -2,75 +2,77 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
 using FactorioSharp.Rcon.Model.Builtins;
 using FactorioSharp.Rcon.Model.Concepts;
 using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Classes;
 
 /// <summary>
-///     A circuit network associated with a given entity, connector, and wire type.
+/// A circuit network associated with a given entity, connector, and wire type.
 /// </summary>
 [FactorioRconClass("LuaCircuitNetwork")]
-public abstract class LuaCircuitNetwork : LuaObject
+public abstract class LuaCircuitNetwork: LuaObject
 {
   /// <summary>
-  ///     The entity this circuit network reference is associated with.
+  /// The entity this circuit network reference is associated with.
   /// </summary>
   [FactorioRconAttribute("entity")]
-    public LuaEntity Entity { get; private set; }
+  public LuaEntity Entity { get; private set; }
 
   /// <summary>
-  ///     The wire type this network is associated with.
+  /// The wire type this network is associated with.
   /// </summary>
   [FactorioRconAttribute("wire_type")]
-    public WireTypeEnum WireType { get; private set; }
+  public WireTypeEnum WireType { get; private set; }
 
   /// <summary>
-  ///     The circuit connector ID on the associated entity this network was gotten from.
+  /// The circuit connector ID on the associated entity this network was gotten from.
   /// </summary>
   [FactorioRconAttribute("circuit_connector_id")]
-    public CircuitConnectorIdEnum CircuitConnectorId { get; private set; }
+  public CircuitConnectorIdEnum CircuitConnectorId { get; private set; }
 
   /// <summary>
-  ///     The circuit network signals last tick. `nil` if there were no signals last tick.
+  /// The circuit network signals last tick. `nil` if there were no signals last tick.
   /// </summary>
   [FactorioRconAttribute("signals")]
-    public List<Signal> Signals { get; private set; }
+  public List<Signal> Signals { get; private set; }
 
   /// <summary>
-  ///     The circuit networks ID.
+  /// The circuit networks ID.
   /// </summary>
   [FactorioRconAttribute("network_id")]
-    public uint NetworkId { get; private set; }
+  public uint NetworkId { get; private set; }
 
   /// <summary>
-  ///     The number of circuits connected to this network.
+  /// The number of circuits connected to this network.
   /// </summary>
   [FactorioRconAttribute("connected_circuit_count")]
-    public uint ConnectedCircuitCount { get; private set; }
+  public uint ConnectedCircuitCount { get; private set; }
 
   /// <summary>
-  ///     Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the
-  ///     corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the
-  ///     game state might have occurred between the creation of the Lua object and its access.
+  /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
   /// </summary>
   [FactorioRconAttribute("valid")]
-    public bool Valid { get; private set; }
+  public bool Valid { get; private set; }
 
   /// <summary>
-  ///     The class name of this object. Available even when `valid` is false. For LuaStruct objects it may also be suffixed with a dotted path to a member of the struct.
+  /// The class name of this object. Available even when `valid` is false. For LuaStruct objects it may also be suffixed with a dotted path to a member of the struct.
   /// </summary>
   [FactorioRconAttribute("object_name")]
-    public string ObjectName { get; private set; }
+  public string ObjectName { get; private set; }
 
-    /// <param name="signal">Lua name: signal</param>
-    [FactorioRconMethod("get_signal")]
-    public abstract int GetSignal(SignalID signal);
+  /// <param name="signal">Lua name: signal</param>
+  [FactorioRconMethod("get_signal")]
+  public abstract int GetSignal(SignalID signal);
 
-    /// <summary>
-    ///     All methods and properties that this object supports.
-    /// </summary>
-    [FactorioRconMethod("help")]
-    public abstract string Help();
+  /// <summary>
+  /// All methods and properties that this object supports.
+  /// </summary>
+  [FactorioRconMethod("help")]
+  public abstract string Help();
+
 }
+

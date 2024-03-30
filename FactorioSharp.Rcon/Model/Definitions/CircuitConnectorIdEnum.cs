@@ -2,60 +2,63 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("circuit_connector_id")]
 public enum CircuitConnectorIdEnum
 {
-    [FactorioRconDefinitionValue("accumulator")]
-    Accumulator,
+  [FactorioRconDefinitionValue("accumulator")]
+  Accumulator,
 
-    [FactorioRconDefinitionValue("constant_combinator")]
-    ConstantCombinator,
+  [FactorioRconDefinitionValue("constant_combinator")]
+  ConstantCombinator,
 
-    [FactorioRconDefinitionValue("container")]
-    Container,
+  [FactorioRconDefinitionValue("container")]
+  Container,
 
-    [FactorioRconDefinitionValue("linked_container")]
-    LinkedContainer,
+  [FactorioRconDefinitionValue("linked_container")]
+  LinkedContainer,
 
-    [FactorioRconDefinitionValue("programmable_speaker")]
-    ProgrammableSpeaker,
+  [FactorioRconDefinitionValue("programmable_speaker")]
+  ProgrammableSpeaker,
 
-    [FactorioRconDefinitionValue("rail_signal")]
-    RailSignal,
+  [FactorioRconDefinitionValue("rail_signal")]
+  RailSignal,
 
-    [FactorioRconDefinitionValue("rail_chain_signal")]
-    RailChainSignal,
+  [FactorioRconDefinitionValue("rail_chain_signal")]
+  RailChainSignal,
 
-    [FactorioRconDefinitionValue("roboport")]
-    Roboport,
+  [FactorioRconDefinitionValue("roboport")]
+  Roboport,
 
-    [FactorioRconDefinitionValue("storage_tank")]
-    StorageTank,
+  [FactorioRconDefinitionValue("storage_tank")]
+  StorageTank,
 
-    [FactorioRconDefinitionValue("wall")]
-    Wall,
+  [FactorioRconDefinitionValue("wall")]
+  Wall,
 
-    [FactorioRconDefinitionValue("electric_pole")]
-    ElectricPole,
+  [FactorioRconDefinitionValue("electric_pole")]
+  ElectricPole,
 
-    [FactorioRconDefinitionValue("inserter")]
-    Inserter,
+  [FactorioRconDefinitionValue("inserter")]
+  Inserter,
 
-    [FactorioRconDefinitionValue("lamp")]
-    Lamp,
+  [FactorioRconDefinitionValue("lamp")]
+  Lamp,
 
-    [FactorioRconDefinitionValue("combinator_input")]
-    CombinatorInput,
+  [FactorioRconDefinitionValue("combinator_input")]
+  CombinatorInput,
 
-    [FactorioRconDefinitionValue("combinator_output")]
-    CombinatorOutput,
+  [FactorioRconDefinitionValue("combinator_output")]
+  CombinatorOutput,
 
-    [FactorioRconDefinitionValue("offshore_pump")]
-    OffshorePump,
+  [FactorioRconDefinitionValue("offshore_pump")]
+  OffshorePump,
 
-    [FactorioRconDefinitionValue("pump")]
-    Pump
+  [FactorioRconDefinitionValue("pump")]
+  Pump,
+
 }
+

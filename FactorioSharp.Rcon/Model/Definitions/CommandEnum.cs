@@ -2,66 +2,69 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 /// <summary>
-///     Command given to units describing what they should do.
+/// Command given to units describing what they should do.
 /// </summary>
 [FactorioRconDefinition("command")]
 public enum CommandEnum
 {
   /// <summary>
-  ///     Attack another entity.
+  /// Attack another entity.
   /// </summary>
   [FactorioRconDefinitionValue("attack")]
-    Attack,
+  Attack,
 
   /// <summary>
-  ///     Go to a specific position.
+  /// Go to a specific position.
   /// </summary>
   [FactorioRconDefinitionValue("go_to_location")]
-    GoToLocation,
+  GoToLocation,
 
   /// <summary>
-  ///     Chain commands together, see <see cref="Defines.CompoundCommand" />.
+  /// Chain commands together, see <see cref="Defines.CompoundCommand" />.
   /// </summary>
   [FactorioRconDefinitionValue("compound")]
-    Compound,
+  Compound,
 
   /// <summary>
-  ///     Do what your group wants you to do.
+  /// Do what your group wants you to do.
   /// </summary>
   [FactorioRconDefinitionValue("group")]
-    Group,
+  Group,
 
   /// <summary>
-  ///     Go to a place and attack what you see.
+  /// Go to a place and attack what you see.
   /// </summary>
   [FactorioRconDefinitionValue("attack_area")]
-    AttackArea,
+  AttackArea,
 
   /// <summary>
-  ///     Chill.
+  /// Chill.
   /// </summary>
   [FactorioRconDefinitionValue("wander")]
-    Wander,
+  Wander,
 
   /// <summary>
-  ///     Flee from another entity.
+  /// Flee from another entity.
   /// </summary>
   [FactorioRconDefinitionValue("flee")]
-    Flee,
+  Flee,
 
   /// <summary>
-  ///     Stop moving and stay where you are.
+  /// Stop moving and stay where you are.
   /// </summary>
   [FactorioRconDefinitionValue("stop")]
-    Stop,
+  Stop,
 
   /// <summary>
-  ///     Go to a position and build a base there.
+  /// Go to a position and build a base there.
   /// </summary>
   [FactorioRconDefinitionValue("build_base")]
-    BuildBase
+  BuildBase,
+
 }
+

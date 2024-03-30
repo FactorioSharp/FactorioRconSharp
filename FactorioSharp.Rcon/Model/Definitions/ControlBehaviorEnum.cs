@@ -2,6 +2,7 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
@@ -18,30 +19,32 @@ public enum ControlBehaviorInserterEnum
 [FactorioRconDefinition("control_behavior.inserter.circuit_mode_of_operation")]
 public enum ControlBehaviorInserterCircuitModeOfOperationEnum
 {
-    [FactorioRconDefinitionValue("none")]
-    None,
+  [FactorioRconDefinitionValue("none")]
+  None,
 
-    [FactorioRconDefinitionValue("enable_disable")]
-    EnableDisable,
+  [FactorioRconDefinitionValue("enable_disable")]
+  EnableDisable,
 
-    [FactorioRconDefinitionValue("set_filters")]
-    SetFilters,
+  [FactorioRconDefinitionValue("set_filters")]
+  SetFilters,
 
-    [FactorioRconDefinitionValue("read_hand_contents")]
-    ReadHandContents,
+  [FactorioRconDefinitionValue("read_hand_contents")]
+  ReadHandContents,
 
-    [FactorioRconDefinitionValue("set_stack_size")]
-    SetStackSize
+  [FactorioRconDefinitionValue("set_stack_size")]
+  SetStackSize,
+
 }
 
 [FactorioRconDefinition("control_behavior.inserter.hand_read_mode")]
 public enum ControlBehaviorInserterHandReadModeEnum
 {
-    [FactorioRconDefinitionValue("hold")]
-    Hold,
+  [FactorioRconDefinitionValue("hold")]
+  Hold,
 
-    [FactorioRconDefinitionValue("pulse")]
-    Pulse
+  [FactorioRconDefinitionValue("pulse")]
+  Pulse,
+
 }
 
 [FactorioRconDefinition("control_behavior.lamp")]
@@ -52,8 +55,9 @@ public enum ControlBehaviorLampEnum
 [FactorioRconDefinition("control_behavior.lamp.circuit_mode_of_operation")]
 public enum ControlBehaviorLampCircuitModeOfOperationEnum
 {
-    [FactorioRconDefinitionValue("use_colors")]
-    UseColors
+  [FactorioRconDefinitionValue("use_colors")]
+  UseColors,
+
 }
 
 [FactorioRconDefinition("control_behavior.logistic_container")]
@@ -64,11 +68,12 @@ public enum ControlBehaviorLogisticContainerEnum
 [FactorioRconDefinition("control_behavior.logistic_container.circuit_mode_of_operation")]
 public enum ControlBehaviorLogisticContainerCircuitModeOfOperationEnum
 {
-    [FactorioRconDefinitionValue("send_contents")]
-    SendContents,
+  [FactorioRconDefinitionValue("send_contents")]
+  SendContents,
 
-    [FactorioRconDefinitionValue("set_requests")]
-    SetRequests
+  [FactorioRconDefinitionValue("set_requests")]
+  SetRequests,
+
 }
 
 [FactorioRconDefinition("control_behavior.mining_drill")]
@@ -79,11 +84,12 @@ public enum ControlBehaviorMiningDrillEnum
 [FactorioRconDefinition("control_behavior.mining_drill.resource_read_mode")]
 public enum ControlBehaviorMiningDrillResourceReadModeEnum
 {
-    [FactorioRconDefinitionValue("this_miner")]
-    ThisMiner,
+  [FactorioRconDefinitionValue("this_miner")]
+  ThisMiner,
 
-    [FactorioRconDefinitionValue("entire_patch")]
-    EntirePatch
+  [FactorioRconDefinitionValue("entire_patch")]
+  EntirePatch,
+
 }
 
 [FactorioRconDefinition("control_behavior.transport_belt")]
@@ -94,121 +100,124 @@ public enum ControlBehaviorTransportBeltEnum
 [FactorioRconDefinition("control_behavior.transport_belt.content_read_mode")]
 public enum ControlBehaviorTransportBeltContentReadModeEnum
 {
-    [FactorioRconDefinitionValue("pulse")]
-    Pulse,
+  [FactorioRconDefinitionValue("pulse")]
+  Pulse,
 
-    [FactorioRconDefinitionValue("hold")]
-    Hold
+  [FactorioRconDefinitionValue("hold")]
+  Hold,
+
 }
 
 [FactorioRconDefinition("control_behavior.type")]
 public enum ControlBehaviorTypeEnum
 {
   /// <summary>
-  ///     <see cref="LuaContainerControlBehavior" />
+  /// <see cref="LuaContainerControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("container")]
-    Container,
+  Container,
 
   /// <summary>
-  ///     <see cref="LuaGenericOnOffControlBehavior" />
+  /// <see cref="LuaGenericOnOffControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("generic_on_off")]
-    GenericOnOff,
+  GenericOnOff,
 
   /// <summary>
-  ///     <see cref="LuaInserterControlBehavior" />
+  /// <see cref="LuaInserterControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("inserter")]
-    Inserter,
+  Inserter,
 
   /// <summary>
-  ///     <see cref="LuaLampControlBehavior" />
+  /// <see cref="LuaLampControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("lamp")]
-    Lamp,
+  Lamp,
 
   /// <summary>
-  ///     <see cref="LuaLogisticContainerControlBehavior" />
+  /// <see cref="LuaLogisticContainerControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("logistic_container")]
-    LogisticContainer,
+  LogisticContainer,
 
   /// <summary>
-  ///     <see cref="LuaRoboportControlBehavior" />
+  /// <see cref="LuaRoboportControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("roboport")]
-    Roboport,
+  Roboport,
 
   /// <summary>
-  ///     <see cref="LuaStorageTankControlBehavior" />
+  /// <see cref="LuaStorageTankControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("storage_tank")]
-    StorageTank,
+  StorageTank,
 
   /// <summary>
-  ///     <see cref="LuaTrainStopControlBehavior" />
+  /// <see cref="LuaTrainStopControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("train_stop")]
-    TrainStop,
+  TrainStop,
 
   /// <summary>
-  ///     <see cref="LuaDeciderCombinatorControlBehavior" />
+  /// <see cref="LuaDeciderCombinatorControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("decider_combinator")]
-    DeciderCombinator,
+  DeciderCombinator,
 
   /// <summary>
-  ///     <see cref="LuaArithmeticCombinatorControlBehavior" />
+  /// <see cref="LuaArithmeticCombinatorControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("arithmetic_combinator")]
-    ArithmeticCombinator,
+  ArithmeticCombinator,
 
   /// <summary>
-  ///     <see cref="LuaConstantCombinatorControlBehavior" />
+  /// <see cref="LuaConstantCombinatorControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("constant_combinator")]
-    ConstantCombinator,
+  ConstantCombinator,
 
   /// <summary>
-  ///     <see cref="LuaTransportBeltControlBehavior" />
+  /// <see cref="LuaTransportBeltControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("transport_belt")]
-    TransportBelt,
+  TransportBelt,
 
   /// <summary>
-  ///     <see cref="LuaAccumulatorControlBehavior" />
+  /// <see cref="LuaAccumulatorControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("accumulator")]
-    Accumulator,
+  Accumulator,
 
   /// <summary>
-  ///     <see cref="LuaRailSignalControlBehavior" />
+  /// <see cref="LuaRailSignalControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("rail_signal")]
-    RailSignal,
+  RailSignal,
 
   /// <summary>
-  ///     <see cref="LuaRailChainSignalControlBehavior" />
+  /// <see cref="LuaRailChainSignalControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("rail_chain_signal")]
-    RailChainSignal,
+  RailChainSignal,
 
   /// <summary>
-  ///     <see cref="LuaWallControlBehavior" />
+  /// <see cref="LuaWallControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("wall")]
-    Wall,
+  Wall,
 
   /// <summary>
-  ///     <see cref="LuaMiningDrillControlBehavior" />
+  /// <see cref="LuaMiningDrillControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("mining_drill")]
-    MiningDrill,
+  MiningDrill,
 
   /// <summary>
-  ///     <see cref="LuaProgrammableSpeakerControlBehavior" />
+  /// <see cref="LuaProgrammableSpeakerControlBehavior" />
   /// </summary>
   [FactorioRconDefinitionValue("programmable_speaker")]
-    ProgrammableSpeaker
+  ProgrammableSpeaker,
+
 }
+

@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,20 +14,22 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class LogisticParameters
 {
   /// <summary>
-  ///     The item. `nil` clears the filter.
+  /// The item. `nil` clears the filter.
   /// </summary>
   [FactorioRconAttribute("name")]
-    public string Name { get; set; }
+  public string Name { get; set; }
 
   /// <summary>
-  ///     Defaults to `0`.
+  /// Defaults to `0`.
   /// </summary>
   [FactorioRconAttribute("min")]
-    public uint Min { get; set; }
+  public uint Min { get; set; }
 
   /// <summary>
-  ///     Defaults to max uint.
+  /// Defaults to max uint.
   /// </summary>
   [FactorioRconAttribute("max")]
-    public uint Max { get; set; }
+  public uint Max { get; set; }
+
 }
+

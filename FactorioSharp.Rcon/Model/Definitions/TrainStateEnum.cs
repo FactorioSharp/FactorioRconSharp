@@ -2,6 +2,7 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
@@ -9,68 +10,70 @@ namespace FactorioSharp.Rcon.Model.Definitions;
 public enum TrainStateEnum
 {
   /// <summary>
-  ///     Normal state -- following the path.
+  /// Normal state -- following the path.
   /// </summary>
   [FactorioRconDefinitionValue("on_the_path")]
-    OnThePath,
+  OnThePath,
 
   /// <summary>
-  ///     Had path and lost it -- must stop.
+  /// Had path and lost it -- must stop.
   /// </summary>
   [FactorioRconDefinitionValue("path_lost")]
-    PathLost,
+  PathLost,
 
   /// <summary>
-  ///     Doesn't have anywhere to go.
+  /// Doesn't have anywhere to go.
   /// </summary>
   [FactorioRconDefinitionValue("no_schedule")]
-    NoSchedule,
+  NoSchedule,
 
   /// <summary>
-  ///     Has no path and is stopped.
+  /// Has no path and is stopped.
   /// </summary>
   [FactorioRconDefinitionValue("no_path")]
-    NoPath,
+  NoPath,
 
   /// <summary>
-  ///     Braking before a rail signal.
+  /// Braking before a rail signal.
   /// </summary>
   [FactorioRconDefinitionValue("arrive_signal")]
-    ArriveSignal,
+  ArriveSignal,
 
   /// <summary>
-  ///     Waiting at a signal.
+  /// Waiting at a signal.
   /// </summary>
   [FactorioRconDefinitionValue("wait_signal")]
-    WaitSignal,
+  WaitSignal,
 
   /// <summary>
-  ///     Braking before a station.
+  /// Braking before a station.
   /// </summary>
   [FactorioRconDefinitionValue("arrive_station")]
-    ArriveStation,
+  ArriveStation,
 
   /// <summary>
-  ///     Waiting at a station.
+  /// Waiting at a station.
   /// </summary>
   [FactorioRconDefinitionValue("wait_station")]
-    WaitStation,
+  WaitStation,
 
   /// <summary>
-  ///     Switched to manual control and has to stop.
+  /// Switched to manual control and has to stop.
   /// </summary>
   [FactorioRconDefinitionValue("manual_control_stop")]
-    ManualControlStop,
+  ManualControlStop,
 
   /// <summary>
-  ///     Can move if user explicitly sits in and rides the train.
+  /// Can move if user explicitly sits in and rides the train.
   /// </summary>
   [FactorioRconDefinitionValue("manual_control")]
-    ManualControl,
+  ManualControl,
 
   /// <summary>
-  ///     Same as no_path but all candidate train stops are full
+  /// Same as no_path but all candidate train stops are full
   /// </summary>
   [FactorioRconDefinitionValue("destination_full")]
-    DestinationFull
+  DestinationFull,
+
 }
+

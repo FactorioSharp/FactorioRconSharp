@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class PrototypeHistory
 {
   /// <summary>
-  ///     The mod that created this prototype.
+  /// The mod that created this prototype.
   /// </summary>
   [FactorioRconAttribute("created")]
-    public string Created { get; set; }
+  public string Created { get; set; }
 
   /// <summary>
-  ///     The mods that changed this prototype in the order they changed it.
+  /// The mods that changed this prototype in the order they changed it.
   /// </summary>
   [FactorioRconAttribute("changed")]
-    public List<string> Changed { get; set; }
+  public List<string> Changed { get; set; }
+
 }
+

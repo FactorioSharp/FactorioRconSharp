@@ -4,13 +4,17 @@
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
 using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Used to filter out irrelevant event callbacks in a performant way.
+/// Used to filter out irrelevant event callbacks in a performant way.
 /// </summary>
 [FactorioRconConcept("EventFilter")]
-public class EventFilter : Alias<List<Union424113022>>
+public class EventFilter: Alias<List<Union593138019>>
 {
 }
+

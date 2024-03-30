@@ -21,7 +21,7 @@ public class FactorioModelFileCompiler
         _specification = specification;
     }
 
-    public FactorioModelClass CompileClassFile(string clsName)
+    public FactorioModelClass CompileClassFile(string clsName, FactorioModelClass[] compiledBaseClasses)
     {
         FactorioRuntimeClassSpecification? cls = _specification.Classes.SingleOrDefault(c => c.Name == clsName);
         if (cls == null)
@@ -29,7 +29,7 @@ public class FactorioModelFileCompiler
             throw new InvalidOperationException($"Could not find specification of class {clsName}");
         }
 
-        return CompileClass(cls);
+        return CompileClass(cls, compiledBaseClasses);
     }
 
     public (FactorioModelTopLevelStatement CompiledConcept, IEnumerable<FactorioModelTopLevelStatement> AuxiliaryTypes) CompileConceptFile(string conceptName)
@@ -59,6 +59,7 @@ public class FactorioModelFileCompiler
         {
             Name = "FactorioRconGlobals",
             Documentation = new FactorioModelDocumentation { Summary = "Objects and methods available globally in the Factorio console" },
+            IsAbstract = true,
             Properties = _specification.GlobalObjects.Select(
                     o => new FactorioModelClassProperty
                     {
@@ -76,9 +77,22 @@ public class FactorioModelFileCompiler
             Methods = _specification.GlobalFunctions.Select(CompileMethod).ToArray()
         };
 
-    FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls)
+    FactorioModelClass CompileClass(FactorioRuntimeClassSpecification cls, FactorioModelClass[] compiledBaseClasses)
     {
         string name = SanitizeLuaName(cls.Name);
+
+        IEnumerable<FactorioRuntimeAttributeSpecification> attributesNotInBaseClasses =
+            cls.Attributes.Where(a => compiledBaseClasses.SelectMany(c => c.Properties).All(p => p.LuaName != a.Name));
+        FactorioModelClassProperty[] properties = attributesNotInBaseClasses.OrderBy(a => a.Order)
+            .Select(a => CompileProperty(a, name))
+            .Concat(cls.Operators.Where(o => o.Name != FactorioRuntimeOperatorName.Index).Select(CompileProperty))
+            .ToArray();
+
+        FactorioModelClassOperator[] operators = cls.Operators.OrderBy(o => o.Order).Where(o => o.Name == FactorioRuntimeOperatorName.Index).Select(CompileOperator).ToArray();
+
+        IEnumerable<FactorioRuntimeMethodSpecification> methodsNotInBaseClasses =
+            cls.Methods.Where(a => compiledBaseClasses.SelectMany(c => c.Methods).All(p => p.LuaName != a.Name));
+        FactorioModelClassMethod[] methods = methodsNotInBaseClasses.OrderBy(m => m.Order).Select(CompileMethod).ToArray();
 
         return new FactorioModelClass
         {
@@ -88,14 +102,12 @@ public class FactorioModelFileCompiler
             {
                 Summary = cls.Description, Examples = BuildExamples(cls.Examples)
             },
-            BaseClass = "LuaObject",
+            BaseClass = cls.BaseClasses.Length == 0 ? "LuaObject" : cls.BaseClasses.First(),
+            IsAbstract = operators.Length > 0 || methods.Length > 0 || compiledBaseClasses.Any(c => c.IsAbstract),
             IsFactorioClass = true,
-            Properties = cls.Attributes.OrderBy(a => a.Order)
-                .Select(a => CompileProperty(a, name))
-                .Concat(cls.Operators.Where(o => o.Name != FactorioRuntimeOperatorName.Index).Select(CompileProperty))
-                .ToArray(),
-            Operators = cls.Operators.OrderBy(o => o.Order).Where(o => o.Name == FactorioRuntimeOperatorName.Index).Select(CompileOperator).ToArray(),
-            Methods = cls.Methods.OrderBy(m => m.Order).Select(CompileMethod).ToArray()
+            Properties = properties,
+            Operators = operators,
+            Methods = methods
         };
     }
 

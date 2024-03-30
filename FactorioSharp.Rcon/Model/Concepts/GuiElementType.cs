@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,152 +14,154 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public enum GuiElementType
 {
   /// <summary>
-  ///     Literal value: button
+  /// Literal value: button
   /// </summary>
   [FactorioRconDefinitionValue("button")]
-    Button,
+  Button,
 
   /// <summary>
-  ///     Literal value: sprite-button
+  /// Literal value: sprite-button
   /// </summary>
   [FactorioRconDefinitionValue("sprite-button")]
-    SpriteButton,
+  SpriteButton,
 
   /// <summary>
-  ///     Literal value: checkbox
+  /// Literal value: checkbox
   /// </summary>
   [FactorioRconDefinitionValue("checkbox")]
-    Checkbox,
+  Checkbox,
 
   /// <summary>
-  ///     Literal value: flow
+  /// Literal value: flow
   /// </summary>
   [FactorioRconDefinitionValue("flow")]
-    Flow,
+  Flow,
 
   /// <summary>
-  ///     Literal value: frame
+  /// Literal value: frame
   /// </summary>
   [FactorioRconDefinitionValue("frame")]
-    Frame,
+  Frame,
 
   /// <summary>
-  ///     Literal value: label
+  /// Literal value: label
   /// </summary>
   [FactorioRconDefinitionValue("label")]
-    Label,
+  Label,
 
   /// <summary>
-  ///     Literal value: line
+  /// Literal value: line
   /// </summary>
   [FactorioRconDefinitionValue("line")]
-    Line,
+  Line,
 
   /// <summary>
-  ///     Literal value: progressbar
+  /// Literal value: progressbar
   /// </summary>
   [FactorioRconDefinitionValue("progressbar")]
-    Progressbar,
+  Progressbar,
 
   /// <summary>
-  ///     Literal value: table
+  /// Literal value: table
   /// </summary>
   [FactorioRconDefinitionValue("table")]
-    Table,
+  Table,
 
   /// <summary>
-  ///     Literal value: textfield
+  /// Literal value: textfield
   /// </summary>
   [FactorioRconDefinitionValue("textfield")]
-    Textfield,
+  Textfield,
 
   /// <summary>
-  ///     Literal value: radiobutton
+  /// Literal value: radiobutton
   /// </summary>
   [FactorioRconDefinitionValue("radiobutton")]
-    Radiobutton,
+  Radiobutton,
 
   /// <summary>
-  ///     Literal value: sprite
+  /// Literal value: sprite
   /// </summary>
   [FactorioRconDefinitionValue("sprite")]
-    Sprite,
+  Sprite,
 
   /// <summary>
-  ///     Literal value: scroll-pane
+  /// Literal value: scroll-pane
   /// </summary>
   [FactorioRconDefinitionValue("scroll-pane")]
-    ScrollPane,
+  ScrollPane,
 
   /// <summary>
-  ///     Literal value: drop-down
+  /// Literal value: drop-down
   /// </summary>
   [FactorioRconDefinitionValue("drop-down")]
-    DropDown,
+  DropDown,
 
   /// <summary>
-  ///     Literal value: list-box
+  /// Literal value: list-box
   /// </summary>
   [FactorioRconDefinitionValue("list-box")]
-    ListBox,
+  ListBox,
 
   /// <summary>
-  ///     Literal value: camera
+  /// Literal value: camera
   /// </summary>
   [FactorioRconDefinitionValue("camera")]
-    Camera,
+  Camera,
 
   /// <summary>
-  ///     Literal value: choose-elem-button
+  /// Literal value: choose-elem-button
   /// </summary>
   [FactorioRconDefinitionValue("choose-elem-button")]
-    ChooseElemButton,
+  ChooseElemButton,
 
   /// <summary>
-  ///     Literal value: text-box
+  /// Literal value: text-box
   /// </summary>
   [FactorioRconDefinitionValue("text-box")]
-    TextBox,
+  TextBox,
 
   /// <summary>
-  ///     Literal value: slider
+  /// Literal value: slider
   /// </summary>
   [FactorioRconDefinitionValue("slider")]
-    Slider,
+  Slider,
 
   /// <summary>
-  ///     Literal value: minimap
+  /// Literal value: minimap
   /// </summary>
   [FactorioRconDefinitionValue("minimap")]
-    Minimap,
+  Minimap,
 
   /// <summary>
-  ///     Literal value: entity-preview
+  /// Literal value: entity-preview
   /// </summary>
   [FactorioRconDefinitionValue("entity-preview")]
-    EntityPreview,
+  EntityPreview,
 
   /// <summary>
-  ///     Literal value: empty-widget
+  /// Literal value: empty-widget
   /// </summary>
   [FactorioRconDefinitionValue("empty-widget")]
-    EmptyWidget,
+  EmptyWidget,
 
   /// <summary>
-  ///     Literal value: tabbed-pane
+  /// Literal value: tabbed-pane
   /// </summary>
   [FactorioRconDefinitionValue("tabbed-pane")]
-    TabbedPane,
+  TabbedPane,
 
   /// <summary>
-  ///     Literal value: tab
+  /// Literal value: tab
   /// </summary>
   [FactorioRconDefinitionValue("tab")]
-    Tab,
+  Tab,
 
   /// <summary>
-  ///     Literal value: switch
+  /// Literal value: switch
   /// </summary>
   [FactorioRconDefinitionValue("switch")]
-    Switch
+  Switch,
+
 }
+

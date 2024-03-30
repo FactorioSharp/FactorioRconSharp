@@ -3,6 +3,10 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -10,8 +14,10 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class ModSetting
 {
   /// <summary>
-  ///     The value of the mod setting. The type depends on the kind of setting.
+  /// The value of the mod setting. The type depends on the kind of setting.
   /// </summary>
   [FactorioRconAttribute("value")]
-    public Union1680461584 Value { get; set; }
+  public Union1558421484 Value { get; set; }
+
 }
+

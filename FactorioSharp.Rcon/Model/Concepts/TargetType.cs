@@ -2,30 +2,37 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Target type of an <see cref="AmmoType" />.
+/// Target type of an <see cref="AmmoType" />.
 /// </summary>
 [FactorioRconDefinition("TargetType")]
 public enum TargetType
 {
   /// <summary>
-  ///     Literal value: entity
+  /// Literal value: entity
   /// </summary>
   [FactorioRconDefinitionValue("entity")]
-    Entity,
+  Entity,
 
   /// <summary>
-  ///     Literal value: position
+  /// Literal value: position
   /// </summary>
   [FactorioRconDefinitionValue("position")]
-    Position,
+  Position,
 
   /// <summary>
-  ///     Literal value: direction
+  /// Literal value: direction
   /// </summary>
   [FactorioRconDefinitionValue("direction")]
-    Direction
+  Direction,
+
 }
+

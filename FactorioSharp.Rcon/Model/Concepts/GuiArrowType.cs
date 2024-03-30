@@ -2,60 +2,67 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Used by <see cref="GuiArrowSpecification" />.
+/// Used by <see cref="GuiArrowSpecification" />.
 /// </summary>
 [FactorioRconDefinition("GuiArrowType")]
 public enum GuiArrowType
 {
   /// <summary>
-  ///     Literal value: nowhere
+  /// Literal value: nowhere
   /// </summary>
   [FactorioRconDefinitionValue("nowhere")]
-    Nowhere,
+  Nowhere,
 
   /// <summary>
-  ///     Literal value: goal
+  /// Literal value: goal
   /// </summary>
   [FactorioRconDefinitionValue("goal")]
-    Goal,
+  Goal,
 
   /// <summary>
-  ///     Literal value: entity_info
+  /// Literal value: entity_info
   /// </summary>
   [FactorioRconDefinitionValue("entity_info")]
-    EntityInfo,
+  EntityInfo,
 
   /// <summary>
-  ///     Literal value: active_window
+  /// Literal value: active_window
   /// </summary>
   [FactorioRconDefinitionValue("active_window")]
-    ActiveWindow,
+  ActiveWindow,
 
   /// <summary>
-  ///     Literal value: entity
+  /// Literal value: entity
   /// </summary>
   [FactorioRconDefinitionValue("entity")]
-    Entity,
+  Entity,
 
   /// <summary>
-  ///     Literal value: position
+  /// Literal value: position
   /// </summary>
   [FactorioRconDefinitionValue("position")]
-    Position,
+  Position,
 
   /// <summary>
-  ///     Literal value: crafting_queue
+  /// Literal value: crafting_queue
   /// </summary>
   [FactorioRconDefinitionValue("crafting_queue")]
-    CraftingQueue,
+  CraftingQueue,
 
   /// <summary>
-  ///     Literal value: item_stack
+  /// Literal value: item_stack
   /// </summary>
   [FactorioRconDefinitionValue("item_stack")]
-    ItemStack
+  ItemStack,
+
 }
+

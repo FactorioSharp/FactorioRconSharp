@@ -2,21 +2,24 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("rail_connection_direction")]
 public enum RailConnectionDirectionEnum
 {
-    [FactorioRconDefinitionValue("left")]
-    Left,
+  [FactorioRconDefinitionValue("left")]
+  Left,
 
-    [FactorioRconDefinitionValue("straight")]
-    Straight,
+  [FactorioRconDefinitionValue("straight")]
+  Straight,
 
-    [FactorioRconDefinitionValue("right")]
-    Right,
+  [FactorioRconDefinitionValue("right")]
+  Right,
 
-    [FactorioRconDefinitionValue("none")]
-    None
+  [FactorioRconDefinitionValue("none")]
+  None,
+
 }
+

@@ -2,18 +2,21 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
 [FactorioRconDefinition("difficulty")]
 public enum DifficultyEnum
 {
-    [FactorioRconDefinitionValue("easy")]
-    Easy,
+  [FactorioRconDefinitionValue("easy")]
+  Easy,
 
-    [FactorioRconDefinitionValue("normal")]
-    Normal,
+  [FactorioRconDefinitionValue("normal")]
+  Normal,
 
-    [FactorioRconDefinitionValue("hard")]
-    Hard
+  [FactorioRconDefinitionValue("hard")]
+  Hard,
+
 }
+

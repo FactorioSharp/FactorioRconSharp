@@ -2,6 +2,7 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
@@ -9,20 +10,22 @@ namespace FactorioSharp.Rcon.Model.Definitions;
 public enum PrintSkipEnum
 {
   /// <summary>
-  ///     Print will not be skipped.
+  /// Print will not be skipped.
   /// </summary>
   [FactorioRconDefinitionValue("never")]
-    Never,
+  Never,
 
   /// <summary>
-  ///     Print will be skipped if same text was recently printed (within last 60 ticks). Used by most game messages.
+  /// Print will be skipped if same text was recently printed (within last 60 ticks). Used by most game messages.
   /// </summary>
   [FactorioRconDefinitionValue("if_redundant")]
-    IfRedundant,
+  IfRedundant,
 
   /// <summary>
-  ///     Print will be skipped if same text is still visible (printed within last 1152 ticks). Used by some notifications.
+  /// Print will be skipped if same text is still visible (printed within last 1152 ticks). Used by some notifications.
   /// </summary>
   [FactorioRconDefinitionValue("if_visible")]
-    IfVisible
+  IfVisible,
+
 }
+

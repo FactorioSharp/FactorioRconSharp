@@ -2,6 +2,7 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
@@ -9,38 +10,40 @@ namespace FactorioSharp.Rcon.Model.Definitions;
 public enum ControllersEnum
 {
   /// <summary>
-  ///     Can't interact with the world, can only observe. Used in the multiplayer waiting-to-respawn screen.
+  /// Can't interact with the world, can only observe. Used in the multiplayer waiting-to-respawn screen.
   /// </summary>
   [FactorioRconDefinitionValue("ghost")]
-    Ghost,
+  Ghost,
 
   /// <summary>
-  ///     The controller controls a character. This is the default controller in freeplay.
+  /// The controller controls a character. This is the default controller in freeplay.
   /// </summary>
   [FactorioRconDefinitionValue("character")]
-    Character,
+  Character,
 
   /// <summary>
-  ///     The controller isn't tied to a character. This is the default controller in sandbox.
+  /// The controller isn't tied to a character. This is the default controller in sandbox.
   /// </summary>
   [FactorioRconDefinitionValue("god")]
-    God,
+  God,
 
   /// <summary>
-  ///     The Editor Controller near ultimate power to do almost anything in the game.
+  /// The Editor Controller near ultimate power to do almost anything in the game.
   /// </summary>
   [FactorioRconDefinitionValue("editor")]
-    Editor,
+  Editor,
 
   /// <summary>
-  ///     The player can't interact with the world, and the camera pans around in a predefined manner.
+  /// The player can't interact with the world, and the camera pans around in a predefined manner.
   /// </summary>
   [FactorioRconDefinitionValue("cutscene")]
-    Cutscene,
+  Cutscene,
 
   /// <summary>
-  ///     Can't change anything in the world but can view anything.
+  /// Can't change anything in the world but can view anything.
   /// </summary>
   [FactorioRconDefinitionValue("spectator")]
-    Spectator
+  Spectator,
+
 }
+

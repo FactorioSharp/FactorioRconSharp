@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,11 +14,13 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class TrainSchedule
 {
   /// <summary>
-  ///     Index of the currently active record
+  /// Index of the currently active record
   /// </summary>
   [FactorioRconAttribute("current")]
-    public uint Current { get; set; }
+  public uint Current { get; set; }
 
-    [FactorioRconAttribute("records")]
-    public List<TrainScheduleRecord> Records { get; set; }
+  [FactorioRconAttribute("records")]
+  public List<TrainScheduleRecord> Records { get; set; }
+
 }
+

@@ -2,6 +2,7 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Definitions;
 
@@ -9,20 +10,22 @@ namespace FactorioSharp.Rcon.Model.Definitions;
 public enum GameControllerInteractionEnum
 {
   /// <summary>
-  ///     Game controller will always hover this element regardless of type or state.
+  /// Game controller will always hover this element regardless of type or state.
   /// </summary>
   [FactorioRconDefinitionValue("always")]
-    Always,
+  Always,
 
   /// <summary>
-  ///     Hover according to the element type and implementation.
+  /// Hover according to the element type and implementation.
   /// </summary>
   [FactorioRconDefinitionValue("never")]
-    Never,
+  Never,
 
   /// <summary>
-  ///     Never hover this element with a game controller.
+  /// Never hover this element with a game controller.
   /// </summary>
   [FactorioRconDefinitionValue("normal")]
-    Normal
+  Normal,
+
 }
+

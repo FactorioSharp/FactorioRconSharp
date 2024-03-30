@@ -2,6 +2,11 @@
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 using FactorioSharp.Rcon.Core.Abstractions;
+using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -9,20 +14,22 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class MapGenPreset
 {
   /// <summary>
-  ///     The string used to alphabetically sort the presets. It is a simple string that has no additional semantic meaning.
+  /// The string used to alphabetically sort the presets. It is a simple string that has no additional semantic meaning.
   /// </summary>
   [FactorioRconAttribute("order")]
-    public string Order { get; set; }
+  public string Order { get; set; }
 
   /// <summary>
-  ///     Whether this is the preset that is selected by default.
+  /// Whether this is the preset that is selected by default.
   /// </summary>
   [FactorioRconAttribute("default")]
-    public bool Default { get; set; }
+  public bool Default { get; set; }
 
-    [FactorioRconAttribute("basic_settings")]
-    public MapGenSettings BasicSettings { get; set; }
+  [FactorioRconAttribute("basic_settings")]
+  public MapGenSettings BasicSettings { get; set; }
 
-    [FactorioRconAttribute("advanced_settings")]
-    public AdvancedMapGenSettings AdvancedSettings { get; set; }
+  [FactorioRconAttribute("advanced_settings")]
+  public AdvancedMapGenSettings AdvancedSettings { get; set; }
+
 }
+

@@ -3,15 +3,20 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 using OneOf;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
 /// <summary>
-///     Same as <see cref="Color" />, but red, green, blue and alpha values can be any floating point number, without any special handling of the range [1, 255].
+/// Same as <see cref="Color" />, but red, green, blue and alpha values can be any floating point number, without any special handling of the range [1, 255].
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("ColorModifier")]
-public partial class ColorModifier : OneOfBase<Table1094727361, Tuple625899554>
+public partial class ColorModifier: OneOfBase<Table243645727, Tuple1768205428>
 {
 }
+

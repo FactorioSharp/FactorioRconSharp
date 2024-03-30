@@ -3,6 +3,10 @@
 
 using FactorioSharp.Rcon.Core.Abstractions;
 using FactorioSharp.Rcon.Model.Anonymous;
+using FactorioSharp.Rcon.Model.Builtins;
+using FactorioSharp.Rcon.Model.Classes;
+using FactorioSharp.Rcon.Model.Definitions;
+using FactorioSharp.Rcon.Model.Utils;
 
 namespace FactorioSharp.Rcon.Model.Concepts;
 
@@ -10,14 +14,16 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class DamageTypeFilters
 {
   /// <summary>
-  ///     Whether this is a whitelist or a blacklist of damage types. `true` means whitelist.
+  /// Whether this is a whitelist or a blacklist of damage types. `true` means whitelist.
   /// </summary>
   [FactorioRconAttribute("whitelist")]
-    public bool Whitelist { get; set; }
+  public bool Whitelist { get; set; }
 
   /// <summary>
-  ///     The damage types to filter for. The value in the dictionary is meaningless and exists just to allow for easy lookup.
+  /// The damage types to filter for. The value in the dictionary is meaningless and exists just to allow for easy lookup.
   /// </summary>
   [FactorioRconAttribute("types")]
-    public Dictionary<string, Literal666164478> Types { get; set; }
+  public Dictionary<string, Literal572066743> Types { get; set; }
+
 }
+

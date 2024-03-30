@@ -78,9 +78,7 @@ public static partial class FactorioModelWriter
             }
         }
 
-        bool isAbstract = cls.Methods.Length != 0 || cls.Operators.Length != 0;
-
-        string classDeclaration = $"public {(isAbstract ? "abstract " : "")}{(cls.IsPartial ? "partial " : "")}class {cls.Name}";
+        string classDeclaration = $"public {(cls.IsAbstract ? "abstract " : "")}{(cls.IsPartial ? "partial " : "")}class {cls.Name}";
 
         if (string.IsNullOrWhiteSpace(cls.BaseClass))
         {
