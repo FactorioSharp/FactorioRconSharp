@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -42,9 +43,7 @@ class OneOfJsonConverterFactory : JsonConverterFactory
                     continue;
                 }
 
-                Type oneOfTypeGeneric = OneOfGenericTypes[possibleTypes.Length - 1];
-                Type oneOfType = oneOfTypeGeneric.MakeGenericType(possibleTypes);
-                MethodInfo? factoryMethod = oneOfType.GetMethod($"FromT{index}", BindingFlags.Static | BindingFlags.Public);
+                MethodInfo? factoryMethod = GetOneOfFactoryMethod(possibleTypes, index);
                 if (factoryMethod == null)
                 {
                     continue;
@@ -59,8 +58,82 @@ class OneOfJsonConverterFactory : JsonConverterFactory
             throw new InvalidOperationException($"Cannot convert value of type {value.GetType()} to type {typeToConvert}");
         }
 
+        public override IOneOf ReadAsPropertyName(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            string? paramName = reader.GetString();
+            if (paramName == null)
+            {
+                throw new InvalidOperationException("Invalid parameter name");
+            }
+
+            Type[] possibleTypes = FindPossibleUnionTypes(typeToConvert);
+            for (int index = 0; index < possibleTypes.Length; index++)
+            {
+                Type type = possibleTypes[index];
+
+                if (type == typeof(string))
+                {
+                    MethodInfo? factoryMethod = GetOneOfFactoryMethod(possibleTypes, index);
+                    if (factoryMethod == null)
+                    {
+                        continue;
+                    }
+
+                    IOneOf ctorInput = (IOneOf)factoryMethod.Invoke(this, [paramName]);
+                    return (IOneOf)Activator.CreateInstance(typeToConvert, ctorInput);
+                }
+            }
+
+            throw new InvalidOperationException($"Cannot convert value of type {typeToConvert} to parameter name");
+        }
+
 
         public override void Write(Utf8JsonWriter writer, IOneOf value, JsonSerializerOptions options) => JsonSerializer.Serialize(writer, value.Value, options);
+
+        public override void WriteAsPropertyName(Utf8JsonWriter writer, IOneOf value, JsonSerializerOptions options) =>
+            JsonSerializer.Serialize(writer, value.Value.ToString(), options);
+
+        static bool TryDeserializeFromString(string value, Type typeToConvert, JsonSerializerOptions options, [NotNullWhen(true)] out IOneOf? result)
+        {
+            Type[] possibleTypes = FindPossibleUnionTypes(typeToConvert);
+            for (int index = 0; index < possibleTypes.Length; index++)
+            {
+                Type type = possibleTypes[index];
+
+                object? deserialized = JsonSerializer.Deserialize(value, type, options);
+                if (deserialized == null)
+                {
+                    continue;
+                }
+
+                Type oneOfTypeGeneric = OneOfGenericTypes[possibleTypes.Length - 1];
+                Type oneOfType = oneOfTypeGeneric.MakeGenericType(possibleTypes);
+                MethodInfo? factoryMethod = oneOfType.GetMethod($"FromT{index}", BindingFlags.Static | BindingFlags.Public);
+                if (factoryMethod == null)
+                {
+                    continue;
+                }
+
+                IOneOf ctorInput = (IOneOf)factoryMethod.Invoke(null, [deserialized]);
+                result = (IOneOf)Activator.CreateInstance(typeToConvert, ctorInput);
+
+                return true;
+            }
+
+            result = null;
+            return false;
+        }
+
+        /// <summary>
+        ///     Get the method OneOf&lt;T1,...Tn&gt;.FromTi where n is the length of <see cref="possibleTypes" /> and i is typeIndex
+        /// </summary>
+        static MethodInfo? GetOneOfFactoryMethod(Type[] possibleTypes, int typeIndex)
+        {
+            Type oneOfTypeGeneric = OneOfGenericTypes[possibleTypes.Length - 1];
+            Type oneOfType = oneOfTypeGeneric.MakeGenericType(possibleTypes);
+            MethodInfo? factoryMethod = oneOfType.GetMethod($"FromT{typeIndex}", BindingFlags.Static | BindingFlags.Public);
+            return factoryMethod;
+        }
     }
 
     static Type[] FindPossibleUnionTypes(Type typeToConvert)
