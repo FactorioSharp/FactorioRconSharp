@@ -16,12 +16,14 @@ Console.WriteLine("Connected: " + connected);
 string mapString = await client.ReadAsync(g => g.Game.GetMapExchangeString());
 int playerCount = await client.ReadAsync(g => (int)g.Game.Players.Length);
 DifficultyEnum difficulty = await client.ReadAsync(g => g.Game.Difficulty);
+LuaCustomTable<Union66691991, LuaForce> forces = await client.ReadAsync(g => g.Game.Forces);
 LuaCustomTable<string, LuaItemPrototype> items = await client.ReadAsync(g => g.Game.ItemPrototypes);
 Dictionary<string, Union1732410965> inputCount = await client.ReadAsync(g => ((LuaForce)g.Game.Players[1].Force).ItemProductionStatistics.InputCounts);
 
 Console.WriteLine($"Map string: {mapString}");
 Console.WriteLine($"Player count: {playerCount}");
 Console.WriteLine($"Difficulty: {difficulty}");
+Console.WriteLine($"Forces: {JsonSerializer.Serialize(forces.Keys, jsonSerializerOptions)}");
 Console.WriteLine($"Items: {JsonSerializer.Serialize(items.Keys, jsonSerializerOptions)}");
 Console.WriteLine($"Item stats: {JsonSerializer.Serialize(inputCount, jsonSerializerOptions)}");
 
