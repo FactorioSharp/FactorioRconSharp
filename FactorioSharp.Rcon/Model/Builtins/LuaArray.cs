@@ -13,4 +13,9 @@ public class LuaArray<T>
 
     [FactorioRconLengthOperator]
     public int Length => _values.Count;
+
+    public T this[int index] {
+        get => _values[index];
+        set => _values[index] = value;
+    }
 }
