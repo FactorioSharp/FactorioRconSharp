@@ -198,7 +198,7 @@ public abstract class LuaPlayer: LuaControl
   /// The filters for this map editor infinity inventory settings.
   /// </summary>
   [FactorioRconAttribute("infinity_inventory_filters")]
-  public List<InfinityInventoryFilter> InfinityInventoryFilters { get; set; }
+  public LuaArray<InfinityInventoryFilter> InfinityInventoryFilters { get; set; }
 
   /// <summary>
   /// If the main inventory will be auto sorted.
@@ -265,7 +265,7 @@ public abstract class LuaPlayer: LuaControl
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union1408027017? printSettings = null);
+  public abstract void Print(LocalisedString message, Union2104047295? printSettings = null);
 
   /// <summary>
   /// Clear the chat console.
@@ -340,7 +340,7 @@ public abstract class LuaPlayer: LuaControl
   /// </summary>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("print_entity_statistics")]
-  public abstract void PrintEntityStatistics(List<string>? entities = null);
+  public abstract void PrintEntityStatistics(LuaArray<string>? entities = null);
 
   /// <summary>
   /// Print construction robot job counts to the players console.
@@ -418,7 +418,7 @@ public abstract class LuaPlayer: LuaControl
   /// <param name="icon">Lua name: icon</param>
   /// <param name="message">Lua name: message</param>
   [FactorioRconMethod("remove_alert")]
-  public abstract void RemoveAlert(LuaEntity? entity = null, Union1885477573? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null, SignalID? icon = null, LocalisedString? message = null);
+  public abstract void RemoveAlert(LuaEntity? entity = null, Union26942466? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null, SignalID? icon = null, LocalisedString? message = null);
 
   /// <summary>
   /// Get all alerts matching the given filters, or all alerts if no filters are given.
@@ -429,7 +429,7 @@ public abstract class LuaPlayer: LuaControl
   /// <param name="type">Lua name: type</param>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_alerts")]
-  public abstract Dictionary<uint, Dictionary<AlertTypeEnum, List<Alert>>> GetAlerts(LuaEntity? entity = null, LuaEntityPrototype? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null);
+  public abstract Dictionary<uint, Dictionary<AlertTypeEnum, LuaArray<Alert>>> GetAlerts(LuaEntity? entity = null, LuaEntityPrototype? prototype = null, MapPosition? position = null, AlertTypeEnum? type = null, SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Mutes alerts for the given alert category.
@@ -478,7 +478,7 @@ public abstract class LuaPlayer: LuaControl
   /// </summary>
   /// <param name="entity">Lua name: entity</param>
   [FactorioRconMethod("pipette_entity")]
-  public abstract bool PipetteEntity(Union2144819671 entity);
+  public abstract bool PipetteEntity(Union714321403 entity);
 
   /// <summary>
   /// Checks if this player can build the given entity at the given location on the surface the player is on.
@@ -539,7 +539,7 @@ public abstract class LuaPlayer: LuaControl
   /// Characters associated with this player will be logged off when this player disconnects but are not controlled by any player.
   /// </remarks>
   [FactorioRconMethod("get_associated_characters")]
-  public abstract List<LuaEntity> GetAssociatedCharacters();
+  public abstract LuaArray<LuaEntity> GetAssociatedCharacters();
 
   /// <summary>
   /// Associates a character with this player.
@@ -592,7 +592,7 @@ public abstract class LuaPlayer: LuaControl
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_quick_bar_slot")]
-  public abstract void SetQuickBarSlot(uint index, Union1887368604 filter);
+  public abstract void SetQuickBarSlot(uint index, Union2042404864 filter);
 
   /// <summary>
   /// Gets which quick bar page is being used for the given screen page or `nil` if not known.
@@ -713,7 +713,7 @@ public abstract class LuaPlayer: LuaControl
   /// </remarks>
   /// <param name="localisedStrings">Lua name: localised_strings</param>
   [FactorioRconMethod("request_translations")]
-  public abstract List<uint>? RequestTranslations(List<LocalisedString> localisedStrings);
+  public abstract LuaArray<uint>? RequestTranslations(LuaArray<LocalisedString> localisedStrings);
 
   /// <summary>
   /// Gets the filter for this map editor infinity filters at the given index or `nil` if the filter index doesn't exist or is empty.
@@ -728,7 +728,7 @@ public abstract class LuaPlayer: LuaControl
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_infinity_inventory_filter")]
-  public abstract void SetInfinityInventoryFilter(uint index, Union1156770098 filter);
+  public abstract void SetInfinityInventoryFilter(uint index, Union1020099081 filter);
 
   /// <summary>
   /// Clears all recipe notifications for this player.

@@ -20,7 +20,7 @@ public abstract class LuaPermissionGroups: LuaObject
   /// All of the permission groups.
   /// </summary>
   [FactorioRconAttribute("groups")]
-  public List<LuaPermissionGroup> Groups { get; private set; }
+  public LuaArray<LuaPermissionGroup> Groups { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -46,7 +46,7 @@ public abstract class LuaPermissionGroups: LuaObject
   /// </summary>
   /// <param name="group">Lua name: group</param>
   [FactorioRconMethod("get_group")]
-  public abstract LuaPermissionGroup? GetGroup(Union514997867 group);
+  public abstract LuaPermissionGroup? GetGroup(Union39584782 group);
 
   /// <summary>
   /// All methods and properties that this object supports.

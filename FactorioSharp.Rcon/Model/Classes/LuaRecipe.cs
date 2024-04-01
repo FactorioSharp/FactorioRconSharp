@@ -53,13 +53,13 @@ public abstract class LuaRecipe: LuaObject
   /// The ingredients to this recipe.
   /// </summary>
   [FactorioRconAttribute("ingredients")]
-  public List<Ingredient> Ingredients { get; private set; }
+  public LuaArray<Ingredient> Ingredients { get; private set; }
 
   /// <summary>
   /// The results/products of this recipe.
   /// </summary>
   [FactorioRconAttribute("products")]
-  public List<Product> Products { get; private set; }
+  public LuaArray<Product> Products { get; private set; }
 
   /// <summary>
   /// Is the recipe hidden? Hidden recipe don't show up in the crafting menu.

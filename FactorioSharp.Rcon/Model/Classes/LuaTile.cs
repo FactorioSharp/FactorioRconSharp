@@ -97,7 +97,7 @@ public abstract class LuaTile: LuaObject
   /// </summary>
   /// <param name="force">Lua name: force</param>
   [FactorioRconMethod("get_tile_ghosts")]
-  public abstract List<LuaTile> GetTileGhosts(ForceIdentification? force = null);
+  public abstract LuaArray<LuaTile> GetTileGhosts(ForceIdentification? force = null);
 
   /// <summary>
   /// All methods and properties that this object supports.

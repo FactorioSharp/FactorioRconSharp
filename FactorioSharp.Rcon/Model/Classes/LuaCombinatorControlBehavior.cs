@@ -17,7 +17,7 @@ public abstract class LuaCombinatorControlBehavior: LuaControlBehavior
   /// The circuit network signals sent by this combinator last tick.
   /// </summary>
   [FactorioRconAttribute("signals_last_tick")]
-  public List<Signal> SignalsLastTick { get; private set; }
+  public LuaArray<Signal> SignalsLastTick { get; private set; }
 
   /// <summary>
   /// Gets the value of a specific signal sent by this combinator behavior last tick or `nil` if the signal didn't exist.

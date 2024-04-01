@@ -380,7 +380,7 @@ public class FactorioModelFileCompiler
                         return ReplaceInvalidSharpIdentifierCharacters(name.Replace('.', '_').ToPascalCase()).ToPascalCase();
                 }
             case FactorioRuntimeArrayTypeSpecification arrayType:
-                return $"List<{BuildTypeName(arrayType.Value)}>";
+                return $"LuaArray<{BuildTypeName(arrayType.Value)}>";
             case FactorioRuntimeFunctionTypeSpecification functionType:
                 return functionType.Parameters.Length > 0 ? $"Action<{string.Join(", ", functionType.Parameters.Select(BuildTypeName))}>" : "Action";
             case FactorioRuntimeKeyValueTypeSpecification keyValueType:

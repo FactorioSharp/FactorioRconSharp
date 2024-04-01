@@ -17,7 +17,7 @@ public class ProgrammableSpeakerInstrument
   public string Name { get; set; }
 
   [FactorioRconAttribute("notes")]
-  public List<string> Notes { get; set; }
+  public LuaArray<string> Notes { get; set; }
 
 }
 

@@ -38,7 +38,7 @@ public abstract class LuaCircuitNetwork: LuaObject
   /// The circuit network signals last tick. `nil` if there were no signals last tick.
   /// </summary>
   [FactorioRconAttribute("signals")]
-  public List<Signal> Signals { get; private set; }
+  public LuaArray<Signal> Signals { get; private set; }
 
   /// <summary>
   /// The circuit networks ID.

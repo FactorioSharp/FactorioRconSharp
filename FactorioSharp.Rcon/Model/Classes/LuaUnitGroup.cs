@@ -20,7 +20,7 @@ public abstract class LuaUnitGroup: LuaObject
   /// Members of this group.
   /// </summary>
   [FactorioRconAttribute("members")]
-  public List<LuaEntity> Members { get; private set; }
+  public LuaArray<LuaEntity> Members { get; private set; }
 
   /// <summary>
   /// Group position. This can have different meanings depending on the group state. When the group is gathering, the position is the place of gathering. When the group is moving, the position is the expected position of its members along the path. When the group is attacking, it is the average position of its members.

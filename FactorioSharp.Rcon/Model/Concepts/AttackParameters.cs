@@ -17,7 +17,7 @@ public class AttackParameters
   /// The type of AttackParameter.
   /// </summary>
   [FactorioRconAttribute("type")]
-  public Literals1832342881 Type { get; set; }
+  public Literals1612390030 Type { get; set; }
 
   /// <summary>
   /// Maximum range of attack.
@@ -35,7 +35,7 @@ public class AttackParameters
   /// Defines how the range is determined.
   /// </summary>
   [FactorioRconAttribute("range_mode")]
-  public Literals255458075 RangeMode { get; set; }
+  public Literals1850457581 RangeMode { get; set; }
 
   /// <summary>
   /// When searching for the nearest enemy to attack, `fire_penalty` is added to the enemy's distance if they are on fire.
@@ -104,7 +104,7 @@ public class AttackParameters
   /// List of the names of compatible <see cref="LuaAmmoCategoryPrototype" />.
   /// </summary>
   [FactorioRconAttribute("ammo_categories")]
-  public List<string> AmmoCategories { get; set; }
+  public LuaArray<string> AmmoCategories { get; set; }
 
 }
 

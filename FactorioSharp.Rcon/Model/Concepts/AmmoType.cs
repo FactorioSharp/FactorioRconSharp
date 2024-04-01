@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class AmmoType
 {
   [FactorioRconAttribute("action")]
-  public List<TriggerItem> Action { get; set; }
+  public LuaArray<TriggerItem> Action { get; set; }
 
   [FactorioRconAttribute("target_type")]
   public TargetType TargetType { get; set; }

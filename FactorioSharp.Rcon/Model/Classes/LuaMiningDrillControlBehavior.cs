@@ -38,7 +38,7 @@ public abstract class LuaMiningDrillControlBehavior: LuaGenericOnOffControlBehav
   /// The resource entities that the mining drill will send information about to the circuit network or an empty array.
   /// </summary>
   [FactorioRconAttribute("resource_read_targets")]
-  public List<LuaEntity> ResourceReadTargets { get; private set; }
+  public LuaArray<LuaEntity> ResourceReadTargets { get; private set; }
 
 }
 

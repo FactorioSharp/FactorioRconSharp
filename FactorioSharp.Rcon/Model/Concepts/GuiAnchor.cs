@@ -35,7 +35,7 @@ public class GuiAnchor
   /// If provided, only anchors the GUI element when the opened thing matches one of the names. When reading an anchor, `names` is always populated.
   /// </summary>
   [FactorioRconAttribute("names")]
-  public List<string> Names { get; set; }
+  public LuaArray<string> Names { get; set; }
 
 }
 

@@ -197,13 +197,13 @@ public class PathFinderMapSettings
   /// The thresholds of waiting clients after each of which the per-tick work limit will be increased by the corresponding value in `overload_multipliers`. This is to avoid clients having to wait too long. Must have the same number of elements as `overload_multipliers`. Defaults to `{0, 100, 500}`.
   /// </summary>
   [FactorioRconAttribute("overload_levels")]
-  public List<uint> OverloadLevels { get; set; }
+  public LuaArray<uint> OverloadLevels { get; set; }
 
   /// <summary>
   /// The multipliers to the amount of per-tick work applied after the corresponding thresholds in `overload_levels` have been reached. Must have the same number of elements as `overload_multipliers`. Defaults to `{2, 3, 4}`.
   /// </summary>
   [FactorioRconAttribute("overload_multipliers")]
-  public List<double> OverloadMultipliers { get; set; }
+  public LuaArray<double> OverloadMultipliers { get; set; }
 
   /// <summary>
   /// The delay in ticks between decrementing the score of all paths in the negative cache by one. Defaults to `20`.

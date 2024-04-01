@@ -26,7 +26,7 @@ public abstract class LuaPermissionGroup: LuaObject
   /// The players in this group.
   /// </summary>
   [FactorioRconAttribute("players")]
-  public List<LuaPlayer> Players { get; private set; }
+  public LuaArray<LuaPlayer> Players { get; private set; }
 
   /// <summary>
   /// The group ID

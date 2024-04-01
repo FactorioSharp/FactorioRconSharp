@@ -119,7 +119,7 @@ public abstract class LuaForce: LuaObject
   /// Players belonging to this force.
   /// </summary>
   [FactorioRconAttribute("players")]
-  public List<LuaPlayer> Players { get; private set; }
+  public LuaArray<LuaPlayer> Players { get; private set; }
 
   /// <summary>
   /// Enables some higher-level AI behaviour for this force. When set to `true`, biters belonging to this force will automatically expand into new territories, build new spawners, and form unit groups. By default, this value is `true` for the enemy force and `false` for all others.
@@ -131,7 +131,7 @@ public abstract class LuaForce: LuaObject
   /// List of logistic networks, grouped by surface.
   /// </summary>
   [FactorioRconAttribute("logistic_networks")]
-  public Dictionary<string, List<LuaLogisticNetwork>> LogisticNetworks { get; private set; }
+  public Dictionary<string, LuaArray<LuaLogisticNetwork>> LogisticNetworks { get; private set; }
 
   /// <summary>
   /// The item production statistics for this force.
@@ -259,7 +259,7 @@ public abstract class LuaForce: LuaObject
   /// This is primarily useful when you want to do some action against all online players of this force.
   /// </summary>
   [FactorioRconAttribute("connected_players")]
-  public List<LuaPlayer> ConnectedPlayers { get; private set; }
+  public LuaArray<LuaPlayer> ConnectedPlayers { get; private set; }
 
   [FactorioRconAttribute("mining_drill_productivity_bonus")]
   public double MiningDrillProductivityBonus { get; set; }
@@ -312,7 +312,7 @@ public abstract class LuaForce: LuaObject
   /// To write to this, the entire table must be written. Providing an empty table or `nil` will empty the research queue and cancel the current research. Writing to this when the research queue is disabled will simply set the last research in the table as the current research.
   /// </summary>
   [FactorioRconAttribute("research_queue")]
-  public List<TechnologyIdentification> ResearchQueue { get; set; }
+  public LuaArray<TechnologyIdentification> ResearchQueue { get; set; }
 
   /// <summary>
   /// Whether research is enabled for this force, see <see cref="LuaForce.DisableResearch" />
@@ -593,11 +593,11 @@ public abstract class LuaForce: LuaObject
   /// <param name="message">Lua name: message</param>
   /// <param name="printSettings">Lua name: print_settings</param>
   [FactorioRconMethod("print")]
-  public abstract void Print(LocalisedString message, Union1408027017? printSettings = null);
+  public abstract void Print(LocalisedString message, Union2104047295? printSettings = null);
 
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_trains")]
-  public abstract List<LuaTrain> GetTrains(SurfaceIdentification? surface = null);
+  public abstract LuaArray<LuaTrain> GetTrains(SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Adds a custom chart tag to the given surface and returns the new tag or `nil` if the given position isn't valid for a chart tag.
@@ -616,7 +616,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="surface">Lua name: surface</param>
   /// <param name="area">Lua name: area</param>
   [FactorioRconMethod("find_chart_tags")]
-  public abstract List<LuaCustomChartTag> FindChartTags(SurfaceIdentification surface, BoundingBox? area = null);
+  public abstract LuaArray<LuaCustomChartTag> FindChartTags(SurfaceIdentification surface, BoundingBox? area = null);
 
   /// <summary>
   /// Gets the saved progress for the given technology or `nil` if there is no saved progress.
@@ -658,14 +658,14 @@ public abstract class LuaForce: LuaObject
   /// <param name="name">Lua name: name</param>
   /// <param name="surface">Lua name: surface</param>
   [FactorioRconMethod("get_train_stops")]
-  public abstract List<LuaEntity> GetTrainStops(Union621979189? name = null, SurfaceIdentification? surface = null);
+  public abstract LuaArray<LuaEntity> GetTrainStops(Union730525469? name = null, SurfaceIdentification? surface = null);
 
   /// <summary>
   /// Gets if the given recipe is explicitly disabled from being hand crafted.
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_hand_crafting_disabled_for_recipe")]
-  public abstract bool GetHandCraftingDisabledForRecipe(Union54721211 recipe);
+  public abstract bool GetHandCraftingDisabledForRecipe(Union1409135452 recipe);
 
   /// <summary>
   /// Sets if the given recipe can be hand-crafted. This is used to explicitly disable hand crafting a recipe - it won't allow hand-crafting otherwise not hand-craftable recipes.
@@ -673,7 +673,7 @@ public abstract class LuaForce: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="handCraftingDisabled">Lua name: hand_crafting_disabled</param>
   [FactorioRconMethod("set_hand_crafting_disabled_for_recipe")]
-  public abstract void SetHandCraftingDisabledForRecipe(Union54721211 recipe, bool handCraftingDisabled);
+  public abstract void SetHandCraftingDisabledForRecipe(Union1409135452 recipe, bool handCraftingDisabled);
 
   /// <summary>
   /// Add this technology to the back of the research queue if the queue is enabled. Otherwise, set this technology to be researched now.

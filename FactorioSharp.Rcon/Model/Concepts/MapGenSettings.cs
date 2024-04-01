@@ -44,7 +44,7 @@ public class MapGenSettings
   /// Each setting in this dictionary maps the string type to the settings for that type.
   /// </summary>
   [FactorioRconAttribute("autoplace_settings")]
-  public Dictionary<Literals1896585805, AutoplaceSettings> AutoplaceSettings { get; set; }
+  public Dictionary<Literals463982082, AutoplaceSettings> AutoplaceSettings { get; set; }
 
   /// <summary>
   /// Map generation settings for entities of the type "cliff".
@@ -80,7 +80,7 @@ public class MapGenSettings
   /// Positions of the starting areas.
   /// </summary>
   [FactorioRconAttribute("starting_points")]
-  public List<MapPosition> StartingPoints { get; set; }
+  public LuaArray<MapPosition> StartingPoints { get; set; }
 
   /// <summary>
   /// Whether peaceful mode is enabled for this map.

@@ -47,7 +47,7 @@ public abstract class LuaFluidEnergySourcePrototype: LuaObject
   /// The smoke sources for this prototype, if any.
   /// </summary>
   [FactorioRconAttribute("smoke")]
-  public List<SmokeSource> Smoke { get; private set; }
+  public LuaArray<SmokeSource> Smoke { get; private set; }
 
   [FactorioRconAttribute("maximum_temperature")]
   public double MaximumTemperature { get; private set; }

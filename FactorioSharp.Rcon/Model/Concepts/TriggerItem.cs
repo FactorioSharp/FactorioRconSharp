@@ -14,10 +14,10 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class TriggerItem
 {
   [FactorioRconAttribute("type")]
-  public Literals1305459331 Type { get; set; }
+  public Literals543162768 Type { get; set; }
 
   [FactorioRconAttribute("action_delivery")]
-  public List<TriggerDelivery> ActionDelivery { get; set; }
+  public LuaArray<TriggerDelivery> ActionDelivery { get; set; }
 
   /// <summary>
   /// The trigger will only affect entities that contain any of these flags.

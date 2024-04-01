@@ -23,7 +23,7 @@ public class TrainPathFinderPathResult
   /// Only returned if `return_path` was set to true and path was found. Contains all rails in order that are part of the found path.
   /// </summary>
   [FactorioRconAttribute("path")]
-  public List<LuaEntity> Path { get; set; }
+  public LuaArray<LuaEntity> Path { get; set; }
 
   /// <summary>
   /// If path was found, provides index of the specific goal to which the path goes to.
