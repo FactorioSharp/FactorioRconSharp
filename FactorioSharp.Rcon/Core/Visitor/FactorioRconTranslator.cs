@@ -9,6 +9,22 @@ namespace FactorioSharp.Rcon.Core.Visitor;
 public class FactorioRconTranslator : ExpressionVisitor
 {
     StringBuilder _acc = null!;
+    readonly IReadOnlyDictionary<string, object>? _dictCtx;
+    readonly object? _valueCtx;
+
+    public FactorioRconTranslator()
+    {
+    }
+
+    public FactorioRconTranslator(IReadOnlyDictionary<string, object> dictCtx)
+    {
+        _dictCtx = dictCtx;
+    }
+
+    public FactorioRconTranslator(object? valueCtx)
+    {
+        _valueCtx = valueCtx;
+    }
 
     public string BuildExpression(Expression<Action<FactorioRconGlobals>> action)
     {
@@ -19,7 +35,25 @@ public class FactorioRconTranslator : ExpressionVisitor
         return _acc.ToString();
     }
 
-    public string BuildExpression<T>(Expression<Func<FactorioRconGlobals, T>> func)
+    public string BuildExpression<TArg>(Expression<Action<FactorioRconGlobals, TArg>> action)
+    {
+        _acc = new StringBuilder();
+
+        Visit(action.Body);
+
+        return _acc.ToString();
+    }
+
+    public string BuildExpression<TValue>(Expression<Func<FactorioRconGlobals, TValue>> func)
+    {
+        _acc = new StringBuilder();
+
+        Visit(func.Body);
+
+        return _acc.ToString();
+    }
+
+    public string BuildExpression<TArg, TValue>(Expression<Func<FactorioRconGlobals, TArg, TValue>> func)
     {
         _acc = new StringBuilder();
 
@@ -162,6 +196,16 @@ public class FactorioRconTranslator : ExpressionVisitor
         throw new InvalidOperationException($"The member {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconAttribute] attribute");
     }
 
+    protected override Expression VisitParameter(ParameterExpression node)
+    {
+        if (node.Type != typeof(FactorioRconGlobals) && _valueCtx != null)
+        {
+            AppendValue(_valueCtx);
+        }
+
+        return node;
+    }
+
     protected override Expression VisitMethodCall(MethodCallExpression node)
     {
         FactorioRconMethodAttribute? attribute = node.Method.GetCustomAttribute<FactorioRconMethodAttribute>();
@@ -193,6 +237,40 @@ public class FactorioRconTranslator : ExpressionVisitor
         string? indexerName = node.Object?.Type.GetCustomAttribute<DefaultMemberAttribute>()?.MemberName;
         if (indexerName != null && node.Method.Name == $"get_{indexerName}")
         {
+            return VisitIndexer(node);
+        }
+
+        throw new InvalidOperationException($"The method {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconMethod] attribute");
+    }
+
+    Expression VisitIndexer(MethodCallExpression node)
+    {
+        if (node.Object is ParameterExpression parameterExpression && parameterExpression.Type == typeof(Dictionary<string, object>))
+        {
+            // the indexed variable is the global context
+
+            if (_dictCtx == null)
+            {
+                throw new InvalidOperationException("No context was provided");
+            }
+
+            Expression? ctxVariableNameExpression = node.Arguments.First();
+            if (ctxVariableNameExpression is not ConstantExpression { Value: string ctxVariableName })
+            {
+                throw new InvalidOperationException("Context variable name was expected to be a string");
+            }
+
+            if (_dictCtx.TryGetValue(ctxVariableName, out object? value))
+            {
+                AppendValue(value);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Variable {ctxVariableName} not in part of context");
+            }
+        }
+        else
+        {
             Visit(node.Object);
 
             _acc.Append('[');
@@ -208,11 +286,9 @@ public class FactorioRconTranslator : ExpressionVisitor
             }
 
             _acc.Append(']');
-
-            return node;
         }
 
-        throw new InvalidOperationException($"The method {node} cannot be used in an RCON expression because it is not marked with the [FactorioRconMethod] attribute");
+        return node;
     }
 
     protected override Expression VisitNewArray(NewArrayExpression node)

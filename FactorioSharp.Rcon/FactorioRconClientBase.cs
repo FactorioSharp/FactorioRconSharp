@@ -27,11 +27,45 @@ public class FactorioRconClient : IDisposable
         await _lowLevelClient.ExecuteAsync(expression);
     }
 
+    public async Task ExecuteAsync<TArg>(Expression<Action<FactorioRconGlobals, TArg>> action, TArg arg)
+    {
+        string expression = new FactorioRconTranslator(arg).BuildExpression(action);
+        await _lowLevelClient.ExecuteAsync(expression);
+    }
+
+    public async Task ExecuteAsync(Expression<Action<FactorioRconGlobals, Dictionary<string, object>>> action, Dictionary<string, object> ctx)
+    {
+        string expression = new FactorioRconTranslator(ctx).BuildExpression(action);
+        await _lowLevelClient.ExecuteAsync(expression);
+    }
+
     public async Task<T> ReadAsync<T>(Expression<Func<FactorioRconGlobals, T>> func)
     {
         string expression = new FactorioRconTranslator().BuildExpression(func);
-        string strResult;
+        return await ReadAsync<T>(expression);
+    }
 
+    public async Task<TValue> ReadAsync<TArg, TValue>(Expression<Func<FactorioRconGlobals, TArg, TValue>> func, TArg arg)
+    {
+        string expression = new FactorioRconTranslator(arg).BuildExpression(func);
+        return await ReadAsync<TValue>(expression);
+    }
+
+    public async Task<T> ReadAsync<T>(Expression<Func<FactorioRconGlobals, Dictionary<string, object>, T>> func, Dictionary<string, object> ctx)
+    {
+        string expression = new FactorioRconTranslator(ctx).BuildExpression(func);
+        return await ReadAsync<T>(expression);
+    }
+
+    public void Dispose()
+    {
+        _lowLevelClient.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    async Task<T> ReadAsync<T>(string expression)
+    {
+        string strResult;
         Type type = typeof(T);
         if (type.IsTableType())
         {
@@ -47,11 +81,5 @@ public class FactorioRconClient : IDisposable
         }
 
         return FactorioRconParser.Parse<T>(strResult);
-    }
-
-    public void Dispose()
-    {
-        _lowLevelClient.Dispose();
-        GC.SuppressFinalize(this);
     }
 }

@@ -18,7 +18,9 @@ int playerCount = await client.ReadAsync(g => (int)g.Game.Players.Length);
 DifficultyEnum difficulty = await client.ReadAsync(g => g.Game.Difficulty);
 LuaCustomTable<Union66691991, LuaForce> forces = await client.ReadAsync(g => g.Game.Forces);
 LuaCustomTable<string, LuaItemPrototype> items = await client.ReadAsync(g => g.Game.ItemPrototypes);
-Dictionary<string, Union1732410965> inputCount = await client.ReadAsync(g => ((LuaForce)g.Game.Players[1].Force).ItemProductionStatistics.InputCounts);
+
+uint playerIndex = 1;
+Dictionary<string, Union1732410965> inputCount = await client.ReadAsync((g, index) => ((LuaForce)g.Game.Players[index].Force).ItemProductionStatistics.InputCounts, playerIndex);
 
 Console.WriteLine($"Map string: {mapString}");
 Console.WriteLine($"Player count: {playerCount}");
