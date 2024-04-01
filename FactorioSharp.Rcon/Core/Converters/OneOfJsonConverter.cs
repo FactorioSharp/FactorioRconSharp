@@ -37,7 +37,17 @@ class OneOfJsonConverterFactory : JsonConverterFactory
             {
                 Type type = possibleTypes[index];
 
-                object? deserialized = JsonSerializer.Deserialize(reserialized, type, options);
+                object? deserialized = null;
+
+                try
+                {
+                    deserialized = JsonSerializer.Deserialize(reserialized, type, options);
+                }
+                catch
+                {
+                    // ignored
+                }
+
                 if (deserialized == null)
                 {
                     continue;

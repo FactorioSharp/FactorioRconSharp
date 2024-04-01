@@ -20,13 +20,13 @@ LuaCustomTable<Union66691991, LuaForce> forces = await client.ReadAsync(g => g.G
 LuaCustomTable<string, LuaItemPrototype> items = await client.ReadAsync(g => g.Game.ItemPrototypes);
 
 uint playerIndex = 1;
-Dictionary<string, Union1732410965> inputCount = await client.ReadAsync((g, index) => ((LuaForce)g.Game.Players[index].Force).ItemProductionStatistics.InputCounts, playerIndex);
+Dictionary<string, Union1732410965> inputCount = await client.ReadAsync((g, index) => ((LuaForce)g.Game.Players[index].Force).FluidProductionStatistics.InputCounts, playerIndex);
 
 Console.WriteLine($"Map string: {mapString}");
 Console.WriteLine($"Player count: {playerCount}");
 Console.WriteLine($"Difficulty: {difficulty}");
 Console.WriteLine($"Forces: {JsonSerializer.Serialize(forces.Keys, jsonSerializerOptions)}");
 Console.WriteLine($"Items: {JsonSerializer.Serialize(items.Keys, jsonSerializerOptions)}");
-Console.WriteLine($"Item stats: {JsonSerializer.Serialize(inputCount, jsonSerializerOptions)}");
+Console.WriteLine($"Fluid stats: {JsonSerializer.Serialize(inputCount, jsonSerializerOptions)}");
 
 client.Disconnect();
