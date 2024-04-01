@@ -73,7 +73,7 @@ uint index = 1;
 string playerName = await client.ReadAsync(g => g.Game.Players[index].Name);
 ```
 
-To make it possible to use variables from the outside, the `ReadAsync` and `WriteAsync` methods can be given a context:
+To make it possible to use variables from the outside, the `ReadAsync` and `ExecuteAsync` methods can be given a context:
 - either a single value: 
 
 ```c#
