@@ -38,7 +38,7 @@ public abstract class LuaEquipmentGridPrototype: LuaObject
   /// Equipment category names for the <see cref="LuaEquipmentPrototype.EquipmentCategories" /> that may be inserted into this equipment grid. The grid will accept any equipment that has at least one category in this list.
   /// </summary>
   [FactorioRconAttribute("equipment_categories")]
-  public List<string> EquipmentCategories { get; private set; }
+  public LuaArray<string> EquipmentCategories { get; private set; }
 
   [FactorioRconAttribute("width")]
   public uint Width { get; private set; }

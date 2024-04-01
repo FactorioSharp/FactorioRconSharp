@@ -44,7 +44,7 @@ public abstract class LuaEquipmentPrototype: LuaObject
   /// Shape of this equipment prototype.
   /// </summary>
   [FactorioRconAttribute("shape")]
-  public Table1724313209 Shape { get; private set; }
+  public Table675764875 Shape { get; private set; }
 
   /// <summary>
   /// The result item when taking this equipment out of an equipment grid, if any.
@@ -74,7 +74,7 @@ public abstract class LuaEquipmentPrototype: LuaObject
   /// The logistic parameters for this roboport equipment.
   /// </summary>
   [FactorioRconAttribute("logistic_parameters")]
-  public Table1146391364 LogisticParameters { get; private set; }
+  public Table1441979268 LogisticParameters { get; private set; }
 
   [FactorioRconAttribute("energy_consumption")]
   public double EnergyConsumption { get; private set; }
@@ -92,7 +92,7 @@ public abstract class LuaEquipmentPrototype: LuaObject
   /// Category names for this equipment. These <see cref="LuaEquipmentGridPrototype.EquipmentCategories" /> will be used to determine whether this equipment is allowed in a particular equipment grid.
   /// </summary>
   [FactorioRconAttribute("equipment_categories")]
-  public List<string> EquipmentCategories { get; private set; }
+  public LuaArray<string> EquipmentCategories { get; private set; }
 
   /// <summary>
   /// The burner energy source prototype this equipment uses, if any.

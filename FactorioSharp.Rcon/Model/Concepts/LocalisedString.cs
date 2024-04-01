@@ -25,7 +25,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("LocalisedString")]
-public partial class LocalisedString: OneOfBase<string, double, bool, LuaObject, LuaNil, List<LocalisedString>>
+public partial class LocalisedString: OneOfBase<string, double, bool, LuaObject, LuaNil, LuaArray<LocalisedString>>
 {
 }
 

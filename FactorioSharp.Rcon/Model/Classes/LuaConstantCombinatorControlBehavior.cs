@@ -22,7 +22,7 @@ public abstract class LuaConstantCombinatorControlBehavior: LuaControlBehavior
   /// Writing `nil` clears the combinator's parameters.
   /// </summary>
   [FactorioRconAttribute("parameters")]
-  public List<ConstantCombinatorParameters> Parameters { get; set; }
+  public LuaArray<ConstantCombinatorParameters> Parameters { get; set; }
 
   /// <summary>
   /// Turns this constant combinator on and off.

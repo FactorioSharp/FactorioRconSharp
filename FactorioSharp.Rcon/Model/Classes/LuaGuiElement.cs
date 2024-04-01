@@ -83,7 +83,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The style of this element. When read, this evaluates to a <see cref="LuaStyle).ForWriting,ItOnlyAcceptsAStringThatSpecifiesTheTextualIdentifier(PrototypeName" /> of the desired style.
   /// </summary>
   [FactorioRconAttribute("style")]
-  public Union1901546330 Style { get; set; }
+  public Union1278627188 Style { get; set; }
 
   /// <summary>
   /// Sets whether this GUI element is visible or completely hidden, taking no space in the layout.
@@ -101,7 +101,7 @@ public abstract class LuaGuiElement: LuaObject
   /// Names of all the children of this element. These are the identifiers that can be used to access the child as an attribute of this element.
   /// </summary>
   [FactorioRconAttribute("children_names")]
-  public List<string> ChildrenNames { get; private set; }
+  public LuaArray<string> ChildrenNames { get; private set; }
 
   /// <summary>
   /// Is this checkbox or radiobutton checked?
@@ -173,13 +173,13 @@ public abstract class LuaGuiElement: LuaObject
   /// The child-elements of this GUI element.
   /// </summary>
   [FactorioRconAttribute("children")]
-  public List<LuaGuiElement> Children { get; private set; }
+  public LuaArray<LuaGuiElement> Children { get; private set; }
 
   /// <summary>
   /// The items in this dropdown or listbox.
   /// </summary>
   [FactorioRconAttribute("items")]
-  public List<LocalisedString> Items { get; set; }
+  public LuaArray<LocalisedString> Items { get; set; }
 
   /// <summary>
   /// The selected index for this dropdown or listbox. Returns `0` if none is selected.
@@ -275,7 +275,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The elem value of this choose-elem-button, if any.
   /// </summary>
   [FactorioRconAttribute("elem_value")]
-  public Union45712221 ElemValue { get; set; }
+  public Union1056934784 ElemValue { get; set; }
 
   /// <summary>
   /// The elem filters of this choose-elem-button, if any. The compatible type of filter is determined by `elem_type`.
@@ -413,7 +413,7 @@ public abstract class LuaGuiElement: LuaObject
   /// The tabs and contents being shown in this tabbed-pane.
   /// </summary>
   [FactorioRconAttribute("tabs")]
-  public List<TabAndContent> Tabs { get; private set; }
+  public LuaArray<TabAndContent> Tabs { get; private set; }
 
   /// <summary>
   /// The entity associated with this entity-preview, camera, minimap, if any.
@@ -690,7 +690,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="element">Lua name: element</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_element")]
-  public abstract void ScrollToElement(LuaGuiElement element, Literals376824253? scrollMode = null);
+  public abstract void ScrollToElement(LuaGuiElement element, Literals423384086? scrollMode = null);
 
   /// <summary>
   /// Selects all the text in this textbox.
@@ -737,7 +737,7 @@ public abstract class LuaGuiElement: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="scrollMode">Lua name: scroll_mode</param>
   [FactorioRconMethod("scroll_to_item")]
-  public abstract void ScrollToItem(int index, Literals1995329421? scrollMode = null);
+  public abstract void ScrollToItem(int index, Literals734856076? scrollMode = null);
 
   /// <summary>
   /// Moves this GUI element to the "front" so it will draw over other elements.

@@ -38,7 +38,7 @@ public abstract class LuaGroup: LuaObject
   /// Subgroups of this group.
   /// </summary>
   [FactorioRconAttribute("subgroups")]
-  public List<LuaGroup> Subgroups { get; private set; }
+  public LuaArray<LuaGroup> Subgroups { get; private set; }
 
   /// <summary>
   /// The additional order value used in recipe ordering.

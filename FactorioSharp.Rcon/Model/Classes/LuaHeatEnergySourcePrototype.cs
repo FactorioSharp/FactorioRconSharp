@@ -50,7 +50,7 @@ public abstract class LuaHeatEnergySourcePrototype: LuaObject
   public double MinimumGlowTemperature { get; private set; }
 
   [FactorioRconAttribute("connections")]
-  public List<HeatConnection> Connections { get; private set; }
+  public LuaArray<HeatConnection> Connections { get; private set; }
 
   [FactorioRconAttribute("heat_buffer_prototype")]
   public LuaHeatBufferPrototype HeatBufferPrototype { get; private set; }

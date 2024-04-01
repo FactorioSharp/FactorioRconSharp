@@ -35,7 +35,7 @@ public abstract class LuaLogisticPoint: LuaObject
   /// The logistic filters for this logistic point, if this uses any.
   /// </summary>
   [FactorioRconAttribute("filters")]
-  public List<LogisticFilter> Filters { get; private set; }
+  public LuaArray<LogisticFilter> Filters { get; private set; }
 
   /// <summary>
   /// The logistic mode.

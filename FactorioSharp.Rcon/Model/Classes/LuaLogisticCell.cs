@@ -92,19 +92,19 @@ public abstract class LuaLogisticCell: LuaObject
   /// Neighbouring cells.
   /// </summary>
   [FactorioRconAttribute("neighbours")]
-  public List<LuaLogisticCell> Neighbours { get; private set; }
+  public LuaArray<LuaLogisticCell> Neighbours { get; private set; }
 
   /// <summary>
   /// Robots currently being charged.
   /// </summary>
   [FactorioRconAttribute("charging_robots")]
-  public List<LuaEntity> ChargingRobots { get; private set; }
+  public LuaArray<LuaEntity> ChargingRobots { get; private set; }
 
   /// <summary>
   /// Robots waiting to charge.
   /// </summary>
   [FactorioRconAttribute("to_charge_robots")]
-  public List<LuaEntity> ToChargeRobots { get; private set; }
+  public LuaArray<LuaEntity> ToChargeRobots { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.

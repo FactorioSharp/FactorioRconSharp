@@ -64,7 +64,7 @@ public abstract class LuaControl: LuaObject
   /// This is the GUI that will asked to close (by firing the <see cref="OnGuiClosed)Event" /> when the `Esc` or `E` keys are pressed. If this attribute is not `nil`, and a new GUI is written to it, the existing one will be asked to close.
   /// </summary>
   [FactorioRconAttribute("opened")]
-  public Union1297945055 Opened { get; set; }
+  public Union399953530 Opened { get; set; }
 
   /// <summary>
   /// Size of the crafting queue.
@@ -82,7 +82,7 @@ public abstract class LuaControl: LuaObject
   /// Current walking state.
   /// </summary>
   [FactorioRconAttribute("walking_state")]
-  public Table787340888 WalkingState { get; set; }
+  public Table1617932109 WalkingState { get; set; }
 
   /// <summary>
   /// Current riding state of this car, or of the car this player is riding in.
@@ -94,13 +94,13 @@ public abstract class LuaControl: LuaObject
   /// Current mining state.
   /// </summary>
   [FactorioRconAttribute("mining_state")]
-  public Table1564578664 MiningState { get; set; }
+  public Table1118530349 MiningState { get; set; }
 
   /// <summary>
   /// Current shooting state.
   /// </summary>
   [FactorioRconAttribute("shooting_state")]
-  public Table468158818 ShootingState { get; set; }
+  public Table502322755 ShootingState { get; set; }
 
   /// <summary>
   /// Current item-picking state.
@@ -112,7 +112,7 @@ public abstract class LuaControl: LuaObject
   /// Current repair state.
   /// </summary>
   [FactorioRconAttribute("repair_state")]
-  public Table2133394223 RepairState { get; set; }
+  public Table1974680908 RepairState { get; set; }
 
   /// <summary>
   /// The player's cursor stack. `nil` if the player controller is a spectator.
@@ -136,13 +136,13 @@ public abstract class LuaControl: LuaObject
   /// The current crafting queue items.
   /// </summary>
   [FactorioRconAttribute("crafting_queue")]
-  public List<CraftingQueueItem> CraftingQueue { get; private set; }
+  public LuaArray<CraftingQueueItem> CraftingQueue { get; private set; }
 
   /// <summary>
   /// The current combat robots following the character.
   /// </summary>
   [FactorioRconAttribute("following_robots")]
-  public List<LuaEntity> FollowingRobots { get; private set; }
+  public LuaArray<LuaEntity> FollowingRobots { get; private set; }
 
   /// <summary>
   /// When `true` hand crafting is free and instant.
@@ -157,7 +157,7 @@ public abstract class LuaControl: LuaObject
   public double CharacterMiningSpeedModifier { get; set; }
 
   [FactorioRconAttribute("character_additional_mining_categories")]
-  public List<string> CharacterAdditionalMiningCategories { get; set; }
+  public LuaArray<string> CharacterAdditionalMiningCategories { get; set; }
 
   /// <summary>
   /// Modifies the running speed of this character by the given value as a percentage. Setting the running modifier to `0.5` makes the character run 50% faster. The minimum value of `-1` reduces the movement speed by 100%, resulting in a speed of `0`.
@@ -397,7 +397,7 @@ public abstract class LuaControl: LuaObject
   /// </summary>
   /// <param name="recipe">Lua name: recipe</param>
   [FactorioRconMethod("get_craftable_count")]
-  public abstract uint GetCraftableCount(Union54721211 recipe);
+  public abstract uint GetCraftableCount(Union1409135452 recipe);
 
   /// <summary>
   /// Begins crafting the given count of the given recipe.
@@ -406,7 +406,7 @@ public abstract class LuaControl: LuaObject
   /// <param name="recipe">Lua name: recipe</param>
   /// <param name="silent">Lua name: silent</param>
   [FactorioRconMethod("begin_crafting")]
-  public abstract uint BeginCrafting(uint count, Union54721211 recipe, bool? silent = null);
+  public abstract uint BeginCrafting(uint count, Union1409135452 recipe, bool? silent = null);
 
   /// <summary>
   /// Cancels crafting the given count of the given crafting queue index.
@@ -503,7 +503,7 @@ public abstract class LuaControl: LuaObject
   /// Gets the entities that are part of the currently selected blueprint, regardless of it being in a blueprint book or picked from the blueprint library.
   /// </summary>
   [FactorioRconMethod("get_blueprint_entities")]
-  public abstract List<BlueprintEntity>? GetBlueprintEntities();
+  public abstract LuaArray<BlueprintEntity>? GetBlueprintEntities();
 
   /// <summary>
   /// Returns whether the player is holding something in the cursor. It takes into account items from the blueprint library, as well as items and ghost cursor.

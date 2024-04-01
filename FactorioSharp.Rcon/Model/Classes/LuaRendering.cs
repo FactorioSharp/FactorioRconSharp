@@ -42,7 +42,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_line")]
-  public abstract ulong DrawLine(Color color, float width, Union891064343 from, Union891064343 to, SurfaceIdentification surface, double? gapLength = null, double? dashLength = null, double? dashOffset = null, Vector? fromOffset = null, Vector? toOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawLine(Color color, float width, Union113870108 from, Union113870108 to, SurfaceIdentification surface, double? gapLength = null, double? dashLength = null, double? dashOffset = null, Vector? fromOffset = null, Vector? toOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a text.
@@ -69,7 +69,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   /// <param name="useRichText">Lua name: use_rich_text</param>
   [FactorioRconMethod("draw_text")]
-  public abstract ulong DrawText(LocalisedString text, SurfaceIdentification surface, Union891064343 target, Color color, Vector? targetOffset = null, double? scale = null, string? font = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, RealOrientation? orientation = null, TextAlign? alignment = null, VerticalTextAlign? verticalAlignment = null, bool? scaleWithZoom = null, bool? onlyInAltMode = null, bool? useRichText = null);
+  public abstract ulong DrawText(LocalisedString text, SurfaceIdentification surface, Union113870108 target, Color color, Vector? targetOffset = null, double? scale = null, string? font = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, RealOrientation? orientation = null, TextAlign? alignment = null, VerticalTextAlign? verticalAlignment = null, bool? scaleWithZoom = null, bool? onlyInAltMode = null, bool? useRichText = null);
 
   /// <summary>
   /// Create a circle.
@@ -88,7 +88,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_circle")]
-  public abstract ulong DrawCircle(Color color, double radius, Union891064343 target, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawCircle(Color color, double radius, Union113870108 target, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? targetOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a rectangle.
@@ -108,7 +108,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_rectangle")]
-  public abstract ulong DrawRectangle(Color color, Union891064343 leftTop, Union891064343 rightBottom, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? leftTopOffset = null, Vector? rightBottomOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawRectangle(Color color, Union113870108 leftTop, Union113870108 rightBottom, SurfaceIdentification surface, float? width = null, bool? filled = null, Vector? leftTopOffset = null, Vector? rightBottomOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create an arc.
@@ -128,7 +128,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_arc")]
-  public abstract ulong DrawArc(Color color, double maxRadius, double minRadius, float startAngle, float angle, Union891064343 target, SurfaceIdentification surface, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawArc(Color color, double maxRadius, double minRadius, float startAngle, float angle, Union113870108 target, SurfaceIdentification surface, Vector? targetOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a triangle mesh defined by a triangle strip.
@@ -149,7 +149,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="drawOnGround">Lua name: draw_on_ground</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_polygon")]
-  public abstract ulong DrawPolygon(Color color, List<ScriptRenderVertexTarget> vertices, SurfaceIdentification surface, Union891064343? target = null, Vector? targetOffset = null, RealOrientation? orientation = null, Union891064343? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawPolygon(Color color, LuaArray<ScriptRenderVertexTarget> vertices, SurfaceIdentification surface, Union113870108? target = null, Vector? targetOffset = null, RealOrientation? orientation = null, Union113870108? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? drawOnGround = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a sprite.
@@ -173,7 +173,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="visible">Lua name: visible</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_sprite")]
-  public abstract ulong DrawSprite(SpritePath sprite, Union891064343 target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, Union891064343? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawSprite(SpritePath sprite, Union113870108 target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, Union113870108? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create a light.
@@ -197,7 +197,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="visible">Lua name: visible</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_light")]
-  public abstract ulong DrawLight(SpritePath sprite, Union891064343 target, SurfaceIdentification surface, RealOrientation? orientation = null, float? scale = null, float? intensity = null, float? minimumDarkness = null, bool? oriented = null, Color? color = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawLight(SpritePath sprite, Union113870108 target, SurfaceIdentification surface, RealOrientation? orientation = null, float? scale = null, float? intensity = null, float? minimumDarkness = null, bool? oriented = null, Color? color = null, Vector? targetOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Create an animation.
@@ -223,7 +223,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="visible">Lua name: visible</param>
   /// <param name="onlyInAltMode">Lua name: only_in_alt_mode</param>
   [FactorioRconMethod("draw_animation")]
-  public abstract ulong DrawAnimation(string animation, Union891064343 target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, double? animationSpeed = null, double? animationOffset = null, Union891064343? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, List<ForceIdentification>? forces = null, List<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
+  public abstract ulong DrawAnimation(string animation, Union113870108 target, SurfaceIdentification surface, RealOrientation? orientation = null, double? xScale = null, double? yScale = null, Color? tint = null, RenderLayer? renderLayer = null, double? animationSpeed = null, double? animationOffset = null, Union113870108? orientationTarget = null, Vector? orientationTargetOffset = null, bool? useTargetOrientation = null, Vector? orientedOffset = null, Vector? targetOffset = null, uint? timeToLive = null, LuaArray<ForceIdentification>? forces = null, LuaArray<PlayerIdentification>? players = null, bool? visible = null, bool? onlyInAltMode = null);
 
   /// <summary>
   /// Destroy the object with the given id.
@@ -251,7 +251,7 @@ public abstract class LuaRendering: LuaObject
   /// </summary>
   /// <param name="modName">Lua name: mod_name</param>
   [FactorioRconMethod("get_all_ids")]
-  public abstract List<ulong> GetAllIds(string? modName = null);
+  public abstract LuaArray<ulong> GetAllIds(string? modName = null);
 
   /// <summary>
   /// Destroys all render objects.
@@ -265,7 +265,7 @@ public abstract class LuaRendering: LuaObject
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_type")]
-  public abstract Literals1369423667 GetType(ulong id);
+  public abstract Literals733356171 GetType(ulong id);
 
   /// <summary>
   /// Reorder this object so that it is drawn in front of the already existing objects.
@@ -301,7 +301,7 @@ public abstract class LuaRendering: LuaObject
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_forces")]
-  public abstract List<LuaForce>? GetForces(ulong id);
+  public abstract LuaArray<LuaForce>? GetForces(ulong id);
 
   /// <summary>
   /// Set the forces that the object with this id is rendered to.
@@ -309,14 +309,14 @@ public abstract class LuaRendering: LuaObject
   /// <param name="id">Lua name: id</param>
   /// <param name="forces">Lua name: forces</param>
   [FactorioRconMethod("set_forces")]
-  public abstract void SetForces(ulong id, List<ForceIdentification> forces);
+  public abstract void SetForces(ulong id, LuaArray<ForceIdentification> forces);
 
   /// <summary>
   /// Get the players that the object with this id is rendered to or `nil` if visible to all players.
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_players")]
-  public abstract List<LuaPlayer>? GetPlayers(ulong id);
+  public abstract LuaArray<LuaPlayer>? GetPlayers(ulong id);
 
   /// <summary>
   /// Set the players that the object with this id is rendered to.
@@ -324,7 +324,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="id">Lua name: id</param>
   /// <param name="players">Lua name: players</param>
   [FactorioRconMethod("set_players")]
-  public abstract void SetPlayers(ulong id, List<PlayerIdentification> players);
+  public abstract void SetPlayers(ulong id, LuaArray<PlayerIdentification> players);
 
   /// <summary>
   /// Get whether this is rendered to anyone at all.
@@ -430,7 +430,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="from">Lua name: from</param>
   /// <param name="fromOffset">Lua name: from_offset</param>
   [FactorioRconMethod("set_from")]
-  public abstract void SetFrom(ulong id, Union891064343 from, Vector? fromOffset = null);
+  public abstract void SetFrom(ulong id, Union113870108 from, Vector? fromOffset = null);
 
   /// <summary>
   /// Get where the line with this id is drawn to.
@@ -446,7 +446,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="to">Lua name: to</param>
   /// <param name="toOffset">Lua name: to_offset</param>
   [FactorioRconMethod("set_to")]
-  public abstract void SetTo(ulong id, Union891064343 to, Vector? toOffset = null);
+  public abstract void SetTo(ulong id, Union113870108 to, Vector? toOffset = null);
 
   /// <summary>
   /// Get the dash length of the line with this id.
@@ -507,7 +507,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="target">Lua name: target</param>
   /// <param name="targetOffset">Lua name: target_offset</param>
   [FactorioRconMethod("set_target")]
-  public abstract void SetTarget(ulong id, Union891064343 target, Vector? targetOffset = null);
+  public abstract void SetTarget(ulong id, Union113870108 target, Vector? targetOffset = null);
 
   /// <summary>
   /// Get the orientation of the object with this id.
@@ -679,7 +679,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="leftTop">Lua name: left_top</param>
   /// <param name="leftTopOffset">Lua name: left_top_offset</param>
   [FactorioRconMethod("set_left_top")]
-  public abstract void SetLeftTop(ulong id, Union891064343 leftTop, Vector? leftTopOffset = null);
+  public abstract void SetLeftTop(ulong id, Union113870108 leftTop, Vector? leftTopOffset = null);
 
   /// <summary>
   /// Get where bottom right corner of the rectangle with this id is drawn.
@@ -695,7 +695,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="rightBottom">Lua name: right_bottom</param>
   /// <param name="rightBottomOffset">Lua name: right_bottom_offset</param>
   [FactorioRconMethod("set_right_bottom")]
-  public abstract void SetRightBottom(ulong id, Union891064343 rightBottom, Vector? rightBottomOffset = null);
+  public abstract void SetRightBottom(ulong id, Union113870108 rightBottom, Vector? rightBottomOffset = null);
 
   /// <summary>
   /// Set the corners of the rectangle with this id. Does nothing if this object is not a rectangle.
@@ -706,7 +706,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="rightBottom">Lua name: right_bottom</param>
   /// <param name="rightBottomOffset">Lua name: right_bottom_offset</param>
   [FactorioRconMethod("set_corners")]
-  public abstract void SetCorners(ulong id, Union891064343 leftTop, Vector leftTopOffset, Union891064343 rightBottom, Vector rightBottomOffset);
+  public abstract void SetCorners(ulong id, Union113870108 leftTop, Vector leftTopOffset, Union113870108 rightBottom, Vector rightBottomOffset);
 
   /// <summary>
   /// Get the radius of the outer edge of the arc with this id.
@@ -773,7 +773,7 @@ public abstract class LuaRendering: LuaObject
   /// </summary>
   /// <param name="id">Lua name: id</param>
   [FactorioRconMethod("get_vertices")]
-  public abstract List<ScriptRenderTarget>? GetVertices(ulong id);
+  public abstract LuaArray<ScriptRenderTarget>? GetVertices(ulong id);
 
   /// <summary>
   /// Set the vertices of the polygon with this id. Does nothing if this object is not a polygon.
@@ -781,7 +781,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="id">Lua name: id</param>
   /// <param name="vertices">Lua name: vertices</param>
   [FactorioRconMethod("set_vertices")]
-  public abstract void SetVertices(ulong id, List<ScriptRenderVertexTarget> vertices);
+  public abstract void SetVertices(ulong id, LuaArray<ScriptRenderVertexTarget> vertices);
 
   /// <summary>
   /// Get the sprite of the sprite or light with this id.
@@ -863,7 +863,7 @@ public abstract class LuaRendering: LuaObject
   /// <param name="orientationTarget">Lua name: orientation_target</param>
   /// <param name="orientationTargetOffset">Lua name: orientation_target_offset</param>
   [FactorioRconMethod("set_orientation_target")]
-  public abstract void SetOrientationTarget(ulong id, Union891064343 orientationTarget, Vector? orientationTargetOffset = null);
+  public abstract void SetOrientationTarget(ulong id, Union113870108 orientationTarget, Vector? orientationTargetOffset = null);
 
   /// <summary>
   /// Offsets the center of the sprite or animation if `orientation_target` is given. This offset will rotate together with the sprite or animation. Get the oriented_offset of the sprite or animation with this id.

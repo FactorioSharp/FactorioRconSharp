@@ -20,7 +20,7 @@ public class TrainSchedule
   public uint Current { get; set; }
 
   [FactorioRconAttribute("records")]
-  public List<TrainScheduleRecord> Records { get; set; }
+  public LuaArray<TrainScheduleRecord> Records { get; set; }
 
 }
 

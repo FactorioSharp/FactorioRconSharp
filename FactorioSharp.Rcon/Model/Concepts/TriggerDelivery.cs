@@ -14,13 +14,13 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 public class TriggerDelivery
 {
   [FactorioRconAttribute("type")]
-  public Literals1431548939 Type { get; set; }
+  public Literals107688790 Type { get; set; }
 
   [FactorioRconAttribute("source_effects")]
-  public List<TriggerEffectItem> SourceEffects { get; set; }
+  public LuaArray<TriggerEffectItem> SourceEffects { get; set; }
 
   [FactorioRconAttribute("target_effects")]
-  public List<TriggerEffectItem> TargetEffects { get; set; }
+  public LuaArray<TriggerEffectItem> TargetEffects { get; set; }
 
 }
 

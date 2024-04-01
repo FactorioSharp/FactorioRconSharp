@@ -77,13 +77,13 @@ public abstract class LuaTechnology: LuaObject
   /// The types of ingredients that labs will require to research this technology.
   /// </summary>
   [FactorioRconAttribute("research_unit_ingredients")]
-  public List<Ingredient> ResearchUnitIngredients { get; private set; }
+  public LuaArray<Ingredient> ResearchUnitIngredients { get; private set; }
 
   /// <summary>
   /// Effects applied when this technology is researched.
   /// </summary>
   [FactorioRconAttribute("effects")]
-  public List<TechnologyModifier> Effects { get; private set; }
+  public LuaArray<TechnologyModifier> Effects { get; private set; }
 
   /// <summary>
   /// The number of research units required for this technology.

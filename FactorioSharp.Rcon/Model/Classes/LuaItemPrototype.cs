@@ -145,7 +145,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// The results of launching this item in a rocket.
   /// </summary>
   [FactorioRconAttribute("rocket_launch_products")]
-  public List<Product> RocketLaunchProducts { get; private set; }
+  public LuaArray<Product> RocketLaunchProducts { get; private set; }
 
   /// <summary>
   /// If this item can be mod-opened.
@@ -214,13 +214,13 @@ public abstract class LuaItemPrototype: LuaObject
   /// The filter mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("filter_mode")]
-  public Literals1163105229 FilterMode { get; private set; }
+  public Literals1438752330 FilterMode { get; private set; }
 
   /// <summary>
   /// The insertion priority mode used by this item with inventory.
   /// </summary>
   [FactorioRconAttribute("insertion_priority_mode")]
-  public Literals1602195502 InsertionPriorityMode { get; private set; }
+  public Literals464502318 InsertionPriorityMode { get; private set; }
 
   /// <summary>
   /// The localised string used when the player attempts to put items into this item with inventory that aren't allowed.
@@ -274,7 +274,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// An array of recipe names this module is allowed to work with. Empty when all recipes are allowed.
   /// </summary>
   [FactorioRconAttribute("limitations")]
-  public List<string> Limitations { get; private set; }
+  public LuaArray<string> Limitations { get; private set; }
 
   /// <summary>
   /// The limitation message key used when the player attempts to use this modules in some place it's not allowed.
@@ -298,7 +298,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// The repair result of this repair tool prototype.
   /// </summary>
   [FactorioRconAttribute("repair_result")]
-  public List<TriggerItem> RepairResult { get; private set; }
+  public LuaArray<TriggerItem> RepairResult { get; private set; }
 
   /// <summary>
   /// The color used when doing normal selection with this selection tool prototype.
@@ -546,7 +546,7 @@ public abstract class LuaItemPrototype: LuaObject
   /// </summary>
   /// <param name="ammoSourceType">Lua name: ammo_source_type</param>
   [FactorioRconMethod("get_ammo_type")]
-  public abstract AmmoType? GetAmmoType(Literals238363541? ammoSourceType = null);
+  public abstract AmmoType? GetAmmoType(Literals473967657? ammoSourceType = null);
 
   /// <summary>
   /// All methods and properties that this object supports.

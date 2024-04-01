@@ -47,13 +47,13 @@ public abstract class LuaRecipePrototype: LuaObject
   /// The ingredients to this recipe.
   /// </summary>
   [FactorioRconAttribute("ingredients")]
-  public List<Ingredient> Ingredients { get; private set; }
+  public LuaArray<Ingredient> Ingredients { get; private set; }
 
   /// <summary>
   /// The results/products of this recipe.
   /// </summary>
   [FactorioRconAttribute("products")]
-  public List<Product> Products { get; private set; }
+  public LuaArray<Product> Products { get; private set; }
 
   /// <summary>
   /// The main product of this recipe, if any.

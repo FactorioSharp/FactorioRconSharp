@@ -80,7 +80,7 @@ public abstract class LuaTilePrototype: LuaObject
   public bool NeedsCorrection { get; private set; }
 
   [FactorioRconAttribute("mineable_properties")]
-  public Table1830411523 MineableProperties { get; private set; }
+  public Table601579287 MineableProperties { get; private set; }
 
   /// <summary>
   /// The next direction of this tile, if any. Used when a tile has multiple directions (such as hazard concrete)
@@ -92,7 +92,7 @@ public abstract class LuaTilePrototype: LuaObject
   /// Items that when placed will produce this tile, if any. Construction bots will choose the first item in the list to build this tile.
   /// </summary>
   [FactorioRconAttribute("items_to_place_this")]
-  public List<ItemStackDefinition> ItemsToPlaceThis { get; private set; }
+  public LuaArray<ItemStackDefinition> ItemsToPlaceThis { get; private set; }
 
   /// <summary>
   /// False if this tile is not allowed in blueprints regardless of the ability to build it.

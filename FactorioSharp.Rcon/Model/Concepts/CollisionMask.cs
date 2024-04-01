@@ -14,7 +14,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// A set of flags. Active flags are in the dictionary as `true`, while inactive flags aren't present at all.
 /// </summary>
 [FactorioRconConcept("CollisionMask")]
-public class CollisionMask: Alias<Dictionary<CollisionMaskLayer, Literal265409079>>
+public class CollisionMask: Alias<Dictionary<CollisionMaskLayer, Literal1719260023>>
 {
 }
 

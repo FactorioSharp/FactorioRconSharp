@@ -23,7 +23,7 @@ public class UnitSpawnDefinition
   /// The points at which to spawn the unit.
   /// </summary>
   [FactorioRconAttribute("spawn_points")]
-  public List<SpawnPointDefinition> SpawnPoints { get; set; }
+  public LuaArray<SpawnPointDefinition> SpawnPoints { get; set; }
 
 }
 

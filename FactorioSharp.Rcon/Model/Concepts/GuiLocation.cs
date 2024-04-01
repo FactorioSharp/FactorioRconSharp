@@ -16,7 +16,7 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("GuiLocation")]
-public partial class GuiLocation: OneOfBase<Table1108165145, Tuple1655101041>
+public partial class GuiLocation: OneOfBase<Table1833102582, Tuple1951126369>
 {
 }
 

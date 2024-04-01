@@ -32,7 +32,7 @@ public class TrainScheduleRecord
   public RailDirectionEnum RailDirection { get; set; }
 
   [FactorioRconAttribute("wait_conditions")]
-  public List<WaitCondition> WaitConditions { get; set; }
+  public LuaArray<WaitCondition> WaitConditions { get; set; }
 
   /// <summary>
   /// Only present when the station is temporary, the value is then always `true`.

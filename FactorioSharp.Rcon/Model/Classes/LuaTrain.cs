@@ -50,25 +50,25 @@ public abstract class LuaTrain: LuaObject
   /// The rolling stocks this train is composed of, with the numbering starting at the <see cref="LuaTrain.FrontStock" /> of the train.
   /// </summary>
   [FactorioRconAttribute("carriages")]
-  public List<LuaEntity> Carriages { get; private set; }
+  public LuaArray<LuaEntity> Carriages { get; private set; }
 
   /// <summary>
   /// Locomotives of the train.
   /// </summary>
   [FactorioRconAttribute("locomotives")]
-  public Table1857828481 Locomotives { get; private set; }
+  public Table463729494 Locomotives { get; private set; }
 
   /// <summary>
   /// The cargo carriages the train contains.
   /// </summary>
   [FactorioRconAttribute("cargo_wagons")]
-  public List<LuaEntity> CargoWagons { get; private set; }
+  public LuaArray<LuaEntity> CargoWagons { get; private set; }
 
   /// <summary>
   /// The fluid carriages the train contains.
   /// </summary>
   [FactorioRconAttribute("fluid_wagons")]
-  public List<LuaEntity> FluidWagons { get; private set; }
+  public LuaArray<LuaEntity> FluidWagons { get; private set; }
 
   /// <summary>
   /// This train's current schedule, if any. Set to `nil` to clear.
@@ -146,7 +146,7 @@ public abstract class LuaTrain: LuaObject
   /// The player passengers on the train
   /// </summary>
   [FactorioRconAttribute("passengers")]
-  public List<LuaPlayer> Passengers { get; private set; }
+  public LuaArray<LuaPlayer> Passengers { get; private set; }
 
   /// <summary>
   /// The riding state of this train.
@@ -276,7 +276,7 @@ public abstract class LuaTrain: LuaObject
   /// Gets all rails under the train.
   /// </summary>
   [FactorioRconMethod("get_rails")]
-  public abstract List<LuaEntity> GetRails();
+  public abstract LuaArray<LuaEntity> GetRails();
 
   /// <summary>
   /// All methods and properties that this object supports.

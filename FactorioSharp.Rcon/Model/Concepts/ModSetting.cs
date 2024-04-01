@@ -17,7 +17,7 @@ public class ModSetting
   /// The value of the mod setting. The type depends on the kind of setting.
   /// </summary>
   [FactorioRconAttribute("value")]
-  public Union386456318 Value { get; set; }
+  public Union1080622224 Value { get; set; }
 
 }
 

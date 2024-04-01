@@ -74,7 +74,7 @@ public abstract class LuaItemStack: LuaObject
   /// Icons of this blueprint item, blueprint book, deconstruction item or upgrade planner. An item that doesn't have icons returns `nil` on read and throws error on write.
   /// </summary>
   [FactorioRconAttribute("blueprint_icons")]
-  public List<BlueprintSignalIcon> BlueprintIcons { get; set; }
+  public LuaArray<BlueprintSignalIcon> BlueprintIcons { get; set; }
 
   /// <summary>
   /// The snapping grid size in this blueprint item. `nil` if snapping is not enabled.
@@ -128,13 +128,13 @@ public abstract class LuaItemStack: LuaObject
   /// The insertion mode priority this ItemWithInventory uses when items are inserted into an inventory it resides in. Only callable on items with inventories.
   /// </summary>
   [FactorioRconAttribute("prioritize_insertion_mode")]
-  public Literals55310682 PrioritizeInsertionMode { get; set; }
+  public Literals1744120650 PrioritizeInsertionMode { get; set; }
 
   /// <summary>
   /// The default icons for a blueprint item.
   /// </summary>
   [FactorioRconAttribute("default_icons")]
-  public List<BlueprintSignalIcon> DefaultIcons { get; private set; }
+  public LuaArray<BlueprintSignalIcon> DefaultIcons { get; private set; }
 
   [FactorioRconAttribute("tags")]
   public Tags Tags { get; set; }
@@ -149,13 +149,13 @@ public abstract class LuaItemStack: LuaObject
   /// The entity filters for this deconstruction item. The attribute is a sparse array with the keys representing the index of the filter. All strings in this array must be entity prototype names that don't have the `"not-deconstructable"` flag set and are either a `cliff` or marked as `minable`.
   /// </summary>
   [FactorioRconAttribute("entity_filters")]
-  public List<string> EntityFilters { get; set; }
+  public LuaArray<string> EntityFilters { get; set; }
 
   /// <summary>
   /// The tile filters for this deconstruction item. The attribute is a sparse array with the keys representing the index of the filter. All strings in this array must be tile prototype names.
   /// </summary>
   [FactorioRconAttribute("tile_filters")]
-  public List<string> TileFilters { get; set; }
+  public LuaArray<string> TileFilters { get; set; }
 
   /// <summary>
   /// The blacklist/whitelist entity filter mode for this deconstruction item.
@@ -342,14 +342,14 @@ public abstract class LuaItemStack: LuaObject
   /// The entities in this blueprint.
   /// </summary>
   [FactorioRconMethod("get_blueprint_entities")]
-  public abstract List<BlueprintEntity>? GetBlueprintEntities();
+  public abstract LuaArray<BlueprintEntity>? GetBlueprintEntities();
 
   /// <summary>
   /// Set new entities to be a part of this blueprint.
   /// </summary>
   /// <param name="entities">Lua name: entities</param>
   [FactorioRconMethod("set_blueprint_entities")]
-  public abstract void SetBlueprintEntities(List<BlueprintEntity> entities);
+  public abstract void SetBlueprintEntities(LuaArray<BlueprintEntity> entities);
 
   /// <summary>
   /// Add ammo to this ammo item.
@@ -385,7 +385,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="entity">Lua name: entity</param>
   /// <param name="targetPosition">Lua name: target_position</param>
   [FactorioRconMethod("use_capsule")]
-  public abstract List<LuaEntity> UseCapsule(LuaEntity entity, MapPosition targetPosition);
+  public abstract LuaArray<LuaEntity> UseCapsule(LuaEntity entity, MapPosition targetPosition);
 
   /// <summary>
   /// Would a call to <see cref="LuaItemStack.SetStack" /> succeed?
@@ -438,14 +438,14 @@ public abstract class LuaItemStack: LuaObject
   /// A list of the tiles in this blueprint.
   /// </summary>
   [FactorioRconMethod("get_blueprint_tiles")]
-  public abstract List<Tile>? GetBlueprintTiles();
+  public abstract LuaArray<Tile>? GetBlueprintTiles();
 
   /// <summary>
   /// Set specific tiles in this blueprint.
   /// </summary>
   /// <param name="tiles">Lua name: tiles</param>
   [FactorioRconMethod("set_blueprint_tiles")]
-  public abstract void SetBlueprintTiles(List<Tile> tiles);
+  public abstract void SetBlueprintTiles(LuaArray<Tile> tiles);
 
   /// <summary>
   /// Access the inner inventory of an item.
@@ -466,7 +466,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="byPlayer">Lua name: by_player</param>
   /// <param name="raiseBuilt">Lua name: raise_built</param>
   [FactorioRconMethod("build_blueprint")]
-  public abstract List<LuaEntity> BuildBlueprint(SurfaceIdentification surface, ForceIdentification force, MapPosition position, bool? forceBuild = null, DirectionEnum? direction = null, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null, bool? raiseBuilt = null);
+  public abstract LuaArray<LuaEntity> BuildBlueprint(SurfaceIdentification surface, ForceIdentification force, MapPosition position, bool? forceBuild = null, DirectionEnum? direction = null, bool? skipFogOfWar = null, PlayerIdentification? byPlayer = null, bool? raiseBuilt = null);
 
   /// <summary>
   /// Deconstruct the given area with this deconstruction item.
@@ -546,7 +546,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_entity_filter")]
-  public abstract bool SetEntityFilter(uint index, Union1903319012 filter);
+  public abstract bool SetEntityFilter(uint index, Union671943175 filter);
 
   /// <summary>
   /// Gets the tile filter at the given index for this deconstruction item.
@@ -561,7 +561,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_tile_filter")]
-  public abstract bool SetTileFilter(uint index, Union612993321 filter);
+  public abstract bool SetTileFilter(uint index, Union1209900440 filter);
 
   /// <summary>
   /// Clears all settings/filters on this deconstruction item resetting it to default values.
@@ -581,7 +581,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="index">Lua name: index</param>
   /// <param name="type">Lua name: type</param>
   [FactorioRconMethod("get_mapper")]
-  public abstract UpgradeFilter GetMapper(uint index, Literals230650055 type);
+  public abstract UpgradeFilter GetMapper(uint index, Literals178201565 type);
 
   /// <summary>
   /// Sets the module filter at the given index for this upgrade item.
@@ -590,7 +590,7 @@ public abstract class LuaItemStack: LuaObject
   /// <param name="type">Lua name: type</param>
   /// <param name="filter">Lua name: filter</param>
   [FactorioRconMethod("set_mapper")]
-  public abstract void SetMapper(uint index, Literals1579935591 type, Union552332357 filter);
+  public abstract void SetMapper(uint index, Literals1359052831 type, Union1738334743 filter);
 
   /// <summary>
   /// Gets the number of entities in this blueprint item.

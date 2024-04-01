@@ -18,17 +18,17 @@ namespace FactorioSharp.Rcon.Model.Concepts;
 /// </summary>
 [GenerateOneOf]
 [FactorioRconConcept("MapGenSize")]
-public partial class MapGenSize: OneOfBase<Union2125337336_0, Union2125337336_1>
+public partial class MapGenSize: OneOfBase<Union310625457_0, Union310625457_1>
 {
 }
 
 [GenerateOneOf]
-public partial class Union2125337336_0: OneOfBase<float, Literal932840264, Literal1786125409, Literal651634713, Literal335299620, Literal17129871, Literal1926858249, Literal1041687566, Literal676714703>
+public partial class Union310625457_0: OneOfBase<float, Literal440243395, Literal1406079683, Literal1132764350, Literal385105859, Literal1161457328, Literal185388464, Literal1825344215, Literal788070672>
 {
 }
 
 [GenerateOneOf]
-public partial class Union2125337336_1: OneOfBase<Literal376251075, Literal1007696418, Literal1610299092, Literal2112597430, Literal2013898009, Literal1158648576, Literal1172930104, Literal1732649855>
+public partial class Union310625457_1: OneOfBase<Literal242097688, Literal1633423983, Literal1759391102, Literal267487537, Literal1504458719, Literal1874956755, Literal1182825855, Literal1119430570>
 {
 }
 

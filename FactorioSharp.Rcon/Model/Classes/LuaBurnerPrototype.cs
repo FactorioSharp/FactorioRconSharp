@@ -41,13 +41,13 @@ public abstract class LuaBurnerPrototype: LuaObject
   /// The smoke sources for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("smoke")]
-  public List<SmokeSource> Smoke { get; private set; }
+  public LuaArray<SmokeSource> Smoke { get; private set; }
 
   /// <summary>
   /// The light flicker definition for this burner prototype.
   /// </summary>
   [FactorioRconAttribute("light_flicker")]
-  public Table1892156626 LightFlicker { get; private set; }
+  public Table819374487 LightFlicker { get; private set; }
 
   [FactorioRconAttribute("fuel_categories")]
   public Dictionary<string, bool> FuelCategories { get; private set; }

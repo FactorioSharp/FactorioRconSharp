@@ -38,7 +38,7 @@ public class InfinityPipeFilter
   /// Defaults to `"at-least"`.
   /// </summary>
   [FactorioRconAttribute("mode")]
-  public Literals630724814 Mode { get; set; }
+  public Literals984648661 Mode { get; set; }
 
 }
 

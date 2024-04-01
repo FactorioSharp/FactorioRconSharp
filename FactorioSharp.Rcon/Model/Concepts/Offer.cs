@@ -20,7 +20,7 @@ public class Offer
   /// List of prices.
   /// </summary>
   [FactorioRconAttribute("price")]
-  public List<Ingredient> Price { get; set; }
+  public LuaArray<Ingredient> Price { get; set; }
 
   /// <summary>
   /// The action that will take place when a player accepts the offer. Usually a `"give-item"` modifier.

@@ -47,7 +47,7 @@ public class ItemStackDefinition
   /// Tags of the items with tags in the stack.
   /// </summary>
   [FactorioRconAttribute("tags")]
-  public List<string> Tags { get; set; }
+  public LuaArray<string> Tags { get; set; }
 
 }
 

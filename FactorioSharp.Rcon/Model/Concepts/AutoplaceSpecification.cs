@@ -53,7 +53,7 @@ public class AutoplaceSpecification
   public bool DefaultEnabled { get; set; }
 
   [FactorioRconAttribute("peaks")]
-  public List<AutoplaceSpecificationPeak> Peaks { get; set; }
+  public LuaArray<AutoplaceSpecificationPeak> Peaks { get; set; }
 
   /// <summary>
   /// Control prototype name.
@@ -62,7 +62,7 @@ public class AutoplaceSpecification
   public string Control { get; set; }
 
   [FactorioRconAttribute("tile_restriction")]
-  public List<AutoplaceSpecificationRestriction> TileRestriction { get; set; }
+  public LuaArray<AutoplaceSpecificationRestriction> TileRestriction { get; set; }
 
   [FactorioRconAttribute("force")]
   public string Force { get; set; }

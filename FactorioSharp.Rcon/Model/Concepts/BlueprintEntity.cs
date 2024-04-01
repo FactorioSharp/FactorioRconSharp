@@ -68,7 +68,7 @@ public class BlueprintEntity
   /// The schedule of the entity, if it has one. Only relevant for locomotives.
   /// </summary>
   [FactorioRconAttribute("schedule")]
-  public List<TrainScheduleRecord> Schedule { get; set; }
+  public LuaArray<TrainScheduleRecord> Schedule { get; set; }
 
 }
 

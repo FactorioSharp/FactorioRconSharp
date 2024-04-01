@@ -32,13 +32,13 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The pipe connection points.
   /// </summary>
   [FactorioRconAttribute("pipe_connections")]
-  public List<FluidBoxConnection> PipeConnections { get; private set; }
+  public LuaArray<FluidBoxConnection> PipeConnections { get; private set; }
 
   /// <summary>
   /// The production type.
   /// </summary>
   [FactorioRconAttribute("production_type")]
-  public Literals2143131330 ProductionType { get; private set; }
+  public Literals1057275781 ProductionType { get; private set; }
 
   [FactorioRconAttribute("base_area")]
   public double BaseArea { get; private set; }
@@ -74,7 +74,7 @@ public abstract class LuaFluidBoxPrototype: LuaObject
   /// The secondary draw orders for the 4 possible connection directions.
   /// </summary>
   [FactorioRconAttribute("secondary_draw_orders")]
-  public List<int> SecondaryDrawOrders { get; private set; }
+  public LuaArray<int> SecondaryDrawOrders { get; private set; }
 
   /// <summary>
   /// The render layer.

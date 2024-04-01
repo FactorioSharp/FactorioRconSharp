@@ -56,91 +56,91 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// All cells in this network.
   /// </summary>
   [FactorioRconAttribute("cells")]
-  public List<LuaLogisticCell> Cells { get; private set; }
+  public LuaArray<LuaLogisticCell> Cells { get; private set; }
 
   /// <summary>
   /// All entities that have logistic provider points in this network.
   /// </summary>
   [FactorioRconAttribute("providers")]
-  public List<LuaEntity> Providers { get; private set; }
+  public LuaArray<LuaEntity> Providers { get; private set; }
 
   /// <summary>
   /// All entities that have empty logistic provider points in this network.
   /// </summary>
   [FactorioRconAttribute("empty_providers")]
-  public List<LuaEntity> EmptyProviders { get; private set; }
+  public LuaArray<LuaEntity> EmptyProviders { get; private set; }
 
   /// <summary>
   /// All entities that have logistic requester points in this network.
   /// </summary>
   [FactorioRconAttribute("requesters")]
-  public List<LuaEntity> Requesters { get; private set; }
+  public LuaArray<LuaEntity> Requesters { get; private set; }
 
   /// <summary>
   /// All entities that have logistic storage points in this network.
   /// </summary>
   [FactorioRconAttribute("storages")]
-  public List<LuaEntity> Storages { get; private set; }
+  public LuaArray<LuaEntity> Storages { get; private set; }
 
   /// <summary>
   /// All other entities that have logistic points in this network (inserters mostly).
   /// </summary>
   [FactorioRconAttribute("logistic_members")]
-  public List<LuaEntity> LogisticMembers { get; private set; }
+  public LuaArray<LuaEntity> LogisticMembers { get; private set; }
 
   /// <summary>
   /// All things that have provider points in this network.
   /// </summary>
   [FactorioRconAttribute("provider_points")]
-  public List<LuaLogisticPoint> ProviderPoints { get; private set; }
+  public LuaArray<LuaLogisticPoint> ProviderPoints { get; private set; }
 
   /// <summary>
   /// All passive provider points in this network.
   /// </summary>
   [FactorioRconAttribute("passive_provider_points")]
-  public List<LuaLogisticPoint> PassiveProviderPoints { get; private set; }
+  public LuaArray<LuaLogisticPoint> PassiveProviderPoints { get; private set; }
 
   /// <summary>
   /// All active provider points in this network.
   /// </summary>
   [FactorioRconAttribute("active_provider_points")]
-  public List<LuaLogisticPoint> ActiveProviderPoints { get; private set; }
+  public LuaArray<LuaLogisticPoint> ActiveProviderPoints { get; private set; }
 
   /// <summary>
   /// All things that have empty provider points in this network.
   /// </summary>
   [FactorioRconAttribute("empty_provider_points")]
-  public List<LuaLogisticPoint> EmptyProviderPoints { get; private set; }
+  public LuaArray<LuaLogisticPoint> EmptyProviderPoints { get; private set; }
 
   /// <summary>
   /// All things that have requester points in this network.
   /// </summary>
   [FactorioRconAttribute("requester_points")]
-  public List<LuaLogisticPoint> RequesterPoints { get; private set; }
+  public LuaArray<LuaLogisticPoint> RequesterPoints { get; private set; }
 
   /// <summary>
   /// All things that have storage points in this network.
   /// </summary>
   [FactorioRconAttribute("storage_points")]
-  public List<LuaLogisticPoint> StoragePoints { get; private set; }
+  public LuaArray<LuaLogisticPoint> StoragePoints { get; private set; }
 
   /// <summary>
   /// All robots in this logistic network.
   /// </summary>
   [FactorioRconAttribute("robots")]
-  public List<LuaEntity> Robots { get; private set; }
+  public LuaArray<LuaEntity> Robots { get; private set; }
 
   /// <summary>
   /// All construction robots in this logistic network.
   /// </summary>
   [FactorioRconAttribute("construction_robots")]
-  public List<LuaEntity> ConstructionRobots { get; private set; }
+  public LuaArray<LuaEntity> ConstructionRobots { get; private set; }
 
   /// <summary>
   /// All logistic robots in this logistic network.
   /// </summary>
   [FactorioRconAttribute("logistic_robots")]
-  public List<LuaEntity> LogisticRobots { get; private set; }
+  public LuaArray<LuaEntity> LogisticRobots { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
@@ -160,7 +160,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="member">Lua name: member</param>
   [FactorioRconMethod("get_item_count")]
-  public abstract int GetItemCount(string? item = null, Literals528285651? member = null);
+  public abstract int GetItemCount(string? item = null, Literals1689258098? member = null);
 
   /// <summary>
   /// Get item counts for the entire network, similar to how <see cref="LuaInventory.GetContents" /> does.
@@ -174,7 +174,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("remove_item")]
-  public abstract uint RemoveItem(ItemStackIdentification item, Literals1242271891? members = null);
+  public abstract uint RemoveItem(ItemStackIdentification item, Literals474377069? members = null);
 
   /// <summary>
   /// Insert items into the logistic network. This will actually insert the items into some logistic chests.
@@ -182,7 +182,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="item">Lua name: item</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("insert")]
-  public abstract uint Insert(ItemStackIdentification item, Literals637806316? members = null);
+  public abstract uint Insert(ItemStackIdentification item, Literals92624191? members = null);
 
   /// <summary>
   /// Find logistic cell closest to a given position.
@@ -199,7 +199,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="includeBuffers">Lua name: include_buffers</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_pickup_point")]
-  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Literals1298545183? members = null);
+  public abstract LuaLogisticPoint? SelectPickupPoint(string name, MapPosition? position = null, bool? includeBuffers = null, Literals1420590894? members = null);
 
   /// <summary>
   /// Find a logistic point to drop the specific item stack.
@@ -207,7 +207,7 @@ public abstract class LuaLogisticNetwork: LuaObject
   /// <param name="stack">Lua name: stack</param>
   /// <param name="members">Lua name: members</param>
   [FactorioRconMethod("select_drop_point")]
-  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Literals1044675273? members = null);
+  public abstract LuaLogisticPoint? SelectDropPoint(ItemStackIdentification stack, Literals1693555544? members = null);
 
   /// <summary>
   /// Can the network satisfy a request for a given item and count.

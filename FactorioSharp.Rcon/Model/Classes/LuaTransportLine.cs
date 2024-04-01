@@ -26,13 +26,13 @@ public abstract class LuaTransportLine: LuaObject
   /// The transport lines that this transport line outputs items to or an empty table if none.
   /// </summary>
   [FactorioRconAttribute("output_lines")]
-  public List<LuaTransportLine> OutputLines { get; private set; }
+  public LuaArray<LuaTransportLine> OutputLines { get; private set; }
 
   /// <summary>
   /// The transport lines that this transport line is fed by or an empty table if none.
   /// </summary>
   [FactorioRconAttribute("input_lines")]
-  public List<LuaTransportLine> InputLines { get; private set; }
+  public LuaArray<LuaTransportLine> InputLines { get; private set; }
 
   /// <summary>
   /// Is this object valid? This Lua object holds a reference to an object within the game engine. It is possible that the game-engine object is removed whilst a mod still holds the corresponding Lua object. If that happens, the object becomes invalid, i.e. this attribute will be `false`. Mods are advised to check for object validity if any change to the game state might have occurred between the creation of the Lua object and its access.
