@@ -1,8 +1,9 @@
-﻿using FactorioSharp.Rcon.Core.Abstractions;
+﻿using System.Collections;
+using FactorioSharp.Rcon.Core.Abstractions;
 
 namespace FactorioSharp.Rcon.Model.Builtins;
 
-public class LuaArray<T>
+public class LuaArray<T> : IReadOnlyList<T>
 {
     readonly List<T> _values;
 
@@ -12,10 +13,9 @@ public class LuaArray<T>
     }
 
     [FactorioRconLengthOperator]
-    public int Length => _values.Count;
+    public int Count => _values.Count;
 
-    public T this[int index] {
-        get => _values[index];
-        set => _values[index] = value;
-    }
+    public T this[int index] => _values[index];
+    public IEnumerator<T> GetEnumerator() => _values.GetEnumerator();
+    IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)_values).GetEnumerator();
 }
