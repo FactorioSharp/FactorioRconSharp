@@ -39,19 +39,19 @@ public class FactorioRconClient : IDisposable
         await _lowLevelClient.ExecuteAsync(expression);
     }
 
-    public async Task<T> ReadAsync<T>(Expression<Func<FactorioRconGlobals, T>> func)
+    public async Task<T?> ReadAsync<T>(Expression<Func<FactorioRconGlobals, T>> func)
     {
         string expression = new FactorioRconTranslator().BuildExpression(func);
         return await ReadAsync<T>(expression);
     }
 
-    public async Task<TValue> ReadAsync<TArg, TValue>(Expression<Func<FactorioRconGlobals, TArg, TValue>> func, TArg arg)
+    public async Task<TValue?> ReadAsync<TArg, TValue>(Expression<Func<FactorioRconGlobals, TArg, TValue>> func, TArg arg)
     {
         string expression = new FactorioRconTranslator(arg).BuildExpression(func);
         return await ReadAsync<TValue>(expression);
     }
 
-    public async Task<T> ReadAsync<T>(Expression<Func<FactorioRconGlobals, Dictionary<string, object>, T>> func, Dictionary<string, object> ctx)
+    public async Task<T?> ReadAsync<T>(Expression<Func<FactorioRconGlobals, Dictionary<string, object>, T>> func, Dictionary<string, object> ctx)
     {
         string expression = new FactorioRconTranslator(ctx).BuildExpression(func);
         return await ReadAsync<T>(expression);
@@ -63,7 +63,7 @@ public class FactorioRconClient : IDisposable
         GC.SuppressFinalize(this);
     }
 
-    async Task<T> ReadAsync<T>(string expression)
+    async Task<T?> ReadAsync<T>(string expression)
     {
         string strResult;
         Type type = typeof(T);
@@ -80,6 +80,6 @@ public class FactorioRconClient : IDisposable
             strResult = await _lowLevelClient.ReadAsync(expression);
         }
 
-        return FactorioRconParser.Parse<T>(strResult);
+        return FactorioRconParser.Parse<T>(strResult.Trim());
     }
 }

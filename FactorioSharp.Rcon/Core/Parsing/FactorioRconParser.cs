@@ -16,10 +16,24 @@ static class FactorioRconParser
         }
     };
 
-    public static TFactorioRconModel Parse<TFactorioRconModel>(string stringValue) => (TFactorioRconModel)Parse(stringValue, typeof(TFactorioRconModel))!;
+    public static TFactorioRconModel? Parse<TFactorioRconModel>(string stringValue)
+    {
+        object? result = Parse(stringValue, typeof(TFactorioRconModel))!;
+        if (result == null)
+        {
+            return default;
+        }
+
+        return (TFactorioRconModel)result;
+    }
 
     static object? Parse(string stringValue, Type type)
     {
+        if (stringValue == "nil")
+        {
+            return null;
+        }
+
         if (type.IsTableType())
         {
             return ParseTableType(stringValue, type);
