@@ -15,7 +15,7 @@ Console.WriteLine("Connected: " + connected);
 
 string mapString = await client.ReadAsync(g => g.Game.GetMapExchangeString());
 int playerCount = await client.ReadAsync(g => (int)g.Game.Players.Length);
-int connectedPlayerCount = await client.ReadAsync(g => g.Game.ConnectedPlayers.Length);
+int connectedPlayerCount = await client.ReadAsync(g => g.Game.ConnectedPlayers.Count);
 DifficultyEnum difficulty = await client.ReadAsync(g => g.Game.Difficulty);
 LuaCustomTable<Union2142551273, LuaForce> forces = await client.ReadAsync(g => g.Game.Forces);
 LuaCustomTable<string, LuaItemPrototype> items = await client.ReadAsync(g => g.Game.ItemPrototypes);
