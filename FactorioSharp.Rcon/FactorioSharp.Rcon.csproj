@@ -41,4 +41,8 @@
       <PackageReference Include="System.Text.Json" Version="8.0.3" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+    </PropertyGroup>
+
 </Project>
