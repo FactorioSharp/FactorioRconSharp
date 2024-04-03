@@ -18,6 +18,8 @@
         <RepositoryType>git</RepositoryType>
         <PackageTags>factorio, rcon, client</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
